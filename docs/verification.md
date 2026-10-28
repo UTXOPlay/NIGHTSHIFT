@@ -22,6 +22,18 @@ Final local measurements (not physical phone measurements):
 
 The garden measurement includes the final research buildings replacing the reflective domes. All samples kept render scale 1 and reported no browser errors. The V9 portable binary SHA-256 is `bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89`; the retained exact V8 binary is `1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598`.
 
+## V9 production verification — 28 October 2026
+
+Runtime/deployment source: `cc1b5d37249f69ddd925507d5bd8f5b049f779f5`. [Both CI jobs passed](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40703060614). The [isolated store patch](https://github.com/UTXOPlay/UTXOPlay/commit/a2365484980a61aedf9480ee3fd40763e320da6a) passed its source build and nine selected route/gateway tests. It was layered onto the latest live store image, preserving concurrent wallet artwork and item-store retirement changes, all other catalog entries and the current CSS.
+
+Production serves V9 with the exact profile and both binary hashes recorded above. All 78 served browser files match the release manifest. Thirteen full browser acceptance checks and five store launch/routing checks passed against the public TLS hostname: a signed 233.4-second victory, earned KITE purchase, reload persistence, next briefing, large displays, mobile joystick/portrait gate, English icon controls and native replay. The store document and authenticated iframe both end at `/games/nightshift/`; chess and vendor fallbacks also pass. V8 rejects V9 exports and V9 rejects V8 exports.
+
+A career created before cutover retained its complete unfinished V8 state at tick 30, accepted its original V8 inputs to tick 33, and migrated only when a new event was explicitly requested. Its 650 credits and GRIP tier 1 remained exact; original and migrated signed exports both verified with their corresponding executable. Original V8 storage is retained, with V9 storage on a separate volume. Prior images, private database backups, immutable source archives and sanitized verification reports remain in the server release directory.
+
+The game image is `sha256:72311081b631167aae63256ea320a79b0f592297890db40a729b8dbbea715b65`. The store overlay is `sha256:ceea3972914d045aecad9d2cb8bf7c37f5b550f873f61535796463248611dbb6`, based on `sha256:3dafb1039ab17521c31812c697a226e80bb8b123a047e6e313832dcbace5f8ec`. Both services are healthy.
+
+A staging configuration initially inherited `VIRTUAL_HOST`, briefly directing public login requests to the staging origin. Its domain advertisement was removed, staging was stopped, the reverse proxy regenerated, and production authentication/launch acceptance was rerun successfully. Staging on a shared proxy must strip public domain advertisement variables. Public-host verification used the temporary SSH CONNECT tunnel because direct cross-region transport from this workstation was unreliable; TLS and the public hostname were retained. Owned staging containers and local review services are removed/stopped after verification.
+
 ## V8.1 presentation verification — 28 October 2026
 
 Runtime source: `c3e2f5571168cb0b3900e097016126ab464d9155`. [Both CI jobs passed](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40656033430). The native binary SHA-256 remains `1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598`; all three V8 native sources and the browser rules module retain their previous hashes. The release manifest binds 63 browser files, including four licensed vehicle models and five new generated atlases.

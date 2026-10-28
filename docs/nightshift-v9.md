@@ -26,3 +26,7 @@ V9 has a new exact native application profile. V8 game.rs, session.rs and Cargo.
 ## Presentation budget
 
 The renderer reuses road buffers, cached course tables, instanced scenery and shared texture atlases. Two physical street lights remain the maximum. Backing resolution stays capped at 3,686,400 pixels; reduced motion and the game-owned landscape rotation gate remain enabled. Physics runs at 30 Hz independently of rendering. Local browser measurements and production checks are recorded in `verification.md`.
+
+![Commons Gardens research campus](screenshots/circuit-gardens.webp)
+
+![Polar Array communications corridor](screenshots/circuit-polar.webp)

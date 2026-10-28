@@ -4,7 +4,7 @@ A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival
 
 [Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
-![World Circuit map selection](docs/screenshots/world-circuit.png)
+![Commons Gardens circuit](docs/screenshots/circuit-gardens.webp)
 
 ## Race the circuit
 
