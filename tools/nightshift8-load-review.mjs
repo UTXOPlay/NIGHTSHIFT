@@ -12,7 +12,7 @@ try{
  page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>errors.push(r.url()+': '+r.failure()?.errorText));
  for(const cache of ['cold','warm']){
   const started=Date.now();
-  await page.goto(origin+'/games/drift-run/?review=1',{waitUntil:'domcontentloaded',timeout:60000});
+  await page.goto(origin+'/games/nightshift/?review=1',{waitUntil:'domcontentloaded',timeout:60000});
   await page.waitForFunction(()=>__driftReview?.().loaded,null,{timeout:60000});
   const readyMs=Date.now()-started;
   const timings=await page.evaluate(()=>({navigation:performance.getEntriesByType('navigation')[0].toJSON(),resources:performance.getEntriesByType('resource').map(r=>({path:new URL(r.name).pathname,duration:r.duration,start:r.startTime,end:r.responseEnd,transferBytes:r.transferSize,bodyBytes:r.encodedBodySize})).sort((a,b)=>b.duration-a.duration)}));

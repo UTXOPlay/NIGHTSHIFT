@@ -6,17 +6,27 @@ import path from 'node:path';
 import {createGameHost} from './server.mjs';
 
 const token='test-runtime-token-'.repeat(3),origin='http://game.example';
-async function fixture(t){
+async function fixture(t,id='example'){
  const dir=mkdtempSync(path.join(tmpdir(),'game-host-test-'));
  writeFileSync(path.join(dir,'index.html'),'<h1>Independent game</h1>');
  const calls=[];
- const service=createGameHost({config:{name:'fixture',games:[{id:'example',webRoot:dir,runtimePath:'/native'}]},origin,runtimeUrl:'http://native.invalid',runtimeToken:token,fetchImpl:async(url,options)=>{calls.push({url,options});return Response.json({account:options.headers['X-UTXOPlay-Account']});}});
+ const service=createGameHost({config:{name:'fixture',games:[{id,webRoot:dir,runtimePath:'/native'}]},origin,runtimeUrl:'http://native.invalid',runtimeToken:token,fetchImpl:async(url,options)=>{calls.push({url,options});return Response.json({account:options.headers['X-UTXOPlay-Account']});}});
  const server=service.app.listen(0,'127.0.0.1');await new Promise(r=>server.once('listening',r));
  const url='http://127.0.0.1:'+server.address().port;
  t.after(async()=>{service.close();await new Promise(r=>server.close(r));rmSync(dir,{recursive:true,force:true});});
  return {service,calls,url,async request(p,body,cookie='',extra={}){return fetch(url+p,{method:body===undefined?'GET':'POST',headers:{Origin:origin,'Content-Type':'application/json',Cookie:cookie,...extra},body:body===undefined?undefined:JSON.stringify(body)});}};
 }
 const cookie=r=>r.headers.getSetCookie().map(v=>v.split(';')[0]).join('; ');
+test('the new NIGHTSHIFT path shares legacy guests, native routing and saved-session identity',async t=>{
+ const f=await fixture(t,'drift-run'),entry=await f.request('/games/drift-run/'),jar=cookie(entry);
+ const before=await(await f.request('/games/drift-run/api/state',undefined,jar)).json();
+ assert.equal((await f.request('/games/nightshift/')).status,200);
+ const after=await(await f.request('/games/nightshift/api/state',undefined,jar)).json();assert.deepEqual(after,before);
+ const action={type:'upgrade',vehicle:0,choice:1};
+ assert.equal((await f.request('/games/nightshift/api/action',action,jar)).status,200);
+ assert.equal(f.calls.at(-1).url,'http://native.invalid/native/api/action');assert.equal(f.calls.at(-1).options.body,JSON.stringify(action));
+ assert.equal((await f.request('/games/nightshift-other/api/state',undefined,jar)).status,404);
+});
 test('standalone guests persist and cannot inject another player identity',async t=>{
  const f=await fixture(t),a=await f.request('/games/example/'),b=await f.request('/games/example/');
  assert.equal(a.status,200);assert.match(await a.text(),/Independent/);

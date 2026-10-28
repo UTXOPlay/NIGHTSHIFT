@@ -8,7 +8,7 @@ const context=await browser.newContext({viewport:{width:1920,height:1080}});let 
 try{
  if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(context,origin);
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto(origin+'/games/drift-run/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);
+ await page.goto(origin+'/games/nightshift/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);
  await page.getByRole('button',{name:'Garage and upgrades',exact:true}).first().click();
  await page.getByRole('button',{name:/^SHOCKWAVE/}).click();await page.getByRole('button',{name:'Race with VANTA',exact:true}).click();await page.waitForFunction(()=>__driftReview().running);
  const fire=page.locator('#abilities [data-input="32"]'),counter=page.locator('#abilities [data-input="64"]');

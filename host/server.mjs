@@ -2,11 +2,13 @@ import express from 'express';
 import {createHmac,randomBytes,timingSafeEqual} from 'node:crypto';
 import {optimizedStatic} from './static.mjs';
 import {gameSockets} from './socket-proxy.mjs';
+import {installNightshiftRoutes} from './nightshift-routes.mjs';
 
 export function createGameHost({config,origin,runtimeUrl,runtimeToken,sessionSecret=runtimeToken,fetchImpl=fetch,install=()=>({close(){}})}) {
  if(!runtimeToken||runtimeToken.length<32||!sessionSecret||sessionSecret.length<32)throw Error('Set stable server-only secrets of at least 32 characters');
  if(!['http:','https:'].includes(new URL(runtimeUrl).protocol))throw Error('Invalid runtime URL');
  const app=express();app.disable('x-powered-by');
+ if(config.games.some(g=>g.id==='drift-run'))installNightshiftRoutes(app,{redirectLegacy:false});
  const quotas=new Map();
  function limited(key,max,ms){const now=Date.now();let q=quotas.get(key);if(!q||q.until<now){q={count:0,until:now+ms};quotas.set(key,q);}return ++q.count>max;}
  const cleanup=setInterval(()=>{for(const [k,v] of quotas)if(v.until<Date.now())quotas.delete(k);},60000);cleanup.unref();
@@ -45,7 +47,7 @@ export function createGameHost({config,origin,runtimeUrl,runtimeToken,sessionSec
  app.get('/api/me',(req,res)=>res.json({user:account(req)}));
  app.post('/api/guest',(req,res)=>{const user=guest(req,res);res.status(user?200:429).json(user?{user}:{error:'Session unavailable'});});
  app.get('/health',(_req,res)=>res.json({ok:true,service:config.name}));
- app.get('/',(_req,res)=>res.redirect(302,'/games/'+config.games[0].id+'/'));
+ app.get('/',(_req,res)=>res.redirect(302,'/games/'+(config.games[0].publicPath||config.games[0].id)+'/'));
  for(const game of config.games){
   const base='/games/'+game.id;
   app.get(base,(req,res,next)=>req.path.endsWith('/')?next():res.redirect(308,base+'/'));

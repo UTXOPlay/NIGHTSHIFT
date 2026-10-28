@@ -13,8 +13,8 @@ const detect=(kind,a,b)=>kind==='collision'?a.shield<b.shield:kind==='wreck'?a.o
 try{
  if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
  page=await ctx.newPage();await installDriverRoute(page);page.setDefaultNavigationTimeout(90000);page.on('pageerror',e=>errors.push(e.message));page.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
- const loadStarted=Date.now();await page.goto(origin+'/games/drift-run/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);const initialLoadMs=Date.now()-loadStarted;
- async function api(path,body){const r=body?await ctx.request.post(origin+'/games/drift-run/api/'+path,{headers:{Origin:origin},data:body}):await ctx.request.get(origin+'/games/drift-run/api/'+path);assert.ok(r.ok(),await r.text());return r.json();}
+ const loadStarted=Date.now();await page.goto(origin+'/games/nightshift/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);const initialLoadMs=Date.now()-loadStarted;
+ async function api(path,body){const r=body?await ctx.request.post(origin+'/games/nightshift/api/'+path,{headers:{Origin:origin},data:body}):await ctx.request.get(origin+'/games/nightshift/api/'+path);assert.ok(r.ok(),await r.text());return r.json();}
  async function send(state,action){return api('action',{session_id:state.session.id,expected_block:state.session.block_hash,action});}
  for(const kind of ['collision','hit','guard','rival-hit','disable','wreck']){
   if(await page.evaluate(()=>__driftReview().running))await page.keyboard.press('KeyP');

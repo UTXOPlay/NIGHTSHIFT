@@ -14,7 +14,7 @@ try{
  const page=await context.newPage();
  page.on('pageerror',e=>errors.push(e.message));
  page.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
- await page.goto(origin+'/games/drift-run/?review=1');
+ await page.goto(origin+'/games/nightshift/?review=1');
  await page.waitForFunction(()=>__driftReview?.().loaded);
  await page.getByRole('button',{name:'Career events',exact:true}).click();
  for(let mode=0;mode<12;mode++){

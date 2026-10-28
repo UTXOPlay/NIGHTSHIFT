@@ -6,5 +6,5 @@ const legacy=JSON.parse(readFileSync('docs/release-integrity-v7.json','utf8'));
 const sha=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
 for(const [file,hash] of Object.entries(legacy.nativeSources))assert.equal(sha(file),hash,file+' changes the preserved V7 profile');
 for(const [file,hash] of Object.entries(expected.nativeSources))assert.equal(sha(file),hash,file+' changes the V8 profile');
-for(const [file,hash] of Object.entries(expected.browserFiles))assert.equal(sha('dist/drift-run/'+file),hash,file+' differs from the verified V8 release');
+for(const [file,hash] of Object.entries(expected.browserFiles))assert.equal(sha('dist/nightshift/'+file),hash,file+' differs from the verified V8 release');
 console.log(`Verified preserved V7 sources, ${Object.keys(expected.nativeSources).length} V8 native sources and ${Object.keys(expected.browserFiles).length} browser files.`);

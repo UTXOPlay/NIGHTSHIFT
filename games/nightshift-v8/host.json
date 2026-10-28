@@ -5,10 +5,11 @@
   "games": [
     {
       "id": "drift-run",
-      "webRoot": "dist/drift-run",
+      "webRoot": "dist/nightshift",
       "runtimePath": "/drift-run",
       "rooms": false,
-      "socket": false
+      "socket": false,
+      "publicPath": "nightshift"
     }
   ],
   "runtimeCommand": [

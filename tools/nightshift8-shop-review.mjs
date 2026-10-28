@@ -8,7 +8,7 @@ context.setDefaultNavigationTimeout(90000);
 try{
  if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(context,origin);
  const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
- await page.goto(origin+'/games/drift-run/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);
+ await page.goto(origin+'/games/nightshift/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);
  await page.getByRole('button',{name:'Garage and upgrades',exact:true}).first().click();
  const fleet=await page.evaluate(()=>__driftReview().environment);assert.equal(fleet.fleetLoaded,true);assert.equal(fleet.fleetSources,2);assert.equal(fleet.fleetBounds.length,6);
  for(const car of fleet.wheelContacts){assert.equal(car.length,4);for(const y of car)assert.ok(Math.abs(y)<.018,'Four tire contacts rest on the service-bay floor');}

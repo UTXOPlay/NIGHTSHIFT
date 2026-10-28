@@ -2,7 +2,7 @@
 
 A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival drivers, vehicle upgrades and a signed solo career.
 
-[Play on UTXOPlay](https://store.utxoplay.io/games/drift-run/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
+[Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
 ![World Circuit map selection](docs/screenshots/world-circuit.png)
 
@@ -30,7 +30,7 @@ npm run build:native
 npm run dev
 ```
 
-Open **http://127.0.0.1:8898/games/drift-run/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The native service listens only on loopback port 8798.
+Open **http://127.0.0.1:8898/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The native service listens only on loopback port 8798.
 
 For a production process, build once and supply a stable server-only token:
 
@@ -94,7 +94,7 @@ export GAME_ORIGIN="http://localhost:8898"
 docker compose -f deploy/compose.yml up --build -d
 ```
 
-The Compose service binds the web port to local loopback and persists V8 state in a named volume. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The public game path stays `/games/drift-run/`.
+The Compose service binds the web port to local loopback and persists V8 state in a named volume. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nightshift/`.
 
 ## Source and artwork
 

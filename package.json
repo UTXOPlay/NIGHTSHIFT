@@ -1,6 +1,6 @@
 {
   "name": "@utxoplay/nightshift",
-  "version": "8.1.0",
+  "version": "8.1.1",
   "private": true,
   "type": "module",
   "description": "NIGHTSHIFT: World Circuit \u2014 solo racing, vehicle progression and signed Myelin replay",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/UTXOPlay/NIGHTSHIFT.git"
   },
-  "homepage": "https://store.utxoplay.io/games/drift-run/",
+  "homepage": "https://store.utxoplay.io/games/nightshift/",
   "engines": {
     "node": ">=22"
   },
