@@ -2,7 +2,7 @@
 
 A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival drivers, vehicle upgrades and a signed solo career.
 
-[Play on UTXOPlay](https://store.utxoplay.io/games/drift-run/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md)
+[Play on UTXOPlay](https://store.utxoplay.io/games/drift-run/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Combat design audit](docs/combat-design-audit.md)
 
 ![World Circuit map selection](docs/screenshots/world-circuit.png)
 

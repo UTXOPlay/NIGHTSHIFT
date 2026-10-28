@@ -1,0 +1,480 @@
+{
+  "version": 1,
+  "nativeTapes": 48,
+  "activeTicks": 960576,
+  "probes": [
+    {
+      "id": "disabled-attacker-still-hits",
+      "synthetic": true,
+      "playerStun": 45,
+      "rivalStun": 209,
+      "shield": 1
+    },
+    {
+      "id": "counter-shortens-disable",
+      "synthetic": true,
+      "disableBefore": 210,
+      "disableAfter": 60,
+      "dodges": 1
+    },
+    {
+      "id": "wave-hits-all-lanes",
+      "synthetic": true,
+      "hits": 5,
+      "ammoSpent": 1
+    },
+    {
+      "id": "already-disabled-rival-counts-again",
+      "synthetic": true,
+      "sameRivalId": 0,
+      "takedowns": 2,
+      "resetHp": 2,
+      "disableTicks": 209
+    },
+    {
+      "id": "mine-shortens-existing-disable",
+      "synthetic": true,
+      "disableBefore": 200,
+      "disableAfter": 90,
+      "hp": 1
+    },
+    {
+      "id": "overlapping-collisions-kill-through-two-shields",
+      "synthetic": true,
+      "shieldsBefore": 2,
+      "shieldsAfter": 0,
+      "over": true,
+      "elapsedTicks": 1
+    },
+    {
+      "id": "empty-wave-clears-pursuit",
+      "synthetic": true,
+      "hits": 0,
+      "pursuitBefore": 160,
+      "pursuitAfter": 80
+    },
+    {
+      "id": "mine-defense-keeps-shield",
+      "synthetic": true,
+      "hp": 2,
+      "defenseRemaining": 29,
+      "mineConsumed": true
+    },
+    {
+      "id": "wave-defense-consumes-shield",
+      "synthetic": true,
+      "hp": 2,
+      "defenseRemaining": 0
+    },
+    {
+      "id": "mine-life-depends-on-owner-speed",
+      "synthetic": true,
+      "results": [
+        {
+          "speed": 1660,
+          "seconds": 2.933333333333333
+        },
+        {
+          "speed": 750,
+          "seconds": 6.666666666666667
+        }
+      ]
+    },
+    {
+      "id": "ai-miss-earns-charge-without-counter",
+      "synthetic": true,
+      "chargeGain": 140,
+      "counterSpent": 0,
+      "dodges": 1
+    }
+  ],
+  "groups": [
+    {
+      "type": 0,
+      "policy": "no-fire",
+      "races": 9,
+      "wins": 9,
+      "finishes": 9,
+      "meanPosition": 1,
+      "meanSeconds": 244,
+      "meanShots": 0,
+      "meanHits": 0.33,
+      "meanTakedowns": 0,
+      "meanWindups": 0.33,
+      "meanCombatRangeFraction": 0.11
+    },
+    {
+      "type": 0,
+      "policy": "emp",
+      "races": 9,
+      "wins": 9,
+      "finishes": 9,
+      "meanPosition": 1,
+      "meanSeconds": 243.83,
+      "meanShots": 1.67,
+      "meanHits": 1.67,
+      "meanTakedowns": 0,
+      "meanWindups": 0.33,
+      "meanCombatRangeFraction": 0.12
+    },
+    {
+      "type": 0,
+      "policy": "wave",
+      "races": 9,
+      "wins": 9,
+      "finishes": 9,
+      "meanPosition": 1,
+      "meanSeconds": 242.48,
+      "meanShots": 2.22,
+      "meanHits": 6.22,
+      "meanTakedowns": 1.22,
+      "meanWindups": 0,
+      "meanCombatRangeFraction": 0.07
+    },
+    {
+      "type": 0,
+      "policy": "mine",
+      "races": 9,
+      "wins": 9,
+      "finishes": 9,
+      "meanPosition": 1,
+      "meanSeconds": 244,
+      "meanShots": 3.11,
+      "meanHits": 1.67,
+      "meanTakedowns": 0,
+      "meanWindups": 0.33,
+      "meanCombatRangeFraction": 0.11
+    },
+    {
+      "type": 1,
+      "policy": "no-fire",
+      "races": 9,
+      "wins": 7,
+      "finishes": 7,
+      "meanPosition": 1,
+      "meanSeconds": 237.22,
+      "meanShots": 0,
+      "meanHits": 0.44,
+      "meanTakedowns": 0,
+      "meanWindups": 0,
+      "meanCombatRangeFraction": 0.09
+    },
+    {
+      "type": 1,
+      "policy": "emp",
+      "races": 9,
+      "wins": 7,
+      "finishes": 7,
+      "meanPosition": 1,
+      "meanSeconds": 236.74,
+      "meanShots": 1.56,
+      "meanHits": 1.78,
+      "meanTakedowns": 0.22,
+      "meanWindups": 0,
+      "meanCombatRangeFraction": 0.08
+    },
+    {
+      "type": 1,
+      "policy": "wave",
+      "races": 9,
+      "wins": 8,
+      "finishes": 8,
+      "meanPosition": 1,
+      "meanSeconds": 226.49,
+      "meanShots": 2.22,
+      "meanHits": 6.22,
+      "meanTakedowns": 1.22,
+      "meanWindups": 0,
+      "meanCombatRangeFraction": 0.1
+    },
+    {
+      "type": 1,
+      "policy": "mine",
+      "races": 9,
+      "wins": 7,
+      "finishes": 7,
+      "meanPosition": 1,
+      "meanSeconds": 237.22,
+      "meanShots": 2.78,
+      "meanHits": 1.22,
+      "meanTakedowns": 0.11,
+      "meanWindups": 0,
+      "meanCombatRangeFraction": 0.09
+    },
+    {
+      "type": 2,
+      "policy": "no-fire",
+      "races": 9,
+      "wins": 5,
+      "finishes": 5,
+      "meanPosition": 3.22,
+      "meanSeconds": 153.49,
+      "meanShots": 0,
+      "meanHits": 0.33,
+      "meanTakedowns": 0,
+      "meanWindups": 5.22,
+      "meanCombatRangeFraction": 0.48
+    },
+    {
+      "type": 2,
+      "policy": "emp",
+      "races": 9,
+      "wins": 7,
+      "finishes": 7,
+      "meanPosition": 1.67,
+      "meanSeconds": 207.12,
+      "meanShots": 4.33,
+      "meanHits": 3.44,
+      "meanTakedowns": 0.78,
+      "meanWindups": 8.78,
+      "meanCombatRangeFraction": 0.57
+    },
+    {
+      "type": 2,
+      "policy": "wave",
+      "races": 9,
+      "wins": 4,
+      "finishes": 4,
+      "meanPosition": 1.56,
+      "meanSeconds": 144.09,
+      "meanShots": 6.33,
+      "meanHits": 12.11,
+      "meanTakedowns": 5.89,
+      "meanWindups": 5.44,
+      "meanCombatRangeFraction": 0.74
+    },
+    {
+      "type": 2,
+      "policy": "mine",
+      "races": 9,
+      "wins": 5,
+      "finishes": 5,
+      "meanPosition": 3.22,
+      "meanSeconds": 153.39,
+      "meanShots": 5,
+      "meanHits": 1.33,
+      "meanTakedowns": 0.11,
+      "meanWindups": 5,
+      "meanCombatRangeFraction": 0.49
+    },
+    {
+      "type": 3,
+      "policy": "no-fire",
+      "races": 9,
+      "wins": 0,
+      "finishes": 6,
+      "meanPosition": 3.11,
+      "meanSeconds": 244.77,
+      "meanShots": 0,
+      "meanHits": 0.44,
+      "meanTakedowns": 0,
+      "meanWindups": 13.33,
+      "meanCombatRangeFraction": 0.99
+    },
+    {
+      "type": 3,
+      "policy": "emp",
+      "races": 9,
+      "wins": 7,
+      "finishes": 8,
+      "meanPosition": 1.22,
+      "meanSeconds": 247.06,
+      "meanShots": 7.89,
+      "meanHits": 6.11,
+      "meanTakedowns": 2.44,
+      "meanWindups": 8,
+      "meanCombatRangeFraction": 0.47
+    },
+    {
+      "type": 3,
+      "policy": "wave",
+      "races": 9,
+      "wins": 9,
+      "finishes": 9,
+      "meanPosition": 1,
+      "meanSeconds": 255.09,
+      "meanShots": 2.56,
+      "meanHits": 8.11,
+      "meanTakedowns": 3.67,
+      "meanWindups": 1.11,
+      "meanCombatRangeFraction": 0.1
+    },
+    {
+      "type": 3,
+      "policy": "mine",
+      "races": 9,
+      "wins": 0,
+      "finishes": 6,
+      "meanPosition": 3.11,
+      "meanSeconds": 240.7,
+      "meanShots": 11.78,
+      "meanHits": 1.67,
+      "meanTakedowns": 0.33,
+      "meanWindups": 12.44,
+      "meanCombatRangeFraction": 0.95
+    }
+  ],
+  "limitations": [
+    "Synthetic probes edit state; they establish local rule behavior, not occurrence frequency.",
+    "144 runs use one existing controller, Vanta, stock upgrades, easy difficulty and race IDs 1\u20133. These are not human win rates.",
+    "The controller seeks EMP alignment and brakes for Intercept objectives; it is not separately optimized for each weapon.",
+    "48 first-seed complete input tapes match the native full state."
+  ],
+  "baseCommit": "9a472c46e7c82256014a730f2e36896c1f50662a",
+  "repeatedTargets": [
+    {
+      "mode": 2,
+      "policy": "wave",
+      "seed": 1,
+      "won": true,
+      "takedowns": 8,
+      "disableCounts": [
+        1,
+        1,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "mode": 2,
+      "policy": "wave",
+      "seed": 2,
+      "won": false,
+      "takedowns": 6,
+      "disableCounts": [
+        1,
+        1,
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "mode": 6,
+      "policy": "wave",
+      "seed": 1,
+      "won": true,
+      "takedowns": 8,
+      "disableCounts": [
+        1,
+        1,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "mode": 6,
+      "policy": "wave",
+      "seed": 2,
+      "won": false,
+      "takedowns": 5,
+      "disableCounts": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "mode": 7,
+      "policy": "emp",
+      "seed": 3,
+      "won": true,
+      "takedowns": 3,
+      "disableCounts": [
+        0,
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "mode": 10,
+      "policy": "wave",
+      "seed": 1,
+      "won": true,
+      "takedowns": 8,
+      "disableCounts": [
+        1,
+        1,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "mode": 10,
+      "policy": "wave",
+      "seed": 2,
+      "won": false,
+      "takedowns": 5,
+      "disableCounts": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "mode": 10,
+      "policy": "wave",
+      "seed": 3,
+      "won": true,
+      "takedowns": 6,
+      "disableCounts": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "mode": 11,
+      "policy": "emp",
+      "seed": 1,
+      "won": true,
+      "takedowns": 4,
+      "disableCounts": [
+        0,
+        0,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "mode": 11,
+      "policy": "emp",
+      "seed": 3,
+      "won": true,
+      "takedowns": 4,
+      "disableCounts": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "mode": 11,
+      "policy": "wave",
+      "seed": 3,
+      "won": true,
+      "takedowns": 4,
+      "disableCounts": [
+        0,
+        1,
+        1,
+        2,
+        0
+      ]
+    }
+  ]
+}
