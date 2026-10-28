@@ -1,0 +1,29 @@
+{
+  "name": "@utxoplay/nightshift",
+  "version": "7.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NIGHTSHIFT: World Circuit — solo racing, vehicle progression and signed Myelin replay",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/UTXOPlay/NIGHTSHIFT.git" },
+  "homepage": "https://store.utxoplay.io/games/drift-run/",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node tools/build-nightshift-v7.mjs",
+    "build:native": "cargo build --release --locked --manifest-path games/nightshift-v7/native/Cargo.toml --target-dir target",
+    "build:native:legacy": "cargo build --release --locked --manifest-path games/nightshift-v6/native/Cargo.toml --target-dir target",
+    "start": "node host/nightshift7.mjs",
+    "dev": "npm run build && node tools/dev.mjs",
+    "test": "node --test tests/*.test.mjs host/*.test.mjs",
+    "test:native": "cargo test --release --locked --manifest-path games/nightshift-v7/native/Cargo.toml --target-dir target",
+    "test:conformance": "node tests/nightshift7-conformance.mjs",
+    "test:replay": "node tests/nightshift7-signed-replay.mjs",
+    "test:browser": "node tools/nightshift7-acceptance.mjs",
+    "test:combat": "node tools/nightshift7-combat-review.mjs",
+    "test:maps": "node tools/nightshift7-map-review.mjs",
+    "test:performance": "node tools/nightshift7-perf.mjs",
+    "check:release": "node tools/check-release.mjs"
+  },
+  "dependencies": { "express": "5.1.0", "three": "0.180.0", "ws": "8.22.0" },
+  "devDependencies": { "@ckb-ccc/shell": "1.3.15", "esbuild": "0.28.2", "playwright": "1.62.1" }
+}

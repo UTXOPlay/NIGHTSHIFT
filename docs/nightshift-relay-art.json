@@ -1,0 +1,18 @@
+{
+  "version": "NIGHTSHIFT Cell Relay / campaign 5.0",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "path": "games/arcade/web/art/nightshift/relay-materials.webp",
+      "source": "generated-originals/exec-e2352689-8685-41c0-b475-ba2fff55ff35.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production 3D racing game environment texture atlas, exactly a 2 by 2 grid of equal square tiles, filling a square image edge to edge.\nPrimary request: four detailed original environment surface textures for NIGHTSHIFT: Cell Relay, a high quality night racing world lightly inspired by Nervos CKB's cells and connected network architecture.\nTop left tile: dark weathered coastal basalt cliff, rugged stratified stone with subtle cracks and small mineral streaks, slate blue and charcoal.\nTop right tile: elegant futuristic green-white data center facade, orthographic straight-on, repeating recessed square cells of glass framed by brushed graphite, tiny mint lights, precise panel seams, no perspective.\nBottom left tile: shipping container wall, deep desaturated teal industrial metal, close-up straight-on repeating vertical corrugations, restrained rust and weathering.\nBottom right tile: futuristic road tunnel wall, graphite ceramic and concrete panels, slim horizontal mint light strips, refined engineering seams, slight wear.\nStyle/medium: physically plausible AAA game environment albedo textures with restrained built-in shading, sharp fine material detail, not an illustration or scene.\nComposition: four equal square quadrants, no gutters, no margins, each tile a repeatable material sample; tiles have consistent scale and no objects crossing quadrant boundaries.\nConstraints: no text, no lettering, no logos, no road, no cars, no people, no watermark, no strong perspective, no giant glowing symbols. Keep midtones visible, surface details subtle enough for real-time rendering.",
+      "encoding": "WebP quality 86; format conversion only"
+    },
+    {
+      "path": "games/arcade/web/art/nightshift/relay-sky.webp",
+      "source": "generated-originals/exec-53c093eb-bd1a-42cb-987a-af29840a770f.png",
+      "prompt": "Use case: stylized-concept\nAsset type: wide 3:1 panoramic distant backdrop texture for a high quality real-time night racing game.\nPrimary request: original atmospheric coastal mountain landscape at blue hour, with a very distant cargo harbor on the far left horizon, layered slate mountains in the middle and right, and a vast moody sky. No foreground objects.\nComposition: continuous single panorama, exactly 3:1 wide. Upper 65 percent is open blue-hour sky with subtle layered clouds, a restrained pale sunset band just above a low mountain horizon. Bottom 35 percent is distant coastal mountain silhouettes and dark water, with tiny sparse port lights on the far left. All mountains distant, no close cliffs.\nStyle: cinematic physically plausible environment art, rich subtle gradients, photographic texture detail, restrained dark violet slate and cool ocean blue with a narrow warm peach horizon; readable midtones.\nConstraints: no road, no cars, no people, no text, no symbols, no logos, no frames, no watermark, no giant city. Designed to sit behind original 3D track geometry.",
+      "encoding": "WebP quality 87; format conversion only"
+    }
+  ]
+}

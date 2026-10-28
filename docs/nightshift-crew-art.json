@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen",
+  "version": "NIGHTSHIFT 6.0 — Crew Circuit",
+  "assets": [
+    {
+      "path": "games/arcade/web/art/nightshift/crew-vfx.webp",
+      "source": "generated-originals/exec-4cc17876-4f9b-4a0b-8266-21298c7cdcaa.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production racing-game VFX texture atlas, 2 by 2 equal square cells on a genuinely transparent background.\nPrimary request: four original high quality animated-effect source sprites for NIGHTSHIFT, a cinematic night street racing game with a restrained mint/cyan technology theme. Top left: circular electric EMP shockwave viewed straight-on, fine branching cyan lightning and a soft energetic outer rim, hollow center. Top right: an energetic orange-gold impact spark burst with small glowing fragments, strong bright center fading into transparency. Bottom left: soft silver-blue tire smoke cloud with layered wisps and natural dissipating edges, no hard silhouette. Bottom right: narrow blue-white nitrous flame plume, bright small core, feathered cyan trail extending vertically.\nComposition: exactly four equal square quadrants with generous transparent padding in each; nothing crosses quadrant borders. Individual sprites centered, no borders or labels. Premium realistic game particles, readable at small size. No cars, scenery, text, logo, watermark or opaque black background. Preserve alpha.",
+      "encoding": "WebP quality 87, alpha preserved, format conversion only",
+      "usage": "One shared atlas sampled by pooled EMP, impact, tire-smoke and nitrous quads."
+    },
+    {
+      "path": "games/arcade/web/art/nightshift/crew-garage.webp",
+      "source": "generated-originals/exec-1b112cca-723e-44bd-8a4f-72e12a969ab8.png",
+      "prompt": "Use case: stylized-concept\nAsset type: original full-screen garage background for a premium browser street racing game, wide 16:9 composition.\nPrimary request: NIGHTSHIFT's underground Nervos City relay workshop at midnight. A sophisticated believable automotive tuning space in industrial concrete, dark brushed metal, mint green cell-shaped recessed light panels, a few neatly arranged tools and glowing diagnostic stations at the far edges. The broad central floor is empty, reserved for a separately rendered 3D car. Camera near floor height looking across the workshop at a slight diagonal, cinematic but quiet. Rainy city lights through a distant open roller door at the back right. Wet satin floor with restrained reflections; moody blue, graphite, warm tungsten and mint accent lighting. Fine physically realistic materials, excellent architectural detail, readable middle tones. No vehicles, no people, no writing, no logos, no watermark. Keep the left third and upper third visually calm for an interface; environment fills all edges.",
+      "encoding": "WebP quality 87, format conversion only",
+      "usage": "Garage backdrop behind original real-time car geometry."
+    }
+  ]
+}

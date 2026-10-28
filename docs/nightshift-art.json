@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "games/arcade/web/art/nightshift/materials.webp",
+      "original": "generated-originals/exec-b15822fb-cbc8-4b5a-bdcd-543596e99836.png",
+      "prompt": "Use case: stylized-concept. Asset type: production game material atlas, exactly square, 2048x2048. Create a high-quality physically grounded texture atlas for a rain-soaked midnight street racing game. Exactly four equal square quadrants touching edge to edge with NO margins and NO labels. Upper-left: dark charcoal fine-grain wet asphalt, subtle repaired hairline cracks, small irregular rain-darkened patches, no painted road markings, no perspective. Upper-right: aged blue-grey poured concrete wall, subtle panel joints and water streaking, understated graffiti-like abstract paint residue but absolutely no text. Lower-left: dark charcoal commercial building facade with tightly repeated horizontal rows of small warm white office windows, some unlit, flat orthographic front elevation, elegant realistic glass and aluminium. Lower-right: weathered dark teal industrial corrugated steel, fine vertical ribs, subtle rust and wetness, flat orthographic. Materials fill each quadrant seamlessly without a raised border. Each quadrant has even ambient illumination, no dramatic baked spotlights, no objects or vehicles, no text, no logos, no bevel or frame. Small-scale realistic detail, coherent restrained deep blue-grey palette, professionally authored racing-game environment textures."
+    },
+    {
+      "file": "games/arcade/web/art/nightshift/skyline.webp",
+      "original": "generated-originals/exec-5aaf2a82-0979-4475-ae3c-d43f886b4c2e.png",
+      "prompt": "Use case: stylized-concept. Asset type: very wide 3:1 panoramic distant environment matte painting for a polished realistic street racing game named Nightshift. A fictional rain-soaked Japanese-inspired port metropolis at blue hour just after dusk, viewed from an elevated expressway, but NO road or cars in this image. Restrained petrol blue atmosphere, layered hazy skyscraper silhouettes, cranes and industrial docks along the lower edge, clusters of warm amber windows and a few desaturated cyan and vermilion illuminated panels. Dense blue-grey cloud layers occupy the upper two thirds. City horizon around the bottom quarter; distant mist creates cinematic depth, subtle amber glow behind clouds, photorealistic architectural detail. Elegant grounded automotive-advertising art direction, not a neon cyberpunk fantasy, not oversaturated purple. Image fills edge to edge, no text, no logos, no people, no UI, no frames. This is an original environment, not a recreation of any game screenshot."
+    }
+  ],
+  "conversion": "PNG to WebP encoding only. Atlas quadrants are sampled at runtime; original pixels are not retouched."
+}

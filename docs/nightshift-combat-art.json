@@ -1,0 +1,30 @@
+{
+  "version": "NIGHTSHIFT 7.0 combat presentation",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "path": "games/arcade/web/art/nightshift/combat-markers.webp",
+      "source": "generated-originals/exec-d940d424-cf92-4318-9c79-010b5791dcfc.png",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent racing HUD marker atlas, exactly 2 columns by 2 rows of equal square cells.\nPrimary request: replace ugly opaque rectangles above race cars with four premium, elegant, lightweight holographic markers. Top left: a small orange-gold downward-pointing racing chevron with two subtle floating light ticks, no surrounding panel. Top right: a precise mint-cyan circular lock-on reticle, four separated curved arcs and a hollow transparent center. Bottom left: a translucent icy-blue hexagonal shield outline with subtle electric edge detail and a completely hollow transparent center. Bottom right: a broken amber circular ring with a few fading sparks, communicating a disabled rival.\nComposition: each glyph centered and isolated with generous transparent padding, no solid backing, no rectangles, no labels, no numbers, no text. Restrained premium sci-fi racing HUD, crisp readable edges, fine luminous materials, soft transparent falloff. Exact 2x2 grid, no dividers, no marks outside the four cells. Real alpha transparency, no black background, no watermark.",
+      "encoding": "WebP quality 84, original alpha preserved, format conversion only"
+    },
+    {
+      "path": "games/arcade/web/art/nightshift/combat-pickups.webp",
+      "source": "generated-originals/exec-ebc8b8d0-b5ba-490a-9843-dda019bc271c.png",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent 4-column by 2-row game pickup icon atlas, wide 2:1 image; eight equal square cells with generous transparent margins.\nPrimary request: eight original premium luminous racing pickup icons, entirely free-floating with no backing panels. Read order left to right: TOP ROW: gold energy diamond; cyan shield outline with a small core; violet horseshoe magnet; emerald nitrous bottle with a lightning shape. BOTTOM ROW: pink EMP lightning coil; two linked gold cell hexagons for score multiplier; cyan triple forward racing chevrons; orange low-profile spiked mine. Clear unique silhouettes, believable metallic highlights mixed with restrained holographic edge glow, straight-on product-icon view, readable on a dark or bright road.\nConstraints: exactly eight separate icons in 4x2 grid. Every icon confined to its own cell; no crossings. No words, letters, digits, opaque discs, rectangular panels, backplates, frames, labels, watermarks or backgrounds. Actual transparent alpha including generous space around every icon.",
+      "encoding": "WebP quality 84, original alpha preserved, format conversion only"
+    },
+    {
+      "path": "games/arcade/web/art/nightshift/combat-vfx.webp",
+      "source": "generated-originals/exec-12c7bcde-bd14-4957-8cde-d89a4a39a356.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production racing-game VFX atlas, eight equal square cells in a 4-column by 2-row layout, wide 2:1 image, genuine transparent background.\nPrimary request: cinematic but readable original combat effect sprites. TOP ROW left to right: orange-white metal impact sparks with fine outward hot fragments; a compact fiery car-impact flash surrounded by rolling charcoal smoke; a mint-blue hexagonal energy shield impact ring, hollow transparent center, fine electric cracks; shattering icy-blue energy glass fragments in an expanding ring. BOTTOM ROW left to right: a small bright cyan electrical projectile core with trailing filaments; a soft beige-grey dust burst with natural transparent wispy edges; a dense silver-blue tire smoke puff; a violet-cyan circular jammer shockwave with concentric broken arcs and a hollow center.\nStyle: high-quality realistic game particles, layered detail, bright focal energy fading smoothly into transparency, no opaque backplates. Each sprite centered in its own cell with generous transparent padding, no crossings, no borders, no lettering, no logos or watermark. Exactly eight cells, real alpha, no black background.",
+      "encoding": "WebP quality 84, original alpha preserved, format conversion only"
+    },
+    {
+      "path": "games/arcade/web/art/nightshift/combat-frame.webp",
+      "source": "generated-originals/exec-39f6a195-61ee-4a4b-b5f0-62f649e030dc.png",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent interface frame texture for a premium night racing game, wide 16:9 rectangle.\nPrimary request: an exceptionally restrained open HUD frame made only of four luminous mint-silver corner brackets, tiny precision notches and a few fine pale glass-edge highlights at the perimeter. Almost the entire image, especially the middle 85 percent, must be fully transparent. The brackets suggest speed and high-end automotive instrumentation. Subtle soft cyan light bloom around the thin edges, no solid shapes or backing panel. The frame will stretch behind result statistics, small control icons and the minimap; keep it clean and readable at small sizes.\nConstraints: no opaque fill, no dark rectangle, no frosted glass surface, no text, no logo, no watermark. Genuine transparent alpha throughout the empty center and outside the brackets. One simple open rectangular frame only.",
+      "encoding": "WebP quality 84, original alpha preserved, format conversion only"
+    }
+  ]
+}

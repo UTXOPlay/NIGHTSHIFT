@@ -1,0 +1,11 @@
+.git
+node_modules
+target
+dist
+artifacts
+data
+.env*
+deploy/*.env
+*.key
+*.pem
+docs/screenshots

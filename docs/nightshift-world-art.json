@@ -1,0 +1,29 @@
+{
+  "version": "NIGHTSHIFT 7.0 — World Circuit",
+  "assets": [
+    {
+      "tool": "built-in image_gen",
+      "path": "games/arcade/web/art/nightshift/world-biomes.webp",
+      "source": "generated-originals/exec-16f38250-216f-4446-ac05-33e887733557.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production racing game environment panorama texture atlas, one original image divided into exactly 2 columns and 2 rows. Each quadrant is a separate wide landscape panorama, edge-to-edge, with no gutters or borders. This is a reusable background texture for NIGHTSHIFT.\nPrimary request: four sharply different premium realistic racing environments, with broad skies and distant horizons, eye-level view and no foreground roads or vehicles. Top left: sunlit red sandstone desert canyon, layered ochre mesas, dusty amber atmosphere, pale blue clear sky. Top right: cold alpine snow mountains, dark rocky peaks capped with snow, glacial blue lake, pale pink dawn clouds. Bottom left: dramatic volcanic basalt coastline, black jagged cliffs with restrained orange lava seams far away, dusky smoky mauve sky. Bottom right: misty emerald forest valley, dense tall conifers, rolling green mountains, sunlight shafts through clouds after rain.\nComposition: in every quadrant the horizon is around the lower third; keep the center open for an overlaid real-time road. Fine distant natural materials, photorealistic cinematographic landscape matte painting, coherent light per quadrant. No text, no symbols, no logos, no cars, no UI, no watermark, no colored divider lines. Exactly four panoramas in a 2x2 atlas.",
+      "encoding": "WebP quality 88, format conversion only",
+      "usage": "Four biome panoramas: desert, glacier, volcanic coast and forest. Actual map thumbnails are captured from the game renderer."
+    },
+    {
+      "tool": "built-in image_gen",
+      "path": "games/arcade/web/art/nightshift/world-foliage.webp",
+      "source": "generated-originals/exec-a40d21cc-f69e-45a0-8ab3-9f4346cb8471.png",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent texture atlas of original game-ready vegetation cutouts, exactly 2 by 2 equal square cells, transparent background.\nPrimary request: four high-detail realistic botanical cutouts for a racing game. Top left: one tall dense evergreen fir tree with a visible brown trunk, layered irregular needle branches, naturally deep green foliage. Top right: one alpine fir tree with realistic soft snow accumulated on upper branches, green needles still visible beneath the snow. Bottom left: one sun-bleached desert scrub bush with fine dry twigs and muted olive tufts. Bottom right: one rounded broadleaf garden tree, lush small leaves, airy irregular canopy and a short visible trunk.\nComposition: each isolated plant upright, seen side-on at eye level, full plant from ground-level trunk base to tip visible, generous transparent margin, completely confined to its own equal quadrant, no ground plane, no cast shadow. Photorealistic texture quality with believable organic silhouettes readable at small size. Even neutral daylight. No pots, no background, no labels, no text, no grid lines, no watermark. Preserve real alpha transparency, no opaque color around leaves.",
+      "encoding": "WebP quality 88, alpha preserved, format conversion only",
+      "usage": "Instanced crossed foliage planes, alpha cutout, no transparent sorting. UV rectangles follow the generated row boundaries."
+    },
+    {
+      "tool": "built-in image_gen",
+      "path": "games/arcade/web/art/nightshift/world-terrain.webp",
+      "source": "generated-originals/exec-e49f503b-859e-4d64-be91-35e656a02d46.png",
+      "prompt": "Use case: stylized-concept\nAsset type: original 2 by 2 equal-cell material texture atlas for efficient real-time racing-game terrain.\nPrimary request: four detailed physically believable seamless material samples photographed flat and straight down, completely filling each quadrant. Top left: pale compacted alpine snow, fine crystal grain and subtle blue shallow dents, no footprints. Top right: rich forest moss and tiny leaves over dark damp soil, subtle organic detail. Bottom left: warm red sandstone gravel and dusty fine sand, irregular sediment and small pebbles. Bottom right: dark cooled volcanic basalt grit with sparse fine warm rust-colored mineral lines, no glowing cartoon lava.\nConstraints: exactly four material quadrants, no gutters, no borders, no scene perspective, no objects, no labels, no text or watermark. Consistent neutral diffuse lighting and high-frequency microtexture without strong shadows, suitable for tiling over large 3D surfaces. Each cell should have similar edge tones to reduce seams.",
+      "encoding": "WebP quality 88, format conversion only",
+      "usage": "Snow, forest floor, sandstone and basalt atlas sampled by instanced terrain and rocks."
+    }
+  ]
+}

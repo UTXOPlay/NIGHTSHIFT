@@ -1,0 +1,16 @@
+services:
+  nightshift:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: utxoplay/nightshift:7.0.0
+    restart: unless-stopped
+    environment:
+      RUNTIME_TOKEN: ${RUNTIME_TOKEN:?Set a stable server-only token of at least 32 characters}
+      GAME_ORIGIN: ${GAME_ORIGIN:-http://localhost:8898}
+    ports:
+      - "127.0.0.1:8898:8080"
+    volumes:
+      - nightshift-v7:/app/data
+volumes:
+  nightshift-v7:

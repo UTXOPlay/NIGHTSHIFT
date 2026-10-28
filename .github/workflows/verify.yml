@@ -1,0 +1,36 @@
+name: Verify NIGHTSHIFT
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  browser-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:release
+  native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: dtolnay/rust-toolchain@stable
+      - run: sudo apt-get update && sudo apt-get install -y clang libclang-dev pkg-config protobuf-compiler
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            games/nightshift-v7/native -> ../../../target
+            games/nightshift-v6/native -> ../../../target
+      - run: npm run test:native
+      - run: npm run build:native
+      - run: npm run build:native:legacy
+      - run: npm run test:conformance
+      - run: npm run test:replay
