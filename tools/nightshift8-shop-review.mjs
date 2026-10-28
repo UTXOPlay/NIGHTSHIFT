@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {reviewSession} from './review-session.mjs';
 const origin=process.env.DRIFT_ORIGIN||'http://127.0.0.1:8899',out=process.env.DRIFT_OUT||'artifacts/environment-v81/shop';mkdirSync(out,{recursive:true});
-const browser=await chromium.launch({args:['--no-sandbox','--use-angle=gl','--enable-webgl','--ignore-gpu-blocklist']}),context=await browser.newContext({viewport:{width:1920,height:1080}});let logout;
+const browser=await chromium.launch({proxy:process.env.DRIFT_PROXY?{server:process.env.DRIFT_PROXY}:undefined,args:['--no-sandbox','--use-angle=gl','--enable-webgl','--ignore-gpu-blocklist']}),context=await browser.newContext({viewport:{width:1920,height:1080}});let logout;
+context.setDefaultNavigationTimeout(90000);
 try{
  if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(context,origin);
  const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
