@@ -6,4 +6,4 @@ if(!process.env.RUNTIME_TOKEN){
  if(!existsSync(tokenFile))writeFileSync(tokenFile,randomBytes(32).toString('hex'),{mode:0o600});
  process.env.RUNTIME_TOKEN=readFileSync(tokenFile,'utf8').trim();
 }
-await import('../host/nightshift7.mjs');
+await import('../host/nightshift8.mjs');

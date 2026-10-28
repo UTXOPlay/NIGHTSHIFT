@@ -1,0 +1,18 @@
+{
+  "name": "myelin-nightshift-v8",
+  "port": 8898,
+  "runtimePort": 8798,
+  "games": [
+    {
+      "id": "drift-run",
+      "webRoot": "dist/drift-run",
+      "runtimePath": "/drift-run",
+      "rooms": false,
+      "socket": false
+    }
+  ],
+  "runtimeCommand": [
+    "target/release/myelin-nightshift-v8"
+  ],
+  "manifest": "games/nightshift-v8/native/Cargo.toml"
+}

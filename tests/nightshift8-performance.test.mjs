@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {ResolutionBudget,startRenderLoop} from '../games/arcade/web/nightshift8-performance.mjs';
+test('Auto resolution responds to alternating fast and slow frames instead of staying at full scale',()=>{const b=new ResolutionBudget(1);for(let i=0;i<240;i++)b.sample(i%2?65:16);assert.equal(b.ratio,.75);for(let i=0;i<200;i++)b.sample(16);assert.equal(b.ratio,.75);assert.equal(b.sample(100,'high'),1);assert.equal(b.sample(100,'low'),1);});
+test('Frame scheduler keeps 100 ms of active simulation time and resets hidden-tab gaps',()=>{
+ const old={document:globalThis.document,localStorage:globalThis.localStorage,requestAnimationFrame:globalThis.requestAnimationFrame,cancelAnimationFrame:globalThis.cancelAnimationFrame,addEventListener:globalThis.addEventListener,removeEventListener:globalThis.removeEventListener};
+ const listeners={},callbacks=[],deltas=[];globalThis.document={hidden:false,documentElement:{dataset:{}},addEventListener:(n,fn)=>listeners[n]=fn,removeEventListener:()=>{}};globalThis.localStorage={getItem:()=>null};globalThis.requestAnimationFrame=fn=>(callbacks.push(fn),callbacks.length);globalThis.cancelAnimationFrame=()=>{};globalThis.addEventListener=()=>{};globalThis.removeEventListener=()=>{};
+ try{const stop=startRenderLoop((_now,delta)=>deltas.push(delta));callbacks.shift()(100);callbacks.shift()(200);callbacks.shift()(1500);assert.equal(deltas[1],100);assert.equal(deltas[2],250);document.hidden=true;listeners.visibilitychange();callbacks.length=0;document.hidden=false;listeners.visibilitychange();callbacks.shift()(20000);assert.ok(deltas.at(-1)<17);stop();}finally{Object.assign(globalThis,old);}
+});

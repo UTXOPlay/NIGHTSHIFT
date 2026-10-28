@@ -27,8 +27,8 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: |
+            games/nightshift-v8/native -> ../../../target
             games/nightshift-v7/native -> ../../../target
-            games/nightshift-v6/native -> ../../../target
       - run: npm run test:native
       - run: npm run build:native
       - run: npm run build:native:legacy

@@ -2,7 +2,7 @@
 
 A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival drivers, vehicle upgrades and a signed solo career.
 
-[Play on UTXOPlay](https://store.utxoplay.io/games/drift-run/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Combat design audit](docs/combat-design-audit.md)
+[Play on UTXOPlay](https://store.utxoplay.io/games/drift-run/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
 ![World Circuit map selection](docs/screenshots/world-circuit.png)
 
@@ -14,6 +14,8 @@ A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival
 - Persistent opponents, slipstreaming, nitrous, lock-on EMP, shockwave, rear mines and a timed defensive jammer.
 - Generated transparent markers and effects for collisions, attacks, shields, counters, disabled rivals and fatal rollovers.
 - Keyboard, pointer drag and mobile thumb-stick controls. Landscape play, safe-area controls, reduced motion, bounded rendering resolution and layouts through 3840×2160.
+
+Season 8 adds explicit combat outcomes, distinct interception targets, finite AI equipment and separate collision armor / disruption integrity. V8 starts a new signed career; older careers retain their original verifier and data.
 
 This release is a **solo racing career**. Live multiplayer is future work. The fictional Nervos relay setting and Relay Credits are off-chain game content; Myelin provides deterministic host replay, not CKB settlement.
 
@@ -66,13 +68,13 @@ npm run build:native:legacy
 npm run test:replay
 ```
 
-`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V6 verifier. It requires both native binaries. The legacy source is included only for replay compatibility; the web host serves V7.
+`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V7 verifier. It requires both native binaries. The legacy source is included only for replay compatibility; the web host serves V8.
 
 Browser checks use a separate local review server and a fresh data directory:
 
 ```sh
 npx playwright install chromium
-node tools/nightshift7-server.mjs
+node tools/nightshift8-server.mjs
 # In another terminal, while the review server is running:
 npm run test:browser
 npm run test:maps
@@ -92,18 +94,18 @@ export GAME_ORIGIN="http://localhost:8898"
 docker compose -f deploy/compose.yml up --build -d
 ```
 
-The Compose service binds the web port to local loopback and persists V7 state in a named volume. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The public game path stays `/games/drift-run/`.
+The Compose service binds the web port to local loopback and persists V8 state in a named volume. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The public game path stays `/games/drift-run/`.
 
 ## Source and artwork
 
 The current release was extracted from the shared [UTXOPlay/myelin-arcade](https://github.com/UTXOPlay/myelin-arcade) workspace. Native profile-bound files and the 31 audited browser release files are preserved; portable tooling and standalone packaging were added here. Future rule changes must use a new application profile and must not reinterpret old signed careers.
 
-- `games/nightshift-v7/native/`: deterministic Rust simulation and Myelin sessions.
-- `games/nightshift-v7/web/`: browser application and mobile orientation gate.
-- `games/arcade/web/nightshift7-*`: renderer, mirrored rules, controls and audio.
+- `games/nightshift-v8/native/`: deterministic Rust simulation and Myelin sessions.
+- `games/nightshift-v8/web/`: browser application and mobile orientation gate.
+- `games/arcade/web/nightshift8-*`: renderer, mirrored rules, controls and audio.
 - `games/arcade/web/art/nightshift/`: generated artwork and actual map thumbnails.
 - `host/`: authenticated standalone host and UTXOPlay gateway integration.
-- `games/nightshift-v6/native/`: retained V6 replay verifier.
+- `games/nightshift-v7/native/`: retained V7 replay verifier. V6 source is also preserved.
 
 Built-in imagegen prompt records: [combat/UI](docs/nightshift-combat-art.json), [world textures and scenery](docs/nightshift-world-art.json), [career art](docs/nightshift-crew-art.json), [relay materials](docs/nightshift-relay-art.json), and [original city assets](docs/nightshift-art.json). Source PNG names are provenance references; all runtime assets are checked in as WebP. Generated renderer bundles, build artifacts, private keys, runtime databases and local credentials are excluded.
 
