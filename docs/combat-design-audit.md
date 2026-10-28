@@ -20,7 +20,7 @@ The [compact results](combat-design-results.json) retain the scenario outputs an
 
 ### P1 — Disabled rivals still attack; successful defense can help them recover
 
-[Browser rules, lines 178–180](../games/arcade/web/nightshift7-rules.mjs#L178) resolve an existing attack windup without checking whether its owner has been disabled. The synthetic probe starts an attacker with 210 stun ticks and one windup tick remaining: its attack still gives the player 45 stun ticks. This is native behavior too, not a renderer-only artifact; see [native attack resolution](../games/nightshift-v7/native/src/game.rs#L653).
+[Browser attack resolution](../games/arcade/web/nightshift7-rules.mjs#L185) resolve an existing attack windup without checking whether its owner has been disabled. The synthetic probe starts an attacker with 210 stun ticks and one windup tick remaining: its attack still gives the player 45 stun ticks. This is native behavior too, not a renderer-only artifact; see [native attack resolution](../games/nightshift-v7/native/src/game.rs#L653).
 
 Countering that attack assigns `r.stun = 60`, replacing the longer disable. The counter probe changes 210 ticks to 60. A mine also assigns 90 stun ticks directly: hitting a rival with 200 ticks remaining reduces that to 90. A player can therefore land another hit or defend successfully and inadvertently accelerate an opponent's recovery.
 
@@ -30,7 +30,7 @@ Countering that attack assigns `r.stun = 60`, replacing the longer disable. The 
 
 ### P1 — One collision cluster can remove every shield and end the race
 
-[`crash()`](../games/arcade/web/nightshift7-rules.mjs#L218) sets a visual damage timer but never uses it as a hit-recovery gate. Body and rival collision paths can call it repeatedly within one simulation tick. Three overlapping traffic colliders take two shields and kill the player in the same tick in the synthetic probe. This confirms the collision rule, not the frequency of that exact three-car configuration in ordinary races.
+[`crash()`](../games/arcade/web/nightshift7-rules.mjs#L225) sets a visual damage timer but never uses it as a hit-recovery gate. Body and rival collision paths can call it repeatedly within one simulation tick. Three overlapping traffic colliders take two shields and kill the player in the same tick in the synthetic probe. This confirms the collision rule, not the frequency of that exact three-car configuration in ordinary races.
 
 The last-shield rule itself works: the shield absorbs one crash; the next crash is fatal. The problem is that there may be no perceivable or controllable interval between those crashes. Boost ramming also deals rival damage and invokes the player's crash cost, spending a shield; it is not a free armored attack.
 
@@ -38,7 +38,7 @@ The last-shield rule itself works: the shield absorbs one crash; the next crash 
 
 ### P1 — Intercept rewards disable counts, not an ongoing pursuit
 
-The briefing describes marked racers, but [the finish predicate](../games/arcade/web/nightshift7-rules.mjs#L215) only checks total `takedowns`. There is no distinct target roster or unique-target requirement. A disabled opponent's HP immediately resets to two, and Shockwave/mines can damage it again before recovery. The synthetic repeat-disable probe increases the count on an already-disabled rival. The ordinary-input report also records per-rival disable counts, allowing repeated targets to be inspected separately from distinct targets.
+The briefing describes marked racers, but [the finish predicate](../games/arcade/web/nightshift7-rules.mjs#L222) only checks total `takedowns`. There is no distinct target roster or unique-target requirement. A disabled opponent's HP immediately resets to two, and Shockwave/mines can damage it again before recovery. The synthetic repeat-disable probe increases the count on an already-disabled rival. Eleven ordinary-input runs recorded repeated targets, including four successful Intercept runs. In map 12, EMP race ID 1 met its four-disable objective using only two rivals: one disable on rival 3 and three on rival 4. The results retain per-rival counts.
 
 Shockwave checks only longitudinal distance, not lateral separation, and one shot can damage all five rivals. Its two-shot opening has much more objective value than two single-target EMP shots. The seven-second rival disable also quickly separates cars from the pack, often ending the interaction instead of creating a close overtaking contest.
 
@@ -48,7 +48,7 @@ Shockwave checks only longitudinal distance, not lateral separation, and one sho
 
 In the nine standard-race runs per policy, the no-fire driver won all nine in first place, as did every armed policy. With no firing it spent about 11% of race time within 90 m of any unfinished rival, and faced only 0.33 attack windups per race on average. Shockwave reduced proximity to about 7%. These easy-mode results do not prove all difficulties are trivial; they do show that an introductory race can last four minutes with very little sustained rivalry.
 
-AI attacks are started by a proximity and cooldown condition; all are aimed at the human. Rivals do not attack one another, choose their own weapons, consume ammunition, or weigh attacking against defending a position. Their lane planner has traffic avoidance and one blocking personality, but combat decisions lack comparable depth. See [rival update](../games/arcade/web/nightshift7-rules.mjs#L175).
+AI attacks are started by a proximity and cooldown condition; all are aimed at the human. Rivals do not attack one another, choose their own weapons, consume ammunition, or weigh attacking against defending a position. Their lane planner has traffic avoidance and one blocking personality, but combat decisions lack comparable depth. See [rival update](../games/arcade/web/nightshift7-rules.mjs#L182).
 
 **Next-profile design:** decide whether each event is a podium race, a pursuit or a combat objective, then tune it accordingly. Build rival intentions around overtaking, defending, drafting and recovering. Give rivals a reason to attack other rivals and shared resource constraints. Keep encounters alive with believable pace, route choices and recovery—not visible teleporting. Measure proximity over the full race and by sector, not only whether some seed can win.
 
