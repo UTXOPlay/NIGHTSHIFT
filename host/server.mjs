@@ -12,8 +12,9 @@ export function createGameHost({config,origin,runtimeUrl,runtimeToken,sessionSec
  const quotas=new Map();
  function limited(key,max,ms){const now=Date.now();let q=quotas.get(key);if(!q||q.until<now){q={count:0,until:now+ms};quotas.set(key,q);}return ++q.count>max;}
  const cleanup=setInterval(()=>{for(const [k,v] of quotas)if(v.until<Date.now())quotas.delete(k);},60000);cleanup.unref();
- const cookieName='game_'+config.name.replaceAll('-','_');
- const sign=value=>createHmac('sha256',sessionSecret).update('standalone:'+config.name+':'+value).digest('base64url');
+ const sessionName=config.sessionName||config.name;
+ const cookieName='game_'+sessionName.replaceAll('-','_');
+ const sign=value=>createHmac('sha256',sessionSecret).update('standalone:'+sessionName+':'+value).digest('base64url');
  const equal=(a,b)=>typeof a==='string'&&Buffer.byteLength(a)===Buffer.byteLength(b)&&timingSafeEqual(Buffer.from(a),Buffer.from(b));
  function account(req){
   const token=req.headers['x-runtime-token'];

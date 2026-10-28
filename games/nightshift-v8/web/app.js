@@ -1,3 +1,4 @@
+import {KEY_ACTIONS,keyboardConfig,keyboardPreset,bindKey,keyboardAction,eventKey,keyLabel} from './_arcade/nightshift-keyboard.mjs';
 import {combatHud,combatFeedback} from './_arcade/nightshift8-feedback.mjs';
 import {createGame,step,applyAction,VEHICLES,EVENTS,RIVALS,GADGETS,UPGRADES} from './_arcade/nightshift8-rules.mjs';
 import {DriftRenderer,FLEET} from './_arcade/nightshift8-renderer.bundle.mjs';
@@ -9,6 +10,7 @@ const $=s=>document.querySelector(s),root=$('#game'),canvas=$('canvas'),renderer
 const hidden=(el,v)=>{if(el.hidden!==v)el.hidden=v;},text=(el,v)=>{v=String(v);if(el.textContent!==v)el.textContent=v;};
 let ending=false,shopMessage='',shopTab='showroom',previewDrag=null;
 let g=createGame(),previous=structuredClone(g),confirmed=null,pending=[],sending=null,loaded=false,running=false,busy=false,view='career',countdown=0,accumulator=0,saveTime=0,hudTime=0,noticeTime=0,selectedMode=0,selectedVehicle=0,gadget=0,difficulty=0,lastHud='',lastTick=0;
+let keyConfig=keyboardConfig(localStorageSafe()),bindingCapture=null;function localStorageSafe(){try{return localStorage.getItem('nightshift:keyboard')}catch{return null}}
 const held=new Map();let taps=0,drag=null,stickOwner=null,stickX=0,stickY=0;
 const fmt=n=>Math.floor(n/1800)+':'+String(Math.floor(n/30)%60).padStart(2,'0');
 const status=s=>setText('status',s),announce=s=>setText('announcement',s);
@@ -27,8 +29,32 @@ function clear(){previewDrag=null;held.clear();taps=0;drag=null;stickOwner=null;
 let lastWeaponHint=-10000;
 function press(source,bit){if(!held.has(source)){if(bit===32&&!combatHud(g).weaponReady&&performance.now()-lastWeaponHint>1400){toast(combatHud(g).weaponStatus);lastWeaponHint=performance.now();}held.set(source,bit);if(bit&112)taps|=bit;}}
 function inputs(){let bits=taps; taps=0;for(const b of held.values())bits|=b;if(stickOwner!==null){bits&=~11;if(stickY>.35)bits|=8;const target=stickX*(VEHICLES[g.vehicle].turn+(bits&8?12:0)),d=target-g.steer_v;if(Math.abs(stickX)>.12){if(d>5)bits|=2;else if(d< -5)bits|=1;}}else if(drag){bits&=~3;const delta=drag.target-g.drift_x-g.steer_v*2;if(delta>60)bits|=2;else if(delta< -60)bits|=1;}return bits;}
-const keys={KeyA:1,ArrowLeft:1,KeyD:2,ArrowRight:2,KeyS:8,ArrowDown:8,Space:16,KeyE:32,KeyQ:64};
-addEventListener('keydown',e=>{if(e.target.closest?.('input,select,textarea'))return;if(e.code==='Escape'||e.code==='KeyP'){e.preventDefault();if(!e.repeat)void pause();return;}if(e.code==='Enter'&&!running&&!countdown&&!e.target.closest?.('button')){e.preventDefault();void start();return;}if(!running||e.target.closest?.('button'))return;if(keys[e.code]){e.preventDefault();if(!e.repeat)press(e.code,keys[e.code]);}});addEventListener('keyup',e=>{held.delete(e.code);if(keys[e.code]&&running)e.preventDefault();});
+function refreshKeys(){
+ for(const b of abilityButtons){const action=KEY_ACTIONS.find(([, ,bit])=>bit===+b.dataset.input);if(!action)continue;const key=keyConfig.bindings[action[0]];b.querySelector('.ability-key').textContent=keyLabel(key);b.setAttribute('aria-keyshortcuts',key==='Space'?'Space':key);}
+ $('#drive-keys').replaceChildren();for(const [id,label]of [['left',''],['right','STEER'],['drift','DRIFT'],['fire','FIRE'],['counter','COUNTER'],['boost','BOOST']]){const k=document.createElement('kbd');k.textContent=keyLabel(keyConfig.bindings[id]);$('#drive-keys').append(k,document.createTextNode(' '+label+' '));}
+ canvas.setAttribute('aria-label','Race track. '+KEY_ACTIONS.map(([id,label])=>keyLabel(keyConfig.bindings[id])+' '+label.toLowerCase()).join(', '));
+ $('#key-preset').value=keyConfig.preset;$('#key-preset-note').textContent=keyConfig.custom?'CUSTOM BINDINGS':'Letter keys follow your active keyboard layout. Arrow keys also steer.';
+ const rows=$('#key-rows');rows.replaceChildren();for(const [id,label]of KEY_ACTIONS){const row=document.createElement('div');const name=document.createElement('span');name.textContent=label;const b=button('keyboard','Rebind '+label.toLowerCase(),()=>{clear();bindingCapture=id;$('#key-message').textContent='Press a key for '+label+'. Escape cancels.';b.setAttribute('aria-pressed','true');});const k=document.createElement('kbd');k.textContent=keyLabel(keyConfig.bindings[id]);b.append(k);row.append(name,b);rows.append(row);}
+}
+function saveKeys(){write('nightshift:keyboard',JSON.stringify(keyConfig));clear();refreshKeys();}
+async function openKeys(){await pause();clear();bindingCapture=null;hidden($('#keybinds'),false);refreshKeys();$('#key-preset').focus();}
+function closeKeys(){bindingCapture=null;clear();hidden($('#keybinds'),true);keyboardButton.focus();}
+const keyboardButton=button('keyboard','Keyboard layout and bindings',()=>void openKeys());nav.insertBefore(keyboardButton,helpButton);
+$('#key-preset').onchange=e=>{keyConfig=keyboardPreset(e.target.value);saveKeys();$('#key-message').textContent='Controls saved on this device.';};
+$('#key-actions').append(button('retry','Reset selected keyboard preset',()=>{keyConfig=keyboardPreset(keyConfig.preset);saveKeys();}),button('close','Close keyboard settings',closeKeys));
+refreshKeys();
+addEventListener('keydown',e=>{
+ if(!$('#keybinds').hidden){
+  if(bindingCapture){e.preventDefault();e.stopPropagation();if(e.code==='Escape'){bindingCapture=null;$('#key-message').textContent='Binding cancelled.';refreshKeys();return;}if(e.repeat||e.ctrlKey||e.altKey||e.metaKey||['Shift','Control','Alt','Meta'].includes(e.key))return;try{keyConfig=bindKey(keyConfig,bindingCapture,eventKey(e));bindingCapture=null;saveKeys();$('#key-message').textContent='Binding saved.';}catch(error){$('#key-message').textContent=error.message;}return;}
+  if(e.code==='Escape'){e.preventDefault();closeKeys();}if(e.key==='Tab'){const items=[...$('#keybinds').querySelectorAll('button,select')],first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}return;
+ }
+ if(e.target.closest?.('input,select,textarea'))return;const action=keyboardAction(keyConfig,e);
+ if(e.code==='Escape'||action?.[0]==='pause'){e.preventDefault();if(!e.repeat)void pause();return;}
+ if(e.code==='Enter'&&!running&&!countdown&&!e.target.closest?.('button')){e.preventDefault();void start();return;}
+ if(!running||e.target.closest?.('button'))return;if(action?.[2]){e.preventDefault();if(!e.repeat)press(e.code,action[2]);}
+});
+addEventListener('keyup',e=>{held.delete(e.code);if(keyboardAction(keyConfig,e)&&running)e.preventDefault();});
+
 canvas.onpointerdown=e=>{if(view==='garage'&&e.button===0){previewDrag={id:e.pointerId,x:e.clientX,yaw:renderer.previewYaw||0};canvas.setPointerCapture(e.pointerId);return;}if(!running||e.button!==0)return;e.preventDefault();canvas.focus();canvas.setPointerCapture(e.pointerId);const p=renderer.pointer(e.clientX,e.clientY);drag={id:e.pointerId,x:p.x,base:g.drift_x,target:g.drift_x};};canvas.onpointermove=e=>{if(previewDrag?.id===e.pointerId){renderer.previewYaw=previewDrag.yaw+(e.clientX-previewDrag.x)*.008;return;}if(drag?.id!==e.pointerId)return;const p=renderer.pointer(e.clientX,e.clientY);drag.target=Math.max(-340,Math.min(2340,drag.base+p.x-drag.x));};for(const type of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(type,e=>{if(previewDrag?.id===e.pointerId)previewDrag=null;if(drag?.id===e.pointerId)drag=null;});
 addEventListener('blur',()=>{clear();void pause();});document.addEventListener('visibilitychange',()=>{if(document.hidden){clear();void pause();}});document.addEventListener('utxoplay:orientation',e=>{if(e.detail.blocked){clear();void pause();}});
 async function api(path,body){const r=await fetch('./api/'+path,{method:body===undefined?'GET':'POST',headers:body===undefined?{}:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(20000)});const data=await r.json();if(!r.ok)throw Error(data.error||'Service unavailable');return data;}

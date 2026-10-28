@@ -1,8 +1,26 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 8.1.1 — Street Racing](nightshift-v8.md). This presentation and workshop update preserves the Season 8 rules, native binary and career directory. Its application profile is `dc78757f7fd0b708a46d9549e6843986a668a334ad10f65a5ee7a43934b4ee53`. The current source and browser hashes are in `release-integrity.json`; the preserved V7 manifest is `release-integrity-v7.json`.
+The active release is [NIGHTSHIFT 9.0.0 — Circuit handling](nightshift-v9.md). Its exact native profile is `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs, the course data and 78 browser files. Frozen V8 and V7 native hashes remain in their versioned manifests.
 
-The canonical route is now [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/); see [URL migration](url-migration.md).
+The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Store document launches, embedded games, vendor links and redirects now use `/games`; `/play` is retained as a permanent redirect. Existing catalog/account IDs are unchanged.
+
+## V9 local verification — 28 October 2026
+
+All 50 JavaScript/host tests and 13 native test cases passed. The native tests verify swept contact outcomes, braking/boost cancellation, reverse, authenticated career origins, cross-profile rejection and restart persistence. Complete browser/native conformance covers 38 tapes, 426,742 active ticks and 1,184 economy frames; every map has a successful ordinary-input replay and the career earns all six cars. Successful events remain between three and seven active minutes.
+
+The signed HTTP career test completed a 233.4-second win after one failed race, bought KITE with earned credits, rejected stale/tampered commands, verified its export and recovered the same state after restart. The real V8/V9 host bridge test retained an unfinished V8 race and its ticks, then verified/imported the original career only when an explicit new race was chosen. The original V8 state remained intact.
+
+Browser acceptance passed 1920×1080, 2560×1080, 2560×1440, 3840×2160 and 844×390, backing-resolution limits, inverse input, purchases/reload, separate result panels, next-stage navigation, thumb-stick plus counter, portrait pause/input clearing and reduced motion. Six licensed vehicle builds remain upright with four grounded tire contacts. All twelve environments compile without browser/shader errors. Seven combat scenarios verify effects and native replay; fatal motion freezes the simulation and rests the vehicle above the local road surface. Colemak detection, physical-key events, HUD labels, conflict rejection, custom persistence and settings pause/release were checked in Chromium.
+
+Final local measurements (not physical phone measurements):
+
+| Scene / viewport | Wall / simulation seconds | Median / p10 FPS | Median CPU draw work | Draw calls |
+| --- | --- | --- | --- | --- |
+| Harbor, 1920×1080 | 30.13 / 30.10 | 60 / 60 | 2.58 ms | 44–78 |
+| Neon Ward, 1920×1080 | 30.20 / 30.17 | 60 / 60 | 2.60 ms | 45–76 |
+| Commons Gardens, 844×390 touch simulation | 20.11 / 20.10 | 60 / 60 | 2.40 ms | 46–81 |
+
+The garden measurement includes the final research buildings replacing the reflective domes. All samples kept render scale 1 and reported no browser errors. The V9 portable binary SHA-256 is `bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89`; the retained exact V8 binary is `1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598`.
 
 ## V8.1 presentation verification — 28 October 2026
 
