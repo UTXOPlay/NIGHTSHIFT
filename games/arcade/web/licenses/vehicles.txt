@@ -1,0 +1,26 @@
+NIGHTSHIFT vehicle asset credits
+
+SPORTSCAR
+Author: Yasutoshi Mori (@MirageYM)
+Source: https://github.com/mmp/pbrt-v4-scenes/tree/master/sportscar
+Source credit and license: https://github.com/mmp/pbrt-v4-scenes#sportscar
+License: Creative Commons Attribution 2.0 Generic (CC BY 2.0)
+https://creativecommons.org/licenses/by/2.0/
+
+CAR CONCEPT
+Model and textures: Eric Chadwick, copyright 2024 Darmstadt Graphics Group GmbH
+Based on the public-domain Free Concept Car 004 by Unity Fan.
+Source: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+NIGHTSHIFT adaptations to both assets:
+Geometry converted and reduced for near/far game models; source textures,
+logo surfaces and material setups replaced; wheels rebuilt and aligned;
+materials batched while retaining paint, glass, metal, rubber and light
+properties; fictional paint schemes and aero kits added. Original source
+authors do not endorse NIGHTSHIFT. Vehicle names in the game are fictional.
+
+The adapted vehicle geometry retains its source license. The game's MIT
+software license does not replace these asset licenses. Full build notes:
+https://github.com/UTXOPlay/NIGHTSHIFT/blob/main/docs/vehicle-assets.md

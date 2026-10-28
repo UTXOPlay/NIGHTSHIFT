@@ -1,6 +1,6 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 8.0 Combat Season](nightshift-v8.md). Its application profile is `dc78757f7fd0b708a46d9549e6843986a668a334ad10f65a5ee7a43934b4ee53`. The current source and browser hashes are in `release-integrity.json`; the preserved V7 manifest is `release-integrity-v7.json`.
+The active release is [NIGHTSHIFT 8.1 — Street Racing](nightshift-v8.md). This presentation and workshop update preserves the Season 8 rules, native binary and career directory. Its application profile is `dc78757f7fd0b708a46d9549e6843986a668a334ad10f65a5ee7a43934b4ee53`. The current source and browser hashes are in `release-integrity.json`; the preserved V7 manifest is `release-integrity-v7.json`.
 
 ## V8 production verification — 28 October 2026
 

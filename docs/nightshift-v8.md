@@ -1,5 +1,21 @@
 # NIGHTSHIFT 8.0 — Combat Season
 
+## 8.1 presentation and workshop update
+
+Version 8.1 retains the exact Season 8 native profile and signed career storage. It changes rendering, assets, keyboard guidance and the garage interface. The product subtitle now explicitly says Street Racing.
+
+Five original imagegen atlases provide four architectural facade families, industrial construction surfaces, street-light optics, eight combat effects, and animated smoke/nitrous frames. The [asset manifest](nightshift-environment-art.json) records every prompt, source output, destination and conversion. Facades retain floor scale, window emission and roughness variation. Buildings gain podiums, setbacks, roof hardware and textured skybridges; harbor gantries gain braces, cabins and machinery. Steel, concrete, reactor walls and outlying relay buildings share the new construction atlas. Thin Cell light sculptures replace filled city sign blocks.
+
+Street lamps use tapered poles, curved arms, detailed housings and a generated diffuser. Twenty-two instanced fixtures share light cards and road pools; two nearby point lights illuminate cars. One bounded 1024² directional shadow map updates on alternate display frames. Low quality and reduced render scale disable physical lights/shadows while preserving the light cards and contact shadows. No full-screen bloom pass is added.
+
+Combat effects follow the existing authoritative event IDs. A textured EMP ribbon connects the actual shot target; Shockwave expands along the road. Sparks, smoke, shield contact and break effects replace old duplicated generic overlays. Drift smoke and nitrous exhaust use bounded flipbook pools. Electrical disable uses a system-hit effect; fatal collision retains the rollover timeline. Reduced motion suppresses transient effects.
+
+The six playable race builds use two [licensed external vehicle bodies](vehicle-assets.md), each prepared at player/opponent detail levels. Material batching retains paint, glass, metal, rubber and light properties. The in-game guide includes the source credits and licenses.
+
+The workshop has a continuous 3D floor receiving the vehicle shadow and four individual tire contact shadows. The preview camera preserves its world-up orientation when switching sides. The workshop provides a large rotatable 3D preview, real vehicle thumbnails, a six-car comparison shelf, readable speed/handling/tier information, exact prices and credit shortfalls. Upgrade cards show the benefit, tier and next cost. Purchase progress, success, failures and race-time restrictions are visible. Short landscape screens switch between showroom and tuning views. Weapon loadout selection stays with the build; purchases remain native-authorized actions with the existing costs and rules.
+
+Desktop controls keep **E / FIRE** and **Q / COUNTER** separate from ammunition and cooldown readings. A compact keyboard legend and weapon-state reason explain locking, range, recharge and insufficient ammo. Touch controls retain their icon layout.
+
 This release fixes the [V7 combat audit](combat-design-audit.md) with a new deterministic native/browser rules profile. Game text, code and documentation remain English. Existing V7 careers keep their original verifier and storage; V8 starts a separate season. No signed V7 state is reinterpreted as V8.
 
 ## Outcomes players can trust
