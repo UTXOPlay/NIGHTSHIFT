@@ -31,6 +31,7 @@ try{
    const earlyDistance=await p.evaluate(()=>__driftReview().roadblock.distance);assert.ok(earlyDistance>200);
    const box=await p.locator('#roadblock-guide').boundingBox();assert.ok(box.x>=0&&box.y>=0&&box.x+box.width<=(touch?844:1920));
    assert.equal(await p.locator('#minimap .map-roadblock').evaluate(e=>e.style.display),'');
+   const overlap=await p.evaluate(()=>{const e=document.querySelector('#telegraph'),prior=e.innerHTML,wasHidden=e.hidden;e.hidden=false;e.innerHTML='<span><b>↑</b></span><span><b>↓</b></span>';const a=e.getBoundingClientRect(),b=document.querySelector('#roadblock-guide').getBoundingClientRect(),intersects=a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;e.innerHTML=prior;e.hidden=wasHidden;return intersects;});assert.equal(overlap,false,'Two incoming-attack cues do not overlap the roadblock artwork');
    await p.screenshot({path:out+(touch?'/touch-early.png':'/desktop-early.png')});
    await p.keyboard.press('KeyP');await p.waitForFunction(()=>!__driftReview().pending&&!__driftReview().sending);state=await call('state');
    const g=structuredClone(state.game),tape=[];

@@ -120,3 +120,5 @@
 @media(max-height:560px){#roadblock-guide{top:85px;gap:7px;max-width:36vw}#roadblock-guide>svg{width:72px;height:33px}#roadblock-guide b{font-size:8px;letter-spacing:.8px}#roadblock-guide span{font-size:9px}#roadblock-guide>small{font-size:8px}#roadblock-guide[data-phase=reverse]{top:77px}}
 
 @media(min-width:2200px){#roadblock-guide>svg{width:165px;height:70px}#roadblock-guide{gap:18px}}
+
+@media(max-height:560px){#roadblock-guide:not([hidden])~#telegraph{top:126px}}
