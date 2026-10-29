@@ -1,10 +1,39 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 9.6.0 — District structure and depth](nightshift-v96.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 105 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
+The active roadblock rules are [NIGHTSHIFT V10 — Readable roadblocks and physical recovery](nightshift-v10.md). Their exact native profile is `0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561`, binding eighteen native inputs. The observed 10.0.1 camera/audio follow-up preserves that profile, all three native executables and the roadblock/reverse modules. Its 112 browser files have been verified separately. Frozen V9/V8/V7 source bindings remain retained.
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
 
 Product completeness is evaluated separately in the [current 9.4 completion audit](completion-audit-v94.md). The checks below verify implemented behavior and release identity; the audit records remaining gameplay and NFS-alignment gaps.
+
+## V10 roadblock verification — 30 October 2026
+
+Roadblock runtime source: `89def39144e8072065b4c01b03a5707d6a8cb7f1`. [Both CI jobs pass](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40966006177), including the retained V9 matrix and V10 native/browser conformance. The [initial parent catalog commit](https://github.com/UTXOPlay/UTXOPlay/commit/1474224b97b7b0a8f2daf1defc98d2f19ed830f0) changes only NIGHTSHIFT's version; the unrelated parent index and HEAD remain untouched.
+
+All 94 isolated Node/host tests pass. V10 conformance compares 39 tapes, 445,490 active ticks and an earned 1,105-frame career, with an ordinary-input success on every map. Native contact and migration tests cover recovering actors, traffic, trailing rivals, verified V9 origins and an origin already carried from V8. Signed purchase/restart/tamper/stale-input/cross-profile checks pass against the portable executable. A separate 27-trial pursuit audit covers three maps, three difficulty settings and three race IDs: 343 closures, at least 300 m of lead for the player/leading rival, both one- and two-lane closures and zero observed rival-centre crossings through intact concrete. Nine full audit races also match native execution. This is one automated controller, not a human win-rate study or a count of every possible mesh contact.
+
+Final staging passes thirteen full application checks, four engine checks, five store checks and the keyboard/touch roadblock review. The exact V10 release initially serves 107 matching public browser files and twelve matching host/config/package files. Its three native executables retain their declared hashes, writable data for V10 is isolated, and both old native volumes remain mounted.
+
+An actual career saved before cutover keeps its complete V9 game, block and profile, then advances from tick 3 to tick 6 under the frozen V9 executor. An unsupported cached client receives HTTP 426 before any mutation. An explicit new race verifies the complete old signed export as a V10 origin; the 650-credit balance and complete career remain identical. Three new inputs match the V10 browser state and the combined native replay verifies.
+
+A concurrent 10.0.1 camera/audio release is preserved. All eighteen native source bindings, all three executable hashes, the ten host/config files and the three roadblock/reverse modules match the roadblock release. Its 112 files fetched through the actual public TLS endpoint match its manifest; both current services are healthy with zero restarts and all three native data mounts are preserved. The current game/store images are `sha256:6ab15d46a7db8a18a90bf3cf7ccdb3d936387dd589e935ce465a73b7fd7a35ff` and `sha256:61fa0e5eae10d6ec478ba35332dce39790ef87c9ded41a57b52053e1e9358740`.
+
+The public application reviews are repeated against that exact 10.0.1 asset snapshot: thirteen acceptance checks, four engine lifecycle checks, five store launcher checks and four roadblock checks across Colemak and trusted touch paths. Both roadblock runs see the closure around 305 m ahead, stop 5.9 m from it, reverse/steer out and continue beyond it without losing armor; their native replays verify. Two attack pictograms are also checked against the actual roadblock glyph bounds. The mobile run rotates while reverse is held and verifies paused simulation and cleared input. Context recovery reloads the identical signed career, and 96.2% of sampled street frames skip instance uploads. All six required display sizes, bounded backing resolution, inverse input and reduced motion remain covered. The CI link binds the roadblock source; the later graphics bundle is verified by these public checks and served-file hashes.
+
+Final 10.0.1 public-origin driving samples on the shared desktop Intel Iris Xe / Chromium OpenGL setup, including a Glacier Pass roadblock approach:
+
+| Quality / viewport | Wall / simulation seconds | Median / p10 FPS | Median CPU work | Sampled GPU time |
+| --- | --- | --- | --- | --- |
+| High, 1920×1080 | 20.198 / 20.200 | 60 / 59 | 2.28 ms | 6.35 ms |
+| Low, 844×390 emulated touch | 20.105 / 20.067 | 60 / 60 | 1.56 ms | 4.32 ms |
+
+Both retain render scale 1 with no browser errors and advance the simulation at normal cadence. An earlier 10.0.0 emulated-touch sample measured 53 median / 15 p10 FPS; that sample remains recorded. Host load changed and a concurrent graphics cutover followed, so the later numbers do not establish a controlled speedup or prove a sole cause for the earlier stutter. These are short desktop/emulated-touch measurements, not physical-phone thermal or long-session guarantees.
+
+The first public roadblock review intersects the concurrent cutover and receives HTTP 502; another attempt loses its SSH verification connection. These interrupted attempts are excluded. Earlier transport setup and QA assertion corrections remain in the machine-readable diagnostics. The final browser reviews cache exact manifest-verified asset bytes while navigation, authentication, native actions and saves use the real TLS origin through SSH CONNECT. The separate server-side HTTPS sweep checks actual resource delivery; this does not establish player-network startup time.
+
+The roadblock source archive SHA-256 is `a38730975f1819ec9b04e3c2bfd00b51b6a86e29c9eb69484807971bdd207f79`; the exact observed 10.0.1 browser snapshot SHA-256 is `aafc7c3a536e9d41265c8d385a4cdeebe56d2679b35539bc61815ffaa9b233ae`. Private configurations, original stopped containers, a consistent platform backup and a native archive taken after stopping the original writers remain available. Rollback handling preserves the separate V10 volume. Only this task's two staging containers are removed; other projects and the later graphics release remain intact.
+
+[Roadblock design and captures](nightshift-v10.md) · [Measured evidence](roadblocks-results.json).
 
 ## 9.6 verification — 30 October 2026
 

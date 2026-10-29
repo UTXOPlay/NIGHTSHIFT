@@ -22,6 +22,7 @@ try{
    await p.goto(origin+'/games/nightshift/?review=1');await p.waitForFunction(()=>__driftReview?.().loaded);
    const call=async(path,data)=>{const r=data===undefined?await ctx.request.get(origin+'/games/nightshift/api/'+path):await ctx.request.post(origin+'/games/nightshift/api/'+path,{headers:{Origin:origin},data});assert.ok(r.ok(),'Native '+path+' HTTP '+r.status());return r.json();};
    let state=await call('state');
+   const stale=await p.evaluate(async state=>{const r=await fetch('./api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:state.session.id,expected_block:state.session.block_hash,action:{type:'ticks',inputs:[0]}})});return{status:r.status,...await r.json()};},state);assert.equal(stale.status,426);assert.equal(stale.code,'client_update_required');assert.deepEqual(await call('state'),state);checks.push('Stale cached client rejected before mutation');
    const command=async action=>{state=await call('action',{session_id:state.session.id,expected_block:state.session.block_hash,action});};
    await command({type:'race',mode:1,vehicle:0,gadget:1,difficulty:0});
    const prediction=createGame();applyAction(prediction,{type:'race',mode:1,vehicle:0,gadget:1,difficulty:0});const driver={},early=[];

@@ -4,7 +4,7 @@ Roadblocks previously appeared after a timer, with only a late opening marker. T
 
 ## Encounter design
 
-- A physical closure is committed at least 300 m ahead of the leading active actor. Its course position stays fixed through braking, reversing and player rebasing. Subsequent closures are spaced at least 1.1 km apart; failed placement searches postpone a closure instead of forcing it into a bad bend.
+- A physical closure is committed at least 300 m ahead of the player and leading active rival. Its course position stays fixed through braking, reversing and player rebasing. Subsequent closures are spaced at least 1.1 km apart; failed placement searches postpone a closure instead of forcing it into a bad bend.
 - Placement checks 160 m of approach curvature and sampled elevation. Sharp approaches and sampled hill crests are rejected. These are conservative integer course checks, not a claim that every camera view is unoccluded. Distance, lane and minimap warnings remain available around a bend.
 - The opening alternates rather than repeatedly forcing the same side. Every third closure blocks one lane, leaving a breather between two-lane closures. Collision-safe gaps account for the player's full static-contact envelope. The final 100 m is kept clear of newly planned closures.
 - New traffic spawns are suppressed near a closure. Power-up and boost-strip spawns are suppressed around its approach so a reward cue does not invite acceleration directly into the barrier. Existing traffic steers toward an actual open lane and brakes when necessary.
@@ -40,3 +40,9 @@ Final staged/public results and release identity are recorded in [roadblocks-res
 ## References
 
 The [official NFS Heat manual](https://www.ea.com/able/resources/need-for-speed/need-for-speed-heat/pc/text-manual) connects pursuit awareness with the map/minimap and describes pinning, dodging and maneuvering out of a chase. The [official Payback pursuit article](https://www.ea.com/ea-studios/motive/news/nfs-payback-high-stakes-cops) frames roadblocks as rerouting and slowing tools. Our early lane cue, physical gap, spacing and recovery design are an implementation choice informed by those principles, rather than a claim to reproduce EA's internal algorithms. No EA code or artwork is included.
+
+The final public verification observes the concurrent 10.0.1 camera/audio update. It preserves the same V10 rule profile and binaries; all public application checks were repeated against its 112 verified browser files.
+
+![Public roadblock approach](screenshots/roadblock-approach-v10.webp)
+
+![Touch reverse and opening](screenshots/roadblock-reverse-v10.webp)
