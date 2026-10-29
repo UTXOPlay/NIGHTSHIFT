@@ -1414,5 +1414,231 @@
     "entryBundled": true,
     "rendererPreloaded": true,
     "crossRegionTransportTimingExcluded": true
+  },
+  "stageAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "stageRuntime": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.9230769230769231,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 45,
+      "textures": 17,
+      "programs": 123,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 53,
+      "textures": 17,
+      "programs": 103,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "errors": []
+  },
+  "stageStore": {
+    "checks": [
+      "Legacy redirects preserve queries for curated and vendor games",
+      "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+      "Existing guest identity also launches chess through the canonical path",
+      "Vendor route ID and absent-game fallback remain correct",
+      "Home has no legacy game links and catalog advertises V9"
+    ],
+    "errors": []
+  },
+  "publicAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "publicRuntime": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.9595959595959596,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 621,
+      "colorWrites": 621,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 45,
+      "textures": 17,
+      "programs": 120,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 56,
+      "textures": 19,
+      "programs": 105,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "errors": []
+  },
+  "publicStore": {
+    "checks": [
+      "Legacy redirects preserve queries for curated and vendor games",
+      "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+      "Existing guest identity also launches chess through the canonical path",
+      "Vendor route ID and absent-game fallback remain correct",
+      "Home has no legacy game links and catalog advertises V9"
+    ],
+    "errors": []
+  },
+  "publicPerformance": {
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 20.157,
+    "simulationSeconds": 20.133333333333333,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 1.76,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      57,
+      90
+    ],
+    "maxTriangles": 189401,
+    "errors": []
+  },
+  "careerContinuity": {
+    "identicalStateAndBlockAtCutover": true,
+    "originalTick": 9,
+    "nextTick": 12,
+    "credits": 650,
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "signedReplay": true
+  },
+  "remoteBrowserTransport": {
+    "assetCache": "Manifest-verified local bytes for acceptance, engine recovery and public performance. Navigation, authentication, native inputs, purchases, signed replay and persistence use the configured remote origin.",
+    "stageStore": "Uncached browser requests",
+    "servedAssetVerification": "Independent server-local HTTP staging sweep and actual public TLS hostname sweep verify all 88 files. Both native binaries match retained pins.",
+    "startupTiming": "Not benchmarked across this workstation tunnel."
+  },
+  "deployment": {
+    "runtimeSource": "fd26835e9c0e21e4e0b60d05622a210bb6607051",
+    "runtimeCi": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40884444994",
+    "parentCatalogCommit": "d22a9781d6c52bb99c2ac4c4262468e473d4a0c6",
+    "gameImage": "sha256:6cc1d95c00640f28368409491355ee2172225faaa4050ab487928632662e3182",
+    "storeImage": "sha256:334b14494ad759d3a450ef4a5b7a18f89f52a9e4efa996bf08ae42e09df6842b",
+    "previousGameImage": "sha256:98a91f0ac9d12737c74de9873be76d0aa21bf81b097eadd513069e67ea714338",
+    "previousStoreImage": "sha256:aa6357873a47874e783348dc69184efb48ac82c056b8905fc8364b05ba45cc01",
+    "otherCatalogEntriesPreserved": true,
+    "nativeVolumesPreserved": true,
+    "healthy": true,
+    "restarts": 0,
+    "sourceArchiveSha256": "723817572bed8d8602050094ddb01b5279f73c24ce601230c6dcc27b7ceee1f4"
+  },
+  "stageIdentity": {
+    "files": 88,
+    "actualHttpProxyBytesMatch": true,
+    "nativePinsMatch": true,
+    "seconds": 1.0006849765777588
+  },
+  "publicIdentity": {
+    "publicTlsHostname": "store.utxoplay.io",
+    "verifiedFiles": 88,
+    "nativePinsMatch": true,
+    "seconds": 2.7597098350524902
   }
 }

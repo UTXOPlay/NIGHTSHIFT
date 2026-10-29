@@ -8,6 +8,17 @@ The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/ni
 
 Engine comparison, implementation and license decisions are documented in [nightshift-v92.md](nightshift-v92.md); current verification is recorded in [engine-results.json](engine-results.json). For slow cross-region links, `tools/cached-browser-review.mjs` can cache manifest-verified local assets while keeping navigation, authentication and native APIs on the real origin. Server-side TLS hashing verifies actual served assets separately. Cached review runs are labeled explicitly and are not startup/network benchmarks. The retained 9.1 evidence below provides the previous release baseline.
 
+Runtime source: `fd26835e9c0e21e4e0b60d05622a210bb6607051`. [Both CI jobs pass](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40884444994). The [parent catalog update](https://github.com/UTXOPlay/UTXOPlay/commit/d22a9781d6c52bb99c2ac4c4262468e473d4a0c6) changes only NIGHTSHIFT's version.
+
+All 67 Node/host tests, 38 native/browser tapes / 426,742 active ticks and signed export/restart/tamper/profile checks pass. The final bundle passes thirteen local, staging and public acceptance checks, four engine recovery checks and five staging/public store checks. All twelve maps and Colemak remapping remain covered. The real-model fixture passes 90 poses / 360 contacts with maximum measured clearance about 0.0000021 m.
+
+The actual public TLS endpoint serves all 88 manifest files exactly, and both deployed native executables retain their pins. A pre-upgrade V9 career retained its complete state, block hash, profile and 650 credits, then advanced from tick 9 to 12 and verified its replay. Other catalog entries and native data volumes are preserved.
+
+The final 20-second public-origin driving sample on desktop Chromium measured 60 median / 60 p10 FPS, 1.76 ms median CPU draw work, render scale 1 and no errors, advancing 20.13 simulated seconds in 20.16 wall seconds. A separate 30-second high-quality renderer sample measured 1.79 ms CPU work and 8.90 ms GPU time. Remote browser runs cache verified asset bytes; native APIs and navigation remain remote, while server-side hashing checks real asset delivery separately. These are not network-startup or physical-phone benchmarks.
+
+The production game image is `sha256:6cc1d95c00640f28368409491355ee2172225faaa4050ab487928632662e3182`; the store cutover image is `sha256:334b14494ad759d3a450ef4a5b7a18f89f52a9e4efa996bf08ae42e09df6842b`. Both services report healthy with zero restarts. Private rollback configurations, a consistent platform backup, native evidence and the hash-verified runtime source archive remain on the server. Rollbacks preserve live data volumes.
+
+
 ## 9.1 verification — 29 October 2026
 
 Runtime source: `a4509958c0e8be13f2358b56391184f17ba740d3`. [Both CI jobs passed](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40871493807). The [isolated parent catalog commit](https://github.com/UTXOPlay/UTXOPlay/commit/ec793e76609c8d50ddf14180d9fca3297644f5fc) changes only NIGHTSHIFT's version. Full machine-readable results are in [motion-presentation-results.json](motion-presentation-results.json).
