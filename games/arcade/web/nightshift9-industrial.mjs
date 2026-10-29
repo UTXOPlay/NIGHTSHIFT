@@ -44,7 +44,7 @@ export const INDUSTRIAL={
   for(const z of [-.8,.8])beam([6,19.6,z],[6,10,z],.045);
   box(6,9.8,0,6,.3,2.8);
  }),
- pier:assembly((box)=>{box(0,-.45,0,18,.8,15);for(const x of [-7,7])for(const z of [-5.5,5.5])box(x,-2.5,z,1.1,4.5,1.1);}),
+ pier:assembly((box)=>{box(0,-.4,0,18,.8,15);for(const x of [-7,7])for(const z of [-5.5,5.5])box(x,-2.5,z,1.1,4.5,1.1);}),
  roof:assembly((box)=>{for(const side of [-1,1])box(side*.25,.13,0,.58,.015,1.06,0,0,-side*.48);box(0,.27,0,.035,.016,1.08);}),
  // Four repeated bays per floor, with projecting sills and a top cornice.
  floor:near(assembly(box=>{box(0,.45,.065,1,.045,.13);box(0,-.42,.065,1,.045,.13);for(let n=0;n<=4;n++)box(n/4-.5,0,.04,.012,.88,.08);for(let n=0;n<4;n++)box((n+.5)/4-.5,-.36,.11,.22,.06,.22);})),
@@ -62,7 +62,7 @@ export function harbourDistrict(b,n,random){
    for(let k=0;k<columns;k++){
     const height=1+(n+k+(side>0?1:0))%3,depth=(n+k)%3===0?12.2:6.05,x=side*(14+k*4.1),z=depth>8?0:(k%2?3.2:-3.2),color=colors[(n+k+(side>0?2:0))%colors.length];
     for(let level=0;level<height;level++){
-     const y=1.3+level*2.62,geometry=depth>8?INDUSTRIAL.container40:INDUSTRIAL.container20;
+     const y=1.18+level*2.62,geometry=depth>8?INDUSTRIAL.container40:INDUSTRIAL.container20;
      add('cargoPaint',x,y,z,2.45,2.6,depth,geometry,color);
      add('structure',x,y,z,2.45,2.6,depth,INDUSTRIAL.frame,color);
      if(level===0&&k===0)add('stencil',x-side*1.235,y+.15,z,.98,.32,1,INDUSTRIAL.stencil,'#d5ded4',-side*Math.PI/2);
@@ -74,7 +74,7 @@ export function harbourDistrict(b,n,random){
    for(const z of [-5,0,5]){add('structure',x-side*6.65,h*.47,z,.23,h,.28,INDUSTRIAL.detailBox,'#8a9897');add('structure',x-side*7.3,2.2,z,1.2,.16,4,INDUSTRIAL.detailBox,'#52636b');}
    add('structure',x+side*2,h+.9,3,2.5,1.6,2.2,INDUSTRIAL.detailBox,'#718083');
   }else{
-   for(const z of [-5,5]){b('structure',side*12,.65,z,.35,1.3,.35,0,0,0,undefined,'#a7a293');b('structure',side*19,.5,z,2,1,1,0,0,0,undefined,'#7d8b85');}
+   for(const z of [-5,5]){b('structure',side*12,.53,z,.35,1.3,.35,0,0,0,undefined,'#a7a293');b('structure',side*19,.38,z,2,1,1,0,0,0,undefined,'#7d8b85');}
   }
  }
  if(n%8===0){const side=n%16?1:-1,x=side*36;add('structure',x,0,0,1,1,1,INDUSTRIAL.pier,'#7b898d');add('structure',x,0,0,1,1,1,INDUSTRIAL.gantry,n%16?'#7f806a':'#576e7a',side<0?Math.PI:0);add('glass',x-side*4.8,18.1,1.53,2.5,1.3,.035,INDUSTRIAL.detailBox,'#8dabb0');}

@@ -29,7 +29,7 @@ export class RouteWorld{
   if(geometry===GEO.box&&w>=4&&h>=3&&d>=3&&FACADES.some(f=>f[0]===mat))geometry=GEO.building;
   if(FACADES.some(f=>f[0]===mat)&&h>=2&&Math.abs(y-h/2)<.02){y-=.2;h+=.4;}
   const material=this.m[mat],key=geometry.uuid+'/'+material.uuid;if(!this.pools.has(key))this.pools.set(key,{geometry,material,index:0});
-  this.temp.position.set(x,y,z);this.temp.rotation.set(rx,ry,rz);this.temp.scale.set(w,h,d);this.temp.updateMatrix();out.push({pool:this.pools.get(key),matrix:this.temp.matrix.clone(),color:new T.Color(color),detail:!!geometry.userData.detail});
+  this.temp.position.set(x,y,z);this.temp.rotation.set(rx,ry,rz);this.temp.scale.set(w,h,d);this.temp.updateMatrix();out.push({pool:this.pools.get(key),matrix:this.temp.matrix.clone(),color:new T.Color(color),detail:!!geometry.userData.detail,roadAnchor:!!geometry.userData.roadAnchor});
  }
  template(id,n){return buildDistrict(this,id,n);}
  sign(d,zone,n){
@@ -55,7 +55,7 @@ export class RouteWorld{
    this.uploadKey=key;this.detailCount=0;for(const p of this.pools.values())p.index=0;
    for(let n=0;n<25;n++){const absolute=(Math.floor(travel/18)-2+n)*18,z=travel-absolute,sector=routeSector(absolute*10,total),variant=streetVariant(mode,Math.floor(absolute/18),sector);
     if(stationary)roadX.fixedFrame(absolute*10,this.root);else{this.root.position.set(roadX(z),0,z);this.root.rotation.set(0,0,0);roadX.frame?.(z,this.root);}this.root.updateMatrix();
-    for(const part of this.templates[mode][variant]){if(part.detail&&(!this.detailRange||z>25||z< -this.detailRange))continue;const p=part.pool;if(p.index>=1600)throw Error('World instance budget exceeded');this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);if(part.detail)this.detailCount++;this.matrixWrites++;this.colorWrites++;}
+    for(const part of this.templates[mode][variant]){if(part.detail&&(!this.detailRange||z>25||z< -this.detailRange))continue;const p=part.pool;if(p.index>=1600)throw Error('World instance budget exceeded');if(part.roadAnchor&&roadX.fixedRoadFrame){part.matrix.decompose(this.temp.position,this.temp.quaternion,this.temp.scale);const {x,y,z:offset}=this.temp.position;roadX.fixedRoadFrame((absolute-offset)*10,x,y,this.temp);this.temp.updateMatrix();this.matrix.copy(this.temp.matrix);}else this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);if(part.detail)this.detailCount++;this.matrixWrites++;this.colorWrites++;}
    }
    for(let n=0;n<3;n++)if(gateMask[n]==='1'){const absolute=total*(n+1)/4,z=travel-absolute*.1;if(stationary)roadX.fixedFrame(absolute,this.root);else{this.root.position.set(roadX(z),0,z);this.root.rotation.set(0,0,0);roadX.frame?.(z,this.root);}this.root.updateMatrix();for(const part of this.gateParts){const p=part.pool;this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);this.matrixWrites++;this.colorWrites++;}}
    for(const p of this.pools.values()){p.mesh.count=p.index;p.mesh.visible=p.index>0;if(p.index){p.mesh.instanceMatrix.clearUpdateRanges();p.mesh.instanceMatrix.addUpdateRange(0,p.index*16);p.mesh.instanceMatrix.needsUpdate=true;if(p.mesh.instanceColor){p.mesh.instanceColor.clearUpdateRanges();p.mesh.instanceColor.addUpdateRange(0,p.index*3);p.mesh.instanceColor.needsUpdate=true;}}}

@@ -4,7 +4,8 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {harbourDistrict,facadeRelief} from './nightshift9-industrial.mjs';
 export const STREET_VARIANTS=24;
 const foliageCards=Array.from({length:3},(_,n)=>new T.PlaneGeometry(1,1).rotateY(n*Math.PI/3)),foliage=mergeGeometries(foliageCards);foliageCards.forEach(g=>g.dispose());
-export const GEO={box:new T.BoxGeometry(1,1,1),building:new RoundedBoxGeometry(1,1,1,1,.012),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:foliage};
+const guardPost=new T.BoxGeometry();guardPost.userData.roadAnchor=true;
+export const GEO={box:new T.BoxGeometry(1,1,1),guardPost,building:new RoundedBoxGeometry(1,1,1,1,.012),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:foliage};
 export const FACADES=[['brick',0,10,12],['residence',1,10,12],['office',2,12,12],['lab',3,12,12],['warehouse',4,14,9],['stonefront',5,12,9],['chalet',6,9,9],['utility',7,7,7]];
 const hash=x=>{x=Math.imul(x^(x>>>16),0x45d9f3b);x=Math.imul(x^(x>>>16),0x45d9f3b);return(x^(x>>>16))>>>0;};
 const mod=(x,n)=>(x%n+n)%n;
@@ -63,6 +64,6 @@ export function buildDistrict(w,id,n){
  }else if(id===10){
   b('tunnel',0,11,0,22,1,18.2);for(const s of [-1,1]){b('tunnel',s*10,4.5,0,1,10,18.2);b('steel',s*9.4,5,5+((n*7)%24)/8,.4,10,.4);b('steel',s*7.1,9.6,0,.5,.5,18.2);if(n%3===0){b('utility',s*9.35,2.6,0,.16,4.2,7);b('light',s*9.17,2.5,0,.05,.1,6,0,0,0,GEO.box,'#9ccfb9');}else if(n%4===0)b('glass',s*9.4,6.3,0,.15,3,8);b('light',s*9.4,1.1,0,.08,.15,18.2,0,0,0,GEO.box,n%2?'#d4b581':'#a5c6bd');}if(n%4===1){b('steel',0,10.3,0,20,.4,.5);b('light',0,10.05,0,12,.08,.2,0,0,0,GEO.box,'#e8cfaa');}
  }
- if([0,1,2,4,5,6,9,11].includes(id))for(const side of [-1,1])for(const z of [-4.5,4.5])b('structure',side*8.1,.4,z,.11,.8,.16,0,0,0,GEO.box,'#69767d');
+ if([0,1,2,4,5,6,9,11].includes(id))for(const side of [-1,1])for(const z of [-4.5,4.5])b('structure',side*8.1,.26,z,.11,.8,.16,0,0,0,GEO.guardPost,'#69767d');
  return out;
 }

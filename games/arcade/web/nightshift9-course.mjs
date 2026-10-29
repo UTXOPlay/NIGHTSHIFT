@@ -24,6 +24,10 @@ export class CircuitFrame {
  }
  originMatrix(matrix){matrix.makeRotationY(this.origin.heading);matrix.setPosition(-this.cos*this.origin.x-this.sin*this.origin.z,-this.origin.y,this.sin*this.origin.x-this.cos*this.origin.z);return matrix;}
  placeAbsolute(object,distance){const p=this.sample(distance,{});object.position.set(p.x,p.y,p.z);object.rotation.set(0,-p.heading,0);return object;}
+ anchorRoadAbsolute(object,distance,x,y){
+  const p=this.sample(distance,this.anchorPoint??={}),bank=this.legacy?0:-curvature(Math.max(0,distance),this.mode)*COURSES[this.mode].bank*Math.PI/(12*180);
+  object.position.set(p.x+Math.cos(p.heading)*x,p.y+Math.sin(bank)*x+y,p.z+Math.sin(p.heading)*x);object.rotation.set(0,-p.heading,0);return object;
+ }
  project(v){const p=this.pose(v.z,v.x,v.y);v.set(p.x,p.y,p.z);return v;}
  orient(object,z,{upright=false}={}){
   const p=this.pose(z),d=this.distance-z*10,grade=upright||this.legacy?0:Math.atan2(courseElevation(this.mode,d+25)-courseElevation(this.mode,d-25),5);

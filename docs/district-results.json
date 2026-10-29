@@ -2,12 +2,12 @@
   "version": "9.6.0",
   "nativeProfile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
   "nativeRulesChanged": false,
-  "unitTests": 84,
+  "unitTests": 86,
   "browserFiles": 105,
   "renderFixtures": {
     "maps": 12,
     "resizeQualityCases": 18,
-    "pools": 37,
+    "pools": 38,
     "maxPoolCount": 290,
     "gameStateUnchanged": true,
     "capabilities": {
@@ -91,5 +91,6 @@
     "Synthetic scene fixtures are presentation evidence, not human playtests.",
     "Short shared-desktop measurements are not physical-phone or sustained-session results.",
     "Existing two vehicle bodies and finite background plates remain; no new gameplay rules, multiplayer or settlement."
-  ]
+  ],
+  "performanceSampleBuildNote": "Initial local samples precede the final ground-anchoring correction. Final public samples are recorded separately."
 }

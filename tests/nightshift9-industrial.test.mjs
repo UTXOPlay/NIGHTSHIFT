@@ -38,3 +38,19 @@ test('harbour containers, cranes and warehouses remain outside the drivable corr
   for(const template of world.templates[0])for(const part of template){const g=part.pool.geometry;if(g===INDUSTRIAL.stencil||g===INDUSTRIAL.detailBox)continue;g.computeBoundingBox();box.copy(g.boundingBox).applyMatrix4(part.matrix);assert.ok(box.max.x< -7.4||box.min.x>7.4,'Decorative architecture must not close a driving lane');}
  }finally{globalThis.document=old;}
 });
+
+test('container feet and crane footing meet their authored quay and pier levels',()=>{
+ const old=globalThis.document;globalThis.document={createElement:()=>({getContext:()=>({fillRect(){},strokeRect(){},fillText(){}})})};
+ try{
+  const world=new RouteWorld(new T.Scene()),box=new T.Box3();
+  for(const template of world.templates[0]){const bottoms=template.filter(p=>p.pool.material===world.m.cargoPaint).map(p=>{const g=p.pool.geometry;g.computeBoundingBox();return box.copy(g.boundingBox).applyMatrix4(p.matrix).min.y;});if(bottoms.length)assert.ok(Math.abs(Math.min(...bottoms)+.12)<1e-6);}
+  INDUSTRIAL.gantry.computeBoundingBox();INDUSTRIAL.pier.computeBoundingBox();assert.ok(Math.abs(INDUSTRIAL.gantry.boundingBox.min.y-INDUSTRIAL.pier.boundingBox.max.y)<1e-6);
+ }finally{globalThis.document=old;}
+});
+
+test('absolute rail feet match the banked, graded road after origin rebasing',()=>{
+ const frame=new CircuitFrame(),post=new T.Object3D(),origin=new T.Matrix4(),actual=new T.Vector3();
+ for(const mode of [0,1,2,4,5,6,9,11])for(const distance of [179,7600,90000])for(const z of [-76.5,-4.5,4.5])for(const x of [-8.1,8.1]){
+  frame.set(mode,distance);frame.anchorRoadAbsolute(post,distance-z*10,x,-.14);frame.originMatrix(origin);actual.copy(post.position).applyMatrix4(origin);const p=frame.pose(z,x,-.14);assert.ok(actual.distanceTo(new T.Vector3(p.x,p.y,p.z))<1e-8);
+ }
+});
