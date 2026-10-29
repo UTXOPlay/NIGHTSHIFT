@@ -4,6 +4,8 @@ The active release is [NIGHTSHIFT 9.4.0 — Career, classification and garage](n
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
 
+Product completeness is evaluated separately in the [current 9.4 completion audit](completion-audit-v94.md). The checks below verify implemented behavior and release identity; the audit records remaining gameplay and NFS-alignment gaps.
+
 ## 9.4 verification — 30 October 2026
 
 See [career and garage design](nightshift-v94.md) and [current verification evidence](career-results.json). This release includes the scenery work below, which was developed as a 9.3 checkpoint before the user expanded the scope. Native profiles and economy rules are unchanged.

@@ -4,11 +4,13 @@ A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival
 
 [Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Career and garage 9.4](docs/nightshift-v94.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
+Current product status: **playable solo arcade prototype**. See the [9.4 completion audit and NFS alignment gates](docs/completion-audit-v94.md) for implemented mechanics, measured limitations and the next acceptance criteria.
+
 ![NIGHTSHIFT 9.3 mixed streets](docs/screenshots/streets-city-v93.png)
 
 ## Race the circuit
 
-- Twelve environments, from Cell Harbor and Glacier Pass to the Reactor Loop and Dawn Skyway, each with its own course, scenery, preview thumbnail and HUD minimap.
+- Twelve environments, from Nervos Harbour and Glacier Pass to the Reactor Loop and Dawn Skyway, each with its own course, scenery, preview thumbnail and HUD minimap.
 - Sprint podiums, pursuit escape, drift challenges and interception contracts. Successful races last 3–7 active minutes.
 - Six cars, earned Relay Credits and three upgrade tracks per vehicle.
 - Persistent opponents, slipstreaming, nitrous, lock-on EMP, shockwave, rear mines and a timed defensive jammer.
