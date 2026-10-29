@@ -30,10 +30,32 @@ Garage comparison uses exact native parameters: power adds 7.56 km/h of base cru
 
 Purchases still go through the native executor with the expected signed block. Insufficient funds and purchases during a saved active race remain disabled. Browsing an unowned car does not bind a career race to it. A purchase does not grant fabricated reputation.
 
+## Play choices and race engineering
+
+The twelve existing native events can now be browsed as Street Circuit, Signal Runner, Slide Sessions and Bounty Grid. Each discipline exposes three different districts with distinct objective types. These filters do not claim to introduce new native race modes. All twelve events remain directly available.
+
+The route scout uses the actual signed bend table to summarize each quarter of the selected course. It shows the four local sector names, distance ranges, bend character and event goal. The three weapons can be equipped here without a garage detour. An optional setup suggestion picks only an owned vehicle and an event-appropriate weapon; applying it makes no purchase, changes no signed state and does not override a manually chosen setup unless clicked.
+
+An optional race engineer makes existing opportunities visible: held drift chains and double-style zones, slipstream charging, straight-exit boost, approaching tight bends, two-rival Shockwave windows, trailing-line mine opportunities, guarded EMP targets, target activation gates, heat and urgent defense. It derives information from the same native state and does not steer, fire, modify opponent pace or award resources. Its single compact readout can be disabled in settings and remains disabled after reload. The result debrief explains the actual missed objective or offers a relevant next-run tactic.
+
+Additional primary references:
+
+| Reference | Design application |
+| --- | --- |
+| [NFS Unbound Vol. 7](https://www.ea.com/games/need-for-speed/need-for-speed-unbound/features/volume-7) | Make the discipline and its intended driving style legible before entering a race. Native drag/manual-shift mechanics are not added or claimed. |
+| [NFS The Run manual](https://eaassets-a.akamaihd.net/eahelp/manuals/need-for-speed-the-run-manuals_Sony%20Playstation%203.pdf) | Present drafting, charge generation and boost spending as a connected racing choice. All displayed conditions use NIGHTSHIFT's own native rules. |
+| [Mario Kart Tour item guidance](https://faq.mariokarttour.com/hc/en-us/articles/4409411636889-How-do-items-work) | Explain weapon context, costs and timing rather than making every item seem interchangeable. Item probability/rubber-banding rules are not copied. |
+
+The harbor identity is **Nervos Harbour** throughout the current district name, HUD, road signs and scene-captured preview. The older frozen releases retain their historical assets and rules.
+
+## Delivery and performance
+
+Renderer imports and HTML preloads share the release version, so returning players fetch the updated scenery. Paused road and terrain buffers are cached until their actual inputs change. The driver file uses a lightweight map preview rather than an unnecessary wet-road reflection pass. The recorded race score is separate from finish position and credit income.
+
 ## Verification and scope
 
 [career-results.json](career-results.json) records browser, native, asset identity, continuity and performance evidence. New tests verify rank/goal derivation without writes, real tuning increments, native player placement and receipt reconciliation against ordinarily stepped races. Existing V8 migration checks remain intact; the new UI review is a separate tool.
 
-The full scene, canvas backing cap, inverse pointer mapping, landscape gate, safe-area controls, Colemak bindings, reduced motion and shader/resource lifecycle remain unchanged. UI controls use the established SVG/icon and vehicle-image system. New facade imagery and its exact prompt are recorded in [nightshift-v93-art.json](nightshift-v93-art.json), with the saved [runtime atlas](../games/arcade/web/art/nightshift/architecture-v93.webp).
+The full scene, canvas backing cap, landscape gate, safe-area controls, Colemak bindings, reduced motion and shader/resource lifecycle remain supported. Pointer projection now uses the current CSS canvas rectangle and its inverse removes road banking, including a resize before the next rendered frame. UI controls use the established SVG/icon and vehicle-image system. New facade imagery and its exact prompt are recorded in [nightshift-v93-art.json](nightshift-v93-art.json), with the saved [runtime atlas](../games/arcade/web/art/nightshift/architecture-v93.webp).
 
 Real multiplayer admission, authoritative timing, shared standings and matchmaking remain separate future work. Myelin here verifies off-chain host replay; races, reputation and Relay Credits are not settled on CKB.

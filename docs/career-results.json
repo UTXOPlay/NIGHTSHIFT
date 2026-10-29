@@ -1,8 +1,8 @@
 {
   "version": "9.4.0",
   "nativeProfile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
-  "unitTests": 77,
-  "browserFiles": 93,
+  "unitTests": 81,
+  "browserFiles": 94,
   "nativeInputs": 12,
   "economyRulesChanged": false,
   "rankType": "Presentation derived from verified reputation; no economic or matchmaking unlocks",
@@ -11,6 +11,7 @@
       "Rank, eight milestones and twelve reachable records at every required landscape size",
       "District record opens its actual event",
       "Tracked car goal and exact shortfall persist and return to the selected build",
+      "Leaving an unowned preview keeps the career race bound to an owned car",
       "Native purchase installs the previewed benefit, debits exact price and grants no fabricated rep",
       "Six-driver scoreboard keeps the native player position"
     ],
@@ -212,5 +213,37 @@
     "errors": []
   },
   "graphicsHardware": "Intel Iris Xe, Chromium OpenGL",
-  "performanceCaveat": "Shared desktop. Earlier interrupted and heavily contended runs, including the frozen 9.2 baseline, failed timing gates. They are retained under artifacts/streets-v93 and are not presented as successful performance measurements. Physical phones were not tested."
+  "performanceCaveat": "Shared desktop. Earlier interrupted and heavily contended runs, including the frozen 9.2 baseline, failed timing gates. They are retained under artifacts/streets-v93 and are not presented as successful performance measurements. Physical phones were not tested.",
+  "tactics": {
+    "checks": [
+      "Four disciplines expose the twelve real events; Nervos Harbour naming is correct",
+      "Route scout, four native bend sectors and loadout choices remain reachable at every required landscape size",
+      "Suggested loadout equips an owned car and correct weapon without spending money or changing signed state",
+      "Real native race receives the chosen equipment; contextual engineer can be disabled and stays disabled after reload"
+    ],
+    "errors": []
+  },
+  "harbourName": "Nervos Harbour",
+  "localAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  }
 }

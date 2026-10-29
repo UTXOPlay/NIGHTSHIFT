@@ -5,7 +5,7 @@ import {EVENTS,curvature} from './nightshift9-rules.mjs';
 // Each contract owns its scenery, lighting, landmarks and signed bend sequence.
 // Sectors vary local landmark density without replacing the map's identity.
 export const DISTRICTS=Object.freeze([
- {name:'CELL HARBOR',short:'HARBOR',color:'#ffc792',fog:'#334852',sky:0,rain:.12,kind:'cargo',zones:['Container Mile','Gantry Reach','Freight Basin','Harbor Relay'],description:'Wet container yards, colossal cranes and the last light over Nervos harbor.'},
+ {name:'NERVOS HARBOUR',short:'HARBOUR',color:'#ffc792',fog:'#334852',sky:0,rain:.12,kind:'cargo',zones:['Container Mile','Gantry Reach','Freight Basin','Harbour Relay'],description:'Wet container yards, colossal cranes and the last light over Nervos Harbour.'},
  {name:'GLACIER PASS',short:'GLACIER',color:'#e4f5ff',fog:'#9baebd',sky:3,rain:0,kind:'snow',zones:['Blue Ice','Pine Ascent','Glacier Shelf','Summit Relay'],description:'Snow cliffs, frozen lakes and linked hairpins beneath the alpine dawn.'},
  {name:'EMERALD RUN',short:'FOREST',color:'#bceba9',fog:'#315b4a',sky:5,rain:.08,kind:'forest',zones:['Fern Valley','Canopy Bend','River Crossing','Forest Relay'],description:'A winding green corridor through giant conifers, river mist and stone arches.'},
  {name:'NEON WARD',short:'NEON',color:'#e8a5ee',fog:'#29203f',sky:0,rain:.4,kind:'neon',zones:['Market Lights','Skybridge Row','Violet Exchange','Ward Relay'],description:'A rain-soaked city canyon of holographic signs and overhead skybridges.'},
