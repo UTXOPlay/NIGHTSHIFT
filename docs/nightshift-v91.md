@@ -18,7 +18,7 @@ The native simulation stops at its exact final tick. A short presentation contin
 
 ## Street rendering and budgets
 
-Cached street-colored environment probes replace the generic room environment. Brake lamps respond to braking. Road normals include elevation and bank. Wet sections can use a 512x256 scene reflection, refreshed every fourth render, only when the visible surface is sufficiently coplanar. Low quality disables that pass. There is no global mirror across nonplanar hills. Repeating decorative reflection cards are removed.
+Cached street-colored environment probes replace the generic room environment. Brake lamps respond to braking. Road normals include elevation and bank. Barriers inherit the concrete atlas after loading and use inward wall normals, eliminating the flat white untextured faces. Wet sections can use a 512x256 scene reflection, refreshed every fourth render, only when the visible surface is sufficiently coplanar. Low quality disables that pass. There is no global mirror across nonplanar hills. Repeating decorative reflection cards are removed.
 
 The distant panorama follows heading. Near-road rain splashes and tire spray add local interaction. Twelve variants and hashed placement replace the six-template fixed sequence; selected city sections include a separate distant-building layer and less frequent overhead crossings. This improves depth and repetition without introducing a new scene graph per frame.
 
@@ -26,7 +26,7 @@ Road strips share a cached station/frame table instead of resampling elevation a
 
 ## Verification
 
-The focused suite passes 58 tests, including cadence-independent damping/ribbons and banked-road contact. A browser fixture measures 90 real-model poses across six builds, five environments and three course positions: 360 contacts, maximum absolute clearance approximately 0.0000021 m in that fixture. This is a geometric presentation measurement, not a claim about every live crash.
+The focused suite passes 59 tests, including cadence-independent damping/ribbons and banked-road contact. A browser fixture measures 90 real-model poses across six builds, five environments and three course positions: 360 contacts, maximum absolute clearance approximately 0.0000021 m in that fixture. This is a geometric presentation measurement, not a claim about every live crash.
 
 Native/browser conformance passes 38 tapes and 426,742 active ticks, including the earned economy. Signed export/restart/tamper/profile checks pass against the unchanged native verifier. Browser acceptance covers the required large displays, mobile landscape, portrait input release, inverse pointer mapping, economy/reload, separated results, English icon controls and reduced motion. Combat review covers collision, hit, guard, rival hit, disable, fatal crash and reduced motion.
 

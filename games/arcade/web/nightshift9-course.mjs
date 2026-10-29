@@ -42,7 +42,7 @@ export class CircuitRoad {
   add(materials.concrete,[-8.5,8.5],{height:-.14});add(materials.road,[-6.2,6.2]);
   for(const x of [-5.8,5.8])add(materials.white,[x-.055,x+.055],{height:.018});
   for(const x of [-2,2])add(materials.white,[x-.05,x+.05],{height:.02,dashes:true});
-  const walls=materials.concrete.clone();walls.side=T.DoubleSide;walls.color.multiplyScalar(.6);walls.roughness=.8;for(const x of [-8.1,8.1])add(walls,[x-.16,x+.16],{height:.02,wall:true});
+  const walls=this.wallMaterial=materials.concrete.clone();walls.side=T.DoubleSide;walls.color.multiplyScalar(.6);walls.roughness=.8;for(const x of [-8.1,8.1])add(walls,[x-.16,x+.16],{height:.02,wall:true});
   for(const x of [-8.12,8.12])add(materials.white,[x-.055,x+.055],{height:.98});
   this.vector=new T.Vector3();
  }
@@ -51,7 +51,7 @@ export class CircuitRoad {
   for(const strip of this.strips){strip.mesh.visible=visible;if(!visible)continue;const geometry=strip.mesh.geometry,p=geometry.attributes.position,norm=geometry.attributes.normal,uv=geometry.attributes.uv;
    for(let n=0;n<this.stations;n++){const z=30-n*3.5,absolute=(frame.distance*.1-z),dash=strip.dashes&&((absolute%7+7)%7>3);
     for(let edge=0;edge<2;edge++){let x=strip.edges[edge],y=strip.height;if(strip.wall){x=(strip.edges[0]+strip.edges[1])/2;y=edge?1:.02;}if(dash)y=-.045;
-     const station=n*9,data=this.stationData,at=n*2+edge;p.setXYZ(at,data[station]+data[station+3]*x,data[station+1]+y+data[station+5]*x,data[station+2]+data[station+4]*x);norm.setXYZ(at,data[station+6],data[station+7],data[station+8]);uv.setXY(at,edge,absolute*.13);
+     const station=n*9,data=this.stationData,at=n*2+edge;p.setXYZ(at,data[station]+data[station+3]*x,data[station+1]+y+data[station+5]*x,data[station+2]+data[station+4]*x);if(strip.wall)norm.setXYZ(at,-Math.sign(x)*data[station+3],0,-Math.sign(x)*data[station+4]);else norm.setXYZ(at,data[station+6],data[station+7],data[station+8]);uv.setXY(at,edge,absolute*.13);
     }
    }
    p.needsUpdate=norm.needsUpdate=uv.needsUpdate=true;

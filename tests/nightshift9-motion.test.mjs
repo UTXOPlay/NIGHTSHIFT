@@ -38,3 +38,6 @@ test('strong side crashes remain finite and bounded at all supported render rate
 test('combat HUD projects world positions once, including on curved roads',async()=>{
  const {DriftRenderer}=await import('../games/arcade/web/nightshift9-renderer.mjs'),camera=new T.PerspectiveCamera(60,2,.1,500);camera.position.set(4,3,10);camera.lookAt(4,3,0);camera.updateMatrixWorld();const renderer={camera,width:800,height:400,course:{project(){throw Error('World point must not be projected through the road again');}}},p=DriftRenderer.prototype.projectWorld.call(renderer,4,3,0);assert.ok(Math.abs(p.x-400)<1e-9);assert.ok(Math.abs(p.y-200)<1e-9);
 });
+test('road barriers have inward vertical-face lighting normals',async()=>{
+ const {CircuitRoad}=await import('../games/arcade/web/nightshift9-course.mjs'),m=new T.MeshBasicMaterial(),r=new CircuitRoad(new T.Scene(),{road:m,concrete:m,white:m}),frame=new CircuitFrame();frame.set(3,14000);r.draw(frame);for(const s of r.strips.filter(s=>s.wall)){const n=s.mesh.geometry.attributes.normal;for(const station of [0,25,80]){assert.equal(n.getY(station*2),0);assert.ok(Math.abs(Math.hypot(n.getX(station*2),n.getZ(station*2))-1)<1e-6);const side=Math.sign(s.edges[0]),h=frame.pose(30-station*3.5).heading;assert.ok(n.getX(station*2)*Math.cos(h)*side+n.getZ(station*2)*Math.sin(h)*side< -.99);}}
+});
