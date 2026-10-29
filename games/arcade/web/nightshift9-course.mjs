@@ -36,6 +36,7 @@ export class CircuitRoad {
   const add=(material,edges,{height=0,wall=false,dashes=false}={})=>{
    const count=this.stations,position=new Float32Array(count*6),normal=new Float32Array(count*6),uv=new Float32Array(count*4),index=[];
    for(let n=0;n<count-1;n++){const a=n*2;index.push(a,a+1,a+2,a+1,a+3,a+2);}
+   if(wall&&edges[0]<0)for(let n=0;n<index.length;n+=3)[index[n+1],index[n+2]]=[index[n+2],index[n+1]];
    const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.BufferAttribute(position,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('normal',new T.BufferAttribute(normal,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('uv',new T.BufferAttribute(uv,2).setUsage(T.DynamicDrawUsage));geometry.setIndex(index);
    const mesh=new T.Mesh(geometry,material);mesh.frustumCulled=false;mesh.receiveShadow=true;scene.add(mesh);this.strips.push({mesh,edges,height,wall,dashes});
   };
