@@ -252,11 +252,13 @@
   "sourceArchiveSha256": "60c37e784ac00e340396f7e9db4a7a9bda8cb43e2b6a41af2892857e680ef4cd",
   "deployment": {
     "gameImage": "sha256:133839c7c26eaea89f2d95387d52f301e2a29c7ea131815ddc6f9cb3e9cdb078",
-    "storeImage": "sha256:aa9172182915a29c2e105051f7492d9e4c3cab1af2f84e19c3a65360973f93ab",
     "nativeVolumesPreserved": true,
     "otherCatalogEntriesPreserved": true,
     "health": "healthy",
-    "restarts": 0
+    "restarts": 0,
+    "ourStoreCutoverImage": "sha256:aa9172182915a29c2e105051f7492d9e4c3cab1af2f84e19c3a65360973f93ab",
+    "observedLiveStoreImageAfterIndependentRelease": "sha256:35935f73d82cfae58c51a6b6de149f301a61a938e6dfee667373815773a2ca23",
+    "independentStoreReleasePreservedNightshift": true
   },
   "nativeConformance": {
     "tapes": 38,
@@ -283,7 +285,14 @@
     "publicHostRegistrations": [
       "/utxoplay-store"
     ],
-    "publicOriginAccepted": true
+    "publicOriginAccepted": true,
+    "independentCatalogUpdatesAfterCutover": true,
+    "effectivePublicUpstream": "http://utxoplay-store:8790",
+    "persistentProductionDomainPins": [
+      "store.utxoplay.io",
+      "utxoplay.io",
+      "www.utxoplay.io"
+    ]
   },
   "continuity": {
     "identicalStateAndBlockAtCutover": true,
@@ -626,6 +635,28 @@
     "cause": "An independently created Eight Ball stage inherited the production VIRTUAL_HOST after the UI suites completed. Requests could reach its local-origin server.",
     "fix": "Removed VIRTUAL_HOST and VIRTUAL_PORT from that stage while preserving its image, mounts, networks and loopback-only review port.",
     "verification": "Repeated all 94 public TLS hashes, native pins, production host registration enumeration, Origin acceptance and both authenticated native-driving performance samples.",
-    "initialPerformanceSetupFailure": "403 at authentication; no driving benchmark occurred. Diagnostic retained and excluded from performance figures."
-  }
+    "initialPerformanceSetupFailure": "403 at authentication; no driving benchmark occurred. Diagnostic retained and excluded from performance figures.",
+    "followUp": "A separate deployment recreated its staging container. Persistent explicit gateway domain pins now take precedence over discovery, protecting all three public store names. Other domain configurations kept identical hashes; gateway syntax and regeneration after staging removal pass.",
+    "postPinNativeAudit": {
+      "afterPersistentDomainPin": true,
+      "authentication": true,
+      "nativeUpgradeDebit": true,
+      "credits": 650,
+      "ordinaryInputTicks": 4,
+      "signedReplay": true,
+      "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def"
+    },
+    "postPinStoreReview": {
+      "checks": [
+        "Legacy redirects preserve queries for curated and vendor games",
+        "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+        "Existing guest identity also launches chess through the canonical path",
+        "Vendor route ID and absent-game fallback remain correct",
+        "Home has no legacy game links and catalog advertises V9"
+      ],
+      "errors": []
+    }
+  },
+  "temporaryNightshiftContainersRemoved": true,
+  "localReviewServerStopped": true
 }
