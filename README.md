@@ -2,7 +2,7 @@
 
 A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival drivers, vehicle upgrades and a signed solo career.
 
-[Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [District structure 9.6](docs/nightshift-v96.md) · [Materials and lighting 9.5](docs/nightshift-v95.md) · [Career and garage 9.4](docs/nightshift-v94.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
+[Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Roadblocks and recovery V10](docs/nightshift-v10.md) · [District structure 9.6](docs/nightshift-v96.md) · [Materials and lighting 9.5](docs/nightshift-v95.md) · [Career and garage 9.4](docs/nightshift-v94.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
 Current product status: **playable solo arcade prototype**. See the [9.4 completion audit and NFS alignment gates](docs/completion-audit-v94.md) for implemented mechanics, measured limitations and the next acceptance criteria.
 
@@ -17,7 +17,9 @@ Current product status: **playable solo arcade prototype**. See the [9.4 complet
 - Generated transparent markers and effects for collisions, attacks, shields, counters, disabled rivals and fatal rollovers.
 - Keyboard, pointer drag and mobile thumb-stick controls. Landscape play, safe-area controls, reduced motion, bounded rendering resolution and layouts through 3840×2160.
 
-Version 9 adds continuous winding roads, elevation and banking, swept contacts, mass-weighted impulses, braking/reverse and Colemak/custom controls. Verified V8 careers carry forward as a signed origin. An unfinished V8 event retains its original executor until finished or explicitly replaced.
+Version 10 adds fixed, readable roadblock encounters, shared static contacts for traffic/rivals, lane/minimap guidance and latched touch reverse. Unfinished V9/V8 events keep their original executor until finished or explicitly replaced; verified careers carry forward into new V10 events.
+
+Version 9 introduced continuous winding roads, elevation and banking, swept contacts, mass-weighted impulses, braking/reverse and Colemak/custom controls. Verified V8 careers carry forward as a signed origin. An unfinished V8 event retains its original executor until finished or explicitly replaced.
 
 This release is a **solo racing career**. Live multiplayer is future work. The fictional Nervos relay setting and Relay Credits are off-chain game content; Myelin provides deterministic host replay, not CKB settlement.
 
@@ -30,6 +32,7 @@ sudo apt-get install clang libclang-dev pkg-config protobuf-compiler
 npm ci
 npm run build:native
 npm run build:native:legacy
+npm run build:native:previous
 npm run dev
 ```
 

@@ -1,5 +1,5 @@
 import {installDriverRoute} from './browser-driver9.mjs';
-import assert from'node:assert/strict';import{chromium}from'playwright';import{mkdirSync,writeFileSync,renameSync}from'node:fs';import{step,EVENTS}from'../games/arcade/web/nightshift9-rules.mjs';import{driveInput}from'../tests/helpers/nightshift9-driver.mjs';import{reviewSession}from'./review-session.mjs';
+import assert from'node:assert/strict';import{chromium}from'playwright';import{mkdirSync,writeFileSync,renameSync}from'node:fs';import{step,EVENTS}from'../games/arcade/web/nightshift10-rules.mjs';import{driveInput}from'../tests/helpers/nightshift10-driver.mjs';import{reviewSession}from'./review-session.mjs';
 const origin=process.env.DRIFT_ORIGIN||'http://127.0.0.1:8899',out=process.env.DRIFT_OUT||'artifacts/nightshift-v9/combat-review';mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({proxy:process.env.DRIFT_PROXY?{server:process.env.DRIFT_PROXY}:undefined,args:['--no-sandbox','--use-angle=gl','--enable-webgl','--ignore-gpu-blocklist']}),ctx=await browser.newContext({viewport:{width:1280,height:720},recordVideo:{dir:out,size:{width:1280,height:720}}});let logout,page;
 const checks=[],errors=[];
@@ -29,7 +29,7 @@ try{
   assert.ok(tape,kind+' event is reachable through ordinary inputs');
   for(let n=0;n<tape.length;n+=120)state=await send(state,{type:'ticks',inputs:tape.slice(n,n+120)});
   await page.reload();await page.waitForFunction(()=>__driftReview?.().loaded);await page.getByRole('button',{name:'Resume race',exact:true}).click();await page.waitForFunction(()=>__driftReview().running);
-  await page.evaluate(async({kind,source,events})=>{const rules=await import('./_arcade/nightshift9-rules.mjs');
+  await page.evaluate(async({kind,source,events})=>{const rules=await import('./_arcade/nightshift10-rules.mjs');
    const {driveInput}=await import('./__test_driver.mjs');
    const drive=(g)=>{if(kind==='collision'||kind==='wreck'){const d=1000-g.drift_x-g.steer_v*2;return d>50?2:d< -50?1:0;}let bits=driveInput(g,{})&~64;if(kind==='hit'||kind==='guard'){bits&=~112;const threat=g.rivals.find(r=>r.attack_target===-1&&r.windup>0&&Math.abs(r.distance-g.distance)<1000);if(threat){const d=threat.attack_x-g.drift_x-g.steer_v*2;bits=d>40?2:d< -40?1:0;if(kind==='guard'&&threat.windup<12&&!g.counter_cd&&g.counter)bits|=64;}}return bits;};
    let prior=0;window.__combatKeys=()=>{const r=__driftReview();if(!r.running)return;const bits=drive(r.game);for(const [code,bit]of[['ArrowLeft',1],['ArrowRight',2],['KeyS',8],['Space',16],['KeyE',32],['KeyQ',64]])if(!!(bits&bit)!==!!(prior&bit))window.dispatchEvent(new KeyboardEvent(bits&bit?'keydown':'keyup',{code,key:({KeyS:'s',KeyE:'e',KeyQ:'q',Space:' '})[code]||code,bubbles:true,cancelable:true}));prior=bits;};window.__combatKeys();window.__combatDriver=setInterval(window.__combatKeys,1000/30);

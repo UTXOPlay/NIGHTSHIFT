@@ -1,0 +1,602 @@
+{
+  "version": "10.0.0",
+  "nativeProfile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+  "nativeRulesChanged": true,
+  "nativeSources": 18,
+  "browserFiles": 107,
+  "conformance": {
+    "tapes": 39,
+    "activeTicks": 445490,
+    "careerFrames": 1105,
+    "career": {
+      "credits": 7740,
+      "earned": 26040,
+      "spent": 19500,
+      "rep": 1510,
+      "owned": 63,
+      "upgrades": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "medals": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "races": 17,
+      "wins": 15
+    },
+    "coverage": [
+      "rival-defense",
+      "attack_hits",
+      "pickups",
+      "style",
+      "pulse",
+      "rival-windup",
+      "dodges",
+      "takedowns",
+      "near_misses",
+      "nitro",
+      "checkpoint",
+      "shield",
+      "win-0",
+      "win-1",
+      "win-2",
+      "win-4",
+      "win-5",
+      "win-6",
+      "win-7",
+      "win-9",
+      "win-10",
+      "win-11",
+      "win-3",
+      "win-8"
+    ],
+    "runs": [
+      {
+        "mode": 0,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 226.16666666666666,
+        "reason": 1,
+        "credits": 1671,
+        "disables": 2
+      },
+      {
+        "mode": 0,
+        "trial": 1,
+        "won": 1,
+        "position": 3,
+        "seconds": 230.86666666666667,
+        "reason": 1,
+        "credits": 2179,
+        "disables": 3
+      },
+      {
+        "mode": 0,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 1,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 281.5,
+        "reason": 1,
+        "credits": 1674,
+        "disables": 2
+      },
+      {
+        "mode": 1,
+        "trial": 1,
+        "won": 1,
+        "position": 1,
+        "seconds": 272.3333333333333,
+        "reason": 1,
+        "credits": 2685,
+        "disables": 4
+      },
+      {
+        "mode": 1,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 28.6,
+        "reason": 4,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 2,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 252.46666666666667,
+        "reason": 1,
+        "credits": 1883,
+        "disables": 4
+      },
+      {
+        "mode": 2,
+        "trial": 1,
+        "won": 1,
+        "position": 3,
+        "seconds": 247.23333333333332,
+        "reason": 1,
+        "credits": 2326,
+        "disables": 3
+      },
+      {
+        "mode": 2,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 3,
+        "trial": 0,
+        "won": 0,
+        "position": 2,
+        "seconds": 150.53333333333333,
+        "reason": 2,
+        "credits": 180,
+        "disables": 5
+      },
+      {
+        "mode": 3,
+        "trial": 1,
+        "won": 0,
+        "position": 2,
+        "seconds": 264.03333333333336,
+        "reason": 6,
+        "credits": 2047,
+        "disables": 4
+      },
+      {
+        "mode": 3,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 4,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 250.73333333333332,
+        "reason": 1,
+        "credits": 1614,
+        "disables": 1
+      },
+      {
+        "mode": 4,
+        "trial": 1,
+        "won": 0,
+        "position": 2,
+        "seconds": 82.93333333333334,
+        "reason": 2,
+        "credits": 243,
+        "disables": 1
+      },
+      {
+        "mode": 4,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 5,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 302.56666666666666,
+        "reason": 1,
+        "credits": 1729,
+        "disables": 3
+      },
+      {
+        "mode": 5,
+        "trial": 1,
+        "won": 1,
+        "position": 3,
+        "seconds": 282.46666666666664,
+        "reason": 1,
+        "credits": 2173,
+        "disables": 3
+      },
+      {
+        "mode": 5,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 28.3,
+        "reason": 4,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 6,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 275.1,
+        "reason": 1,
+        "credits": 1802,
+        "disables": 2
+      },
+      {
+        "mode": 6,
+        "trial": 1,
+        "won": 1,
+        "position": 1,
+        "seconds": 264.1333333333333,
+        "reason": 1,
+        "credits": 2985,
+        "disables": 5
+      },
+      {
+        "mode": 6,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 7,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 298.43333333333334,
+        "reason": 1,
+        "credits": 1860,
+        "disables": 5
+      },
+      {
+        "mode": 7,
+        "trial": 1,
+        "won": 0,
+        "position": 3,
+        "seconds": 303.93333333333334,
+        "reason": 6,
+        "credits": 1834,
+        "disables": 4
+      },
+      {
+        "mode": 7,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 8,
+        "trial": 0,
+        "won": 0,
+        "position": 1,
+        "seconds": 146.03333333333333,
+        "reason": 2,
+        "credits": 180,
+        "disables": 0
+      },
+      {
+        "mode": 8,
+        "trial": 1,
+        "won": 0,
+        "position": 3,
+        "seconds": 60.5,
+        "reason": 2,
+        "credits": 177,
+        "disables": 1
+      },
+      {
+        "mode": 8,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 9,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 334.1,
+        "reason": 1,
+        "credits": 1725,
+        "disables": 3
+      },
+      {
+        "mode": 9,
+        "trial": 1,
+        "won": 1,
+        "position": 5,
+        "seconds": 320.8666666666667,
+        "reason": 1,
+        "credits": 1846,
+        "disables": 4
+      },
+      {
+        "mode": 9,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 28.3,
+        "reason": 4,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 10,
+        "trial": 0,
+        "won": 0,
+        "position": 1,
+        "seconds": 337.8,
+        "reason": 5,
+        "credits": 1559,
+        "disables": 3
+      },
+      {
+        "mode": 10,
+        "trial": 1,
+        "won": 1,
+        "position": 1,
+        "seconds": 271.43333333333334,
+        "reason": 1,
+        "credits": 2949,
+        "disables": 4
+      },
+      {
+        "mode": 10,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 11,
+        "trial": 0,
+        "won": 1,
+        "position": 1,
+        "seconds": 343.8333333333333,
+        "reason": 1,
+        "credits": 1862,
+        "disables": 5
+      },
+      {
+        "mode": 11,
+        "trial": 1,
+        "won": 1,
+        "position": 5,
+        "seconds": 346.3666666666667,
+        "reason": 1,
+        "credits": 1959,
+        "disables": 5
+      },
+      {
+        "mode": 11,
+        "trial": 2,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "credits": 1,
+        "disables": 0
+      },
+      {
+        "mode": 3,
+        "trial": "seed-2",
+        "won": 1,
+        "seconds": 281.6,
+        "position": 1,
+        "reason": 1
+      },
+      {
+        "mode": 8,
+        "trial": "seed-2",
+        "won": 1,
+        "seconds": 285.53333333333336,
+        "position": 1,
+        "reason": 1
+      }
+    ]
+  },
+  "signedReplay": {
+    "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+    "signedFrames": 61,
+    "replay": true,
+    "finish": 1,
+    "seconds": 229.6,
+    "reward": 1615,
+    "purchases": {
+      "credits": 465,
+      "earned": 1615,
+      "spent": 2350,
+      "rep": 100,
+      "owned": 3,
+      "upgrades": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "medals": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "races": 1,
+      "wins": 1
+    },
+    "staleRejected": true,
+    "tamperedPurchaseRejected": true,
+    "restartRecovery": true,
+    "newRunPreservesEconomy": true,
+    "v9RejectsV10": true,
+    "attempts": 1,
+    "exportBytes": 195082,
+    "v10RejectsV9": true
+  },
+  "localAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+    "finishSeconds": 229.6,
+    "attempts": 1,
+    "credits": 465
+  },
+  "localRoadblocks": {
+    "checks": [
+      "Colemak keyboard reverse/steer, clear and native replay",
+      "Trusted touch reverse/steer, portrait cancellation, clear and native replay"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "earlyDistanceMetres": 305,
+        "stoppedDistanceMetres": 5.9,
+        "armorBefore": 2,
+        "armorAfter": 2,
+        "rowDistance": 5028,
+        "finalDistance": 5138,
+        "nativeReplay": true,
+        "keyboard": "colemak"
+      },
+      {
+        "touch": true,
+        "earlyDistanceMetres": 305,
+        "stoppedDistanceMetres": 5.9,
+        "armorBefore": 2,
+        "armorAfter": 2,
+        "rowDistance": 5028,
+        "finalDistance": 5131,
+        "nativeReplay": true,
+        "keyboard": "colemak"
+      }
+    ],
+    "errors": []
+  },
+  "limitations": [
+    "Automated ordinary-input checks are not human usability studies.",
+    "Emulated touch is not a physical phone thermal or memory benchmark.",
+    "Static barriers now affect all actors; full AI-versus-moving-car physics remains future work."
+  ],
+  "unitTests": 93,
+  "localVisualEvidenceNote": "Initial local browser runs preceded source isolation; a concurrent uncommitted camera change was excluded. Final staged and public checks supersede those visual runs."
+}
