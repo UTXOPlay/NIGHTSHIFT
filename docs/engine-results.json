@@ -1336,5 +1336,83 @@
     ],
     "maxTriangles": 192237,
     "errors": []
+  },
+  "bundledAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "bundledRuntime": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.9597989949748744,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 621,
+      "colorWrites": 621,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 45,
+      "textures": 17,
+      "programs": 123,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 56,
+      "textures": 17,
+      "programs": 103,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "errors": []
+  },
+  "startup": {
+    "entryExternalModuleImports": 1,
+    "entryBundled": true,
+    "rendererPreloaded": true,
+    "crossRegionTransportTimingExcluded": true
   }
 }

@@ -20,6 +20,7 @@ Three.js remains pinned to 0.180.0. Installed APIs were checked against that ver
 
 - Static street geometry retains its original material UVs, scales, route positions and upright architecture. Transform-equivalence tests cover curved courses at multiple distances; all twelve maps retain their own scenery.
 - Tire contact caches unique mesh positions once and projects them against the local road plane using affine coefficients. Chassis/suspension animation and exact rendered tire grounding remain intact. This is a presentation calculation, not new collision rules.
+- The rules/UI entry is bundled into one file and preloads the separate renderer, removing the serial module-request waterfall on high-latency links. Raw modules remain available for replay fixtures and inspection.
 - The loading manager tracks real assets, including combat animation frames. Empty placeholders replace procedural cars that were immediately discarded after the external fleet loaded.
 - Quality uses eight short measurement windows and slow recovery to avoid visible oscillation. GPU queries run every eleven frames, covering all four reflection phases. Cold shader preparation and paused/menu frames do not drive automatic degradation.
 - Context loss pauses and releases held inputs. Recovery waits for signed input flushing and reloads the confirmed career. Teardown frees inactive map sign textures and detached vehicle resources as well as visible geometry. Hidden rain splashes skip matrix uploads.

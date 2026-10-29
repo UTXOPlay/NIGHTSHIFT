@@ -6,7 +6,7 @@ The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/ni
 
 ## 9.2 verification — 29 October 2026
 
-Engine comparison, implementation and license decisions are documented in [nightshift-v92.md](nightshift-v92.md); current verification is recorded in [engine-results.json](engine-results.json). The retained 9.1 evidence below provides the previous release baseline.
+Engine comparison, implementation and license decisions are documented in [nightshift-v92.md](nightshift-v92.md); current verification is recorded in [engine-results.json](engine-results.json). For slow cross-region links, `tools/cached-browser-review.mjs` can cache manifest-verified local assets while keeping navigation, authentication and native APIs on the real origin. Server-side TLS hashing verifies actual served assets separately. Cached review runs are labeled explicitly and are not startup/network benchmarks. The retained 9.1 evidence below provides the previous release baseline.
 
 ## 9.1 verification — 29 October 2026
 

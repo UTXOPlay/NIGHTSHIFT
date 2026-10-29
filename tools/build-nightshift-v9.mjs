@@ -9,6 +9,8 @@ cpSync('games/nightshift-v9/web',root,{recursive:true});
 cpSync('games/arcade/web',path.join(root,'_arcade'),{recursive:true,filter:p=>!path.basename(p).startsWith('nightshift7')});
 cpSync('public',path.join(root,'_shared'),{recursive:true});
 await build({entryPoints:['games/arcade/web/nightshift9-renderer.mjs'],bundle:true,format:'esm',minify:true,target:'es2022',outfile:path.join(root,'_arcade/nightshift9-renderer.bundle.mjs')});
+// Collapse the rules/UI module waterfall while keeping the large renderer reusable.
+await build({entryPoints:['games/nightshift-v9/web/app.js'],bundle:true,format:'esm',minify:true,target:'es2022',outfile:path.join(root,'app.js'),plugins:[{name:'arcade-imports',setup(build){build.onResolve({filter:/^\.\/_arcade\//},args=>args.path.endsWith('nightshift9-renderer.bundle.mjs')?{path:args.path,external:true}:{path:path.resolve('games/arcade/web',args.path.slice('./_arcade/'.length))});}}]});
 function rewrite(dir){for(const item of readdirSync(dir,{withFileTypes:true})){
  const file=path.join(dir,item.name);if(item.isDirectory()){rewrite(file);continue;}
  if(!/\.(?:js|mjs|css|html|json|webmanifest)$/.test(file))continue;
