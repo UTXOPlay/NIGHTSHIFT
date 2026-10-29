@@ -1,0 +1,259 @@
+{
+  "version": "9.1.0",
+  "runtimeSource": "a4509958c0e8be13f2358b56391184f17ba740d3",
+  "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "nativeBinaries": {
+    "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+    "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89"
+  },
+  "tests": 59,
+  "nativeConformance": {
+    "tapes": 38,
+    "activeTicks": 426742
+  },
+  "signedReplay": {
+    "restart": true,
+    "tamperedPurchaseRejected": true,
+    "staleBlockRejected": true,
+    "v8AndV9RejectOtherProfile": true
+  },
+  "contacts": {
+    "poses": 90,
+    "tireContacts": 360,
+    "maxAbsoluteClearanceMetres": 2.027256899503338e-06,
+    "scope": "Isolated real-model presentation fixture, six builds / five environments / three positions; not every live crash"
+  },
+  "localAcceptance": [
+    "1920x1080 layout, resolution cap and inverse input",
+    "2560x1080 layout, resolution cap and inverse input",
+    "2560x1440 layout, resolution cap and inverse input",
+    "3840x2160 layout, resolution cap and inverse input",
+    "844x390 layout, resolution cap and inverse input",
+    "Upgrade purchased and balance debited by native executor",
+    "3\u20137 minute signed race reward and separate mobile results",
+    "Earned car purchase survives reload",
+    "Next event opens the next briefing",
+    "Native career replay verifies",
+    "Icon controls with accessible names and English interface",
+    "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+    "Reduced motion and resume after rotation"
+  ],
+  "combat": {
+    "checks": [
+      {
+        "kind": "collision",
+        "triggerTick": 197,
+        "activeSprites": 2,
+        "signedReplay": true
+      },
+      {
+        "kind": "hit",
+        "triggerTick": 660,
+        "activeSprites": 3,
+        "signedReplay": true
+      },
+      {
+        "kind": "guard",
+        "triggerTick": 642,
+        "activeSprites": 1,
+        "signedReplay": true
+      },
+      {
+        "kind": "rival-hit",
+        "triggerTick": 61,
+        "activeSprites": 3,
+        "signedReplay": true
+      },
+      {
+        "kind": "disable",
+        "triggerTick": 73,
+        "activeSprites": 3,
+        "signedReplay": true
+      },
+      {
+        "kind": "wreck",
+        "triggerTick": 1608,
+        "activeSprites": 2,
+        "signedReplay": true
+      },
+      {
+        "kind": "reduced-motion",
+        "transientSprites": 0
+      }
+    ],
+    "errors": [],
+    "initialLoadMs": 3859
+  },
+  "maps": {
+    "maps": 12,
+    "thumbnails": 12,
+    "selectedPreview": true,
+    "minimapActors": 6,
+    "followAndOverview": true,
+    "noOverlap": true,
+    "errors": []
+  },
+  "performance": {
+    "baseline1080p": {
+      "baseline": true,
+      "gpuMedianMs": null,
+      "mode": 3,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 30.135,
+      "simulationSeconds": 30.1,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.28,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        45,
+        76
+      ],
+      "maxTriangles": 144849,
+      "errors": []
+    },
+    "release1080p": {
+      "baseline": false,
+      "gpuMedianMs": 7.988802,
+      "mode": 3,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 30.164,
+      "simulationSeconds": 29.566666666666666,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.48,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        54,
+        90
+      ],
+      "maxTriangles": 192333,
+      "errors": []
+    },
+    "emulatedTouchLow": {
+      "baseline": false,
+      "gpuMedianMs": 5.186302,
+      "mode": 3,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "touch": true,
+      "wallSeconds": 20.018,
+      "simulationSeconds": 20.1,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 1.66,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        67,
+        89
+      ],
+      "maxTriangles": 189257,
+      "errors": []
+    },
+    "scope": "Same desktop Chromium/GL device; touch is emulated. CPU draw work and sampled GPU time are separate. Shared device load varies. Baseline predates GPU queries; no baseline GPU comparison is claimed. Final timing captures the end tick before taking screenshots.",
+    "initialIteration1080p": {
+      "baseline": false,
+      "gpuMedianMs": 9.384531,
+      "mode": 3,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 30.085,
+      "simulationSeconds": 29.4,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 3.42,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        54,
+        97
+      ],
+      "maxTriangles": 201812,
+      "errors": []
+    }
+  },
+  "ci": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40871493807",
+  "otherCatalogEntriesPreserved": true,
+  "productionAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "store": {
+    "checks": [
+      "Legacy redirects preserve queries for curated and vendor games",
+      "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+      "Existing guest identity also launches chess through the canonical path",
+      "Vendor route ID and absent-game fallback remain correct",
+      "Home has no legacy game links and catalog advertises V9"
+    ],
+    "errors": []
+  },
+  "careerContinuity": {
+    "identicalStateAndBlockAtCutover": true,
+    "originalTick": 9,
+    "nextTick": 12,
+    "credits": 650,
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "signedReplay": true
+  },
+  "deployment": {
+    "version": "9.1.0",
+    "runtimeSource": "a4509958c0e8be13f2358b56391184f17ba740d3",
+    "gameImage": "sha256:98a91f0ac9d12737c74de9873be76d0aa21bf81b097eadd513069e67ea714338",
+    "storeImage": "sha256:aa6357873a47874e783348dc69184efb48ac82c056b8905fc8364b05ba45cc01",
+    "previousStoreImage": "sha256:696abeb8e5b0fa214af34b8a1daebba8e6729fc60fd205c63ef63b96e7b484d8",
+    "otherCatalogEntriesPreserved": true,
+    "nativeVolumesPreserved": true,
+    "concurrentStoreReleasePreserved": true
+  },
+  "publicIdentity": {
+    "version": "9.1.0",
+    "publicTlsHostname": "store.utxoplay.io",
+    "verifiedFiles": 85,
+    "nativeBinaries": {
+      "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+      "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89"
+    },
+    "otherCatalogEntriesPreservedAtOurCutover": true,
+    "independentCatalogUpdatesAfterCutover": true,
+    "seconds": 3.7118489742279053
+  }
+}

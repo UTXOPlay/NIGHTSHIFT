@@ -1,8 +1,41 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 9.0.0 — Circuit handling](nightshift-v9.md). Its exact native profile is `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs, the course data and 78 browser files. Frozen V8 and V7 native hashes remain in their versioned manifests.
+The active release is [NIGHTSHIFT 9.1.0 — Motion and street presentation](nightshift-v91.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 85 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
 
-The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Store document launches, embedded games, vendor links and redirects now use `/games`; `/play` is retained as a permanent redirect. Existing catalog/account IDs are unchanged.
+The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
+
+## 9.1 verification — 29 October 2026
+
+Runtime source: `a4509958c0e8be13f2358b56391184f17ba740d3`. [Both CI jobs passed](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40871493807). The [isolated parent catalog commit](https://github.com/UTXOPlay/UTXOPlay/commit/ec793e76609c8d50ddf14180d9fca3297644f5fc) changes only NIGHTSHIFT's version. Full machine-readable results are in [motion-presentation-results.json](motion-presentation-results.json).
+
+All 59 JavaScript/host tests pass. New checks cover cadence-independent damping/ribbons, body weight-transfer direction, banked/graded tire contact, cached road geometry, eight-frame impact progression, bounded crash motion at 30/60/120 Hz, world-position HUD projection and barrier face/winding normals. The isolated real-model browser fixture covers 90 poses / 360 tire contacts; maximum measured absolute clearance is about 0.0000021 m in that fixture. This is not a claim about every live crash.
+
+Native/browser conformance passes 38 tapes and 426,742 active ticks, including an earned economy. Signed export/restart/tamper/profile rejection checks pass against the unchanged executable. All twelve map previews/minimap views and seven combat/reduced-motion scenarios pass without browser/shader errors.
+
+Thirteen complete staging and public TLS browser checks pass: a 233.4-second signed victory, earned KITE purchase and reload, next briefing, the four required large displays, 844x390 landscape controls and the 390x844 portrait gate, inverse input, safe result layout, English icon controls and reduced motion. Five final public store checks pass for authenticated iframe identity, canonical/legacy links, chess, vendor fallback and home links. Subsequent targeted HUD/barrier corrections are covered by the added tests, CI and final served-file verification.
+
+A V9 career created before cutover retained its complete state, block hash, profile and 650 credits after the presentation upgrade. It advanced from tick 9 to 12 with ordinary inputs and its signed replay verified. No save was reinterpreted with new rules.
+
+Measured on the same desktop Chromium/OpenGL setup:
+
+| Sample | Median / p10 FPS | Median CPU draw work | Sampled GPU time |
+| --- | --- | --- | --- |
+| V9.0 Neon Ward, 1920x1080, 30 s | 60 / 60 | 2.28 ms | Unavailable |
+| First 9.1 iteration, 1920x1080, 30 s | 60 / 60 | 3.42 ms | 9.38 ms |
+| Final 9.1, 1920x1080, 30 s | 60 / 60 | 2.48 ms | 7.99 ms |
+| 9.1 low quality, 844x390 emulated touch, 20 s | 60 / 60 | 1.66 ms | 5.19 ms |
+
+These are sampled runs on a shared desktop, not physical-phone guarantees or matched baseline GPU comparisons. Render scale remained 1. The final sample reports 54–90 main-scene draw calls and no browser errors. Road station caching removes repeated strip/elevation work while retaining the richer vehicles and effects. A short screenshot-only run overlapping another browser's scene compilation failed performance gates; it is excluded from benchmarks. The later isolated 30-second runs passed. Back-buffer limits, pools, vehicle LOD and reduced motion remain enforced.
+
+All 85 final public files match the manifest through the real TLS hostname; both deployed native executable hashes match their retained pins. That hash sweep ran on the server with the public hostname resolved to local TLS. Separately, full browser acceptance used actual public-host requests through an SSH CONNECT tunnel because this workstation's cross-region asset transport is slow. Startup timing from that tunnel is not a player-network benchmark. Map thumbnails now have low fetch priority so they do not compete as aggressively with race assets.
+
+The game image is `sha256:98a91f0ac9d12737c74de9873be76d0aa21bf81b097eadd513069e67ea714338`. The final observed store image is `sha256:aa6357873a47874e783348dc69184efb48ac82c056b8905fc8364b05ba45cc01`, retaining a concurrent store release. Our initial catalog overlay `sha256:ca4e89329761ff5606beac8785f8f3108e252917055a1d3978c7b90bc9a90de0` preserved every other catalog entry from its then-current base; later independent catalog changes were preserved. A concurrent store recreation interrupted one public hash request; final verification was repeated successfully. Staging was excluded from public domain discovery throughout this release.
+
+The private server release directory retains immutable source/payload/evidence archives, prior image/configuration references, a consistent platform backup and native evidence backup. Roll back presentation images while retaining current native volumes; do not replace live careers with older backups. Owned staging containers, local review hosts and verification tunnels are removed/stopped after verification.
+
+## Preserved 9.0 verification
+
+The original Circuit handling release bound the same native profile and 78 browser files. Its original evidence follows.
 
 ## V9 local verification — 28 October 2026
 
