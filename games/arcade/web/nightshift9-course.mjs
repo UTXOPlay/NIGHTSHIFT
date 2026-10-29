@@ -5,6 +5,7 @@ import {curvature as legacyCurve} from './nightshift8-rules.mjs';
 import {courseTable,courseElevation} from './nightshift9-course-data.mjs';
 export {courseTable,courseElevation} from './nightshift9-course-data.mjs';
 const STEP=25,clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+export const guardrailMode=mode=>[0,1,2,4,5,6,9,11].includes(mode);
 export class CircuitFrame {
  constructor(){this.origin={};this.point={};this.euler=new T.Euler(0,0,0,'YXZ');this.quaternion=new T.Quaternion();}
  set(mode,distance,legacy=false){this.mode=mode;this.distance=distance;this.legacy=legacy;this.table=courseTable(mode,legacy);this.sample(distance,this.origin);this.cos=Math.cos(this.origin.heading);this.sin=Math.sin(this.origin.heading);}
@@ -35,26 +36,28 @@ export class CircuitFrame {
 export class CircuitRoad {
  constructor(scene,materials){
   this.strips=[];this.stations=145;this.stationData=new Float64Array(this.stations*9);
-  const add=(material,edges,{height=0,wall=false,dashes=false}={})=>{
+  const add=(material,edges,{height=0,wall=false,dashes=false,railTop=false}={})=>{
    const count=this.stations,position=new Float32Array(count*6),normal=new Float32Array(count*6),uv=new Float32Array(count*4),index=[];
    for(let n=0;n<count-1;n++){const a=n*2;index.push(a,a+1,a+2,a+1,a+3,a+2);}
    if(wall&&edges[0]<0)for(let n=0;n<index.length;n+=3)[index[n+1],index[n+2]]=[index[n+2],index[n+1]];
    const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.BufferAttribute(position,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('normal',new T.BufferAttribute(normal,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('uv',new T.BufferAttribute(uv,2).setUsage(T.DynamicDrawUsage));geometry.setIndex(index);
-   const mesh=new T.Mesh(geometry,material);mesh.matrixAutoUpdate=false;mesh.frustumCulled=false;mesh.receiveShadow=true;scene.add(mesh);this.strips.push({mesh,edges,height,wall,dashes});
+   const mesh=new T.Mesh(geometry,material);mesh.matrixAutoUpdate=false;mesh.frustumCulled=false;mesh.receiveShadow=true;scene.add(mesh);this.strips.push({mesh,edges,height,wall,dashes,railTop});
   };
   add(materials.concrete,[-8.5,8.5],{height:-.14});add(materials.road,[-6.2,6.2]);
   for(const x of [-5.8,5.8])add(materials.white,[x-.055,x+.055],{height:.018});
   for(const x of [-2,2])add(materials.white,[x-.05,x+.05],{height:.02,dashes:true});
   const walls=this.wallMaterial=materials.concrete.clone();walls.side=T.DoubleSide;walls.color.multiplyScalar(.6);walls.roughness=.8;for(const x of [-8.1,8.1])add(walls,[x-.16,x+.16],{height:.02,wall:true});
-  for(const x of [-8.12,8.12])add(materials.white,[x-.055,x+.055],{height:.98});
+  this.railMaterial=new T.MeshStandardMaterial({color:'#829296',metalness:.7,roughness:.38,side:T.DoubleSide});
+  for(const x of [-8.12,8.12])add(materials.white,[x-.055,x+.055],{height:.98,railTop:true});
   this.vector=new T.Vector3();
  }
  draw(frame,visible=true){
   const key=frame.mode+':'+frame.legacy+':'+frame.distance+':'+visible;if(key===this.bufferKey)return;this.bufferKey=key;
   if(visible)for(let n=0;n<this.stations;n++){const z=30-n*3.5,p=frame.pose(z),at=n*9,h=p.heading,bank=p.bank,grade=frame.legacy?0:Math.atan2(courseElevation(frame.mode,frame.distance-z*10+25)-courseElevation(frame.mode,frame.distance-z*10-25),5),ch=Math.cos(h),sh=Math.sin(h),cb=Math.cos(bank),sb=Math.sin(bank),sg=Math.sin(grade),cg=Math.cos(grade),data=this.stationData;data[at]=p.x;data[at+1]=p.y;data[at+2]=p.z;data[at+3]=ch;data[at+4]=sh;data[at+5]=sb;data[at+6]=-sb*ch-cb*sg*sh;data[at+7]=cb*cg;data[at+8]=-sb*sh+cb*sg*ch;}
-  for(const strip of this.strips){strip.mesh.visible=visible;if(!visible)continue;const geometry=strip.mesh.geometry,p=geometry.attributes.position,norm=geometry.attributes.normal,uv=geometry.attributes.uv;
+  const rail=guardrailMode(frame.mode);
+  for(const strip of this.strips){strip.mesh.visible=visible;if(!visible)continue;if(strip.wall)strip.mesh.material=rail?this.railMaterial:this.wallMaterial;const geometry=strip.mesh.geometry,p=geometry.attributes.position,norm=geometry.attributes.normal,uv=geometry.attributes.uv;
    for(let n=0;n<this.stations;n++){const z=30-n*3.5,absolute=(frame.distance*.1-z),dash=strip.dashes&&((absolute%7+7)%7>3);
-    for(let edge=0;edge<2;edge++){let x=strip.edges[edge],y=strip.height;if(strip.wall){x=(strip.edges[0]+strip.edges[1])/2;y=edge?1:.02;}if(dash)y=-.045;
+    for(let edge=0;edge<2;edge++){let x=strip.edges[edge],y=strip.railTop&&rail?.84:strip.height;if(strip.wall){x=(strip.edges[0]+strip.edges[1])/2;y=rail?(edge?.83:.62):(edge?1:.02);}if(dash)y=-.045;
      const station=n*9,data=this.stationData,at=n*2+edge;p.setXYZ(at,data[station]+data[station+3]*x,data[station+1]+y+data[station+5]*x,data[station+2]+data[station+4]*x);if(strip.wall)norm.setXYZ(at,-Math.sign(x)*data[station+3],0,-Math.sign(x)*data[station+4]);else norm.setXYZ(at,data[station+6],data[station+7],data[station+8]);uv.setXY(at,edge,absolute*.13);
     }
    }

@@ -1,0 +1,95 @@
+{
+  "version": "9.6.0",
+  "nativeProfile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "nativeRulesChanged": false,
+  "unitTests": 84,
+  "browserFiles": 105,
+  "renderFixtures": {
+    "maps": 12,
+    "resizeQualityCases": 18,
+    "pools": 37,
+    "maxPoolCount": 290,
+    "gameStateUnchanged": true,
+    "capabilities": {
+      "renderer": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "errors": []
+  },
+  "performance": {
+    "localHarbourHigh": {
+      "gpuMedianMs": 9.414166,
+      "mode": 0,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 20.12,
+      "simulationSeconds": 20.133333333333333,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.16,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        66,
+        213
+      ],
+      "maxTriangles": 346269,
+      "errors": []
+    },
+    "localForestHigh": {
+      "gpuMedianMs": 7.612291,
+      "mode": 2,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 20.154,
+      "simulationSeconds": 20.166666666666668,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.14,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        74,
+        121
+      ],
+      "maxTriangles": 217088,
+      "errors": []
+    },
+    "localTouchLow": {
+      "gpuMedianMs": 4.357031,
+      "mode": 0,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "touch": true,
+      "wallSeconds": 20.103,
+      "simulationSeconds": 20.1,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 1.98,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        55,
+        91
+      ],
+      "maxTriangles": 135795,
+      "errors": []
+    }
+  },
+  "limitations": [
+    "Synthetic scene fixtures are presentation evidence, not human playtests.",
+    "Short shared-desktop measurements are not physical-phone or sustained-session results.",
+    "Existing two vehicle bodies and finite background plates remain; no new gameplay rules, multiplayer or settlement."
+  ]
+}

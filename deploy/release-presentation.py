@@ -20,7 +20,8 @@ import urllib.parse
 ROOT = pathlib.Path(sys.argv[2]).resolve()
 VERSION = json.loads((ROOT / "payload/package.json").read_text())["version"]
 GAME, STORE = "myelin-nightshift-v8", "utxoplay-store"
-STAGE_GAME, STAGE_STORE = "nightshift-lighting-stage", "nightshift-lighting-store-stage"
+RELEASE_ID = VERSION.replace(".", "-")
+STAGE_GAME, STAGE_STORE = "nightshift-" + RELEASE_ID + "-stage", "nightshift-" + RELEASE_ID + "-store-stage"
 ROOT.mkdir(parents=True, exist_ok=True)
 ROOT.chmod(0o700)
 
@@ -76,6 +77,7 @@ def clone_spec(d, image, stage=False):
     spec["NetworkingConfig"] = {"EndpointsConfig": endpoints}
     if stage:
         spec["Labels"] = {k: v for k, v in (spec.get("Labels") or {}).items() if not k.startswith("com.docker.compose.")}
+        spec["Labels"].update({"io.utxoplay.nightshift.release": str(ROOT), "io.utxoplay.nightshift.role": "staging"})
         spec["Env"] = [e for e in spec["Env"] if not e.split("=", 1)[0].startswith("VIRTUAL_")]
         spec["HostConfig"]["RestartPolicy"] = {"Name": "no", "MaximumRetryCount": 0}
     return spec
@@ -107,13 +109,13 @@ def build(kind, base, catalog=None):
     base_tag = "utxoplay/lighting-base-" + kind + ":" + base.removeprefix("sha256:")[:16]
     run(["docker", "tag", base, base_tag])
     if kind == "game":
-        body = "COPY payload/dist/ /app/dist/\nCOPY payload/docs/ /app/docs/\nCOPY payload/package.json /app/package.json\n"
+        body = "COPY payload/dist/ /app/dist/\nCOPY payload/docs/ /app/docs/\nCOPY payload/package.json payload/package-lock.json /app/\n"
     else:
         (ROOT / "catalog.json").write_text(json.dumps(catalog, indent=2) + "\n")
         body = "COPY catalog.json /app/server/catalog.json\n"
     dockerfile = ROOT / ("Dockerfile." + kind)
     dockerfile.write_text("FROM " + base_tag + "\n" + body + 'LABEL org.opencontainers.image.version="nightshift-' + VERSION + '"\n')
-    tag = "utxoplay/" + kind + ":nightshift-lighting-" + VERSION
+    tag = "utxoplay/" + kind + ":nightshift-presentation-" + VERSION
     with (ROOT / (kind + "-build.log")).open("w") as log:
         subprocess.run(["docker", "build", "-f", str(dockerfile), "-t", tag, str(ROOT)], stdout=log, stderr=subprocess.STDOUT, check=True)
     return inspect(tag)["Id"]
@@ -206,7 +208,7 @@ def cutover():
     try:
         for name, original, candidate in [(GAME, old_game, game_image), (STORE, old_store, image)]:
             assert inspect(name)["Id"] == original["Id"], "Concurrent container replacement; preserve the newer deployment"
-            backup = name + "-before-nightshift-95"
+            backup = name + "-before-nightshift-" + RELEASE_ID
             run(["docker", "stop", "-t", "15", name])
             run(["docker", "rename", name, backup])
             changed.append((name, backup))
@@ -215,6 +217,7 @@ def cutover():
             # compose path; retaining stale compose ownership invites rollback.
             spec["Labels"] = {k: v for k, v in (spec.get("Labels") or {}).items() if not k.startswith("com.docker.compose.")}
             spec["Labels"]["io.utxoplay.nightshift.release"] = str(ROOT)
+            spec["Labels"]["io.utxoplay.nightshift.role"] = "production"
             private(name + "-production.private.json", spec)
             create(name, spec)
             healthy(name)

@@ -18,8 +18,8 @@ export class CircuitScenery{
   let layout;
   if(WATER.has(mode))layout=[[8.3,11.2,-.12,m.white],[11.2,145,mode===11?-15:-4,m.water]];
   else if(mode===8)layout=[[8.3,12.5,-.12,m.white],[12.5,21.5,-.7,m.water],[21.5,22.6,-.12,m.white],[22.6,110,-.12,m.ground]];
-  else if(mode===0)layout=[[8.3,33,-.12,m.steel],[33,145,-2.1,m.water]];
-  else layout=[[8.3,18,-.12,city?m.white:m.ground],[18,110,-.12,m.ground]];
+  else if(mode===0)layout=[[8.3,33,-.12,m.quay||m.steel],[33,145,-2.1,m.water]];
+  else layout=[[8.3,18,-.12,city?(m.quay||m.white):m.ground],[18,110,-.12,m.ground]];
   for(let band=0;band<this.bands.length;band++){
    const target=this.bands[band],spec=layout[band];target.mesh.visible=visible&&!!spec;if(!target.mesh.visible)continue;
    const [lo,hi,height,material]=spec;target.mesh.material=material;Object.assign(target,{lo,hi,height});const g=target.mesh.geometry,p=g.attributes.position,normal=g.attributes.normal,uv=g.attributes.uv,data=this.road.stationData;

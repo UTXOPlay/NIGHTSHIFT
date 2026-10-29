@@ -1,8 +1,11 @@
 import * as T from 'three';
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
+import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import {harbourDistrict,facadeRelief} from './nightshift9-industrial.mjs';
 export const STREET_VARIANTS=24;
-export const GEO={box:new T.BoxGeometry(1,1,1),building:new RoundedBoxGeometry(1,1,1,1,.012),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:new T.PlaneGeometry(1,1)};
-export const FACADES=[['brick',0,10,9],['residence',1,9,18],['office',2,15,21],['lab',3,12,10],['warehouse',4,14,12],['stonefront',5,12,9],['chalet',6,9,8],['utility',7,7,7]];
+const foliageCards=Array.from({length:3},(_,n)=>new T.PlaneGeometry(1,1).rotateY(n*Math.PI/3)),foliage=mergeGeometries(foliageCards);foliageCards.forEach(g=>g.dispose());
+export const GEO={box:new T.BoxGeometry(1,1,1),building:new RoundedBoxGeometry(1,1,1,1,.012),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:foliage};
+export const FACADES=[['brick',0,10,12],['residence',1,10,12],['office',2,12,12],['lab',3,12,12],['warehouse',4,14,9],['stonefront',5,12,9],['chalet',6,9,9],['utility',7,7,7]];
 const hash=x=>{x=Math.imul(x^(x>>>16),0x45d9f3b);x=Math.imul(x^(x>>>16),0x45d9f3b);return(x^(x>>>16))>>>0;};
 const mod=(x,n)=>(x%n+n)%n;
 // Adjacent chunks have different parity; repeated blocks cannot form a wall.
@@ -10,7 +13,7 @@ export function streetVariant(mode,chunk,sector=0){return(hash(Math.floor(chunk/
 export function buildDistrict(w,id,n){
  const out=[],b=(mat,x,y,z,sx,sy,sz,rx=0,ry=0,rz=0,geometry=GEO.box,color='#ffffff')=>{if((mat==='ground'||mat==='water')&&sx>=80||['white','steel'].includes(mat)&&Math.abs(sz-18.2)<.15&&sx>=10)return;w.add(out,mat,x,y,z,sx,sy,sz,rx,ry,rz,geometry,color);};
  const random=k=>(hash(n*199+id*1013+k*61)%1000)/1000;
- const tree=(x,z,h,kind='fir',seed=0)=>{const angle=random(seed+37)*Math.PI;for(let k=0;k<2;k++)b(kind,x,h*.48,z,h*(kind==='broadleaf'?.85:.64),h,1,0,angle+k*Math.PI/2,0,GEO.leaf);b('steel',x,.6,z,.13,1.3,.13,0,0,0,GEO.cylinder,'#72796b');};
+ const tree=(x,z,h,kind='fir',seed=0)=>{const angle=random(seed+37)*Math.PI,width=h*(kind==='broadleaf'?.85:.64);b(kind,x,h*.48,z,width,h,width,0,angle,0,GEO.leaf);b('steel',x,.6,z,.13,1.3,.13,0,0,0,GEO.cylinder,'#72796b');};
  const bench=(x,z,side)=>{b('steel',x,.46,z,1.25,.13,2.3,0,0,0,GEO.box,'#928775');b('steel',x+side*.5,.86,z,.12,.9,2.3);for(const dz of [-.8,.8])b('steel',x,.2,z+dz,1.1,.4,.12);};
  const planter=(x,z,side)=>{b('stonefront',x,.35,z,1.6,.7,2);tree(x,z,3.5,'broadleaf',n+side);};
  const shelter=(x,z,s)=>{b('steel',x,2.65,z,2.9,.17,5.2);for(const dz of [-2.2,2.2])b('steel',x+s*1.2,1.3,z+dz,.13,2.6,.13);b('glass',x+s*1.15,1.3,z,.08,2.45,4.4);b('light',x,2.54,z,2.35,.045,.12,0,0,0,GEO.box,'#f1dab6');bench(x,z,s);};
@@ -19,7 +22,7 @@ export function buildDistrict(w,id,n){
   const setback=kind===6?9:kind===7?13:0,x=side*(18+setback+offset+random(seed+1)*6),depth=12+random(seed+2)*4,width=kind===2?11:kind===3?15:12;
   const heights=[11,20,43,29,15,8,6,10],h=heights[kind]*(.82+random(seed+3)*.37)*heightScale,face=['brick','residence','office','lab','residence','stonefront','stonefront','brick'][kind];
   if(kind===6){b('ground',side*21,-.1,z,22,.3,16,0,0,0,GEO.box,'#829783');for(const dz of [-4.5,4.5]){planter(side*22,z+dz,side);bench(side*15,z+dz,side);}b('stonefront',side*36,3,z,8,6,12);return;}
-  b(face,x,h/2,z,width,h,depth,0,0,0,GEO.box,['#d3ccba','#a7b3b8','#9aadb8','#afc1bb'][seed%4]);roof(x,z,width,depth,h,side,seed);
+  b(face,x,h/2,z,width,h,depth,0,0,0,GEO.box,['#d3ccba','#a7b3b8','#9aadb8','#afc1bb'][seed%4]);roof(x,z,width,depth,h,side,seed);facadeRelief(b,face,side,x,z,width,h,depth);
   if(kind===0||kind===1||kind===4){b('stonefront',x,1.55,z,width+.5,3.1,depth+.3);b('steel',x-side*(width/2+1),3.35,z,2.2,.18,depth*.75,0,0,-side*.1);b('light',x-side*(width/2+2.05),3.23,z,.055,.08,depth*.7,0,0,0,GEO.box,seed%2?'#d3a783':'#a5d8cf');}
   if(kind===2||kind===3){const by=h*.38;b(face,x+side*2,by/2,z+depth*.15,width+4,by,depth+2);b('steel',x+side*2,by+.18,z+depth*.15,width+4.4,.26,depth+2.4);}
   if(kind===4){for(const dz of [-depth*.35,depth*.35]){b('steel',x-side*(width*.5+.25),h*.55,z+dz,.6,h*.7,2);b('white',x-side*(width*.5+.65),h*.55,z+dz,.12,h*.7,2);}}
@@ -29,10 +32,7 @@ export function buildDistrict(w,id,n){
  const chalet=(side,z,h=5)=>{const x=side*(18+random(n+side)*8);b('stonefront',x,1.15,z,10,2.3,11);b('chalet',x,2.3+h/2,z,9,h,10);for(const slope of [-1,1])b('steel',x+slope*2.65,h+3.2,z,6.1,.28,12,0,0,-slope*.43, GEO.box,'#d3e3e8');};
  const cliff=(x,z,height,snow=false)=>{for(let k=0;k<3;k++){const h=height*(1-k*.21);b('stone',x+(k%2?1.5:-.5),h*.5+k*2-1,z+k*.7,18-k*2,h,17-k,0,(n+k)*.27,0,GEO.rock,snow?'#8e9eac':'#c8a186');if(snow&&k===2)b('white',x+1,height*.71,z,13,1.1,12,0,n*.27,0,GEO.rock,'#dce6eb');}};
  if(id===0){
-  b('water',0,-2.1,0,220,.12,18.2,0,0,0,GEO.box,'#55737c');
-  for(const s of [-1,1]){b('steel',s*21,-1.3,0,25,1.1,18.2);const amount=1+n%3;for(let k=0;k<amount;k++){const stack=(n+k+s+24)%3+1;for(let t=0;t<stack;t++)b('cargo',s*(15+k*6),t*2.6+.2,k*4-4,4.7,2.5,8.5,0,0,0,GEO.box,['#8d9d85','#aa7654','#577b90','#c4b28d'][(n+k+t)%4]);}
-   if((n+(s>0?2:0))%4===0){b('warehouse',s*38,4,0,14,8,15);roof(s*38,0,14,15,8,s,n);}else if(n%5===1)for(const z of [-5,5])b('steel',s*12,1.1,z,1.2,2.2,1.2,0,0,0,GEO.cylinder);
-   if(n%6===0){for(const z of [-5,5])b('steel',s*31,9,z,.7,22,.7);b('steel',s*24,20,0,30,1,1);b('steel',s*16,13.5,0,.09,12,.09);b('lab',s*21,18,0,3.5,2.6,3.4);b('light',s*24,19.4,0,7,.1,.2,0,0,0,GEO.box,'#edcb8d');}}
+  harbourDistrict(b,n,random);
  }else if(id===1){
   b('ground',0,-1.8,0,170,.6,18.2,0,0,0,GEO.box,'#d8e6ea');b('water',-42,-1.4,0,32,.1,18.2,0,0,0,GEO.box,'#9bc9d6');
   const s=n%2?1:-1;if(n%4===0)cliff(s*(61+random(4)*8),0,7+random(5)*6,true);else if(n%5===1)chalet(s,0,4+random(8)*3);
@@ -63,5 +63,6 @@ export function buildDistrict(w,id,n){
  }else if(id===10){
   b('tunnel',0,11,0,22,1,18.2);for(const s of [-1,1]){b('tunnel',s*10,4.5,0,1,10,18.2);b('steel',s*9.4,5,5+((n*7)%24)/8,.4,10,.4);b('steel',s*7.1,9.6,0,.5,.5,18.2);if(n%3===0){b('utility',s*9.35,2.6,0,.16,4.2,7);b('light',s*9.17,2.5,0,.05,.1,6,0,0,0,GEO.box,'#9ccfb9');}else if(n%4===0)b('glass',s*9.4,6.3,0,.15,3,8);b('light',s*9.4,1.1,0,.08,.15,18.2,0,0,0,GEO.box,n%2?'#d4b581':'#a5c6bd');}if(n%4===1){b('steel',0,10.3,0,20,.4,.5);b('light',0,10.05,0,12,.08,.2,0,0,0,GEO.box,'#e8cfaa');}
  }
+ if([0,1,2,4,5,6,9,11].includes(id))for(const side of [-1,1])for(const z of [-4.5,4.5])b('structure',side*8.1,.4,z,.11,.8,.16,0,0,0,GEO.box,'#69767d');
  return out;
 }
