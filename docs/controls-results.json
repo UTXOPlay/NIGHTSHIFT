@@ -1,0 +1,103 @@
+{
+  "version": "10.0.2",
+  "nativeProfile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+  "nativeRulesChanged": false,
+  "unitTests": 115,
+  "controllerReview": {
+    "checks": [
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns",
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Portrait gate pauses controller play and clears held input",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 134,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      },
+      {
+        "touch": true,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 122,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      }
+    ],
+    "errors": []
+  },
+  "acceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+    "finishSeconds": 229.6,
+    "attempts": 1,
+    "credits": 465
+  },
+  "sourceBaseArchiveSha256": "07d980d302be93de28c319b905322d2da14a06bfd62d22770c606256a3357ad4",
+  "existingBrowserChanges": [
+    "app.js",
+    "index.html"
+  ],
+  "newBrowserFiles": 4,
+  "physicalControllerTested": false,
+  "physicalPhoneTested": false,
+  "roadblocks": {
+    "checks": [
+      "Stale cached client rejected before mutation",
+      "Colemak keyboard reverse/steer, clear and native replay",
+      "Stale cached client rejected before mutation",
+      "Trusted touch reverse/steer, portrait cancellation, clear and native replay"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "earlyDistanceMetres": 303.6,
+        "stoppedDistanceMetres": 5.9,
+        "armorBefore": 2,
+        "armorAfter": 2,
+        "rowDistance": 5028,
+        "finalDistance": 5127,
+        "nativeReplay": true,
+        "keyboard": "colemak"
+      },
+      {
+        "touch": true,
+        "earlyDistanceMetres": 303.6,
+        "stoppedDistanceMetres": 5.9,
+        "armorBefore": 2,
+        "armorAfter": 2,
+        "rowDistance": 5028,
+        "finalDistance": 5127,
+        "nativeReplay": true,
+        "keyboard": "colemak"
+      }
+    ],
+    "errors": []
+  }
+}

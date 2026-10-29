@@ -1,6 +1,6 @@
 {
   "name": "@utxoplay/nightshift",
-  "version": "10.0.0",
+  "version": "10.0.2",
   "private": true,
   "type": "module",
   "description": "NIGHTSHIFT: World Circuit \u2014 solo racing, vehicle progression and signed Myelin replay",

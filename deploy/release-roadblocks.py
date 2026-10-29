@@ -110,7 +110,7 @@ def build(kind, base, catalog=None):
     base_tag = "utxoplay/lighting-base-" + kind + ":" + base.removeprefix("sha256:")[:16]
     run(["docker", "tag", base, base_tag])
     if kind == "game":
-        body = "COPY payload/dist/ /app/dist/\nCOPY payload/docs/ /app/docs/\nCOPY payload/host/ /app/host/\nCOPY payload/games/nightshift-v10/host.json /app/games/nightshift-v10/host.json\nCOPY --chmod=755 payload/runtime/myelin-nightshift-v10 /app/target/release/myelin-nightshift-v10\nCOPY payload/package.json payload/package-lock.json /app/\n"
+        body = "COPY payload/dist/ /app/dist/\nCOPY payload/docs/ /app/docs/\nCOPY payload/host/ /app/host/\nCOPY payload/games/nightshift-v10/host.json /app/games/nightshift-v10/host.json\nCOPY payload/runtime/myelin-nightshift-v10 /app/target/release/myelin-nightshift-v10\nCOPY payload/package.json payload/package-lock.json /app/\nRUN chmod 755 /app/target/release/myelin-nightshift-v10\n"
     else:
         (ROOT / "catalog.json").write_text(json.dumps(catalog, indent=2) + "\n")
         body = "COPY catalog.json /app/server/catalog.json\n"

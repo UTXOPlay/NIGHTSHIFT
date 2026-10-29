@@ -1,8 +1,9 @@
+import {installReviewProfile} from './client-profile.mjs';
 import {chromium} from 'playwright';import assert from 'node:assert/strict';import{mkdirSync,writeFileSync}from'node:fs';import{step}from'../games/arcade/web/nightshift9-rules.mjs';import{driveInput}from'../tests/helpers/nightshift9-driver.mjs';import{reviewSession}from'./review-session.mjs';
 const origin=process.env.DRIFT_ORIGIN||'http://127.0.0.1:8899',out=process.env.DRIFT_OUT||'artifacts/streets-v93/recovery';mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({proxy:process.env.DRIFT_PROXY?{server:process.env.DRIFT_PROXY}:undefined,args:['--no-sandbox','--use-angle=gl','--enable-webgl','--ignore-gpu-blocklist']}),ctx=await browser.newContext({viewport:{width:1280,height:720}});let logout;
 try{
- if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);else await ctx.request.get(origin+'/games/nightshift/');
+ installReviewProfile(ctx);if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);else await ctx.request.get(origin+'/games/nightshift/');
  const call=async(path,body)=>{const r=await ctx.request[body?'post':'get'](origin+'/games/nightshift/api/'+path,body?{headers:{Origin:origin},data:body}:{});assert.ok(r.ok(),await r.text());return r.json();};
  let state=await call('state');const send=async action=>state=await call('action',{session_id:state.session.id,expected_block:state.session.block_hash,action});await send({type:'race',mode:1,vehicle:0,gadget:0,difficulty:0});
  const g=structuredClone(state.game),driver={},tape=[];let target=null,stopped=false;

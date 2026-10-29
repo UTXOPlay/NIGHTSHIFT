@@ -1,0 +1,24 @@
+NIGHTSHIFT driving audio
+
+engine.wav: "Car Engine Loop 96kHz, 4s" by qubodup.
+https://opengameart.org/content/car-engine-loop-96khz-4s
+Used under Creative Commons Attribution 3.0:
+https://creativecommons.org/licenses/by/3.0/
+Changes: mono conversion, 32 kHz resampling, loop crossfade and level adjustment.
+
+tyres.wav: "Car Tire Skid Squealing" by Mike Koenig (Soundbible),
+edited and submitted by qubodup.
+https://opengameart.org/content/car-tire-skid-squealing
+Used under Creative Commons Attribution 3.0:
+https://creativecommons.org/licenses/by/3.0/
+Changes: mono conversion, 32 kHz resampling, loop crossfade and level adjustment.
+
+impact.wav: "Crash Collision" by qubodup. CC0 1.0.
+https://opengameart.org/content/crash-collision
+https://creativecommons.org/publicdomain/zero/1.0/
+Changes: mono conversion, 32 kHz resampling and level adjustment.
+
+Wind, boost pressure, electric motor layer and short interface cues are
+original procedural sound design. The six vehicle voices combine filtering,
+pitch and mixing of the credited engine recording with the original layers;
+they are not six separate vehicle recordings.
