@@ -1,12 +1,35 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 9.4.0 — Career, classification and garage](nightshift-v94.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 93 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
+The active release is [NIGHTSHIFT 9.4.0 — Career, classification and garage](nightshift-v94.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 94 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
 
 ## 9.4 verification — 30 October 2026
 
 See [career and garage design](nightshift-v94.md) and [current verification evidence](career-results.json). This release includes the scenery work below, which was developed as a 9.3 checkpoint before the user expanded the scope. Native profiles and economy rules are unchanged.
+
+Runtime source: `fa64befa5256c9e6902e07cb56e0ccaba47751ba`. [Both runtime CI jobs pass](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40922904837). The [parent catalog commit](https://github.com/UTXOPlay/UTXOPlay/commit/16cddd894b9e0028e170351e78c05a1ab0e93c5f) changes only NIGHTSHIFT's version. Later evidence-only commits do not change the deployed browser or native bytes.
+
+All 81 Node/host tests, 38 native/browser tapes / 426,742 active ticks / 1,184 career frames and signed purchase/restart/tamper/stale-block/profile checks pass. V8 migration checks preserve the unfinished original run and its career, verify legacy ticks and migrate only on an explicit new event. No V9 handling or economy rule changed.
+
+The final UI passes thirteen public acceptance checks, six progression checks, four tactics checks, four engine lifecycle checks, five garage checks, five store checks and an ordinary-input roadblock recovery. These cover all required large displays, 844×390 landscape controls and 390×844 portrait gating. A 233.4-second native-signed victory, earned car purchase/reload, exact upgrade debit, six-driver classification, separate mobile results, four event filters, route scouting and no-cost owned-loadout selection all pass. The scenery fixture covers 24 views across twelve maps without browser/shader errors.
+
+All 94 files served by the actual public TLS endpoint match the manifest. Both deployed native executable hashes retain their pins. A pre-cutover V9 career kept its complete state, block, profile and 650 credits, then advanced from tick 9 to 12 and verified its replay. The native data volumes and unrelated catalog entries were preserved.
+
+Two final public-origin samples on the same desktop Intel Iris Xe / Chromium OpenGL setup:
+
+| Quality / viewport | Wall / simulation seconds | Median / p10 FPS | Median CPU work | Sampled GPU time |
+| --- | --- | --- | --- | --- |
+| High, 1920×1080 | 20.119 / 19.567 | 59 / 45 | 3.54 ms | 14.36 ms |
+| Low, 844×390 emulated touch | 20.158 / 20.167 | 60 / 59 | 2.27 ms | 5.27 ms |
+
+Both samples kept render scale 1 with no browser errors. The desktop sample had 65–101 main-scene draw calls and 152,445 peak triangles. These short shared-desktop samples do not establish a frame-rate improvement over 9.2 or physical-phone performance. The earlier interrupted/contended samples remain diagnostic evidence. Browser reviews cache manifest-verified local asset bytes while navigation, authentication, native inputs and saves use the deployed TLS origin via SSH CONNECT. Separate server-side hashing checks actual delivery. These are not network-startup benchmarks.
+
+After the UI reviews, an independently created Eight Ball stage inherited the production `VIRTUAL_HOST`; a subsequent benchmark's authentication request failed with 403 before any driving sample. Its public registration was removed while preserving its image, mounts, networks and private review port. The failed setup is retained separately. The 94-file TLS sweep, native pins, sole production-domain registration, correct public Origin and both authenticated driving samples were then verified again. NIGHTSHIFT staging never advertised the production hostname.
+
+The deployed game image is `sha256:133839c7c26eaea89f2d95387d52f301e2a29c7ea131815ddc6f9cb3e9cdb078`; our store cutover image is `sha256:aa9172182915a29c2e105051f7492d9e4c3cab1af2f84e19c3a65360973f93ab`. Both services are healthy with zero restarts. Private rollback configurations, a consistent platform backup, native evidence and a hash-verified runtime source archive remain on the server. The runtime archive SHA-256 is `60c37e784ac00e340396f7e9db4a7a9bda8cb43e2b6a41af2892857e680ef4cd`. Recovery preserves current data volumes.
+
+[Driver file](screenshots/career-v94.webp) · [Route scout and loadout](screenshots/strategy-v94.webp) · [Mobile results](screenshots/results-mobile-v94.webp) · [Generated facade prompt and provenance](nightshift-v93-art.json).
 
 ## Scenery development checkpoint — 29–30 October 2026
 
