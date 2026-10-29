@@ -74,6 +74,7 @@ export class DriftRenderer{
 
  roadX(){return 0;}
  pointer(clientX,clientY){const r=this.canvas.getBoundingClientRect();this.ray.setFromCamera(new T.Vector2((clientX-r.left)/r.width*2-1,1-(clientY-r.top)/r.height*2),this.camera);this.ray.ray.intersectPlane(this.inputPlane,this.point);return{x:500+this.point.x*250,y:500-this.point.y*250};}
+ projectWorld(x,y=0,z=0){const p=new T.Vector3(x,y,z).project(this.camera);return{x:(p.x+1)*this.width/2,y:(1-p.y)*this.height/2};}
  project(x,y=0,z=0){const p=new T.Vector3(x,y,z);if(!this.previewMode&&this.course.table&&z>-600)this.course.project(p);p.project(this.camera);return{x:(p.x+1)*this.width/2,y:(1-p.y)*this.height/2};}
  draw(g,before,alpha,delta,ratio,{running,reduced,low,ending=false,countdown=0}){
   low=low||ratio<.9;

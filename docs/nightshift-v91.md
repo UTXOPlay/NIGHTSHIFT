@@ -4,7 +4,7 @@ The motion audit found visible disagreement between the vehicle rig, tire contac
 
 ## Vehicle motion and camera
 
-The six builds now separate the sprung body from four independently positioned tires. Damped acceleration pitch and lateral roll affect the body; wheel contact follows the actual graded/banked circuit. Wheel spin uses measured model radius. Tire and exhaust anchors come from the posed rig. Close opponents use separate animated wheels; their merged distant models remain available through LOD. Road traffic and pursuit cars now use the licensed fleet geometry instead of the procedural placeholder bodies. Traffic interpolation uses V9 body IDs, including through velocity changes.
+The six builds now separate the sprung body from four independently positioned tires. Damped acceleration pitch and lateral roll affect the body; wheel contact follows the actual graded/banked circuit. Wheel spin uses measured model radius. Tire and exhaust anchors come from the posed rig. Close opponents use separate animated wheels; their merged distant models remain available through LOD. Road traffic and pursuit cars now use the licensed fleet geometry instead of the procedural placeholder bodies. Traffic interpolation uses V9 body IDs, including through velocity changes. The combat HUD projects actual world positions once, avoiding a second road transform that displaced target markers on bends.
 
 A damped chase camera provides closer vehicle framing, speed-dependent field of view/look-ahead, launch approach and direction-aware impact impulses. Reduced motion removes camera impulses and body motion. Garage/map/race camera changes blend over a short interval. View transitions do not alter pointer mapping, layout geometry or native time.
 
@@ -26,7 +26,7 @@ Road strips share a cached station/frame table instead of resampling elevation a
 
 ## Verification
 
-The focused suite passes 57 tests, including cadence-independent damping/ribbons and banked-road contact. A browser fixture measures 90 real-model poses across six builds, five environments and three course positions: 360 contacts, maximum absolute clearance approximately 0.0000021 m in that fixture. This is a geometric presentation measurement, not a claim about every live crash.
+The focused suite passes 58 tests, including cadence-independent damping/ribbons and banked-road contact. A browser fixture measures 90 real-model poses across six builds, five environments and three course positions: 360 contacts, maximum absolute clearance approximately 0.0000021 m in that fixture. This is a geometric presentation measurement, not a claim about every live crash.
 
 Native/browser conformance passes 38 tapes and 426,742 active ticks, including the earned economy. Signed export/restart/tamper/profile checks pass against the unchanged native verifier. Browser acceptance covers the required large displays, mobile landscape, portrait input release, inverse pointer mapping, economy/reload, separated results, English icon controls and reduced motion. Combat review covers collision, hit, guard, rival hit, disable, fatal crash and reduced motion.
 

@@ -90,8 +90,8 @@
     "_arcade/nightshift9-fleet.mjs": "bf040dfca9f84daf4ccb46841e74ee48c5eb718cbea8236ec15036f9b05b1cc5",
     "_arcade/nightshift9-gpu.mjs": "65355603bce79d062c566ac616d3ddfbe04bd0d152df1f9a27b601e9b47ad35e",
     "_arcade/nightshift9-motion.mjs": "9f0dbd06a9ca6eb30a3f0d41e0341d03a5ecc07492441ef6c20e144b7f140be9",
-    "_arcade/nightshift9-renderer.bundle.mjs": "b8f4196b8f4d5a0d907a5649b4dc4baec84fa3408f3587d9b69ba108ab765b32",
-    "_arcade/nightshift9-renderer.mjs": "1bc94372940c28c836d2e2937803f96ab718bddad53038634d8c6ab382c520e8",
+    "_arcade/nightshift9-renderer.bundle.mjs": "61d97fb706c6425c7acc66bebe37728909049b8e7ad1b39aa4ee73c724499a17",
+    "_arcade/nightshift9-renderer.mjs": "416b30176c28333fe72c1bca84020a25862e4d18f851e1b47bcca65f18da22bd",
     "_arcade/nightshift9-rules.mjs": "bcc05641e8f841a1f3f29452bdfebaf94485fbe3c219ada689694918dcf9f8e3",
     "_arcade/nightshift9-trails.mjs": "00d4299c4bf0523d5a00fded136d0669b9eaa2e46fa6978a1ad6388bcd22dbe0",
     "_arcade/nightshift9-world-route.mjs": "2bc27c4671568a4663c5f9b5f55c326a9b39301c35d4d4bd0e1875c049173525",
@@ -102,7 +102,7 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "9ba8cd764e893187d0cc64987632b47d2399b6398ed8e3cffd6e0d47cfd17218",
-    "app.js": "56f9f274e9af1efbdfeeace1a62d9a57e2f71b2d5268a02c6531281346d099a9",
+    "app.js": "5eb4e30da97d9cef84956c060703704906815a848fd653e2e27b5a1b5040fced",
     "index.html": "242da9ab9d526ae3f0907a8c1008f3ec576a0ca051c2cf4ec890dff57e45702e",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   }
