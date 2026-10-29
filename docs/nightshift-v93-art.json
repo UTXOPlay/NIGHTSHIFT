@@ -1,0 +1,11 @@
+{
+  "tool": "Built-in image_gen",
+  "use": "Architectural facade atlas; shared 4 by 2 texture, eight facade families",
+  "asset": "games/arcade/web/art/nightshift/architecture-v93.webp",
+  "dimensions": [
+    1774,
+    887
+  ],
+  "bytes": 341462,
+  "prompt": "Use case: game-texture. Asset type: production architectural facade atlas for a performance-conscious 3D street racing game, wide 2:1 image ideally 2048x1024. Make ONE atlas with exactly FOUR columns and TWO rows, eight edge-to-edge rectangular tiles occupying precisely equal areas, no padding and no labels. Each tile is a flat orthographic straight-on seamless architectural wall elevation, NOT an entire perspective building, no sky, no ground, no border, no cast shadows or dramatic baked directional lighting. All surfaces sharp and physically plausible, restrained weathering, readable sill and mullion construction, material detail suited to game mipmaps. Tile order left to right TOP row: 1 warm red-brown brick apartment wall with sash windows and stone lintels; 2 pale limestone art-deco mid-rise with vertically grouped narrow windows and bronze details; 3 slate-blue contemporary curtain-wall offices with varied glass and slim vertical fins; 4 dark glazed technology lab with small muted cyan accents. BOTTOM row left to right: 5 light concrete industrial loading depot with corrugated panels and high windows; 6 neighborhood shopfront wall of pale stone and smoked glazing, subtle amber interior, no lettering or logos; 7 alpine chalet wall of warm timber boards, cream stucco and recessed windows; 8 dark weathered utility/relay building panels with grilles and maintenance doors, no signage. Distinct architectural language and palette in every tile. A minority of window panes have soft amber interior light, the rest dark reflective or gently blue-grey; avoid uniform all-lit windows and overbright neon. Keep useful detail throughout the tile, modest contrast, evenly exposed. No text, symbols, watermarks, people, cars, trees or perspective. Horizontal and vertical wall patterns repeat cleanly inside each tile."
+}

@@ -1,0 +1,1542 @@
+{
+  "version": "9.3.0",
+  "nativeProfile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "unitTests": 72,
+  "browserFiles": 92,
+  "assetBytes": 341462,
+  "physicalLights": 2,
+  "facadeFamilies": 8,
+  "compositionSlotsPerDistrict": 24,
+  "references": {
+    "folio": "https://bruno-simon.com/",
+    "modularKit": "https://quaternius.com/packs/downtowncitymegakit.html",
+    "threeExample": "https://github.com/mrdoob/three.js/blob/r180/examples/webgl_animation_keyframes.html"
+  },
+  "notes": [
+    "Native rules and signed saves preserved.",
+    "Finite backplates are edge-safe, not new 360-degree environments.",
+    "Final acceptance/deployment evidence follows validation."
+  ],
+  "localAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "views": {
+    "views": [
+      {
+        "mode": 0,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0
+          ],
+          "errors": 0,
+          "geometries": 35,
+          "textures": 16,
+          "programs": 129,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 33,
+              "height": -0.12
+            },
+            {
+              "lo": 33,
+              "hi": 145,
+              "height": -2.1
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 125,
+          "calls": 40,
+          "triangles": 43776,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 0,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0
+          ],
+          "errors": 0,
+          "geometries": 35,
+          "textures": 17,
+          "programs": 129,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 33,
+              "height": -0.12
+            },
+            {
+              "lo": 33,
+              "hi": 145,
+              "height": -2.1
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 153,
+          "calls": 40,
+          "triangles": 43384,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 1,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1
+          ],
+          "errors": 0,
+          "geometries": 37,
+          "textures": 20,
+          "programs": 141,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 176,
+          "calls": 35,
+          "triangles": 29716,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 1,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1
+          ],
+          "errors": 0,
+          "geometries": 37,
+          "textures": 21,
+          "programs": 141,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 198,
+          "calls": 32,
+          "triangles": 28970,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 2,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2
+          ],
+          "errors": 0,
+          "geometries": 37,
+          "textures": 22,
+          "programs": 141,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 221,
+          "calls": 33,
+          "triangles": 30472,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 2,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2
+          ],
+          "errors": 0,
+          "geometries": 37,
+          "textures": 23,
+          "programs": 141,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 243,
+          "calls": 33,
+          "triangles": 30388,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 3,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "errors": 0,
+          "geometries": 37,
+          "textures": 24,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 271,
+          "calls": 46,
+          "triangles": 50688,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 3,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "errors": 0,
+          "geometries": 37,
+          "textures": 25,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "swan-neck",
+            "slim-led"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 293,
+          "calls": 46,
+          "triangles": 50712,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 4,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "errors": 0,
+          "geometries": 39,
+          "textures": 26,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 11.2,
+              "height": -0.12
+            },
+            {
+              "lo": 11.2,
+              "hi": 145,
+              "height": -4
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "lantern"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 316,
+          "calls": 37,
+          "triangles": 40304,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 4,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "errors": 0,
+          "geometries": 39,
+          "textures": 27,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 11.2,
+              "height": -0.12
+            },
+            {
+              "lo": 11.2,
+              "hi": 145,
+              "height": -4
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "lantern"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 338,
+          "calls": 37,
+          "triangles": 39368,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 5,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "errors": 0,
+          "geometries": 39,
+          "textures": 28,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 361,
+          "calls": 31,
+          "triangles": 28048,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 5,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "errors": 0,
+          "geometries": 40,
+          "textures": 29,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 383,
+          "calls": 33,
+          "triangles": 28182,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 6,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "errors": 0,
+          "geometries": 40,
+          "textures": 30,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 406,
+          "calls": 30,
+          "triangles": 29236,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 6,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "errors": 0,
+          "geometries": 40,
+          "textures": 31,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 428,
+          "calls": 31,
+          "triangles": 29596,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 7,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "errors": 0,
+          "geometries": 40,
+          "textures": 32,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 451,
+          "calls": 29,
+          "triangles": 27736,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 7,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "errors": 0,
+          "geometries": 40,
+          "textures": 33,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 0
+        },
+        "draw": {
+          "frame": 473,
+          "calls": 30,
+          "triangles": 27510,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 8,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "errors": 0,
+          "geometries": 42,
+          "textures": 34,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 12.5,
+              "height": -0.12
+            },
+            {
+              "lo": 12.5,
+              "hi": 21.5,
+              "height": -0.7
+            },
+            {
+              "lo": 21.5,
+              "hi": 22.6,
+              "height": -0.12
+            },
+            {
+              "lo": 22.6,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "lantern"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 502,
+          "calls": 45,
+          "triangles": 44492,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 8,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "errors": 0,
+          "geometries": 42,
+          "textures": 35,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 12.5,
+              "height": -0.12
+            },
+            {
+              "lo": 12.5,
+              "hi": 21.5,
+              "height": -0.7
+            },
+            {
+              "lo": 21.5,
+              "hi": 22.6,
+              "height": -0.12
+            },
+            {
+              "lo": 22.6,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "lantern",
+            "slim-led"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 530,
+          "calls": 46,
+          "triangles": 44650,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 9,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "errors": 0,
+          "geometries": 42,
+          "textures": 36,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 553,
+          "calls": 39,
+          "triangles": 42696,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 9,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "errors": 0,
+          "geometries": 42,
+          "textures": 36,
+          "programs": 161,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 575,
+          "calls": 39,
+          "triangles": 42756,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 10,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "errors": 0,
+          "geometries": 45,
+          "textures": 36,
+          "programs": 163,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "tunnel"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 598,
+          "calls": 33,
+          "triangles": 27374,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 10,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "errors": 0,
+          "geometries": 45,
+          "textures": 36,
+          "programs": 163,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 18,
+              "height": -0.12
+            },
+            {
+              "lo": 18,
+              "hi": 110,
+              "height": -0.12
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "tunnel"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 620,
+          "calls": 33,
+          "triangles": 27230,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 11,
+        "distance": 7600,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "errors": 0,
+          "geometries": 45,
+          "textures": 37,
+          "programs": 163,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 11.2,
+              "height": -0.12
+            },
+            {
+              "lo": 11.2,
+              "hi": 145,
+              "height": -15
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 643,
+          "calls": 37,
+          "triangles": 42240,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": 11,
+        "distance": 38000,
+        "engine": {
+          "mode": "stationary-instancing",
+          "matrixWrites": 0,
+          "colorWrites": 0,
+          "pools": 23,
+          "streetVariants": 24,
+          "facadeFamilies": 8,
+          "ready": true,
+          "preparedModes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "errors": 0,
+          "geometries": 45,
+          "textures": 37,
+          "programs": 163,
+          "features": {
+            "tier": 0,
+            "reflection": true,
+            "shadowInterval": 2,
+            "rainCount": 1200
+          },
+          "terrainBands": [
+            {
+              "lo": 8.3,
+              "hi": 11.2,
+              "height": -0.12
+            },
+            {
+              "lo": 11.2,
+              "hi": 145,
+              "height": -15
+            }
+          ]
+        },
+        "lighting": {
+          "loaded": true,
+          "families": [
+            "slim-led",
+            "swan-neck"
+          ],
+          "fixtures": 22,
+          "physicalLights": 2,
+          "activeLights": 2
+        },
+        "draw": {
+          "frame": 665,
+          "calls": 37,
+          "triangles": 43404,
+          "points": 0,
+          "lines": 0
+        }
+      }
+    ],
+    "errors": []
+  },
+  "mapPreviews": {
+    "width": 960,
+    "height": 540,
+    "source": "Actual current renderer captures, no HUD",
+    "files": [
+      {
+        "mode": 0,
+        "bytes": 47120
+      },
+      {
+        "mode": 1,
+        "bytes": 99988
+      },
+      {
+        "mode": 2,
+        "bytes": 108438
+      },
+      {
+        "mode": 3,
+        "bytes": 57520
+      },
+      {
+        "mode": 4,
+        "bytes": 83054
+      },
+      {
+        "mode": 5,
+        "bytes": 74252
+      },
+      {
+        "mode": 6,
+        "bytes": 85646
+      },
+      {
+        "mode": 7,
+        "bytes": 50552
+      },
+      {
+        "mode": 8,
+        "bytes": 65958
+      },
+      {
+        "mode": 9,
+        "bytes": 93396
+      },
+      {
+        "mode": 10,
+        "bytes": 46592
+      },
+      {
+        "mode": 11,
+        "bytes": 68482
+      }
+    ]
+  }
+}

@@ -1,8 +1,12 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 9.2.0 — Engine and interface](nightshift-v92.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 88 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
+The active release is [NIGHTSHIFT 9.3.0 — Districts and continuous scenery](nightshift-v93.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 92 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
+
+## 9.3 verification — 29 October 2026
+
+See [district and seam correction notes](nightshift-v93.md), [generated asset provenance](nightshift-v93-art.json) and [current machine-readable evidence](streets-results.json). Native V9 and retained V8/V7 identities remain unchanged.
 
 ## 9.2 verification — 29 October 2026
 
