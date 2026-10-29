@@ -18,6 +18,9 @@ export class CircuitFrame {
   out.x=this.cos*dx+this.sin*dz+c*x;out.z=-this.sin*dx+this.cos*dz+s*x;out.y=out.y-this.origin.y+y+Math.sin(bank)*x;out.heading=h;out.bank=bank;
   return out;
  }
+ unproject(v,out=new T.Vector3()){
+  let x=v.x,z=v.z;for(let n=0;n<4;n++){const p=this.pose(z,x),dx=v.x-p.x,dz=v.z-p.z,h=p.heading;x+=dx*Math.cos(h)+dz*Math.sin(h);z+=-dx*Math.sin(h)+dz*Math.cos(h);}const p=this.pose(z,x);return out.set(x,v.y-p.y,z);
+ }
  project(v){const p=this.pose(v.z,v.x,v.y);v.set(p.x,p.y,p.z);return v;}
  orient(object,z,{upright=false}={}){
   const p=this.pose(z),d=this.distance-z*10,grade=upright||this.legacy?0:Math.atan2(courseElevation(this.mode,d+25)-courseElevation(this.mode,d-25),5);
@@ -29,7 +32,7 @@ export class CircuitFrame {
 // between rotated rectangular tiles on tight corners; all buffers are reused.
 export class CircuitRoad {
  constructor(scene,materials){
-  this.strips=[];this.stations=145;
+  this.strips=[];this.stations=145;this.stationData=new Float64Array(this.stations*9);
   const add=(material,edges,{height=0,wall=false,dashes=false}={})=>{
    const count=this.stations,position=new Float32Array(count*6),normal=new Float32Array(count*6),uv=new Float32Array(count*4),index=[];
    for(let n=0;n<count-1;n++){const a=n*2;index.push(a,a+1,a+2,a+1,a+3,a+2);}
@@ -44,10 +47,11 @@ export class CircuitRoad {
   this.vector=new T.Vector3();
  }
  draw(frame,visible=true){
+  if(visible)for(let n=0;n<this.stations;n++){const z=30-n*3.5,p=frame.pose(z),at=n*9,h=p.heading,bank=p.bank,grade=frame.legacy?0:Math.atan2(courseElevation(frame.mode,frame.distance-z*10+25)-courseElevation(frame.mode,frame.distance-z*10-25),5),ch=Math.cos(h),sh=Math.sin(h),cb=Math.cos(bank),sb=Math.sin(bank),sg=Math.sin(grade),cg=Math.cos(grade),data=this.stationData;data[at]=p.x;data[at+1]=p.y;data[at+2]=p.z;data[at+3]=ch;data[at+4]=sh;data[at+5]=sb;data[at+6]=-sb*ch-cb*sg*sh;data[at+7]=cb*cg;data[at+8]=-sb*sh+cb*sg*ch;}
   for(const strip of this.strips){strip.mesh.visible=visible;if(!visible)continue;const geometry=strip.mesh.geometry,p=geometry.attributes.position,norm=geometry.attributes.normal,uv=geometry.attributes.uv;
-   for(let n=0;n<this.stations;n++){const z=30-n*3.5,absolute=(frame.distance*.1-z),dash=strip.dashes&&((absolute%7+7)%7>3),bank=frame.pose(z).bank;
+   for(let n=0;n<this.stations;n++){const z=30-n*3.5,absolute=(frame.distance*.1-z),dash=strip.dashes&&((absolute%7+7)%7>3);
     for(let edge=0;edge<2;edge++){let x=strip.edges[edge],y=strip.height;if(strip.wall){x=(strip.edges[0]+strip.edges[1])/2;y=edge?1:.02;}if(dash)y=-.045;
-     this.vector.set(x,y,z);frame.project(this.vector);const at=n*2+edge;p.setXYZ(at,this.vector.x,this.vector.y,this.vector.z);norm.setXYZ(at,Math.sin(-bank),Math.cos(bank),0);uv.setXY(at,edge,absolute*.13);
+     const station=n*9,data=this.stationData,at=n*2+edge;p.setXYZ(at,data[station]+data[station+3]*x,data[station+1]+y+data[station+5]*x,data[station+2]+data[station+4]*x);norm.setXYZ(at,data[station+6],data[station+7],data[station+8]);uv.setXY(at,edge,absolute*.13);
     }
    }
    p.needsUpdate=norm.needsUpdate=uv.needsUpdate=true;

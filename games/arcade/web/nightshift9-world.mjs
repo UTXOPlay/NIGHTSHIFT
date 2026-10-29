@@ -9,7 +9,7 @@ export class RouteWorld{
   this.m={stone:material('#b8b7b4',.95),cell:material('#d6ded8',.4,.45),cargo:material('#aebbc1',.7,.35),tunnel:material('#a1aeaf',.65,.3),steel:material('#74848d',.5,.65),white:material('#dce8e7',.55,.25),ground:material('#bcc4c4',.95),water:material('#5f9ca7',.23,.65),leaves:material('#709676',.95),glass:material('#82acae',.23,.65),light:new T.MeshBasicMaterial({color:'#fff4e4',toneMapped:false})};
   for(const name of ['office','lab','warehouse','stonefront'])this.m[name]=material('#e1e6ed',name==='office'?.38:.7,name==='office'?.45:.15);
   this.terrainRegion={value:new T.Vector2(0,.5)};for(const name of ['fir','snowFir','scrub','broadleaf'])this.m[name]=new T.MeshStandardMaterial({color:'#ffffff',roughness:.95,metalness:0,side:T.DoubleSide,alphaTest:.4});
-  this.templates=DISTRICTS.map((_,id)=>Array.from({length:6},(_,n)=>this.template(id,n)));
+  this.templates=DISTRICTS.map((_,id)=>Array.from({length:12},(_,n)=>this.template(id,n)));
   this.gateParts=[];for(const s of [-1,1]){this.add(this.gateParts,'steel',s*8.6,4.3,0,.4,8.6,.4);this.add(this.gateParts,'light',s*8.37,4.3,.22,.06,8.5,.06);}this.add(this.gateParts,'steel',0,8.6,0,17.6,.4,.4);
   for(const p of this.pools.values()){p.mesh=new T.InstancedMesh(p.geometry,p.material,1600);p.mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);p.mesh.frustumCulled=false;p.mesh.count=0;p.mesh.castShadow=['office','lab','warehouse','stonefront','steel','white'].some(k=>p.material===this.m[k]);p.mesh.receiveShadow=true;scene.add(p.mesh);}
   this.signMaterials=DISTRICTS.map(d=>d.zones.map((z,n)=>this.sign(d,z,n)));
@@ -49,7 +49,8 @@ export class RouteWorld{
     b('light',x-s*5.62,h*.45+5,0,.065,.12,12,0,0,0,box,n%2?'#8adbdc':'#e2b5a1');
     b('steel',s*10.4,5.5,2,.12,4.4,.12);for(const dz of [-.65,.65])b('light',s*10,5.5,2+dz,1.25,1.25,1.25,0,Math.PI/2,0,cellRing,s>0?'#d4a0ce':'#a4e1cf');
    }
-   if(n%3===0){b('office',0,14,0,38,2.5,5);b('steel',0,15.35,0,38,.18,5.4);b('steel',0,12.65,0,38,.18,5.4);b('light',0,12.77,2.55,34,.045,.045,0,0,0,box,'#e0b9ca');}
+   if(n%3===1)for(const side of [-1,1]){b('office',side*(62+n),24+n*2,-5,15,52+n*3,16);b('light',side*(62+n),52+n*3,-5,15,.08,16,0,0,0,box,'#73bfb5');}
+   if(n===0||n===7){b('office',0,14,0,38,2.5,5);b('steel',0,15.35,0,38,.18,5.4);b('steel',0,12.65,0,38,.18,5.4);b('light',0,12.77,2.55,34,.045,.045,0,0,0,box,'#e0b9ca');}
   }else if(id===4){
    b('water',0,-4,0,300,.1,18.2,0,0,0,box,'#5cb4c4');
    for(const s of [-1,1]){b('white',s*9.8,2,0,.4,5,18.1);b('white',s*9,4.5,0,.2,.2,18.1);
@@ -117,7 +118,7 @@ export class RouteWorld{
  draw(distance,mode,total,roadX){
   const travel=distance*.1,map=DISTRICTS[mode];this.current=mode;this.sector=routeSector(distance,total);const region=[3,0,1,3,2,2,2,3,1,0,3,0][mode];this.terrainRegion.value.set((region%2)*.5,region<2?.5:0);
   for(const p of this.pools.values())p.index=0;
-  for(let n=0;n<25;n++){const absolute=(Math.floor(travel/18)-2+n)*18,z=travel-absolute,sector=routeSector(absolute*10,total),variant=((Math.floor(absolute/18)+sector*2)%6+6)%6;this.root.position.set(roadX(z),0,z);this.root.rotation.y=Math.atan2(roadX(z+1)-roadX(z-1),2);roadX.frame?.(z,this.root);this.root.updateMatrix();
+  for(let n=0;n<25;n++){const absolute=(Math.floor(travel/18)-2+n)*18,z=travel-absolute,sector=routeSector(absolute*10,total),variant=((Math.imul(Math.floor(absolute/18)^((Math.floor(absolute/18))>>>3),1597334677)>>>16)+sector*3)%12;this.root.position.set(roadX(z),0,z);this.root.rotation.y=Math.atan2(roadX(z+1)-roadX(z-1),2);roadX.frame?.(z,this.root);this.root.updateMatrix();
    for(const part of this.templates[mode][variant]){const p=part.pool;if(p.index>=1600)throw Error('World instance budget exceeded');this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);}
   }
   this.signs.forEach((s,n)=>{const absolute=(Math.floor(travel/90)-1+n)*90,z=travel-absolute,zone=routeSector(absolute*10,total);s.material=this.signMaterials[mode][zone];s.position.set(roadX(z)+(n%2?12:-12),5,z);s.rotation.set(0,n%2?-.15:.15,0);roadX.transform?.(s,true);s.visible=mode!==10;});

@@ -1,0 +1,32 @@
+{
+  "release": "9.1.0",
+  "tool": "Built-in image_gen.imagegen (imagegen skill)",
+  "generated": "2026-10-29",
+  "asset": "games/arcade/web/art/nightshift/impact-sequence-v91.webp",
+  "sha256": "39307d67d31c6dbf189effa91dc3e0899273fcdcb28b543af4a0bdf773e2c429",
+  "format": "1024x1024 WebP, preserved alpha, 4x4 cells",
+  "sequences": {
+    "metalImpact": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "electricInterception": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "processing": "Resize and WebP encoding; runtime atlas sampling, no per-frame texture uploads.",
+  "prompt": "Use case: stylized-concept. Asset type: production real-time racing game VFX flipbook texture atlas. Create a square 4 by 4 grid of EXACTLY 16 equally sized cells with true transparent background and no visible grid, labels, lettering, panels or scenery. Each effect is entirely contained inside its cell with generous transparent margins. TOP TWO ROWS are one coherent 8-frame chronological metal-on-metal racing crash impact, read left to right then next row: first a tiny hot white ignition at center, then an expanding directional golden orange spark fan and a few dark metal splinters, peak at frames 3-4, then rapidly cooling dispersed sparks, fine grey smoke and fading embers through frame 8. NO huge fireball, no circular graphic borders. BOTTOM TWO ROWS are one coherent 8-frame chronological electric cyan EMP interception burst: a tiny white cyan core, branching cyan filaments opening into a thin broken shock wave, peak at frame 3, then progressively fading sparse electric threads to almost invisible frame 8. NO symbols or UI icons. Premium cinematic physically plausible particle textures, fine sharp sparks with restrained glow, fully isolated transparent cutouts. Consistent center, camera and scale within each 8-frame sequence, clear time evolution, no repetition of the same image in every cell. Not a screenshot, not a mockup: a clean game-ready evenly aligned sprite atlas."
+}
