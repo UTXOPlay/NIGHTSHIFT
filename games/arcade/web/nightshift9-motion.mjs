@@ -1,5 +1,12 @@
 import * as T from 'three';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const wheelVertices=new WeakMap();
+function contactVertices(geometry){
+ let points=wheelVertices.get(geometry);if(points)return points;
+ const p=geometry.attributes.position,seen=new Set(),values=[];
+ for(let n=0;n<p.count;n++){const x=p.getX(n),y=p.getY(n),z=p.getZ(n),key=x+','+y+','+z;if(!seen.has(key)){seen.add(key);values.push(x,y,z);}}
+ points=new Float32Array(values);wheelVertices.set(geometry,points);return points;
+}
 export function damp(value,target,rate,dt){return target+(value-target)*Math.exp(-rate*Math.max(0,dt));}
 // Exact critically damped response: stable at 30/60/120 Hz, including a hitch.
 export function spring(s,target,frequency,dt){const w=frequency,t=Math.max(0,dt),e=Math.exp(-w*t),d=s.value-target,k=s.velocity+w*d;s.value=target+(d+k*t)*e;s.velocity=(s.velocity-w*k*t)*e;return s.value;}
@@ -7,7 +14,7 @@ export function prepareRig(car){
  if(car.userData.rig||!car.userData.wheels?.length)return;
  const body=new T.Group();body.name='Sprung chassis';const wheels=car.userData.wheels;
  for(const child of [...car.children])if(!wheels.includes(child))body.add(child);car.add(body);
- const rig=car.userData.rig={body,roll:{value:0,velocity:0},pitch:{value:0,velocity:0},heave:{value:0,velocity:0},lastSpeed:null,brake:0,contacts:[],exhaust:[],wheels:wheels.map(w=>{w.geometry.computeBoundingBox();const b=w.geometry.boundingBox;return{mesh:w,rest:w.position.clone(),rotation:w.quaternion.clone(),radius:(b.max.y-b.min.y)*w.scale.y/2};})};
+ const rig=car.userData.rig={body,roll:{value:0,velocity:0},pitch:{value:0,velocity:0},heave:{value:0,velocity:0},lastSpeed:null,brake:0,contacts:[],exhaust:[],wheels:wheels.map(w=>{w.geometry.computeBoundingBox();const b=w.geometry.boundingBox;return{mesh:w,rest:w.position.clone(),rotation:w.quaternion.clone(),radius:(b.max.y-b.min.y)*w.scale.y/2,points:contactVertices(w.geometry)};})};
  rig.material=body.children.find(o=>o.isMesh&&o.material.userData.brake)?.material;
  rig.point=new T.Vector3();rig.local=new T.Vector3();rig.normal=new T.Vector3();rig.up=new T.Vector3();rig.q=new T.Quaternion();rig.spin=new T.Quaternion();rig.axis=new T.Vector3(1,0,0);rig.yaxis=new T.Vector3(0,1,0);rig.surface=new T.Vector3();rig.a=new T.Vector3();rig.b=new T.Vector3();
 }
@@ -28,8 +35,9 @@ export function groundRig(car,frame,{wreck=false}={}){
  for(const w of r.wheels){
   w.mesh.getWorldPosition(r.point);frame.unproject(r.point,r.local);const z=r.local.z,x=r.local.x,p=frame.pose(z,x);r.surface.set(p.x,p.y,p.z);
   const a=frame.pose(z-.1,x);r.a.set(a.x,a.y,a.z);const b=frame.pose(z+.1,x);r.b.set(b.x,b.y,b.z).sub(r.a);const c=frame.pose(z,x+.1);r.a.set(c.x,c.y,c.z).sub(r.surface);r.normal.crossVectors(r.b,r.a).normalize();if(r.normal.y<0)r.normal.negate();
-  const pos=w.mesh.geometry.attributes.position,e=w.mesh.matrixWorld.elements;let clearance=Infinity;
-  for(let n=0;n<pos.count;n++){const vx=pos.getX(n),vy=pos.getY(n),vz=pos.getZ(n);r.point.set(e[0]*vx+e[4]*vy+e[8]*vz+e[12],e[1]*vx+e[5]*vy+e[9]*vz+e[13],e[2]*vx+e[6]*vy+e[10]*vz+e[14]);clearance=Math.min(clearance,r.point.sub(r.surface).dot(r.normal));}
+  const points=w.points,e=w.mesh.matrixWorld.elements,nx=r.normal.x,ny=r.normal.y,nz=r.normal.z;
+  const ax=e[0]*nx+e[1]*ny+e[2]*nz,ay=e[4]*nx+e[5]*ny+e[6]*nz,az=e[8]*nx+e[9]*ny+e[10]*nz,offset=(e[12]-r.surface.x)*nx+(e[13]-r.surface.y)*ny+(e[14]-r.surface.z)*nz;let clearance=Infinity;
+  for(let n=0;n<points.length;n+=3)clearance=Math.min(clearance,ax*points[n]+ay*points[n+1]+az*points[n+2]+offset);
   w.mesh.position.y-=clearance/Math.max(.2,r.up.dot(r.normal));w.mesh.updateMatrixWorld(true);r.contacts.push({x,z,y:.018,rear:w.rest.z>0,at:frame.distance-z*10});
  }
  const rear=Math.max(...r.wheels.map(w=>w.rest.z))+.5;for(const side of [-1,1]){r.point.set(side*.58,.31,rear).applyMatrix4(car.matrixWorld);frame.unproject(r.point,r.local);r.exhaust.push({x:r.local.x,y:r.local.y,z:r.local.z});}

@@ -21,6 +21,8 @@ export class CircuitFrame {
  unproject(v,out=new T.Vector3()){
   let x=v.x,z=v.z;for(let n=0;n<4;n++){const p=this.pose(z,x),dx=v.x-p.x,dz=v.z-p.z,h=p.heading;x+=dx*Math.cos(h)+dz*Math.sin(h);z+=-dx*Math.sin(h)+dz*Math.cos(h);}const p=this.pose(z,x);return out.set(x,v.y-p.y,z);
  }
+ originMatrix(matrix){matrix.makeRotationY(this.origin.heading);matrix.setPosition(-this.cos*this.origin.x-this.sin*this.origin.z,-this.origin.y,this.sin*this.origin.x-this.cos*this.origin.z);return matrix;}
+ placeAbsolute(object,distance){const p=this.sample(distance,{});object.position.set(p.x,p.y,p.z);object.rotation.set(0,-p.heading,0);return object;}
  project(v){const p=this.pose(v.z,v.x,v.y);v.set(p.x,p.y,p.z);return v;}
  orient(object,z,{upright=false}={}){
   const p=this.pose(z),d=this.distance-z*10,grade=upright||this.legacy?0:Math.atan2(courseElevation(this.mode,d+25)-courseElevation(this.mode,d-25),5);
@@ -38,7 +40,7 @@ export class CircuitRoad {
    for(let n=0;n<count-1;n++){const a=n*2;index.push(a,a+1,a+2,a+1,a+3,a+2);}
    if(wall&&edges[0]<0)for(let n=0;n<index.length;n+=3)[index[n+1],index[n+2]]=[index[n+2],index[n+1]];
    const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.BufferAttribute(position,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('normal',new T.BufferAttribute(normal,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('uv',new T.BufferAttribute(uv,2).setUsage(T.DynamicDrawUsage));geometry.setIndex(index);
-   const mesh=new T.Mesh(geometry,material);mesh.frustumCulled=false;mesh.receiveShadow=true;scene.add(mesh);this.strips.push({mesh,edges,height,wall,dashes});
+   const mesh=new T.Mesh(geometry,material);mesh.matrixAutoUpdate=false;mesh.frustumCulled=false;mesh.receiveShadow=true;scene.add(mesh);this.strips.push({mesh,edges,height,wall,dashes});
   };
   add(materials.concrete,[-8.5,8.5],{height:-.14});add(materials.road,[-6.2,6.2]);
   for(const x of [-5.8,5.8])add(materials.white,[x-.055,x+.055],{height:.018});

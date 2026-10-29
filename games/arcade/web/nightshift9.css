@@ -44,13 +44,9 @@
 /* Keyboard hints are independent of ammo/cooldown values and stay readable. */
 #abilities .ability-key{position:absolute;right:5px;top:4px;bottom:auto;min-width:18px;padding:1px 3px;border:1px solid #cfebe67a;border-radius:3px;background:#07151db8;color:#fff;font:700 12px/1.2 Arial;text-align:center}
 #abilities .ability-value{left:6px;right:auto;bottom:4px;font-size:12px;color:#ffdc9c;font-variant-numeric:tabular-nums}
-#abilities .ability-caption{position:absolute;top:calc(100% + 5px);left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:1px;text-shadow:0 1px 5px #000;color:#d9e9e4}
-#weapon-status{position:absolute;right:max(30px,env(safe-area-inset-right));bottom:113px;max-width:310px;font-size:11px;letter-spacing:1px;text-align:right;color:#d9eee8}
-#drive-keys{position:absolute;left:max(30px,env(safe-area-inset-left));bottom:31px;display:flex;align-items:center;gap:7px;font-size:9px;letter-spacing:.8px;color:#aabfbe}
-#drive-keys kbd{font:700 11px Arial;color:#edf7f2;border:1px solid #badbd052;border-radius:3px;padding:3px 5px;margin-left:5px;background:#08151b70}
-@media(min-width:2200px){#weapon-status{bottom:139px;font-size:16px;max-width:420px}#abilities .ability-key{font-size:16px}#abilities .ability-caption{font-size:12px}#drive-keys{font-size:14px;gap:10px}#drive-keys kbd{font-size:16px}}
-@media(max-height:560px){#weapon-status{right:20px;bottom:80px;font-size:8px;max-width:240px}#drive-keys{display:none}#abilities .ability-key{font-size:10px;right:3px;top:2px}#abilities .ability-caption{font-size:7px;top:calc(100% + 3px)}}
-@media(pointer:coarse){#abilities .ability-key,#abilities .ability-caption,#drive-keys{display:none}}
+@media(min-width:2200px){#abilities .ability-key{font-size:16px}}
+@media(max-height:560px){#abilities .ability-key{font-size:10px;right:3px;top:2px}}
+@media(pointer:coarse){#abilities .ability-key{display:none}}
 
 /* The workshop is a full-viewport showroom with a separate vehicle shelf. */
 #game[data-view=garage] #menu{padding:clamp(110px,12vh,165px) 4.5vw max(26px,env(safe-area-inset-bottom));grid-template-columns:minmax(300px,.72fr) 1.28fr;grid-template-rows:minmax(0,1fr) clamp(105px,13vh,155px);gap:24px 5vw;align-items:start;pointer-events:none;background:linear-gradient(90deg,#07131be8 0%,#07131b9c 30%,#07131b18 58%,#07131b10)}
@@ -84,3 +80,12 @@
 #game[data-view=result] #result>div:nth-child(3){animation-delay:.1s}
 #game[data-view=result] #result>div:nth-child(4){animation-delay:.15s}
 @keyframes receipt-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* One settings drawer; ability icons, keycaps and resource counts carry the HUD. */
+#keybinds details{border-top:1px solid var(--edge);margin-top:14px;padding-top:12px;font-size:12px;color:#b9cdce}
+#keybinds summary{cursor:pointer;color:#d9e9e3;min-height:32px;line-height:32px}
+#keybinds details p{font-size:12px;max-width:none}
+#keybinds #help-actions{margin-top:16px}
+#keybinds a{color:var(--mint)}
+#keybinds #key-message:empty{display:none}
+@media(pointer:coarse){.ability-key{display:none}}

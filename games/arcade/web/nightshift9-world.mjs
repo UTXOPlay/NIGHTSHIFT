@@ -5,13 +5,13 @@ const material=(color,roughness=.65,metalness=.15)=>new T.MeshStandardMaterial({
 const box=new T.BoxGeometry(1,1,1),rock=new T.DodecahedronGeometry(1,1),cone=new T.ConeGeometry(1,1,8),cylinder=new T.CylinderGeometry(1,1,1,10),ring=new T.TorusGeometry(1,.08,6,24),leafPlane=new T.PlaneGeometry(1,1),cellRing=new T.TorusGeometry(.8,.035,5,6);
 export class RouteWorld{
  constructor(scene){
-  this.scene=scene;this.pools=new Map();this.temp=new T.Object3D();this.root=new T.Object3D();this.matrix=new T.Matrix4();this.color=new T.Color();
+  this.scene=scene;this.environmentRoot=new T.Group();this.environmentRoot.name='Stationary street instances';this.environmentRoot.matrixAutoUpdate=false;scene.add(this.environmentRoot);this.uploadKey=null;this.originDistance=null;this.matrixWrites=0;this.colorWrites=0;this.pools=new Map();this.temp=new T.Object3D();this.root=new T.Object3D();this.matrix=new T.Matrix4();this.color=new T.Color();
   this.m={stone:material('#b8b7b4',.95),cell:material('#d6ded8',.4,.45),cargo:material('#aebbc1',.7,.35),tunnel:material('#a1aeaf',.65,.3),steel:material('#74848d',.5,.65),white:material('#dce8e7',.55,.25),ground:material('#bcc4c4',.95),water:material('#5f9ca7',.23,.65),leaves:material('#709676',.95),glass:material('#82acae',.23,.65),light:new T.MeshBasicMaterial({color:'#fff4e4',toneMapped:false})};
   for(const name of ['office','lab','warehouse','stonefront'])this.m[name]=material('#e1e6ed',name==='office'?.38:.7,name==='office'?.45:.15);
   this.terrainRegion={value:new T.Vector2(0,.5)};for(const name of ['fir','snowFir','scrub','broadleaf'])this.m[name]=new T.MeshStandardMaterial({color:'#ffffff',roughness:.95,metalness:0,side:T.DoubleSide,alphaTest:.4});
   this.templates=DISTRICTS.map((_,id)=>Array.from({length:12},(_,n)=>this.template(id,n)));
   this.gateParts=[];for(const s of [-1,1]){this.add(this.gateParts,'steel',s*8.6,4.3,0,.4,8.6,.4);this.add(this.gateParts,'light',s*8.37,4.3,.22,.06,8.5,.06);}this.add(this.gateParts,'steel',0,8.6,0,17.6,.4,.4);
-  for(const p of this.pools.values()){p.mesh=new T.InstancedMesh(p.geometry,p.material,1600);p.mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);p.mesh.frustumCulled=false;p.mesh.count=0;p.mesh.castShadow=['office','lab','warehouse','stonefront','steel','white'].some(k=>p.material===this.m[k]);p.mesh.receiveShadow=true;scene.add(p.mesh);}
+  for(const p of this.pools.values()){p.mesh=new T.InstancedMesh(p.geometry,p.material,1600);p.mesh.matrixAutoUpdate=false;p.mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);p.mesh.frustumCulled=false;p.mesh.count=0;p.mesh.castShadow=['office','lab','warehouse','stonefront','steel','white'].some(k=>p.material===this.m[k]);p.mesh.receiveShadow=true;this.environmentRoot.add(p.mesh);}
   this.signMaterials=DISTRICTS.map(d=>d.zones.map((z,n)=>this.sign(d,z,n)));
   this.signs=Array.from({length:5},()=>{const s=new T.Mesh(new T.PlaneGeometry(6,1.8),this.signMaterials[0][0]);scene.add(s);return s;});
   this.gates=Array.from({length:3},()=>{const s=new T.Mesh(new T.PlaneGeometry(9.2,2.1),this.signMaterials[0][0]);scene.add(s);return s;});
@@ -115,15 +115,24 @@ export class RouteWorld{
   ['fir','snowFir','scrub','broadleaf'].forEach((name,n)=>{const t=foliage.clone();t.repeat.set(.498,n<2?.543:.449);t.offset.set((n%2)*.5+.001,n<2?.456:.001);t.needsUpdate=true;this.m[name].map=t;this.m[name].needsUpdate=true;});
   for(const name of ['ground','stone']){const m=this.m[name];m.map=terrain;m.onBeforeCompile=shader=>{shader.uniforms.terrainRegion=this.terrainRegion;shader.fragmentShader='uniform vec2 terrainRegion;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )','texture2DGradEXT( map, terrainRegion + vec2(.003) + abs(fract(vMapUv*vec2('+(name==='ground'?'28.,4.':'2.,2.')+')*.5)*2.-1.)*.494, dFdx(vMapUv)*vec2('+(name==='ground'?'28.,4.':'2.,2.')+')*.494, dFdy(vMapUv)*vec2('+(name==='ground'?'28.,4.':'2.,2.')+')*.494 )'));};m.customProgramCacheKey=()=>'terrain7-'+name;m.needsUpdate=true;}
  }
+ snapshot(){return{mode:'stationary-instancing',matrixWrites:this.matrixWrites,colorWrites:this.colorWrites,pools:this.pools.size};}
+ dispose(){}
  draw(distance,mode,total,roadX){
   const travel=distance*.1,map=DISTRICTS[mode];this.current=mode;this.sector=routeSector(distance,total);const region=[3,0,1,3,2,2,2,3,1,0,3,0][mode];this.terrainRegion.value.set((region%2)*.5,region<2?.5:0);
-  for(const p of this.pools.values())p.index=0;
-  for(let n=0;n<25;n++){const absolute=(Math.floor(travel/18)-2+n)*18,z=travel-absolute,sector=routeSector(absolute*10,total),variant=((Math.imul(Math.floor(absolute/18)^((Math.floor(absolute/18))>>>3),1597334677)>>>16)+sector*3)%12;this.root.position.set(roadX(z),0,z);this.root.rotation.y=Math.atan2(roadX(z+1)-roadX(z-1),2);roadX.frame?.(z,this.root);this.root.updateMatrix();
-   for(const part of this.templates[mode][variant]){const p=part.pool;if(p.index>=1600)throw Error('World instance budget exceeded');this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);}
+  const stationary=!!roadX.fixedFrame,gateMask=Array.from({length:3},(_,n)=>{const z=travel-total*.1*(n+1)/4;return z<15&&z>-380?1:0;}).join(''),key=mode+':'+(roadX.profileKey?.()||0)+':'+Math.floor(travel/18)+':'+gateMask,rebuild=!stationary||key!==this.uploadKey;
+  this.matrixWrites=this.colorWrites=0;
+  if(stationary){if(this.originDistance!==distance||rebuild){roadX.originMatrix(this.environmentRoot.matrix);this.environmentRoot.matrixWorldNeedsUpdate=true;this.originDistance=distance;}}else this.environmentRoot.matrix.identity();
+  if(rebuild){
+   this.uploadKey=key;for(const p of this.pools.values())p.index=0;
+   for(let n=0;n<25;n++){const absolute=(Math.floor(travel/18)-2+n)*18,z=travel-absolute,sector=routeSector(absolute*10,total),variant=((Math.imul(Math.floor(absolute/18)^((Math.floor(absolute/18))>>>3),1597334677)>>>16)+sector*3)%12;
+    if(stationary)roadX.fixedFrame(absolute*10,this.root);else{this.root.position.set(roadX(z),0,z);this.root.rotation.set(0,0,0);roadX.frame?.(z,this.root);}this.root.updateMatrix();
+    for(const part of this.templates[mode][variant]){const p=part.pool;if(p.index>=1600)throw Error('World instance budget exceeded');this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);this.matrixWrites++;this.colorWrites++;}
+   }
+   for(let n=0;n<3;n++)if(gateMask[n]==='1'){const absolute=total*(n+1)/4,z=travel-absolute*.1;if(stationary)roadX.fixedFrame(absolute,this.root);else{this.root.position.set(roadX(z),0,z);this.root.rotation.set(0,0,0);roadX.frame?.(z,this.root);}this.root.updateMatrix();for(const part of this.gateParts){const p=part.pool;this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);this.matrixWrites++;this.colorWrites++;}}
+   for(const p of this.pools.values()){p.mesh.count=p.index;p.mesh.visible=p.index>0;if(p.index){p.mesh.instanceMatrix.clearUpdateRanges();p.mesh.instanceMatrix.addUpdateRange(0,p.index*16);p.mesh.instanceMatrix.needsUpdate=true;if(p.mesh.instanceColor){p.mesh.instanceColor.clearUpdateRanges();p.mesh.instanceColor.addUpdateRange(0,p.index*3);p.mesh.instanceColor.needsUpdate=true;}}}
   }
   this.signs.forEach((s,n)=>{const absolute=(Math.floor(travel/90)-1+n)*90,z=travel-absolute,zone=routeSector(absolute*10,total);s.material=this.signMaterials[mode][zone];s.position.set(roadX(z)+(n%2?12:-12),5,z);s.rotation.set(0,n%2?-.15:.15,0);roadX.transform?.(s,true);s.visible=mode!==10;});
-  this.gates.forEach((s,n)=>{const z=travel-total*.1*(n+1)/4;s.material=this.signMaterials[mode][n+1];s.position.set(roadX(z),7.4,z);s.rotation.set(0,0,0);roadX.transform?.(s,true);s.visible=z<15&&z>-380;if(s.visible){this.root.position.set(roadX(z),0,z);this.root.rotation.set(0,0,0);roadX.frame?.(z,this.root);this.root.updateMatrix();for(const part of this.gateParts){const p=part.pool;this.matrix.multiplyMatrices(this.root.matrix,part.matrix);p.mesh.setMatrixAt(p.index,this.matrix);p.mesh.setColorAt(p.index++,part.color);}}});
-  for(const p of this.pools.values()){p.mesh.count=p.index;p.mesh.visible=p.index>0;if(p.index){p.mesh.instanceMatrix.needsUpdate=true;if(p.mesh.instanceColor)p.mesh.instanceColor.needsUpdate=true;}}
+  this.gates.forEach((s,n)=>{const z=travel-total*.1*(n+1)/4;s.material=this.signMaterials[mode][n+1];s.position.set(roadX(z),7.4,z);s.rotation.set(0,0,0);roadX.transform?.(s,true);s.visible=gateMask[n]==='1';});
   this.fog.set(map.fog);this.light.set(map.color);this.rain=map.rain;this.sky=map.sky;
  }
 }

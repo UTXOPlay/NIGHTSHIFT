@@ -16,7 +16,7 @@ try{
  page.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
  await page.goto(origin+'/games/nightshift/?review=1');
  await page.waitForFunction(()=>__driftReview?.().loaded);
- await page.getByRole('button',{name:'Career events',exact:true}).click();
+ if(await page.getByRole('button',{name:'Career events',exact:true}).isVisible())await page.getByRole('button',{name:'Career events',exact:true}).click();
  for(let mode=0;mode<12;mode++){
   await page.locator('.stage-card').nth(mode).click();
   await page.waitForTimeout(1100);
@@ -34,7 +34,7 @@ try{
  await page.locator('.stage-card').nth(3).click();
  await page.setViewportSize({width:844,height:390});await page.waitForTimeout(1100);
  await page.screenshot({path:out+'/neon-mobile.png'});
- let lowQuality=null;if(process.env.DRIFT_EXPECT_ENV==='1'){await page.getByRole('button',{name:'Driving and combat guide',exact:true}).click();await page.getByRole('button',{name:'Cycle rendering quality',exact:true}).click();await page.getByRole('button',{name:'Close guide',exact:true}).click();await page.waitForFunction(()=>__driftReview().environment.activeLights===0);lowQuality=await page.evaluate(()=>__driftReview().environment);await page.screenshot({path:out+'/neon-mobile-low.png'});}
+ let lowQuality=null;if(process.env.DRIFT_EXPECT_ENV==='1'){await page.getByRole('button',{name:'Controls and settings',exact:true}).click();await page.getByRole('button',{name:'Cycle rendering quality',exact:true}).click();await page.getByRole('button',{name:'Close keyboard settings',exact:true}).click();await page.waitForFunction(()=>__driftReview().environment.activeLights===0);lowQuality=await page.evaluate(()=>__driftReview().environment);await page.screenshot({path:out+'/neon-mobile-low.png'});}
  assert.deepEqual(errors,[]);
  writeFileSync(out+'/review.json',JSON.stringify({maps,lowQuality,errors},null,2));
  console.log({maps:maps.length,errors});

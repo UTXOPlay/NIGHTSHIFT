@@ -59,8 +59,8 @@ function kit(spec){
  return g.children.length?merge(g):null;
 }
 
-export async function loadFleet(){
- const loader=new GLTFLoader(),cache=new Map();
+export async function loadFleet(manager){
+ const loader=new GLTFLoader(manager),cache=new Map();
  await Promise.all(['sportscar','concept'].flatMap(body=>[false,true].map(async detail=>{
   const gltf=await loader.loadAsync(`/arcade/art/nightshift/cars/${body}-${detail?'hero':'race'}.glb`);cache.set(body+detail,cook(gltf.scene,detail));
  })));

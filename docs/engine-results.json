@@ -1,0 +1,1340 @@
+{
+  "version": "9.2.0",
+  "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "unitTests": 67,
+  "conformance": {
+    "tapes": 38,
+    "activeTicks": 426742,
+    "careerFrames": 1184
+  },
+  "baseline": {
+    "baseline": true,
+    "gpuMedianMs": 9.409375,
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 30.134,
+    "simulationSeconds": 29.666666666666668,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 2.53,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      54,
+      91
+    ],
+    "maxTriangles": 192237,
+    "errors": []
+  },
+  "rejectedBatchingExperiment": {
+    "baseline": false,
+    "gpuMedianMs": 79.472083,
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 30.101,
+    "simulationSeconds": 21.3,
+    "medianFps": 10,
+    "p10Fps": 6,
+    "medianCpuMs": 34.86,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      65,
+      90
+    ],
+    "maxTriangles": 191493,
+    "errors": []
+  },
+  "runtime": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.8958333333333334,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 621,
+      "colorWrites": 621,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 45,
+      "textures": 17,
+      "programs": 123,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 24,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 56,
+      "textures": 17,
+      "programs": 103,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      }
+    },
+    "errors": []
+  },
+  "acceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "maps": {
+    "maps": 12,
+    "thumbnails": 12,
+    "selectedPreview": true,
+    "minimapActors": 6,
+    "followAndOverview": true,
+    "noOverlap": true,
+    "errors": []
+  },
+  "keyboard": {
+    "checks": [
+      "Colemak layout detection",
+      "Keyboard panel reachable at all required landscape sizes",
+      "Conflict rejected and custom key survives reload",
+      "Physical Colemak S/F/Q reach steering, fire and counter with matching HUD",
+      "Opening settings releases held inputs and pauses simulation"
+    ],
+    "errors": []
+  },
+  "controls": {
+    "fireKey": "E",
+    "counterKey": "Q",
+    "keysSurviveCooldown": true,
+    "keyboardActionsReachRules": true,
+    "cooldownReasonAccessible": true,
+    "noHudOverlap": true,
+    "errors": []
+  },
+  "benchmarkCaveat": "Shared desktop host. A simultaneous unrelated SwiftShader renderer test consumed about twelve CPU cores during a failed run. It is retained as interferenceDiagnostic rather than used as a release benchmark. Other samples also vary with shared-host load; do not infer device-wide FPS gains from these runs. Touch tests emulate a mobile viewport on desktop hardware.",
+  "baselinePaired": {
+    "baseline": true,
+    "gpuMedianMs": 10.302447,
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 30.034,
+    "simulationSeconds": 27.166666666666668,
+    "medianFps": 60,
+    "p10Fps": 16,
+    "medianCpuMs": 2.86,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      54,
+      90
+    ],
+    "maxTriangles": 192237,
+    "errors": []
+  },
+  "finalHigh": {
+    "baseline": false,
+    "gpuMedianMs": 8.898802,
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 30.012,
+    "simulationSeconds": 30,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 1.79,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      54,
+      91
+    ],
+    "maxTriangles": 189401,
+    "errors": []
+  },
+  "mobileLow": {
+    "baseline": false,
+    "gpuMedianMs": 4.008906,
+    "mode": 9,
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "touch": true,
+    "wallSeconds": 20.11,
+    "simulationSeconds": 20.1,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 1.32,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      52,
+      84
+    ],
+    "maxTriangles": 159041,
+    "errors": []
+  },
+  "dynamicContact": {
+    "errors": [],
+    "results": [
+      {
+        "car": 0,
+        "mode": 0,
+        "distance": 0,
+        "bodyRoll": 0.002307108324446798,
+        "clearance": [
+          8.998878031629687e-18,
+          2.7321894746634712e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 0,
+        "distance": 7000,
+        "bodyRoll": 0.007460558243358326,
+        "clearance": [
+          -5.4693569118136054e-11,
+          1.3275381662014585e-10,
+          9.192315311712385e-12,
+          7.98204037588679e-11
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 0,
+        "distance": 27000,
+        "bodyRoll": 0.01366126578287287,
+        "clearance": [
+          -1.886165843303922e-09,
+          -2.594551129497802e-09,
+          -2.566666057329803e-07,
+          9.893094990616469e-08
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 3,
+        "distance": 0,
+        "bodyRoll": 0.01990139857197283,
+        "clearance": [
+          -1.9949319973733282e-17,
+          4.141652298894627e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 3,
+        "distance": 7000,
+        "bodyRoll": 0.02566035022212814,
+        "clearance": [
+          2.661334000397808e-11,
+          -5.943497950744447e-11,
+          3.869691025948363e-12,
+          -3.7424032622856984e-11
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 3,
+        "distance": 27000,
+        "bodyRoll": 0.030709497570001368,
+        "clearance": [
+          3.236300116782331e-14,
+          -9.103828801926284e-15,
+          -2.475797344914099e-14,
+          2.220446049250313e-16
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 6,
+        "distance": 0,
+        "bodyRoll": 0.034988497538034194,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 6,
+        "distance": 7000,
+        "bodyRoll": 0.03852825376319759,
+        "clearance": [
+          2.4259011119354135e-09,
+          -5.138106856650282e-09,
+          4.043224435812398e-10,
+          -3.619400820720209e-09
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 6,
+        "distance": 27000,
+        "bodyRoll": 0.04140403426152573,
+        "clearance": [
+          -2.027256899447827e-06,
+          -2.0019272056470694e-06,
+          1.6810453999926978e-06,
+          1.6613595894277022e-06
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 8,
+        "distance": 0,
+        "bodyRoll": 0.04370783635710388,
+        "clearance": [
+          1.214306433183765e-17,
+          5.811323644522304e-17,
+          0,
+          5.551115123125783e-17
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 8,
+        "distance": 7000,
+        "bodyRoll": 0.045532854088376644,
+        "clearance": [
+          0,
+          0,
+          5.551115123125783e-17,
+          0
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 8,
+        "distance": 27000,
+        "bodyRoll": 0.04696540734726221,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 11,
+        "distance": 0,
+        "bodyRoll": 0.04808135052960081,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 11,
+        "distance": 7000,
+        "bodyRoll": 0.04894506962449695,
+        "clearance": [
+          -5.889267554182176e-08,
+          -6.104863393280313e-08,
+          -3.680511323489455e-08,
+          -5.3723758990098514e-08
+        ]
+      },
+      {
+        "car": 0,
+        "mode": 11,
+        "distance": 27000,
+        "bodyRoll": 0.04960988884088368,
+        "clearance": [
+          -2.1591714007007656e-10,
+          4.354820982988006e-10,
+          -2.2476073086030723e-11,
+          -6.014620572425411e-11
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 0,
+        "distance": 0,
+        "bodyRoll": 0.002307108324446798,
+        "clearance": [
+          -4.0332320816460765e-17,
+          -8.901299836105991e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 0,
+        "distance": 7000,
+        "bodyRoll": 0.007460558243358326,
+        "clearance": [
+          -9.940641539085693e-11,
+          2.3478968075307804e-10,
+          -3.068684022167201e-11,
+          1.3895784176098935e-10
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 0,
+        "distance": 27000,
+        "bodyRoll": 0.01366126578287287,
+        "clearance": [
+          -3.4696732532230046e-08,
+          -3.602101929234269e-08,
+          -2.6827162754455847e-07,
+          7.033060651397138e-08
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 3,
+        "distance": 0,
+        "bodyRoll": 0.01990139857197283,
+        "clearance": [
+          2.3852447794681098e-17,
+          -5.789639601072594e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 3,
+        "distance": 7000,
+        "bodyRoll": 0.02566035022212814,
+        "clearance": [
+          2.97133220805712e-11,
+          -6.718117555315484e-11,
+          7.779115893113975e-12,
+          -4.2063029274952424e-11
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 3,
+        "distance": 27000,
+        "bodyRoll": 0.030709497570001368,
+        "clearance": [
+          -5.551115123125783e-15,
+          -3.785860513971784e-14,
+          2.220446049250313e-14,
+          4.218847493575595e-14
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 6,
+        "distance": 0,
+        "bodyRoll": 0.034988497538034194,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 6,
+        "distance": 7000,
+        "bodyRoll": 0.03852825376319759,
+        "clearance": [
+          2.483430912303408e-09,
+          -5.2870275379923726e-09,
+          4.930555477788978e-10,
+          -3.72711549123661e-09
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 6,
+        "distance": 27000,
+        "bodyRoll": 0.04140403426152573,
+        "clearance": [
+          -2.021836097751417e-06,
+          -1.9966151809935884e-06,
+          1.6691881991603985e-06,
+          1.6498230576977857e-06
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 8,
+        "distance": 0,
+        "bodyRoll": 0.04370783635710388,
+        "clearance": [
+          5.854691731421724e-18,
+          -2.6020852139652106e-18,
+          0,
+          5.551115123125783e-17
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 8,
+        "distance": 7000,
+        "bodyRoll": 0.045532854088376644,
+        "clearance": [
+          0,
+          0,
+          5.551115123125783e-17,
+          0
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 8,
+        "distance": 27000,
+        "bodyRoll": 0.04696540734726221,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 11,
+        "distance": 0,
+        "bodyRoll": 0.04808135052960081,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 11,
+        "distance": 7000,
+        "bodyRoll": 0.04894506962449695,
+        "clearance": [
+          -5.892197983692338e-08,
+          -6.10827555966309e-08,
+          -3.685501767658472e-08,
+          -5.379948075229235e-08
+        ]
+      },
+      {
+        "car": 1,
+        "mode": 11,
+        "distance": 27000,
+        "bodyRoll": 0.04960988884088368,
+        "clearance": [
+          -2.159612644964115e-10,
+          4.3574630362308575e-10,
+          -2.239359392364193e-11,
+          -6.011133257821655e-11
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 0,
+        "distance": 0,
+        "bodyRoll": 0.002307108324446798,
+        "clearance": [
+          -1.7997756063259374e-17,
+          -6.364266752489911e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 0,
+        "distance": 7000,
+        "bodyRoll": 0.007460558243358326,
+        "clearance": [
+          -9.944709812581554e-11,
+          2.348951051028836e-10,
+          -3.0739013764935486e-11,
+          1.3901150716644217e-10
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 0,
+        "distance": 27000,
+        "bodyRoll": 0.01366126578287287,
+        "clearance": [
+          -3.472665043198486e-08,
+          -3.605146156604455e-08,
+          -2.682805619741435e-07,
+          7.030392638364413e-08
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 3,
+        "distance": 0,
+        "bodyRoll": 0.01990139857197283,
+        "clearance": [
+          -1.3010426069826053e-18,
+          -4.141652298894627e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 3,
+        "distance": 7000,
+        "bodyRoll": 0.02566035022212814,
+        "clearance": [
+          2.9715890338677386e-11,
+          -6.718867996691191e-11,
+          7.783424946228301e-12,
+          -4.2067000056988935e-11
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 3,
+        "distance": 27000,
+        "bodyRoll": 0.030709497570001368,
+        "clearance": [
+          -6.145084441300241e-14,
+          1.3156142841808105e-14,
+          3.0142555118573e-14,
+          -5.051514762044462e-15
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 6,
+        "distance": 0,
+        "bodyRoll": 0.034988497538034194,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 6,
+        "distance": 7000,
+        "bodyRoll": 0.03852825376319759,
+        "clearance": [
+          2.4834812956120444e-09,
+          -5.28716590647571e-09,
+          4.93136843859876e-10,
+          -3.727214363535847e-09
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 6,
+        "distance": 27000,
+        "bodyRoll": 0.04140403426152573,
+        "clearance": [
+          -2.02183111458476e-06,
+          -1.9966103077528885e-06,
+          1.6691773287447198e-06,
+          1.6498125465641555e-06
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 8,
+        "distance": 0,
+        "bodyRoll": 0.04370783635710388,
+        "clearance": [
+          7.502679033599691e-17,
+          4.445228907190568e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 8,
+        "distance": 7000,
+        "bodyRoll": 0.045532854088376644,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 8,
+        "distance": 27000,
+        "bodyRoll": 0.04696540734726221,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 11,
+        "distance": 0,
+        "bodyRoll": 0.04808135052960081,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 11,
+        "distance": 7000,
+        "bodyRoll": 0.04894506962449695,
+        "clearance": [
+          -5.892200796026037e-08,
+          -6.108278573918602e-08,
+          -3.685506434758512e-08,
+          -5.3799549440403105e-08
+        ]
+      },
+      {
+        "car": 2,
+        "mode": 11,
+        "distance": 27000,
+        "bodyRoll": 0.04960988884088368,
+        "clearance": [
+          -2.1596154552161462e-10,
+          4.357474624183677e-10,
+          -2.239288615646373e-11,
+          -6.011215657186764e-11
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 0,
+        "distance": 0,
+        "bodyRoll": 0.002307108324446798,
+        "clearance": [
+          2.981555974335137e-17,
+          1.4203048459560108e-17,
+          5.551115123125783e-17,
+          5.551115123125783e-17
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 0,
+        "distance": 7000,
+        "bodyRoll": 0.007460558243358326,
+        "clearance": [
+          -1.4684582022583825e-10,
+          4.564118891853264e-10,
+          9.527873282011434e-12,
+          -1.9308875678913928e-11
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 0,
+        "distance": 27000,
+        "bodyRoll": 0.01366126578287287,
+        "clearance": [
+          -1.307461889102357e-08,
+          -1.3932307862951632e-08,
+          -2.378302656896869e-07,
+          -1.7934945280816128e-07
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 3,
+        "distance": 0,
+        "bodyRoll": 0.01990139857197283,
+        "clearance": [
+          5.637851296924623e-17,
+          3.664603343001005e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 3,
+        "distance": 7000,
+        "bodyRoll": 0.02566035022212814,
+        "clearance": [
+          4.444674923248515e-11,
+          -1.2887815641071665e-10,
+          -3.1237304409792443e-12,
+          6.497728570475925e-12
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 3,
+        "distance": 27000,
+        "bodyRoll": 0.030709497570001368,
+        "clearance": [
+          3.552713678800501e-15,
+          -1.2378986724570495e-14,
+          5.0959236830294685e-14,
+          2.7422508708241367e-14
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 6,
+        "distance": 0,
+        "bodyRoll": 0.034988497538034194,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 6,
+        "distance": 7000,
+        "bodyRoll": 0.03852825376319759,
+        "clearance": [
+          3.854642646738959e-09,
+          -9.989932110709976e-09,
+          -3.139727020040617e-10,
+          6.733123017466092e-10
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 6,
+        "distance": 27000,
+        "bodyRoll": 0.04140403426152573,
+        "clearance": [
+          -1.7117152042167572e-06,
+          -1.6926145886830835e-06,
+          1.6339228752215718e-06,
+          1.61624969688412e-06
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 8,
+        "distance": 0,
+        "bodyRoll": 0.04370783635710388,
+        "clearance": [
+          2.168404344971009e-18,
+          1.1275702593849246e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 8,
+        "distance": 7000,
+        "bodyRoll": 0.045532854088376644,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 8,
+        "distance": 27000,
+        "bodyRoll": 0.04696540734726221,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 11,
+        "distance": 0,
+        "bodyRoll": 0.04808135052960081,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 11,
+        "distance": 7000,
+        "bodyRoll": 0.04894506962449695,
+        "clearance": [
+          -6.473128871115064e-08,
+          -6.964523049241e-08,
+          -6.74440148729083e-08,
+          2.852016152410375e-08
+        ]
+      },
+      {
+        "car": 3,
+        "mode": 11,
+        "distance": 27000,
+        "bodyRoll": 0.04960988884088368,
+        "clearance": [
+          -1.4042345758413788e-10,
+          3.9945923305251263e-10,
+          4.571430040067881e-12,
+          -2.5389280955412374e-11
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 0,
+        "distance": 0,
+        "bodyRoll": 0.002307108324446798,
+        "clearance": [
+          -5.377642775528102e-17,
+          -4.0115480381963664e-18,
+          5.551115123125783e-17,
+          5.551115123125783e-17
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 0,
+        "distance": 7000,
+        "bodyRoll": 0.007460558243358326,
+        "clearance": [
+          -1.468459173703529e-10,
+          4.564120765354618e-10,
+          9.52773276940988e-12,
+          -1.9309057824878906e-11
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 0,
+        "distance": 27000,
+        "bodyRoll": 0.01366126578287287,
+        "clearance": [
+          -1.307461980869229e-08,
+          -1.3932312491193866e-08,
+          -2.3783026885382252e-07,
+          -1.793494607757462e-07
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 3,
+        "distance": 0,
+        "bodyRoll": 0.01990139857197283,
+        "clearance": [
+          2.3852447794681098e-17,
+          -7.003946034256359e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 3,
+        "distance": 7000,
+        "bodyRoll": 0.02566035022212814,
+        "clearance": [
+          4.4446428308642094e-11,
+          -1.2887770364788942e-10,
+          -3.1239281994555057e-12,
+          6.497624487067366e-12
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 3,
+        "distance": 27000,
+        "bodyRoll": 0.030709497570001368,
+        "clearance": [
+          -5.209721543053547e-14,
+          -4.8433479449272454e-14,
+          -2.1094237467877974e-15,
+          5.040412531798211e-14
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 6,
+        "distance": 0,
+        "bodyRoll": 0.034988497538034194,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 6,
+        "distance": 7000,
+        "bodyRoll": 0.03852825376319759,
+        "clearance": [
+          3.854642112444129e-09,
+          -9.989934331156025e-09,
+          -3.1397193872573226e-10,
+          6.73313613197557e-10
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 6,
+        "distance": 27000,
+        "bodyRoll": 0.04140403426152573,
+        "clearance": [
+          -1.7117151723256008e-06,
+          -1.6926145896406508e-06,
+          1.6339229177986248e-06,
+          1.616249700214789e-06
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 8,
+        "distance": 0,
+        "bodyRoll": 0.04370783635710388,
+        "clearance": [
+          2.5587171270657905e-17,
+          -3.9898639947466563e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 8,
+        "distance": 7000,
+        "bodyRoll": 0.045532854088376644,
+        "clearance": [
+          0,
+          5.551115123125783e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 8,
+        "distance": 27000,
+        "bodyRoll": 0.04696540734726221,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 11,
+        "distance": 0,
+        "bodyRoll": 0.04808135052960081,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 11,
+        "distance": 7000,
+        "bodyRoll": 0.04894506962449695,
+        "clearance": [
+          -6.473128967565689e-08,
+          -6.964523182467763e-08,
+          -6.7444013845952e-08,
+          2.8520160847561593e-08
+        ]
+      },
+      {
+        "car": 4,
+        "mode": 11,
+        "distance": 27000,
+        "bodyRoll": 0.04960988884088368,
+        "clearance": [
+          -1.4042344544107355e-10,
+          3.994592642775352e-10,
+          4.571450856749593e-12,
+          -2.5389152585875152e-11
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 0,
+        "distance": 0,
+        "bodyRoll": 0.002307108324446798,
+        "clearance": [
+          7.48099499014998e-18,
+          7.274996577377735e-17,
+          5.551115123125783e-17,
+          5.551115123125783e-17
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 0,
+        "distance": 7000,
+        "bodyRoll": 0.007460558243358326,
+        "clearance": [
+          -1.4684604573989013e-10,
+          4.564120036770758e-10,
+          9.527668584641269e-12,
+          -1.9308747309376706e-11
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 0,
+        "distance": 27000,
+        "bodyRoll": 0.01366126578287287,
+        "clearance": [
+          -1.3074620042879959e-08,
+          -1.3932311831998945e-08,
+          -2.378302629696405e-07,
+          -1.793494606196211e-07
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 3,
+        "distance": 0,
+        "bodyRoll": 0.01990139857197283,
+        "clearance": [
+          5.074066167232161e-17,
+          8.500145032286355e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 3,
+        "distance": 7000,
+        "bodyRoll": 0.02566035022212814,
+        "clearance": [
+          4.444641269613081e-11,
+          -1.2887770191316594e-10,
+          -3.1240010578414967e-12,
+          6.497553363404851e-12
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 3,
+        "distance": 27000,
+        "bodyRoll": 0.030709497570001368,
+        "clearance": [
+          -5.268008251846368e-14,
+          -4.779510121011299e-14,
+          -2.3314683517128287e-15,
+          5.101474798152594e-14
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 6,
+        "distance": 0,
+        "bodyRoll": 0.034988497538034194,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 6,
+        "distance": 7000,
+        "bodyRoll": 0.03852825376319759,
+        "clearance": [
+          3.854641755091093e-09,
+          -9.989934282583768e-09,
+          -3.1397177219227856e-10,
+          6.733134293168686e-10
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 6,
+        "distance": 27000,
+        "bodyRoll": 0.04140403426152573,
+        "clearance": [
+          -1.7117151722978452e-06,
+          -1.6926145899182066e-06,
+          1.6339228718353915e-06,
+          1.6162497000760112e-06
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 8,
+        "distance": 0,
+        "bodyRoll": 0.04370783635710388,
+        "clearance": [
+          2.45029690981724e-17,
+          -3.8163916471489756e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 8,
+        "distance": 7000,
+        "bodyRoll": 0.045532854088376644,
+        "clearance": [
+          0,
+          5.551115123125783e-17,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 8,
+        "distance": 27000,
+        "bodyRoll": 0.04696540734726221,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 11,
+        "distance": 0,
+        "bodyRoll": 0.04808135052960081,
+        "clearance": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 11,
+        "distance": 7000,
+        "bodyRoll": 0.04894506962449695,
+        "clearance": [
+          -6.473128968953468e-08,
+          -6.964523183855542e-08,
+          -6.744401387370758e-08,
+          2.8520160913481085e-08
+        ]
+      },
+      {
+        "car": 5,
+        "mode": 11,
+        "distance": 27000,
+        "bodyRoll": 0.04960988884088368,
+        "clearance": [
+          -1.404234419716266e-10,
+          3.994592642775352e-10,
+          4.571447387302641e-12,
+          -2.538915779004558e-11
+        ]
+      }
+    ]
+  },
+  "interferenceDiagnostic": {
+    "baseline": false,
+    "gpuMedianMs": 81.833333,
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 30.119,
+    "simulationSeconds": 13.3,
+    "medianFps": 9,
+    "p10Fps": 4,
+    "medianCpuMs": 8.76,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      63,
+      91
+    ],
+    "maxTriangles": 192237,
+    "errors": []
+  }
+}
