@@ -1,6 +1,6 @@
 # Release verification
 
-The active release is [NIGHTSHIFT 9.4.0 — Career, classification and garage](nightshift-v94.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 94 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
+The 9.5.0 presentation candidate is documented in [materials and lighting](nightshift-v95.md). The preceding production release is [NIGHTSHIFT 9.4.0 — Career, classification and garage](nightshift-v94.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 94 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
 

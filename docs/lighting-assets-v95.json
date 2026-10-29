@@ -1,0 +1,56 @@
+{
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "maps": [
+    {
+      "file": "asphalt-color.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+      "bytes": 731707,
+      "sha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed",
+      "releaseBytes": 731707,
+      "releaseSha256": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed"
+    },
+    {
+      "file": "asphalt-normal.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+      "bytes": 1240122,
+      "sha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3",
+      "releaseBytes": 1240122,
+      "releaseSha256": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3"
+    },
+    {
+      "file": "asphalt-roughness.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_rough_1k.jpg",
+      "bytes": 544032,
+      "sha256": "70ba3edc65525eb4dc366cf010ca7ae0bd34e0251ff0225c2dad627a873d0712",
+      "releaseBytes": 544032,
+      "releaseSha256": "70ba3edc65525eb4dc366cf010ca7ae0bd34e0251ff0225c2dad627a873d0712"
+    },
+    {
+      "file": "sunset.hdr",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/textures/equirectangular/venice_sunset_1k.hdr",
+      "bytes": 1397783,
+      "sha256": "0e72ed46b5316cb5fb67fc81ff85b024a09146fd89ef3811a8d2299647ada118",
+      "releaseBytes": 366542,
+      "releaseSha256": "47c1294edcb747e8e260e4a64f5162a71562a40edaa8c1a0608e1dd408669a4c"
+    },
+    {
+      "file": "daylight.hdr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloppenheim_06_puresky_1k.hdr",
+      "bytes": 1173154,
+      "sha256": "206c67e3a1b992282821cf06662bdd69bbb4915c1c4444a66338a40d6a7d4e34",
+      "releaseBytes": 329109,
+      "releaseSha256": "208c27a7615f2f2960265c751c79d3bb410e76a5c9b1f2c15ac9427f68bce308"
+    },
+    {
+      "file": "night.hdr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/dikhololo_night_1k.hdr",
+      "bytes": 1745132,
+      "sha256": "6861489f983cdc0c22435b781a3487171bd25f25f9cc52c46ac402d48e08249e",
+      "releaseBytes": 431435,
+      "releaseSha256": "b0d223393336080c0602a10a547b11e27672ee9539387774ad0f80c2b3624b05"
+    }
+  ],
+  "hdrPreparation": "Linear radiance box filter 1024x512 to 512x256, RGBE/RLE encoding; see tools/prepare-lighting-probes.mjs",
+  "totalReleaseBytes": 3642947
+}

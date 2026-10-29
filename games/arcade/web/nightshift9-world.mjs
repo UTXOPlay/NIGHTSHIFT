@@ -7,7 +7,7 @@ export class RouteWorld{
  constructor(scene){
   this.scene=scene;this.environmentRoot=new T.Group();this.environmentRoot.name='Stationary street instances';this.environmentRoot.matrixAutoUpdate=false;scene.add(this.environmentRoot);this.uploadKey=null;this.originDistance=null;this.matrixWrites=0;this.colorWrites=0;this.pools=new Map();this.temp=new T.Object3D();this.root=new T.Object3D();this.matrix=new T.Matrix4();this.color=new T.Color();
   this.m={stone:material('#b8b7b4',.95),cell:material('#d6ded8',.4,.45),cargo:material('#aebbc1',.7,.35),tunnel:material('#a1aeaf',.65,.3),steel:material('#74848d',.5,.65),white:material('#dce8e7',.55,.25),ground:material('#bcc4c4',.95),water:material('#5f9ca7',.23,.65),leaves:material('#709676',.95),glass:material('#82acae',.23,.65),light:new T.MeshBasicMaterial({color:'#fff4e4',toneMapped:false})};
-  for(const [name] of FACADES)this.m[name]=material('#e1e6ed',name==='office'?.38:.7,name==='office'?.45:.15);
+  for(const [name] of FACADES)this.m[name]=material('#dce1e5',name==='office'?.4:.82,name==='office'?.12:.02);
   this.facadeNight={value:1};this.terrainRegion={value:new T.Vector2(0,.5)};for(const name of ['fir','snowFir','scrub','broadleaf'])this.m[name]=new T.MeshStandardMaterial({color:'#ffffff',roughness:.95,metalness:0,side:T.DoubleSide,alphaTest:.4});
   this.templates=DISTRICTS.map((_,id)=>Array.from({length:STREET_VARIANTS},(_,n)=>this.template(id,n)));
   this.gateParts=[];for(const s of [-1,1]){this.add(this.gateParts,'steel',s*8.6,4.3,0,.4,8.6,.4);this.add(this.gateParts,'light',s*8.37,4.3,.22,.06,8.5,.06);}this.add(this.gateParts,'steel',0,8.6,0,17.6,.4,.4);
@@ -18,6 +18,7 @@ export class RouteWorld{
   this.current=0;this.sector=0;this.fog=new T.Color();this.light=new T.Color();this.sky=0;this.rain=0;
  }
  add(out,mat,x,y,z,w,h,d,rx=0,ry=0,rz=0,geometry=GEO.box,color='#ffffff'){
+  if(geometry===GEO.box&&w>=4&&h>=3&&d>=3&&FACADES.some(f=>f[0]===mat))geometry=GEO.building;
   if(FACADES.some(f=>f[0]===mat)&&h>=2&&Math.abs(y-h/2)<.02){y-=.2;h+=.4;}
   const material=this.m[mat],key=geometry.uuid+'/'+material.uuid;if(!this.pools.has(key))this.pools.set(key,{geometry,material,index:0});
   this.temp.position.set(x,y,z);this.temp.rotation.set(rx,ry,rz);this.temp.scale.set(w,h,d);this.temp.updateMatrix();out.push({pool:this.pools.get(key),matrix:this.temp.matrix.clone(),color:new T.Color(color)});

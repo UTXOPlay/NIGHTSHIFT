@@ -1,0 +1,95 @@
+{
+  "version": "9.5.0",
+  "nativeProfile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "unitTests": 81,
+  "browserFiles": 104,
+  "nativeRulesChanged": false,
+  "renderFixtures": {
+    "maps": 12,
+    "resizeAndQualityCases": 18,
+    "stateUnchanged": true,
+    "capabilities": {
+      "renderer": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "errors": [],
+    "scope": "Synthetic render-only fixtures; no claims about human play or physical-phone performance"
+  },
+  "stagingAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "finishSeconds": 233.4,
+    "attempts": 2,
+    "credits": 627
+  },
+  "performanceSamples": {
+    "localHigh": {
+      "gpuMedianMs": 8.980625,
+      "mode": 0,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 20.135,
+      "simulationSeconds": 19.833333333333332,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.19,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        72,
+        195
+      ],
+      "maxTriangles": 279955,
+      "errors": []
+    },
+    "stagingLowEmulatedTouch": {
+      "gpuMedianMs": 3.998072,
+      "mode": 0,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "touch": true,
+      "wallSeconds": 20.064,
+      "simulationSeconds": 20.033333333333335,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 1.61,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        66,
+        96
+      ],
+      "maxTriangles": 121489,
+      "errors": []
+    }
+  },
+  "limitations": [
+    "These short desktop Iris Xe samples are not physical-phone or long-session measurements.",
+    "Initial heavily contended candidate and 9.4 baseline samples failed and are retained separately; no comparative speedup is claimed.",
+    "The last loading-only change starts the same six maps in parallel; final staged/public acceptance is recorded separately.",
+    "Controlled before/after screenshots use synthetic render-only states with garage rendering disabled.",
+    "Existing simple scene geometry, planar facade detail and two source car bodies still limit visual quality."
+  ]
+}

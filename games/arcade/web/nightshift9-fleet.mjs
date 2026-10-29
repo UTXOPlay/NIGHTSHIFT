@@ -26,13 +26,13 @@ function cook(root,detail){
   for(const key of Object.keys(geometry.attributes))if(!['position','normal'].includes(key))geometry.deleteAttribute(key);
   if(!geometry.attributes.normal)geometry.computeVertexNormals();
   const color=new Float32Array(count*3),surface=new Float32Array(count*4),base=name==='Paint'?new T.Color('#ffffff'):m.color;
-  const rearLamp=new T.Color('#df2933');for(let n=0;n<count;n++){const rearSignal=name==='Signal'&&geometry.attributes.position.getZ(n)>0,c=rearSignal?rearLamp:base;color.set([c.r,c.g,c.b],n*3);surface.set([name==='Paint'?.24:m.roughness??.6,name==='Paint'?.72:m.metalness??0,name==='Taillamp'||rearSignal?2:name==='Headlamp'?.9:name==='Signal'?.3:0,name==='Paint'?1:0],n*4);}
+  const rearLamp=new T.Color('#df2933');for(let n=0;n<count;n++){const rearSignal=name==='Signal'&&geometry.attributes.position.getZ(n)>0,c=rearSignal?rearLamp:base;color.set([c.r,c.g,c.b],n*3);surface.set([name==='Paint'?.28:m.roughness??.6,name==='Paint'?.45:m.metalness??0,name==='Taillamp'||rearSignal?2:name==='Headlamp'?.9:name==='Signal'?.3:0,name==='Paint'?1:0],n*4);}
   geometry.setAttribute('color',new T.Float32BufferAttribute(color,3));geometry.setAttribute('surface',new T.Float32BufferAttribute(surface,4));groups.get(key).parts.push(geometry);
  });
  return [...groups.entries()].map(([name,g])=>{const geometry=mergeGeometries(g.parts);g.parts.forEach(p=>p.dispose());return{name,geometry,transform:g.transform};});
 }
 function finish(paint){
- const m=new T.MeshPhysicalMaterial({vertexColors:true,metalness:.6,roughness:.33,clearcoat:.7,clearcoatRoughness:.18,envMapIntensity:.55});
+ const m=new T.MeshPhysicalMaterial({vertexColors:true,metalness:.6,roughness:.33,clearcoat:.85,clearcoatRoughness:.14,envMapIntensity:.9});
  const tint={value:new T.Color(paint)},brake={value:0};m.userData.brake=brake;
  m.onBeforeCompile=s=>{
   s.uniforms.fleetPaint=tint;s.uniforms.fleetBrake=brake;s.vertexShader='attribute vec4 surface; varying vec4 vSurface;\n'+s.vertexShader;
@@ -44,7 +44,7 @@ function finish(paint){
   s.fragmentShader=s.fragmentShader.replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance+=diffuseColor.rgb*(vSurface.z>1.5?1.1+fleetBrake*3.5:vSurface.z);');
   s.fragmentShader=s.fragmentShader.replace('#include <lights_physical_fragment>',T.ShaderChunk.lights_physical_fragment.replace('material.clearcoat = clearcoat;','material.clearcoat = clearcoat*vSurface.w;'));
  };
- m.customProgramCacheKey=()=>'fleet-surface-v91';return m;
+ m.customProgramCacheKey=()=>'fleet-surface-v95';return m;
 }
 function kit(spec){
  const g=new T.Group(),carbon=new T.MeshStandardMaterial({color:'#182128',metalness:.6,roughness:.37});

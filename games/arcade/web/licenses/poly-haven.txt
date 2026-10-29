@@ -1,0 +1,20 @@
+NIGHTSHIFT 9.5 environment and surface data
+
+Source: Poly Haven, https://polyhaven.com/
+License: CC0 1.0 Universal. https://polyhaven.com/license
+Legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Asphalt 02 (Rob Tuytel): https://polyhaven.com/a/asphalt_02
+  1K diffuse, OpenGL normal and roughness JPEG maps. Original map registration
+  and 3 metre surface scale retained. All files are served from this game.
+Venice Sunset: https://polyhaven.com/a/venice_sunset
+  Source mirrored in the official Three.js r180 car-material example.
+Kloppenheim 06 Pure Sky: https://polyhaven.com/a/kloppenheim_06_puresky
+Dikhololo Night: https://polyhaven.com/a/dikhololo_night
+  1K linear-radiance HDR sources box-filtered to 512x256 and RGBE/RLE encoded
+  using tools/prepare-lighting-probes.mjs. Runtime bounds captured radiance peaks
+  before PMREM convolution; an authored directional light supplies the main key.
+  These are illumination probes. The finite illustrated background plates are
+  separate existing artwork, not reconstructions of the probe locations.
+
+No runtime requests to Poly Haven or an external CDN are required.

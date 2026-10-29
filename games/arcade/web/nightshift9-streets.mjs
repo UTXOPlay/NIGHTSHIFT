@@ -1,6 +1,7 @@
 import * as T from 'three';
+import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
 export const STREET_VARIANTS=24;
-export const GEO={box:new T.BoxGeometry(1,1,1),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:new T.PlaneGeometry(1,1)};
+export const GEO={box:new T.BoxGeometry(1,1,1),building:new RoundedBoxGeometry(1,1,1,1,.012),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:new T.PlaneGeometry(1,1)};
 export const FACADES=[['brick',0,10,9],['residence',1,9,18],['office',2,15,21],['lab',3,12,10],['warehouse',4,14,12],['stonefront',5,12,9],['chalet',6,9,8],['utility',7,7,7]];
 const hash=x=>{x=Math.imul(x^(x>>>16),0x45d9f3b);x=Math.imul(x^(x>>>16),0x45d9f3b);return(x^(x>>>16))>>>0;};
 const mod=(x,n)=>(x%n+n)%n;

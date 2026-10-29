@@ -10,7 +10,7 @@ export function facadeAtlas(material,texture,tile,width,height,{emission=.9,roof
  material.map=texture;
  material.onBeforeCompile=shader=>{
   shader.uniforms.facadeNight=night;
-  shader.vertexShader='varying vec2 vFacadeUv; varying float vFacadeRoof; varying float vFacadeSeed;\n'+shader.vertexShader;
+  shader.vertexShader='varying vec2 vFacadeUv; varying float vFacadeRoof; varying float vFacadeSeed;varying float vFacadeHeight;\n'+shader.vertexShader;
   shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>',`#include <uv_vertex>
    vec3 facadeScale=vec3(1.);vFacadeSeed=.37;
    #ifdef USE_INSTANCING
@@ -18,9 +18,10 @@ export function facadeAtlas(material,texture,tile,width,height,{emission=.9,roof
     facadeScale=vec3(length(instanceMatrix[0].xyz),length(instanceMatrix[1].xyz),length(instanceMatrix[2].xyz));
    #endif
    vFacadeRoof=abs(normal.y);
+   vFacadeHeight=(position.y+.5)*facadeScale.y;
    vFacadeUv=uv*vec2(abs(normal.x)>.5?facadeScale.z:facadeScale.x,abs(normal.y)>.5?facadeScale.z:facadeScale.y)/vec2(${width.toFixed(1)},${height.toFixed(1)});
   `);
-  shader.fragmentShader='uniform float facadeNight;varying vec2 vFacadeUv; varying float vFacadeRoof;varying float vFacadeSeed;\n'+shader.fragmentShader;
+  shader.fragmentShader='uniform float facadeNight;varying vec2 vFacadeUv; varying float vFacadeRoof;varying float vFacadeSeed;varying float vFacadeHeight;\n'+shader.fragmentShader;
   const origin=[(tile%columns)/columns,(rows-1-Math.floor(tile/columns))/rows],span=[1/columns-.006,1/rows-.006];
   shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',`
    vec2 facadeCoord=vec2(${origin[0]+.003},${origin[1]+.003})+fract(vFacadeUv)*vec2(${span[0]},${span[1]});
@@ -31,11 +32,12 @@ export function facadeAtlas(material,texture,tile,width,height,{emission=.9,roof
    float occupied=${variation?'smoothstep(.24,.42,roomSeed)':'1.'};
    facadeTexel.rgb*=mix(1.,mix(.42,1.,occupied),facadeLight*.7);
    diffuseColor*=facadeTexel;
+   diffuseColor.rgb*=mix(.63,1.,smoothstep(0.,2.6,vFacadeHeight));
   `);
   shader.fragmentShader=shader.fragmentShader.replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\n totalEmissiveRadiance += facadeTexel.rgb*facadeLight*occupied*facadeNight*'+emission.toFixed(2)+';');
-  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>','#include <roughnessmap_fragment>\n roughnessFactor=clamp(roughnessFactor-facadeLight*.18,.22,.85);');
+  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>','#include <roughnessmap_fragment>\n roughnessFactor=clamp(roughnessFactor-facadeLight*.3,.22,.92);');
  };
- material.customProgramCacheKey=()=>`facade-v93-${tile}-${width}-${height}-${emission}-${roof}-${columns}-${rows}-${variation}`;
+ material.customProgramCacheKey=()=>`facade-v95-${tile}-${width}-${height}-${emission}-${roof}-${columns}-${rows}-${variation}`;
  material.needsUpdate=true;
 }
 
@@ -75,9 +77,9 @@ export class StreetLighting{
   this.batches=this.fixtures.flatMap(f=>f.batches);
   const glowMaterial=()=>new T.MeshBasicMaterial({transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:.4,toneMapped:false});
   this.halos=[0,1].map(()=>{const m=new T.InstancedMesh(new T.PlaneGeometry(1,1),glowMaterial(),LAMP_COUNT);m.frustumCulled=false;scene.add(m);return m;});
-  this.pools=new T.InstancedMesh(new T.PlaneGeometry(1,1),new T.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{strength:{value:.14}},vertexShader:'varying vec2 poolUv;varying vec3 poolTint;void main(){poolUv=uv;poolTint=instanceColor;gl_Position=projectionMatrix*modelViewMatrix*instanceMatrix*vec4(position,1.);}',fragmentShader:'varying vec2 poolUv;varying vec3 poolTint;uniform float strength;void main(){vec2 p=poolUv*2.-1.;float r=dot(p,p);float a=exp(-r*3.8)*(1.-smoothstep(.5,1.,r));gl_FragColor=vec4(poolTint,a*strength);}'}),LAMP_COUNT);this.pools.frustumCulled=false;scene.add(this.pools);
+  this.pools=new T.InstancedMesh(new T.PlaneGeometry(1,1),new T.ShaderMaterial({transparent:true,depthWrite:false,blending:T.AdditiveBlending,uniforms:{strength:{value:.02}},vertexShader:'varying vec2 poolUv;varying vec3 poolTint;varying float poolDepth;void main(){poolUv=uv;poolTint=instanceColor;vec4 p=modelViewMatrix*instanceMatrix*vec4(position,1.);poolDepth=-p.z;gl_Position=projectionMatrix*p;}',fragmentShader:'varying vec2 poolUv;varying vec3 poolTint;varying float poolDepth;uniform float strength;void main(){vec2 p=poolUv*2.-1.;float r=dot(p,p);float a=exp(-r*3.8)*(1.-smoothstep(.5,1.,r))*(1.-smoothstep(18.,160.,poolDepth));gl_FragColor=vec4(poolTint,a*strength);}'}),LAMP_COUNT);this.pools.frustumCulled=false;scene.add(this.pools);
   // Only two moving physical lights; every other fixture uses instanced light
-  // cards. No per-lamp shadow maps, postprocessing bloom or extra scene render.
+  // cards. No per-lamp shadow maps or extra scene render for each fixture.
   this.lights=Array.from({length:2},()=>{const l=new T.PointLight('#ffd9a4',0,27,2);scene.add(l);return l;});
   this.positions=Array.from({length:LAMP_COUNT},()=>new T.Vector3());this.loaded=false;
  }
@@ -105,7 +107,7 @@ export class StreetLighting{
   }
   for(let k=0;k<this.fixtures.length;k++)for(const b of this.fixtures[k].batches){b.count=counts[k];b.visible=enabled&&b.count>0;if(b.count)b.instanceMatrix.needsUpdate=true;}
   for(const halo of this.halos)if(halo.count){halo.instanceMatrix.needsUpdate=true;halo.instanceColor.needsUpdate=true;}
-  this.pools.instanceMatrix.needsUpdate=true;this.pools.instanceColor.needsUpdate=true;this.pools.material.uniforms.strength.value=mode===3?.17:mode===10?.14:mode===8?.055:.09;
+  this.pools.instanceMatrix.needsUpdate=true;this.pools.instanceColor.needsUpdate=true;this.pools.material.uniforms.strength.value=mode===3?.028:mode===10?.024:mode===8?.009:.014;
   order.sort((a,b)=>Math.abs(a.z)-Math.abs(b.z));const first=order[0],second=order.find(p=>p.side!==first.side)||order[1];
   this.lights.forEach((l,n)=>{const p=n?second:first;l.position.copy(this.positions[p.n]);roadX.project?.(l.position);l.color.copy(p.kind===2?this.warm:palette);l.intensity=low?0:mode===3?110:mode===8?28:80;});
  }
