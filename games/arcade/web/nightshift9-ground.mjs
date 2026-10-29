@@ -13,6 +13,7 @@ export class CircuitScenery{
   }
  }
  draw(frame,visible=true){
+  const key=frame.mode+':'+frame.legacy+':'+frame.distance+':'+visible;if(key===this.bufferKey)return;this.bufferKey=key;
   const mode=frame.mode,m=this.materials,relief=[0,7,5,0,0,.7,9,5,1.5,3,0,0][frame.mode],city=mode===3||mode===9||mode===10;
   let layout;
   if(WATER.has(mode))layout=[[8.3,11.2,-.12,m.white],[11.2,145,mode===11?-15:-4,m.water]];

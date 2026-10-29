@@ -50,6 +50,7 @@ export class CircuitRoad {
   this.vector=new T.Vector3();
  }
  draw(frame,visible=true){
+  const key=frame.mode+':'+frame.legacy+':'+frame.distance+':'+visible;if(key===this.bufferKey)return;this.bufferKey=key;
   if(visible)for(let n=0;n<this.stations;n++){const z=30-n*3.5,p=frame.pose(z),at=n*9,h=p.heading,bank=p.bank,grade=frame.legacy?0:Math.atan2(courseElevation(frame.mode,frame.distance-z*10+25)-courseElevation(frame.mode,frame.distance-z*10-25),5),ch=Math.cos(h),sh=Math.sin(h),cb=Math.cos(bank),sb=Math.sin(bank),sg=Math.sin(grade),cg=Math.cos(grade),data=this.stationData;data[at]=p.x;data[at+1]=p.y;data[at+2]=p.z;data[at+3]=ch;data[at+4]=sh;data[at+5]=sb;data[at+6]=-sb*ch-cb*sg*sh;data[at+7]=cb*cg;data[at+8]=-sb*sh+cb*sg*ch;}
   for(const strip of this.strips){strip.mesh.visible=visible;if(!visible)continue;const geometry=strip.mesh.geometry,p=geometry.attributes.position,norm=geometry.attributes.normal,uv=geometry.attributes.uv;
    for(let n=0;n<this.stations;n++){const z=30-n*3.5,absolute=(frame.distance*.1-z),dash=strip.dashes&&((absolute%7+7)%7>3);
