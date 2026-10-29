@@ -83,13 +83,334 @@
       ],
       "maxTriangles": 121489,
       "errors": []
+    },
+    "publicHigh": {
+      "gpuMedianMs": 7.471718,
+      "mode": 0,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 20.199,
+      "simulationSeconds": 20.166666666666668,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.32,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        54,
+        181
+      ],
+      "maxTriangles": 230801,
+      "errors": []
+    },
+    "publicLowEmulatedTouch": {
+      "gpuMedianMs": 4.157968,
+      "mode": 0,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "touch": true,
+      "wallSeconds": 20.043,
+      "simulationSeconds": 20,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 1.55,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        66,
+        91
+      ],
+      "maxTriangles": 121567,
+      "errors": []
     }
   },
   "limitations": [
     "These short desktop Iris Xe samples are not physical-phone or long-session measurements.",
     "Initial heavily contended candidate and 9.4 baseline samples failed and are retained separately; no comparative speedup is claimed.",
-    "The last loading-only change starts the same six maps in parallel; final staged/public acceptance is recorded separately.",
     "Controlled before/after screenshots use synthetic render-only states with garage rendering disabled.",
     "Existing simple scene geometry, planar facade detail and two source car bodies still limit visual quality."
-  ]
+  ],
+  "runtimeSource": "0f49817ec57c6c7391459b4a291471802189f6ca",
+  "catalogCommit": "b8dd5f30692bb701d4c0525ffbe26b64fb156133",
+  "ci": {
+    "run": 40945084140,
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40945084140",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "stagingEngine": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.9619047619047619,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 26,
+      "streetVariants": 24,
+      "facadeFamilies": 8,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 54,
+      "textures": 24,
+      "programs": 141,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      },
+      "terrainBands": [
+        {
+          "lo": 8.3,
+          "hi": 33,
+          "height": -0.12
+        },
+        {
+          "lo": 33,
+          "hi": 145,
+          "height": -2.1
+        }
+      ],
+      "surface": {
+        "source": "Poly Haven Asphalt 02",
+        "size": 1024,
+        "metres": 3,
+        "maps": 3
+      },
+      "lightingProbes": 4,
+      "post": {
+        "active": true,
+        "supported": true,
+        "scenePixels": 2073600,
+        "bloomPixels": 129600,
+        "historyFrames": 0
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 26,
+      "streetVariants": 24,
+      "facadeFamilies": 8,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 65,
+      "textures": 25,
+      "programs": 154,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      },
+      "terrainBands": [
+        {
+          "lo": 8.3,
+          "hi": 18,
+          "height": -0.12
+        },
+        {
+          "lo": 18,
+          "hi": 110,
+          "height": -0.12
+        }
+      ],
+      "surface": {
+        "source": "Poly Haven Asphalt 02",
+        "size": 1024,
+        "metres": 3,
+        "maps": 3
+      },
+      "lightingProbes": 4,
+      "post": {
+        "active": true,
+        "supported": true,
+        "scenePixels": 2073600,
+        "bloomPixels": 129600,
+        "historyFrames": 0
+      }
+    },
+    "errors": []
+  },
+  "stagingStore": {
+    "checks": [
+      "Legacy redirects preserve queries for curated and vendor games",
+      "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+      "Existing guest identity also launches chess through the canonical path",
+      "Vendor route ID and absent-game fallback remain correct",
+      "Home has no legacy game links and catalog advertises V9"
+    ],
+    "errors": []
+  },
+  "careerPreservation": {
+    "sameCareer": true,
+    "sameBlock": true,
+    "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+    "credits": 650,
+    "tick": 3,
+    "nativeReplayVerified": true
+  },
+  "production": {
+    "version": "9.5.0",
+    "runtimeSource": "0f49817ec57c6c7391459b4a291471802189f6ca",
+    "browserFiles": 104,
+    "httpsHashes": {
+      "_arcade/art/nightshift/architecture-v8.webp": "d1dac2efb5adf8f207d240e9f98d5df065ab23d9c5fba76e495f88c5c7cecb76",
+      "_arcade/art/nightshift/cars/concept-hero.glb": "13e6d5949128de6070235f54f1539058f3babf15eacdfcdaf956c93a61292335",
+      "_arcade/art/nightshift/cars/concept-race.glb": "4138198e93c42dad0d0a35e9af41cf5b8e38047bc4a3f8a75ffae7ec154a6c3c",
+      "_arcade/art/nightshift/cars/sportscar-hero.glb": "307bcc7a17be0163e17d3eb62392750996b1239cdf315eda70817744d29f3b55",
+      "_arcade/art/nightshift/cars/sportscar-race.glb": "bb2209bf503c7ebf260b755f42f7154bfbe73189d9a39d08e027829cb7ea644e",
+      "_arcade/art/nightshift/combat-frame.webp": "b0bd4bc055d6d2468e5187f6e09913561c8eb084a87563459645df46da8dc4cd",
+      "_arcade/art/nightshift/combat-markers.webp": "493f3e171dc4a6ec4d7c5fa53dbe1390f721be35a5756cec93e14175ccad4726",
+      "_arcade/art/nightshift/combat-pickups.webp": "1f47abcb4e9dcf0090c7f39a8fcaf0d2d47eb458860ca5c3455c89d8f14cdd6d",
+      "_arcade/art/nightshift/combat-vfx-v81.webp": "2b2dac005ec2fb056fe584d1aec0f8536f4b6a556abc6ce6c9506742ef1c2e6e",
+      "_arcade/art/nightshift/combat-vfx.webp": "11e8bb8870f885b7d3fe323292f3f9198577afd3a4a3d54602a8b3dfc7448e97",
+      "_arcade/art/nightshift/crew-garage.webp": "9549e7f5522045d2c48a2f1e33b53f6c1c1662e268d72279d81b8bb1f2334055",
+      "_arcade/art/nightshift/crew-vfx.webp": "5d4fb32b4637f7a344bb6d0adfba641892ee32e2222b2378b5b73d61b69349c5",
+      "_arcade/art/nightshift/drive-vfx-v81.webp": "04855d7d1f09687908c243a3cb37e6940242eb90f5c623b0050c16806205392b",
+      "_arcade/art/nightshift/impact-sequence-v91.webp": "39307d67d31c6dbf189effa91dc3e0899273fcdcb28b543af4a0bdf773e2c429",
+      "_arcade/art/nightshift/maps/map-01.webp": "2328a481a97913b4dc0011334869dd6e1f1dd46e02d306456f384f0a070b66c1",
+      "_arcade/art/nightshift/maps/map-02.webp": "5cbf3847993a484bfb47fbcd3a1afb1b2d5cee0669b8cbc8fa1775d510125b07",
+      "_arcade/art/nightshift/maps/map-03.webp": "bfe4b54d0093586534f8a62250695acc7585191bbbd50f20dbc87dde27e00fe8",
+      "_arcade/art/nightshift/maps/map-04.webp": "1bb3c1751aa5a813a90797d672d7fc2037f1ea3198e069d116649ab52f33c50c",
+      "_arcade/art/nightshift/maps/map-05.webp": "77a333a2892e553dc14e9a1133e7aadba8b2c0b216c08604c0b8c0cee57e2d60",
+      "_arcade/art/nightshift/maps/map-06.webp": "b3ec9fafae66a282ad466e0d7b3e90e78bdc6a4b3d629c7550f5c0e9e444d73d",
+      "_arcade/art/nightshift/maps/map-07.webp": "7412802ab251464b29b364915a975842f5ed359c9d487731eaa0a260e25955e2",
+      "_arcade/art/nightshift/maps/map-08.webp": "9df9dbe6859bd7438a4a51f40cf489a8fe300a9b41cdfac35876f56135fc76b1",
+      "_arcade/art/nightshift/maps/map-09.webp": "20c1efa313899bad28ab0632b3b3ba3ccad9d00811075b9a857ddce7b2d8f6a4",
+      "_arcade/art/nightshift/maps/map-10.webp": "a2c5d91daf1618b3ac6b34d6f4b3ca05ee8e491c63454ba0720f23869182a74e",
+      "_arcade/art/nightshift/maps/map-11.webp": "a208142dcce01f1e3cb5dfb43ebb18f04b54043b508b6ca543c16d3c3fa153cd",
+      "_arcade/art/nightshift/maps/map-12.webp": "ab5a9f59b81cd3e10be7d08deb8a4891585ca5624ffb536d23f97ed7d0ff0d75",
+      "_arcade/art/nightshift/materials.webp": "408103ac147c37e2e935aca1b93f24fa27e7b2c3fcb7f5ef76f4589697fab305",
+      "_arcade/art/nightshift/relay-materials.webp": "8c040d64af646071ab840ce8d367f1132c4936d22f5e7130915a75f8a5d4c966",
+      "_arcade/art/nightshift/relay-sky.webp": "98dbea386c42f5b890dd9c6837887a924a9c0292cb31592c1764299809628d1b",
+      "_arcade/art/nightshift/skyline.webp": "550987f27d02d4f3c323901df3fee44ee635e70c1ffe5e6dffd4f21afef18ef2",
+      "_arcade/art/nightshift/street-lighting-v8.webp": "b7e79e998e1598dd82be4a86353563e24929187b5eea1e7ca026745cff9900e4",
+      "_arcade/art/nightshift/structures-v8.webp": "6a08bd51c8bbae0a8a03750a77d961ffe2ecacea733c2b4e569fc8ca79982360",
+      "_arcade/art/nightshift/world-biomes.webp": "df75e5f407e67b601087987fa78fccb1389c85b0dcd24405667537705352c81e",
+      "_arcade/art/nightshift/world-foliage.webp": "88d6f6a466dceb67216965e6d267b6d5e698f7ffb2350b139c4cc0bbfe740b65",
+      "_arcade/art/nightshift/world-terrain.webp": "22f0cc7bf770a9c7f62ee2080ed12fc98a49d9dcc1bd1093228b3862156d4ae9",
+      "_arcade/licenses/three.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "_arcade/licenses/vehicles.txt": "1d30a6cdb72fa62fabde5e726f9eda46239a1ece4dec763dddbd0a99ca6e6480",
+      "_arcade/nightshift-keyboard.mjs": "ac33f8cfe8bc03948cad80af221996718a957df919804c65ec8864beaebb6078",
+      "_arcade/nightshift8-architecture.mjs": "efc8eb7d0991455fb343fd57ac05a8530da6ddb5acc51e7a6d8b37c3850d6448",
+      "_arcade/nightshift8-assets.mjs": "2ba0102b28f25a27201979430ccbd3ea0e94ee932b9db4aade7a41a0fbb33651",
+      "_arcade/nightshift8-audio.mjs": "9dbc12645b0a7db92e87d7c7ded1b9708b783ac88ffc063d1bf37a777ef1f1e8",
+      "_arcade/nightshift8-combat.mjs": "851f15d6f271f6a274a6e04eaf4a33f580fba8734feb8709e5115f28aa78a367",
+      "_arcade/nightshift8-drive-vfx.mjs": "feaff3cad51f3977606f50914033f8ee4e379537e03ed7b051c1f1cb45e9a5fc",
+      "_arcade/nightshift8-effects.mjs": "69ef256e04d0ff368cf51a05b2eda2d3b8df4b7bfe9ce3490f1ab044089ebb17",
+      "_arcade/nightshift8-engine.mjs": "6ffda44d7c3a7237fa81a3a594cd12c95f26492762e93ec2e4164f83e2710c8c",
+      "_arcade/nightshift8-feedback.mjs": "060037361011dd247273fe4ffd1cbddf98366bb42296ff76b4eac1da2ef7faa9",
+      "_arcade/nightshift8-fleet.mjs": "cbdf73a7028b92d20b5fb29771bb64ebbe94251e9f87baf74884cc87b1b60b0c",
+      "_arcade/nightshift8-icons.mjs": "2af643782d82528e39480e4b43795674f611fb86872778c6e6a2e34904229e3f",
+      "_arcade/nightshift8-joystick.mjs": "66d4d5d23f82ac253afc6b8cf6800a09d17fef233fc2da6b6a7e99d28f903002",
+      "_arcade/nightshift8-performance.mjs": "5ef42d4e27a5aa09179ed708067848714c3199c04b78fca09395cb637064c7ba",
+      "_arcade/nightshift8-presentation.mjs": "a590e4dc0aeba2e79c71fbf20dd10e3d7dff8bcdc814c5a8512fe7fbd6fe95ef",
+      "_arcade/nightshift8-renderer.mjs": "6f853c2e8e2c8a4aecfd4c0c9d89b19af8847ad7fae4b1ae4d8023ffaf59cde8",
+      "_arcade/nightshift8-rules.mjs": "abc1ed28cb014d380cd8c31fb182400f9fbb124afa059a4c4eed6c3b1b9ae2dc",
+      "_arcade/nightshift8-world-route.mjs": "39104296128795357dcaf85c329ae9f054abca0355409f3bf24d48a5e54f0f25",
+      "_arcade/nightshift8-world.mjs": "9d7cc09d3a2c4c25cb58388b9a5bee3412ed6a6f77b692e1a6ba872f7008c5ab",
+      "_arcade/nightshift8.css": "adec1333f8129cd0d0721e6572f700bff533f497db40b78a77bb02f299142a56",
+      "_arcade/nightshift9-architecture.mjs": "dc3ae84b64444f134f0ef282a5509543435ccf08f4c903accc1a7dcf58e1e095",
+      "_arcade/nightshift9-atmosphere.mjs": "52e4d063929f7b30ca42dfd011fddc86430b7bd04442eff15fa7942179491f51",
+      "_arcade/nightshift9-audio.mjs": "7e1bb6531b05ccf00c5816d224243b9b65f5a3787dbdb5592d1bfc6b651a207b",
+      "_arcade/nightshift9-combat.mjs": "016b1da74c0c17451157f5ade2b83ee320c3458427782ae7ca239a3ad53b1323",
+      "_arcade/nightshift9-contact.mjs": "252782210ea0f4ca32afaff16a98a85f398aa94df9eea49fa83937dc9fcf8664",
+      "_arcade/nightshift9-course-data.mjs": "f9c7f1d375082b9e0611de00f4df8bcdef3d3e62d18a772663bf940bf9c8572b",
+      "_arcade/nightshift9-course.mjs": "6b2bdb8cf64900f86cad55ab16d4dd2c3b51b8cca3f321db912006d3d01c1640",
+      "_arcade/nightshift9-courses.json": "683542d927e2215976c455433ef1ef29572dcd0a1029ffe915ea9837fbd8adab",
+      "_arcade/nightshift9-drive-vfx.mjs": "426465087bdea3931f4305fea877ef218437f74728bfc13ca9282bfd4cb44750",
+      "_arcade/nightshift9-effects.mjs": "39d8226e17fa276256ccb2ba1297b1297c6068f2c8890d754309e6c20929f406",
+      "_arcade/nightshift9-feedback.mjs": "e30444b5c471e17b0a58ecc7d40e8b76f2d009fcd4f70b013e754dc7532e0df7",
+      "_arcade/nightshift9-fleet.mjs": "d80bb89eac5a1186b908ec7bf84e14282eb0bd6cc44e958882678e907d382a5b",
+      "_arcade/nightshift9-gpu.mjs": "64eb6067d9d99d06a0049b96fcd22635d62a7cfa0830963f3003ad2936b73b65",
+      "_arcade/nightshift9-motion.mjs": "b63c4c22668327085533774c8ad8a22e4926a4155ef26d3f9c5d5b1c178f07cb",
+      "_arcade/nightshift9-renderer.bundle.mjs": "41bd32009ad020e483380c454fcd472eccd74c7ae8c1b7d497ea0a4cb42c1edb",
+      "_arcade/nightshift9-renderer.mjs": "a2314509771ae2a4194f0e40b11deaf22c3344e171e48f68c13e27386151369e",
+      "_arcade/nightshift9-rules.mjs": "bcc05641e8f841a1f3f29452bdfebaf94485fbe3c219ada689694918dcf9f8e3",
+      "_arcade/nightshift9-trails.mjs": "00d4299c4bf0523d5a00fded136d0669b9eaa2e46fa6978a1ad6388bcd22dbe0",
+      "_arcade/nightshift9-world-route.mjs": "21ef12c8ef1c6d83c56089323292f9119015bec5d1febd28ad4f272562242612",
+      "_arcade/nightshift9-world.mjs": "efb5bc9dae02b763d19b73d830e275dc9f12e33f73657b24a29b07dce7a4f0e9",
+      "_arcade/nightshift9.css": "cc9fa5ccc5852deda1c079a8e0b616107f98c5e2eff9befa339e1793458de1c9",
+      "_shared/assets/drift-run-keyart.webp": "63378bd31b2581ff1a882f03f89ddada541fa259508d5a784dfa5ecb0f03d7fa",
+      "_shared/assets/myelin-logo.png": "47e5fb69d24ee433caf390baf0a2a02ceb6661fb2b472a70c8a36de5b4c659ca",
+      "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
+      "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
+      "_shared/game-loader.js": "9ba8cd764e893187d0cc64987632b47d2399b6398ed8e3cffd6e0d47cfd17218",
+      "app.js": "b6fe42efe23164873151a43224a06ee840f6b088d7e94299bca0ffbe4e47b13a",
+      "index.html": "74322ebf24b4a42b708bf1f1d3be5e1ebf08257f1f45f07c5ae828af83371816",
+      "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
+      "_arcade/nightshift9-engine.mjs": "b1145468ee05e81af982dc1a1e5c9c1d67d05a14ea82fb09d181e0a260a805a6",
+      "_arcade/nightshift9-performance.mjs": "f74f4f7576613bad92af8e1d60b8739a62471be027de9b8617d85a470f459b65",
+      "_arcade/licenses/drei.txt": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8",
+      "_arcade/nightshift9-streets.mjs": "c17c4f0f2e1f3922ea3ca3fe1b74cc8ea851a33ac9c956937b0be7e5ed26ef19",
+      "_arcade/nightshift9-ground.mjs": "94a10f5c230389d865b93aea8719e30749264ab770c8393db9b650563b824e96",
+      "_arcade/nightshift9-recovery.mjs": "62e400bacb49f7bcf6c4087e27703bb8141532e5f08fea45f3d08114f2c6f04e",
+      "_arcade/art/nightshift/architecture-v93.webp": "fb2c95d9459682601fe2831bc93b8976adda7310a174076794cc05a402d772a6",
+      "_arcade/nightshift9-career.mjs": "24fe3fcb0ac26e6af5b9b2d10636e0d3c34409768dbe2bccb3a46a80fd9a8726",
+      "_arcade/nightshift9-tactics.mjs": "99718b7ff18824a56d13714c2995e2ffe8bc4d6e0a2578bd1ed1bf6b669889b6",
+      "_arcade/nightshift9-look.mjs": "2513ad57198e1d8d9f22abb0cca037ecea2191e042f9e872b1097ac103b28513",
+      "_arcade/nightshift9-post.mjs": "34794da1133943fc01db2fa6c013c177abb41619d4aab2c856104f9cdc8f7b03",
+      "_arcade/nightshift9-surface.mjs": "290540852ce267f4d09a8874a4c549809f30632f5a3f5b02f70de78ef7bba267",
+      "_arcade/licenses/poly-haven.txt": "f1431d837bcb98db8ec98266f220f631b1af19e02b5566c7aecb86b5d43ec81c",
+      "_arcade/art/nightshift/pbr/asphalt-color.jpg": "1aa5ce99f58a625c71d48cfc3e68b65ca85ccb00f39e045c0a928608a0ea25ed",
+      "_arcade/art/nightshift/pbr/asphalt-normal.jpg": "42a1c381b53204e83a982db2864479a30bc127bbdeebb1006f8ee51bff099df3",
+      "_arcade/art/nightshift/pbr/asphalt-roughness.jpg": "70ba3edc65525eb4dc366cf010ca7ae0bd34e0251ff0225c2dad627a873d0712",
+      "_arcade/art/nightshift/pbr/daylight.hdr": "208c27a7615f2f2960265c751c79d3bb410e76a5c9b1f2c15ac9427f68bce308",
+      "_arcade/art/nightshift/pbr/night.hdr": "b0d223393336080c0602a10a547b11e27672ee9539387774ad0f80c2b3624b05",
+      "_arcade/art/nightshift/pbr/sunset.hdr": "47c1294edcb747e8e260e4a64f5162a71562a40edaa8c1a0608e1dd408669a4c"
+    },
+    "nativeHashes": {
+      "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+      "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89"
+    },
+    "otherCatalogEntriesPreserved": true,
+    "services": {
+      "myelin-nightshift-v8": {
+        "image": "sha256:0054d84fe1039736f90dcdc129ce1ee9f3618a5ac3e711c0e27638af14aa9205",
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "restarts": 0
+      },
+      "utxoplay-store": {
+        "image": "sha256:8e3cf8288ade82e36b350443ae6d5cbff94a4750644cf0cb8d9e9284e2c455d0",
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "restarts": 0
+      }
+    },
+    "sourceArchiveSha256": "53dbba78f45bdab05e658b1d37b1e9d65fcd0575ceccad82f77dca2f98925a90"
+  },
+  "publicStore": {
+    "checks": [
+      "Legacy redirects preserve queries for curated and vendor games",
+      "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+      "Existing guest identity also launches chess through the canonical path",
+      "Vendor route ID and absent-game fallback remain correct",
+      "Home has no legacy game links and catalog advertises V9"
+    ],
+    "errors": []
+  },
+  "stagingContainersRemoved": true
 }

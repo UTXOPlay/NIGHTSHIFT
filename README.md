@@ -6,7 +6,7 @@ A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival
 
 Current product status: **playable solo arcade prototype**. See the [9.4 completion audit and NFS alignment gates](docs/completion-audit-v94.md) for implemented mechanics, measured limitations and the next acceptance criteria.
 
-![NIGHTSHIFT 9.3 mixed streets](docs/screenshots/streets-city-v93.png)
+![NIGHTSHIFT 9.5 public harbour](docs/screenshots/lighting-live-v95.webp)
 
 ## Race the circuit
 

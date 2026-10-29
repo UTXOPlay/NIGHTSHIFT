@@ -205,6 +205,7 @@ def cutover():
     changed = []
     try:
         for name, original, candidate in [(GAME, old_game, game_image), (STORE, old_store, image)]:
+            assert inspect(name)["Id"] == original["Id"], "Concurrent container replacement; preserve the newer deployment"
             backup = name + "-before-nightshift-95"
             run(["docker", "stop", "-t", "15", name])
             run(["docker", "rename", name, backup])

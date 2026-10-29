@@ -1,10 +1,31 @@
 # Release verification
 
-The 9.5.0 presentation candidate is documented in [materials and lighting](nightshift-v95.md). The preceding production release is [NIGHTSHIFT 9.4.0 — Career, classification and garage](nightshift-v94.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 94 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
+The active release is [NIGHTSHIFT 9.5.0 — Materials and lighting](nightshift-v95.md). The exact V9 native profile remains `e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def`. `release-integrity.json` binds twelve native inputs and 104 browser files. Frozen V8/V7 source, executable hashes, career rules and save namespaces are preserved.
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.
 
 Product completeness is evaluated separately in the [current 9.4 completion audit](completion-audit-v94.md). The checks below verify implemented behavior and release identity; the audit records remaining gameplay and NFS-alignment gaps.
+
+## 9.5 verification — 30 October 2026
+
+Runtime source: `0f49817ec57c6c7391459b4a291471802189f6ca`. [Both runtime CI jobs pass](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40945084140), including native/browser conformance and signed replay checks. The [isolated parent catalog commit](https://github.com/UTXOPlay/UTXOPlay/commit/b8dd5f30692bb701d4c0525ffbe26b64fb156133) changes only NIGHTSHIFT's version. The unrelated dirty parent checkout and its index were preserved; only the working catalog's NIGHTSHIFT version was aligned.
+
+All 81 Node/host tests pass. Render-only fixtures cover twelve maps and eighteen high/low/high resize/input cases across all six required sizes. Final staged application acceptance passes thirteen checks, including a 233.4-second native-signed victory, purchases and reload, all large displays, mobile joystick/counter input, landscape gating, cleared inputs and reduced motion. Four engine lifecycle checks pass, including context-loss recovery of the identical signed career; 96.2% of sampled street frames skip instance uploads. Five staged and five public store launcher checks pass. Fixture screenshots explicitly disable garage rendering and do not establish human playability or a physical-device frame rate.
+
+All 104 files fetched from the actual public HTTPS endpoint match the release manifest. V9 and V8 native binary hashes remain pinned. A career created before cutover kept its exact game state, block, profile and 650 credits, advanced from tick 0 to 3 through ordinary inputs, then verified its native replay. Production environment values, mounts and every other catalog entry were preserved. Both replacement services report healthy with zero restarts.
+
+Two final public-origin samples on desktop Intel Iris Xe / Chromium OpenGL:
+
+| Quality / viewport | Wall / simulation seconds | Median / p10 FPS | Median CPU work | Sampled GPU time |
+| --- | --- | --- | --- | --- |
+| High, 1920×1080 | 20.199 / 20.167 | 60 / 60 | 2.32 ms | 7.47 ms |
+| Low, 844×390 emulated touch | 20.043 / 20.000 | 60 / 60 | 1.55 ms | 4.16 ms |
+
+Both kept render scale 1 and had no browser errors. These are short, shared-desktop samples. They cache manifest-verified local assets while navigation, authentication, native actions and saves use the deployed TLS origin through SSH CONNECT; the separate 104-file sweep verifies actual delivery. They are not network-startup or physical-phone thermal/memory benchmarks, and no controlled speedup over 9.4 is claimed. Initial contended candidate/baseline failures remain documented in [the lighting notes](nightshift-v95.md).
+
+The game image is `sha256:0054d84fe1039736f90dcdc129ce1ee9f3618a5ac3e711c0e27638af14aa9205`; our store cutover image is `sha256:8e3cf8288ade82e36b350443ae6d5cbff94a4750644cf0cb8d9e9284e2c455d0`. The store image was derived from the latest live store immediately before cutover, preserving its independent fullscreen and other-game changes. Staging uses separate native data, a consistent private platform backup and no public `VIRTUAL_*` registration. The two owned staging containers were removed after verification; production domain pins remain unchanged. Original containers, private configurations, a consistent platform backup and native evidence remain available for rollback. The runtime source archive SHA-256 is `53dbba78f45bdab05e658b1d37b1e9d65fcd0575ceccad82f77dca2f98925a90`.
+
+[Measured evidence](lighting-results.json) · [Asset provenance](lighting-assets-v95.json) · [Controlled visual comparison and remaining limitations](nightshift-v95.md).
 
 ## 9.4 verification — 30 October 2026
 

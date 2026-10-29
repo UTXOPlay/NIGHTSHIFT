@@ -17,3 +17,11 @@ Preserve existing entries when editing this file. A future production service re
 NIGHTSHIFT staging strips all `VIRTUAL_*` values and uses loopback review ports. Copies of production container settings must remove public registration before startup. Domain pins provide a second boundary when another deployment overlooks that step.
 
 Verification checked gateway syntax, unchanged hashes for other domain configurations, all three generated upstreams, regeneration after staging removal, actual TLS assets and native binaries, authentication, an exact upgrade debit, ordinary inputs, signed replay and the store launcher. Other games can update the shared production store while preserving NIGHTSHIFT's catalog entry and upstream.
+
+## Presentation cutovers
+
+`release-presentation.py` supports the current standalone Docker containers as well as services originally created with Compose. It clones the live environment, mounts, network aliases and host configuration, replaces only the game image and NIGHTSHIFT's entry in the newest store catalog, and rejects concurrent container replacement. Replaced containers carry `io.utxoplay.nightshift.release`; their complete mode-0600 configurations are retained inside the private release directory. Do not assume that a live store still has Compose project labels after another project's deployment.
+
+The 9.5 cutover retains stopped `myelin-nightshift-v8-before-nightshift-95` and `utxoplay-store-before-nightshift-95` containers. A presentation rollback stops each replacement before renaming it, restores the original container's production name and starts that original with the current data mounts. The unchanged native profile can read subsequent valid V9 actions. Retain current data rather than extracting a database backup over it. Never run both generations against the same writable native/platform data.
+
+Staging clones all writable native/platform mounts into the private release directory, removes public `VIRTUAL_*` registration and uses a loopback-only store port. `cleanup` removes only this release's two staging containers. Existing production domain pins and other projects' staging services remain untouched.
