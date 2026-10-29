@@ -94,9 +94,9 @@ export class DriftRenderer{
  event(e,g,previous){if(e.type==='pulse')this.shotTarget=e.target;if(['collision','wreck','hit','scrape'].includes(e.type)){this.hit=e.type==='wreck'?.85:.45;this.chase.impact(g);}if(g){this.combat.emit(e.type,g,previous,e.id??-1,e.target??-1);this.effects.emit(e.type==='collision'?'bounce':e.type==='wreck'?'damage':e.type,g,previous);}}
 
  roadX(){return 0;}
- pointer(clientX,clientY){const r=this.canvas.getBoundingClientRect();this.ray.setFromCamera(new T.Vector2((clientX-r.left)/r.width*2-1,1-(clientY-r.top)/r.height*2),this.camera);this.ray.ray.intersectPlane(this.inputPlane,this.point);return{x:500+this.point.x*250,y:500-this.point.y*250};}
- projectWorld(x,y=0,z=0){const p=new T.Vector3(x,y,z).project(this.camera);return{x:(p.x+1)*this.width/2,y:(1-p.y)*this.height/2};}
- project(x,y=0,z=0){const p=new T.Vector3(x,y,z);if(!this.previewMode&&this.course.table&&z>-600)this.course.project(p);p.project(this.camera);return{x:(p.x+1)*this.width/2,y:(1-p.y)*this.height/2};}
+ pointer(clientX,clientY){const r=this.canvas.getBoundingClientRect();this.ray.setFromCamera(new T.Vector2((clientX-r.left)/r.width*2-1,1-(clientY-r.top)/r.height*2),this.camera);this.ray.ray.intersectPlane(this.inputPlane,this.point);if(!this.previewMode&&this.course.table)this.course.unproject(this.point,this.point);return{x:500+this.point.x*250,y:500-this.point.y*250};}
+ projectWorld(x,y=0,z=0){const p=new T.Vector3(x,y,z).project(this.camera),r=this.canvas.getBoundingClientRect();return{x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};}
+ project(x,y=0,z=0){const p=new T.Vector3(x,y,z);if(!this.previewMode&&this.course.table&&z>-600)this.course.project(p);return this.projectWorld(p.x,p.y,p.z);}
  draw(g,before,alpha,delta,ratio,{running,reduced,low,ending=false,countdown=0,features={tier:0,reflection:true,shadowInterval:2,rainCount:1200},warmup=false}){
   this.features=features;low=low||ratio<.9||features.tier>=2;
   const rect=this.canvas.getBoundingClientRect(),w=Math.max(1,rect.width),h=Math.max(1,rect.height),pixel=Math.min(ratio,low?1:1.5,Math.sqrt(3686400/(w*h))*Math.min(1,ratio/Math.min(globalThis.devicePixelRatio||1,2)));if(w!==this.width||h!==this.height||pixel!==this.pixel){this.width=w;this.height=h;this.pixel=pixel;this.renderer.setPixelRatio(pixel);this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}

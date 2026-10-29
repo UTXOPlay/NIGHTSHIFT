@@ -1,6 +1,13 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import * as T from 'three';
 import {QualityGovernor,disposeSceneResources} from '../games/arcade/web/nightshift9-engine.mjs';
 import {CircuitFrame} from '../games/arcade/web/nightshift9-course.mjs';
+import {DriftRenderer} from '../games/arcade/web/nightshift9-renderer.mjs';
+
+test('input reverses the banked control plane after CSS resize and viewport offsets',()=>{
+ const camera=new T.PerspectiveCamera(56,16/9,.1,900);camera.position.set(0,4.7,10.8);camera.lookAt(0,.7,-22);camera.updateMatrixWorld();
+ const renderer=Object.assign(Object.create(DriftRenderer.prototype),{canvas:{getBoundingClientRect:()=>({left:17,top:31,width:844,height:390})},camera,course:new CircuitFrame(),ray:new T.Raycaster(),inputPlane:new T.Plane(new T.Vector3(0,0,1),0),point:new T.Vector3(),width:1920,height:1080});
+ for(const previewMode of [false,true])for(let mode=0;mode<12;mode++){renderer.previewMode=previewMode;renderer.course.set(mode,7600);for(const [x,y] of [[2,0],[-3,.5],[.5,2]]){const p=renderer.project(x,y),v=renderer.pointer(p.x,p.y);assert.ok(Math.abs(v.x-(500+x*250))<1e-7);assert.ok(Math.abs(v.y-(500-y*250))<1e-7);}}
+});
 
 test('quality sheds optional work before resolution and uses measured GPU load',()=>{const b=new QualityGovernor(2);assert.equal(b.max,1.5);for(let n=0;n<130;n++)b.sample(16.667,'auto',23);assert.equal(b.tier,1);assert.equal(b.ratio,1.5);assert.equal(b.features.reflection,false);for(let n=0;n<400;n++)b.sample(30,'auto',25);assert.equal(b.tier,2);assert.ok(b.ratio<1.5);assert.equal(b.sample(100,'high'),1.5);assert.equal(b.tier,0);assert.equal(b.sample(100,'low'),1);assert.equal(b.tier,2);});
 test('a transient hitch does not lower quality and recovery has hysteresis',()=>{const b=new QualityGovernor(1);b.sample(100);for(let n=0;n<160;n++)b.sample(16.667,'auto',8);assert.equal(b.tier,0);for(let n=0;n<240;n++)b.sample(30,'auto',25);const tier=b.tier;for(let n=0;n<60;n++)b.sample(16.667,'auto',8);assert.equal(b.tier,tier);});
