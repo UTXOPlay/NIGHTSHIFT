@@ -12,7 +12,7 @@ const intelCache=new Map();
 export function routeIntel(mode){if(intelCache.has(mode))return intelCache.get(mode);const total=EVENTS[mode].distance,sections=Array.from({length:4},(_,sector)=>{let peak=0,changes=0,previous=0;for(let n=0;n<24;n++){const bend=curvature(total*(sector/4+n/96),mode),sign=Math.abs(bend)>=3?Math.sign(bend):0;peak=Math.max(peak,Math.abs(bend));if(sign&&previous&&sign!==previous)changes++;if(sign)previous=sign;}return{sector,startKm:total*sector/40000,endKm:total*(sector+1)/40000,peak,changes,character:changes>=2?'LINKED BENDS':peak>=10?'TIGHT CORNERS':peak>=5?'SWEEPING TURNS':'FAST SECTION'};});intelCache.set(mode,sections);return sections;}
 export function tacticalReadout(g){
  const e=EVENTS[g.mode],left=Math.max(0,e.distance-g.distance),unit=(icon,title,detail)=>({icon,title,detail});
- if(g.over)return null;
+ if(g.over||g.physics_version!==9)return null;
  if(!g.hull||g.recover)return unit('shield','SYSTEMS RECOVERING','Keep clear of traffic');
  const incoming=g.rivals.filter(r=>r.windup>0&&r.attack_target===-1&&r.hp>0&&!r.stun&&Math.abs(r.distance-g.distance)<900);
  if(incoming.length)return unit('shield',g.counter>0&&!g.counter_cd?'JAM OR CHANGE LINE':'CHANGE LINE','Incoming energy attack');

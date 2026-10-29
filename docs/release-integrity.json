@@ -102,7 +102,7 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "9ba8cd764e893187d0cc64987632b47d2399b6398ed8e3cffd6e0d47cfd17218",
-    "app.js": "29174b9a04c0082ad24142ddb30aaf9d5f08bdf6617ae5f52ef6b422612d1e57",
+    "app.js": "0fb5a4216c318a92a9e1b143bbe8b3b3ae4ed560d9d20a5f9a63645fb69d2312",
     "index.html": "e5073dce267b9c5de2b8fa9b3dc0a014284b1557b03ae0ecdd83f49116455a58",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
     "_arcade/nightshift9-engine.mjs": "b1145468ee05e81af982dc1a1e5c9c1d67d05a14ea82fb09d181e0a260a805a6",
@@ -113,6 +113,6 @@
     "_arcade/nightshift9-recovery.mjs": "62e400bacb49f7bcf6c4087e27703bb8141532e5f08fea45f3d08114f2c6f04e",
     "_arcade/art/nightshift/architecture-v93.webp": "fb2c95d9459682601fe2831bc93b8976adda7310a174076794cc05a402d772a6",
     "_arcade/nightshift9-career.mjs": "24fe3fcb0ac26e6af5b9b2d10636e0d3c34409768dbe2bccb3a46a80fd9a8726",
-    "_arcade/nightshift9-tactics.mjs": "38ba11f73e04989eabcbe98ac0110e46cf285c6432eb33df04c1cb4f671a2e07"
+    "_arcade/nightshift9-tactics.mjs": "99718b7ff18824a56d13714c2995e2ffe8bc4d6e0a2578bd1ed1bf6b669889b6"
   }
 }
