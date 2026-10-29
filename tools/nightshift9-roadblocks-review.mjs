@@ -1,3 +1,4 @@
+import {installReviewProfile} from './client-profile.mjs';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {mkdirSync,writeFileSync} from 'node:fs';
@@ -15,7 +16,7 @@ try{
   ctx.setDefaultTimeout(90000);ctx.setDefaultNavigationTimeout(90000);
   let logout;
   try{
-   if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
+   installReviewProfile(ctx);if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
    await ctx.addInitScript(()=>{localStorage.setItem('utxoplay:quality','low');localStorage.setItem('nightshift:keyboard',JSON.stringify({preset:'colemak'}));});
    const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));
    await p.goto(origin+'/games/nightshift/?review=1');await p.waitForFunction(()=>__driftReview?.().loaded);
@@ -31,7 +32,7 @@ try{
    const earlyDistance=await p.evaluate(()=>__driftReview().roadblock.distance);assert.ok(earlyDistance>200);
    const box=await p.locator('#roadblock-guide').boundingBox();assert.ok(box.x>=0&&box.y>=0&&box.x+box.width<=(touch?844:1920));
    assert.equal(await p.locator('#minimap .map-roadblock').evaluate(e=>e.style.display),'');
-   const overlap=await p.evaluate(()=>{const e=document.querySelector('#telegraph'),prior=e.innerHTML,wasHidden=e.hidden;e.hidden=false;e.innerHTML='<span><b>↑</b></span><span><b>↓</b></span>';const a=e.getBoundingClientRect(),b=document.querySelector('#roadblock-guide').getBoundingClientRect(),intersects=a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;e.innerHTML=prior;e.hidden=wasHidden;return intersects;});assert.equal(overlap,false,'Two incoming-attack cues do not overlap the roadblock artwork');
+   const overlap=await p.evaluate(()=>{const e=document.querySelector('#telegraph'),prior=e.innerHTML,wasHidden=e.hidden;e.hidden=false;e.innerHTML='<span><b>↑</b></span><span><b>↓</b></span>';const b=document.querySelector('#roadblock-guide').getBoundingClientRect(),intersects=[...e.children].some(child=>{const a=child.getBoundingClientRect();return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;});e.innerHTML=prior;e.hidden=wasHidden;return intersects;});assert.equal(overlap,false,'Two incoming-attack cues do not overlap the roadblock artwork');
    await p.screenshot({path:out+(touch?'/touch-early.png':'/desktop-early.png')});
    await p.keyboard.press('KeyP');await p.waitForFunction(()=>!__driftReview().pending&&!__driftReview().sending);state=await call('state');
    const g=structuredClone(state.game),tape=[];

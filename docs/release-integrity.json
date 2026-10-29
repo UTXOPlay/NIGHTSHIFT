@@ -131,7 +131,7 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "9ba8cd764e893187d0cc64987632b47d2399b6398ed8e3cffd6e0d47cfd17218",
-    "app.js": "e0049610e66e5884ccd3d804481f95209404ba65f75aea6e2f6cadcc0ab27ef4",
+    "app.js": "cace1bff5ef07e608a0f5594e569d30b5bd0fe194dc9995283e93667e509ac25",
     "index.html": "49d455055cd46a323dfbdfb9a5e850f0fd4f5bfa22b3c431651d8906b85ad8cb",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   }

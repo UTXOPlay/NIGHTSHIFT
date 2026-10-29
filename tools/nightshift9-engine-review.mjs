@@ -1,3 +1,4 @@
+import {installReviewProfile} from './client-profile.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
@@ -6,7 +7,7 @@ const origin=process.env.DRIFT_ORIGIN||'http://127.0.0.1:8899',out=process.env.D
 const browser=await chromium.launch({proxy:process.env.DRIFT_PROXY?{server:process.env.DRIFT_PROXY}:undefined,args:['--no-sandbox','--use-angle=gl','--enable-webgl','--ignore-gpu-blocklist']});
 const ctx=await browser.newContext({viewport:{width:1920,height:1080}}),errors=[],checks=[];ctx.setDefaultTimeout(Number(process.env.DRIFT_LOAD_TIMEOUT||90000));ctx.setDefaultNavigationTimeout(Number(process.env.DRIFT_LOAD_TIMEOUT||90000));let logout;
 try{
- if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
+ installReviewProfile(ctx);if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
  const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));
  await p.goto(origin+'/games/nightshift/?review=1',{waitUntil:'domcontentloaded'});await p.waitForFunction(()=>__driftReview?.().loaded);
  const loaded=await p.evaluate(()=>__driftReview().engine);assert.equal(loaded.errors,0);assert.ok(loaded.preparedModes.includes(0));checks.push('Assets and initial shader variants finish before loading completes');

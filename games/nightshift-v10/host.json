@@ -16,5 +16,6 @@
     "target/release/myelin-nightshift-v10"
   ],
   "manifest": "games/nightshift-v10/native/Cargo.toml",
-  "sessionName": "myelin-nightshift-v8"
+  "sessionName": "myelin-nightshift-v8",
+  "clientProfile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561"
 }

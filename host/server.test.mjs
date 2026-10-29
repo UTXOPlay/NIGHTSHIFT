@@ -6,11 +6,11 @@ import path from 'node:path';
 import {createGameHost} from './server.mjs';
 
 const token='test-runtime-token-'.repeat(3),origin='http://game.example';
-async function fixture(t,id='example'){
+async function fixture(t,id='example',extraConfig={}){
  const dir=mkdtempSync(path.join(tmpdir(),'game-host-test-'));
  writeFileSync(path.join(dir,'index.html'),'<h1>Independent game</h1>');
  const calls=[];
- const service=createGameHost({config:{name:'fixture',games:[{id,webRoot:dir,runtimePath:'/native'}]},origin,runtimeUrl:'http://native.invalid',runtimeToken:token,fetchImpl:async(url,options)=>{calls.push({url,options});return Response.json({account:options.headers['X-UTXOPlay-Account']});}});
+ const service=createGameHost({config:{name:'fixture',...extraConfig,games:[{id,webRoot:dir,runtimePath:'/native'}]},origin,runtimeUrl:'http://native.invalid',runtimeToken:token,fetchImpl:async(url,options)=>{calls.push({url,options});return Response.json({account:options.headers['X-UTXOPlay-Account']});}});
  const server=service.app.listen(0,'127.0.0.1');await new Promise(r=>server.once('listening',r));
  const url='http://127.0.0.1:'+server.address().port;
  t.after(async()=>{service.close();await new Promise(r=>server.close(r));rmSync(dir,{recursive:true,force:true});});
@@ -55,4 +55,16 @@ test('versioned game runtime routing preserves identity and leaves legacy route 
  const server=service.app.listen(0,'127.0.0.1');await new Promise(r=>server.once('listening',r));t.after(()=>{service.close();server.close();});
  for(const id of ['starfall','neon-coil'])assert.equal((await fetch(`http://127.0.0.1:${server.address().port}/games/${id}/api/state`,{headers:{'X-Runtime-Token':token,'X-UTXOPlay-Account':'a'.repeat(64)}})).status,200);
  assert.deepEqual(calls.map(c=>c.url),['http://127.0.0.1:8796/starfall/api/state','http://legacy.invalid/neon-coil/api/state']);assert.ok(calls.every(c=>c.account==='a'.repeat(64)));
+});
+
+test('stale browser builds cannot mutate a versioned career and client metadata stays outside native actions',async t=>{
+ const profile='c'.repeat(64),f=await fixture(t,'drift-run',{clientProfile:profile}),entry=await f.request('/games/nightshift/'),jar=cookie(entry);
+ const action={session_id:'signed',expected_block:'head',action:{type:'ticks',inputs:[0]}};
+ assert.equal((await f.request('/games/nightshift/api/action',action,jar)).status,426);
+ assert.equal((await f.request('/games/nightshift/api/new',{},jar)).status,426);
+ assert.equal((await f.request('/games/nightshift/api/action',{...action,client_profile:'d'.repeat(64)},jar)).status,426);
+ assert.equal(f.calls.length,0,'No mutation reaches any native executor from a stale browser');
+ assert.equal((await f.request('/games/nightshift/api/action',{...action,client_profile:profile},jar)).status,200);
+ assert.deepEqual(JSON.parse(f.calls.at(-1).options.body),action);
+ assert.equal((await f.request('/games/nightshift/api/state',undefined,jar)).status,200);
 });

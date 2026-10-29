@@ -1,3 +1,4 @@
+import {installReviewProfile} from './client-profile.mjs';
 // Optional QA transport: exact verified assets are cached; HTML/API requests stay remote.
 import {chromium} from 'playwright';
 import {readFileSync,existsSync} from 'node:fs';
@@ -12,7 +13,7 @@ const launch=chromium.launch.bind(chromium),types={'.js':'text/javascript','.mjs
 chromium.launch=async options=>{
  const browser=await launch(options),newContext=browser.newContext.bind(browser);
  browser.newContext=async options=>{
-  const ctx=await newContext(options);
+  const ctx=await newContext(options);installReviewProfile(ctx);
   await ctx.route('**/games/nightshift/**',route=>{
    const u=new URL(route.request().url()),relative=decodeURIComponent(u.pathname.split('/games/nightshift/')[1]||''),file=path.resolve(root,relative);
    if(u.origin!==(process.env.DRIFT_ORIGIN||'http://127.0.0.1:8899')||route.request().isNavigationRequest()||!Object.hasOwn(manifest.browserFiles,relative)||!file.startsWith(root+path.sep)||!existsSync(file))return route.continue();

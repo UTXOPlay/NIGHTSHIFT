@@ -1,3 +1,4 @@
+import {installReviewProfile} from './client-profile.mjs';
 import {installDriverRoute} from './browser-driver9.mjs';
 import assert from'node:assert/strict';import{chromium}from'playwright';import{mkdirSync,writeFileSync,renameSync}from'node:fs';import{step,EVENTS}from'../games/arcade/web/nightshift10-rules.mjs';import{driveInput}from'../tests/helpers/nightshift10-driver.mjs';import{reviewSession}from'./review-session.mjs';
 const origin=process.env.DRIFT_ORIGIN||'http://127.0.0.1:8899',out=process.env.DRIFT_OUT||'artifacts/nightshift-v9/combat-review';mkdirSync(out,{recursive:true});
@@ -11,7 +12,7 @@ function control(g,kind){
 }
 const detect=(kind,a,b)=>kind==='collision'?a.shield<b.shield:kind==='wreck'?a.over&&a.finish_reason===2:kind==='hit'||kind==='guard'?a.stun>b.stun:kind==='rival-hit'?a.attack_hits>b.attack_hits&&a.rivals.some((r,n)=>r.hp<b.rivals[n].hp):a.takedowns>b.takedowns;
 try{
- if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
+ installReviewProfile(ctx);if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
  page=await ctx.newPage();await installDriverRoute(page);page.setDefaultNavigationTimeout(90000);page.on('pageerror',e=>errors.push(e.message));page.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
  const loadStarted=Date.now();await page.goto(origin+'/games/nightshift/?review=1');await page.waitForFunction(()=>__driftReview?.().loaded);const initialLoadMs=Date.now()-loadStarted;
  async function api(path,body){const r=body?await ctx.request.post(origin+'/games/nightshift/api/'+path,{headers:{Origin:origin},data:body}):await ctx.request.get(origin+'/games/nightshift/api/'+path);assert.ok(r.ok(),await r.text());return r.json();}

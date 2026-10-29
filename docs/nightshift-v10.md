@@ -27,7 +27,7 @@ Road chevrons guide the approach toward the opening. Near a blocked stop they ma
 
 These are **new gameplay rules**, so V10 has its own native executor, exact application profile and data directory. Frozen V9, V8 and V7 source bindings remain checked. The new program binds eighteen native inputs, including the original V9/V8 verifier sources and course data.
 
-An unfinished V9/V8 event continues through its original executor. Starting a new event explicitly replaces that run: the old signed career export is verified as a bound origin, earned credits/owned cars/upgrades/medals carry forward, and the new event uses V10. No old signed session is reinterpreted. The production upgrade retains the existing data mounts and adds a separate V10 volume. The setting and Relay Credits remain off-chain; Myelin supplies host replay, not CKB settlement.
+An unfinished V9/V8 event continues through its original executor. Starting a new event explicitly replaces that run: the old signed career export is verified as a bound origin, earned credits/owned cars/upgrades/medals carry forward, and the new event uses V10. No old signed session is reinterpreted. Mutating public requests must advertise the exact current client profile. An already open older page is paused with a reload instruction before any native mutation; the host strips this transport metadata before replay actions. The production upgrade retains the existing data mounts and adds a separate V10 volume. The setting and Relay Credits remain off-chain; Myelin supplies host replay, not CKB settlement.
 
 ## Verification
 
