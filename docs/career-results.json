@@ -1,0 +1,216 @@
+{
+  "version": "9.4.0",
+  "nativeProfile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "unitTests": 76,
+  "browserFiles": 93,
+  "nativeInputs": 12,
+  "economyRulesChanged": false,
+  "rankType": "Presentation derived from verified reputation; no economic or matchmaking unlocks",
+  "growthUi": {
+    "checks": [
+      "Rank, eight milestones and twelve reachable records at every required landscape size",
+      "District record opens its actual event",
+      "Tracked car goal and exact shortfall persist and return to the selected build",
+      "Native purchase installs the previewed benefit, debits exact price and grants no fabricated rep",
+      "Six-driver scoreboard keeps the native player position"
+    ],
+    "errors": []
+  },
+  "shop": {
+    "checks": [
+      "Two licensed source bodies, six upright race builds, grounded bounds and real thumbnails",
+      "Unaffordable purchase exposes the exact shortfall and cannot debit credits",
+      "Upgrade price, benefit, debit, success feedback and reload persistence",
+      "Showroom and tuning layouts at every required landscape resolution",
+      "3D preview rotates through actual pointer input and resets"
+    ],
+    "errors": [],
+    "fleet": {
+      "loaded": true,
+      "families": [
+        "slim-led",
+        "swan-neck"
+      ],
+      "fixtures": 22,
+      "physicalLights": 2,
+      "activeLights": 2,
+      "fleetLoaded": true,
+      "fleetSources": 2,
+      "fleetBounds": [
+        {
+          "min": [
+            -1.074828028678894,
+            0,
+            -2.14003324508667
+          ],
+          "max": [
+            1.0711811780929565,
+            1.0166816115379333,
+            2.14003324508667
+          ],
+          "size": [
+            2.1460092067718506,
+            1.0166816115379333,
+            4.28006649017334
+          ]
+        },
+        {
+          "min": [
+            -1.090000033378601,
+            0,
+            -2.14003324508667
+          ],
+          "max": [
+            1.090000033378601,
+            1.14000004529953,
+            2.14003324508667
+          ],
+          "size": [
+            2.180000066757202,
+            1.14000004529953,
+            4.28006649017334
+          ]
+        },
+        {
+          "min": [
+            -1.074828028678894,
+            0,
+            -2.14003324508667
+          ],
+          "max": [
+            1.0711811780929565,
+            1.0166816115379333,
+            2.14003324508667
+          ],
+          "size": [
+            2.1460092067718506,
+            1.0166816115379333,
+            4.28006649017334
+          ]
+        },
+        {
+          "min": [
+            -1.0425000190734863,
+            0,
+            -1.8661547899246216
+          ],
+          "max": [
+            1.0425000190734863,
+            0.9858864545822144,
+            1.8661547899246216
+          ],
+          "size": [
+            2.0850000381469727,
+            0.9858864545822144,
+            3.732309579849243
+          ]
+        },
+        {
+          "min": [
+            -1.0325000286102295,
+            0,
+            -1.8661547899246216
+          ],
+          "max": [
+            1.039511799812317,
+            0.9858864545822144,
+            1.8661547899246216
+          ],
+          "size": [
+            2.0720118284225464,
+            0.9858864545822144,
+            3.732309579849243
+          ]
+        },
+        {
+          "min": [
+            -1.090000033378601,
+            0,
+            -1.8700000047683716
+          ],
+          "max": [
+            1.090000033378601,
+            1.330000102519989,
+            1.8661547899246216
+          ],
+          "size": [
+            2.180000066757202,
+            1.330000102519989,
+            3.736154794692993
+          ]
+        }
+      ],
+      "wheelContacts": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "recovery": {
+    "ordinaryInputTicks": 322,
+    "hintUsesBoundReverseKey": true,
+    "reverseDistance": 72,
+    "nativeReplayVerified": true,
+    "errors": []
+  },
+  "desktopPerformance": {
+    "baseline": false,
+    "gpuMedianMs": 13.077604,
+    "mode": 3,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 20.207,
+    "simulationSeconds": 19.8,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 3.13,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      65,
+      101
+    ],
+    "maxTriangles": 152445,
+    "errors": []
+  },
+  "graphicsHardware": "Intel Iris Xe, Chromium OpenGL",
+  "performanceCaveat": "Shared desktop. Earlier interrupted and heavily contended runs, including the frozen 9.2 baseline, failed timing gates. They are retained under artifacts/streets-v93 and are not presented as successful performance measurements. Physical phones were not tested."
+}

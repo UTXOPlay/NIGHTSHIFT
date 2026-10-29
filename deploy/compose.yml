@@ -3,7 +3,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/Dockerfile
-    image: utxoplay/nightshift:9.3.0
+    image: utxoplay/nightshift:9.4.0
     restart: unless-stopped
     environment:
       RUNTIME_TOKEN: ${RUNTIME_TOKEN:?Set a stable server-only token of at least 32 characters}

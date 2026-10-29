@@ -2,7 +2,7 @@
 
 A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival drivers, vehicle upgrades and a signed solo career.
 
-[Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
+[Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Career and garage 9.4](docs/nightshift-v94.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
 ![NIGHTSHIFT 9.3 mixed streets](docs/screenshots/streets-city-v93.png)
 

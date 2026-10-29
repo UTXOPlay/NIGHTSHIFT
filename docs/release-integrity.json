@@ -1,5 +1,5 @@
 {
-  "version": "9.3.0",
+  "version": "9.4.0",
   "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
   "nativeSources": {
     "games/nightshift-v9/native/src/game.rs": "ba0b16c242c44e8415cdca30779e75b9e5f716e9b32eede9800424bdab6a0e30",
@@ -96,14 +96,14 @@
     "_arcade/nightshift9-trails.mjs": "00d4299c4bf0523d5a00fded136d0669b9eaa2e46fa6978a1ad6388bcd22dbe0",
     "_arcade/nightshift9-world-route.mjs": "2bc27c4671568a4663c5f9b5f55c326a9b39301c35d4d4bd0e1875c049173525",
     "_arcade/nightshift9-world.mjs": "e896d371b4059b99cfcb28f9b8db0e9ecf32ad43be69c463290bbeb6e3c44e60",
-    "_arcade/nightshift9.css": "620fd243f3d67db30bfb1bd4c32476be093bf36565375fa9a8a05aae5a9741dd",
+    "_arcade/nightshift9.css": "0ee9741cf8871eee0256b4634aab536a5cc23f61f3076ab94aa61759dfd45c6a",
     "_shared/assets/drift-run-keyart.webp": "63378bd31b2581ff1a882f03f89ddada541fa259508d5a784dfa5ecb0f03d7fa",
     "_shared/assets/myelin-logo.png": "47e5fb69d24ee433caf390baf0a2a02ceb6661fb2b472a70c8a36de5b4c659ca",
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "9ba8cd764e893187d0cc64987632b47d2399b6398ed8e3cffd6e0d47cfd17218",
-    "app.js": "db025bf68a5676bdf5dc42bc8fdd7ff2f58cb7400968c8f9725fb8ae759751c3",
-    "index.html": "9b151457f79189891807e6e27aa664e4ed3823113df7b00e268be867493e81b7",
+    "app.js": "e0148cc594e75f8951ad54fa3ada257365931834271f4e31464acef058988060",
+    "index.html": "4ba485c2bae819ab0a94010b30897c568b37826a93dc04d717c3e507b86546cd",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
     "_arcade/nightshift9-engine.mjs": "b1145468ee05e81af982dc1a1e5c9c1d67d05a14ea82fb09d181e0a260a805a6",
     "_arcade/nightshift9-performance.mjs": "f74f4f7576613bad92af8e1d60b8739a62471be027de9b8617d85a470f459b65",
@@ -111,6 +111,7 @@
     "_arcade/nightshift9-streets.mjs": "dd8f5aa695b73223568bf1e00830698dc52fea9e66e02228bb1843ff03f689fe",
     "_arcade/nightshift9-ground.mjs": "05082c59fcbc11818ac543838077500c65767501a04a2bc2facdf0458f55519b",
     "_arcade/nightshift9-recovery.mjs": "62e400bacb49f7bcf6c4087e27703bb8141532e5f08fea45f3d08114f2c6f04e",
-    "_arcade/art/nightshift/architecture-v93.webp": "fb2c95d9459682601fe2831bc93b8976adda7310a174076794cc05a402d772a6"
+    "_arcade/art/nightshift/architecture-v93.webp": "fb2c95d9459682601fe2831bc93b8976adda7310a174076794cc05a402d772a6",
+    "_arcade/nightshift9-career.mjs": "24fe3fcb0ac26e6af5b9b2d10636e0d3c34409768dbe2bccb3a46a80fd9a8726"
   }
 }
