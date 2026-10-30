@@ -2,8 +2,10 @@ import {button} from './nightshift8-icons.mjs';
 import {focusTarget} from './nightshift-gamepad.mjs';
 
 // Presentation state only: no race actions, currency awards or save migration.
-export function createMenuSystem({root,sections,read,write,quality,busy,loaded}){
+export function createMenuSystem({root,sections,read,write,quality,busy,loaded,leave}){
  const $=s=>root.querySelector(s);let settingsTab=0,pendingFocus=null;const viewMemory=new Map();
+ function storeButton(){const b=button('close','Return to UTXOPlay',leave,'store-return');b.dataset.uiLabel='UTXOPLAY';b.dataset.menuKey='return:utxoplay';b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h15"/></svg><img src="/brand/utxoplay-logo-dark-192.webp" alt="" width="24" height="24">';return b;}
+ const brand=document.createElement('div');brand.className='game-brand';const wordmark=$('.wordmark'),storeReturn=storeButton();wordmark.before(brand);brand.append(storeReturn,wordmark);
  const drawer=$('#keybinds'),tabs=document.createElement('div');tabs.id='settings-tabs';tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label','Settings categories');
  const panels=['controls','display','records'].map((name,n)=>{const p=document.createElement('section');p.id='settings-'+name;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','settings-tab-'+name);p.hidden=n!==0;return p;});
  const label=drawer.querySelector('label[for="key-preset"]');
@@ -23,11 +25,12 @@ export function createMenuSystem({root,sections,read,write,quality,busy,loaded})
  addEventListener('utxoplay:quality',refreshPreferences);selectTab(0);
  for(const [view,b] of Object.entries(sections)){b.dataset.uiLabel={career:'EVENTS',garage:'GARAGE',profile:'DRIVER'}[view];b.dataset.menuKey='nav:'+view;}
  $('#nav').setAttribute('aria-label','Game sections and settings');
- function syncNav(view){for(const [name,b] of Object.entries(sections)){b.hidden=view==='race';b.disabled=busy()||!loaded();if(name===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');}}
+ function syncNav(view){brand.hidden=view==='race'||view==='pause';storeReturn.disabled=busy();for(const [name,b] of Object.entries(sections)){b.hidden=view==='race';b.disabled=busy()||!loaded();if(name===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');}}
  function capture(){const el=document.activeElement,owned=el?.closest('#menu'),state={view:root.dataset.view,focus:owned?(el.dataset.menuKey||el.getAttribute('aria-label')):null,scroll:Object.fromEntries(['cards','workshop','progression'].map(id=>[id,[$('#'+id).scrollLeft,$('#'+id).scrollTop]]))};if(state.view!=='race')viewMemory.set(state.view,state);return state;}
  function restore(state){
   const view=root.dataset.view;if(pendingFocus&&pendingFocus.view!==view)pendingFocus=null;const actions=$('#menu-actions'),copy=$('.menu-copy');
   if(view==='garage')$('#menu').append(actions);else copy.append(actions);
+  if(view==='pause'){const b=storeButton();b.disabled=busy();actions.append(b);}
   for(const b of $('#menu').querySelectorAll('button')){
    if(!b.dataset.menuKey)b.dataset.menuKey=b.getAttribute('aria-label')||b.id;
    if(!b.dataset.uiLabel&&b.classList.contains('icon-button'))b.dataset.uiLabel=b.getAttribute('aria-label');

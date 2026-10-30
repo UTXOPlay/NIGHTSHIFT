@@ -103,8 +103,8 @@
     "_arcade/nightshift-driving-coach.mjs": "05e25ed49fb4ebbb162559fd03f76e645d07395114efa3ebae7d869d2a35e756",
     "_arcade/nightshift-gamepad.mjs": "06ecbad922f1d31fdb19d2440fa74206a573116100a11528e695548da93930a2",
     "_arcade/nightshift-keyboard.mjs": "ac33f8cfe8bc03948cad80af221996718a957df919804c65ec8864beaebb6078",
-    "_arcade/nightshift-menu.css": "0670ea44c32b2db7603ff4cf8796140d67673c3eb25fb776d8af6501ee64e366",
-    "_arcade/nightshift-menu.mjs": "46fe2427bae4b62f79106e2cee717c767383262e69a8d703302bab16e4d2cfd4",
+    "_arcade/nightshift-menu.css": "6b17a2d9131165c7f502cdf65b7d4986f57d394beab8d79531b29d4a7433bf59",
+    "_arcade/nightshift-menu.mjs": "19ce1a4c629fe5979cc044c6e82b89a827c93085ccf5659b5d1dddd24e53fdb8",
     "_arcade/nightshift10-roadblocks.mjs": "6ad83d8784f4c628ba77d4cced56a89231c16d602dcde5be8e188ea91c0fc4f4",
     "_arcade/nightshift10-rules.mjs": "7cf089050d85ba1f1370222ccaff69998497b3d4c0ca37ee3b59c00c56cd112e",
     "_arcade/nightshift11-authored-car.mjs": "21962a00478c0d14b4ef40729cf5acce84deeafe9dc8e5c0ff31b2dd438d4671",
@@ -173,7 +173,7 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d38a494e26a09d3901f0af3e3e913d3a91304c0bb6b9d1ae47cec8f002dd8ef4",
-    "app.js": "0fa18440441b450e64f33d95cdeb46c4da99c9e559f2cdf4a0e372b445f4aa23",
+    "app.js": "7fd75a27ea3a8610cdb556b35c4e3c676f84114ba4c94a60f9c4f545a62eae0b",
     "index.html": "cc36b746f9b60c964308e011a186fea6a36eb1215729668d165fc4abfa65ffdd",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   }
