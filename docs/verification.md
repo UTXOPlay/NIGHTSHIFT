@@ -1,5 +1,7 @@
 # Release verification
 
+The current control update is [10.0.2 — Controller input and observed driving practice](controls-and-research-v10.md). Its 116 public resources match the tested manifest; it retains the exact V10 native profile and all three executable hashes. Controller and physical-phone validation limits are recorded separately from automated acceptance.
+
 The active roadblock rules are [NIGHTSHIFT V10 — Readable roadblocks and physical recovery](nightshift-v10.md). Their exact native profile is `0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561`, binding eighteen native inputs. The observed 10.0.1 camera/audio follow-up preserves that profile, all three native executables and the roadblock/reverse modules. Its 112 browser files have been verified separately. Frozen V9/V8/V7 source bindings remain retained.
 
 The canonical route is [`/games/nightshift/`](https://store.utxoplay.io/games/nightshift/). Catalog/account identity remains `drift-run`. `/play` and the old game slug retain their permanent redirects.

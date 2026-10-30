@@ -23,7 +23,7 @@ try{
    const press=async n=>{await set({[n]:1});await p.waitForTimeout(150);await set();await p.waitForTimeout(150);};
    const call=async(path,data)=>{const r=data===undefined?await ctx.request.get(origin+'/games/nightshift/api/'+path):await ctx.request.post(origin+'/games/nightshift/api/'+path,{headers:{Origin:origin},data});assert.ok(r.ok(),'Native '+path+' HTTP '+r.status());return r.json();};
    // Use the existing career primary button through controller polling, not a state edit.
-   await p.waitForTimeout(200);await press(0);await p.waitForFunction(()=>__driftReview().running);
+   await p.waitForFunction(()=>!document.querySelector('#menu-actions .primary').disabled);await p.waitForTimeout(250);await press(0);try{await p.waitForFunction(()=>__driftReview().running);}catch(error){writeFileSync(out+'/start-diagnostic.json',JSON.stringify(await p.evaluate(()=>({review:__driftReview(),status:document.querySelector('#status').textContent,menu:document.querySelector('#menu-actions').innerHTML,focused:document.activeElement?.outerHTML})),null,2));await p.screenshot({path:out+'/start-diagnostic.png'});throw error;}
    await p.waitForTimeout(2100);await set({},-.55);await p.waitForFunction(()=>__driftReview().controls.practice.stage===1);await set();
    await p.waitForFunction(()=>!document.querySelector('#drive-coach').hidden);await p.waitForFunction(()=>document.querySelector('#drive-coach b')?.textContent==='BRAKE');await p.screenshot({path:out+(touch?'/touch-practice.png':'/desktop-practice.png')});
    await set({6:.9});await p.waitForFunction(()=>__driftReview().controls.practice.stage===2);await set();await p.waitForTimeout(200);

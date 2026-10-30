@@ -30,3 +30,13 @@ Machine-readable results are in [controls-results.json](controls-results.json). 
 | Engine and future online | [ecctrl](https://github.com/pmndrs/ecctrl) separates vehicle/control concerns around a physics body. | Reuse architecture ideas, but preserve deterministic native/browser rules. Do not insert a browser-only floating-point engine into signed replay. Shared authoritative matches still need clock/input ordering, reconciliation, reconnects and exactly-once rewards; current product is solo. |
 
 All references are primary publisher/developer sources. The comparison and acceptance gates are our own design judgments. No EA art or code is copied, and no new external code is vendored by this control update. The reviewed small racing examples are technical references, not claims to be the most beautiful browser racers. Myelin remains off-chain replay rather than CKB settlement.
+
+## Production release
+
+10.0.2 is live at [the canonical game URL](https://store.utxoplay.io/games/nightshift/). [Runtime source](https://github.com/UTXOPlay/NIGHTSHIFT/commit/be1c068fb041565425e0ebccefabdb1664b1c78c) and [both CI jobs](https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40976223381) are recorded. Source archive SHA-256: `bee9af8e20c7c474c2234eb3af851c1f9663a22c52b1e408deebdd43a6157492`. The isolated source is published on `codex/controls-onboarding-v10.2` in [PR #1](https://github.com/UTXOPlay/NIGHTSHIFT/pull/1); concurrent V11 working files and the active index were preserved.
+
+Game image: `sha256:2feb984898038d8395f185e16cff813ddb6dda8dda48e9fb04ecb916c50053e2`. Store image: `sha256:7e2508172bdbab8874100ba0f2d243ebe9410fd2b3b6245e787186927b942242`. Both services are healthy, and environment, security/resource settings, networks, mounts and all three native hashes are preserved. A complete pre-cutover QA saved state is identical after replacement, advances from tick 3 to tick 6 and verifies its native replay. The QA account is logged out.
+
+All 116 public HTTPS asset responses match the manifest. Public controller/practice checks, thirteen full application acceptance checks and five store launcher checks pass. Temporary staging containers and all four isolated staging data directories are removed; production data and stopped rollback containers remain. The parent catalog update changes only NIGHTSHIFT to 10.0.2. A short desktop Iris Xe / Chromium OpenGL high-quality Glacier sample at 1920×1080 measures 60 median / 59 p10 FPS, 2.94 ms median CPU work and 6.63 ms sampled GPU time, with 20.167 simulation seconds in 20.162 wall seconds. This is not a controlled speedup claim, a 4K driving benchmark or a physical-phone result.
+
+![Public touch-emulated controller practice](screenshots/controller-practice-v10.png)

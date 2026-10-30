@@ -99,5 +99,322 @@
       }
     ],
     "errors": []
+  },
+  "engine": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.9615384615384616,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 38,
+      "streetVariants": 24,
+      "facadeFamilies": 8,
+      "nearDetailInstances": 73,
+      "detailRange": 110,
+      "instanceCount": 314,
+      "maxPoolCount": 100,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 62,
+      "textures": 24,
+      "programs": 148,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      },
+      "terrainBands": [
+        {
+          "lo": 8.3,
+          "hi": 33,
+          "height": -0.12
+        },
+        {
+          "lo": 33,
+          "hi": 145,
+          "height": -2.1
+        }
+      ],
+      "surface": {
+        "source": "Poly Haven Asphalt 02",
+        "size": 1024,
+        "metres": 3,
+        "maps": 3
+      },
+      "lightingProbes": 4,
+      "post": {
+        "active": true,
+        "supported": true,
+        "scenePixels": 2073600,
+        "bloomPixels": 129600,
+        "historyFrames": 0
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 38,
+      "streetVariants": 24,
+      "facadeFamilies": 8,
+      "nearDetailInstances": 77,
+      "detailRange": 110,
+      "instanceCount": 657,
+      "maxPoolCount": 309,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 65,
+      "textures": 25,
+      "programs": 161,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      },
+      "terrainBands": [
+        {
+          "lo": 8.3,
+          "hi": 18,
+          "height": -0.12
+        },
+        {
+          "lo": 18,
+          "hi": 110,
+          "height": -0.12
+        }
+      ],
+      "surface": {
+        "source": "Poly Haven Asphalt 02",
+        "size": 1024,
+        "metres": 3,
+        "maps": 3
+      },
+      "lightingProbes": 4,
+      "post": {
+        "active": true,
+        "supported": true,
+        "scenePixels": 2073600,
+        "bloomPixels": 129600,
+        "historyFrames": 0
+      }
+    },
+    "errors": []
+  },
+  "source": {
+    "branch": "codex/controls-onboarding-v10.2",
+    "commit": "be1c068fb041565425e0ebccefabdb1664b1c78c",
+    "base": "280147271e0cc2a07a587c5c88b5114ca9bcc2de",
+    "sourceSha256": "bee9af8e20c7c474c2234eb3af851c1f9663a22c52b1e408deebdd43a6157492",
+    "payloadSha256": "7712064187b68e2e0eba088544723dfb966d2ac85c56e80e3656bafd15bdf9eb",
+    "isolatedSourceFiles": 300,
+    "activeCheckoutAndIndexUntouched": true
+  },
+  "ci": {
+    "run": 40976223381,
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40976223381",
+    "runtimeSource": "be1c068fb041565425e0ebccefabdb1664b1c78c",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "pullRequest": "https://github.com/UTXOPlay/NIGHTSHIFT/pull/1",
+  "stagingControls": {
+    "checks": [
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns",
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Portrait gate pauses controller play and clears held input",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 137,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      },
+      {
+        "touch": true,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 122,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      }
+    ],
+    "errors": []
+  },
+  "deployment": {
+    "version": "10.0.2",
+    "gameImage": "sha256:2feb984898038d8395f185e16cff813ddb6dda8dda48e9fb04ecb916c50053e2",
+    "storeImage": "sha256:7e2508172bdbab8874100ba0f2d243ebe9410fd2b3b6245e787186927b942242",
+    "otherCatalogEntriesPreserved": true,
+    "nativeVolumesPreserved": true
+  },
+  "preservation": {
+    "version": "10.0.2",
+    "checks": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:2feb984898038d8395f185e16cff813ddb6dda8dda48e9fb04ecb916c50053e2"
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:7e2508172bdbab8874100ba0f2d243ebe9410fd2b3b6245e787186927b942242"
+      }
+    },
+    "nativeBinariesUnchanged": true,
+    "otherCatalogEntriesPreserved": true
+  },
+  "publicFiles": {
+    "version": "10.0.2",
+    "browserFiles": 116,
+    "allPublicTLSBytesMatch": true,
+    "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+    "nativeRulesUnchanged": true
+  },
+  "publicControls": {
+    "checks": [
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns",
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Portrait gate pauses controller play and clears held input",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 132,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      },
+      {
+        "touch": true,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 121,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      }
+    ],
+    "errors": []
+  },
+  "publicAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+    "finishSeconds": 229.6,
+    "attempts": 1,
+    "credits": 465
+  },
+  "publicStore": {
+    "checks": [
+      "Legacy redirects preserve queries for curated and vendor games",
+      "Canonical store launcher opens one authenticated NIGHTSHIFT frame with stable identity",
+      "Existing guest identity also launches chess through the canonical path",
+      "Vendor route ID and absent-game fallback remain correct",
+      "Home has no legacy game links and catalog advertises V9"
+    ],
+    "errors": []
+  },
+  "performance": {
+    "gpuMedianMs": 6.634114,
+    "mode": 1,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 20.162,
+    "simulationSeconds": 20.166666666666668,
+    "medianFps": 60,
+    "p10Fps": 59,
+    "medianCpuMs": 2.94,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      53,
+      137
+    ],
+    "maxTriangles": 203714,
+    "errors": []
+  },
+  "careerCanary": {
+    "completeSavedStateUnchanged": true,
+    "ticksBefore": 3,
+    "ticksAfter": 6,
+    "nativeReplay": true,
+    "loggedOut": true
+  },
+  "catalog": {
+    "catalogCommit": "4f9a9316a8fb61caf4e08f2c57f61e5566397667",
+    "version": "10.0.2",
+    "onlyNightshiftVersionChanged": true,
+    "parentIndexAndHeadUntouched": true
+  },
+  "cleanup": {
+    "stagingContainersRemoved": 2,
+    "isolatedStagingDirectoriesRemoved": 4,
+    "productionHealthy": true,
+    "productionDataPreserved": true,
+    "rollbackContainersRetained": true,
+    "checkedAt": "2026-10-30T00:04:43.843031+00:00"
+  },
+  "qaDiagnostics": {
+    "initialPublicStart": "One initial virtual-controller start timed out. The final review waits for the primary menu action to be enabled before controller input; both final public paths pass. The failed attempt is excluded.",
+    "harnessCorrections": "The new review allowlist spelling and an assertion made before the next HUD render were corrected. No runtime rule changes were needed.",
+    "publicTransport": "Navigation, authentication, native actions and saves use the real public TLS origin via SSH CONNECT. A manifest-verified local cache supplies asset bytes; an independent public HTTPS sweep verifies all 116 delivered files. These tests do not measure player-network startup."
   }
 }
