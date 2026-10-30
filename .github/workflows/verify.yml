@@ -27,6 +27,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: |
+            games/nightshift-v14/native -> ../../../target
             games/nightshift-v13/native -> ../../../target
             games/nightshift-v12/native -> ../../../target
             games/nightshift-v11/native -> ../../../target
@@ -43,3 +44,9 @@ jobs:
       - run: npm run test:conformance
       - run: npm run test:conformance:previous
       - run: npm run test:replay
+
+      # V14 development gates; the deployed release remains V13 until browser acceptance.
+      - run: npm run test:native:v14
+      - run: npm run build:native:v14
+      - run: npm run test:conformance:v14
+      - run: npm run test:replay:v14

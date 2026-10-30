@@ -30,7 +30,11 @@
     "check:release": "node tools/check-release.mjs",
     "test:balance": "node tests/nightshift13-conformance.mjs",
     "build:native:previous": "cargo build --release --locked --manifest-path games/nightshift-v9/native/Cargo.toml --target-dir target",
-    "test:conformance:previous": "node tests/nightshift9-conformance.mjs"
+    "test:conformance:previous": "node tests/nightshift9-conformance.mjs",
+    "build:native:v14": "cargo build --release --locked --manifest-path games/nightshift-v14/native/Cargo.toml --target-dir target",
+    "test:native:v14": "cargo test --release --locked --manifest-path games/nightshift-v14/native/Cargo.toml --target-dir target",
+    "test:conformance:v14": "node tests/nightshift14-conformance.mjs",
+    "test:replay:v14": "node tests/nightshift14-signed-replay.mjs"
   },
   "dependencies": {
     "express": "5.1.0",
