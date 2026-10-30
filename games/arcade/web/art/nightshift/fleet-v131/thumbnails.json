@@ -1,0 +1,10 @@
+{
+  "version": "13.1.0",
+  "source": "Actual six licensed fleet models, transparent WebGL render with retained PBR materials",
+  "dimensions": [
+    512,
+    256
+  ],
+  "vehicles": 6,
+  "errors": []
+}

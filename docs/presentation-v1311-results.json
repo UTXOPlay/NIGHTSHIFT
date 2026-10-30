@@ -1,0 +1,941 @@
+{
+  "version": "13.1.1",
+  "sourceCommit": "13a0beedecd4b62d1ad07d8241b65c30f55ec0e7",
+  "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+  "previousPresentationEvidence": "presentation-v131-results.json",
+  "changedBrowserFiles": [
+    "app.js",
+    "index.html"
+  ],
+  "nativeRulesUnchanged": true,
+  "nodeChecks": 137,
+  "localBrowser": {
+    "version": "13.1.1",
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 1920,
+          "height": 1080
+        },
+        "inverse": {
+          "x": 1000.000000000001,
+          "y": 500.0000000000027
+        },
+        "tick": 22,
+        "distance": 14,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1080
+        },
+        "inverse": {
+          "x": 999.9999999999987,
+          "y": 499.99999999999835
+        },
+        "tick": 59,
+        "distance": 103,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        },
+        "inverse": {
+          "x": 1000.0000000000002,
+          "y": 500.0000000000009
+        },
+        "tick": 94,
+        "distance": 246,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        },
+        "inverse": {
+          "x": 1000.000000000001,
+          "y": 500.00000000000097
+        },
+        "tick": 167,
+        "distance": 576,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 844,
+          "height": 390
+        },
+        "inverse": {
+          "x": 1000.0000000000007,
+          "y": 500.000000000001
+        },
+        "tick": 258,
+        "distance": 1065,
+        "overflow": false
+      }
+    ],
+    "cars": [
+      {
+        "vehicle": 0,
+        "bounds": {
+          "min": [
+            -1.0399999618530273,
+            0,
+            -1.7790935039520264
+          ],
+          "max": [
+            1.0399999618530273,
+            0.9546939134597778,
+            1.7790935039520264
+          ],
+          "size": [
+            2.0799999237060547,
+            0.9546939134597778,
+            3.5581870079040527
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 1,
+        "bounds": {
+          "min": [
+            -0.9050422310829163,
+            0,
+            -2.140582323074341
+          ],
+          "max": [
+            0.9050422310829163,
+            1.2245597635628656,
+            2.1428675651550293
+          ],
+          "size": [
+            1.8100844621658325,
+            1.2245597635628656,
+            4.28344988822937
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 2,
+        "bounds": {
+          "min": [
+            -0.9555545449256897,
+            0,
+            -2.1400856971740723
+          ],
+          "max": [
+            0.9555546045303345,
+            1.3599801347590983,
+            2.1399998664855957
+          ],
+          "size": [
+            1.9111091494560242,
+            1.3599801347590983,
+            4.280085563659668
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 3,
+        "bounds": {
+          "min": [
+            -1.022907018661499,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228371620178223,
+            1.2393398215062916,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457441806793213,
+            1.2393398215062916,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 4,
+        "bounds": {
+          "min": [
+            -1.0469425916671753,
+            0,
+            -2.1452722549438477
+          ],
+          "max": [
+            1.0469425916671753,
+            1.3631548082921654,
+            2.141364812850952
+          ],
+          "size": [
+            2.0938851833343506,
+            1.3631548082921654,
+            4.2866370677948
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 5,
+        "bounds": {
+          "min": [
+            -1.022907018661499,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228371620178223,
+            1.2393398215062916,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457441806793213,
+            1.2393398215062916,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      }
+    ],
+    "errors": [],
+    "physicalDevices": false
+  },
+  "localConnection": {
+    "version": "13.1.1",
+    "jitterTick": 144,
+    "toleratesFourSecondSaveLatency": true,
+    "pausedAtTick": 324,
+    "boundedPendingPause": true,
+    "nativeBatchLimitRespected": true,
+    "allInputsConfirmedExactly": true,
+    "sameRaceResumed": true,
+    "nativeReplayVerified": true,
+    "errors": []
+  },
+  "stageConnection": {
+    "version": "13.1.1",
+    "jitterTick": 144,
+    "toleratesFourSecondSaveLatency": true,
+    "pausedAtTick": 324,
+    "boundedPendingPause": true,
+    "nativeBatchLimitRespected": true,
+    "allInputsConfirmedExactly": true,
+    "sameRaceResumed": true,
+    "nativeReplayVerified": true,
+    "errors": []
+  },
+  "publicConnection": {
+    "version": "13.1.1",
+    "jitterTick": 144,
+    "toleratesFourSecondSaveLatency": true,
+    "pausedAtTick": 324,
+    "boundedPendingPause": true,
+    "nativeBatchLimitRespected": true,
+    "allInputsConfirmedExactly": true,
+    "sameRaceResumed": true,
+    "nativeReplayVerified": true,
+    "errors": []
+  },
+  "publicBrowser": {
+    "version": "13.1.1",
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 1920,
+          "height": 1080
+        },
+        "inverse": {
+          "x": 999.9999999999993,
+          "y": 500.00000000000057
+        },
+        "tick": 21,
+        "distance": 12,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1080
+        },
+        "inverse": {
+          "x": 1000.0000000000001,
+          "y": 500.0000000000001
+        },
+        "tick": 59,
+        "distance": 96,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        },
+        "inverse": {
+          "x": 1000.0000000000001,
+          "y": 500.00000000000034
+        },
+        "tick": 103,
+        "distance": 253,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        },
+        "inverse": {
+          "x": 999.9999999999994,
+          "y": 499.99999999999807
+        },
+        "tick": 172,
+        "distance": 608,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 844,
+          "height": 390
+        },
+        "inverse": {
+          "x": 999.9999999999998,
+          "y": 499.99999999999886
+        },
+        "tick": 251,
+        "distance": 1093,
+        "overflow": false
+      }
+    ],
+    "cars": [
+      {
+        "vehicle": 0,
+        "bounds": {
+          "min": [
+            -1.0399999618530273,
+            0,
+            -1.7790935039520264
+          ],
+          "max": [
+            1.0399999618530273,
+            0.9546939134597778,
+            1.7790935039520264
+          ],
+          "size": [
+            2.0799999237060547,
+            0.9546939134597778,
+            3.5581870079040527
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 1,
+        "bounds": {
+          "min": [
+            -0.9050422310829163,
+            0,
+            -2.140582323074341
+          ],
+          "max": [
+            0.9050422310829163,
+            1.2245597635628656,
+            2.1428675651550293
+          ],
+          "size": [
+            1.8100844621658325,
+            1.2245597635628656,
+            4.28344988822937
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 2,
+        "bounds": {
+          "min": [
+            -0.9555545449256897,
+            0,
+            -2.1400856971740723
+          ],
+          "max": [
+            0.9555546045303345,
+            1.3599801347590983,
+            2.1399998664855957
+          ],
+          "size": [
+            1.9111091494560242,
+            1.3599801347590983,
+            4.280085563659668
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 3,
+        "bounds": {
+          "min": [
+            -1.022907018661499,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228371620178223,
+            1.2393398215062916,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457441806793213,
+            1.2393398215062916,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 4,
+        "bounds": {
+          "min": [
+            -1.0469425916671753,
+            0,
+            -2.1452722549438477
+          ],
+          "max": [
+            1.0469425916671753,
+            1.3631548082921654,
+            2.141364812850952
+          ],
+          "size": [
+            2.0938851833343506,
+            1.3631548082921654,
+            4.2866370677948
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 5,
+        "bounds": {
+          "min": [
+            -1.022907018661499,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228371620178223,
+            1.2393398215062916,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457441806793213,
+            1.2393398215062916,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      }
+    ],
+    "errors": [],
+    "physicalDevices": false
+  },
+  "publicTouch": {
+    "checks": [
+      "Thumb accelerator held through countdown starts the car at GO",
+      "Diagonal joystick combines proportional steering and gas",
+      "Releasing the joystick coasts without automatic gas",
+      "Portrait gate clears the held brake and pauses the local simulation",
+      "Native touch-input replay verifies and all visible text is English"
+    ],
+    "errors": [],
+    "physicalPhone": false
+  },
+  "publicControls": {
+    "checks": [
+      "Observed acceleration, steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns",
+      "Observed acceleration, steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Portrait gate pauses controller play and clears held input",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "practiceStage": 4,
+        "nativeReplay": true,
+        "pausedTick": 108,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      },
+      {
+        "touch": true,
+        "practiceStage": 4,
+        "nativeReplay": true,
+        "pausedTick": 98,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      }
+    ],
+    "errors": []
+  },
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "checks": [
+      {
+        "id": "drift-run",
+        "pricing": "free",
+        "ready": true,
+        "fullscreen": true,
+        "reentry": true,
+        "sameGameInstance": true
+      }
+    ],
+    "failures": [],
+    "errors": []
+  },
+  "deployment": {
+    "version": "13.1.1",
+    "gameImage": "sha256:7782899b432855e5917c4fd8fc784957507dd03f744d4fd5f1fbd9b44478cbd7",
+    "storeImage": "sha256:2b0172e0444b2b91cef72890499540529ae355f29ffc1185247b333becb6ebcf",
+    "otherCatalogEntriesPreserved": true,
+    "nativeVolumesPreserved": true,
+    "nativeBinariesUnchanged": true
+  },
+  "deploymentVerification": {
+    "version": "13.1.1",
+    "checks": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:7782899b432855e5917c4fd8fc784957507dd03f744d4fd5f1fbd9b44478cbd7"
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:2b0172e0444b2b91cef72890499540529ae355f29ffc1185247b333becb6ebcf"
+      }
+    },
+    "nativeBinariesUnchanged": true,
+    "otherCatalogEntriesPreserved": true
+  },
+  "deployedImageIntegrity": {
+    "browserFiles": 265,
+    "hostFiles": 6,
+    "nativeBinaries": 6,
+    "allHashesMatch": true
+  },
+  "catalog": {
+    "base": "71a9c016beff59100348f5bc55464e719fee7c4b",
+    "commit": "6f883dd58e66b9f72d2db0d7c95be16d27cf3b9c",
+    "version": "13.1.1",
+    "alreadyCurrent": false,
+    "otherEntriesUnchanged": true,
+    "sharedHeadPreserved": true,
+    "sharedIndexPreserved": true
+  },
+  "ci": {
+    "sourceCommit": "13a0beedecd4b62d1ad07d8241b65c30f55ec0e7",
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41105438635",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "retainedFailedAttempts": [
+    {
+      "kind": "controller-start-functional-timeout",
+      "state": "countdown",
+      "remainingCountdownMs": 633.4,
+      "rerun": "public-controls-13.1.1-isolated passed"
+    }
+  ],
+  "performance": {
+    "version": "13.1.1",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 1986,
+    "wallSeconds": 120.022,
+    "simulationSeconds": 119.2,
+    "medianFps": 60,
+    "p10Fps": 55,
+    "medianCpuMs": 2.87,
+    "medianGpuMs": 8.299791,
+    "scales": [
+      1,
+      0.75
+    ],
+    "maxBufferPixels": 2073600,
+    "maxSampledPendingInputs": 46,
+    "distance": 55658,
+    "errors": []
+  },
+  "limitations": [
+    "Physical phone/controller coverage remains open.",
+    "First-race loading remains unfinished; prior 13.1.0 measurements are retained separately.",
+    "The full single-player goal remains active; multiplayer is excluded."
+  ],
+  "performanceMethod": "Fresh browser context; operating-system and GPU driver caches are not reset. Auto quality may reduce resolution. No physical-device or global percentile guarantee.",
+  "publicLoading": [
+    {
+      "label": "desktop-cold",
+      "menuMs": 4449.783169,
+      "menuWireBytes": 642689,
+      "throttle": null,
+      "errors": []
+    },
+    {
+      "label": "desktop-warm",
+      "menuMs": 1743.3144820000007,
+      "menuWireBytes": 4685,
+      "throttle": null,
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-cold",
+      "menuMs": 2401.9990080000007,
+      "graphicsAfterMenuSeconds": 28.748643486000002,
+      "firstRaceAfterMenuSeconds": 30.958425792000003,
+      "navigationUntilRaceSeconds": 34.087897668000004,
+      "wireBytesUntilRace": 9358044,
+      "menuWireBytes": 493131,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-warm",
+      "menuMs": 2102.2253259999998,
+      "menuWireBytes": 4749,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "first-race-cold",
+      "menuMs": 2318.7363390000028,
+      "graphicsAfterMenuSeconds": 16.913763923000005,
+      "firstRaceAfterMenuSeconds": 18.499626439,
+      "navigationUntilRaceSeconds": 22.011552280999997,
+      "wireBytesUntilRace": 9504418,
+      "menuWireBytes": 642680,
+      "throttle": null,
+      "errors": []
+    }
+  ],
+  "deliveryVerified": true,
+  "singlePlayerGoalComplete": false,
+  "remainingRequiredAreas": [
+    "Fair continuous-line rival planning and stronger racing/combat decisions",
+    "Consistent damage semantics and readable counterplay",
+    "Meaningful route choices and landmarks",
+    "Secondary-car material and audio identity",
+    "Weak-network first-race startup",
+    "Physical-device coverage and final full completion audit"
+  ]
+}

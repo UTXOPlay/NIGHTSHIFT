@@ -1,0 +1,22 @@
+{
+  "source": "games/arcade/web/art/nightshift/fleet-ready-v11/concept-authored.glb",
+  "output": "games/arcade/web/art/nightshift/fleet-v131/concept-race.glb",
+  "sourceSha256": "91806e416836e09da9c21f406dc8a57b409feb9c177b82bad69ae42304e8bcf2",
+  "outputSha256": "5f187a2d0e7754b810b2f40038a2fa17a2ed8961b7645eda5106e00e310165f8",
+  "sourceBytes": 5300584,
+  "bytes": 1757172,
+  "triangles": 41643,
+  "retainedNodes": 74,
+  "maxBoundsDelta": 0.000009480846521414676,
+  "normalMaps": "Race maps capped at 512 px with WebP quality 95",
+  "textures": "Race textures capped at 512 px with WebP quality 92",
+  "geometry": "Meshopt, bounded simplification at 0.05% per-mesh radius; hidden engine/inner door/floor/pedal/seat-frame pieces omitted; actual exterior, UVs, wheel hierarchy and surface normals retained",
+  "packages": {
+    "@gltf-transform/core": "4.2.1",
+    "@gltf-transform/extensions": "4.2.1",
+    "@gltf-transform/functions": "4.2.1",
+    "meshoptimizer": "0.24.0",
+    "sharp": "0.34.5"
+  },
+  "sourceTriangles": 47169
+}

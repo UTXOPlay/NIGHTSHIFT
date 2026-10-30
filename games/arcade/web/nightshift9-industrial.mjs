@@ -77,13 +77,13 @@ export function harbourDistrict(b,n,random){
    for(const z of [-5,5]){b('structure',side*12,.53,z,.35,1.3,.35,0,0,0,undefined,'#a7a293');b('structure',side*19,.38,z,2,1,1,0,0,0,undefined,'#7d8b85');}
   }
  }
- if(n%8===0){const side=n%16?1:-1,x=side*36;add('structure',x,0,0,1,1,1,INDUSTRIAL.pier,'#7b898d');add('structure',x,0,0,1,1,1,INDUSTRIAL.gantry,n%16?'#7f806a':'#576e7a',side<0?Math.PI:0);add('glass',x-side*4.8,18.1,1.53,2.5,1.3,.035,INDUSTRIAL.detailBox,'#8dabb0');}
+ if(n%8===0){const side=n%16?1:-1,x=side*36;add('quay',x,0,0,1,1,1,INDUSTRIAL.pier,'#7b898d');add('steel',x,0,0,1,1,1,INDUSTRIAL.gantry,n%16?'#7f806a':'#576e7a',side<0?Math.PI:0);add('glass',x-side*4.8,18.1,1.53,2.5,1.3,.035,INDUSTRIAL.detailBox,'#8dabb0');}
 }
 
 export function facadeRelief(b,face,side,x,z,width,height,depth){
  if(!['brick','residence','office','lab'].includes(face))return;
- const step=3,front=x-side*(width/2+.04);
- for(let y=1.5;y<Math.min(height,29);y+=step)b('structure',front,y,z,depth,2.85,.6,0,side>0?-Math.PI/2:Math.PI/2,0,INDUSTRIAL.floor,face==='brick'?'#665c50':face==='residence'?'#716d66':'#435763');
+ const step=['office','lab'].includes(face)?4:3,front=x-side*(width/2+.04);
+ for(let y=step/2;y<Math.min(height,29);y+=step)b('structure',front,y,z,depth,step*.95,.6,0,side>0?-Math.PI/2:Math.PI/2,0,INDUSTRIAL.floor,face==='brick'?'#665c50':face==='residence'?'#716d66':'#435763');
 }
 
 export function installCargoPaint(m){

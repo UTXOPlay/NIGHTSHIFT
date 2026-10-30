@@ -19,6 +19,8 @@ Current product status: **playable solo arcade racer under active completion**. 
 
 Version 13 adds chapter licenses, optional sector contracts, a closing interception battle with podium requirement, final drift exits, itemized payouts, PB provenance and purchased-part/build tradeoffs. Existing V8–V12 races and signed proofs retain their original executors.
 
+Version 13.1 defers the 3D engine until the garage or a race is opened, uses actual course and fleet captures, adds varied facade and lighting assets, retains the hero car's authored materials, and prepares compressed lighting probes offline. See [presentation evidence and remaining limitations](docs/presentation-v13.1.md). Native rules and signed saves are unchanged.
+
 Version 10 adds fixed, readable roadblock encounters, shared static contacts for traffic/rivals, lane/minimap guidance and latched touch reverse. Unfinished V9/V8 events keep their original executor until finished or explicitly replaced; verified careers carry forward into new V10 events.
 
 Version 9 introduced continuous winding roads, elevation and banking, swept contacts, mass-weighted impulses, braking/reverse and Colemak/custom controls. Verified V8 careers carry forward as a signed origin. An unfinished V8 event retains its original executor until finished or explicitly replaced.
@@ -93,9 +95,10 @@ npm run test:browser
 npm run test:maps
 npm run test:combat
 npm run test:performance
+node tools/nightshift13-connection-review.mjs
 ```
 
-The review server runs at `http://127.0.0.1:18940`; reports go under ignored `artifacts/`. The purchase acceptance test expects a new career, so use a fresh review data directory when repeating it. `DRIFT_ORIGIN`, `DRIFT_OUT`, `DRIFT_BIN` and `DRIFT_BUILD_ROOT` override test locations. Public UTXOPlay review is opt-in with `DRIFT_AUTH=1`; it uses a fresh unfunded QA wallet in memory and sends no transaction.
+The review server runs at `http://127.0.0.1:18940`; reports go under ignored `artifacts/`. The purchase acceptance test expects a new career, so use a fresh review data directory when repeating it. `DRIFT_ORIGIN`, `DRIFT_OUT`, `DRIFT_BIN` and `DRIFT_BUILD_ROOT` override test locations. Presentation acceptance also supports `DRIFT_TIMEOUT` in milliseconds for slow private preview transports; this changes functional-test waiting only, not loading measurements or acceptance assertions. Public UTXOPlay review is opt-in with `DRIFT_AUTH=1`; it uses a fresh unfunded QA wallet in memory and sends no transaction.
 
 GitHub Actions runs browser-source checks, native tests, conformance and signed replay. Physical Android/iOS testing is separate from the included Chromium touch emulation.
 

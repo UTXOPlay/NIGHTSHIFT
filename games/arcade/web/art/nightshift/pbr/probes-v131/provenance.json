@@ -1,0 +1,38 @@
+{
+  "format": "NSP1, little-endian RGBA Float16, Three.js r180 CubeUV PMREM, no mip generation at runtime",
+  "source": "Existing licensed Poly Haven HDR sources and authored night/tunnel light cards",
+  "probes": [
+    {
+      "name": "sunset",
+      "width": 384,
+      "height": 512,
+      "bytes": 1572880,
+      "maxRadiance": 16,
+      "meanRadiance": 0.3789321553922491
+    },
+    {
+      "name": "daylight",
+      "width": 384,
+      "height": 512,
+      "bytes": 1572880,
+      "maxRadiance": 15.65625,
+      "meanRadiance": 0.5354333142232564
+    },
+    {
+      "name": "night",
+      "width": 384,
+      "height": 512,
+      "bytes": 1572880,
+      "maxRadiance": 1.646484375,
+      "meanRadiance": 0.0715461440397323
+    },
+    {
+      "name": "tunnel",
+      "width": 384,
+      "height": 512,
+      "bytes": 1572880,
+      "maxRadiance": 1.380859375,
+      "meanRadiance": 0.06568786080849047
+    }
+  ]
+}

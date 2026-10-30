@@ -6,7 +6,7 @@ import {brotliCompressSync,gzipSync} from 'node:zlib';
 
 const version=JSON.parse(readFileSync('package.json','utf8')).version;
 const hashes={};
-function fingerprint(dir){for(const item of readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,item.name);if(item.isDirectory())fingerprint(file);else if(/\.(?:glb|webp|png|jpg|hdr|wav|ogg)$/.test(file))hashes['/arcade/'+path.relative('games/arcade/web',file).split(path.sep).join('/')]=createHash('sha256').update(readFileSync(file)).digest('hex').slice(0,16);}}
+function fingerprint(dir){for(const item of readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,item.name);if(item.isDirectory())fingerprint(file);else if(/\.(?:glb|webp|png|jpg|hdr|pmrem|wav|ogg)$/.test(file))hashes['/arcade/'+path.relative('games/arcade/web',file).split(path.sep).join('/')]=createHash('sha256').update(readFileSync(file)).digest('hex').slice(0,16);}}
 fingerprint('games/arcade/web');const define={__NIGHTSHIFT_ASSET_HASHES__:JSON.stringify(hashes)};
 const root=path.resolve('dist/nightshift');
 rmSync(root,{recursive:true,force:true});mkdirSync(root,{recursive:true});
@@ -18,7 +18,7 @@ await build({entryPoints:['games/arcade/web/nightshift9-renderer.mjs'],define,bu
 await build({entryPoints:['games/nightshift-v9/web/app.js'],define,bundle:true,format:'esm',minify:true,target:'es2022',outfile:path.join(root,'app.js'),plugins:[{name:'arcade-imports',setup(build){build.onResolve({filter:/^\.\/_arcade\//},args=>args.path.endsWith('nightshift9-renderer.bundle.mjs')?{path:args.path+'?v='+version,external:true}:{path:path.resolve('games/arcade/web',args.path.slice('./_arcade/'.length))});}}]});
 function rewrite(dir){for(const item of readdirSync(dir,{withFileTypes:true})){
  const file=path.join(dir,item.name);if(item.isDirectory()){rewrite(file);continue;}
- if(/\.glb$/.test(file)){const data=readFileSync(file);writeFileSync(file+'.br',brotliCompressSync(data,{params:{1:5}}));writeFileSync(file+'.gz',gzipSync(data));continue;}
+ if(/\.(?:glb|pmrem)$/.test(file)){const data=readFileSync(file);writeFileSync(file+'.br',brotliCompressSync(data,{params:{1:5}}));writeFileSync(file+'.gz',gzipSync(data));continue;}
  if(!/\.(?:js|mjs|css|html|json|webmanifest)$/.test(file))continue;
  let s=readFileSync(file,'utf8').replace('href="./_arcade/nightshift9-renderer.bundle.mjs"','href="./_arcade/nightshift9-renderer.bundle.mjs?v='+version+'"').replaceAll('/arcade/','/games/nightshift/_arcade/');
  for(const pre of ['/assets/','/brand/','/game-shell.','/game-loader.','/game-overlay.','/widescreen.','/fonts.','/brand.','/favicon','/apple-touch-icon.','/site.webmanifest'])s=s.replaceAll(pre,(match,offset,source)=>offset===0||/["'`(=\s]/.test(source[offset-1])?'/games/nightshift/_shared'+match:match);

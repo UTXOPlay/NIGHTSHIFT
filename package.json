@@ -1,6 +1,6 @@
 {
   "name": "@utxoplay/nightshift",
-  "version": "13.0.0",
+  "version": "13.1.1",
   "private": true,
   "type": "module",
   "description": "NIGHTSHIFT: World Circuit \u2014 solo racing, vehicle progression and signed Myelin replay",
@@ -24,8 +24,8 @@
     "test:conformance": "node tests/nightshift13-conformance.mjs",
     "test:replay": "node tests/nightshift13-signed-replay.mjs",
     "test:browser": "node tools/nightshift13-career-review.mjs",
-    "test:combat": "node tools/nightshift9-combat-review.mjs",
-    "test:maps": "node tools/nightshift9-map-review.mjs",
+    "test:combat": "node tools/nightshift13-combat-review.mjs",
+    "test:maps": "node tools/nightshift13-presentation-review.mjs",
     "test:performance": "node tools/nightshift13-performance.mjs",
     "check:release": "node tools/check-release.mjs",
     "test:balance": "node tests/nightshift13-conformance.mjs",
