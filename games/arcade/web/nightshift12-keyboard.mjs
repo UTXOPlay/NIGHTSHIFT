@@ -16,7 +16,7 @@ export function keyboardConfig(saved,legacy){
  if(!value && legacy){
   const old=legacyConfig(legacy);
   if(old.custom){const bindings={...old.bindings,brake:old.bindings.drift};delete bindings.drift;
-   for(const [action,choices] of [['throttle',['w','ArrowUp','i','u','7']],['drift',['x','c','v','b','8']]])bindings[action]=choices.find(key=>!Object.values(bindings).includes(key));
+   for(const [action,choices] of [['throttle',['w','ArrowUp','i','u','7']],['drift',['x','c','v','b','8']]])bindings[action]=[...choices,...'abcdefghijklmnopqrstuvwxyz0123456789','Space','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].find(key=>!Object.values(bindings).includes(key));
    value={...old,bindings};}
   else value={preset:old.preset};
  }
