@@ -1,6 +1,6 @@
 {
-  "version": "11.0.2",
-  "profile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455",
+  "version": "12.0.1",
+  "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
   "nativeSources": {
     "games/nightshift-v9/native/src/game.rs": "ba0b16c242c44e8415cdca30779e75b9e5f716e9b32eede9800424bdab6a0e30",
     "games/nightshift-v9/native/src/session.rs": "7061df4dfd9dc8d2ea09aa68ce6ffd36d712489cc26eb17437e0b932fd2deecf",
@@ -25,7 +25,13 @@
     "games/nightshift-v11/native/src/game.rs": "8ff1163d81169e0cf8e6aa45f0d872cd3f2c11d578e9d1d4342e698792a70d6b",
     "games/nightshift-v11/native/src/session.rs": "2b09a08e570eb690c25e8cd15133a33dd332bbf2d23ae0d2920900eeeef26c95",
     "games/nightshift-v11/native/src/lib.rs": "db74ace27467cc6ca30770ae8a0ca6f6b2fd3a1cd6de3fae4eeb978a5911bc01",
-    "games/nightshift-v11/native/src/main.rs": "6fd490e4008f56e4d0d860b3040fc278b09f7124023513d19d3f9c000b0f4e8d"
+    "games/nightshift-v11/native/src/main.rs": "6fd490e4008f56e4d0d860b3040fc278b09f7124023513d19d3f9c000b0f4e8d",
+    "games/nightshift-v12/native/Cargo.lock": "f8699ad639ab5df0cdc1811f23ef17ffdea5a7440cf4f3b6670fb2df04bf2dae",
+    "games/nightshift-v12/native/Cargo.toml": "3f99f568cce66df182b68ba8c786edb3b9f7ab560432bd259c9845a26aa8b940",
+    "games/nightshift-v12/native/src/game.rs": "8258249270631d73d9c9311fc09107319c717d73ad817e615dfc081ed48e8f1f",
+    "games/nightshift-v12/native/src/lib.rs": "db74ace27467cc6ca30770ae8a0ca6f6b2fd3a1cd6de3fae4eeb978a5911bc01",
+    "games/nightshift-v12/native/src/main.rs": "6fd490e4008f56e4d0d860b3040fc278b09f7124023513d19d3f9c000b0f4e8d",
+    "games/nightshift-v12/native/src/session.rs": "be24504dd23ea199cbc838ece0c14e23a5f66963ec3a9a2382f932af51665390"
   },
   "nativeBinaries": {
     "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
@@ -161,7 +167,7 @@
     "_arcade/nightshift9-course-data.mjs": "f9c7f1d375082b9e0611de00f4df8bcdef3d3e62d18a772663bf940bf9c8572b",
     "_arcade/nightshift9-course.mjs": "90386ffb86d32001af7671cb016f9f8bf89fad53dd18bdff43967985b71f776d",
     "_arcade/nightshift9-courses.json": "683542d927e2215976c455433ef1ef29572dcd0a1029ffe915ea9837fbd8adab",
-    "_arcade/nightshift9-drive-feedback.mjs": "143cb99cf53fe75dfde254667cf1df682df6684f6360a18e684913eb531b98fb",
+    "_arcade/nightshift9-drive-feedback.mjs": "ad70b7bb85a877da17592e52bbb4457d66c05bfe2d41a340741fce52ba2e8cfc",
     "_arcade/nightshift9-drive-vfx.mjs": "79684b35729de207897109fb3aba2f74d681f755b758f3b907db91f3b7448213",
     "_arcade/nightshift9-effects.mjs": "3f92b719466f75f1679bf6fb36836e02051b4550f7e077331465ec5cf75dbab3",
     "_arcade/nightshift9-engine.mjs": "b1145468ee05e81af982dc1a1e5c9c1d67d05a14ea82fb09d181e0a260a805a6",
@@ -191,11 +197,23 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d1d3c2ca98b26ccbacca07262d26acddb06e2981edcf29bc31db6a06e21dc56a",
-    "app.js": "3e57b5f0c2780304f944ab748ad3d22fb21041f691bef76319ac5b32b3de77c7",
-    "index.html": "90a8182923d1597b889ab50ab3245df4b62619b0d5f3bf74e5770efddfce507e",
-    "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
+    "app.js": "3f317a16f89fecc14fb3afa072cd0df7895de937d4cdc28408e415724fbbcebc",
+    "index.html": "8e01bfca1a59a7e9027158c879f26d2856235b6aec5b36d8f0c191942110f40b",
+    "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
+    "_arcade/nightshift12-input.mjs": "a2512329814aa1c0175e728c23b832437f5e80c3d8a9a14bbf71332fb097b3e1",
+    "_arcade/nightshift12-drive.mjs": "88426434c83cb892474309f8d5a97a102c4bbfdb3da16234fbc50891c77d4201",
+    "_arcade/nightshift12-rules.mjs": "a125435b018ff7e18fe01042137cba375e6fca08d329b3da5e817e5aad8098b3",
+    "_arcade/nightshift12-keyboard.mjs": "31127812faf991ee4b312313c7aaf13eabf420fbdececce600a422af0801c513",
+    "_arcade/nightshift12-gamepad.mjs": "1f51fec0956eee5742146c22f246aad7174feec3bae6c910082bb5706d5dbe7c",
+    "_arcade/nightshift12-driving-coach.mjs": "0689aadfbc0d7d8312ec02fe41edd8d237fc872b7f5b4d72972ec4f0fb582179",
+    "_arcade/nightshift12-controls-ui.mjs": "f766b28e915b2212fc79bbfd82bed93b2f95783cd54ff3cbdfba5a61e6da056f",
+    "_arcade/nightshift12-ghost.mjs": "fff872a7001794d5c4a661633277d981d9883b49bb8dd0d0ac2fa8aa23fb017d",
+    "_arcade/nightshift12-profile.mjs": "05c115249325cdc3c9d8c81044b18b43aa828184d94c197e6b06d825fc88a189"
   },
   "presentationHostFiles": {
-    "host/static.mjs": "f90429f4ddb62966131c19cd80e626b6db0cd0f61292bc743453407d4b279890"
+    "host/static.mjs": "f90429f4ddb62966131c19cd80e626b6db0cd0f61292bc743453407d4b279890",
+    "host/nightshift12.mjs": "e686f1c76b5f7f4d3b61efd40f2986ed3d7cd505368b30e71d8c7b17cd072e6c",
+    "games/nightshift-v12/host.json": "fcb05d0a2e9dff3214a12fada744353614c6fe81a7d3bc96ff6426c35372dc3c",
+    "host/career-migration.mjs": "47105e2899ea4e679712e3824a8c5ea75d1087b4482399887c7b61af52d5620d"
   }
 }

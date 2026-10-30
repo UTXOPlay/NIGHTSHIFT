@@ -1,0 +1,451 @@
+{
+  "version": "12.0.1",
+  "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+  "conformance": {
+    "tapes": 37,
+    "activeTicks": 545755,
+    "careerFrames": 1588,
+    "successfulRoutes": true,
+    "wins": 19,
+    "winningSeconds": {
+      "min": 279.3,
+      "max": 386.06666666666666
+    },
+    "coverage": [
+      "attack_hits",
+      "rival-defense",
+      "pulse",
+      "pickups",
+      "rival-windup",
+      "style",
+      "near_misses",
+      "dodges",
+      "nitro",
+      "takedowns",
+      "checkpoint",
+      "shield",
+      "win-0",
+      "win-1",
+      "win-2",
+      "win-3",
+      "win-4",
+      "win-5",
+      "win-6",
+      "win-7",
+      "win-8",
+      "win-9",
+      "win-10",
+      "win-11"
+    ]
+  },
+  "calibration": [
+    {
+      "vehicle": 0,
+      "zeroTo100Seconds": 3.533333333333333,
+      "brake100To0Seconds": 2.2333333333333334
+    },
+    {
+      "vehicle": 1,
+      "zeroTo100Seconds": 3.3,
+      "brake100To0Seconds": 2.066666666666667
+    },
+    {
+      "vehicle": 2,
+      "zeroTo100Seconds": 4.4,
+      "brake100To0Seconds": 2.4
+    },
+    {
+      "vehicle": 3,
+      "zeroTo100Seconds": 2.9,
+      "brake100To0Seconds": 1.9333333333333333
+    },
+    {
+      "vehicle": 4,
+      "zeroTo100Seconds": 2.566666666666667,
+      "brake100To0Seconds": 1.8333333333333333
+    },
+    {
+      "vehicle": 5,
+      "zeroTo100Seconds": 3.8333333333333335,
+      "brake100To0Seconds": 2.2333333333333334
+    }
+  ],
+  "browser": {
+    "checks": [
+      "Observed acceleration, steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns",
+      "Observed acceleration, steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Portrait gate pauses controller play and clears held input",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "practiceStage": 4,
+        "nativeReplay": true,
+        "pausedTick": 129,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      },
+      {
+        "touch": true,
+        "practiceStage": 4,
+        "nativeReplay": true,
+        "pausedTick": 100,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      }
+    ],
+    "errors": []
+  },
+  "touch": {
+    "checks": [
+      "Thumb accelerator held through countdown starts the car at GO",
+      "Diagonal joystick combines proportional steering and gas",
+      "Releasing the joystick coasts without automatic gas",
+      "Portrait gate clears the held brake and pauses the local simulation",
+      "Native touch-input replay verifies and all visible text is English"
+    ],
+    "errors": [],
+    "physicalPhone": false
+  },
+  "migration": [
+    {
+      "version": 8,
+      "unfinishedRetainsRules": true,
+      "newRaceMigrates": true,
+      "careerPreserved": true,
+      "replay": true,
+      "oldClientRejected": true
+    },
+    {
+      "version": 9,
+      "unfinishedRetainsRules": true,
+      "newRaceMigrates": true,
+      "careerPreserved": true,
+      "replay": true,
+      "oldClientRejected": true
+    },
+    {
+      "version": 10,
+      "unfinishedRetainsRules": true,
+      "newRaceMigrates": true,
+      "careerPreserved": true,
+      "replay": true,
+      "oldClientRejected": true
+    },
+    {
+      "version": 11,
+      "unfinishedRetainsRules": true,
+      "newRaceMigrates": true,
+      "careerPreserved": true,
+      "replay": true,
+      "oldClientRejected": true
+    }
+  ],
+  "limitations": [
+    "Physical phone and physical controller testing remains outstanding.",
+    "This release advances driving and input. Career unlocks, route forks and wider art/audio improvements remain active goal work."
+  ],
+  "nodeTests": 131,
+  "nativeTests": 14,
+  "staging": {
+    "integrity": {
+      "version": "12.0.0",
+      "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+      "servedFileHashes": 169,
+      "hostFiles": true,
+      "nativeLegacySHA256": {
+        "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+        "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+        "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+        "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63"
+      },
+      "newExecutableSHA256": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8"
+    },
+    "migration": {
+      "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+      "checks": [
+        {
+          "version": 8,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        },
+        {
+          "version": 9,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        },
+        {
+          "version": 10,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        },
+        {
+          "version": 11,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        }
+      ]
+    },
+    "capacity": {
+      "newAccountAvoidsLegacyDatabases": true,
+      "requests": 41,
+      "perExecutorCacheLimit": 6,
+      "beforeBytes": 390979584,
+      "peakBytes": 1346539520,
+      "currentBytes": 1346539520,
+      "limitBytes": 1610612736,
+      "rows": [
+        {
+          "version": 8,
+          "accounts": 8,
+          "currentMemoryBytes": 662528000
+        },
+        {
+          "version": 9,
+          "accounts": 8,
+          "currentMemoryBytes": 875876352
+        },
+        {
+          "version": 10,
+          "accounts": 8,
+          "currentMemoryBytes": 1088843776
+        },
+        {
+          "version": 11,
+          "accounts": 8,
+          "currentMemoryBytes": 1301696512
+        },
+        {
+          "version": 12,
+          "accounts": 8,
+          "currentMemoryBytes": 1346539520
+        }
+      ]
+    },
+    "controls": {
+      "checks": [
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns",
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Portrait gate pauses controller play and clears held input",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns"
+      ],
+      "runs": [
+        {
+          "touch": false,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 114,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        },
+        {
+          "touch": true,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 100,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        }
+      ],
+      "errors": []
+    },
+    "touch": {
+      "checks": [
+        "Thumb accelerator held through countdown starts the car at GO",
+        "Diagonal joystick combines proportional steering and gas",
+        "Releasing the joystick coasts without automatic gas",
+        "Portrait gate clears the held brake and pauses the local simulation",
+        "Native touch-input replay verifies and all visible text is English"
+      ],
+      "errors": [],
+      "physicalPhone": false
+    },
+    "fullscreen": {
+      "origin": "http://127.0.0.1:18944",
+      "checks": [
+        {
+          "id": "drift-run",
+          "pricing": "free",
+          "ready": true,
+          "fullscreen": true,
+          "reentry": true
+        }
+      ],
+      "failures": [],
+      "errors": []
+    },
+    "assetTransport": "Static assets were fulfilled from the local release after byte-hash verification; native APIs, authentication and Store entry used the staged server. SSH streaming was slow. Public browser acceptance must run without local asset fulfillment."
+  },
+  "customKeyboard": {
+    "legacyCustomBindingsPreserved": true,
+    "automaticLayoutDetectionDoesNotOverrideCustom": true,
+    "conflictingGasKeyAssignedFreeArrow": true,
+    "newRaceHasNoLegacyNotice": true
+  },
+  "production": {
+    "deployment": {
+      "version": "12.0.1",
+      "gameImage": "sha256:e6b6fdd7d5ae75148b06a437514e6c8f307a589cab3d18e4815b7881d0d5002f",
+      "storeImage": "sha256:f960923c32d600e135fa1bdc68946c216ff77b63b2579247670610b185e713d4",
+      "otherCatalogEntriesPreserved": true,
+      "legacyNativeVolumesPreserved": true,
+      "v12DataIsolated": true
+    },
+    "preservation": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "stableSecretsAndEnvironment": true,
+        "sameMounts": true,
+        "sameSecurityAndResources": true,
+        "sameNetworks": true
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "stableSecretsAndEnvironment": true,
+        "sameMounts": true,
+        "sameSecurityAndResources": true,
+        "sameNetworks": true
+      },
+      "catalog": {
+        "otherGamesUnchanged": true,
+        "nightshiftVersion": "12.0.1"
+      }
+    },
+    "integrity": {
+      "version": "12.0.1",
+      "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+      "servedFileHashes": 169,
+      "hostFiles": true,
+      "nativeLegacySHA256": {
+        "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+        "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+        "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+        "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63"
+      },
+      "newExecutableSHA256": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8"
+    },
+    "controls": {
+      "checks": [
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns",
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Portrait gate pauses controller play and clears held input",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns"
+      ],
+      "runs": [
+        {
+          "touch": false,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 110,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        },
+        {
+          "touch": true,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 100,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        }
+      ],
+      "errors": []
+    },
+    "touch": {
+      "checks": [
+        "Thumb accelerator held through countdown starts the car at GO",
+        "Diagonal joystick combines proportional steering and gas",
+        "Releasing the joystick coasts without automatic gas",
+        "Portrait gate clears the held brake and pauses the local simulation",
+        "Native touch-input replay verifies and all visible text is English"
+      ],
+      "errors": [],
+      "physicalPhone": false
+    },
+    "fullscreen": {
+      "origin": "https://store.utxoplay.io",
+      "checks": [
+        {
+          "id": "drift-run",
+          "pricing": "free",
+          "ready": true,
+          "fullscreen": true,
+          "reentry": true,
+          "sameGameInstance": true
+        }
+      ],
+      "failures": [],
+      "errors": []
+    },
+    "performance": {
+      "version": "12.0.1",
+      "quality": "Auto",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "input": "virtual standard Gamepad API, ordinary signed inputs",
+      "menuMs": 31403,
+      "wallSeconds": 20.228,
+      "simulationSeconds": 20.233333333333334,
+      "medianFps": 60,
+      "p10Fps": 59,
+      "medianCpuMs": 6.14,
+      "medianGpuMs": 12.270572,
+      "scales": [
+        1
+      ],
+      "maxBufferPixels": 2073600,
+      "distance": 8528,
+      "errors": []
+    },
+    "localAssetFulfillment": false
+  },
+  "runtimeCommit": "334021059efec026bf2991e8aa64b0079c6056d6"
+}

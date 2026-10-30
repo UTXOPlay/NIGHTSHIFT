@@ -1,0 +1,6 @@
+{
+  "controls": "W accelerates, S brakes, A/D steer, X handbrakes, Z reverses; all actions are remappable. Colemak and arrow pedals supported. Touch uses an analogue thumb stick. Standard controllers: RT gas, LT brake/reverse, B handbrake, A nitrous.",
+  "description": "Twelve winding courses, six handling builds and a signed solo career. Manage independent accelerator and brake pedals, coast into corners and power out. Master four-sector drift challenges or race your verified personal ghost in a stock time attack.",
+  "heroDescription": "Launch from rest, find the grip and control your exits with separate gas, brake, handbrake and nitrous. Race twelve circuits, earn upgrades and chase your personal best. Six handling builds use five licensed vehicle bodies. Solo racing; older signed races retain their original rules.",
+  "replayDescription": "V12 binds proportional steering, gas, brake, career economy and verified predecessor proofs to its exact native application profile. Older races and exports keep their original executors. Myelin provides off-chain host replay, not CKB settlement."
+}
