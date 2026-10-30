@@ -1,0 +1,223 @@
+{
+  "version": "11.0.1",
+  "runtimeCommit": "64d9da0a730b78f142679242f0b63b040edbeb27",
+  "productionUrl": "https://store.utxoplay.io/games/nightshift/",
+  "loading": [
+    {
+      "case": "desktop-cold",
+      "playableSeconds": 61.138,
+      "requests": 74,
+      "wireBytes": 25125842,
+      "assetNotificationEndSeconds": 43.997,
+      "afterLastAssetUntilReadySeconds": 16.027,
+      "longTasksTotalMs": 8496,
+      "longestTaskMs": 5093,
+      "JSHeapUsedBytes": 29646428,
+      "errors": []
+    },
+    {
+      "case": "desktop-warm",
+      "playableSeconds": 38.509,
+      "requests": 74,
+      "wireBytes": 25125079,
+      "assetNotificationEndSeconds": 34.73,
+      "afterLastAssetUntilReadySeconds": 2.845,
+      "longTasksTotalMs": 2515,
+      "longestTaskMs": 1451,
+      "JSHeapUsedBytes": 52869384,
+      "errors": []
+    },
+    {
+      "case": "mobile-4mbps-cold",
+      "playableSeconds": 60.564,
+      "requests": 74,
+      "wireBytes": 25125761,
+      "assetNotificationEndSeconds": 53.723,
+      "afterLastAssetUntilReadySeconds": 5.84,
+      "longTasksTotalMs": 9018,
+      "longestTaskMs": 4522,
+      "JSHeapUsedBytes": 19321776,
+      "errors": []
+    },
+    {
+      "case": "mobile-4mbps-warm",
+      "playableSeconds": 54.894,
+      "requests": 74,
+      "wireBytes": 25125313,
+      "assetNotificationEndSeconds": 51.614,
+      "afterLastAssetUntilReadySeconds": 2.388,
+      "longTasksTotalMs": 3036,
+      "longestTaskMs": 1839,
+      "JSHeapUsedBytes": 19240740,
+      "errors": []
+    }
+  ],
+  "runtime": [
+    {
+      "case": "harbour-1080-high",
+      "exitCode": 1,
+      "rendererName": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "gpuMedianMs": 36.255676,
+      "mode": 0,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "touch": false,
+      "wallSeconds": 20.205591193,
+      "simulationSeconds": 17.233333333333334,
+      "medianFps": 27,
+      "p10Fps": 22,
+      "medianCpuMs": 6.96,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        101,
+        318
+      ],
+      "maxTriangles": 564994,
+      "errors": []
+    },
+    {
+      "case": "glacier-1440-high",
+      "exitCode": 1,
+      "rendererName": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "gpuMedianMs": 53.320885,
+      "mode": 1,
+      "viewport": {
+        "width": 2560,
+        "height": 1440
+      },
+      "touch": false,
+      "wallSeconds": 20.121134831999996,
+      "simulationSeconds": 14.9,
+      "medianFps": 18,
+      "p10Fps": 13,
+      "medianCpuMs": 7.2,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        80,
+        195
+      ],
+      "maxTriangles": 309900,
+      "errors": []
+    },
+    {
+      "case": "harbour-mobile-auto",
+      "exitCode": 0,
+      "rendererName": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "gpuMedianMs": 14.168802,
+      "mode": 0,
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "touch": true,
+      "wallSeconds": 20.089911793,
+      "simulationSeconds": 20.066666666666666,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 7.18,
+      "scales": [
+        1
+      ],
+      "drawCalls": [
+        112,
+        321
+      ],
+      "maxTriangles": 583205,
+      "errors": []
+    }
+  ],
+  "upstreamCompression": [
+    {
+      "label": "brotli",
+      "status": 200,
+      "bytes": 4971685,
+      "encoding": "br",
+      "vary": "Accept-Encoding",
+      "etag": "W/\"4bdca5-1a18a466680\""
+    },
+    {
+      "label": "gzip",
+      "status": 200,
+      "bytes": 5194710,
+      "encoding": "gzip",
+      "vary": "Accept-Encoding",
+      "etag": "W/\"4f43d6-1a18a466680\""
+    },
+    {
+      "label": "conditional",
+      "status": 304,
+      "bytes": 0
+    },
+    {
+      "label": "conditional-no-cache",
+      "status": 200,
+      "bytes": 5194710
+    },
+    {
+      "label": "conditional-max-age-0",
+      "status": 304,
+      "bytes": 0
+    }
+  ],
+  "gatewayCompression": [
+    {
+      "encodingRequested": "br",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache",
+        "etag": "W/\"4f43d6-1a18a466680\"",
+        "last-modified": "Fri, 30 Oct 2026 00:47:12 GMT"
+      },
+      "bytes": 6047532
+    },
+    {
+      "encodingRequested": "identity",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache",
+        "etag": "W/\"4f43d6-1a18a466680\"",
+        "last-modified": "Fri, 30 Oct 2026 00:47:12 GMT"
+      },
+      "bytes": 6047532
+    }
+  ],
+  "conditionalGateway": [
+    {
+      "phase": "first",
+      "status": 200,
+      "bytes": 6047532,
+      "date": "Fri, 30 Oct 2026 03:32:01 GMT",
+      "etag": "W/\"4f43d6-1a18a466680\""
+    },
+    {
+      "phase": "conditional",
+      "status": 200,
+      "bytes": 6047532,
+      "date": "Fri, 30 Oct 2026 03:32:01 GMT",
+      "etag": "W/\"4f43d6-1a18a466680\""
+    }
+  ],
+  "fetchConditionalReproduction": {
+    "default": {
+      "cacheControl": "no-cache",
+      "pragma": "no-cache"
+    },
+    "explicitNoCacheMode": {
+      "cacheControl": "max-age=0"
+    }
+  },
+  "limitations": [
+    "One loading sample per case, not a population median or percentile.",
+    "Live loading used the configured client HTTPS proxy and actual origin resources, without local asset substitution. Network/CPU throttling is emulation, not a physical phone.",
+    "Client and server clocks differ by approximately eight hours. One-hour freshness is therefore not representative of a correctly synchronized user clock. Independent explicit ETag requests still returned full HTTP 200 at the gateway, while direct upstream returned 304.",
+    "Runtime samples use verified cached asset bytes, live native API and Intel Iris Xe hardware. Other browser/SwiftShader and compiler work ran concurrently on this shared computer. Do not attribute all FPS variance to game code or claim a controlled regression.",
+    "No GPU VRAM or decode-only timing was measured. Task timings include main-thread work; the post-asset interval includes CPU/GPU preparation and scheduling.",
+    "Gateway compression/caching and eager fleet/shader preparation remain open findings in this audit."
+  ]
+}
