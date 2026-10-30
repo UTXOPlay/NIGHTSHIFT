@@ -8,6 +8,7 @@ for(const version of [7,8,9,10]){
  for(const [file,hash]of Object.entries(legacy.nativeSources))assert.equal(sha(file),hash,file+` changes the preserved V${version} profile`);
 }
 for(const [file,hash]of Object.entries(expected.nativeSources))assert.equal(sha(file),hash,file+' changes the V11 profile');
+for(const [file,hash]of Object.entries(expected.presentationHostFiles||{}))assert.equal(sha(file),hash,file+' differs from the presentation host');
 for(const [file,hash]of Object.entries(expected.browserFiles))assert.equal(sha('dist/nightshift/'+file),hash,file+' differs from the verified V11 release');
 console.log(`Verified preserved V7/V8/V9/V10 sources, ${Object.keys(expected.nativeSources).length} V11-bound native sources and ${Object.keys(expected.browserFiles).length} browser files.`);
 
