@@ -258,12 +258,108 @@
     "nativeBinaries": 6,
     "allHashesMatch": true
   },
-  "publicBrowser": "in progress; production rate limits respected",
+  "publicBrowser": {
+    "version": "13.0.0",
+    "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "buffer": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "buffer": {
+          "width": 2560,
+          "height": 1080
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "buffer": {
+          "width": 844,
+          "height": 390
+        }
+      }
+    ],
+    "checks": {
+      "lockedPreview": true,
+      "chapterReceipt": true,
+      "nativeChapterUnlock": true,
+      "freeAllocation": true,
+      "uiPurchase": true,
+      "signedReplay": true,
+      "ordinaryPedalsAfterResize": true,
+      "portraitGate": true
+    },
+    "errors": [],
+    "physicalDevices": false
+  },
   "limitations": [
     "Oracle-style bot completion does not prove human difficulty.",
     "Staging input checks use byte-verified local assets with real staged native APIs; they are not loading benchmarks.",
     "Public runtime acceptance has no asset substitution.",
     "Physical phone/controller and long-session validation remain open.",
     "The complete single-player goal is still active; see single-player-completion.md."
-  ]
+  ],
+  "publicPerformance": {
+    "version": "13.0.0",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 18468,
+    "wallSeconds": 20.079,
+    "simulationSeconds": 20.066666666666666,
+    "medianFps": 60,
+    "p10Fps": 59,
+    "medianCpuMs": 2.63,
+    "medianGpuMs": 8.802395,
+    "scales": [
+      1
+    ],
+    "maxBufferPixels": 2073600,
+    "distance": 8005,
+    "errors": []
+  },
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "checks": [
+      {
+        "id": "drift-run",
+        "pricing": "free",
+        "ready": true,
+        "fullscreen": true,
+        "reentry": true,
+        "sameGameInstance": true
+      }
+    ],
+    "failures": [],
+    "errors": []
+  },
+  "sourceCommit": "188df362d1bdd01fc98f87704d65e7dbf9a4be17",
+  "catalogCommit": "3898a1e6129b940466981e7e5421c83df11dd445"
 }
