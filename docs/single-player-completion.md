@@ -1,0 +1,31 @@
+# Single-player completion contract
+
+Scope: a polished, lightweight NIGHTSHIFT browser racer. Multiplayer implementation is explicitly excluded from this goal. Its future design must not be precluded, and Myelin remains off-chain host replay, not CKB settlement. UI and source documentation are English; communication with the project owner is Chinese.
+
+The reference is the interaction density and coherent feedback of Need for Speed, not AAA car counts, a huge open world or ray tracing. EA's [Unbound Volume 6](https://www.ea.com/games/need-for-speed/need-for-speed-unbound/features/volume-6) demonstrates fast event entry, distinct car handling/audio and visible rank. [Volume 3](https://www.ea.com/games/need-for-speed/need-for-speed-unbound/features/volume-3) demonstrates escalating staged objectives, XP, earned currency and challenge rewards. NIGHTSHIFT uses its own assets, rules and implementation.
+
+## Required outcomes and evidence
+
+| Area | Completion requirement | Current evidence / remaining work |
+| --- | --- | --- |
+| Driving | Independent pedals, distinct cars/builds, readable drift/grip transitions, contacts with consistent mass/impulses, reliable escape from obstructions | V12 implementation and public replay. V13 active build budget implemented. Recovery, human handling balance and long-session validation still require another pass. |
+| Rivals / combat | Opponents overtake, avoid shared hazards, defend and attack under readable limits. Every hit, block, disable, wreck and recovery has corresponding audiovisual feedback. | Shared contacts and telegraphs exist. V13 corrects target timing. Tactical depth and complete animation/feedback audit remain open. |
+| Events | Twelve distinct routes; successful races last 3–7 minutes; meaningful tasks throughout the race; clear transitions and final phase | V13 campaign, optional sector contracts, late interception target plus podium, and final drift exit implemented. Replay and UI acceptance must be attached to the release. Human playtesting remains open. |
+| Career / garage | Distinct chapter licenses, real credits and costs, one-time rewards, part unlocks, free tradeoff-based tuning, transparent result receipts, completion goals | V13 implementation. Must verify legal earned-credit campaign, no duplicate bonuses, purchased part retention, UI and legacy carry. |
+| Routes / scenery | Distinct districts, continuous terrain/sky transitions, useful route choices and recognizable landmarks, varied close scenery | Twelve environments and previews exist. Branch/shortcut decisions and a close-scenery/material/lighting pass remain open. |
+| Art / sound | Consistent exposure, scale, contact shadows, varied buildings/streetlights, readable effects without opaque panels; varied engine/load/impact sound | Current release has five source bodies and vehicle voices. Asset coherence, near/far consistency and audio identity remain open. |
+| UI / input | Full viewport, icon-led controls, English only, Colemak/remapping/gamepad/touch; required display sizes; portrait gate; shared Store fullscreen entry/exit/reentry without restarting | V12 public acceptance exists. V13 menu, tuning and event HUD must be rechecked. Physical device/controller coverage remains open. |
+| Performance / delivery | Quick usable first menu, lazy assets, capped backing resolution, sustainable frame pacing, long sessions without leaks, meaningful current-version test commands, validated deployment and rollback | V12 one desktop sample: 60 median / 59 p10 FPS; first menu 31.4 s. Loading, long-session/device coverage and V13 delivery remain open. |
+| Integrity | Exact browser/native results and profile binding; frozen old rules and signed saves; replay/restart/tamper tests; historical PB provenance separated | V13 independent executor and V8–V12 migration implemented. All old native source hashes remain frozen. Current rule PB starts fresh, historical PB and original proof are retained. |
+
+No row is considered fully achieved merely because one test is green. In particular, deterministic bot completion does not establish human difficulty, screenshots do not establish physical-device performance, and a short desktop performance sample does not establish a worldwide loading or long-session guarantee.
+
+## V13 design
+
+Four disciplines are initially available, so the campaign does not force one repeated race. Three distinct medals in each chapter open the next four contracts. First medals pay 250 credits once; each three-medal chapter pays 750 once. Reputation unlocks cars and higher part tiers. Bought parts are permanent; at most six purchased tiers can be active on each car, and reallocation between events is free. Stock time attack remains a separate fixed build and does not grant chapter medals.
+
+Optional quarter-route contracts pay 75 credits and 10 reputation each at the finish. Race contracts require a podium position and five clean seconds at the relay; escape contracts require heat below 50% and five clean seconds; drift contracts require that sector's style target; interception contracts require a hit or evade within that sector and a top-four position. Their records persist independently of medals. A wreck retains distance salvage rather than awarding uncompleted finish bonuses.
+
+Interception gates span 8% through 88% of the route. A marked target can still be fought before its gate, but a bounty is only secured after activation; the HUD explicitly distinguishes the two. Securing the targets also requires a podium finish. Drift events retain four sector quotas and add a linked drift followed by a clean exit after the 90% marker. No rule change shortens successful events below three minutes.
+
+Legacy ownership, purchased parts, currency, medals and original signed origins are retained. Existing customers retain access to all previously selectable routes; already-earned medals do not mint a new first-clear bonus. Historical PBs are preserved with the source save generation (which does not prove the generation of an earlier carried PB) and are not shown as current-rule records. Over-budget historical builds keep all parts and begin with a bounded allocation that can be changed for free.

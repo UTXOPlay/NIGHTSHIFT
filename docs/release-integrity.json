@@ -1,6 +1,6 @@
 {
-  "version": "12.0.1",
-  "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+  "version": "13.0.0",
+  "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
   "nativeSources": {
     "games/nightshift-v9/native/src/game.rs": "ba0b16c242c44e8415cdca30779e75b9e5f716e9b32eede9800424bdab6a0e30",
     "games/nightshift-v9/native/src/session.rs": "7061df4dfd9dc8d2ea09aa68ce6ffd36d712489cc26eb17437e0b932fd2deecf",
@@ -31,13 +31,21 @@
     "games/nightshift-v12/native/src/game.rs": "8258249270631d73d9c9311fc09107319c717d73ad817e615dfc081ed48e8f1f",
     "games/nightshift-v12/native/src/lib.rs": "db74ace27467cc6ca30770ae8a0ca6f6b2fd3a1cd6de3fae4eeb978a5911bc01",
     "games/nightshift-v12/native/src/main.rs": "6fd490e4008f56e4d0d860b3040fc278b09f7124023513d19d3f9c000b0f4e8d",
-    "games/nightshift-v12/native/src/session.rs": "be24504dd23ea199cbc838ece0c14e23a5f66963ec3a9a2382f932af51665390"
+    "games/nightshift-v12/native/src/session.rs": "be24504dd23ea199cbc838ece0c14e23a5f66963ec3a9a2382f932af51665390",
+    "games/nightshift-v13/native/src/game.rs": "2a1c28ab59da4c9d5df41ac1c1ce5f3831abd8fa50e8a2070fa3d5d9fc616f9e",
+    "games/nightshift-v13/native/src/session.rs": "268f161e130c6b7bb6d993b0bf67cb90cc092d7fa95ea9e1e9752455c55a6c24",
+    "games/nightshift-v13/native/src/main.rs": "6fd490e4008f56e4d0d860b3040fc278b09f7124023513d19d3f9c000b0f4e8d",
+    "games/nightshift-v13/native/src/lib.rs": "db74ace27467cc6ca30770ae8a0ca6f6b2fd3a1cd6de3fae4eeb978a5911bc01",
+    "games/nightshift-v13/native/Cargo.toml": "3590a055863d5c6e6154eb6c9d6971c88c23768c22b7b8fe445f8caae090e612",
+    "games/nightshift-v13/native/Cargo.lock": "558111f27ccf6ff323bfb8fd3dd42dc4ff2657544f8d489c25d3d9a6720f8ad4"
   },
-  "nativeBinaries": {
-    "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
-    "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
-    "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
-    "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63"
+  "presentationHostFiles": {
+    "host/static.mjs": "f90429f4ddb62966131c19cd80e626b6db0cd0f61292bc743453407d4b279890",
+    "host/nightshift12.mjs": "e686f1c76b5f7f4d3b61efd40f2986ed3d7cd505368b30e71d8c7b17cd072e6c",
+    "games/nightshift-v12/host.json": "fcb05d0a2e9dff3214a12fada744353614c6fe81a7d3bc96ff6426c35372dc3c",
+    "host/career-migration.mjs": "47105e2899ea4e679712e3824a8c5ea75d1087b4482399887c7b61af52d5620d",
+    "host/nightshift13.mjs": "ec89bd5613b53e16f3812d4b7d480211471557202206ebcb5ffc82d408d16775",
+    "games/nightshift-v13/host.json": "2232797be31b2478973c6233fc133c73e407f16b6a0f88f32c7743bd8d3790ab"
   },
   "browserFiles": {
     "_arcade/art/nightshift/architecture-v8.webp": "d1dac2efb5adf8f207d240e9f98d5df065ab23d9c5fba76e495f88c5c7cecb76",
@@ -140,6 +148,21 @@
     "_arcade/nightshift11-profile.mjs": "59a8ac73ebfee9e5caee21e11c5357e586d7e217c86b20fd9ce9197b7944f9c3",
     "_arcade/nightshift11-rules.mjs": "07453ad1dadbf9fe7a6e818ceeb304f4e7828c725d2fa670ab61bfc233767599",
     "_arcade/nightshift11-tactics.mjs": "8d674fc5811a2d954c7ca944c0bb97c1024f3148e1843c738843c3d68eea739f",
+    "_arcade/nightshift12-controls-ui.mjs": "f766b28e915b2212fc79bbfd82bed93b2f95783cd54ff3cbdfba5a61e6da056f",
+    "_arcade/nightshift12-drive.mjs": "88426434c83cb892474309f8d5a97a102c4bbfdb3da16234fbc50891c77d4201",
+    "_arcade/nightshift12-driving-coach.mjs": "0689aadfbc0d7d8312ec02fe41edd8d237fc872b7f5b4d72972ec4f0fb582179",
+    "_arcade/nightshift12-gamepad.mjs": "1f51fec0956eee5742146c22f246aad7174feec3bae6c910082bb5706d5dbe7c",
+    "_arcade/nightshift12-ghost.mjs": "fff872a7001794d5c4a661633277d981d9883b49bb8dd0d0ac2fa8aa23fb017d",
+    "_arcade/nightshift12-input.mjs": "a2512329814aa1c0175e728c23b832437f5e80c3d8a9a14bbf71332fb097b3e1",
+    "_arcade/nightshift12-keyboard.mjs": "4319be8ee10c2ba1ef637a3228c847ac31d84370ad8733da53d3837c479946cb",
+    "_arcade/nightshift12-profile.mjs": "05c115249325cdc3c9d8c81044b18b43aa828184d94c197e6b06d825fc88a189",
+    "_arcade/nightshift12-rules.mjs": "a125435b018ff7e18fe01042137cba375e6fca08d329b3da5e817e5aad8098b3",
+    "_arcade/nightshift13-career.mjs": "e02db3f5e1d3d5d76a3bb0a2154ffec62d7899d52a4241ba2e79189d0ed610ce",
+    "_arcade/nightshift13-feedback.mjs": "d075a01ed6fe5dd3d05a34b379574b81117490abcb5af4a498cf4ff02f0bac48",
+    "_arcade/nightshift13-ghost.mjs": "b4a2b53cedbea69dc4a8f6a1339879049e23bf4a6c8ff5e5a66f8dafa1cbec98",
+    "_arcade/nightshift13-profile.mjs": "94bdab1174072129e4f90b57c9d64f0a9faeae48e64f5f211269e1db0591a161",
+    "_arcade/nightshift13-rules.mjs": "ab5a7b153baf81b6d21bd87a1b2f0db0b81c1556dd503a8d1ab1f707f83eca3c",
+    "_arcade/nightshift13-tactics.mjs": "e279592efa84ac11859aa0c30e97614897f370709a9743c44eb19cae0cec5415",
     "_arcade/nightshift8-architecture.mjs": "efc8eb7d0991455fb343fd57ac05a8530da6ddb5acc51e7a6d8b37c3850d6448",
     "_arcade/nightshift8-assets.mjs": "2ba0102b28f25a27201979430ccbd3ea0e94ee932b9db4aade7a41a0fbb33651",
     "_arcade/nightshift8-audio.mjs": "9dbc12645b0a7db92e87d7c7ded1b9708b783ac88ffc063d1bf37a777ef1f1e8",
@@ -190,30 +213,24 @@
     "_arcade/nightshift9-trails.mjs": "00d4299c4bf0523d5a00fded136d0669b9eaa2e46fa6978a1ad6388bcd22dbe0",
     "_arcade/nightshift9-world-route.mjs": "21ef12c8ef1c6d83c56089323292f9119015bec5d1febd28ad4f272562242612",
     "_arcade/nightshift9-world.mjs": "e69e88e7fb5bec3aaf140889ce17bb2c62f76e5a1b7d0140f5cec465f35f8e7b",
-    "_arcade/nightshift9.css": "79edd07217b4e2692a6e21b4f76889830441c684dfcdb7efbb7978ef32865d3f",
+    "_arcade/nightshift9.css": "caabc58f9f8ba3fcec80fcaf0f3dc196839034affe6e19b0e5d35591623db28b",
     "_shared/assets/drift-run-keyart.webp": "63378bd31b2581ff1a882f03f89ddada541fa259508d5a784dfa5ecb0f03d7fa",
     "_shared/assets/myelin-logo.png": "47e5fb69d24ee433caf390baf0a2a02ceb6661fb2b472a70c8a36de5b4c659ca",
     "_shared/assets/nightshift-circuit-v11.webp": "ccfbc5b4db81b1353fc7a179c47553d37e49ec32e76a79d2971ea0e54330968a",
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d1d3c2ca98b26ccbacca07262d26acddb06e2981edcf29bc31db6a06e21dc56a",
-    "app.js": "3f317a16f89fecc14fb3afa072cd0df7895de937d4cdc28408e415724fbbcebc",
-    "index.html": "8e01bfca1a59a7e9027158c879f26d2856235b6aec5b36d8f0c191942110f40b",
-    "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
-    "_arcade/nightshift12-input.mjs": "a2512329814aa1c0175e728c23b832437f5e80c3d8a9a14bbf71332fb097b3e1",
-    "_arcade/nightshift12-drive.mjs": "88426434c83cb892474309f8d5a97a102c4bbfdb3da16234fbc50891c77d4201",
-    "_arcade/nightshift12-rules.mjs": "a125435b018ff7e18fe01042137cba375e6fca08d329b3da5e817e5aad8098b3",
-    "_arcade/nightshift12-keyboard.mjs": "31127812faf991ee4b312313c7aaf13eabf420fbdececce600a422af0801c513",
-    "_arcade/nightshift12-gamepad.mjs": "1f51fec0956eee5742146c22f246aad7174feec3bae6c910082bb5706d5dbe7c",
-    "_arcade/nightshift12-driving-coach.mjs": "0689aadfbc0d7d8312ec02fe41edd8d237fc872b7f5b4d72972ec4f0fb582179",
-    "_arcade/nightshift12-controls-ui.mjs": "f766b28e915b2212fc79bbfd82bed93b2f95783cd54ff3cbdfba5a61e6da056f",
-    "_arcade/nightshift12-ghost.mjs": "fff872a7001794d5c4a661633277d981d9883b49bb8dd0d0ac2fa8aa23fb017d",
-    "_arcade/nightshift12-profile.mjs": "05c115249325cdc3c9d8c81044b18b43aa828184d94c197e6b06d825fc88a189"
+    "app.js": "f61e28a7f1223dd607afa5066848f94aa89a61a601c7a8879322b9ec33caefe1",
+    "index.html": "d975b35b872dfb0051cd41df0a6292208e17cb0f590bf5be7d0be0c7b62686c2",
+    "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   },
-  "presentationHostFiles": {
-    "host/static.mjs": "f90429f4ddb62966131c19cd80e626b6db0cd0f61292bc743453407d4b279890",
-    "host/nightshift12.mjs": "e686f1c76b5f7f4d3b61efd40f2986ed3d7cd505368b30e71d8c7b17cd072e6c",
-    "games/nightshift-v12/host.json": "fcb05d0a2e9dff3214a12fada744353614c6fe81a7d3bc96ff6426c35372dc3c",
-    "host/career-migration.mjs": "47105e2899ea4e679712e3824a8c5ea75d1087b4482399887c7b61af52d5620d"
-  }
+  "nativeBinaries": {
+    "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+    "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+    "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+    "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63",
+    "12": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8",
+    "13": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643"
+  },
+  "notes": "V8\u2013V12 sources frozen. V13 adds campaign/build/pacing rules; no multiplayer. Binary hashes identify the published runtime, not workstation builds."
 }

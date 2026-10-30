@@ -1,0 +1,365 @@
+{
+  "version": "13.0.0",
+  "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+  "nativeBinarySha256": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643",
+  "nodeChecks": 136,
+  "bookwormRustTests": 15,
+  "conformance": {
+    "races": 80,
+    "nativeChecks": 229,
+    "activeTicks": 686855,
+    "winningSeconds": {
+      "min": 272.43333333333334,
+      "max": 403
+    },
+    "allTwelveRoutesWon": true,
+    "finalObjectiveRemainingSeconds": {
+      "min": 3.933333333333333,
+      "max": 31.966666666666665
+    },
+    "allSixCarsPurchasedAndDriven": true,
+    "allPartsPurchased": true,
+    "creditConservation": true
+  },
+  "stagingFiles": {
+    "version": "13.0.0",
+    "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+    "browserFiles": 175,
+    "hostFiles": 6,
+    "nativeBinaries": 6,
+    "allHashesMatch": true
+  },
+  "stagingMigration": {
+    "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+    "checks": [
+      {
+        "version": 8,
+        "oldRaceRetainsExecutor": true,
+        "nextRaceMigrates": true,
+        "careerPreserved": true,
+        "originPreserved": true,
+        "oldProofUnchanged": true,
+        "newTapeReplay": true,
+        "staleProfileRejected": true,
+        "unmarkedTapeRejected": true
+      },
+      {
+        "version": 9,
+        "oldRaceRetainsExecutor": true,
+        "nextRaceMigrates": true,
+        "careerPreserved": true,
+        "originPreserved": true,
+        "oldProofUnchanged": true,
+        "newTapeReplay": true,
+        "staleProfileRejected": true,
+        "unmarkedTapeRejected": true
+      },
+      {
+        "version": 10,
+        "oldRaceRetainsExecutor": true,
+        "nextRaceMigrates": true,
+        "careerPreserved": true,
+        "originPreserved": true,
+        "oldProofUnchanged": true,
+        "newTapeReplay": true,
+        "staleProfileRejected": true,
+        "unmarkedTapeRejected": true
+      },
+      {
+        "version": 11,
+        "oldRaceRetainsExecutor": true,
+        "nextRaceMigrates": true,
+        "careerPreserved": true,
+        "originPreserved": true,
+        "oldProofUnchanged": true,
+        "newTapeReplay": true,
+        "staleProfileRejected": true,
+        "unmarkedTapeRejected": true
+      },
+      {
+        "version": 12,
+        "oldRaceRetainsExecutor": true,
+        "nextRaceMigrates": true,
+        "careerPreserved": true,
+        "originPreserved": true,
+        "oldProofUnchanged": true,
+        "newTapeReplay": true,
+        "staleProfileRejected": true,
+        "unmarkedTapeRejected": true
+      }
+    ]
+  },
+  "stagingHistoricalPB": {
+    "historicalTicks": 8402,
+    "currentBestReset": true,
+    "legacyVersion": 12,
+    "creditsPreserved": true,
+    "originalProofUnchanged": true,
+    "newReplayVerified": true
+  },
+  "stagingCapacity": {
+    "newAccountAvoidsLegacyDatabases": true,
+    "requests": 49,
+    "perExecutorCacheLimit": 6,
+    "beforeBytes": 628887552,
+    "peakBytes": 1621524480,
+    "currentBytes": 1621143552,
+    "limitBytes": 2147483648,
+    "rows": [
+      {
+        "version": 8,
+        "accounts": 8,
+        "currentMemoryBytes": 858599424
+      },
+      {
+        "version": 9,
+        "accounts": 8,
+        "currentMemoryBytes": 1071632384
+      },
+      {
+        "version": 10,
+        "accounts": 8,
+        "currentMemoryBytes": 1282260992
+      },
+      {
+        "version": 11,
+        "accounts": 8,
+        "currentMemoryBytes": 1493803008
+      },
+      {
+        "version": 12,
+        "accounts": 8,
+        "currentMemoryBytes": 1620815872
+      },
+      {
+        "version": 13,
+        "accounts": 8,
+        "currentMemoryBytes": 1621401600
+      }
+    ]
+  },
+  "localBrowser": {
+    "version": "13.0.0",
+    "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "buffer": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "buffer": {
+          "width": 2560,
+          "height": 1080
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "buffer": {
+          "width": 844,
+          "height": 390
+        }
+      }
+    ],
+    "checks": {
+      "lockedPreview": true,
+      "chapterReceipt": true,
+      "nativeChapterUnlock": true,
+      "freeAllocation": true,
+      "uiPurchase": true,
+      "signedReplay": true,
+      "ordinaryPedalsAfterResize": true,
+      "portraitGate": true
+    },
+    "errors": [],
+    "physicalDevices": false
+  },
+  "localPerformance": {
+    "version": "13.0.0",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 2112,
+    "wallSeconds": 20.146,
+    "simulationSeconds": 20.133333333333333,
+    "medianFps": 60,
+    "p10Fps": 59,
+    "medianCpuMs": 3.78,
+    "medianGpuMs": 12.56302,
+    "scales": [
+      1
+    ],
+    "maxBufferPixels": 2073600,
+    "distance": 7359,
+    "errors": []
+  },
+  "deployment": {
+    "version": "13.0.0",
+    "gameImage": "sha256:74bb75aeeafd25c7e69152d3af400b67dea341e5605ed04abf471b4e282e855c",
+    "storeImage": "sha256:48d34976f37a2827412efc7d21b6e3aeda5a36073ebd4ad60cbacc2d157d647e",
+    "otherCatalogEntriesPreserved": true,
+    "legacyNativeVolumesPreserved": true,
+    "v13DataIsolated": true
+  },
+  "deploymentVerification": {
+    "version": "13.0.0",
+    "checks": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "secretsPreserved": true,
+        "legacyMountsPreserved": true,
+        "securityAndNetworksPreserved": true,
+        "image": "sha256:74bb75aeeafd25c7e69152d3af400b67dea341e5605ed04abf471b4e282e855c"
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "secretsPreserved": true,
+        "legacyMountsPreserved": true,
+        "securityAndNetworksPreserved": true,
+        "image": "sha256:48d34976f37a2827412efc7d21b6e3aeda5a36073ebd4ad60cbacc2d157d647e"
+      }
+    },
+    "fiveLegacyBinariesUnchanged": true,
+    "newBinaryMatchesBookwormBuild": true,
+    "otherCatalogEntriesPreserved": true,
+    "newDataIsolated": true,
+    "memoryLimitBytes": 2147483648
+  },
+  "publicFiles": {
+    "version": "13.0.0",
+    "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+    "browserFiles": 175,
+    "hostFiles": 6,
+    "nativeBinaries": 6,
+    "allHashesMatch": true
+  },
+  "publicBrowser": {
+    "version": "13.0.0",
+    "profile": "2d5a6bfbfbbe403287337fbd06a33a2de435137678f1dd03b0d691968b3256b5",
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "buffer": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "buffer": {
+          "width": 2560,
+          "height": 1080
+        }
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "buffer": {
+          "width": 844,
+          "height": 390
+        }
+      }
+    ],
+    "checks": {
+      "lockedPreview": true,
+      "chapterReceipt": true,
+      "nativeChapterUnlock": true,
+      "freeAllocation": true,
+      "uiPurchase": true,
+      "signedReplay": true,
+      "ordinaryPedalsAfterResize": true,
+      "portraitGate": true
+    },
+    "errors": [],
+    "physicalDevices": false
+  },
+  "limitations": [
+    "Oracle-style bot completion does not prove human difficulty.",
+    "Staging input checks use byte-verified local assets with real staged native APIs; they are not loading benchmarks.",
+    "Public runtime acceptance has no asset substitution.",
+    "Physical phone/controller and long-session validation remain open.",
+    "The complete single-player goal is still active; see single-player-completion.md."
+  ],
+  "publicPerformance": {
+    "version": "13.0.0",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 18468,
+    "wallSeconds": 20.079,
+    "simulationSeconds": 20.066666666666666,
+    "medianFps": 60,
+    "p10Fps": 59,
+    "medianCpuMs": 2.63,
+    "medianGpuMs": 8.802395,
+    "scales": [
+      1
+    ],
+    "maxBufferPixels": 2073600,
+    "distance": 8005,
+    "errors": []
+  },
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "checks": [
+      {
+        "id": "drift-run",
+        "pricing": "free",
+        "ready": true,
+        "fullscreen": true,
+        "reentry": true,
+        "sameGameInstance": true
+      }
+    ],
+    "failures": [],
+    "errors": []
+  },
+  "sourceCommit": "188df362d1bdd01fc98f87704d65e7dbf9a4be17",
+  "catalogCommit": "3898a1e6129b940466981e7e5421c83df11dd445"
+}

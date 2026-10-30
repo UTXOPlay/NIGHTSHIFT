@@ -27,6 +27,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: |
+            games/nightshift-v13/native -> ../../../target
             games/nightshift-v12/native -> ../../../target
             games/nightshift-v11/native -> ../../../target
             games/nightshift-v10/native -> ../../../target
@@ -38,6 +39,7 @@ jobs:
       - run: npm run build:native:previous
       - run: cargo build --release --locked --manifest-path games/nightshift-v10/native/Cargo.toml --target-dir target
       - run: cargo build --release --locked --manifest-path games/nightshift-v11/native/Cargo.toml --target-dir target
+      - run: cargo build --release --locked --manifest-path games/nightshift-v12/native/Cargo.toml --target-dir target
       - run: npm run test:conformance
       - run: npm run test:conformance:previous
       - run: npm run test:replay
