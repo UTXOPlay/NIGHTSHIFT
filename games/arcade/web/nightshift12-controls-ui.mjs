@@ -7,7 +7,7 @@ import {keyLabel} from './nightshift-keyboard.mjs';
 import {icon,button} from './nightshift8-icons.mjs';
 
 export function createControls(ctx){
- const pad=new GamepadInput();let sample={active:false},source='keyboard',lastHint='',actionBusy=false;
+ const pad=new GamepadInput();let sample={active:false},source='keyboard',lastHint='',actionBusy=false,lastPhysics=null;
  const current=()=>ctx.getGame().physics_version>=12;
  const readCoach=(key,Type)=>{let saved;try{saved=JSON.parse(ctx.read(key,'null'));}catch{}return new Type(saved);};
  const coaches=[readCoach('nightshift:practice',LegacyCoach),readCoach('nightshift:practice:v12',DrivingCoach)];
@@ -36,6 +36,7 @@ export function createControls(ctx){
  }
  async function act(fn){if(actionBusy)return;actionBusy=true;try{await fn();}catch(error){ctx.toast(error.message);}finally{actionBusy=false;}}
  function poll(now){
+  const physics=ctx.getGame().physics_version||8;if(physics!==lastPhysics){lastPhysics=physics;lastHint='';refresh();}
   const enabled=ctx.loaded()&&!ctx.busy()&&!document.hidden&&document.documentElement.dataset.orientationBlocked!=='true'&&!ctx.humanHeld();
   if(!enabled)pad.suspend();sample=pad.poll(getPads(),{enabled,now});
   const status=settings.querySelector('.controller-status'),label=sample.active?'STANDARD CONTROLLER / ACTIVE':sample.connected?'STANDARD CONTROLLER / CENTER AND RELEASE TO ARM':'Press a button after centering the sticks to connect a standard controller.';

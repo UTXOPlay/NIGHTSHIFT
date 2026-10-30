@@ -86,7 +86,7 @@ const keyboardButton=button('keyboard','Controls and settings',()=>void openKeys
 $('#key-preset').onchange=e=>{keyConfig=keyboardPreset(e.target.value);saveKeys();$('#key-message').textContent='Controls saved on this device.';};
 $('#key-actions').append(button('retry','Reset selected keyboard preset',()=>{keyConfig=keyboardPreset(keyConfig.preset);saveKeys();}),button('close','Close keyboard settings',closeKeys));
 refreshKeys();
-if(!localStorageSafe()&&navigator.keyboard?.getLayoutMap)void navigator.keyboard.getLayoutMap().then(map=>{if(!localStorageSafe()&&!running&&!countdown&&map.get('KeyD')?.toLowerCase()==='s'&&map.get('KeyE')?.toLowerCase()==='f'){keyConfig=keyboardPreset('colemak');saveKeys();}}).catch(()=>{});
+if(!localStorageSafe()&&!readLegacyKeys()&&navigator.keyboard?.getLayoutMap)void navigator.keyboard.getLayoutMap().then(map=>{if(!localStorageSafe()&&!readLegacyKeys()&&!running&&!countdown&&map.get('KeyD')?.toLowerCase()==='s'&&map.get('KeyE')?.toLowerCase()==='f'){keyConfig=keyboardPreset('colemak');saveKeys();}}).catch(()=>{});
 addEventListener('keydown',e=>{
  if(!$('#keybinds').hidden){
   if(bindingCapture){e.preventDefault();e.stopPropagation();if(e.code==='Escape'){bindingCapture=null;$('#key-message').textContent='Binding cancelled.';refreshKeys();return;}if(e.repeat||e.ctrlKey||e.altKey||e.metaKey||['Shift','Control','Alt','Meta'].includes(e.key))return;try{keyConfig=bindKey(keyConfig,bindingCapture,eventKey(e));bindingCapture=null;saveKeys();$('#key-message').textContent='Binding saved.';}catch(error){$('#key-message').textContent=error.message;}return;}

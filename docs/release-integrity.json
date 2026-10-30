@@ -197,7 +197,7 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d1d3c2ca98b26ccbacca07262d26acddb06e2981edcf29bc31db6a06e21dc56a",
-    "app.js": "587ef3aaf0a6a9077f736089586b092ab9e868c2d7e6af7877b7daa25708b670",
+    "app.js": "3f317a16f89fecc14fb3afa072cd0df7895de937d4cdc28408e415724fbbcebc",
     "index.html": "8e01bfca1a59a7e9027158c879f26d2856235b6aec5b36d8f0c191942110f40b",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
     "_arcade/nightshift12-input.mjs": "a2512329814aa1c0175e728c23b832437f5e80c3d8a9a14bbf71332fb097b3e1",
@@ -206,7 +206,7 @@
     "_arcade/nightshift12-keyboard.mjs": "31127812faf991ee4b312313c7aaf13eabf420fbdececce600a422af0801c513",
     "_arcade/nightshift12-gamepad.mjs": "1f51fec0956eee5742146c22f246aad7174feec3bae6c910082bb5706d5dbe7c",
     "_arcade/nightshift12-driving-coach.mjs": "0689aadfbc0d7d8312ec02fe41edd8d237fc872b7f5b4d72972ec4f0fb582179",
-    "_arcade/nightshift12-controls-ui.mjs": "54494d709131cbdab2df9a84afeb13854f1f1de2fe6ed1b4e5d90a8dd0bce727",
+    "_arcade/nightshift12-controls-ui.mjs": "f766b28e915b2212fc79bbfd82bed93b2f95783cd54ff3cbdfba5a61e6da056f",
     "_arcade/nightshift12-ghost.mjs": "fff872a7001794d5c4a661633277d981d9883b49bb8dd0d0ac2fa8aa23fb017d",
     "_arcade/nightshift12-profile.mjs": "05c115249325cdc3c9d8c81044b18b43aa828184d94c197e6b06d825fc88a189"
   },
