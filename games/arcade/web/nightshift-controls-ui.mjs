@@ -23,9 +23,10 @@ export function createControls(ctx){
  addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;if(source==='gamepad')ctx.clear();else pad.suspend();setSource('keyboard');},true);
  addEventListener('pointerdown',e=>{if(source==='gamepad')ctx.clear();else pad.suspend();setSource(e.pointerType==='touch'?'touch':'keyboard');},true);
  const getPads=()=>{try{return navigator.getGamepads?.()||[];}catch{return[];}};
- function focusables(){const modal=['#keybinds','#race-plan'].map(s=>document.querySelector(s)).find(e=>e&&!e.hidden);return[...(modal||ctx.root).querySelectorAll('button,select,summary,a[href]')].filter(e=>!e.disabled&&!e.closest('[hidden]')&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden');}
+ function focusables(){const modal=['#keybinds','#race-plan'].map(s=>document.querySelector(s)).find(e=>e&&!e.hidden);return[...(modal||ctx.root).querySelectorAll('button,select,input[type=range],summary,a[href]')].filter(e=>!e.disabled&&!e.closest('[hidden]')&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden');}
  function navigate(direction){
   const els=focusables(),active=document.activeElement;
+  if(active?.tagName==='INPUT'&&active.type==='range'&&(direction==='left'||direction==='right')){const step=Number(active.step)||.05;active.value=String(Math.max(Number(active.min)||0,Math.min(Number(active.max)||1,Number(active.value)+(direction==='right'?step:-step))));active.dispatchEvent(new Event('input',{bubbles:true}));return;}
   if(active?.tagName==='SELECT'&&(direction==='left'||direction==='right')){active.selectedIndex=Math.max(0,Math.min(active.options.length-1,active.selectedIndex+(direction==='right'?1:-1)));active.dispatchEvent(new Event('change',{bubbles:true}));return;}
   const n=focusTarget(els.map(e=>e.getBoundingClientRect()),els.indexOf(active),direction);els[n]?.focus({preventScroll:true});els[n]?.scrollIntoView({block:'nearest',inline:'nearest'});
  }

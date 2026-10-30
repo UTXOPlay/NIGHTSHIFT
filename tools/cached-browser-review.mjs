@@ -7,9 +7,9 @@ import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 const root=path.resolve('dist/nightshift'),manifest=JSON.parse(readFileSync('docs/release-integrity.json')),target=process.argv[2];
-assert.match(target||'',/^tools\/nightshift9-[a-z-]+\.mjs$/);
+assert.match(target||'',/^tools\/nightshift(?:9-[a-z-]+|11-[a-z-]+|-controls-review|-menu-review)\.mjs$/);
 for(const [file,hash] of Object.entries(manifest.browserFiles))assert.equal(createHash('sha256').update(readFileSync(path.join(root,file))).digest('hex'),hash,file);
-const launch=chromium.launch.bind(chromium),types={'.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.css':'text/css','.webp':'image/webp','.png':'image/png','.txt':'text/plain','.glb':'model/gltf-binary'};
+const launch=chromium.launch.bind(chromium),types={'.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.css':'text/css','.webp':'image/webp','.png':'image/png','.txt':'text/plain','.glb':'model/gltf-binary','.wav':'audio/wav','.ogg':'audio/ogg','.mp3':'audio/mpeg'};
 chromium.launch=async options=>{
  const browser=await launch(options),newContext=browser.newContext.bind(browser);
  browser.newContext=async options=>{

@@ -1,0 +1,289 @@
+{
+  "version": "11.0.1",
+  "runtimeCommit": "64d9da0a730b78f142679242f0b63b040edbeb27",
+  "basedOnDeployedVersion": "11.0.0",
+  "nativeProfile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455",
+  "ci": {
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/40995404596",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "unitTests": {
+    "passed": 122,
+    "failed": 0
+  },
+  "sourceArchives": {
+    "version": "11.0.1",
+    "commit": "64d9da0a730b78f142679242f0b63b040edbeb27",
+    "baselineCommit": "34b07f0e0b84cce49b98d2247438929847ba3735",
+    "previousMenuCommit": "a7d5a6f866d0a1c5947d8f9ff4bc3f6520bfa6c6",
+    "baseArchives": [
+      "26c9aff7c82b4fcf94ad48ee50a47231cf0ec5c5a177eb76145c17b3c93c83ce",
+      "afccb4b2cb3c516377a15ff42efb85a4661cfb2a3670590d062a6479b67a7bea"
+    ],
+    "overlaySha256": "5315c581d8e8e14d7db065813d01589c1ae806d9752b9d05d087130449390626",
+    "overlayFiles": [
+      "deploy/release-menu.py",
+      "deploy/verify-menu.py",
+      "docs/menu-design-v11.md",
+      "docs/release-integrity.json",
+      "games/arcade/web/nightshift-controls-ui.mjs",
+      "games/arcade/web/nightshift-driving-coach.mjs",
+      "games/arcade/web/nightshift-menu.css",
+      "games/arcade/web/nightshift-menu.mjs",
+      "games/nightshift-v9/web/app.js",
+      "games/nightshift-v9/web/index.html",
+      "package-lock.json",
+      "package.json",
+      "tools/cached-browser-review.mjs",
+      "tools/nightshift-menu-review.mjs",
+      "tools/nightshift11-acceptance.mjs",
+      "tools/review-session.mjs",
+      "tools/nightshift11-perf.mjs"
+    ],
+    "activeCheckoutAndIndexUntouched": true,
+    "priorRuntimeCommit": "c6b7f16b2b8b5e7e867e3339c2b7875b4c9c8ff3"
+  },
+  "stagingMenus": {
+    "checks": [
+      "All required landscape/large layouts keep fixed navigation, readable choices, viewport clipping and bounded backing pixels",
+      "Native upgrade, exact debit and usable focus survive asynchronous menu rebuilding",
+      "Settings separate controls/display/archive, preserve preference changes and return focus",
+      "Menu browsing never starts or advances a race; earned career still verifies",
+      "Trusted touch scroll reaches more events and portrait remains gated",
+      "Branded return reaches UTXOPlay and the signed career survives re-entry"
+    ],
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      }
+    ],
+    "errors": [],
+    "physicalPhone": false
+  },
+  "stagingFiles": {
+    "version": "11.0.1",
+    "browserFiles": 142,
+    "servedBytesMatch": true,
+    "verifiedTlsGateway": false
+  },
+  "preReturnPerformanceSample": {
+    "runtimeCommit": "c6b7f16b2b8b5e7e867e3339c2b7875b4c9c8ff3",
+    "rendererName": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+    "gpuMedianMs": 9.008281,
+    "mode": 0,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 20.122983221000002,
+    "simulationSeconds": 20.133333333333333,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 2.35,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      94,
+      298
+    ],
+    "maxTriangles": 533225,
+    "errors": []
+  },
+  "limitations": [
+    "Browser touch and controller metrics are emulated; physical hardware usability is unverified.",
+    "Cached-asset browser reviews use verified local resource bytes with real authentication and native API; served-resource hashes are verified separately. They do not measure cold startup or internet download performance.",
+    "Historical V10 prototype/baseline samples both missed simulation cadence under shared-host load. The V10 menu prototype was never deployed. Current V11 performance is not a controlled speedup comparison.",
+    "Solo racing prototype. No NFS feature parity, independent throttle, multiplayer or CKB settlement is claimed."
+  ],
+  "deployment": {
+    "version": "11.0.1",
+    "gameImage": "sha256:7cc03bca63f6411ea04985386c660500189ab6cf664e3324a85a37ee718e0d4d",
+    "storeImage": "sha256:2cc67e4cb87bd2c27ec3897c3df029f0656fc2dd1f0f1336c7651c6a5cc7714a",
+    "otherCatalogEntriesPreserved": true,
+    "nativeVolumesPreserved": true
+  },
+  "configurationVerification": {
+    "version": "11.0.1",
+    "checks": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:7cc03bca63f6411ea04985386c660500189ab6cf664e3324a85a37ee718e0d4d"
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:2cc67e4cb87bd2c27ec3897c3df029f0656fc2dd1f0f1336c7651c6a5cc7714a"
+      }
+    },
+    "nativeBinariesUnchanged": true,
+    "otherCatalogEntriesPreserved": true
+  },
+  "publicFiles": {
+    "version": "11.0.1",
+    "browserFiles": 142,
+    "servedBytesMatch": true,
+    "verifiedTlsGateway": true
+  },
+  "publicMenus": {
+    "checks": [
+      "All required landscape/large layouts keep fixed navigation, readable choices, viewport clipping and bounded backing pixels",
+      "Native upgrade, exact debit and usable focus survive asynchronous menu rebuilding",
+      "Settings separate controls/display/archive, preserve preference changes and return focus",
+      "Menu browsing never starts or advances a race; earned career still verifies",
+      "Trusted touch scroll reaches more events and portrait remains gated",
+      "Branded return reaches UTXOPlay and the signed career survives re-entry"
+    ],
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      }
+    ],
+    "errors": [],
+    "physicalPhone": false
+  },
+  "stagingAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation",
+      "Return is hidden during driving, saves from pause and resumes the same signed race"
+    ],
+    "errors": [],
+    "profile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455",
+    "finishSeconds": 226.03333333333333,
+    "attempts": 1,
+    "credits": 457
+  },
+  "careerCanary": {
+    "completeSavedStateUnchanged": true,
+    "ticksBefore": 3,
+    "ticksAfter": 6,
+    "nativeReplay": true,
+    "loggedOut": true,
+    "profile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455"
+  },
+  "catalog": {
+    "catalogCommit": "272829c148444c725739748d82bbe028569596df",
+    "version": "11.0.1",
+    "onlyNightshiftVersionChanged": true,
+    "parentIndexAndHeadUntouched": true
+  },
+  "cleanup": {
+    "stagingContainersRemoved": 4,
+    "isolatedDataDirectoriesRemoved": [
+      "nightshift-10-0-3-stage-data",
+      "nightshift-10-0-3-stage-data-v9",
+      "nightshift-10-0-3-stage-data-v10",
+      "nightshift-10-0-3-store-stage-data",
+      "nightshift-11-0-1-stage-data",
+      "nightshift-11-0-1-stage-data-v9",
+      "nightshift-11-0-1-stage-data-v10",
+      "nightshift-11-0-1-stage-data-v11",
+      "nightshift-11-0-1-store-stage-data"
+    ],
+    "productionAndRollbackDataPreserved": true
+  },
+  "productionUrl": "https://store.utxoplay.io/games/nightshift/",
+  "followUpAudit": "performance-loading-audit-v11.md",
+  "performanceAuditSummary": {
+    "coldBytes": 25125842,
+    "desktopColdSeconds": 61.138,
+    "mobileEmulatedColdSeconds": 60.564,
+    "openFindings": 3,
+    "highQualityFpsCadenceFailuresPreserved": true
+  }
+}

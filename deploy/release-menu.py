@@ -133,18 +133,18 @@ def catalog_from_store(label):
 
 def stage():
     game, store = inspect(GAME), inspect(STORE)
-    assert game["Image"] == "sha256:2feb984898038d8395f185e16cff813ddb6dda8dda48e9fb04ecb916c50053e2", "Concurrent game release; rebase presentation first"
+    assert game["Image"] == "sha256:2d27d5d888203dd61ed5aa914fd5aceeb82001f77ebf7871fc4fd16ed7efe5d5", "Concurrent game release; rebase presentation first"
     private("game-before.private.json", game)
     private("store-stage-base.private.json", store)
     game_image = build("game", game["Image"])
     store_image = build("store", store["Image"], catalog_from_store("catalog-stage-before"))
     for name, original, image in [(STAGE_GAME, game, game_image), (STAGE_STORE, store, store_image)]:
         spec = clone_spec(original, image, stage=True)
-        spec["HostConfig"]["PortBindings"] = {} if name == STAGE_GAME else {"8790/tcp": [{"HostIp": "127.0.0.1", "HostPort": "18925"}]}
+        spec["HostConfig"]["PortBindings"] = {} if name == STAGE_GAME else {"8790/tcp": [{"HostIp": "127.0.0.1", "HostPort": "18926"}]}
         isolated = set()
 
         def isolate_volume(source, target):
-            if target not in ["/app/data", "/app/data-v9", "/app/data-v10"]:
+            if target not in ["/app/data", "/app/data-v9", "/app/data-v10", "/app/data-v11"]:
                 return source
             dest = ROOT / (name + "-" + target.rsplit("/", 1)[-1])
             dest.mkdir(exist_ok=True)
@@ -168,11 +168,11 @@ def stage():
         spec["HostConfig"]["Binds"] = updated
         for mount in spec["HostConfig"].get("Mounts") or []:
             mount["Source"] = isolate_volume(mount["Source"], mount["Target"])
-        assert isolated == ({"/app/data", "/app/data-v9", "/app/data-v10"} if name == STAGE_GAME else {"/app/data"}), "All writable game data must be isolated"
+        assert isolated == ({"/app/data", "/app/data-v9", "/app/data-v10", "/app/data-v11"} if name == STAGE_GAME else {"/app/data"}), "All writable game data must be isolated"
         if name == STAGE_GAME:
-            env_set(spec, {"GAME_ORIGIN": "http://127.0.0.1:18925"})
+            env_set(spec, {"GAME_ORIGIN": "http://127.0.0.1:18926"})
         else:
-            env_set(spec, {"PUBLIC_ORIGIN": "http://127.0.0.1:18925", "MYELIN_DRIFT_RUN_URL": "http://" + STAGE_GAME + ":8080"})
+            env_set(spec, {"PUBLIC_ORIGIN": "http://127.0.0.1:18926", "MYELIN_DRIFT_RUN_URL": "http://" + STAGE_GAME + ":8080"})
         assert not any(e.startswith("VIRTUAL_") for e in spec["Env"])
         private(name + ".private.json", spec)
         create(name, spec)

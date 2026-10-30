@@ -1,5 +1,7 @@
 /* Stable navigation, readable choices, and an unobstructed vehicle showroom. */
 #game{--menu-gutter:max(4.5vw,env(safe-area-inset-left));--menu-text:clamp(14px,.94vw,36px)}
+.game-brand{display:flex;align-items:center;gap:16px;min-width:0}.store-return{display:flex;align-items:center;justify-content:center;gap:3px;width:64px;min-width:64px;min-height:44px;pointer-events:auto;background:transparent!important;background-image:none!important;border:1px solid #b5ddce25!important;border-radius:4px!important;overflow:visible!important}.store-return:before{display:none!important}.store-return img{width:26px;height:26px;object-fit:contain}.store-return svg{width:20px;height:20px}.store-return:hover{border-color:var(--mint)!important}.store-return:is(:hover,:focus-visible)::after,#game[data-input=gamepad] .store-return:focus::after{content:attr(data-ui-label);position:absolute;top:calc(100% + 9px);left:0;width:max-content;padding:6px 9px;background:#07151de8;color:#dff7ee;font:500 11px/1.4 Arial;letter-spacing:.3px;z-index:80;pointer-events:none}
+@media(max-height:560px){.game-brand{gap:10px}.store-return{width:54px;min-width:54px}.store-return img{width:23px;height:23px}.store-return svg{width:17px;height:17px}}
 #nav .icon-button,#menu .icon-button,#garage-tools .icon-button,#settings-tabs .icon-button{background-image:none;border-radius:4px;border-color:transparent;background-color:transparent;box-shadow:none}
 #nav .icon-button::before,#nav .icon-button::after,#menu .icon-button::before,#menu .icon-button::after,#garage-tools .icon-button::before,#garage-tools .icon-button::after{background-image:none}
 #nav .icon-button[aria-current=page]{border-bottom:2px solid var(--mint);color:var(--mint);background:linear-gradient(0deg,#a5e9d813,transparent)}
@@ -80,3 +82,5 @@
 #game[data-view=career] #menu{grid-template-rows:minmax(0,1fr)}
 
 #cards,#workshop,#progression{overflow-anchor:none}
+
+#keybinds .audio-setting{display:flex;justify-content:space-between;align-items:center;width:100%;gap:24px;font-size:16px}#keybinds input[type=range]{width:48%;min-height:44px;accent-color:var(--mint)}@media(max-height:560px){#keybinds .audio-setting{font-size:14px}}
