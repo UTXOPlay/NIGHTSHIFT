@@ -23,3 +23,9 @@ The first isolated server run caught two packaging/runtime issues before cutover
 ## Presentation follow-up — 12.0.1
 
 A final review caught a V11-only boot-notice condition that mislabeled a fresh V12 event as a legacy save. The corrected condition and power-upgrade wording ship with fresh browser cache keys. The native profile, all five executables and every saved race remain unchanged. Career `spec_best` still carries historical PBs across rule generations; profile-local ghosts remain separate. A future career schema should preserve legacy PB provenance and separately record current-rule server bests.
+
+## Public acceptance
+
+12.0.1 is live at the canonical Store URL. Real-domain acceptance ran without local asset substitution: desktop/touch controller practice, keyboard takeover, disconnect pause, native replay, actual joystick gestures, portrait pause and shared fullscreen entry/exit/reentry all passed. The iframe and navigation count confirm that fullscreen reentry preserves the same game instance. All 169 container-served files and host fingerprints match the release manifest; all five native binaries remain identical across the presentation patch. Other games, secrets, mounts and security settings are preserved.
+
+One 1920×1080 Auto run measured 60 median FPS, 59 p10 FPS, 6.14 ms median CPU and 12.27 ms median GPU, with 20.23 seconds of simulation in 20.23 seconds wall time. First menu readiness was 31.4 seconds in that sample. This is a single unthrottled desktop observation, not a universal frame-rate or loading guarantee; first-load latency and physical device coverage remain open work.

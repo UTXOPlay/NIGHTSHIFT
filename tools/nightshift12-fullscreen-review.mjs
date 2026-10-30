@@ -20,8 +20,10 @@ try{
   try{
    await page.goto(origin+'/games/'+game.id+'/');const entry=page.getByRole('dialog',{name:'Fullscreen game entry'});await entry.waitFor({timeout:25000});assert.equal(await page.locator('iframe.game-frame').evaluate(e=>e.inert),true);if(['chess','botstrike','flashfire'].includes(game.id))await page.screenshot({path:output+'/'+game.id+'-entry.png'});
    await page.getByRole('button',{name:'Enter fullscreen',exact:true}).click();await page.waitForFunction(()=>!!document.fullscreenElement,{},{timeout:10000});await page.locator('.game-stage.is-ready').waitFor({timeout:35000});assert.equal(await page.locator('iframe.game-frame').evaluate(e=>e.inert),false);const rect=await page.locator('iframe.game-frame').boundingBox();assert.equal(rect.width,844);assert.equal(rect.height,390);
+   const instance=await page.locator('iframe.game-frame').elementHandle();let navigations=0;const observed=()=>navigations++;page.on('framenavigated',observed);
    await page.evaluate(()=>document.exitFullscreen());await page.getByRole('button',{name:'Enter fullscreen',exact:true}).waitFor({timeout:10000});assert.equal(await page.locator('iframe.game-frame').evaluate(e=>e.inert),true);
-   const record={id:game.id,pricing:game.pricing||'free',ready:true,fullscreen:true,reentry:true};checks.push(record);console.log(JSON.stringify(record));
+   await page.getByRole('button',{name:'Enter fullscreen',exact:true}).click();await page.waitForFunction(()=>!!document.fullscreenElement);assert.equal(await instance.evaluate(e=>e===document.querySelector('iframe.game-frame')),true);assert.equal(navigations,0);page.off('framenavigated',observed);
+   const record={id:game.id,pricing:game.pricing||'free',ready:true,fullscreen:true,reentry:true,sameGameInstance:true};checks.push(record);console.log(JSON.stringify(record));
   }catch(error){const failure={id:game.id,error:error.message};failures.push(failure);console.log(JSON.stringify(failure));await page.screenshot({path:output+'/'+game.id+'-failure.png'}).catch(()=>{});}
  }
  await page.goto(origin+'/');assert.equal(await page.locator('.utxo-fullscreen-entry').count(),0);
