@@ -30,13 +30,13 @@ test('GPU sampling covers all reflection phases and resets cold-start queries',(
 });
 
 import {RouteWorld} from '../games/arcade/web/nightshift9-world.mjs';
-test('street buffers remain unchanged within a chunk and refresh across maps and chunk edges',()=>{
+test('street buffers remain unchanged within a chunk and refresh across maps and chunk edges',async()=>{
  const previous=globalThis.document;globalThis.document={createElement:()=>({getContext:()=>({fillRect(){},strokeRect(){},fillText(){}})})};
  try{
   const scene=new T.Scene(),world=new RouteWorld(scene),frame=new CircuitFrame();
   const road=z=>frame.pose(z).x;road.fixedFrame=(d,o)=>frame.placeAbsolute(o,d);road.originMatrix=m=>frame.originMatrix(m);road.profileKey=()=>9;
   for(let mode=0;mode<12;mode++){
-   frame.set(mode,0);world.draw(0,mode,500000,road);assert.ok(world.matrixWrites>0);
+   assert.equal(world.templates[mode],null);await world.prepare(mode);frame.set(mode,0);world.draw(0,mode,500000,road);assert.ok(world.matrixWrites>0);
    const versions=[...world.pools.values()].map(p=>p.mesh.instanceMatrix.version);
    frame.set(mode,100);world.draw(100,mode,500000,road);assert.equal(world.matrixWrites,0);assert.equal(world.colorWrites,0);assert.deepEqual([...world.pools.values()].map(p=>p.mesh.instanceMatrix.version),versions);
    frame.set(mode,180);world.draw(180,mode,500000,road);assert.ok(world.matrixWrites>0);

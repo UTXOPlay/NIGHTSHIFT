@@ -16,7 +16,7 @@ export class CombatEffects {
   this.guard=new T.Sprite(softMaterial(.5));this.guard.visible=false;scene.add(this.guard);
  }
  load(atlas){atlas.colorSpace=T.SRGBColorSpace;this.textures=Array.from({length:8},(_,n)=>{const t=atlas.clone();t.repeat.set(.248,.496);t.offset.set((n%4)*.25+.001,n<4?.502:.002);t.needsUpdate=true;return t;});for(let n=0;n<24;n++){const t=this.textures[n%8],m=this.sprites[n].material;m.map=t;m.userData.cell.value.set(t.offset.x,t.offset.y,t.repeat.x,t.repeat.y);m.needsUpdate=true;}for(const m of this.groundRings){m.material.map=this.textures[7];m.material.needsUpdate=true;}for(const b of this.beams){b.material.map=this.textures[4];b.material.needsUpdate=true;}this.guard.material.map=this.textures[2];this.guard.material.userData.cell.value.set(this.textures[2].offset.x,this.textures[2].offset.y,.248,.496);this.guard.material.needsUpdate=true;}
- async loadSequence(loader){const atlas=await loader.loadAsync('/arcade/art/nightshift/impact-sequence-v91.webp');atlas.colorSpace=T.SRGBColorSpace;this.sequence=Array.from({length:16},(_,n)=>{const t=atlas.clone();t.repeat.set(.246,.246);t.offset.set(n%4*.25+.002,.752-Math.floor(n/4)*.25);t.needsUpdate=true;return t;});}
+ async loadSequence(loader){const atlas=await loader.loadAsync('/arcade/art/nightshift/impact-sequence-v91-v131.webp');atlas.colorSpace=T.SRGBColorSpace;this.sequence=Array.from({length:16},(_,n)=>{const t=atlas.clone();t.repeat.set(.246,.246);t.offset.set(n%4*.25+.002,.752-Math.floor(n/4)*.25);t.needsUpdate=true;return t;});}
  reset(){this.wreck=null;this.events.length=0;this.beamEvents.length=0;for(const b of [...this.beams,...this.groundRings])b.visible=false;this.wreckStart=this.hitStart=this.guardStart=-100;this.rivalStarts.fill(-100);for(const s of this.sprites)s.visible=false;}
  burst(tile,x,z,size,life,distance,extra={}){if(!this.textures)return;const slot=this.cursor++%24;this.events=this.events.filter(e=>e.slot!==slot);this.events.push({slot,tile,x,z,y:.8,size,life,age:0,distance,...extra});const s=this.sprites[slot];s.material.map=this.textures[tile];s.material.userData.cell.value.set(this.textures[tile].offset.x,this.textures[tile].offset.y,.248,.496);s.material.blending=tile===1||tile===5||tile===6?T.NormalBlending:T.AdditiveBlending;s.material.rotation=0;s.material.needsUpdate=true;}
  emit(kind,g,previous,id=-1,target=-1){
@@ -28,6 +28,7 @@ export class CombatEffects {
   if(kind==='hit'){this.hitStart=this.time;this.burst(4,x,0,2.8,.5,d,{sequence:8});this.burst(6,x,1,1.8,.65,d);}
   if(kind==='guard'||kind==='counter'){this.guardStart=this.time;this.burst(2,x,0,3.8,.5,d);if(kind==='counter')this.burst(7,x,0,3.6,.5,d,{sequence:8});}
   if(kind==='shield-break'){this.burst(3,x,0,6,.85,d);}
+  if(kind==='recover'){const r=id>=0?g.rivals[id]:null;this.burst(2,r?(r.x/1000-1)*4:x,r?-(r.distance-d)*.1:0,2.7,.55,d,{ground:true});}
   if(kind==='pulse'&&g.gadget===0&&target>=0){const r=g.rivals[target];const slot=this.beamCursor++%4;this.beamEvents=this.beamEvents.filter(e=>e.slot!==slot);this.beamEvents.push({slot,x,z:-1,endX:(r.x/1000-1)*4,endZ:-(r.distance-d)*.1,age:0,distance:d});}
   if(kind==='pulse'&&g.gadget===1)this.burst(7,x,-1,3,.55,d,{ground:true});
   if(id>=0){const r=g.rivals[id],rx=(r.x/1000-1)*4,rz=-(r.distance-d)*.1;

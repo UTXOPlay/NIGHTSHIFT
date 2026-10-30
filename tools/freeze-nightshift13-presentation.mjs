@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+const sha=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const frozen=JSON.parse(readFileSync('docs/release-integrity-v13.json'));
+for(const[file,hash]of Object.entries(frozen.nativeSources))assert.equal(sha(file),hash,'Presentation release cannot change '+file);
+const version=JSON.parse(readFileSync('package.json')).version;
+assert.equal(JSON.parse(readFileSync('games/nightshift-v13/host.json')).clientProfile,frozen.profile);
+const build=spawnSync('npm',['run','build'],{stdio:'inherit',env:{...process.env,DRIFT_BUILD_ROOT:process.env.DRIFT_BUILD_ROOT||'artifacts/presentation-v13/site'}});if(build.status)process.exit(build.status);
+const browserFiles={};function walk(dir){for(const file of readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,file.name);if(file.isDirectory())walk(p);else if(!/\.(?:br|gz)$/.test(p))browserFiles[path.relative('dist/nightshift',p).split(path.sep).join('/')]=sha(p);}}walk('dist/nightshift');
+const presentationHostFiles=Object.fromEntries(Object.keys(frozen.presentationHostFiles).map(file=>[file,sha(file)]));
+const manifest={version,profile:frozen.profile,nativeSources:frozen.nativeSources,presentationHostFiles,browserFiles,nativeBinaries:frozen.nativeBinaries,notes:'Presentation-only release. All V8–V13 rules, profiles, published native binaries and signed saves retain their original behavior. No multiplayer implementation.'};
+writeFileSync('docs/release-integrity.json',JSON.stringify(manifest,null,2)+'\n');console.log({version,profile:manifest.profile,browserFiles:Object.keys(browserFiles).length});

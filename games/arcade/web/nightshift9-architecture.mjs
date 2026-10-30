@@ -1,8 +1,9 @@
 import * as T from 'three';
+import {structureSurface} from './nightshift13-architecture.mjs';
 import {block,merge} from './nightshift8-assets.mjs';
 
 let structureTexture;
-export function loadStructureTexture(loader){return structureTexture??=(loader.loadAsync('/arcade/art/nightshift/structures-v8.webp').then(t=>{t.colorSpace=T.SRGBColorSpace;t.anisotropy=4;return t;}));}
+export function loadStructureTexture(loader){return structureTexture??=(loader.loadAsync('/arcade/art/nightshift/structures-v8-v131.webp').then(t=>{t.colorSpace=T.SRGBColorSpace;t.anisotropy=4;return t;}).catch(e=>{structureTexture=null;throw e;}));}
 
 // One shared atlas, sampled in building metres instead of stretching one floor
 // over a tower. Derivatives stay continuous across repeats to avoid mip shimmer.
@@ -54,7 +55,7 @@ export class StreetLighting{
   this.warm=new T.Color('#ffd9a4');this.cool=new T.Color('#b6edf0');
   const graphite=new T.MeshStandardMaterial({color:'#414e58',metalness:.75,roughness:.36});
   const aluminum=new T.MeshStandardMaterial({color:'#a4b3ba',metalness:.82,roughness:.27});
-  this.diffuser=new T.MeshBasicMaterial({color:'#fff1d0',toneMapped:false,side:T.DoubleSide});
+  this.diffuser=new T.MeshBasicMaterial({color:'#ffffff',toneMapped:false,side:T.DoubleSide});
   this.kinds=['swan-neck','slim-led','lantern','tunnel'];
   this.fixtures=this.kinds.map((name,kind)=>{
    const fixture=new T.Group(),add=(...v)=>fixture.add(block(...v));
@@ -84,8 +85,8 @@ export class StreetLighting{
   this.positions=Array.from({length:LAMP_COUNT},()=>new T.Vector3());this.loaded=false;
  }
  async load(loader){
-  const structure=await loadStructureTexture(loader);for(const batch of this.batches)if(batch.material.isMeshStandardMaterial){const m=batch.material;m.map=structure;m.onBeforeCompile=s=>{s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )','texture2D( map, vec2(.003,.003)+fract(vMapUv)*.494 )'));};m.customProgramCacheKey=()=>'lamp-metal-v81';m.needsUpdate=true;}
-  const texture=await loader.loadAsync('/arcade/art/nightshift/street-lighting-v8.webp');texture.colorSpace=T.SRGBColorSpace;
+  const structure=await loadStructureTexture(loader);for(const batch of this.batches)if(batch.material.isMeshStandardMaterial)structureSurface(batch.material,structure,0);
+  const texture=await loader.loadAsync('/arcade/art/nightshift/street-lighting-v8-v131.webp');texture.colorSpace=T.SRGBColorSpace;
   this.diffuser.map=atlasCell(texture,0);this.diffuser.map.repeat.set(.465,.18);this.diffuser.map.offset.set(.018,.645);this.diffuser.needsUpdate=true;
   this.halos.forEach((m,n)=>{m.material.map=atlasCell(texture,n+1);m.material.needsUpdate=true;});
   this.pools.material.needsUpdate=true;this.loaded=true;
@@ -99,17 +100,17 @@ export class StreetLighting{
   for(let n=0;n<LAMP_COUNT;n++){
    const chunk=Math.floor(travel/pitch)-1+Math.floor(n/2),z=travel-chunk*pitch,side=n%2?1:-1,kind=mode===10?3:mode===3?(Math.floor(chunk/3)%2+2)%2:mode===8||mode===4?(Math.abs(chunk+side)%4===0?2:1):Math.abs(chunk)%5===0?0:1;
    const fixture=this.fixtures[kind],index=counts[kind]++,x=roadX(z)+side*(mode===10?7.4:8.3);this.used.add(fixture.name);
-   d.position.set(x,0,z);d.rotation.set(0,side>0?Math.PI:0,0);d.scale.set(1,1,1);roadX.transform?.(d,true);d.updateMatrix();for(const batch of fixture.batches)batch.setMatrixAt(index,d.matrix);
+   d.position.set(x,0,z);d.rotation.set(0,side>0?Math.PI:0,0);d.scale.set(1,1,1);roadX.transform?.(d,true);d.updateMatrix();for(const batch of fixture.batches){batch.setMatrixAt(index,d.matrix);if(batch.material.isMeshBasicMaterial){this.tint??=new T.Color();this.tint.copy(kind===2||[0,3,10].includes(mode)?this.warm:this.cool).multiplyScalar(2);batch.setColorAt(index,this.tint);}}
    const p=this.positions[n];p.set(x-side*fixture.tip[0],fixture.tip[1],z);order.push({n,z,side,kind});
    const warm=kind===2||[0,3,10].includes(mode)&&chunk%4!==0,halo=this.halos[warm?0:1],h=halo.count++;
    d.position.copy(p);d.quaternion.copy(camera.quaternion);d.scale.setScalar(low?.85:kind===2?1.15:1.55);roadX.project?.(d.position);d.updateMatrix();halo.setMatrixAt(h,d.matrix);this.tint??=new T.Color();this.tint.copy(warm?this.warm:this.cool).multiplyScalar(Math.max(.03,1-Math.abs(z)/340));halo.setColorAt(h,this.tint);
    d.position.set(p.x,.035,z);d.rotation.set(-Math.PI/2,0,0);d.scale.set(kind===2?4.5:6.1,WET_MAPS.has(mode)?12.5:8.5,1);roadX.transform?.(d);d.updateMatrix();this.pools.setMatrixAt(n,d.matrix);this.tint.copy(warm?this.warm:palette).multiplyScalar(.72+((Math.abs(chunk*7+n)%9)/30));this.pools.setColorAt(n,this.tint);
   }
-  for(let k=0;k<this.fixtures.length;k++)for(const b of this.fixtures[k].batches){b.count=counts[k];b.visible=enabled&&b.count>0;if(b.count)b.instanceMatrix.needsUpdate=true;}
+  for(let k=0;k<this.fixtures.length;k++)for(const b of this.fixtures[k].batches){b.count=counts[k];b.visible=enabled&&b.count>0;if(b.count){b.instanceMatrix.needsUpdate=true;if(b.instanceColor)b.instanceColor.needsUpdate=true;}}
   for(const halo of this.halos)if(halo.count){halo.instanceMatrix.needsUpdate=true;halo.instanceColor.needsUpdate=true;}
   this.pools.instanceMatrix.needsUpdate=true;this.pools.instanceColor.needsUpdate=true;this.pools.material.uniforms.strength.value=mode===3?.028:mode===10?.024:mode===8?.009:.014;
   order.sort((a,b)=>Math.abs(a.z)-Math.abs(b.z));const first=order[0],second=order.find(p=>p.side!==first.side)||order[1];
-  this.lights.forEach((l,n)=>{const p=n?second:first;l.position.copy(this.positions[p.n]);roadX.project?.(l.position);l.color.copy(p.kind===2?this.warm:palette);l.intensity=low?0:mode===3?110:mode===8?28:80;});
+  this.lights.forEach((l,n)=>{const p=n?second:first;l.position.copy(this.positions[p.n]);roadX.project?.(l.position);l.color.copy(p.kind===2?this.warm:palette);l.intensity=(mode===3?110:mode===8?28:80)*(low?.75:1);});
  }
  snapshot(){return{loaded:this.loaded,families:[...(this.used||[])],fixtures:LAMP_COUNT,physicalLights:this.lights.length,activeLights:this.lights.filter(l=>l.intensity>0).length};}
 }

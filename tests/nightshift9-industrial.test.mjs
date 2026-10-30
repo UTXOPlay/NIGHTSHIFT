@@ -16,13 +16,13 @@ test('industrial meshes have finite unit normals, usable UVs and nondegenerate f
  for(const g of [INDUSTRIAL.container20,INDUSTRIAL.container40]){g.computeBoundingBox();assert.ok(Math.abs(g.boundingBox.min.x+.5)<1e-6);assert.ok(Math.abs(g.boundingBox.max.z-.5)<1e-6);}
 });
 
-test('quality removes only near fittings and restores cached structural instances',()=>{
+test('quality removes only near fittings and restores cached structural instances',async()=>{
  const old=globalThis.document;globalThis.document={createElement:()=>({getContext:()=>({fillRect(){},strokeRect(){},fillText(){}})})};
  try{
   const scene=new T.Scene(),world=new RouteWorld(scene),frame=new CircuitFrame(),road=z=>frame.pose(z).x;
   road.fixedFrame=(d,o)=>frame.placeAbsolute(o,d);road.originMatrix=m=>frame.originMatrix(m);road.profileKey=()=>9;
   for(const mode of [0,3,8]){
-   frame.set(mode,7600);world.draw(7600,mode,150000,road,0);const counts=new Map([...world.pools.values()].filter(p=>!p.geometry.userData.detail).map(p=>[p,p.mesh.count]));const detail=world.snapshot().nearDetailInstances;assert.ok(detail>0);assert.ok(world.snapshot().maxPoolCount<1600);
+   await world.prepare(mode);frame.set(mode,7600);world.draw(7600,mode,150000,road,0);const counts=new Map([...world.pools.values()].filter(p=>!p.geometry.userData.detail).map(p=>[p,p.mesh.count]));const detail=world.snapshot().nearDetailInstances;assert.ok(detail>0);assert.ok(world.snapshot().maxPoolCount<1600);
    world.draw(7610,mode,150000,road,0);assert.equal(world.matrixWrites,0);
    world.draw(7610,mode,150000,road,2);assert.equal(world.snapshot().nearDetailInstances,0);for(const [p,n]of counts)assert.equal(p.mesh.count,n,'Structural silhouettes survive low quality');
    world.draw(7620,mode,150000,road,2);assert.equal(world.matrixWrites,0);
@@ -31,18 +31,18 @@ test('quality removes only near fittings and restores cached structural instance
  }finally{globalThis.document=old;}
 });
 
-test('harbour containers, cranes and warehouses remain outside the drivable corridor',()=>{
+test('harbour containers, cranes and warehouses remain outside the drivable corridor',async()=>{
  const old=globalThis.document;globalThis.document={createElement:()=>({getContext:()=>({fillRect(){},strokeRect(){},fillText(){}})})};
  try{
-  const world=new RouteWorld(new T.Scene()),box=new T.Box3();
+  const world=new RouteWorld(new T.Scene()),box=new T.Box3();await world.prepare(0);
   for(const template of world.templates[0])for(const part of template){const g=part.pool.geometry;if(g===INDUSTRIAL.stencil||g===INDUSTRIAL.detailBox)continue;g.computeBoundingBox();box.copy(g.boundingBox).applyMatrix4(part.matrix);assert.ok(box.max.x< -7.4||box.min.x>7.4,'Decorative architecture must not close a driving lane');}
  }finally{globalThis.document=old;}
 });
 
-test('container feet and crane footing meet their authored quay and pier levels',()=>{
+test('container feet and crane footing meet their authored quay and pier levels',async()=>{
  const old=globalThis.document;globalThis.document={createElement:()=>({getContext:()=>({fillRect(){},strokeRect(){},fillText(){}})})};
  try{
-  const world=new RouteWorld(new T.Scene()),box=new T.Box3();
+  const world=new RouteWorld(new T.Scene()),box=new T.Box3();await world.prepare(0);
   for(const template of world.templates[0]){const bottoms=template.filter(p=>p.pool.material===world.m.cargoPaint).map(p=>{const g=p.pool.geometry;g.computeBoundingBox();return box.copy(g.boundingBox).applyMatrix4(p.matrix).min.y;});if(bottoms.length)assert.ok(Math.abs(Math.min(...bottoms)+.12)<1e-6);}
   INDUSTRIAL.gantry.computeBoundingBox();INDUSTRIAL.pier.computeBoundingBox();assert.ok(Math.abs(INDUSTRIAL.gantry.boundingBox.min.y-INDUSTRIAL.pier.boundingBox.max.y)<1e-6);
  }finally{globalThis.document=old;}

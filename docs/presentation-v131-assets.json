@@ -1,0 +1,182 @@
+{
+  "generation": {
+    "tool": "built-in image_gen",
+    "originalSize": [
+      1254,
+      1254
+    ],
+    "sourceSha256": "59537ed920e28254bf886a969414a51e017431c5bad8fad18b061902d7f14174",
+    "runtimeAsset": "games/arcade/web/art/nightshift/architecture-v131.webp",
+    "packing": "Sixteen material tiles repacked to equal 384 px cells; original row boundaries retained in this record",
+    "sourceXBoundaries": [
+      0,
+      314,
+      628,
+      941,
+      1254
+    ],
+    "sourceYBoundaries": [
+      0,
+      315,
+      583,
+      872,
+      1254
+    ],
+    "nativeRulesChanged": false,
+    "originalArtifact": "exec-f2b79458-a403-4962-9d21-e529789fe226.png"
+  },
+  "texturePacking": [
+    {
+      "kind": "color",
+      "source": "games/arcade/web/art/nightshift/pbr/asphalt-color.jpg",
+      "size": 1024,
+      "bytes": 443390
+    },
+    {
+      "kind": "normal",
+      "source": "games/arcade/web/art/nightshift/pbr/asphalt-normal.jpg",
+      "size": 512,
+      "bytes": 127658
+    },
+    {
+      "kind": "roughness",
+      "source": "games/arcade/web/art/nightshift/pbr/asphalt-roughness.jpg",
+      "size": 512,
+      "bytes": 92420
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/structures-v8.webp",
+      "output": "games/arcade/web/art/nightshift/structures-v8-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 272316
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/world-foliage.webp",
+      "output": "games/arcade/web/art/nightshift/world-foliage-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 525042
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/world-terrain.webp",
+      "output": "games/arcade/web/art/nightshift/world-terrain-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 479284
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/materials.webp",
+      "output": "games/arcade/web/art/nightshift/materials-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 293590
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/relay-materials.webp",
+      "output": "games/arcade/web/art/nightshift/relay-materials-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 231818
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/world-biomes.webp",
+      "output": "games/arcade/web/art/nightshift/world-biomes-v131.webp",
+      "dimensions": [
+        1536,
+        768
+      ],
+      "bytes": 254176
+    }
+  ],
+  "effectPacking": [
+    {
+      "source": "games/arcade/web/art/nightshift/combat-vfx-v81.webp",
+      "output": "games/arcade/web/art/nightshift/combat-vfx-v81-v131.webp",
+      "dimensions": [
+        1280,
+        640
+      ],
+      "bytes": 318116,
+      "sourceBytes": 570540
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/combat-pickups.webp",
+      "output": "games/arcade/web/art/nightshift/combat-pickups-v131.webp",
+      "dimensions": [
+        1280,
+        640
+      ],
+      "bytes": 358262,
+      "sourceBytes": 511638
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/impact-sequence-v91.webp",
+      "output": "games/arcade/web/art/nightshift/impact-sequence-v91-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 440058,
+      "sourceBytes": 461874
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/street-lighting-v8.webp",
+      "output": "games/arcade/web/art/nightshift/street-lighting-v8-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 282534,
+      "sourceBytes": 407332
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/drive-vfx-v81.webp",
+      "output": "games/arcade/web/art/nightshift/drive-vfx-v81-v131.webp",
+      "dimensions": [
+        1280,
+        640
+      ],
+      "bytes": 205606,
+      "sourceBytes": 379628
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/combat-markers.webp",
+      "output": "games/arcade/web/art/nightshift/combat-markers-v131.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 290074,
+      "sourceBytes": 372412
+    }
+  ],
+  "musicPacking": {
+    "source": "games/arcade/web/audio/nightshift/nightdrive.ogg",
+    "output": "games/arcade/web/audio/nightshift/nightdrive-v131.ogg",
+    "sourceBytes": 2417707,
+    "bytes": 1454726,
+    "command": "ffmpeg -i SOURCE -af lowpass=f=10000 -ar 24000 -c:a libvorbis -q:a 3 OUTPUT",
+    "reason": "Full credited 199-second track retained; upper frequencies already removed by the gameplay music bus are omitted from the delivery encode."
+  },
+  "nightBackground": {
+    "tool": "built-in image_gen",
+    "originalArtifact": "exec-da3511f6-212b-4901-a538-af30017a82f0.png",
+    "sourceSha256": "0e109e350e52e7d5571714984505aafaba032ed31f159286dab2dba5b9732305",
+    "originalSize": [
+      1774,
+      887
+    ],
+    "runtimeAsset": "games/arcade/web/art/nightshift/city-night-v131.webp"
+  }
+}

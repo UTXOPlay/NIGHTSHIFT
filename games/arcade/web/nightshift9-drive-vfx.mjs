@@ -25,7 +25,7 @@ export class DriveVfx{
   material.onBeforeCompile=s=>{s.vertexShader='attribute float trailAlpha; varying float vTrailAlpha;\n'+s.vertexShader;s.vertexShader=s.vertexShader.replace('#include <uv_vertex>','#include <uv_vertex>\nvTrailAlpha=trailAlpha;');s.fragmentShader='varying float vTrailAlpha;\n'+s.fragmentShader;s.fragmentShader=s.fragmentShader.replace('#include <opaque_fragment>','diffuseColor.a*=vTrailAlpha;\n#include <opaque_fragment>');};material.customProgramCacheKey=()=>'contact-ribbon-v91';
   this.ribbons=new T.InstancedMesh(geometry,material,256);this.ribbons.frustumCulled=false;this.ribbons.instanceMatrix.setUsage(T.DynamicDrawUsage);scene.add(this.ribbons);
  }
- async load(loader){const atlas=await loader.loadAsync('/arcade/art/nightshift/drive-vfx-v81.webp');atlas.colorSpace=T.SRGBColorSpace;for(const m of [this.smoke,this.plumes]){m.material.map=atlas;m.material.needsUpdate=true;}this.loaded=true;}
+ async load(loader){const atlas=await loader.loadAsync('/arcade/art/nightshift/drive-vfx-v81-v131.webp');atlas.colorSpace=T.SRGBColorSpace;for(const m of [this.smoke,this.plumes]){m.material.map=atlas;m.material.needsUpdate=true;}this.loaded=true;}
  reset(){this.particles.length=0;this.marks.length=0;this.accumulator=0;this.thrust=0;for(const t of this.trails)t.reset();}
  draw(g,distance,dt,camera,roadX,{running,reduced,low,rig,car,wet=false,visible=true}){
   this.time+=dt;const d=this.dummy,boost=running&&!g.over&&g.ability_ticks>0&&!g.stun&&!reduced;this.thrust+=(Number(boost)-this.thrust)*(1-Math.exp(-dt/(boost?.045:.1)));if(!running)this.thrust=0;this.smoke.visible=this.loaded&&running&&!reduced;this.plumes.visible=this.loaded&&this.thrust>.015;this.ribbons.visible=visible&&!reduced;

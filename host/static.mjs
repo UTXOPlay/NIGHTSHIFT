@@ -49,7 +49,7 @@ export function optimizedStatic(root, { index = "index.html" } = {}) {
     }
     if (pathname.endsWith("/") && index) pathname += index;
     const hint = req.query.h;
-    if (hint !== undefined && /\.(?:glb|webp|png|jpg|hdr|wav|ogg)$/.test(pathname)) {
+    if (hint !== undefined && /\.(?:glb|webp|png|jpg|hdr|pmrem|wav|ogg)$/.test(pathname)) {
       const source = path.resolve(absolute, "." + pathname);
       if (!source.startsWith(absolute + path.sep) || !existsSync(source)) return next();
       const stat = statSync(source), prior = fingerprints.get(source);
@@ -60,7 +60,7 @@ export function optimizedStatic(root, { index = "index.html" } = {}) {
     }
     if (
       !["GET", "HEAD"].includes(req.method) ||
-      !/\.(?:js|mjs|css|json|svg|html|glb)$/.test(pathname)
+      !/\.(?:js|mjs|css|json|svg|html|glb|pmrem)$/.test(pathname)
     )
       return serve(req, res, next);
     res.vary("Accept-Encoding");

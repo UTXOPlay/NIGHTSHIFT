@@ -1,0 +1,21 @@
+{
+  "source": "games/arcade/web/art/nightshift/fleet-ready-v11/concept-authored.glb",
+  "output": "games/arcade/web/art/nightshift/fleet-v131/concept.glb",
+  "sourceSha256": "91806e416836e09da9c21f406dc8a57b409feb9c177b82bad69ae42304e8bcf2",
+  "outputSha256": "c2f560049e3575530265e78f86bb7819f23a8c24fb803dee8084cb326511288e",
+  "sourceBytes": 5300584,
+  "bytes": 3301716,
+  "triangles": 61597,
+  "retainedNodes": 101,
+  "maxBoundsDelta": 0.000009480847893650335,
+  "normalMaps": "Original image bytes retained",
+  "textures": "Other texture slots capped at 1024 px with WebP quality 92",
+  "geometry": "Meshopt compression; 16-bit positions, 12-bit normals, 16-bit UV; original topology, wheel hierarchy, material UVs and hard edges retained",
+  "packages": {
+    "@gltf-transform/core": "4.2.1",
+    "@gltf-transform/extensions": "4.2.1",
+    "@gltf-transform/functions": "4.2.1",
+    "meshoptimizer": "0.24.0",
+    "sharp": "0.34.5"
+  }
+}

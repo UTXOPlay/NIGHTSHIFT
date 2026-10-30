@@ -1,6 +1,6 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 import {CLIENT_PROFILE} from '../games/arcade/web/nightshift13-profile.mjs';
 import {createGame,applyAction,step} from '../games/arcade/web/nightshift13-rules.mjs';
 import {driveInput} from '../tests/helpers/nightshift13-driver.mjs';
@@ -52,5 +52,5 @@ try {
  // Input mapping must be the inverse of the actual render transform after a resize.
  await p.getByRole('button',{name:'Career events',exact:true}).click();await p.locator('[data-mode="0"]').click();await p.getByRole('button',{name:'Start selected race',exact:true}).click();await p.waitForFunction(()=>__driftReview().running);await p.keyboard.down('w');await p.keyboard.down('d');await p.waitForTimeout(350);await p.keyboard.up('d');await p.keyboard.up('w');assert.ok(await p.evaluate(()=>__driftReview().game.drift_x>1000));await p.keyboard.press('p');await p.waitForFunction(()=>!__driftReview().pending&&!__driftReview().sending);checks.ordinaryPedalsAfterResize=true;
  const touch=await browser.newContext({viewport:{width:844,height:390},isMobile:true,hasTouch:true});const touchLogout=process.env.DRIFT_AUTH==='1'?await reviewSession(touch,origin):null;const mobile=await touch.newPage();mobile.on('pageerror',e=>errors.push(e.message));await mobile.goto(origin+'/games/nightshift/?review=1');await mobile.waitForFunction(()=>window.__driftReview?.().loaded);await mobile.locator('utxo-loader').waitFor({state:'detached'});await mobile.waitForTimeout(700);await mobile.screenshot({path:out+'/touch-career.png'});await mobile.setViewportSize({width:390,height:844});await mobile.waitForFunction(()=>document.documentElement.dataset.orientationBlocked==='true');assert.equal(await mobile.evaluate(()=>__driftReview().running),false);checks.portraitGate=true;await mobile.screenshot({path:out+'/portrait-gate.png'});await touchLogout?.();await touch.close();
- assert.deepEqual(errors,[]);const report={version:'13.0.0',profile:CLIENT_PROFILE,layouts,checks,errors,physicalDevices:false};writeFileSync(out+'/review.json',JSON.stringify(report,null,2));console.log(report);
+ assert.deepEqual(errors,[]);const report={version:JSON.parse(readFileSync('package.json')).version,profile:CLIENT_PROFILE,layouts,checks,errors,physicalDevices:false};writeFileSync(out+'/review.json',JSON.stringify(report,null,2));console.log(report);
 } finally {await logout?.();await browser.close();}

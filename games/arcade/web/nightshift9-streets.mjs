@@ -6,7 +6,7 @@ export const STREET_VARIANTS=24;
 const foliageCards=Array.from({length:3},(_,n)=>new T.PlaneGeometry(1,1).rotateY(n*Math.PI/3)),foliage=mergeGeometries(foliageCards);foliageCards.forEach(g=>g.dispose());
 const guardPost=new T.BoxGeometry();guardPost.userData.roadAnchor=true;
 export const GEO={box:new T.BoxGeometry(1,1,1),guardPost,building:new RoundedBoxGeometry(1,1,1,1,.012),rock:new T.DodecahedronGeometry(1,0),cone:new T.ConeGeometry(1,1,8),cylinder:new T.CylinderGeometry(1,1,1,8),ring:new T.TorusGeometry(.8,.035,5,6),leaf:foliage};
-export const FACADES=[['brick',0,10,12],['residence',1,10,12],['office',2,12,12],['lab',3,12,12],['warehouse',4,14,9],['stonefront',5,12,9],['chalet',6,9,9],['utility',7,7,7]];
+export const FACADES=[['brick',0,10,9],['residence',1,10,9],['office',2,12,8],['lab',3,12,8],['warehouse',4,14,9],['stonefront',5,12,9],['chalet',6,9,9],['utility',7,7,7]];
 const hash=x=>{x=Math.imul(x^(x>>>16),0x45d9f3b);x=Math.imul(x^(x>>>16),0x45d9f3b);return(x^(x>>>16))>>>0;};
 const mod=(x,n)=>(x%n+n)%n;
 // Adjacent chunks have different parity; repeated blocks cannot form a wall.

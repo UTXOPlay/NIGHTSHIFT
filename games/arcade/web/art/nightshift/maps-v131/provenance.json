@@ -1,0 +1,869 @@
+{
+  "version": "13.1.0",
+  "source": "Actual NIGHTSHIFT route render, 2560 × 1440, presentation-only capture at route preview station 7600; no fabricated route art",
+  "variants": [
+    384,
+    768,
+    1280,
+    2560
+  ],
+  "maps": [
+    {
+      "mode": 0,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 314,
+        "colorWrites": 314,
+        "pools": 14,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 73,
+        "detailRange": 110,
+        "instanceCount": 314,
+        "maxPoolCount": 100,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0
+        ],
+        "errors": 0,
+        "geometries": 57,
+        "textures": 28,
+        "programs": 143,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 33,
+            "height": -0.12
+          },
+          {
+            "lo": 33,
+            "hi": 145,
+            "height": -2.1
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 1,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 120
+    },
+    {
+      "mode": 1,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 449,
+        "colorWrites": 449,
+        "pools": 23,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 449,
+        "maxPoolCount": 126,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1
+        ],
+        "errors": 0,
+        "geometries": 60,
+        "textures": 33,
+        "programs": 164,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 1,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 101
+    },
+    {
+      "mode": 2,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 488,
+        "colorWrites": 488,
+        "pools": 25,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 488,
+        "maxPoolCount": 152,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2
+        ],
+        "errors": 0,
+        "geometries": 60,
+        "textures": 35,
+        "programs": 164,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 2,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 97
+    },
+    {
+      "mode": 3,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 623,
+        "colorWrites": 623,
+        "pools": 35,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 69,
+        "detailRange": 110,
+        "instanceCount": 623,
+        "maxPoolCount": 290,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "errors": 0,
+        "geometries": 61,
+        "textures": 38,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 127
+    },
+    {
+      "mode": 4,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 368,
+        "colorWrites": 368,
+        "pools": 35,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 368,
+        "maxPoolCount": 166,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "errors": 0,
+        "geometries": 63,
+        "textures": 40,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 11.2,
+            "height": -0.12
+          },
+          {
+            "lo": 11.2,
+            "hi": 145,
+            "height": -4
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 105
+    },
+    {
+      "mode": 5,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 458,
+        "colorWrites": 458,
+        "pools": 37,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 458,
+        "maxPoolCount": 110,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "errors": 0,
+        "geometries": 63,
+        "textures": 41,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 95
+    },
+    {
+      "mode": 6,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 287,
+        "colorWrites": 287,
+        "pools": 37,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 287,
+        "maxPoolCount": 152,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "errors": 0,
+        "geometries": 63,
+        "textures": 42,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 91
+    },
+    {
+      "mode": 7,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 182,
+        "colorWrites": 182,
+        "pools": 37,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 182,
+        "maxPoolCount": 100,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "errors": 0,
+        "geometries": 63,
+        "textures": 43,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 87
+    },
+    {
+      "mode": 8,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 467,
+        "colorWrites": 467,
+        "pools": 37,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 17,
+        "detailRange": 110,
+        "instanceCount": 467,
+        "maxPoolCount": 150,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "errors": 0,
+        "geometries": 65,
+        "textures": 44,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 12.5,
+            "height": -0.12
+          },
+          {
+            "lo": 12.5,
+            "hi": 21.5,
+            "height": -0.7
+          },
+          {
+            "lo": 21.5,
+            "hi": 22.6,
+            "height": -0.12
+          },
+          {
+            "lo": 22.6,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 123
+    },
+    {
+      "mode": 9,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 326,
+        "colorWrites": 326,
+        "pools": 37,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 326,
+        "maxPoolCount": 103,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "errors": 0,
+        "geometries": 65,
+        "textures": 45,
+        "programs": 188,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 3,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 111
+    },
+    {
+      "mode": 10,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 279,
+        "colorWrites": 279,
+        "pools": 38,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 279,
+        "maxPoolCount": 106,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "errors": 0,
+        "geometries": 68,
+        "textures": 46,
+        "programs": 191,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 18,
+            "height": -0.12
+          },
+          {
+            "lo": 18,
+            "hi": 110,
+            "height": -0.12
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 4,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 95
+    },
+    {
+      "mode": 11,
+      "engine": {
+        "detailVehicles": [
+          0
+        ],
+        "raceAssetsReady": true,
+        "mode": "stationary-instancing",
+        "matrixWrites": 314,
+        "colorWrites": 314,
+        "pools": 38,
+        "streetVariants": 24,
+        "facadeFamilies": 8,
+        "nearDetailInstances": 0,
+        "detailRange": 110,
+        "instanceCount": 314,
+        "maxPoolCount": 120,
+        "ready": true,
+        "worldReady": true,
+        "preparedModes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "errors": 0,
+        "geometries": 68,
+        "textures": 47,
+        "programs": 191,
+        "features": {
+          "tier": 0,
+          "reflection": true,
+          "shadowInterval": 2,
+          "rainCount": 1200
+        },
+        "terrainBands": [
+          {
+            "lo": 8.3,
+            "hi": 11.2,
+            "height": -0.12
+          },
+          {
+            "lo": 11.2,
+            "hi": 145,
+            "height": -15
+          }
+        ],
+        "surface": {
+          "source": "Poly Haven Asphalt 02",
+          "sizes": [
+            1024,
+            512,
+            512
+          ],
+          "metres": 3,
+          "maps": 3
+        },
+        "lightingProbes": 4,
+        "post": {
+          "active": true,
+          "supported": true,
+          "scenePixels": 3686400,
+          "bloomPixels": 230400,
+          "historyFrames": 0
+        }
+      },
+      "calls": 103
+    }
+  ],
+  "errors": []
+}

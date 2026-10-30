@@ -1,0 +1,15 @@
+{
+  "tool": "Built-in image_gen; no CLI fallback",
+  "assets": [
+    {
+      "file": "games/arcade/web/art/nightshift/architecture-v131.webp",
+      "record": "Reconstructed brief for the earlier generation; original source image SHA-256 is retained in presentation-v131-assets.json.",
+      "promptBrief": "Production orthographic albedo atlas containing sixteen architectural material tiles arranged in four columns and four rows. Two distinct variants each of brick apartments, pale residential facades, blue and bronze glass offices, grey and ivory labs, corrugated and concrete warehouses, limestone and basalt storefronts, timber and plaster alpine chalets, dark and light utility panels. Dark unlit glazing with believable interiors; physically consistent scale. Flat front elevation; no perspective, cast shadows, baked bloom, signage, readable text, logos, people, vehicles or ground. Preserve separate masonry, glazing and frames so real-time light can be authored independently."
+    },
+    {
+      "file": "games/arcade/web/art/nightshift/city-night-v131.webp",
+      "prompt": "Use case: stylized-concept. Asset type: distant panoramic environment backplate for a production 3D browser racing game. Create a wide 2:1 composition of a sophisticated contemporary coastal city at blue-hour night, seen from a slightly elevated road across a harbor basin. The lower quarter is dark calm harbor water with restrained broken reflections; the upper half is a deep blue overcast night sky with subtle low clouds, not black. A varied skyline occupies the middle band, with clear architectural silhouettes: mid-rise brick blocks, slender glass towers, a few distant port cranes, and one elegant illuminated cable bridge far away. Building windows have irregular warm occupancy, with a few restrained sea-green infrastructure accents. Quiet premium cinematic realism, coherent soft blue ambient light and warm practical lights. This is distant scenery behind true 3D streets, so no foreground buildings, no foreground road, no cars, no people, no giant objects at either edge. Broad atmospheric depth and believable scale; keep the horizon level and approximately 40 percent up from the bottom. No sun, sunset-orange clouds, lens flare, bloom halos, text, logos, signage, borders, watermarks, pixel art or cartoon styling. Do not place important features near the extreme left or right edges; the game pans within the image rather than wrapping it. The image must work as a quiet photorealistic night-city background behind a fast racing scene, not as a poster."
+    }
+  ],
+  "processing": "Atlas tiles repacked into equal cells and exported as WebP; game lighting and emissive masks are authored in code. Route and fleet previews are captures of the actual 3D game, not generated concept art."
+}
