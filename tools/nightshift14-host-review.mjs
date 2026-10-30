@@ -6,7 +6,7 @@ import path from 'node:path';
 import {createNightshift14} from '../host/nightshift14.mjs';
 // The production image contains frozen release manifests and bundled browser
 // files, not browser source imports. Check against those independent bindings.
-const SAVED_PROFILES=Object.fromEntries(Array.from({length:7},(_,n)=>n+8).map(v=>[v,JSON.parse(readFileSync(v===14?'docs/release-integrity.json':`docs/release-integrity-v${v}.json`)).profile]));
+const SAVED_PROFILES=Object.fromEntries(Array.from({length:7},(_,n)=>n+8).map(v=>{const archive=`docs/release-integrity-v${v}.json`,file=v===14&&!existsSync(archive)?'docs/release-integrity.json':archive,release=JSON.parse(readFileSync(file));if(file!==archive)assert.equal(release.rulesVersion,14,'A V14 review cannot use a newer release profile');return[v,release.profile];}));
 const out='artifacts/rivals-v14/host';mkdirSync(out,{recursive:true});
 const dir=path.resolve(mkdtempSync(out+'/data-')),token=randomBytes(32).toString('hex');
 const prefixes={8:'LEGACY',9:'PREVIOUS',10:'ROADBLOCK',11:'GRIP',12:'PEDAL',13:'CAREER'};

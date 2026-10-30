@@ -1,6 +1,6 @@
 # Fair rivals and readable interception — NIGHTSHIFT V14
 
-V14 is a separate deterministic rule generation. Its profile is `fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe`. V8–V13 native sources, published executables, application profiles and data remain preserved. Deployment status and public evidence are recorded separately from local acceptance.
+V14 is a separate deterministic rule generation. Its profile is `fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe`. V8–V13 native sources, published executables, application profiles and data remain preserved. V14 is deployed from `617fc3139f534f522c17a8161549b538e0da0483`. Public, staged and local evidence is recorded in [the integration results](rivals-v14-integration-results.json). All published V14 native inputs are now frozen in release-integrity-v14.json.
 
 Rivals use the same integer pedal, steering, lateral and nitrous integration as the player. They evaluate continuous racing lines, look ahead for bends and shared hazards, brake with a stopping reserve, commit to a passing side, and yield when overlapping. An early defensive move has a cooldown. Nitrous uses charge; the previous player-average pace floor and periodic free boosts are absent. Shared absolute traffic covers separated occupied racing sections within a bounded instance budget.
 
