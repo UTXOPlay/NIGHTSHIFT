@@ -3,7 +3,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/Dockerfile
-    image: utxoplay/nightshift:10.0.0
+    image: utxoplay/nightshift:12.0.0
     restart: unless-stopped
     environment:
       RUNTIME_TOKEN: ${RUNTIME_TOKEN:?Set a stable server-only token of at least 32 characters}
@@ -14,7 +14,11 @@ services:
       - nightshift-v8:/app/data
       - nightshift-v9:/app/data-v9
       - nightshift-v10:/app/data-v10
+      - nightshift-v11:/app/data-v11
+      - nightshift-v12:/app/data-v12
 volumes:
   nightshift-v8:
   nightshift-v9:
   nightshift-v10:
+  nightshift-v11:
+  nightshift-v12:

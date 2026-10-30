@@ -21,7 +21,7 @@ export function driveMix(g,previous){
  const acceleration=ticks>0&&ticks<15?clamp(((g.speed||0)-previous.speed)*30/ticks/900,-1,1):0;
  return{
   speed:clamp(Math.abs(g.speed||0)/2500,0,1),
-  load:clamp(.4+acceleration*.55,.1,1),
+  load:g.physics_version>=12?clamp((g.throttle||0)/100*.8+Math.max(0,acceleration)*.2,.06,1):clamp(.4+acceleration*.55,.1,1),
   slip:g.drifting?clamp(g.physics_version>=11?Math.abs(g.slip_angle||0)/280:Math.abs(g.steer_v||0)/85+Math.abs(g.side_v||0)/3000,.15,1):0,
   boost:g.ability_ticks>0&&!g.stun?1:0,
   draft:clamp((g.draft_ticks||0)/90,0,1),

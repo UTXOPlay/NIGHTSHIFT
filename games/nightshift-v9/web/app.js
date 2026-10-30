@@ -1,22 +1,28 @@
 import {assetURL} from './_arcade/nightshift-asset-url.mjs';
 import {createMenuSystem} from './_arcade/nightshift-menu.mjs';
-import {createControls} from './_arcade/nightshift-controls-ui.mjs';
-import {PersonalGhost} from './_arcade/nightshift11-ghost.mjs';
-import {packInput} from './_arcade/nightshift11-input.mjs';
-import {CLIENT_PROFILE} from './_arcade/nightshift11-profile.mjs';
+import {createControls} from './_arcade/nightshift12-controls-ui.mjs';
+import {PersonalGhost} from './_arcade/nightshift12-ghost.mjs';
+import {packInput as legacyPack} from './_arcade/nightshift11-input.mjs';
+import {packInput} from './_arcade/nightshift12-input.mjs';
+import {CLIENT_PROFILE} from './_arcade/nightshift12-profile.mjs';
 import {sectorIndex,styleGoal,styleComplete} from './_arcade/nightshift11-rules.mjs';
 import {DISCIPLINES,eventModes,recommendedSetup,routeIntel,tacticalReadout,raceDebrief} from './_arcade/nightshift11-tactics.mjs';
 import {driverProgress,careerMilestones,savingsGoal,nextCareerEvent,buildStats,VEHICLE_TRAITS,raceStandings,gapLabel,rewardReceipt} from './_arcade/nightshift11-career.mjs';
 import {roadblockOpening,roadblockThreat,joystickDrive} from './_arcade/nightshift9-recovery.mjs';
-import {KEY_ACTIONS,keyboardConfig,keyboardPreset,bindKey,keyboardAction,eventKey,keyLabel} from './_arcade/nightshift-keyboard.mjs';
+import * as driveKeys from './_arcade/nightshift12-keyboard.mjs';
+import * as legacyKeys from './_arcade/nightshift-keyboard.mjs';
+const {eventKey,keyLabel}=driveKeys;let keyboard=driveKeys;
+const keyboardConfig=(...args)=>keyboard.keyboardConfig(...args),keyboardPreset=(...args)=>keyboard.keyboardPreset(...args),bindKey=(...args)=>keyboard.bindKey(...args),keyboardAction=(...args)=>keyboard.keyboardAction(...args);
+let KEY_ACTIONS=driveKeys.KEY_ACTIONS;
 import {combatHud,combatFeedback} from './_arcade/nightshift9-feedback.mjs';
-import {createGame,VEHICLES,EVENTS,RIVALS,GADGETS,UPGRADES,curvature} from './_arcade/nightshift11-rules.mjs';
-import * as newRules from './_arcade/nightshift11-rules.mjs';
+import {createGame,VEHICLES,EVENTS,RIVALS,GADGETS,UPGRADES,curvature} from './_arcade/nightshift12-rules.mjs';
+import * as gripRules from './_arcade/nightshift11-rules.mjs';
+import * as newRules from './_arcade/nightshift12-rules.mjs';
 import * as roadblockRules from './_arcade/nightshift10-rules.mjs';
 import * as circuitRules from './_arcade/nightshift9-rules.mjs';
 import * as legacyRules from './_arcade/nightshift8-rules.mjs';
 let step=newRules.step;
-function chooseRules(state){const legacy=!state.game.physics_version;step=legacy?legacyRules.step:state.game.physics_version>=11?newRules.step:state.game.physics_version===10?roadblockRules.step:circuitRules.step;setLegacyRoutes(legacy);if(renderer.legacy!==legacy)minimapMode=-1;renderer.legacy=legacy;}
+function chooseRules(state){const legacy=!state.game.physics_version;step=legacy?legacyRules.step:state.game.physics_version>=12?newRules.step:state.game.physics_version===11?gripRules.step:state.game.physics_version===10?roadblockRules.step:circuitRules.step;setLegacyRoutes(legacy);selectKeys(state.game);if(renderer.legacy!==legacy)minimapMode=-1;renderer.legacy=legacy;}
 import {DriftRenderer,FLEET} from './_arcade/nightshift9-renderer.bundle.mjs';
 import {ArcadeAudio} from './_arcade/nightshift9-audio.mjs';
 import {startRenderLoop,setText,readQuality} from './_arcade/nightshift9-performance.mjs';
@@ -27,7 +33,9 @@ const hidden=(el,v)=>{if(el.hidden!==v)el.hidden=v;},text=(el,v)=>{v=String(v);i
 let discipline=-1,engineerEnabled=true,planFocus=null;
 let ending=false,shopMessage='',shopTab='showroom',previewDrag=null;
 let g=createGame(),previous=structuredClone(g),confirmed=null,pending=[],sending=null,loaded=false,running=false,busy=false,view='career',countdown=0,accumulator=0,saveTime=0,hudTime=0,noticeTime=0,selectedMode=0,selectedVehicle=0,gadget=0,difficulty=0,lastHud='',lastTick=0;
-let keyConfig=keyboardConfig(localStorageSafe()),bindingCapture=null;function localStorageSafe(){try{return localStorage.getItem('nightshift:keyboard')}catch{return null}}
+let keyConfig=keyboardConfig(localStorageSafe(),readLegacyKeys()),bindingCapture=null;function localStorageSafe(){try{return localStorage.getItem(keyboard===driveKeys?'nightshift:keyboard:v12':'nightshift:keyboard')}catch{return null}}
+function readLegacyKeys(){try{return localStorage.getItem('nightshift:keyboard')}catch{return null}}
+function selectKeys(state){const next=state.physics_version>=12?driveKeys:legacyKeys;if(keyboard!==next){keyboard=next;KEY_ACTIONS=keyboard.KEY_ACTIONS;keyConfig=keyboardConfig(localStorageSafe(),readLegacyKeys());clear();refreshKeys();}}
 const held=new Map();let taps=0,drag=null,stickOwner=null,stickX=0,stickY=0,stickReverse=false;
 const fmt=n=>Math.floor(n/1800)+':'+String(Math.floor(n/30)%60).padStart(2,'0');
 const status=s=>setText('status',s),announce=s=>setText('announcement',s);
@@ -40,22 +48,29 @@ const nav=$('#nav');const mapButton=button('map','Career events',()=>void openVi
 for(const [name,key,field,value]of [['Music','nightshift:music-volume','musicLevel',audio.musicLevel],['Driving and effects','nightshift:effects-volume','effectsLevel',audio.effectsLevel]]){const label=document.createElement('label');label.className='audio-setting';label.textContent=name;const input=document.createElement('input');input.type='range';input.min='0';input.max='1';input.step='.05';input.value=value;input.setAttribute('aria-label',name+' volume');input.oninput=()=>{audio[field]=Number(input.value);write(key,input.value);audio.unlock();};label.append(input);$('#help-actions').before(label);}
 $('#help-actions').append(button('quality','Cycle rendering quality',()=>{const q=readQuality(),next=q==='auto'?'low':q==='low'?'high':'auto';write('utxoplay:quality',next);dispatchEvent(new Event('utxoplay:quality'));toast('QUALITY / '+next.toUpperCase());}),button('verify','Verify signed career replay',()=>void verify()),button('download','Download signed career',()=>void download()));
 const actions=$('#abilities');const abilityButtons=[];
-for(const [bit,name,label,key] of [[8,'drift','Brake and drift','S'],[64,'shield','Counter jammer','Q'],[32,'emp','Use equipped weapon','E'],[16,'bolt','Nitrous boost','SPACE']]){const b=button(name,label);b.dataset.input=bit;b.setAttribute('aria-keyshortcuts',key==='SPACE'?'Space':key);b.innerHTML+=`<kbd class="ability-key">${key}</kbd><small class="ability-value"></small>`;b.addEventListener('pointerdown',e=>{if(!running)return;e.preventDefault();b.setPointerCapture(e.pointerId);press('p'+e.pointerId,bit);canvas.focus();});for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,e=>held.delete('p'+e.pointerId));b.addEventListener('click',e=>{if(e.detail===0&&running)taps|=bit;});actions.append(b);abilityButtons.push(b);}
-const stick=$('#joystick');stick.innerHTML='<b class="stick"></b>';stick.setAttribute('role','group');stick.setAttribute('aria-label','Thumb joystick. Move sideways to steer, down and sideways to drift.');
+for(const [bit,name,label,key] of [[8,'drift','Handbrake','X'],[64,'shield','Counter jammer','Q'],[32,'emp','Use equipped weapon','E'],[16,'bolt','Nitrous boost','SPACE']]){const b=button(name,label);b.dataset.input=bit;b.setAttribute('aria-keyshortcuts',key==='SPACE'?'Space':key);b.innerHTML+=`<kbd class="ability-key">${key}</kbd><small class="ability-value"></small>`;b.addEventListener('pointerdown',e=>{if(!running)return;e.preventDefault();b.setPointerCapture(e.pointerId);press('p'+e.pointerId,bit);canvas.focus();});for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,e=>held.delete('p'+e.pointerId));b.addEventListener('click',e=>{if(e.detail===0&&running)taps|=bit;});actions.append(b);abilityButtons.push(b);}
+const stick=$('#joystick');stick.innerHTML='<b class="stick"></b>';stick.setAttribute('role','group');stick.setAttribute('aria-label','Thumb joystick. Move sideways to steer, up to accelerate, down to brake, sideways to steer.');
 function moveStick(e){if(e.pointerId!==stickOwner)return;const r=stick.getBoundingClientRect(),radius=r.width*.35;let x=(e.clientX-r.left-r.width/2)/radius,y=(e.clientY-r.top-r.height/2)/radius;const length=Math.max(1,Math.hypot(x,y));stickX=x/length;stickY=y/length;stick.firstChild.style.transform=`translate(${stickX*radius}px,${stickY*radius}px)`;}
-stick.onpointerdown=e=>{if(!running||stickOwner!==null)return;e.preventDefault();stickOwner=e.pointerId;stick.setPointerCapture(e.pointerId);moveStick(e);canvas.focus();};stick.onpointermove=moveStick;for(const event of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(event,e=>{if(e.pointerId===stickOwner){stickOwner=null;stickX=stickY=0;stickReverse=false;stick.firstChild.style.transform='';}});
+stick.onpointerdown=e=>{if((!running&&!countdown)||stickOwner!==null)return;e.preventDefault();stickOwner=e.pointerId;stick.setPointerCapture(e.pointerId);moveStick(e);canvas.focus();};stick.onpointermove=moveStick;for(const event of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(event,e=>{if(e.pointerId===stickOwner){stickOwner=null;stickX=stickY=0;stickReverse=false;stick.firstChild.style.transform='';}});
 function clear(){controls.clear();previewDrag=null;held.clear();taps=0;drag=null;stickOwner=null;stickX=stickY=0;stickReverse=false;stick.firstChild.style.transform='';}
 let lastWeaponHint=-10000;
 function press(source,bit){if(!held.has(source)){if(bit===32&&!combatHud(g).weaponReady&&performance.now()-lastWeaponHint>1400){toast(combatHud(g).weaponStatus);lastWeaponHint=performance.now();}held.set(source,bit);if(bit&112)taps|=bit;}}
 function inputs(){const padBits=controls.bits();if(padBits!==null){taps=0;return padBits;}let bits=taps;taps=0;for(const b of held.values())bits|=b;
  if((g.physics_version||8)<11){if(stickOwner!==null){bits&=~15;const d=joystickDrive({x:stickX,y:stickY,speed:g.speed,steer:g.steer_v,turn:VEHICLES[g.vehicle].turn,reverse:stickReverse});bits|=d.bits;stickReverse=d.reverse;}else if(drag){bits&=~3;const d=drag.target-g.drift_x-g.steer_v*2;if(d>60)bits|=2;else if(d< -60)bits|=1;}return bits;}
+ if(g.physics_version>=12){let steering=(bits&1)&&!(bits&2)?-100:(bits&2)&&!(bits&1)?100:0,brake=bits&256?100:0,throttle=bits&128?100:0;
+  if(stickOwner!==null){bits&=~7;steering=Math.round(stickX*100);brake=Math.round(Math.max(0,stickY-.12)/.65*100);throttle=Math.round(Math.max(0,-stickY-.08)/.55*100);
+   stickReverse=stickY>.65&&(stickReverse||g.speed<=0&&Math.abs(stickX)<.4);if(stickReverse){bits|=4;throttle=brake;brake=0;}}
+  else if(drag)steering=Math.max(-100,Math.min(100,Math.round((drag.target-g.drift_x-(g.lateral_v||0)*2.5)*.35)));
+  // The explicit reverse binding is itself a pedal. Shift direction only after braking to zero.
+  if(bits&4){throttle=100;brake=0;}return packInput(bits,steering,brake,throttle);
+ }
  let steering=(bits&1)&&!(bits&2)?-100:(bits&2)&&!(bits&1)?100:0,brake=bits&8?100:0;
  if(stickOwner!==null){bits&=~15;stickReverse=stickY>.35&&(stickReverse||stickY>.78&&Math.abs(stickX)<.25&&g.speed<180);if(stickReverse)bits|=4;steering=Math.round((stickReverse?-stickX:stickX)*100);brake=Math.max(brake,Math.round(Math.max(0,stickY-.12)/.88*100));if(stickY>.5&&Math.abs(stickX)>.12)bits|=8;}
  else if(drag){steering=Math.max(-100,Math.min(100,Math.round((drag.target-g.drift_x-(g.lateral_v||0)*2.5)*.35)));}
 
- return packInput(bits,steering,brake);
+ return legacyPack(bits,steering,brake);
 }
-const controls=createControls({root,canvas,stick,buttons:abilityButtons,read,write,keys:()=>keyConfig,getGame:()=>g,turn:()=>VEHICLES[g.vehicle].turn,loaded:()=>loaded,busy:()=>busy,running:()=>running,countdown:()=>countdown,getView:()=>view,humanHeld:()=>held.size>0||stickOwner!==null||!!drag,clear,pause,resume,start,closeKeys,closePlan,career:()=>setView('career'),toast});
+const controls=createControls({root,canvas,stick,buttons:abilityButtons,read,write,keys:()=>keyConfig,keyActions:()=>KEY_ACTIONS,getGame:()=>g,turn:()=>VEHICLES[g.vehicle].turn,loaded:()=>loaded,busy:()=>busy,running:()=>running,countdown:()=>countdown,getView:()=>view,humanHeld:()=>held.size>0||stickOwner!==null||!!drag,clear,pause,resume,start,closeKeys,closePlan,career:()=>setView('career'),toast});
 const menuSystem=createMenuSystem({root,sections:{career:mapButton,garage:garageButton,profile:profileButton},read,write,quality:readQuality,busy:()=>busy,loaded:()=>loaded,leave:()=>void leaveStore()});
 function refreshKeys(){
  for(const b of abilityButtons){const action=KEY_ACTIONS.find(([, ,bit])=>bit===+b.dataset.input);if(!action)continue;const key=keyConfig.bindings[action[0]];b.querySelector('.ability-key').textContent=keyLabel(key);b.setAttribute('aria-keyshortcuts',key==='Space'?'Space':key);}
@@ -64,7 +79,7 @@ function refreshKeys(){
  $('#key-preset').value=keyConfig.preset;$('#key-preset-note').textContent=keyConfig.custom?'CUSTOM BINDINGS':'Letter keys follow your active keyboard layout. Arrow keys also steer.';
  const rows=$('#key-rows');rows.replaceChildren();for(const [id,label]of KEY_ACTIONS){const row=document.createElement('div');const name=document.createElement('span');name.textContent=label;const b=button('keyboard','Rebind '+label.toLowerCase(),()=>{clear();bindingCapture=id;$('#key-message').textContent='Press a key for '+label+'. Escape cancels.';b.setAttribute('aria-pressed','true');});const k=document.createElement('kbd');k.textContent=keyLabel(keyConfig.bindings[id]);b.append(k);row.append(name,b);rows.append(row);}
 }
-function saveKeys(){write('nightshift:keyboard',JSON.stringify(keyConfig));clear();refreshKeys();}
+function saveKeys(){write(keyboard===driveKeys?'nightshift:keyboard:v12':'nightshift:keyboard',JSON.stringify(keyConfig));clear();refreshKeys();}
 async function openKeys(){await pause();clear();bindingCapture=null;hidden($('#keybinds'),false);refreshKeys();menuSystem.openSettings();}
 function closeKeys(){bindingCapture=null;clear();hidden($('#keybinds'),true);keyboardButton.focus();}
 const keyboardButton=button('keyboard','Controls and settings',()=>void openKeys());nav.insertBefore(keyboardButton,pauseButton);
@@ -80,7 +95,7 @@ addEventListener('keydown',e=>{
  if(e.target.closest?.('input,select,textarea'))return;const action=keyboardAction(keyConfig,e);
  if(e.code==='Escape'||action?.[0]==='pause'){e.preventDefault();if(!e.repeat)void pause();return;}
  if(e.code==='Enter'&&!running&&!countdown&&!e.target.closest?.('button')){e.preventDefault();void start();return;}
- if(!running||e.target.closest?.('button'))return;if(action?.[2]){e.preventDefault();if(!e.repeat)press(e.code,action[2]);}
+ if((!running&&!countdown)||e.target.closest?.('button'))return;if(action?.[2]){e.preventDefault();if(!e.repeat)press(e.code,action[2]);}
 });
 addEventListener('keyup',e=>{held.delete(e.code);if(keyboardAction(keyConfig,e)&&running)e.preventDefault();});
 
