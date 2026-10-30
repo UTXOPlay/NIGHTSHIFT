@@ -33,3 +33,17 @@ test('V10 delegates an unfinished V8 through V9 and migrates only an explicit ne
  await outer('http://v10/drift-run/api/action',{headers,method:'POST',body:JSON.stringify({session_id:'v8',expected_block:'old',action})});
  assert.equal(calls.filter(c=>c.url.endsWith('/migrate-legacy')).length,1);assert.equal(calls.at(-1).url,'http://v10/drift-run/api/action');assert.deepEqual(JSON.parse(calls.at(-1).options.body),{session_id:'v10',expected_block:'current',action});assert.equal(current.game.career.credits,650);
 });
+
+test('absent intermediate versions delegate reads without creating empty current databases',async()=>{
+ const old={game:{tick:50,over:false,career:{credits:650}},session:{id:'v8',block_hash:'old',actions:1}},fresh={game:{physics_version:12},session:{id:'v12',block_hash:'new',actions:0,career_migrated:false}},calls=[];
+ const request=async(u,o)=>{calls.push({u,o});if(u.endsWith('/state'))return Response.json(u.startsWith('http://v8')?old:fresh);if(u.endsWith('/export'))return Response.json({application:'myelin-nightshift-v8',signed:true});if(u.endsWith('/migrate-legacy')){fresh.session.career_migrated=true;return Response.json(fresh);}return Response.json({ok:true});};
+ let send=request;for(const [current,previous]of [[9,8],[10,9],[11,10],[12,11]])send=careerMigration({runtimeUrl:'http://v'+current,legacyUrl:'http://v'+previous,legacyDataDir:'/unused',fetchImpl:request,legacyFetch:send,hasLegacy:()=>true,hasCurrent:()=>false,migrationPath:'migrate-legacy'});
+ assert.deepEqual(await(await send('http://v12/drift-run/api/state',{headers})).json(),old);assert.deepEqual(calls.map(c=>c.u),['http://v8/drift-run/api/state']);calls.length=0;
+ await send('http://v12/drift-run/api/action',{headers,method:'POST',body:JSON.stringify({session_id:'v8',expected_block:'old',action:{type:'race',mode:0,vehicle:0,gadget:0,difficulty:0}})});
+ assert.ok(calls.every(c=>c.u.startsWith('http://v12')||c.u.startsWith('http://v8')));assert.equal(calls.filter(c=>c.u.endsWith('/migrate-legacy')).length,1);assert.equal(JSON.parse(calls.at(-1).o.body).session_id,'v12');
+});
+
+test('new accounts use one current request without probing or opening legacy stores',async()=>{
+ const calls=[],send=careerMigration({runtimeUrl:'http://v12',legacyUrl:'http://v11',legacyDataDir:'/unused',hasLegacy:()=>false,fetchImpl:async(u)=>{calls.push(u);return Response.json({ok:true});}});
+ await send('http://v12/drift-run/api/state',{headers});assert.deepEqual(calls,['http://v12/drift-run/api/state']);
+});

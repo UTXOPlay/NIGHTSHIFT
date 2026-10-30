@@ -83,6 +83,8 @@ def clone_spec(d, image, stage=False):
         spec["HostConfig"]["RestartPolicy"] = {"Name": "no", "MaximumRetryCount": 0}
     if d["Name"].lstrip("/") == GAME:
         spec["Cmd"] = ["node", "host/nightshift12.mjs"]
+        spec["HostConfig"]["Memory"] = 1536 * 1024 * 1024
+        spec["HostConfig"]["MemorySwap"] = 1536 * 1024 * 1024
     return spec
 
 

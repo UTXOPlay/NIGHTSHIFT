@@ -1,3 +1,4 @@
+import {installStageAssets} from './nightshift12-stage-assets.mjs';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {mkdirSync,writeFileSync} from 'node:fs';
@@ -8,17 +9,17 @@ mkdirSync(out,{recursive:true});const checks=[],errors=[],runs=[];
 const browser=await chromium.launch({proxy:process.env.DRIFT_PROXY?{server:process.env.DRIFT_PROXY}:undefined,args:['--no-sandbox','--use-angle=gl','--enable-webgl','--ignore-gpu-blocklist']});
 try{
  for(const touch of [false,true]){
-  const ctx=await browser.newContext({viewport:touch?{width:844,height:390}:{width:1920,height:1080},hasTouch:touch,isMobile:touch});ctx.setDefaultTimeout(60000);
+  const ctx=await browser.newContext({viewport:touch?{width:844,height:390}:{width:1920,height:1080},hasTouch:touch,isMobile:touch});ctx.setDefaultTimeout(Number(process.env.DRIFT_LOAD_TIMEOUT||60000));
   let logout;
   try{
-   installReviewProfile(ctx);if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
+   installReviewProfile(ctx);await installStageAssets(ctx,origin);if(process.env.DRIFT_AUTH==='1')logout=await reviewSession(ctx,origin);
    await ctx.addInitScript(()=>{
     localStorage.setItem('utxoplay:quality','low');localStorage.setItem('nightshift:keyboard',JSON.stringify({preset:'colemak'}));localStorage.removeItem('nightshift:practice:v12');localStorage.removeItem('nightshift:keyboard:v12');
     const p={index:0,connected:true,mapping:'standard',axes:[0,0],buttons:Array.from({length:17},()=>({value:0,pressed:false}))};
     Object.defineProperty(navigator,'getGamepads',{configurable:true,value:()=>p.connected?[p]:[]});
     globalThis.__pad=(buttons={},x=0,connected=true)=>{p.connected=connected;p.axes[0]=x;for(let n=0;n<17;n++){p.buttons[n].value=buttons[n]||0;p.buttons[n].pressed=p.buttons[n].value>.5;}};
    });
-   const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto(origin+'/games/nightshift/?review=1');await p.waitForFunction(()=>__driftReview?.().loaded);
+   const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto(origin+'/games/nightshift/?review=1',{waitUntil:'domcontentloaded'});await p.waitForFunction(()=>window.__driftReview?.().loaded);
    const set=async(buttons={},x=0,connected=true)=>p.evaluate(({buttons,x,connected})=>__pad(buttons,x,connected),{buttons,x,connected});
    const press=async n=>{await set({[n]:1});await p.waitForTimeout(250);await set();await p.waitForTimeout(250);};
    const call=async(path,data)=>{const r=data===undefined?await ctx.request.get(origin+'/games/nightshift/api/'+path):await ctx.request.post(origin+'/games/nightshift/api/'+path,{headers:{Origin:origin},data});assert.ok(r.ok(),'Native '+path+' HTTP '+r.status());return r.json();};
@@ -38,7 +39,7 @@ try{
    await set({},0,true);await p.waitForTimeout(200);
    // Navigate from pause to garage entirely through the controller.
    await p.locator('#menu-actions button').first().focus();for(let n=0;n<5&&(await p.evaluate(()=>document.activeElement?.getAttribute('aria-label')))!=='Inspect garage';n++)await press(15);const focused=await p.evaluate(()=>document.activeElement?.getAttribute('aria-label'));assert.equal(focused,'Inspect garage');await press(0);await p.waitForFunction(()=>__driftReview().view==='garage');await press(1);await p.waitForFunction(()=>__driftReview().view==='career');checks.push('Controller spatial menu navigation opens garage and returns');
-   for(const [width,height] of [[1920,1080],[2560,1080],[2560,1440],[3840,2160],[844,390]]){await p.setViewportSize({width,height});await p.waitForTimeout(150);const metrics=await p.evaluate(()=>({w:innerWidth,h:innerHeight,buffer:__driftReview().buffer,overflow:document.documentElement.scrollWidth>innerWidth}));assert.ok(metrics.buffer.width*metrics.buffer.height<=3686400);assert.equal(metrics.overflow,false);}
+   for(const [width,height] of [[1920,1080],[2560,1080],[2560,1440],[3840,2160],[844,390]]){await p.setViewportSize({width,height});await p.waitForTimeout(150);const metrics=await p.evaluate(()=>({w:innerWidth,h:innerHeight,buffer:__driftReview().buffer,inverse:(()=>{const r=__driftReview(),p=r.project(2,0,0);return r.pointer(p.x,p.y);})(),overflow:document.documentElement.scrollWidth>innerWidth}));assert.ok(metrics.buffer.width*metrics.buffer.height<=3686400);assert.equal(metrics.overflow,false);assert.ok(Math.abs(metrics.inverse.x-1000)<.01);}
    runs.push({touch,practiceStage:4,nativeReplay:true,pausedTick:paused,inputSource:'virtual standard Gamepad API readings',physicalController:false});
   }finally{if(logout)await logout();await ctx.close();}
  }

@@ -152,5 +152,167 @@
   "limitations": [
     "Physical phone and physical controller testing remains outstanding.",
     "This release advances driving and input. Career unlocks, route forks and wider art/audio improvements remain active goal work."
-  ]
+  ],
+  "nodeTests": 131,
+  "nativeTests": 14,
+  "staging": {
+    "integrity": {
+      "version": "12.0.0",
+      "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+      "servedFileHashes": 169,
+      "hostFiles": true,
+      "nativeLegacySHA256": {
+        "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+        "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+        "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+        "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63"
+      },
+      "newExecutableSHA256": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8"
+    },
+    "migration": {
+      "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
+      "checks": [
+        {
+          "version": 8,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        },
+        {
+          "version": 9,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        },
+        {
+          "version": 10,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        },
+        {
+          "version": 11,
+          "oldRaceRetainsExecutor": true,
+          "nextRaceMigrates": true,
+          "careerPreserved": true,
+          "originPreserved": true,
+          "oldProofUnchanged": true,
+          "newTapeReplay": true,
+          "staleProfileRejected": true,
+          "legacyTapeRejected": true
+        }
+      ]
+    },
+    "capacity": {
+      "newAccountAvoidsLegacyDatabases": true,
+      "requests": 41,
+      "perExecutorCacheLimit": 6,
+      "beforeBytes": 390979584,
+      "peakBytes": 1346539520,
+      "currentBytes": 1346539520,
+      "limitBytes": 1610612736,
+      "rows": [
+        {
+          "version": 8,
+          "accounts": 8,
+          "currentMemoryBytes": 662528000
+        },
+        {
+          "version": 9,
+          "accounts": 8,
+          "currentMemoryBytes": 875876352
+        },
+        {
+          "version": 10,
+          "accounts": 8,
+          "currentMemoryBytes": 1088843776
+        },
+        {
+          "version": 11,
+          "accounts": 8,
+          "currentMemoryBytes": 1301696512
+        },
+        {
+          "version": 12,
+          "accounts": 8,
+          "currentMemoryBytes": 1346539520
+        }
+      ]
+    },
+    "controls": {
+      "checks": [
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns",
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Portrait gate pauses controller play and clears held input",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns"
+      ],
+      "runs": [
+        {
+          "touch": false,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 114,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        },
+        {
+          "touch": true,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 100,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        }
+      ],
+      "errors": []
+    },
+    "touch": {
+      "checks": [
+        "Thumb accelerator held through countdown starts the car at GO",
+        "Diagonal joystick combines proportional steering and gas",
+        "Releasing the joystick coasts without automatic gas",
+        "Portrait gate clears the held brake and pauses the local simulation",
+        "Native touch-input replay verifies and all visible text is English"
+      ],
+      "errors": [],
+      "physicalPhone": false
+    },
+    "fullscreen": {
+      "origin": "http://127.0.0.1:18944",
+      "checks": [
+        {
+          "id": "drift-run",
+          "pricing": "free",
+          "ready": true,
+          "fullscreen": true,
+          "reentry": true
+        }
+      ],
+      "failures": [],
+      "errors": []
+    },
+    "assetTransport": "Static assets were fulfilled from the local release after byte-hash verification; native APIs, authentication and Store entry used the staged server. SSH streaming was slow. Public browser acceptance must run without local asset fulfillment."
+  }
 }

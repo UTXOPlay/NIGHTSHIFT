@@ -212,7 +212,8 @@
   },
   "presentationHostFiles": {
     "host/static.mjs": "f90429f4ddb62966131c19cd80e626b6db0cd0f61292bc743453407d4b279890",
-    "host/nightshift12.mjs": "d524980e30e091100cfe1f03c067b6cfd71fd67505caa2d12f6e3dd550329d6f",
-    "games/nightshift-v12/host.json": "fcb05d0a2e9dff3214a12fada744353614c6fe81a7d3bc96ff6426c35372dc3c"
+    "host/nightshift12.mjs": "e686f1c76b5f7f4d3b61efd40f2986ed3d7cd505368b30e71d8c7b17cd072e6c",
+    "games/nightshift-v12/host.json": "fcb05d0a2e9dff3214a12fada744353614c6fe81a7d3bc96ff6426c35372dc3c",
+    "host/career-migration.mjs": "47105e2899ea4e679712e3824a8c5ea75d1087b4482399887c7b61af52d5620d"
   }
 }

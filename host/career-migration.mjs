@@ -3,7 +3,7 @@ import path from 'node:path';
 
 // Serializes the transition per authenticated account. An unfinished event
 // stays on its exact V8 executor until finished or explicitly replaced.
-export function careerMigration({runtimeUrl,legacyUrl,legacyDataDir,fetchImpl=fetch,legacyFetch=fetchImpl,migrationPath='migrate-v8',hasLegacy=account=>existsSync(path.join(legacyDataDir,account+'-drift-run','active'))}){
+export function careerMigration({runtimeUrl,legacyUrl,legacyDataDir,fetchImpl=fetch,legacyFetch=fetchImpl,migrationPath='migrate-v8',hasCurrent=()=>true,hasLegacy=account=>existsSync(path.join(legacyDataDir,account+'-drift-run','active'))}){
  const queues=new Map(),resolved=new Set();
  async function dispatch(url,options){
   const account=options.headers['X-UTXOPlay-Account'];
@@ -11,9 +11,14 @@ export function careerMigration({runtimeUrl,legacyUrl,legacyDataDir,fetchImpl=fe
   const suffix=new URL(url).pathname,legacy=legacyUrl+suffix;
   if(resolved.has(account))return fetchImpl(url,options);
   const read=async base=>{const r=await (base===legacyUrl?legacyFetch:fetchImpl)(base+'/drift-run/api/state',{headers:options.headers,signal:options.signal});if(!r.ok)throw Error('Career state unavailable');return r.json();};
+  // Probe filesystem receipts before opening a RocksDB in every rule generation.
+  // An unfinished old race does not need an empty current/intermediate session.
+  const action=options.body?JSON.parse(options.body):null;
+  if(!hasLegacy(account)){resolved.add(account);return fetchImpl(url,options);}
+  if(!hasCurrent(account)&&action?.action?.type!=='race')return legacyFetch(legacy,options);
   const current=await read(runtimeUrl);
   if(current.session.career_migrated||current.session.actions>0||!hasLegacy(account)){resolved.add(account);return fetchImpl(url,options);}
-  const old=await read(legacyUrl),action=options.body?JSON.parse(options.body):null,playing=old.game.tick>0&&!old.game.over;
+  const old=await read(legacyUrl),playing=old.game.tick>0&&!old.game.over;
   if(playing&&action?.action?.type!=='race'||action?.action?.type==='ticks')return legacyFetch(legacy,options);
   if(action?.action&&(action.session_id!==old.session.id||action.expected_block!==old.session.block_hash))return Response.json({error:'Stale session. Refresh and try again.'},{status:409});
   const response=await legacyFetch(legacyUrl+'/drift-run/api/export',{headers:options.headers,signal:options.signal});if(!response.ok)throw Error('Previous signed career unavailable');
