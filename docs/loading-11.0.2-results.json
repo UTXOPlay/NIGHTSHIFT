@@ -1,0 +1,734 @@
+{
+  "version": "11.0.2",
+  "runtimeCommit": "3ceb9f30159de2503e04b1ed671298b602fb7088",
+  "platformCommit": "52eca5b6f5cdd08724c4a175fa658020f2989fca",
+  "productionUrl": "https://store.utxoplay.io/games/nightshift/",
+  "source": {
+    "version": "11.0.2",
+    "commit": "3ceb9f30159de2503e04b1ed671298b602fb7088",
+    "baseCommit": "0d80af94cdff2ff2a9a664177e1724f3a80beb6e",
+    "overlayFiles": [
+      "deploy/release-loading.py",
+      "deploy/verify-loading.py",
+      "docs/loading-11.0.2.md",
+      "docs/release-integrity.json",
+      "games/arcade/web/nightshift-asset-url.mjs",
+      "games/arcade/web/nightshift11-fleet.mjs",
+      "games/arcade/web/nightshift9-audio.mjs",
+      "games/arcade/web/nightshift9-renderer.mjs",
+      "games/nightshift-v9/web/app.js",
+      "games/nightshift-v9/web/index.html",
+      "host/static.mjs",
+      "host/static-fingerprint.test.mjs",
+      "package.json",
+      "package-lock.json",
+      "public/game-loader.js",
+      "tools/build-nightshift-v9.mjs",
+      "tools/check-release.mjs",
+      "tools/prepare-fleet-cache.mjs",
+      "tools/prepare-authored-lossless.py",
+      "tools/nightshift11-loading-review.mjs",
+      "tests/fixtures/fleet-v11.json",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/audi-tt-hero.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/audi-tt-race.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/bmw-320i-hero.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/bmw-320i-race.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/car-0.webp",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/car-1.webp",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/car-2.webp",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/car-3.webp",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/car-4.webp",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/car-5.webp",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/concept-authored.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/concept-v11-race.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/nissan-s14-hero.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/nissan-s14-race.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/porsche-911-gt3-hero.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/porsche-911-gt3-race.glb",
+      "games/arcade/web/art/nightshift/fleet-ready-v11/provenance.json"
+    ],
+    "overlaySha256": "9c100d80f29f47f30f977926829d3a4bc02403311d27a4d27adeebf6209a5405",
+    "nativeProfile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455",
+    "activeCheckoutAndIndexUntouched": true,
+    "baselineArchives": {
+      "base-source.tgz": "26c9aff7c82b4fcf94ad48ee50a47231cf0ec5c5a177eb76145c17b3c93c83ce",
+      "base-final-delta.tgz": "afccb4b2cb3c516377a15ff42efb85a4661cfb2a3670590d062a6479b67a7bea",
+      "base-menu-overlay.tgz": "5315c581d8e8e14d7db065813d01589c1ae806d9752b9d05d087130449390626",
+      "base-evidence.tgz": "42cee7c41b51d6be571d0d0a0e85a7498fbbc23af262ded1706faba163802f33"
+    },
+    "priorRuntimeCommit": "df9a6d189a36e94bcc4815d899b5eca93bc4519a"
+  },
+  "baselineVersion": "11.0.1",
+  "baselineLoading": [
+    {
+      "case": "desktop-cold",
+      "playableSeconds": 61.138,
+      "requests": 74,
+      "wireBytes": 25125842,
+      "assetNotificationEndSeconds": 43.997,
+      "afterLastAssetUntilReadySeconds": 16.027,
+      "longTasksTotalMs": 8496,
+      "longestTaskMs": 5093,
+      "JSHeapUsedBytes": 29646428,
+      "errors": []
+    },
+    {
+      "case": "desktop-warm",
+      "playableSeconds": 38.509,
+      "requests": 74,
+      "wireBytes": 25125079,
+      "assetNotificationEndSeconds": 34.73,
+      "afterLastAssetUntilReadySeconds": 2.845,
+      "longTasksTotalMs": 2515,
+      "longestTaskMs": 1451,
+      "JSHeapUsedBytes": 52869384,
+      "errors": []
+    },
+    {
+      "case": "mobile-4mbps-cold",
+      "playableSeconds": 60.564,
+      "requests": 74,
+      "wireBytes": 25125761,
+      "assetNotificationEndSeconds": 53.723,
+      "afterLastAssetUntilReadySeconds": 5.84,
+      "longTasksTotalMs": 9018,
+      "longestTaskMs": 4522,
+      "JSHeapUsedBytes": 19321776,
+      "errors": []
+    },
+    {
+      "case": "mobile-4mbps-warm",
+      "playableSeconds": 54.894,
+      "requests": 74,
+      "wireBytes": 25125313,
+      "assetNotificationEndSeconds": 51.614,
+      "afterLastAssetUntilReadySeconds": 2.388,
+      "longTasksTotalMs": 3036,
+      "longestTaskMs": 1839,
+      "JSHeapUsedBytes": 19240740,
+      "errors": []
+    }
+  ],
+  "publicLoading": [
+    {
+      "run": "public-real-network",
+      "case": "desktop-cold",
+      "playableSeconds": 77.556,
+      "completedInitialWireBytes": 10329701,
+      "resourceRequests": 46,
+      "errors": [],
+      "nonFatalMediaAborts": [],
+      "throttle": null,
+      "programs": 25,
+      "geometries": 39,
+      "textures": 22
+    },
+    {
+      "run": "public-real-network",
+      "case": "desktop-warm",
+      "playableSeconds": 2.521,
+      "completedInitialWireBytes": 6474,
+      "resourceRequests": 46,
+      "errors": [],
+      "nonFatalMediaAborts": [],
+      "throttle": null,
+      "programs": 25,
+      "geometries": 39,
+      "textures": 22
+    },
+    {
+      "run": "public-real-network",
+      "case": "mobile-4mbps-cold",
+      "playableSeconds": 45.699,
+      "completedInitialWireBytes": 10329575,
+      "resourceRequests": 46,
+      "errors": [],
+      "nonFatalMediaAborts": [],
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "programs": 25,
+      "geometries": 39,
+      "textures": 22
+    },
+    {
+      "run": "public-second-pass",
+      "case": "first-race-cold",
+      "playableSeconds": 17.817,
+      "completedInitialWireBytes": 10329780,
+      "resourceRequests": 46,
+      "errors": [],
+      "nonFatalMediaAborts": [
+        {
+          "path": "/games/nightshift/_arcade/audio/nightshift/nightdrive.ogg",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "throttle": null,
+      "programs": 25,
+      "geometries": 39,
+      "textures": 22,
+      "firstRaceAfterMenuSeconds": 25.16470605300001,
+      "navigationUntilRaceSeconds": 44.009441960000004,
+      "additionalRaceWireBytes": 10979556,
+      "observedBodyBytesUntilRace": 21278738,
+      "audioAtRaceStart": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 4,
+        "errors": [],
+        "voices": 1,
+        "music": {
+          "playing": true,
+          "level": 0.0015946197090670466
+        },
+        "started": 4,
+        "cues": 0,
+        "mix": {
+          "speed": 0.4192,
+          "load": 0.8400000000000001,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.022222222222222223
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.01395505852997303,
+          "tyres": 0,
+          "wind": 0.0005391081213019788,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "run": "public-second-pass",
+      "case": "mobile-4mbps-cold",
+      "playableSeconds": 32.038,
+      "completedInitialWireBytes": 10329361,
+      "resourceRequests": 46,
+      "errors": [],
+      "nonFatalMediaAborts": [],
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "programs": 25,
+      "geometries": 39,
+      "textures": 22
+    },
+    {
+      "run": "public-second-pass",
+      "case": "mobile-4mbps-warm",
+      "playableSeconds": 3.316,
+      "completedInitialWireBytes": 6476,
+      "resourceRequests": 46,
+      "errors": [],
+      "nonFatalMediaAborts": [],
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "programs": 25,
+      "geometries": 39,
+      "textures": 22
+    }
+  ],
+  "publicPerformance": {
+    "rendererName": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+    "gpuMedianMs": 10.517447,
+    "mode": 0,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "touch": false,
+    "wallSeconds": 20.034140955,
+    "simulationSeconds": 20.033333333333335,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 2.2,
+    "scales": [
+      1
+    ],
+    "drawCalls": [
+      96,
+      298
+    ],
+    "maxTriangles": 533825,
+    "errors": []
+  },
+  "tests": {
+    "gameAndHostPassed": 123,
+    "productionCompatibleGatewayPassed": 12,
+    "publicBaselineTransportPassed": 8,
+    "runtimeCi": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41004626868",
+    "runtimeCiPassed": true,
+    "publicBaselineExceptions": {
+      "unrelatedFailures": [
+        "curated listings identify independent game sources and presentation metadata",
+        "catalog distinguishes original developers, ports and the publisher, and supports creator search",
+        "creator collections use wallet identity and do not merge unknown or cross-publisher developer claims",
+        "creator role navigation follows the same identity without crossing publisher claims"
+      ],
+      "sameFailuresOnUnmodifiedBaseline": true,
+      "note": "These catalog/UI expectations predate the separately published NIGHTSHIFT repository and current publisher metadata; transport-targeted suites pass."
+    }
+  },
+  "stagingAcceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation",
+      "Return is hidden during driving, saves from pause and resumes the same signed race"
+    ],
+    "errors": [],
+    "profile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455",
+    "finishSeconds": 226.03333333333333,
+    "attempts": 1,
+    "credits": 457
+  },
+  "stagingMenus": {
+    "checks": [
+      "All required landscape/large layouts keep fixed navigation, readable choices, viewport clipping and bounded backing pixels",
+      "Native upgrade, exact debit and usable focus survive asynchronous menu rebuilding",
+      "Settings separate controls/display/archive, preserve preference changes and return focus",
+      "Menu browsing never starts or advances a race; earned career still verifies",
+      "Trusted touch scroll reaches more events and portrait remains gated",
+      "Branded return reaches UTXOPlay and the signed career survives re-entry"
+    ],
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      }
+    ],
+    "errors": [],
+    "physicalPhone": false
+  },
+  "stagingLoading": {
+    "initialRequests": 46,
+    "deferredHeroAndCombat": true,
+    "uniqueRaceBodies": 5,
+    "staticThumbnails": true,
+    "detailedCarsSourceGeometry": [
+      {
+        "n": 0,
+        "bounds": {
+          "min": [
+            -1.059999942779541,
+            0,
+            -1.9756698608398438
+          ],
+          "max": [
+            1.059999942779541,
+            1.0397032542194324,
+            1.9756698608398438
+          ],
+          "size": [
+            2.119999885559082,
+            1.0397032542194324,
+            3.9513397216796875
+          ]
+        },
+        "contacts": [
+          0.016563580371439457,
+          0.01570283342152834,
+          0,
+          0.017756059765815735
+        ]
+      },
+      {
+        "n": 1,
+        "bounds": {
+          "min": [
+            -0.9050422310829163,
+            0,
+            -2.140582323074341
+          ],
+          "max": [
+            0.9050422310829163,
+            1.2245597635628656,
+            2.1428675651550293
+          ],
+          "size": [
+            1.8100844621658325,
+            1.2245597635628656,
+            4.28344988822937
+          ]
+        },
+        "contacts": [
+          0.1679755002260208,
+          0.1679755002260208,
+          0.6753606796264648,
+          0.6753606796264648
+        ]
+      },
+      {
+        "n": 2,
+        "bounds": {
+          "min": [
+            -0.9555545449256897,
+            0,
+            -2.1400856971740723
+          ],
+          "max": [
+            0.9555546045303345,
+            1.3599801347590983,
+            2.1399998664855957
+          ],
+          "size": [
+            1.9111091494560242,
+            1.3599801347590983,
+            4.280085563659668
+          ]
+        },
+        "contacts": [
+          2.9802322387695312e-08,
+          0,
+          2.9802322387695312e-08,
+          0
+        ]
+      },
+      {
+        "n": 3,
+        "bounds": {
+          "min": [
+            -1.022907018661499,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228371620178223,
+            1.2393398215062916,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457441806793213,
+            1.2393398215062916,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0.14497125148773193,
+          0.14497125148773193,
+          0.0015800893306732178,
+          0
+        ]
+      },
+      {
+        "n": 4,
+        "bounds": {
+          "min": [
+            -1.0469425916671753,
+            0,
+            -2.1452722549438477
+          ],
+          "max": [
+            1.0469425916671753,
+            1.3631548082921654,
+            2.141364812850952
+          ],
+          "size": [
+            2.0938851833343506,
+            1.3631548082921654,
+            4.2866370677948
+          ]
+        },
+        "contacts": [
+          5.364418029785156e-07,
+          0,
+          0,
+          5.364418029785156e-07
+        ]
+      },
+      {
+        "n": 5,
+        "bounds": {
+          "min": [
+            -1.022907018661499,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228371620178223,
+            1.2393398215062916,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457441806793213,
+            1.2393398215062916,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0.14497125148773193,
+          0.14497125148773193,
+          0.0015800893306732178,
+          0
+        ]
+      }
+    ],
+    "firstRaceAssetsReady": true,
+    "rotationDuringPreparationCancelsStart": true,
+    "nativeReplay": true,
+    "errors": []
+  },
+  "authoredTextureProof": {
+    "sourceBytes": 6047532,
+    "preparedBytes": 5300584,
+    "images": 14,
+    "allDecodedRgbaBytesIdentical": true,
+    "imageBytes": [
+      [
+        358161,
+        223392
+      ],
+      [
+        1567628,
+        1352446
+      ],
+      [
+        106027,
+        64472
+      ],
+      [
+        46314,
+        36868
+      ],
+      [
+        8177,
+        6666
+      ],
+      [
+        240363,
+        117658
+      ],
+      [
+        3528,
+        3156
+      ],
+      [
+        198,
+        120
+      ],
+      [
+        31201,
+        25064
+      ],
+      [
+        475684,
+        294240
+      ],
+      [
+        23370,
+        6030
+      ],
+      [
+        53752,
+        37500
+      ],
+      [
+        8500,
+        6536
+      ],
+      [
+        343,
+        272
+      ]
+    ]
+  },
+  "geometryProof": {
+    "description": "Lossless geometry/material-attribute baking with the same cook function previously run in the browser. Source licenses are unchanged.",
+    "assets": [
+      {
+        "name": "concept-v11-race.glb",
+        "bytes": 690400,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "nissan-s14-race.glb",
+        "bytes": 758760,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "nissan-s14-hero.glb",
+        "bytes": 2850312,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "bmw-320i-race.glb",
+        "bytes": 754912,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "bmw-320i-hero.glb",
+        "bytes": 1867588,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "porsche-911-gt3-race.glb",
+        "bytes": 988080,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "porsche-911-gt3-hero.glb",
+        "bytes": 3814960,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "audi-tt-race.glb",
+        "bytes": 772580,
+        "maxAttributeDelta": 0
+      },
+      {
+        "name": "audi-tt-hero.glb",
+        "bytes": 3749092,
+        "maxAttributeDelta": 0
+      }
+    ]
+  },
+  "deployment": {
+    "version": "11.0.2",
+    "gameImage": "sha256:35d08e5ffa08d8ce127d04a60c17cb7756a5dd054530ee1d4777e80c0adcdc59",
+    "storeImage": "sha256:df4143c964e436e13d363a954ff34e585bab523b0f03efbaf5d6cfa250d7f8bc",
+    "otherCatalogEntriesPreserved": true,
+    "nativeVolumesPreserved": true
+  },
+  "configurationVerification": {
+    "version": "11.0.2",
+    "checks": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:35d08e5ffa08d8ce127d04a60c17cb7756a5dd054530ee1d4777e80c0adcdc59"
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "environmentPreserved": true,
+        "mountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:df4143c964e436e13d363a954ff34e585bab523b0f03efbaf5d6cfa250d7f8bc"
+      }
+    },
+    "nativeBinariesUnchanged": true,
+    "otherCatalogEntriesPreserved": true
+  },
+  "publicFiles": {
+    "version": "11.0.2",
+    "browserFiles": 160,
+    "servedBytesMatch": true,
+    "verifiedTlsGateway": true
+  },
+  "publicTransport": [
+    {
+      "phase": "first",
+      "status": 200,
+      "bytes": 89138,
+      "encoding": "br",
+      "cache": "public, max-age=31536000, immutable",
+      "vary": "Accept-Encoding"
+    },
+    {
+      "phase": "conditional",
+      "status": 304,
+      "bytes": 0,
+      "encoding": null,
+      "cache": "public, max-age=31536000, immutable",
+      "vary": "Accept-Encoding"
+    },
+    {
+      "phase": "wrong",
+      "status": 404,
+      "bytes": 34,
+      "encoding": null,
+      "cache": null,
+      "vary": "Accept-Encoding"
+    }
+  ],
+  "careerCanary": {
+    "completeSavedStateUnchanged": true,
+    "ticksBefore": 3,
+    "ticksAfter": 6,
+    "nativeReplay": true,
+    "loggedOut": true,
+    "profile": "f51f714c84fa8422d007ea13ed3dc5adb56ce670ae9b09325748318c5e822455"
+  },
+  "catalog": {
+    "catalogCommit": "1268acd1b6796087b556c327e152f835ae39b6a5",
+    "version": "11.0.2",
+    "onlyNightshiftVersionChanged": true,
+    "parentIndexAndHeadUntouched": true
+  },
+  "limitations": [
+    "Real-network loading uses the configured client HTTPS proxy, actual public origin resources and fresh browser contexts. Touch/network/CPU conditions are emulated, not physical phone measurements.",
+    "The first public measurement run was interrupted after three completed cases because the SSH deployment connection had disconnected. Fresh inspection confirmed cutover had completed and both services were healthy; completed slow measurements are retained.",
+    "Desktop cold visits varied from 17.817 to 77.556 seconds. This is substantial variance, not a p95 or a stable speed guarantee. Downloading remains a bottleneck.",
+    "The client/server clock skew is about eight hours. New fingerprinted immutable resources remain fresh; do not generalize old one-hour-cache repeat timing to synchronized clients. Conditional 304 and decoded/encoded bytes were checked independently.",
+    "First-race timing includes the deferred car/combat preparation and countdown. It is reported to avoid hiding work behind an early menu. Optional media can abort/reissue streaming ranges; those events are retained separately from page/asset errors.",
+    "Runtime FPS uses verified cached assets and real native API on Intel Iris Xe. It measures one 20-second auto-quality Harbour case, not cold-network startup or all-map/device performance.",
+    "Four catalog/UI tests fail identically on the unmodified public platform baseline. They are recorded separately from the passing transport suites; publisher and discovery semantics were not changed."
+  ],
+  "cleanup": {
+    "stagingContainersRemoved": 2,
+    "isolatedDataDirectoriesRemoved": 5,
+    "productionAndRollbackDataPreserved": true
+  },
+  "workingPlatformRegression": "Passed tests/game-gateway.test.mjs, tests/private-games.test.mjs and tests/browser-game.test.mjs after applying only the guarded transport hunks."
+}
