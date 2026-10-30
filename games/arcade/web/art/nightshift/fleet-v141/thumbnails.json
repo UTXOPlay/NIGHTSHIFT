@@ -1,0 +1,10 @@
+{
+  "version": "14.1.0",
+  "source": "Actual six runtime vehicles with authored UVs and rebuilt physical tire sites; transparent WebGL captures.",
+  "dimensions": [
+    512,
+    256
+  ],
+  "count": 6,
+  "errors": []
+}

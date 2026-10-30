@@ -1,0 +1,17 @@
+{
+  "version": "14.1.0",
+  "rulesVersion": 14,
+  "generatedAsset": "games/arcade/web/art/nightshift/harbour-facades-v141.webp",
+  "generator": "Built-in image_gen tool",
+  "generatedSource": "/home/arthur/.codex/generated_images/01a17b5f-f621-77a2-aa7e-b6ab45fa4c3f/exec-69ed3bef-b43d-41cb-93d9-f8b15bf51431.png",
+  "sourceCopy": "artifacts/presentation-v141/imagegen/harbour-facades.png",
+  "runtimePreparation": "Resize to 2048 x 1024 and encode WebP quality 92. Eight elevations in a 4 x 2 atlas. One shared instanced material; other route facade atlases remain deferred until those routes need them.",
+  "prompt": "Use case: stylized-concept. Asset type: production base-color texture atlas for NIGHTSHIFT, a polished lightweight 3D browser racing game. Generate a single 2048x1024 image divided into EXACTLY 4 equal columns and 2 equal rows, eight square texture tiles, no gutters or borders. Each square is a DIFFERENT orthographic front elevation module of a two-storey harbour logistics building, suitable to wrap around a 3D warehouse: 1 aged red-brick freight depot with steel loading shutter and upper steel-framed windows; 2 pale concrete cold-storage loading dock with insulated panel door and blue-gray upper windows; 3 dark charcoal corrugated distribution warehouse with roll-up cargo doors and skylight strip; 4 cream limestone harbour dispatch office with small entrance and rows of dark windows; 5 weathered galvanized maritime workshop with broad sliding steel door and upper clerestory; 6 muted teal-painted concrete relay service building with louver vents and small glazed entry; 7 warm brown brick shipping office with broad ground-floor glazing and upper windows; 8 light gray precast ferry maintenance hall with ribbed loading bays and upper windows. Each facade fills its square exactly, no sky, no ground plane, no people, no vehicles, no signs, no words, no logos, no shadows cast from unrelated objects. PBR albedo style, neutral overcast illumination without baked directional lighting, refined plausible physical material detail, subtle weather streaks, restrained color variation, crisp door frames and seals, individual wall panels, dark window glass without bright reflections. Front-on parallel geometry with vertical/horizontal edges, no perspective, no 3D building corners, no illustration border. Different silhouettes inside each facade module, useful fine texture at racing distance, coherent premium realistic game art. Tile edges should be plain continuous wall structure so repeated modules do not expose black borders.",
+  "vehicleAssets": {
+    "source": "Published, credited fleet-v11 and fleet-v131 GLBs. No new external model license introduced.",
+    "output": ["games/arcade/web/art/nightshift/fleet-ready-v141", "games/arcade/web/art/nightshift/fleet-v141"],
+    "surfacePreparation": "Retain original UVs and texture sampling, one material batch per body/wheel, explicit lamp masks and brake response. Correct tire pivots using actual tire geometry instead of the previously mislabeled source wheel nodes.",
+    "vantaPreparation": "Prune unused intermediate accessors and unreferenced images. Preserve every referenced texture byte stream, triangle count and named hierarchy. No texture downsampling or geometry simplification."
+  },
+  "compatibility": "Published V14 native rules and V8-V14 profiles remain frozen. This pass changes presentation and asset delivery only. Myelin remains off-chain host replay; multiplayer implementation is excluded."
+}

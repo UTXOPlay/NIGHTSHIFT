@@ -1,0 +1,194 @@
+{
+  "version": "14.1.0",
+  "status": "local-accepted-public-validation-pending",
+  "rulesVersion": 14,
+  "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+  "nativeRulesUnchanged": true,
+  "nodeChecks": {
+    "passed": 162,
+    "failed": 0
+  },
+  "fleet": {
+    "renders": 34,
+    "physicalTiresVerified": true,
+    "motion": [
+      {
+        "vehicle": 0,
+        "releasedRed": 71145,
+        "pressedRed": 66349,
+        "lensPixels": 676,
+        "lensBrightnessGain": 50411,
+        "brake": 3.6999999999979254,
+        "rotations": [
+          0.5530676894199182,
+          0.5476718467960003,
+          0.5281299522457494,
+          0.548090788011887
+        ],
+        "glError": 0
+      },
+      {
+        "vehicle": 1,
+        "releasedRed": 3062956,
+        "pressedRed": 3095571,
+        "lensPixels": 51700,
+        "lensBrightnessGain": 346235,
+        "brake": 0.9999999999993086,
+        "rotations": [
+          0.5718748900647876,
+          0.5718748900647876,
+          0.5718746941100598,
+          0.5718746941100598
+        ],
+        "glError": 0
+      },
+      {
+        "vehicle": 2,
+        "releasedRed": 185524,
+        "pressedRed": 185257,
+        "lensPixels": 1981,
+        "lensBrightnessGain": 160935,
+        "brake": 0.9999999999993086,
+        "rotations": [
+          0.5996997771559229,
+          0.5996997771559229,
+          0.5997000915771198,
+          0.5997000915771198
+        ],
+        "glError": 0
+      },
+      {
+        "vehicle": 3,
+        "releasedRed": 526135,
+        "pressedRed": 566947,
+        "lensPixels": 2166,
+        "lensBrightnessGain": 181510,
+        "brake": 0.9999999999993086,
+        "rotations": [
+          0.4822782834956675,
+          0.5347385745341653,
+          0.5352084420371213,
+          0.4843095225533295
+        ],
+        "glError": 0
+      },
+      {
+        "vehicle": 4,
+        "releasedRed": 318079,
+        "pressedRed": 369863,
+        "lensPixels": 3312,
+        "lensBrightnessGain": 324471,
+        "brake": 0.9999999999993086,
+        "rotations": [
+          0.49015902312747517,
+          0.4901589445379051,
+          0.4901589445379051,
+          0.49015902312747517
+        ],
+        "glError": 0
+      },
+      {
+        "vehicle": 5,
+        "releasedRed": 508666,
+        "pressedRed": 549445,
+        "lensPixels": 2836,
+        "lensBrightnessGain": 181726,
+        "brake": 0.9999999999993086,
+        "rotations": [
+          0.4822782834956675,
+          0.5347385745341653,
+          0.5352084420371213,
+          0.4843095225533295
+        ],
+        "glError": 0
+      }
+    ],
+    "errors": []
+  },
+  "browser": {
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": 5,
+    "cars": 6,
+    "errors": [],
+    "physicalDevices": false
+  },
+  "localLoading": [
+    {
+      "label": "mobile-4mbps-cold",
+      "transport": "Local origin without asset substitution. Network/CPU limits emulate a device; they do not establish worldwide or physical-device performance.",
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "navigationUntilRaceSeconds": 32.019022883000005,
+      "firstRaceAfterMenuSeconds": 29.006848797000004,
+      "wireBytesUntilRace": 8784238,
+      "errors": []
+    },
+    {
+      "label": "first-race-cold",
+      "transport": "Local origin without asset substitution. Network/CPU limits emulate a device; they do not establish worldwide or physical-device performance.",
+      "throttle": null,
+      "navigationUntilRaceSeconds": 5.399481622,
+      "firstRaceAfterMenuSeconds": 3.171339181000003,
+      "wireBytesUntilRace": 7513278,
+      "errors": []
+    }
+  ],
+  "vanta": {
+    "description": "Pruned unused intermediate accessors and unreferenced image streams, then Meshopt re-encoded the published authored source. Every referenced texture image byte stream, triangle count and named hierarchy is retained; bounds differ by less than one millimetre.",
+    "assets": [
+      {
+        "source": "games/arcade/web/art/nightshift/fleet-v131/concept.glb",
+        "output": "games/arcade/web/art/nightshift/fleet-v141/concept.glb",
+        "sourceSha256": "c2f560049e3575530265e78f86bb7819f23a8c24fb803dee8084cb326511288e",
+        "outputSha256": "0d45aab7f0c30d1624af1afa37f6af9fa9a5754db531d9f7090f39e68363aab3",
+        "sourceBytes": 3301716,
+        "bytes": 1986660,
+        "triangles": 61597,
+        "textureStreams": 13,
+        "texturesByteIdentical": true,
+        "maxBoundsDelta": 0
+      },
+      {
+        "source": "games/arcade/web/art/nightshift/fleet-v131/concept-race.glb",
+        "output": "games/arcade/web/art/nightshift/fleet-v141/concept-race.glb",
+        "sourceSha256": "5f187a2d0e7754b810b2f40038a2fa17a2ed8961b7645eda5106e00e310165f8",
+        "outputSha256": "341974fcc28d17b9ff4c14f74b31c2f2fd0174c2b89818ab97fbd3ddf65ebe86",
+        "sourceBytes": 1757172,
+        "bytes": 952200,
+        "triangles": 41643,
+        "textureStreams": 13,
+        "texturesByteIdentical": true,
+        "maxBoundsDelta": 0
+      }
+    ]
+  },
+  "fullGoalComplete": false,
+  "remainingRequiredAreas": [
+    "All-route near scenery, streetlights, material/lighting and terrain/sky coherence",
+    "Meaningful route branches/decisions and event-transition polish; new topology/contact rules need a new profile",
+    "Vehicle-specific audio identity and stronger opponent gadget variety",
+    "First-drive startup latency, especially limited mobile network/CPU",
+    "Animated near traffic/rival wheels and remaining vehicle/collision-envelope coherence",
+    "Physical device, all-route sustained runs and human difficulty/economy evidence",
+    "Final requirement-by-requirement completion audit"
+  ],
+  "retainedHarnessCorrections": [
+    "A standalone local host has no Store wallet-auth endpoint; its attempted authentication returned 404 before a case ran. The complete local suite then used the intended standalone guest path.",
+    "Rear-lens red excess is not a brightness metric under AgX because bright red emission desaturates. The check measures positive brightness change in the released red-lens pixels.",
+    "A 2 m observation can coincide with one complete wheel revolution. The motion window is 0.7 m, away from a full revolution across the accepted tire radii."
+  ]
+}

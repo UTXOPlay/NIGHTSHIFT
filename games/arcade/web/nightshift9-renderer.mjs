@@ -26,7 +26,7 @@ const mat=(color,roughness=.6,metalness=.1)=>new T.MeshStandardMaterial({color,r
 function glowTexture(){const c=document.createElement('canvas');c.width=c.height=64;const x=c.getContext('2d'),g=x.createRadialGradient(32,32,0,32,32,32);g.addColorStop(0,'#ffffff');g.addColorStop(.18,'#ffffffb0');g.addColorStop(1,'#ffffff00');x.fillStyle=g;x.fillRect(0,0,64,64);return new T.CanvasTexture(c);}
 export class DriftRenderer{
  constructor(canvas,{alpha=false}={}){
-  this.previewMode=false;this.mapMode=null;this.thumbnails=Array.from({length:6},(_,n)=>assetURL('/arcade/art/nightshift/fleet-v131/car-'+n+'.webp'));
+  this.previewMode=false;this.mapMode=null;this.thumbnails=Array.from({length:6},(_,n)=>assetURL('/arcade/art/nightshift/fleet-v141/car-'+n+'.webp'));
   this.canvas=canvas;this.ready=false;this.disposed=false;this.preparedModes=new Set();this.assetErrors=[];this.renderer=new T.WebGLRenderer({canvas,alpha,antialias:true,powerPreference:'high-performance'});this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.AgXToneMapping;this.renderer.toneMappingExposure=1;this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=T.PCFSoftShadowMap;this.renderer.shadowMap.autoUpdate=false;this.shadowFrame=0;this.gpu=new GpuTimer(this.renderer);this.post=new CircuitPost(this.renderer);
   this.renderer.info.autoReset=false;this.scene=new T.Scene();this.scene.matrixAutoUpdate=false;this.scene.background=new T.Color('#182d40');this.scene.fog=new T.Fog('#172c3b',80,360);this.camera=new T.PerspectiveCamera(56,1,.1,900);this.camera.position.set(0,4.7,10.8);this.camera.lookAt(0,.7,-22);
   this.chase=new ChaseCamera();this.coastTime=0;this.coastDistance=0;
@@ -80,7 +80,7 @@ export class DriftRenderer{
   const [atlas]=await Promise.all([loader.loadAsync('/arcade/art/nightshift/materials-v131.webp'),this.world.load(loader,mode),this.lighting.load(loader),this.installFleet(vehicle),surfaceTask,probeTask,backdropTask]);
 
   atlas.colorSpace=T.SRGBColorSpace;atlas.anisotropy=Math.min(4,this.renderer.capabilities.getMaxAnisotropy());
-  this.thumbnails=Array.from({length:6},(_,n)=>assetURL('/arcade/art/nightshift/fleet-v131/car-'+n+'.webp'));
+  this.thumbnails=Array.from({length:6},(_,n)=>assetURL('/arcade/art/nightshift/fleet-v141/car-'+n+'.webp'));
   for(const [m,ox,oy,repeat]of [[this.concrete,.5,.5,2],[this.buildingMat,0,0,1],[this.metalMat,.5,0,1]]){m.map=atlas;m.onBeforeCompile=s=>{s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )',`texture2D( map, vec2(${ox+.001},${oy+.001})+fract(vMapUv*${repeat}.0)*.498 )`));};m.customProgramCacheKey=()=>`atlas-${ox}-${oy}-${repeat}`;m.needsUpdate=true;}
   const wall=this.circuitRoad.wallMaterial;wall.map=atlas;wall.onBeforeCompile=this.concrete.onBeforeCompile;wall.customProgramCacheKey=this.concrete.customProgramCacheKey;wall.needsUpdate=true;
   this.surface=await surfaceTask;this.atmosphere=new StreetAtmosphere(this.renderer,this.scene,this.roadMat);if(this.garageProbe)this.atmosphere.probes[0]=this.garageProbe;this.atmosphere.probes[probeIndex]=await probeTask;this.env=this.atmosphere.probes[0];this.atmosphere.update(mode,false);await backdropTask;this.worldReady=true;this.ready=true;

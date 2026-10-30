@@ -1,0 +1,29 @@
+{
+  "description": "Pruned unused intermediate accessors and unreferenced image streams, then Meshopt re-encoded the published authored source. Every referenced texture image byte stream, triangle count and named hierarchy is retained; bounds differ by less than one millimetre.",
+  "assets": [
+    {
+      "source": "games/arcade/web/art/nightshift/fleet-v131/concept.glb",
+      "output": "games/arcade/web/art/nightshift/fleet-v141/concept.glb",
+      "sourceSha256": "c2f560049e3575530265e78f86bb7819f23a8c24fb803dee8084cb326511288e",
+      "outputSha256": "0d45aab7f0c30d1624af1afa37f6af9fa9a5754db531d9f7090f39e68363aab3",
+      "sourceBytes": 3301716,
+      "bytes": 1986660,
+      "triangles": 61597,
+      "textureStreams": 13,
+      "texturesByteIdentical": true,
+      "maxBoundsDelta": 0
+    },
+    {
+      "source": "games/arcade/web/art/nightshift/fleet-v131/concept-race.glb",
+      "output": "games/arcade/web/art/nightshift/fleet-v141/concept-race.glb",
+      "sourceSha256": "5f187a2d0e7754b810b2f40038a2fa17a2ed8961b7645eda5106e00e310165f8",
+      "outputSha256": "341974fcc28d17b9ff4c14f74b31c2f2fd0174c2b89818ab97fbd3ddf65ebe86",
+      "sourceBytes": 1757172,
+      "bytes": 952200,
+      "triangles": 41643,
+      "textureStreams": 13,
+      "texturesByteIdentical": true,
+      "maxBoundsDelta": 0
+    }
+  ]
+}

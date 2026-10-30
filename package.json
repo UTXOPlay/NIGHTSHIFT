@@ -1,6 +1,6 @@
 {
   "name": "@utxoplay/nightshift",
-  "version": "14.0.0",
+  "version": "14.1.0",
   "private": true,
   "type": "module",
   "description": "NIGHTSHIFT: World Circuit \u2014 solo racing, vehicle progression and signed Myelin replay",
@@ -42,7 +42,9 @@
     "test:tactics": "node tools/nightshift14-tactics-review.mjs",
     "test:controls": "node tools/nightshift14-controls-review.mjs",
     "test:connection": "node tools/nightshift14-connection-review.mjs",
-    "build:native:history": "node tools/build-legacy-runtimes.mjs"
+    "build:native:history": "node tools/build-legacy-runtimes.mjs",
+    "test:fleet": "ALL_CARS=1 node tools/nightshift141-fleet-review.mjs",
+    "test:full-race": "node tools/nightshift141-full-race-review.mjs"
   },
   "dependencies": {
     "express": "5.1.0",

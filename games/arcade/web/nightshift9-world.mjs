@@ -4,6 +4,7 @@ import {facadeAtlas,loadStructureTexture} from './nightshift9-architecture.mjs';
 import {GEO,FACADES,STREET_VARIANTS,buildDistrict,streetVariant} from './nightshift9-streets.mjs';
 import {DISTRICTS,routeSector} from './nightshift9-world-route.mjs';
 import {installCargoPaint} from './nightshift9-industrial.mjs';
+import {harbourFacade} from './nightshift141-harbour.mjs';
 const material=(color,roughness=.65,metalness=.15)=>new T.MeshStandardMaterial({color,roughness,metalness});
 export class RouteWorld{
  constructor(scene){
@@ -17,6 +18,7 @@ export class RouteWorld{
    normal=normalize(normal+mat3(viewMatrix)*vec3(ripples.x*.055,0.,ripples.y*.055));
   `);};this.m.water.customProgramCacheKey=()=>'water-ripples-v96';
   for(const [name] of FACADES)this.m[name]=material('#dce1e5',name==='office'?.4:.82,name==='office'?.12:.02);
+  this.m.harbour=material('#ffffff',.83,.04);
   this.facadeNight={value:1};this.terrainRegion={value:new T.Vector2(0,.5)};for(const name of ['fir','snowFir','scrub','broadleaf'])this.m[name]=new T.MeshStandardMaterial({color:'#ffffff',roughness:.95,metalness:0,side:T.DoubleSide,alphaTest:.4});
   this.templates=Array(12).fill(null);this.modeTasks=new Map();
   this.gateParts=[];for(const s of [-1,1]){this.add(this.gateParts,'steel',s*8.6,4.3,0,.4,8.6,.4);this.add(this.gateParts,'light',s*8.37,4.3,.22,.06,8.5,.06);}this.add(this.gateParts,'steel',0,8.6,0,17.6,.4,.4);
@@ -27,10 +29,10 @@ export class RouteWorld{
   this.current=0;this.sector=0;this.fog=new T.Color();this.light=new T.Color();this.sky=0;this.rain=0;
  }
  add(out,mat,x,y,z,w,h,d,rx=0,ry=0,rz=0,geometry=GEO.box,color='#ffffff'){
-  if(geometry===GEO.box&&w>=4&&h>=3&&d>=3&&FACADES.some(f=>f[0]===mat))geometry=GEO.building;
+  if(geometry===GEO.box&&w>=4&&h>=3&&d>=3&&(mat==='harbour'||FACADES.some(f=>f[0]===mat)))geometry=GEO.building;
   if(FACADES.some(f=>f[0]===mat)&&h>=2&&Math.abs(y-h/2)<.02){y-=.2;h+=.4;}
   const material=this.m[mat],key=geometry.uuid+'/'+material.uuid;if(!this.pools.has(key)){
-   const mesh=new T.InstancedMesh(geometry,material,1600);mesh.matrixAutoUpdate=false;mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);mesh.frustumCulled=false;mesh.count=0;mesh.visible=false;mesh.receiveShadow=true;mesh.castShadow=[...FACADES.map(f=>f[0]),'steel','white','structure','cargoPaint','quay','fir','snowFir','scrub','broadleaf'].some(k=>material===this.m[k]);this.environmentRoot.add(mesh);this.pools.set(key,{geometry,material,index:0,mesh});
+   const mesh=new T.InstancedMesh(geometry,material,1600);mesh.matrixAutoUpdate=false;mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);mesh.frustumCulled=false;mesh.count=0;mesh.visible=false;mesh.receiveShadow=true;mesh.castShadow=[...FACADES.map(f=>f[0]),'harbour','steel','white','structure','cargoPaint','quay','fir','snowFir','scrub','broadleaf'].some(k=>material===this.m[k]);this.environmentRoot.add(mesh);this.pools.set(key,{geometry,material,index:0,mesh});
   }
   this.temp.position.set(x,y,z);this.temp.rotation.set(rx,ry,rz);this.temp.scale.set(w,h,d);this.temp.updateMatrix();out.push({pool:this.pools.get(key),matrix:this.temp.matrix.clone(),color:new T.Color(color),detail:!!geometry.userData.detail,roadAnchor:!!geometry.userData.roadAnchor});
  }
@@ -45,6 +47,8 @@ export class RouteWorld{
  }
  async load(loader,mode=0){
   this.baseTask??=this.loadBase(loader).catch(e=>{this.baseTask=null;throw e;});const tasks=[this.baseTask];
+  if(mode===0){this.harbourTask??=loader.loadAsync('/arcade/art/nightshift/harbour-facades-v141.webp').then(texture=>{texture.colorSpace=T.SRGBColorSpace;texture.anisotropy=4;harbourFacade(this.m.harbour,texture,this.facadeNight);}).catch(e=>{this.harbourTask=null;throw e;});tasks.push(this.harbourTask);}
+  else if(mode!==4){this.facadeTask??=loader.loadAsync('/arcade/art/nightshift/architecture-v131.webp').then(texture=>{texture.colorSpace=T.SRGBColorSpace;texture.anisotropy=4;FACADES.forEach(([key,tile,w,h])=>circuitFacade(this.m[key],texture,tile,w,h,this.facadeNight));}).catch(e=>{this.facadeTask=null;throw e;});tasks.push(this.facadeTask);}
   if([1,2,3,5,6,8,9].includes(mode)){this.foliageTask??=loader.loadAsync('/arcade/art/nightshift/world-foliage-v131.webp').then(async foliage=>{await this.baseTask;foliage.colorSpace=T.SRGBColorSpace;['fir','snowFir','scrub','broadleaf'].forEach((name,n)=>{const t=foliage.clone();t.repeat.set(.498,n<2?.543:.449);t.offset.set((n%2)*.5+.001,n<2?.456:.001);t.needsUpdate=true;this.m[name].map=t;this.m[name].needsUpdate=true;});}).catch(e=>{this.foliageTask=null;throw e;});tasks.push(this.foliageTask);}
   if([1,2,5,6,7,8,9].includes(mode)){this.terrainTask??=loader.loadAsync('/arcade/art/nightshift/world-terrain-v131.webp').then(async terrain=>{await this.baseTask;terrain.colorSpace=T.SRGBColorSpace;terrain.anisotropy=4;
    for(const name of ['ground','stone']){const m=this.m[name];m.map=terrain;m.onBeforeCompile=shader=>{shader.uniforms.terrainRegion=this.terrainRegion;shader.fragmentShader='uniform vec2 terrainRegion;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )','texture2DGradEXT(map,terrainRegion+vec2(.003)+abs(fract(vMapUv*vec2('+(name==='ground'?'28.,4.':'2.,2.')+')*.5)*2.-1.)*.494,dFdx(vMapUv)*vec2('+(name==='ground'?'28.,4.':'2.,2.')+')*.494,dFdy(vMapUv)*vec2('+(name==='ground'?'28.,4.':'2.,2.')+')*.494)'));};m.customProgramCacheKey=()=>'terrain7-'+name;m.needsUpdate=true;}
@@ -52,8 +56,8 @@ export class RouteWorld{
   await Promise.all(tasks);
  }
  async loadBase(loader){
-  const [atlas,facades,structures]=await Promise.all([loader.loadAsync('/arcade/art/nightshift/relay-materials-v131.webp'),loader.loadAsync('/arcade/art/nightshift/architecture-v131.webp'),loadStructureTexture(loader)]);
-  facades.colorSpace=atlas.colorSpace=T.SRGBColorSpace;facades.anisotropy=atlas.anisotropy=4;FACADES.forEach(([key,tile,w,h])=>circuitFacade(this.m[key],facades,tile,w,h,this.facadeNight));
+  const [atlas,structures]=await Promise.all([loader.loadAsync('/arcade/art/nightshift/relay-materials-v131.webp'),loadStructureTexture(loader)]);
+  atlas.colorSpace=T.SRGBColorSpace;atlas.anisotropy=4;
   for(const [key,u,v,repeat]of[['stone',0,.5,2],['cell',.5,.5,2],['cargo',0,0,1],['tunnel',.5,0,2]]){const m=this.m[key];m.map=atlas;m.onBeforeCompile=s=>{s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )','texture2D(map,vec2('+(u+.003)+','+(v+.003)+')+fract(vMapUv*'+repeat+'.0)*.494)'));};m.customProgramCacheKey=()=>'world7-'+key;m.needsUpdate=true;}
   for(const [key,tile]of[['steel',0],['white',1],['tunnel',3],['structure',0],['quay',1]])structureSurface(this.m[key],structures,tile);
   this.m.white.metalness=0;this.m.quay.metalness=0;this.m.structure.roughness=.56;this.m.structure.metalness=.4;
