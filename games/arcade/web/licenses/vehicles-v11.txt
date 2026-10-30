@@ -1,0 +1,27 @@
+NIGHTSHIFT additional vehicle source credits
+
+bmw-320i
+Author: rifdanzz
+Source: https://sketchfab.com/3d-models/28f0bc2f0083417a8e521150529034d6
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+nissan-s14
+Author: Lexyc16
+Source: https://sketchfab.com/3d-models/f2a917a924734a89a020e7f970e55e7c
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+porsche-911-gt3
+Author: ChevroletSS
+Source: https://sketchfab.com/3d-models/78d5c47ab2554c2592b7e499179a0792
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+audi-tt
+Author: razor24
+Source: https://sketchfab.com/3d-models/80cc29628e1b407d8e14d5ae0710f6fe
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+Adaptations: uniformly normalized, reduced geometry with two LODs, wheel pivots, material batching, replacement paint and glass. Source texture colors retained for detail. Fictional vehicle names; no source author endorsement. Sportscar and Car Concept credits remain in vehicles.txt.

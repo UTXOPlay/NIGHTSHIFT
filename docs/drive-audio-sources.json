@@ -1,0 +1,50 @@
+{
+  "conversion": "python3 tools/build-drive-audio.py /path/to/extracted/source-directory",
+  "format": "32000 Hz mono PCM16; peak 0.72; 20 ms crossfade on loops",
+  "sources": [
+    {
+      "name": "engine",
+      "title": "Car Engine Loop 96kHz, 4s",
+      "author": "qubodup",
+      "license": "CC-BY-3.0",
+      "page": "https://opengameart.org/content/car-engine-loop-96khz-4s",
+      "download": "https://opengameart.org/sites/default/files/engine-loop.7z",
+      "originalSha256": "06b14b760fde613b357d043517f604dfde024318e764dff209a179ea39c566d6",
+      "outputSha256": "20f5aa718a1f7c3689df20e05d8aff070a6ae1d05df678fec03353b44ee4d10c"
+    },
+    {
+      "name": "tyres",
+      "title": "Car Tire Skid Squealing",
+      "author": "Mike Koenig (Soundbible), edited by qubodup",
+      "license": "CC-BY-3.0",
+      "page": "https://opengameart.org/content/car-tire-skid-squealing",
+      "download": "https://opengameart.org/sites/default/files/carskid.7z",
+      "originalSha256": "364e5e57e393e44cecec094397691e5e29934e5f74d88251905e698b4dda5e80",
+      "outputSha256": "12610a183bb25edeb1d797cf4c67794efb3e72d30f2d7bc35bdb6330d421c2a6"
+    },
+    {
+      "name": "impact",
+      "title": "Crash Collision",
+      "author": "qubodup",
+      "license": "CC0-1.0",
+      "page": "https://opengameart.org/content/crash-collision",
+      "download": "https://opengameart.org/sites/default/files/qubodup-crash.ogg",
+      "originalSha256": "e468ee00a6c94313cf4efcf347b5f4e51e98e629608be277a8f58feb5e2267ff",
+      "outputSha256": "669b850b7550fa636b6d1a471cc8205ff7a1c71df51b9ceb7c174774794cfad2"
+    }
+  ],
+  "v11": {
+    "engineSport": {
+      "source": "https://opengameart.org/content/racing-car-engine-sound-loops",
+      "author": "domasx2",
+      "license": "CC0",
+      "sha256": "69d74b106509037ce547429e4c3f9ae906b0fffe88d0bb8b3b5a8b0cfc239048"
+    },
+    "music": {
+      "source": "https://opengameart.org/content/chillwave-nightdrive",
+      "author": "Bogart VGM",
+      "license": "CC BY 3.0",
+      "sha256": "4ca063af71124b85fdbfae6736271fe482e9e637c99ad6b4951ccc5d016fda13"
+    }
+  }
+}

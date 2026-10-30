@@ -1,0 +1,23 @@
+{
+  "version": "10.0.1",
+  "checks": {
+    "myelin-nightshift-v8": {
+      "healthy": true,
+      "environmentPreserved": true,
+      "mountsPreserved": true,
+      "securityAndResourcesPreserved": true,
+      "networksPreserved": true,
+      "image": "sha256:6ab15d46a7db8a18a90bf3cf7ccdb3d936387dd589e935ce465a73b7fd7a35ff"
+    },
+    "utxoplay-store": {
+      "healthy": true,
+      "environmentPreserved": true,
+      "mountsPreserved": true,
+      "securityAndResourcesPreserved": true,
+      "networksPreserved": true,
+      "image": "sha256:61fa0e5eae10d6ec478ba35332dce39790ef87c9ded41a57b52053e1e9358740"
+    }
+  },
+  "nativeBinariesUnchanged": true,
+  "otherCatalogEntriesPreserved": true
+}

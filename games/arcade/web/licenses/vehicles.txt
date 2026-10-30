@@ -24,3 +24,5 @@ authors do not endorse NIGHTSHIFT. Vehicle names in the game are fictional.
 The adapted vehicle geometry retains its source license. The game's MIT
 software license does not replace these asset licenses. Full build notes:
 https://github.com/UTXOPlay/NIGHTSHIFT/blob/main/docs/vehicle-assets.md
+
+V11 VANTA update: the Car Concept adaptation retains original PBR texture and normal maps, tinted glass and source wheel geometry in a bounded presentation mesh. Other V11 vehicle sources and adaptations are credited in vehicles-v11.txt.

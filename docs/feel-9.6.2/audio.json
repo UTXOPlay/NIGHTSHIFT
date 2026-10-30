@@ -1,0 +1,155 @@
+{
+  "scope": "Actual Chromium WebAudio decode, output RMS, synthetic native-state mixing, pause/mute and bounded voice stress; not a listening-panel or physical-device test",
+  "decoded": {
+    "snapshot": {
+      "enabled": true,
+      "state": "running",
+      "recordings": 3,
+      "errors": [],
+      "voices": 0,
+      "started": 0,
+      "cues": 0,
+      "mix": {
+        "speed": 0,
+        "load": 0.4,
+        "slip": 0,
+        "boost": 0,
+        "draft": 0
+      },
+      "master": 1,
+      "levels": {
+        "engine": 0,
+        "tyres": 0,
+        "wind": 0,
+        "boost": 0
+      }
+    },
+    "durations": {
+      "tyres": 0.9818958333333333,
+      "impact": 0.5839375,
+      "engine": 3.98
+    },
+    "sources": 4
+  },
+  "cruise": {
+    "enabled": true,
+    "state": "running",
+    "recordings": 3,
+    "errors": [],
+    "voices": 0,
+    "started": 0,
+    "cues": 0,
+    "mix": {
+      "speed": 0.72,
+      "load": 0.4,
+      "slip": 0,
+      "boost": 0,
+      "draft": 0
+    },
+    "master": 1,
+    "levels": {
+      "engine": 0.11178728193044662,
+      "tyres": 0,
+      "wind": 0.030948162078857422,
+      "boost": 0
+    },
+    "rms": 0.04774525897303641
+  },
+  "boost": {
+    "enabled": true,
+    "state": "running",
+    "recordings": 3,
+    "errors": [],
+    "voices": 0,
+    "started": 3,
+    "cues": 3,
+    "mix": {
+      "speed": 1,
+      "load": 0.9500000000000001,
+      "slip": 0.9411764705882353,
+      "boost": 1,
+      "draft": 0
+    },
+    "master": 1,
+    "levels": {
+      "engine": 0.15545696020126343,
+      "tyres": 0.09396117180585861,
+      "wind": 0.059141017496585846,
+      "boost": 0.15999269485473633
+    }
+  },
+  "paused": {
+    "enabled": true,
+    "state": "running",
+    "recordings": 3,
+    "errors": [],
+    "voices": 0,
+    "started": 4,
+    "cues": 3,
+    "mix": {
+      "speed": 1,
+      "load": 0.9500000000000001,
+      "slip": 0.9411764705882353,
+      "boost": 1,
+      "draft": 0
+    },
+    "master": 1,
+    "levels": {
+      "engine": 0,
+      "tyres": 0,
+      "wind": 0,
+      "boost": 0
+    },
+    "rms": 0
+  },
+  "muted": {
+    "snapshot": {
+      "enabled": false,
+      "state": "running",
+      "recordings": 3,
+      "errors": [],
+      "voices": 0,
+      "started": 4,
+      "cues": 3,
+      "mix": {
+        "speed": 1,
+        "load": 0.9500000000000001,
+        "slip": 0.9411764705882353,
+        "boost": 1,
+        "draft": 0
+      },
+      "master": 0,
+      "levels": {
+        "engine": 0,
+        "tyres": 0,
+        "wind": 0,
+        "boost": 0
+      }
+    },
+    "noNewVoice": true
+  },
+  "burst": {
+    "enabled": true,
+    "state": "running",
+    "recordings": 3,
+    "errors": [],
+    "voices": 12,
+    "started": 104,
+    "cues": 3,
+    "mix": {
+      "speed": 1,
+      "load": 0.9500000000000001,
+      "slip": 0.9411764705882353,
+      "boost": 1,
+      "draft": 0
+    },
+    "master": 0,
+    "levels": {
+      "engine": 0,
+      "tyres": 0,
+      "wind": 0,
+      "boost": 0
+    }
+  },
+  "errors": []
+}

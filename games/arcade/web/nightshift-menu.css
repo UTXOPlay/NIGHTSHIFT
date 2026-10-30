@@ -1,0 +1,82 @@
+/* Stable navigation, readable choices, and an unobstructed vehicle showroom. */
+#game{--menu-gutter:max(4.5vw,env(safe-area-inset-left));--menu-text:clamp(14px,.94vw,36px)}
+#nav .icon-button,#menu .icon-button,#garage-tools .icon-button,#settings-tabs .icon-button{background-image:none;border-radius:4px;border-color:transparent;background-color:transparent;box-shadow:none}
+#nav .icon-button::before,#nav .icon-button::after,#menu .icon-button::before,#menu .icon-button::after,#garage-tools .icon-button::before,#garage-tools .icon-button::after{background-image:none}
+#nav .icon-button[aria-current=page]{border-bottom:2px solid var(--mint);color:var(--mint);background:linear-gradient(0deg,#a5e9d813,transparent)}
+#nav .icon-button:hover,#menu .icon-button:hover,#garage-tools .icon-button:hover{background-color:#b7eee516}
+#game .icon-button:focus-visible,#game[data-input=gamepad] .icon-button:focus{outline:2px solid #f0ce8d;outline-offset:3px}
+#nav .icon-button,#menu-actions .icon-button,#garage-tools .icon-button,#settings-tabs .icon-button{overflow:visible}
+[data-ui-label]{position:relative}#nav [data-ui-label]:is(:hover,:focus-visible)::after,#menu-actions [data-ui-label]:is(:hover,:focus-visible)::after,#garage-tools [data-ui-label]:is(:hover,:focus-visible)::after,#settings-tabs [data-ui-label]:is(:hover,:focus-visible)::after,#game[data-input=gamepad] [data-ui-label]:focus::after{content:attr(data-ui-label);position:absolute;top:calc(100% + 9px);right:0;width:max-content;max-width:240px;padding:6px 9px;background:#07151de8;color:#dff7ee;border:1px solid #b5dfd22b;border-radius:3px;font:500 11px/1.4 Arial;letter-spacing:.3px;z-index:80;pointer-events:none;text-align:left}
+#menu-actions [data-ui-label]:is(:hover,:focus-visible)::after,#game[data-input=gamepad] #menu-actions [data-ui-label]:focus::after{top:auto;bottom:calc(100% + 8px);left:0;right:auto}
+#menu .icon-button.primary{background:var(--mint);color:#102b30;border:1px solid var(--mint)}
+#menu{padding-top:clamp(118px,14vh,230px);padding-bottom:max(30px,env(safe-area-inset-bottom));grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:5vw}
+#menu .menu-copy{min-width:0}#menu h1{font-size:clamp(42px,4.1vw,100px);letter-spacing:-.045em}
+#menu #description{font-size:var(--menu-text);line-height:1.5;color:#d0dedb;max-width:34em}
+#game[data-view=career] #cards{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:min-content;align-content:start;max-height:76vh;overflow-y:auto;overflow-x:hidden;padding:5px 7px 7px;gap:12px;overscroll-behavior:contain;scroll-padding-top:66px}
+#game[data-view=career] .event-filters{background:linear-gradient(90deg,#07151ef5,#07151eb0);padding:4px 0 10px;gap:8px}
+#game[data-view=career] .event-filters>span{font-size:clamp(10px,.7vw,22px)}
+#game[data-view=career] .stage-card{height:clamp(120px,12.2vh,240px);min-height:0;padding:0;border-radius:5px;text-align:left;border:1px solid #c1ded32c;background:#07151e;isolation:isolate}
+#game[data-view=career] .stage-card::before{display:block;content:'';z-index:0;inset:0;background:linear-gradient(0deg,#031018e8,transparent 86%);opacity:1;pointer-events:none}
+#game[data-view=career] .stage-thumb{opacity:.72;transition:opacity .18s ease,transform .25s ease;z-index:-1}
+#game[data-view=career] .stage-card[aria-pressed=true]{border-color:#b6f0d6;box-shadow:inset 0 -3px #b6f0d6}
+#game[data-view=career] .stage-card[aria-pressed=true] .stage-thumb{opacity:1}
+.stage-index{position:absolute;top:11px;left:13px;color:#d9ebe2;font:500 clamp(12px,.85vw,27px) ui-monospace,monospace}
+.stage-title{position:absolute;left:13px;right:38px;bottom:17px;font-size:clamp(13px,.82vw,30px);font-weight:650;letter-spacing:.045em;line-height:1.2;color:#eff9f1;text-transform:uppercase;z-index:1}
+#game[data-view=career] .stage-card .event-symbol{position:absolute;bottom:13px;right:11px;top:auto;z-index:1}#game[data-view=career] .stage-card .event-symbol svg{width:20px;height:20px}
+#game[data-view=career] .stage-card .route-shape{top:11px;right:9px;width:30%;height:48%;opacity:.85}
+#game[data-view=career] .stage-card .medal{right:12px;top:8px}
+#details{font-size:clamp(13px,.85vw,30px)}#details small{font-size:clamp(10px,.62vw,21px)}
+#growth-summary{margin-top:20px}.growth-heading{font-size:clamp(11px,.75vw,25px)}.growth-heading small,#growth-summary>small{font-size:clamp(10px,.64vw,21px)}
+#game[data-view=garage] #menu{padding-top:clamp(128px,17vh,270px);grid-template-columns:minmax(230px,29fr) minmax(0,43fr) minmax(230px,28fr);grid-template-rows:minmax(0,1fr) clamp(122px,15vh,225px);gap:24px 2vw;align-items:start}
+#game[data-view=garage] .menu-copy{grid-column:1;grid-row:1;max-height:calc(100% - 75px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-right:8px}
+#game[data-view=garage] #menu-title{font-size:clamp(38px,3.7vw,100px);margin:10px 0}
+#game[data-view=garage] #description{font-size:clamp(13px,.82vw,28px)}
+#game[data-view=garage] #shop-message{font-size:clamp(12px,.74vw,24px);line-height:1.5;min-height:0}
+#game[data-view=garage] #menu-actions{pointer-events:auto;position:absolute;left:var(--menu-gutter);bottom:calc(clamp(122px,15vh,225px) + max(30px,env(safe-area-inset-bottom)) + 20px);margin:0;z-index:7}
+#game[data-view=garage] #cards{grid-column:1/-1;grid-row:2;max-height:none;height:100%;gap:10px;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;overscroll-behavior:contain;padding:5px}
+#game[data-view=garage] .car-card{min-height:0;border-radius:4px;grid-template-rows:minmax(0,1fr) 20px 16px;padding:5px 12px 9px;background:linear-gradient(0deg,#07151eca,#07151e25);border-color:#c3dfd522}
+#game[data-view=garage] .car-card[aria-pressed=true]{background:linear-gradient(0deg,#183e3ac9,#07151e15);border-color:#b4edd5;box-shadow:inset 0 -2px #b4edd5}
+#game[data-view=garage] .car-card strong{font-size:clamp(12px,.85vw,29px)}#game[data-view=garage] .car-card>small{font-size:clamp(10px,.66vw,23px)}#game[data-view=garage] .car-class{font-size:clamp(9px,.55vw,18px)}
+#game[data-view=garage] #garage-tools{left:38%;right:auto;top:clamp(94px,10.5vh,180px);z-index:6;gap:10px}#garage-tools:after{font-size:clamp(10px,.65vw,22px);top:calc(100% + 8px);right:auto;left:0}
+#game[data-view=garage][data-garage-tab=showroom] #workshop{display:none!important}
+#game[data-view=garage] #workshop{grid-column:3;grid-row:1;max-height:100%;height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;padding:0 6px 12px 16px;background:linear-gradient(90deg,transparent,#07151e85);border-left:1px solid #b5ddce25}
+.workshop-heading{font-size:clamp(11px,.72vw,24px);letter-spacing:.6px;margin-bottom:14px}.workshop-heading small{font-size:clamp(10px,.6vw,21px)}
+#workshop .upgrade-grid{display:grid;grid-template-columns:1fr;gap:10px}#workshop .upgrade{min-height:100px;padding:12px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;border:0;border-bottom:1px solid #b5ddce22;background:linear-gradient(90deg,#15313a44,transparent)}
+#workshop .upgrade>svg{display:none}.upgrade strong{font-size:clamp(12px,.78vw,27px)}.upgrade .pips{font-size:clamp(11px,.7vw,24px);margin:7px 0;letter-spacing:3px}.upgrade small{font-size:clamp(11px,.7vw,24px);line-height:1.4}.upgrade-purchase>span{font-size:clamp(12px,.75vw,26px)}.upgrade-purchase .icon-button{width:46px;height:46px}
+#workshop .loadout{flex-wrap:wrap;gap:8px;margin-top:16px}.loadout-label{width:100%;font-size:clamp(11px,.7vw,24px);margin:0 0 2px}.loadout .icon-button{min-width:44px;width:54px;height:48px}.loadout .icon-button>span{display:none}.loadout-detail{font-size:clamp(12px,.72vw,24px)!important;line-height:1.5!important}
+#details .garage-stats{grid-template-columns:1fr;gap:13px}.garage-stats>div{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:baseline}.garage-stats>div>span{font-size:clamp(11px,.7vw,24px)}.garage-stats b{font-size:clamp(23px,1.7vw,56px)}.garage-stats b small{font-size:clamp(10px,.65vw,23px)}.garage-stats i,.garage-stats .build-delta{grid-column:1/-1}.build-delta{font-size:clamp(11px,.68vw,24px)}.garage-price>span{font-size:clamp(11px,.67vw,23px)}
+#settings-tabs{display:flex;gap:14px;border-bottom:1px solid #bddcd22a;margin-bottom:20px;padding-bottom:10px}#settings-tabs [aria-selected=true]{color:var(--mint);border-bottom:2px solid var(--mint);background:#a5e9d810}
+#keybinds{width:min(720px,calc(100% - 36px));font-size:clamp(13px,.85vw,30px);background:linear-gradient(115deg,#0b1c26f0,#07131edb);border-radius:6px;scrollbar-width:thin}
+#keybinds .key-heading{position:sticky;top:0;background:#0b1c26;z-index:3}#keybinds [role=tabpanel]>h3{font-size:18px;letter-spacing:.5px}.preference-row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0;border-bottom:1px solid #bddcd222}.preference-row>b,.preference-row b{font-size:16px;font-weight:500}.preference-row small{display:block;max-width:340px;font-size:13px;line-height:1.5;color:#afc9bf;margin-top:8px}.preference-row button{width:64px;height:54px;border-radius:4px}.preference-row button small{position:static;margin:0;font-size:9px}.preference-row button{flex-direction:column;gap:3px}.practice-action{margin-top:18px}
+#keybinds #key-rows span,#keybinds #key-preset-note,#keybinds #key-message,#keybinds details p,#gamepad-guide p{font-size:13px}#keybinds label,#keybinds #key-rows kbd{font-size:13px}#keybinds #key-rows button{min-height:44px}#keybinds summary{min-height:44px;line-height:44px}
+#game[data-hud-detail=focused] #standings,#game[data-hud-detail=focused] #race-engineer{display:none!important}
+@media(min-width:2200px){#settings-tabs .icon-button{width:68px;height:68px}#keybinds{width:min(1060px,calc(100% - 70px));padding:38px}#keybinds #key-rows span,#keybinds #key-preset-note,#keybinds #key-message,#keybinds details p,#keybinds label,#keybinds #key-rows kbd,#gamepad-guide p{font-size:22px}.preference-row b{font-size:25px}.preference-row small{font-size:21px;max-width:600px}.preference-row button{width:94px;height:80px}.preference-row button small{font-size:15px}#keybinds [role=tabpanel]>h3{font-size:28px}#game[data-view=garage] .car-card{grid-template-rows:minmax(0,1fr) 30px 25px}.upgrade-purchase .icon-button{width:64px;height:64px}#workshop .upgrade{min-height:160px}}
+@media(max-height:560px){
+ #game{--menu-gutter:max(22px,env(safe-area-inset-left));--menu-text:13px}
+ #menu{padding:78px max(22px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) var(--menu-gutter);grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:start}
+ #menu .menu-copy{max-height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}#menu h1{font-size:30px;line-height:1.04;margin:10px 0}#menu #description{font-size:13px;line-height:1.4;margin:8px 0}.eyebrow{font-size:9px;letter-spacing:1.5px}
+ #details{font-size:12px;gap:12px;flex-wrap:wrap;margin:14px 0}#details small{font-size:9px;letter-spacing:.2px}#details svg{width:19px}
+ #growth-summary{margin-top:10px}.growth-heading{font-size:11px;margin-bottom:7px}.growth-heading small,#growth-summary>small{font-size:9px;letter-spacing:.2px}#menu-actions{margin:15px 0 5px;gap:10px}
+ #game[data-view=career] #cards{max-height:100%;height:100%;gap:8px;padding:3px 5px 5px;align-self:start;scroll-padding-top:55px}#game[data-view=career] .event-filters{position:sticky;top:0;padding:0 0 5px;gap:4px;background:#07151ee8}#game[data-view=career] .event-filters>span{font-size:9px;letter-spacing:.5px}#game[data-view=career] .stage-card{height:92px;min-height:92px}.stage-index{font-size:11px;top:8px;left:9px}.stage-title{font-size:11px;left:9px;right:27px;bottom:12px;letter-spacing:.15px}#game[data-view=career] .stage-card .event-symbol{position:absolute;bottom:8px;right:7px}#game[data-view=career] .stage-card .event-symbol svg{width:16px;height:16px}
+ #game[data-view=garage] #menu{padding:82px max(20px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) var(--menu-gutter);grid-template-columns:minmax(210px,29fr) minmax(0,43fr) minmax(220px,28fr);grid-template-rows:minmax(0,1fr) 86px;gap:12px 12px}
+ #game[data-view=garage] #menu-title{font-size:30px;margin:6px 0}#game[data-view=garage] #description,#game[data-view=garage] #shop-message{font-size:12px;line-height:1.4}#game[data-view=garage] .menu-copy{max-height:calc(100% - 60px)}
+ #game[data-view=garage] #menu-actions{left:var(--menu-gutter);bottom:calc(86px + max(14px,env(safe-area-inset-bottom)) + 12px)}#game[data-view=garage] #menu-actions .icon-button{height:44px;min-width:44px}#game[data-view=garage] #cards{gap:7px;padding:3px}.car-class{display:none}#game[data-view=garage] .car-card{grid-template-rows:minmax(0,1fr) 16px;min-width:108px;padding:3px 7px 6px}#game[data-view=garage] .car-card strong{font-size:12px}#game[data-view=garage] .car-card>small{font-size:10px}
+ #game[data-view=garage] #garage-tools{top:64px;left:34%;gap:7px}#garage-tools .icon-button{width:44px;height:44px}#garage-tools:after{font-size:9px;top:calc(100% + 4px)}
+ #game[data-view=garage] #workshop{padding:0 4px 10px 9px}.workshop-heading{font-size:10px;margin-bottom:8px}.workshop-heading small{font-size:9px}#workshop .upgrade{min-height:85px;padding:9px 6px;gap:7px}.upgrade strong{font-size:11px}.upgrade .pips{font-size:10px;margin:5px 0;letter-spacing:2px}.upgrade small{font-size:10px}.upgrade-purchase>span{font-size:11px}.upgrade-purchase .icon-button{width:44px;height:44px}#workshop .loadout{margin-top:12px;gap:8px}.loadout-label{font-size:11px}.loadout .icon-button{width:44px;height:44px}.loadout-detail{font-size:11px!important}
+ .garage-stats{gap:10px}.garage-stats>div>span{font-size:10px}.garage-stats b{font-size:22px}.garage-stats b small{font-size:9px}.build-delta{font-size:10px}.garage-price>span{font-size:10px}#details .garage-price{margin-top:12px}.saving-plan small{font-size:10px}
+ #keybinds{padding:14px 20px}#settings-tabs{margin-bottom:12px;padding-bottom:6px;gap:10px}#settings-tabs .icon-button{width:44px;height:44px}.preference-row{padding:12px 0}.preference-row b{font-size:14px}.preference-row small{font-size:12px}#keybinds #key-rows{gap:4px 18px}#keybinds #key-rows span,#keybinds #key-preset-note,#keybinds #key-message{font-size:12px}#keybinds #key-rows button{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){#game[data-view=career] .stage-thumb{transition:none}}
+
+#game[data-view=career] #description{font-size:var(--menu-text);line-height:1.5}
+#keybinds .icon-button{background-image:none;border-radius:4px;background-color:transparent;border:1px solid #b5ddce22}
+#settings-tabs{position:sticky;top:62px;z-index:2;background:#0b1c26}#keybinds{scroll-padding-top:134px}#keybinds #key-preset,#keybinds #key-rows button,#keybinds summary{scroll-margin-top:134px}
+#shop-message:empty{display:none}
+@media(max-height:560px){#game[data-view=garage] #details{margin:10px 0}#details .garage-stats{gap:7px}.garage-stats .build-delta{display:none}.garage-stats>div{gap:2px 8px}.garage-stats b{font-size:19px}.garage-stats>div>span{font-size:10px;letter-spacing:.3px}#settings-tabs{top:44px}#keybinds{scroll-padding-top:110px}}
+@media(min-width:2200px){#settings-tabs{top:84px}}
+
+@media(max-height:560px){#game[data-view=garage] #description{display:none}#game[data-view=garage] #menu-title{font-size:28px;margin:4px 0}#game[data-view=garage] .menu-copy{max-height:calc(100% - 48px)}#details .garage-stats{gap:4px}}
+
+#game[data-view=career] #menu{grid-template-rows:minmax(0,1fr)}
+
+#cards,#workshop,#progression{overflow-anchor:none}

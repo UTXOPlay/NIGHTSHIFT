@@ -1,0 +1,148 @@
+[
+  {
+    "id": "bmw-320i",
+    "brand": "BMW",
+    "model": "320i",
+    "years": [
+      2000,
+      2024
+    ],
+    "category": "sedan",
+    "file": "bmw-320i.glb",
+    "bytes": 1300148,
+    "paint": {
+      "materials": [
+        "material_0"
+      ],
+      "textured": false,
+      "confidence": "alta"
+    },
+    "credit": {
+      "author": "rifdanzz",
+      "authorUrl": "https://sketchfab.com/rifdanzz",
+      "license": "CC Attribution",
+      "sourceName": "BMW 320i E90 Low Polly",
+      "sourceUrl": "https://sketchfab.com/3d-models/28f0bc2f0083417a8e521150529034d6"
+    },
+    "verifiedLicense": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "verifiedAuthor": "rifdanzz",
+    "sourceUrl": "https://sketchfab.com/3d-models/28f0bc2f0083417a8e521150529034d6",
+    "download": "https://raw.githubusercontent.com/pedrosoandre/carros/main/assets/bmw-320i.glb",
+    "sha256": "a1764d5ab2148790c50f9ca13a76ce8ed08a91295238772f2012603dad9da026"
+  },
+  {
+    "id": "nissan-s14",
+    "brand": "Nissan",
+    "model": "Silvia S14",
+    "years": [
+      1993,
+      1998
+    ],
+    "category": "coupe",
+    "file": "nissan-s14.glb",
+    "bytes": 1117472,
+    "paint": {
+      "materials": [
+        "Material.003"
+      ],
+      "textured": false,
+      "confidence": "alta"
+    },
+    "credit": {
+      "author": "Lexyc16",
+      "authorUrl": "https://sketchfab.com/Lexyc16",
+      "license": "CC Attribution",
+      "sourceName": "Nissan 200SX Silvia S14",
+      "sourceUrl": "https://sketchfab.com/3d-models/f2a917a924734a89a020e7f970e55e7c"
+    },
+    "verifiedLicense": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "verifiedAuthor": "Lexyc16",
+    "sourceUrl": "https://sketchfab.com/3d-models/f2a917a924734a89a020e7f970e55e7c",
+    "download": "https://raw.githubusercontent.com/pedrosoandre/carros/main/assets/nissan-s14.glb",
+    "sha256": "0096b5a88d285d881d3b2cd1777edf865a547461876b7b28c08802bdc02775f6"
+  },
+  {
+    "id": "porsche-911-gt3",
+    "brand": "Porsche",
+    "model": "911 GT3",
+    "years": [
+      0,
+      0
+    ],
+    "category": "sports",
+    "file": "porsche-911-gt3.glb",
+    "bytes": 1310556,
+    "paint": null,
+    "credit": {
+      "author": "ChevroletSS",
+      "authorUrl": "https://sketchfab.com/ChevroletSS",
+      "license": "CC Attribution",
+      "sourceName": "Porsche 911 GT3",
+      "sourceUrl": "https://sketchfab.com/3d-models/none-78d5c47ab2554c2592b7e499179a0792"
+    },
+    "verifiedLicense": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "verifiedAuthor": "ChevroletSS",
+    "sourceUrl": "https://sketchfab.com/3d-models/78d5c47ab2554c2592b7e499179a0792",
+    "download": "https://raw.githubusercontent.com/pedrosoandre/carros/main/assets/porsche-911-gt3.glb",
+    "sha256": "4058dc7aa3c2ad27f230c1ac77fe4bc253930aeacffeab48371360c557456718"
+  },
+  {
+    "id": "audi-tt",
+    "brand": "Audi",
+    "model": "TT",
+    "years": [
+      2000,
+      2024
+    ],
+    "category": "sports",
+    "file": "audi-tt.glb",
+    "bytes": 1123224,
+    "paint": {
+      "materials": [
+        "metal"
+      ],
+      "textured": false,
+      "confidence": "alta"
+    },
+    "credit": {
+      "author": "razor24",
+      "authorUrl": "https://sketchfab.com/razor24",
+      "license": "CC Attribution",
+      "sourceName": "2015 Audi TT Convertible",
+      "sourceUrl": "https://sketchfab.com/3d-models/80cc29628e1b407d8e14d5ae0710f6fe"
+    },
+    "verifiedAuthor": "razor24",
+    "verifiedLicense": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "sourceUrl": "https://sketchfab.com/3d-models/80cc29628e1b407d8e14d5ae0710f6fe",
+    "download": "https://raw.githubusercontent.com/pedrosoandre/carros/main/assets/audi-tt.glb",
+    "sha256": "26f659935f925c8b06b280e348edca1c3b65436d335b249fe6dc29cbe7eb0468"
+  }
+]

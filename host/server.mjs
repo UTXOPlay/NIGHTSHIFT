@@ -39,7 +39,7 @@ export function createGameHost({config,origin,runtimeUrl,runtimeToken,sessionSec
  }
  const needUser=(req,res,next)=>{req.account=account(req);if(!req.account)return res.status(401).json({error:'Open the game to start a session.'});next();};
  app.use((req,res,next)=>{
-  res.set({'X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Content-Security-Policy':"default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'self'; base-uri 'none'; form-action 'none'"});
+  res.set({'X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Content-Security-Policy':"default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; connect-src 'self' blob:; object-src 'none'; frame-ancestors 'self'; base-uri 'none'; form-action 'none'"});
   if(quotas.size>20000||limited('request:'+req.ip,3000,60000))return res.status(429).json({error:'Please slow down.'});
   if(!['GET','HEAD','OPTIONS'].includes(req.method)&&!account(req)?.service&&req.headers.origin!==origin)return res.status(403).json({error:'Game origin rejected'});
   if(req.path.includes('/api/'))res.set('Cache-Control','no-store');

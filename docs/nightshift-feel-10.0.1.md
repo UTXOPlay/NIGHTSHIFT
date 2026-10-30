@@ -1,0 +1,21 @@
+# NIGHTSHIFT driving feedback — 10.0.1
+
+Presentation release for the user request to improve driving satisfaction. Rebased onto the exact live 10.0.0 source/build snapshot after the concurrent roadblock release. Preserves its roadblock behaviour, all native programs, profile routing and legacy replay. Includes the approved chase-camera improvements. The earlier 9.6.2 staging candidate was never deployed.
+
+- Replaced the shared synthetic driving bed with credited, edited engine, tyre and impact recordings (355,066 bytes total). Six vehicle mix profiles alter filtering, pitch and gain; they are not six independently recorded engines. The electric vehicle has an additional quiet motor layer.
+- Engine load follows completed native ticks; repeated render frames cannot invent acceleration or gear changes. Wind follows actual speed and drafting. Boost pressure has an attack/release envelope; close passes have directional audio; drift release and impacts have separate material sounds.
+- Boost no longer triggers a pickup ping or pickup visual. Charge pips briefly brighten only when actual charge crosses a usable tier. Muting fades the master bus; pausing fades the driving bed and current race sounds. Finish cues can complete.
+- Tightened smoke/spray emission, size and lifetime around rear tyre contact anchors. Boost exhaust uses existing art with a short thrust envelope and speed-dependent length. Existing 48-smoke, 2-exhaust and 256-ribbon pools remain bounded. Reduced motion suppresses transient driving visuals.
+- Audio unlock happens synchronously on start/resume gestures, before network awaits. Recording fetch/decode failures are retryable; one-shot sounds have a 12-voice limit. Credits are accessible in the game settings.
+
+Validation: 107 Node/host tests passed, including six new rule-observation and VFX tests; seven existing chase-camera tests retained. Actual Chromium WebAudio decoded all three recordings, measured nonzero cruise output and zero paused output, verified mute and stressed the one-shot pool. Synthetic rendering checked four courses, boost/drift art, six required sizes, inverse pointer mapping, the backing-resolution cap and reduced motion. Ordinary keyboard driving, touch-emulated orientation handling and exact native signed replay were checked separately on the staged release. These are browser/emulation checks, not a physical-device benchmark or a listening-panel study.
+
+Native source hashes, V8/V9/V10 binaries and V10 profile `0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561` are unchanged. No race physics, car performance, charge awards, career rules or on-chain settlement were added.
+
+Release directory: `/data/utxoplay/releases/20261030-nightshift-feel-10.0.1/`. Immutable build-source archive: `source.tgz`, SHA-256 `07d980d302be93de28c319b905322d2da14a06bfd62d22770c606256a3357ad4`. Browser manifest and test evidence are in `docs/feel-10.0.1/`. Production cutover/verification details are appended after completion.
+
+Production cutover completed on 30 October 2026. Game image `sha256:6ab15d46a7db8a18a90bf3cf7ccdb3d936387dd589e935ce465a73b7fd7a35ff`; Store image `sha256:61fa0e5eae10d6ec478ba35332dce39790ef87c9ded41a57b52053e1e9358740`. Both containers healthy. Environment, all three native data volumes, security/resource settings and networks match the pre-cutover containers. Other catalog entries are unchanged. Nginx configuration validation and reload succeeded. Rollback containers `myelin-nightshift-v8-before-nightshift-10-0-1` and `utxoplay-store-before-nightshift-10-0-1` retain the prior images; rollback reuses current native data rather than raw-copying open databases.
+
+Public HTTPS acceptance passed with 63 driving samples, all six required viewport sizes, touch-emulated portrait gate/landscape play, rotation pause, reduced motion, decoded audio during ordinary driving and a verified signed V10 replay. No browser page errors.
+
+All 112 public browser responses match the tested release manifest byte for byte. Removed both releases' staging containers and all seven isolated staging data directories, including copied Store databases. Production data and rollback containers are retained. Local package/catalog, source and release manifest are aligned with 10.0.1; a clean build passes the integrity check.

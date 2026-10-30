@@ -1,0 +1,412 @@
+{
+  "version": "10.0.3",
+  "nativeProfile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+  "nativeRulesChanged": false,
+  "unitTests": 115,
+  "physicalPhoneTested": false,
+  "physicalControllerTested": false,
+  "browserFiles": 118,
+  "existingBrowserChanges": [
+    "app.js",
+    "index.html",
+    "_arcade/nightshift-driving-coach.mjs"
+  ],
+  "newBrowserFiles": 2,
+  "menus": {
+    "checks": [
+      "All required landscape/large layouts keep fixed navigation, readable choices, viewport clipping and bounded backing pixels",
+      "Native upgrade, exact debit and usable focus survive asynchronous menu rebuilding",
+      "Settings separate controls/display/archive, preserve preference changes and return focus",
+      "Menu browsing never starts or advances a race; earned career still verifies",
+      "Trusted touch scroll reaches more events and portrait remains gated"
+    ],
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "allTwelveEventsReachable": true,
+        "sixVehiclesReachable": true,
+        "stableNavigation": true,
+        "selectionAndScrollRestored": true
+      }
+    ],
+    "errors": [],
+    "physicalPhone": false
+  },
+  "acceptance": {
+    "checks": [
+      "1920x1080 layout, resolution cap and inverse input",
+      "2560x1080 layout, resolution cap and inverse input",
+      "2560x1440 layout, resolution cap and inverse input",
+      "3840x2160 layout, resolution cap and inverse input",
+      "844x390 layout, resolution cap and inverse input",
+      "Upgrade purchased and balance debited by native executor",
+      "3\u20137 minute signed race reward and separate mobile results",
+      "Earned car purchase survives reload",
+      "Next event opens the next briefing",
+      "Native career replay verifies",
+      "Icon controls with accessible names and English interface",
+      "Thumb joystick plus counter, portrait gate, paused simulation and cleared inputs",
+      "Reduced motion and resume after rotation"
+    ],
+    "errors": [],
+    "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+    "finishSeconds": 229.6,
+    "attempts": 1,
+    "credits": 465
+  },
+  "engine": {
+    "checks": [
+      "Assets and initial shader variants finish before loading completes",
+      "Street buffers skip uploads between chunk boundaries",
+      "Single settings entry with contextual keyboard hints",
+      "WebGL context recovery reloads the identical signed career without resuming held input"
+    ],
+    "unchangedStreetFrameFraction": 0.8863636363636364,
+    "loaded": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 38,
+      "streetVariants": 24,
+      "facadeFamilies": 8,
+      "nearDetailInstances": 73,
+      "detailRange": 110,
+      "instanceCount": 314,
+      "maxPoolCount": 100,
+      "ready": true,
+      "preparedModes": [
+        0
+      ],
+      "errors": 0,
+      "geometries": 62,
+      "textures": 24,
+      "programs": 148,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      },
+      "terrainBands": [
+        {
+          "lo": 8.3,
+          "hi": 33,
+          "height": -0.12
+        },
+        {
+          "lo": 33,
+          "hi": 145,
+          "height": -2.1
+        }
+      ],
+      "surface": {
+        "source": "Poly Haven Asphalt 02",
+        "size": 1024,
+        "metres": 3,
+        "maps": 3
+      },
+      "lightingProbes": 4,
+      "post": {
+        "active": true,
+        "supported": true,
+        "scenePixels": 2073600,
+        "bloomPixels": 129600,
+        "historyFrames": 0
+      }
+    },
+    "restored": {
+      "mode": "stationary-instancing",
+      "matrixWrites": 0,
+      "colorWrites": 0,
+      "pools": 38,
+      "streetVariants": 24,
+      "facadeFamilies": 8,
+      "nearDetailInstances": 66,
+      "detailRange": 110,
+      "instanceCount": 642,
+      "maxPoolCount": 305,
+      "ready": true,
+      "preparedModes": [
+        3
+      ],
+      "errors": 0,
+      "geometries": 62,
+      "textures": 25,
+      "programs": 163,
+      "features": {
+        "tier": 0,
+        "reflection": true,
+        "shadowInterval": 2,
+        "rainCount": 1200
+      },
+      "terrainBands": [
+        {
+          "lo": 8.3,
+          "hi": 18,
+          "height": -0.12
+        },
+        {
+          "lo": 18,
+          "hi": 110,
+          "height": -0.12
+        }
+      ],
+      "surface": {
+        "source": "Poly Haven Asphalt 02",
+        "size": 1024,
+        "metres": 3,
+        "maps": 3
+      },
+      "lightingProbes": 4,
+      "post": {
+        "active": true,
+        "supported": true,
+        "scenePixels": 2073600,
+        "bloomPixels": 129600,
+        "historyFrames": 0
+      }
+    },
+    "errors": []
+  },
+  "shop": {
+    "checks": [
+      "Two licensed source bodies, six upright race builds, grounded bounds and real thumbnails",
+      "Unaffordable purchase exposes the exact shortfall and cannot debit credits",
+      "Upgrade price, benefit, debit, success feedback and reload persistence",
+      "Showroom and tuning layouts at every required landscape resolution",
+      "3D preview rotates through actual pointer input and resets"
+    ],
+    "errors": [],
+    "fleet": {
+      "loaded": true,
+      "families": [
+        "slim-led",
+        "swan-neck"
+      ],
+      "fixtures": 22,
+      "physicalLights": 2,
+      "activeLights": 2,
+      "fleetLoaded": true,
+      "fleetSources": 2,
+      "fleetBounds": [
+        {
+          "min": [
+            -1.074828028678894,
+            0,
+            -2.14003324508667
+          ],
+          "max": [
+            1.0711811780929565,
+            1.0166816115379333,
+            2.14003324508667
+          ],
+          "size": [
+            2.1460092067718506,
+            1.0166816115379333,
+            4.28006649017334
+          ]
+        },
+        {
+          "min": [
+            -1.090000033378601,
+            0,
+            -2.14003324508667
+          ],
+          "max": [
+            1.090000033378601,
+            1.14000004529953,
+            2.14003324508667
+          ],
+          "size": [
+            2.180000066757202,
+            1.14000004529953,
+            4.28006649017334
+          ]
+        },
+        {
+          "min": [
+            -1.074828028678894,
+            0,
+            -2.14003324508667
+          ],
+          "max": [
+            1.0711811780929565,
+            1.0166816115379333,
+            2.14003324508667
+          ],
+          "size": [
+            2.1460092067718506,
+            1.0166816115379333,
+            4.28006649017334
+          ]
+        },
+        {
+          "min": [
+            -1.0425000190734863,
+            0,
+            -1.8661547899246216
+          ],
+          "max": [
+            1.0425000190734863,
+            0.9858864545822144,
+            1.8661547899246216
+          ],
+          "size": [
+            2.0850000381469727,
+            0.9858864545822144,
+            3.732309579849243
+          ]
+        },
+        {
+          "min": [
+            -1.0325000286102295,
+            0,
+            -1.8661547899246216
+          ],
+          "max": [
+            1.039511799812317,
+            0.9858864545822144,
+            1.8661547899246216
+          ],
+          "size": [
+            2.0720118284225464,
+            0.9858864545822144,
+            3.732309579849243
+          ]
+        },
+        {
+          "min": [
+            -1.090000033378601,
+            0,
+            -1.8700000047683716
+          ],
+          "max": [
+            1.090000033378601,
+            1.330000102519989,
+            1.8661547899246216
+          ],
+          "size": [
+            2.180000066757202,
+            1.330000102519989,
+            3.736154794692993
+          ]
+        }
+      ],
+      "wheelContacts": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "gamepad": {
+    "checks": [
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns",
+      "Observed steering, braking and native boost complete interactive practice",
+      "Held pause does not repeatedly toggle or auto-resume",
+      "Colemak takeover cancels a held controller until neutral",
+      "Portrait gate pauses controller play and clears held input",
+      "Controller disconnect pauses and its ordinary-input native replay verifies",
+      "Controller spatial menu navigation opens garage and returns"
+    ],
+    "runs": [
+      {
+        "touch": false,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 130,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      },
+      {
+        "touch": true,
+        "practiceStage": 3,
+        "nativeReplay": true,
+        "pausedTick": 125,
+        "inputSource": "virtual standard Gamepad API readings",
+        "physicalController": false
+      }
+    ],
+    "errors": []
+  },
+  "qaDiagnostics": {
+    "scrollRestoration": "The new reachability test caught a 57-pixel return jump on 844x390: state was captured after changing the CSS view. Capture now precedes the page change; all five final layout journeys preserve exact scroll positions.",
+    "parallelControllerReview": "Two early fixed-pulse virtual-controller reviews failed under parallel GPU reviews (resume timeout / missed directional focus step). Final standalone review uses acknowledged directional focus changes and passes both controller paths. These early attempts are excluded.",
+    "legacyAssertionsUpdated": "Archive verification is checked in the visible Records tab; upgrades open Tuning first; scroll tests reveal each card instead of requiring twelve unscrolled phone cards."
+  },
+  "compressedUiDelta": {
+    "newStylesheetBrotliBytes": 3312,
+    "applicationBrotliDeltaBytes": 1596,
+    "rendererAndArtUnchanged": true
+  }
+}

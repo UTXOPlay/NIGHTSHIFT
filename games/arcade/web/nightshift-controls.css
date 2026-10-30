@@ -1,0 +1,9 @@
+#drive-coach{position:absolute;z-index:5;top:max(94px,12vh);left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;color:#e6fff2;text-shadow:0 2px 8px #06151e;pointer-events:none}
+#drive-coach>span:first-child svg{width:32px;height:32px;filter:drop-shadow(0 0 5px #71e7c355)}
+#drive-coach>div{display:grid;gap:5px;min-width:70px}#drive-coach b{font-size:11px;letter-spacing:2px}#drive-coach kbd{font:600 12px ui-monospace,monospace;color:#ebd4a7}
+#drive-coach button{pointer-events:auto;width:44px;height:44px;border:0;background:transparent}#drive-coach button svg{width:16px;height:16px;opacity:.65}
+.coach-pips{display:flex;gap:4px}.coach-pips i{width:5px;height:5px;border:1px solid #c5e9d7;border-radius:50%}.coach-pips i.done{background:#a5e9d8}.coach-pips i.current{border-color:#f4d298;background:#f4d298}
+#gamepad-guide dl{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;font-size:11px}#gamepad-guide dl>div{display:flex;align-items:baseline;gap:10px}#gamepad-guide dt{color:#f0d29e;min-width:55px;font:600 11px ui-monospace,monospace}#gamepad-guide dd{margin:0;color:#b5d7ce}#gamepad-guide p{font-size:12px}
+#game[data-input=gamepad] #abilities .ability-key{display:block}
+@media(max-height:560px){#drive-coach{top:70px;gap:8px}#drive-coach>span:first-child svg{width:24px;height:24px}#drive-coach b{font-size:9px}#drive-coach kbd{font-size:10px}}
+@media(min-width:2200px){#drive-coach{gap:20px}#drive-coach b{font-size:17px}#drive-coach kbd{font-size:18px}#drive-coach>span:first-child svg{width:44px;height:44px}.coach-pips i{width:8px;height:8px}#gamepad-guide dl,#gamepad-guide p{font-size:16px}#gamepad-guide dt{font-size:15px}}
