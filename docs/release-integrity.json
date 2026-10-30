@@ -57,7 +57,8 @@
     "host/nightshift13.mjs": "ec89bd5613b53e16f3812d4b7d480211471557202206ebcb5ffc82d408d16775",
     "games/nightshift-v13/host.json": "2232797be31b2478973c6233fc133c73e407f16b6a0f88f32c7743bd8d3790ab",
     "host/nightshift14.mjs": "3de4370b25b3939a07828372935dc75e282d78d063484340c4a80065e41c6c34",
-    "host/runtime-pool.mjs": "829b7782c2c20e13bdefa03300dad91b35f2ef4b2645faa0c364dd3101ae4b5c"
+    "host/runtime-pool.mjs": "829b7782c2c20e13bdefa03300dad91b35f2ef4b2645faa0c364dd3101ae4b5c",
+    "games/nightshift-v14/host.json": "07508198486b3aebb371f8a57fa0fc0116b5baf4815512e71cd857161e9f0d4e"
   },
   "browserFiles": {
     "_arcade/art/nightshift/architecture-v131.webp": "eb8ebaa72fc46f3c7ecbffe308d9950d4a985659022f47fb81595b3f255d10df",
@@ -346,5 +347,5 @@
     "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa"
   },
   "deliveryStatus": "Bookworm V14 binary measured; staged and public deployment acceptance recorded separately.",
-  "notes": "Preserve V8–V13 executables, application profiles and databases. Old unfinished races retain their original executor. Myelin provides off-chain host replay, not CKB settlement. No multiplayer implementation."
+  "notes": "Preserve V8\u2013V13 executables, application profiles and databases. Old unfinished races retain their original executor. Myelin provides off-chain host replay, not CKB settlement. No multiplayer implementation."
 }

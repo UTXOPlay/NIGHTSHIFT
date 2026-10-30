@@ -1155,6 +1155,462 @@
       "maxSampledPendingInputs": 24,
       "distance": 6717,
       "errors": []
+    },
+    "performance120": {
+      "version": "14.0.0",
+      "quality": "Auto",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "input": "virtual standard Gamepad API, ordinary signed inputs",
+      "menuMs": 1433,
+      "wallSeconds": 120.25,
+      "simulationSeconds": 119,
+      "medianFps": 60,
+      "p10Fps": 48,
+      "medianCpuMs": 3.47,
+      "medianGpuMs": 10.84901,
+      "scales": [
+        1,
+        0.75
+      ],
+      "maxBufferPixels": 2073600,
+      "maxSampledPendingInputs": 24,
+      "distance": 55321,
+      "errors": []
+    },
+    "stageBrowser": {
+      "version": "14.0.0",
+      "checks": {
+        "menuHasNoWebGLOrRaceAssets": true,
+        "twelveActualRoutePreviews": true,
+        "garageLoadsOnlyItsAssets": true,
+        "actualFleetThumbnails": true,
+        "sixGroundedVehicles": true,
+        "movingResizeAndInverseInput": true,
+        "minimapActorsAndOverview": true,
+        "pausedReducedMotionPreservesRules": true,
+        "touchPortraitPausesAndClears": true
+      },
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 1920,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 1000,
+            "y": 500.00000000000034
+          },
+          "tick": 22,
+          "distance": 14,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 1000.0000000000003,
+            "y": 500.00000000000165
+          },
+          "tick": 61,
+          "distance": 97,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000.0000000000002,
+            "y": 500.0000000000009
+          },
+          "tick": 103,
+          "distance": 248,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 999.9999999999984,
+            "y": 499.9999999999979
+          },
+          "tick": 155,
+          "distance": 519,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 844,
+            "height": 390
+          },
+          "inverse": {
+            "x": 1000.0000000000003,
+            "y": 500.0000000000026
+          },
+          "tick": 239,
+          "distance": 1034,
+          "overflow": false
+        }
+      ],
+      "cars": [
+        {
+          "vehicle": 0,
+          "bounds": {
+            "min": [
+              -1.0399999618530273,
+              0,
+              -1.7790935039520264
+            ],
+            "max": [
+              1.0399999618530273,
+              0.9546939134597778,
+              1.7790935039520264
+            ],
+            "size": [
+              2.0799999237060547,
+              0.9546939134597778,
+              3.5581870079040527
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 1,
+          "bounds": {
+            "min": [
+              -0.9050422310829163,
+              0,
+              -2.140582323074341
+            ],
+            "max": [
+              0.9050422310829163,
+              1.2245597635628656,
+              2.1428675651550293
+            ],
+            "size": [
+              1.8100844621658325,
+              1.2245597635628656,
+              4.28344988822937
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 2,
+          "bounds": {
+            "min": [
+              -0.9555545449256897,
+              0,
+              -2.1400856971740723
+            ],
+            "max": [
+              0.9555546045303345,
+              1.3599801347590983,
+              2.1399998664855957
+            ],
+            "size": [
+              1.9111091494560242,
+              1.3599801347590983,
+              4.280085563659668
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 3,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 4,
+          "bounds": {
+            "min": [
+              -1.0469425916671753,
+              0,
+              -2.1452722549438477
+            ],
+            "max": [
+              1.0469425916671753,
+              1.3631548082921654,
+              2.141364812850952
+            ],
+            "size": [
+              2.0938851833343506,
+              1.3631548082921654,
+              4.2866370677948
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 5,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "physicalDevices": false
+    },
+    "stageFullscreen": {
+      "origin": "http://127.0.0.1:18944",
+      "checks": [
+        {
+          "id": "drift-run",
+          "pricing": "free",
+          "ready": true,
+          "fullscreen": true,
+          "reentry": true,
+          "sameGameInstance": true
+        }
+      ],
+      "failures": [],
+      "errors": []
+    },
+    "stageTactics": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "kind": "blocked",
+          "triggerTick": 668,
+          "renderedTick": 670,
+          "readout": {
+            "icon": "emp",
+            "title": "LINE BLOCKED",
+            "detail": "Move past traffic or cover to acquire the target"
+          },
+          "target": {
+            "id": 2,
+            "marked": false,
+            "done": false,
+            "active": false,
+            "phase": "blocked",
+            "label": "LINE BLOCKED",
+            "name": "JINX",
+            "loadLimit": null,
+            "blocked": true
+          },
+          "signedReplay": true
+        },
+        {
+          "kind": "staged",
+          "triggerTick": 546,
+          "renderedTick": 546,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER AT THE RELAY",
+            "detail": "Launch ahead \u00b7 cargo cruise limit 162 KM/H"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "launch",
+          "triggerTick": 656,
+          "renderedTick": 656,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER ON THE MOVE",
+            "detail": "Gate ahead \u00b7 hold fire until amber"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "active",
+          "triggerTick": 839,
+          "renderedTick": 841,
+          "readout": {
+            "icon": "target",
+            "title": "BOUNTY GRID",
+            "detail": "12.9 KM TO FINISH"
+          },
+          "target": null,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary signed V14 pedal inputs and virtual standard Gamepad API; no game-state injection",
+      "physicalDevices": false
+    },
+    "stageTouch": {
+      "checks": [
+        "Thumb accelerator held through countdown starts the car at GO",
+        "Diagonal joystick combines proportional steering and gas",
+        "Releasing the joystick coasts without automatic gas",
+        "Portrait gate clears the held brake and pauses the local simulation",
+        "Native touch-input replay verifies and all visible text is English"
+      ],
+      "errors": [],
+      "physicalPhone": false
     }
   },
   "delivery": {
@@ -1164,7 +1620,22 @@
       "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
       "buildImage": "sha256:5579cf8199622d288b4419228262cbb8034a2c0c3b4635f5acefad30304d40e2"
     },
-    "stagedCgroupCapacity": "pending",
+    "stagedCgroupCapacity": {
+      "image": "sha256:9dcaccba69acc10983aee7db49809a671785a0ce6810a34aa96225590985c30a",
+      "accountsOpened": 57,
+      "maxResidentExecutors": 2,
+      "peakCombinedProcessRss": 632180736,
+      "cgroup": {
+        "limit": 2147483648,
+        "swapLimit": 0,
+        "peak": 562106368,
+        "oom": 0,
+        "oomKills": 0
+      },
+      "restartRecovery": true,
+      "fullReportOnDeploymentHost": "/data/utxoplay/releases/20261031-nightshift-rivals-14.0.0/capacity/review.json",
+      "limit": "Sequential migration/cache churn, not real concurrent-user throughput."
+    },
     "publicAcceptance": "pending"
   },
   "limits": [
@@ -1172,5 +1643,25 @@
     "The short local performance sample does not replace public 120-second driving or full-race/device checks.",
     "The full single-player completion contract remains active. Multiplayer implementation is excluded."
   ],
-  "fullGoalComplete": false
+  "fullGoalComplete": false,
+  "retainedFailedAttempts": [
+    {
+      "stage": "capacity-harness",
+      "result": "Missing browser source import in the production image; process exited 1 before running capacity cases, without OOM.",
+      "resolution": "Read independent profiles from frozen shipped release manifests, then rerun the complete 57-account container audit.",
+      "logOnDeploymentHost": "/data/utxoplay/releases/20261031-nightshift-rivals-14.0.0/capacity-missing-source-import.log"
+    },
+    {
+      "stage": "rendered-courier-observation",
+      "result": "The first staged launch check timed out while the race kept moving and the courier had launched. The read-only helper modules were imported after resuming, leaving a network-dependent observation gap.",
+      "resolution": "Preload observers while paused, then resume using ordinary controller input; all four scenarios pass on the same staged image. The combat harness uses the same ordering.",
+      "localDiagnostic": "artifacts/rivals-v14/stage-tactics-observation-timeout/failure.json"
+    }
+  ],
+  "ci": {
+    "runtimeSource": "b4add5da95d931c85ee60811c334dce4b3ffbee2",
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41125243625",
+    "browserSource": "success",
+    "native": "success"
+  }
 }

@@ -1,5 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {createGame,applyAction} from '../games/arcade/web/nightshift14-rules.mjs';
 import {createGame as game13,step as step13} from '../games/arcade/web/nightshift13-rules.mjs';
 import {SAVED_PROFILES,sessionRules} from '../games/arcade/web/nightshift14-session-rules.mjs';
@@ -7,7 +8,7 @@ import {combatHud,rivalReadout} from '../games/arcade/web/nightshift14-feedback.
 import {tacticalReadout} from '../games/arcade/web/nightshift14-tactics.mjs';
 import {PersonalGhost} from '../games/arcade/web/nightshift14-ghost.mjs';
 test('saved sessions choose their exact profile; a future version or mismatched profile never gets optimistic rules',()=>{
- for(let version=8;version<=14;version++){const state={game:{kind:'drift-run',...(version===8?{}:{physics_version:version})},session:{profile:SAVED_PROFILES[version]}};assert.equal(sessionRules(state).version,version);assert.equal(sessionRules(state).legacy,version===8);assert.throws(()=>sessionRules({...state,session:{profile:SAVED_PROFILES[version===14?13:14]}}));}
+ for(let version=8;version<=14;version++){const published=JSON.parse(readFileSync(version===14?'docs/release-integrity.json':`docs/release-integrity-v${version}.json`));assert.equal(SAVED_PROFILES[version],published.profile);const state={game:{kind:'drift-run',...(version===8?{}:{physics_version:version})},session:{profile:SAVED_PROFILES[version]}};assert.equal(sessionRules(state).version,version);assert.equal(sessionRules(state).legacy,version===8);assert.throws(()=>sessionRules({...state,session:{profile:SAVED_PROFILES[version===14?13:14]}}));}
  assert.equal(sessionRules({game:game13(),session:{profile:SAVED_PROFILES[13]}}).rules.step,step13);
  assert.throws(()=>sessionRules({game:{kind:'drift-run',physics_version:15},session:{profile:SAVED_PROFILES[14]}}));
 });

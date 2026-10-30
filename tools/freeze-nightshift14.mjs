@@ -12,7 +12,7 @@ const output=spawnSync('cargo',['run','--release','--locked','--offline','--mani
 const build=spawnSync('npm',['run','build'],{stdio:'inherit',env:{...process.env,DRIFT_BUILD_ROOT:process.env.DRIFT_BUILD_ROOT||'artifacts/rivals-v14/site'}});assert.equal(build.status,0);
 const browserFiles={};function walk(dir){for(const e of readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(!/\.(br|gz)$/.test(p))browserFiles[path.relative('dist/nightshift',p).split(path.sep).join('/')]=sha(p);}}walk('dist/nightshift');
 const nativeSources={...previous.nativeSources};for(const p of ['src/game.rs','src/driver.rs','src/rivals.rs','src/weapons.rs','src/session.rs','src/main.rs','src/lib.rs','Cargo.lock','Cargo.toml']){const file='games/nightshift-v14/native/'+p;nativeSources[file]=sha(file);}
-const hostFiles=new Set([...Object.keys(previous.presentationHostFiles),'host/nightshift14.mjs','host/runtime-pool.mjs']);
+const hostFiles=new Set([...Object.keys(previous.presentationHostFiles),'host/nightshift14.mjs','host/runtime-pool.mjs','games/nightshift-v14/host.json']);
 const nativeBinaries={...previous.nativeBinaries};
 // A presentation rebuild can retain an already measured Bookworm binary only
 // while every bound native input and its application profile remain identical.

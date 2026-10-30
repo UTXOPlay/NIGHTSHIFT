@@ -24,9 +24,9 @@ try{
   }
   assert.ok(tape,kind+' is reachable through ordinary controls');for(let n=0;n<tape.length;n+=120)state=await send(state,{type:'ticks',inputs:tape.slice(n,n+120)});
   if(!state.game.tick)state=await send(state,{type:'ticks',inputs:[packInput(0,0,0,0)]});
-  await p.reload();await p.waitForFunction(()=>__driftReview?.().loaded);await p.locator('utxo-loader').waitFor({state:'detached'});await p.getByRole('button',{name:'Resume race',exact:true}).click();await p.waitForFunction(()=>__driftReview().running);
-  const base=await p.evaluate(()=>__driftReview().game);
+  await p.reload();await p.waitForFunction(()=>__driftReview?.().loaded);await p.locator('utxo-loader').waitFor({state:'detached'});const base=await p.evaluate(()=>__driftReview().game);
   await p.evaluate(async kind=>{const{combatInput}=await import('./__combat_driver.mjs'),{readInput}=await import('./_arcade/nightshift12-input.mjs');window.__combatDriver=setInterval(()=>{const r=__driftReview();if(r.running)__setCombatControl(readInput(combatInput(r.game,kind)));},1000/30);},kind);
+  await p.getByRole('button',{name:'Resume race',exact:true}).click();await p.waitForFunction(()=>__driftReview().running);
   await p.waitForFunction(({kind,base})=>{const r=__driftReview(),g=r.game,f=r.feedback;return kind==='collision'?g.shield<base.shield&&f.hitAge<.8:kind==='hit'?g.hull<base.hull&&f.hitAge<.8:kind==='guard'?g.counter_ticks>0&&f.guardAge<.8:kind==='rival-hit'?g.attack_hits>base.attack_hits&&f.active>0:kind==='disable'?g.takedowns>base.takedowns&&f.rivalAges.some(a=>a<.8):kind==='recover'?g.events.some(e=>e.kind==='recover'&&e.target===-1)&&f.active>0:r.ending&&f.wreckAge<.8;},{kind,base},{timeout:18000});
   const impact=await p.evaluate(()=>__driftReview());await p.screenshot({path:out+'/'+kind+'.png'});
   if(kind==='guard'){await p.waitForFunction(n=>__driftReview().game.dodges>n,base.dodges,{timeout:3000});assert.equal(await p.evaluate(()=>__driftReview().game.stun),0);}
