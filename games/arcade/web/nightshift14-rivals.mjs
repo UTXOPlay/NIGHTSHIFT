@@ -21,7 +21,7 @@ export function stageInterceptionRivals(g,finish,count){
 export function trafficSpawnPoint(g,period){
  if(g.bodies.filter(b=>b.tag===1).length>=32)return null;
  const cars=[{distance:g.distance,speed:g.speed},...g.rivals.filter(r=>!r.finish&&!r.staged)].sort((a,b)=>a.distance-b.distance),groups=[];
- for(const car of cars){if(groups.length&&car.distance-groups.at(-1).distance<2400)groups[groups.length-1]=car;else groups.push(car);}
+ for(const car of cars){const group=groups.at(-1);if(group&&car.distance-group.base<2400){group.distance=car.distance;group.speed=car.speed;}else groups.push({distance:car.distance,speed:car.speed,base:car.distance});}
  const anchor=groups[trunc(g.tick/period)%groups.length];if(anchor.speed<=300)return null;
  const distance=anchor.distance+Math.max(2400,anchor.speed*2);
  return g.roadblock_distance&&Math.abs(distance-g.roadblock_distance)<2500?null:distance;

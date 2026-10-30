@@ -14,12 +14,14 @@ pub fn traffic_spawn_point(g: &Game, period: i32) -> Option<i32> {
             .map(|r| (r.distance, r.speed)),
     );
     cars.sort_by_key(|a| a.0);
-    let mut groups: Vec<(i32, i32)> = vec![];
+    let mut groups: Vec<(i32, i32, i32)> = vec![];
     for car in cars {
-        if groups.last().is_some_and(|last| car.0 - last.0 < 2400) {
-            *groups.last_mut().unwrap() = car;
+        if groups.last().is_some_and(|last| car.0 - last.2 < 2400) {
+            let last = groups.last_mut().unwrap();
+            last.0 = car.0;
+            last.1 = car.1;
         } else {
-            groups.push(car);
+            groups.push((car.0, car.1, car.0));
         }
     }
     let anchor = groups[(g.tick / period) as usize % groups.len()];

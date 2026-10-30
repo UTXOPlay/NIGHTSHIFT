@@ -55,6 +55,11 @@ test('traffic streams ahead of separated leaders and stays under its explicit po
  assert.equal(trafficSpawnPoint(g,135),13000);
  g.bodies=Array.from({length:32},()=>({tag:1}));assert.equal(trafficSpawnPoint(g,135),null);
 });
+test('a stretched chain of racers cannot merge every occupied road section into the leader section',()=>{
+ const {g,r}=isolated();g.distance=0;g.speed=1500;r.distance=2000;r.speed=1500;
+ Object.assign(g.rivals[1],{finish:0,distance:4000,speed:1500});g.tick=1;assert.equal(trafficSpawnPoint(g,135),5000);
+ g.tick=136;assert.equal(trafficSpawnPoint(g,135),7000);
+});
 test('the player and AI cannot acquire EMP through a vehicle or solid roadblock',()=>{
  const {g,r}=isolated();g.distance=10000;g.drift_x=1000;r.distance=10400;
  const source=combatActor(g,-1);assert.ok(forwardShot(g,source,r));
