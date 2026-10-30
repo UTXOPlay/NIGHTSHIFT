@@ -135,7 +135,7 @@ def catalog_from_store(label):
 
 def stage():
     game, store = inspect(GAME), inspect(STORE)
-    assert game["Image"] == "sha256:74bb75aeeafd25c7e69152d3af400b67dea341e5605ed04abf471b4e282e855c", "Rebase onto the current Nightshift release before staging"
+    assert game["Image"] == "sha256:1a64de5ef76100df01e1e36dc6c9d1dfbea6e8e29dbb60d09db36c9e5960afcd", "Rebase onto the current Nightshift release before staging"
     private("game-before.private.json", game)
     private("store-stage-base.private.json", store)
     game_image = build("game", game["Image"])

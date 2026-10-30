@@ -28,13 +28,20 @@ try{
  }
  checks.sixGroundedVehicles=true;
  await p.locator('[data-vehicle="0"]').click();await p.getByRole('button',{name:'Career events',exact:true}).click();await p.locator('[data-mode="0"]').click();await p.getByRole('button',{name:'Start selected race',exact:true}).click();await p.waitForFunction(()=>__driftReview().running);
+ const raceId=await p.evaluate(()=>__driftReview().game.race_id);
  for(const[width,height]of[[1920,1080],[2560,1080],[2560,1440],[3840,2160],[844,390]]){
+  if(!(await p.evaluate(()=>__driftReview().running))){await p.getByRole('button',{name:'Resume race',exact:true}).click();await p.waitForFunction(()=>__driftReview().running);}
   await p.setViewportSize({width,height});await p.keyboard.down('w');await p.waitForTimeout(650);await p.keyboard.up('w');
-  const sample=await p.evaluate(()=>{const r=__driftReview(),a=r.project(2,0,0),inverse=r.pointer(a.x,a.y);return{buffer:r.buffer,inverse,tick:r.game.tick,distance:r.game.distance,overflow:document.documentElement.scrollWidth>innerWidth};});
+  const sample=await p.evaluate(()=>{const r=__driftReview(),a=r.project(2,0,0),inverse=r.pointer(a.x,a.y);return{running:r.running,raceId:r.game.race_id,buffer:r.buffer,inverse,tick:r.game.tick,distance:r.game.distance,overflow:document.documentElement.scrollWidth>innerWidth};});
+  assert.equal(sample.running,true,'Each resized driving sample is active');assert.equal(sample.raceId,raceId,'Resizing and resuming preserve the race');
   assert.ok(sample.buffer.width*sample.buffer.height<=3686400);assert.ok(Math.abs(sample.inverse.x-1000)<.01&&Math.abs(sample.inverse.y-500)<.01);assert.equal(sample.overflow,false);layouts.push({width,height,...sample});
   await p.screenshot({path:out+'/race-'+width+'x'+height+'.png'});
+  // Confirm this moving sample before the next one. A slow private preview
+  // transport can otherwise reach the game's bounded pending-input pause.
+  await p.keyboard.press('p');await p.waitForFunction(()=>!__driftReview().running&&!__driftReview().pending&&!__driftReview().sending);
  }
  assert.ok(layouts.at(-1).distance>layouts[0].distance);checks.movingResizeAndInverseInput=true;
+ await p.getByRole('button',{name:'Resume race',exact:true}).click();await p.waitForFunction(()=>__driftReview().running);
  assert.equal(await p.locator('.map-rival').count(),5);const follow=await p.locator('#minimap svg').getAttribute('viewBox');assert.notEqual(follow,'0 0 160 160');await p.locator('#minimap').click();assert.equal(await p.locator('#minimap svg').getAttribute('viewBox'),'0 0 160 160');await p.locator('#minimap').click();assert.notEqual(await p.locator('#minimap svg').getAttribute('viewBox'),'0 0 160 160');checks.minimapActorsAndOverview=true;
  await p.keyboard.press('p');await p.waitForFunction(()=>!__driftReview().pending&&!__driftReview().sending);const tick=await p.evaluate(()=>__driftReview().game.tick);await p.emulateMedia({reducedMotion:'reduce'});await p.waitForTimeout(250);assert.equal(await p.evaluate(()=>__driftReview().game.tick),tick);checks.pausedReducedMotionPreservesRules=true;
  const touch=await browser.newContext({viewport:{width:844,height:390},isMobile:true,hasTouch:true});touch.setDefaultTimeout(Number(process.env.DRIFT_TIMEOUT)||90000);const mobile=await touch.newPage();mobile.on('pageerror',e=>errors.push(e.message));let exit;if(process.env.DRIFT_AUTH==='1')exit=await reviewSession(touch,origin);

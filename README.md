@@ -95,6 +95,7 @@ npm run test:browser
 npm run test:maps
 npm run test:combat
 npm run test:performance
+node tools/nightshift13-connection-review.mjs
 ```
 
 The review server runs at `http://127.0.0.1:18940`; reports go under ignored `artifacts/`. The purchase acceptance test expects a new career, so use a fresh review data directory when repeating it. `DRIFT_ORIGIN`, `DRIFT_OUT`, `DRIFT_BIN` and `DRIFT_BUILD_ROOT` override test locations. Presentation acceptance also supports `DRIFT_TIMEOUT` in milliseconds for slow private preview transports; this changes functional-test waiting only, not loading measurements or acceptance assertions. Public UTXOPlay review is opt-in with `DRIFT_AUTH=1`; it uses a fresh unfunded QA wallet in memory and sends no transaction.
