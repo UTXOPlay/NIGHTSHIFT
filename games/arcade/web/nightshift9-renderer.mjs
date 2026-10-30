@@ -85,8 +85,8 @@ export class DriftRenderer{
  async prepareRace(g){
   await Promise.all([this.ensureVehicle(g.vehicle),this.loadRaceAssets()]);if(this.preparedModes.has(g.mode))return;
   this.preparing=true;const map=this.mapMode,preview=this.previewMode;this.mapMode=null;this.previewMode=false;
-  try{this.draw(g,g,1,0,1,{running:false,reduced:true,low:false,warmup:true});await this.renderer.compileAsync(this.scene,this.camera);this.preparedModes.add(g.mode);}
-  finally{this.preparing=false;this.mapMode=map;this.previewMode=preview;this.reset();this.gpu.reset();}
+  try{this.draw(g,g,1,0,1,{running:false,reduced:true,low:false,warmup:true});await this.renderer.compileAsync(this.scene,this.camera);this.renderer.shadowMap.enabled=false;await this.renderer.compileAsync(this.scene,this.camera);this.preparedModes.add(g.mode);}
+  finally{this.renderer.shadowMap.enabled=true;this.preparing=false;this.mapMode=map;this.previewMode=preview;this.reset();this.gpu.reset();}
  }
  engineSnapshot(){return{detailVehicles:this.playerCars.flatMap((c,n)=>c.userData.detailed?[n]:[]),raceAssetsReady:!!this.raceAssetsReady,...this.world.snapshot(),ready:this.ready,preparedModes:[...this.preparedModes],errors:this.assetErrors.length,geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures,programs:this.renderer.info.programs?.length||0,features:this.features,terrainBands:this.scenery.snapshot(),surface:this.surface,lightingProbes:this.atmosphere?.probes.length,post:this.post.snapshot()};}
  dispose(){
