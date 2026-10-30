@@ -19,7 +19,7 @@ function sourceMaterial(mesh){return Array.isArray(mesh.material)?mesh.material[
 function category(m){return m.name.split('.')[0];}
 const texturePixels=new WeakMap();
 function pixels(map){if(!map?.image)return null;if(texturePixels.has(map.image))return texturePixels.get(map.image);const i=map.image,c=document.createElement('canvas');c.width=i.width;c.height=i.height;const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(i,0,0);const p={data:x.getImageData(0,0,c.width,c.height).data,width:c.width,height:c.height};texturePixels.set(i,p);return p;}
-function cook(root,detail){
+export function cook(root,detail){
  root.updateMatrixWorld(true);const groups=new Map();
  root.traverse(o=>{if(!o.isMesh)return;let parent=o.parent,wheel=null;while(parent){if(/^Wheel_[FR][LR]/.test(parent.name)){wheel=parent;break;}parent=parent.parent;}
   const key=detail&&wheel?wheel.name:'Body';if(!groups.has(key))groups.set(key,{parts:[],wheel,transform:wheel?.matrixWorld.clone()});
@@ -62,19 +62,19 @@ function kit(spec){
 }
 
 export async function loadFleet(manager){
- const loader=new GLTFLoader(manager),cache=new Map(),authored=await loader.loadAsync('/arcade/art/nightshift/fleet-v11/concept-authored.glb');
- await Promise.all(FLEET.map(s=>s.body).flatMap(body=>[false,true].map(async detail=>{
-  const gltf=await loader.loadAsync(`/arcade/art/nightshift/${'fleet-v11'}/${body}-${detail?'hero':'race'}.glb`);cache.set(body+detail,cook(gltf.scene,detail));
- })));
- const make=(index,detail=true)=>{
+ const loader=new GLTFLoader(manager),cache=new Map(),tasks=new Map();let authored;
+ const ensure=(body,detail)=>{const key=body+detail;if(tasks.has(key))return tasks.get(key);const task=loader.loadAsync(`/arcade/art/nightshift/fleet-ready-v11/${body}-${detail?'hero':'race'}.glb`).then(gltf=>{const parts=[];gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;const geometry=mesh.geometry,surface=geometry.getAttribute('_surface');if(!surface)throw Error('Invalid prepared fleet attributes');geometry.setAttribute('surface',surface);geometry.deleteAttribute('_surface');parts.push({name:mesh.name,geometry,transform:mesh.userData.wheelTransform?new T.Matrix4().fromArray(mesh.userData.wheelTransform):null});mesh.material.dispose();});cache.set(key,parts);}).catch(e=>{tasks.delete(key);throw e;});tasks.set(key,task);return task;};
+ await Promise.all([...new Set(FLEET.map(s=>s.body))].map(body=>ensure(body,false)));
+ const make=(index,detail=false)=>{
   const spec=FLEET[index];if(index===0&&detail)return authoredCar(authored.scene,spec.paint);const g=new T.Group(),material=finish(spec.paint);g.userData.wheels=[];g.userData.index=index;g.userData.source=spec.body;
   for(const part of cache.get(spec.body+detail)){
    const m=new T.Mesh(part.geometry,material);m.castShadow=detail||part.name==='Body';m.receiveShadow=true;
    if(part.transform){part.transform.decompose(m.position,m.quaternion,m.scale);m.name=part.name;g.userData.wheels.push(m);}
    g.add(m);
   }
-  g.updateMatrixWorld(true);const contacts=g.userData.wheels.length?g.userData.wheels.map(w=>new T.Box3().setFromObject(w).min.y):[new T.Box3().setFromObject(g).min.y];const ground=new T.Box3().setFromObject(g).min.y;for(const child of g.children)child.position.y-=ground;g.updateMatrixWorld(true);g.userData.contactY=g.userData.wheels.map(w=>new T.Box3().setFromObject(w).min.y);prepareRig(g);return g;
+  g.updateMatrixWorld(true);const ground=new T.Box3().setFromObject(g).min.y;for(const child of g.children)child.position.y-=ground;g.updateMatrixWorld(true);g.userData.contactY=g.userData.wheels.map(w=>new T.Box3().setFromObject(w).min.y);prepareRig(g);return g;
  };
- const cars=FLEET.map((_,i)=>make(i));for(const [i,car]of cars.entries()){car.userData.far=make(i,false);car.userData.far.visible=false;car.add(car.userData.far);}
- return{cars,rivals:Array.from({length:5},(_,i)=>{const g=make(i+1,true);g.userData.far=make(i+1,false);g.add(g.userData.far);g.userData.far.visible=false;return g;}),traffic:Array.from({length:16},(_,i)=>make(i%6,false)),pursuer:make(2,false),ghost:make(0,false),sources:new Set(FLEET.map(s=>s.body)).size,meshesPerRival:cache.get('concept-v11false').length};
+ const detailed=new Map();
+ const detail=async (index,role='player')=>{const key=index+':'+role;if(detailed.has(key))return detailed.get(key);const task=(async()=>{if(index===0)authored??=await loader.loadAsync('/arcade/art/nightshift/fleet-ready-v11/concept-authored.glb');else await ensure(FLEET[index].body,true);const g=make(index,true);g.userData.far=make(index,false);g.userData.far.visible=false;g.add(g.userData.far);return g;})().catch(e=>{detailed.delete(key);throw e;});detailed.set(key,task);return task;};
+ return{cars:FLEET.map((_,i)=>make(i)),rivals:Array.from({length:5},(_,i)=>make(i+1)),traffic:Array.from({length:16},(_,i)=>make(i%6)),pursuer:make(2),ghost:make(0),detail,make,sources:new Set(FLEET.map(s=>s.body)).size};
 }

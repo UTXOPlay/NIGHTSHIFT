@@ -1,3 +1,4 @@
+import {assetURL} from './nightshift-asset-url.mjs';
 import {driveFeedback,driveMix} from './nightshift9-drive-feedback.mjs';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 // Two credited engine recordings serve five ICE mixes; the EV uses a motor voice.
@@ -10,7 +11,7 @@ export class ArcadeAudio{
  graph(){
   const c=this.context;
   this.master=c.createGain();this.master.gain.value=this.enabled?1:0;this.master.connect(c.destination);
-  this.bus=c.createDynamicsCompressor();this.bus.threshold.value=-16;this.bus.knee.value=12;this.bus.ratio.value=3;this.bus.attack.value=.004;this.bus.release.value=.12;this.effects=c.createGain();this.effects.gain.value=this.effectsLevel??1;this.bus.connect(this.effects);this.effects.connect(this.master);this.musicGain=c.createGain();this.musicGain.gain.value=0;this.musicFilter=c.createBiquadFilter();this.musicFilter.type='lowpass';this.musicFilter.frequency.value=9000;this.musicFilter.connect(this.musicGain);this.musicGain.connect(this.master);this.music=new Audio('/arcade/audio/nightshift/nightdrive.ogg');this.music.loop=true;this.music.preload='none';this.musicSource=c.createMediaElementSource(this.music);this.musicSource.connect(this.musicFilter);
+  this.bus=c.createDynamicsCompressor();this.bus.threshold.value=-16;this.bus.knee.value=12;this.bus.ratio.value=3;this.bus.attack.value=.004;this.bus.release.value=.12;this.effects=c.createGain();this.effects.gain.value=this.effectsLevel??1;this.bus.connect(this.effects);this.effects.connect(this.master);this.musicGain=c.createGain();this.musicGain.gain.value=0;this.musicFilter=c.createBiquadFilter();this.musicFilter.type='lowpass';this.musicFilter.frequency.value=9000;this.musicFilter.connect(this.musicGain);this.musicGain.connect(this.master);this.music=new Audio(assetURL('/arcade/audio/nightshift/nightdrive.ogg'));this.music.loop=true;this.music.preload='none';this.musicSource=c.createMediaElementSource(this.music);this.musicSource.connect(this.musicFilter);
   this.noise=c.createBuffer(1,c.sampleRate*2,c.sampleRate);const data=this.noise.getChannelData(0);let seed=9127,v=0;
   for(let n=0;n<data.length;n++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;v=(v+(seed/2147483648-1)*.07)/1.07;data[n]=v*3;}
   this.engine=this.loop('lowpass',1200);this.engineSport=this.loop('lowpass',1800);this.tyres=this.loop('lowpass',5000);
@@ -23,7 +24,7 @@ export class ArcadeAudio{
   if(this.loading||this.loaded===4||performance.now()<(this.retryAt||0))return;
   this.loading=Promise.allSettled(['engine','engineSport','tyres','impact'].map(async name=>{
    if(this.buffers[name])return;
-   const r=await fetch('/arcade/audio/nightshift/'+(name==='engineSport'?'engine-sport':name)+'.wav');if(!r.ok)throw Error(name+': '+r.status);
+   const r=await fetch(assetURL('/arcade/audio/nightshift/'+(name==='engineSport'?'engine-sport':name)+'.wav'));if(!r.ok)throw Error(name+': '+r.status);
    const buffer=await this.context.decodeAudioData(await r.arrayBuffer());this.buffers[name]=buffer;this.loaded++;
    if(name!=='impact')this.startLoop(this[name],buffer);
   })).then(results=>{this.errors=results.filter(r=>r.status==='rejected').map(r=>String(r.reason));this.loading=null;if(this.errors.length)this.retryAt=performance.now()+5000;});

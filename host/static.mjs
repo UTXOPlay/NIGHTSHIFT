@@ -1,5 +1,6 @@
 import express from "express";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
+import {createHash} from 'node:crypto';
 import path from "node:path";
 export function encodingQuality(header, encoding) {
   const values = new Map(
@@ -30,11 +31,12 @@ export function assetCache(file) {
 }
 export function optimizedStatic(root, { index = "index.html" } = {}) {
   const absolute = path.resolve(root);
+  const fingerprints = new Map();
   const serve = express.static(absolute, {
     index,
     cacheControl: false,
     setHeaders(res, file) {
-      res.setHeader("Cache-Control", assetCache(file));
+      res.setHeader("Cache-Control", res.locals.assetFingerprint ? "public, max-age=31536000, immutable" : assetCache(file));
     },
   });
   return (req, res, next) => {
@@ -46,6 +48,16 @@ export function optimizedStatic(root, { index = "index.html" } = {}) {
       return next();
     }
     if (pathname.endsWith("/") && index) pathname += index;
+    const hint = req.query.h;
+    if (hint !== undefined && /\.(?:glb|webp|png|jpg|hdr|wav|ogg)$/.test(pathname)) {
+      const source = path.resolve(absolute, "." + pathname);
+      if (!source.startsWith(absolute + path.sep) || !existsSync(source)) return next();
+      const stat = statSync(source), prior = fingerprints.get(source);
+      const entry = prior?.mtime === stat.mtimeMs && prior.size === stat.size ? prior : {mtime:stat.mtimeMs,size:stat.size,hash:createHash('sha256').update(readFileSync(source)).digest('hex').slice(0,16)};
+      fingerprints.set(source,entry);
+      if (hint !== entry.hash) return res.status(404).type('text').send('Resource changed; reload the game.');
+      res.locals.assetFingerprint = true;
+    }
     if (
       !["GET", "HEAD"].includes(req.method) ||
       !/\.(?:js|mjs|css|json|svg|html|glb)$/.test(pathname)

@@ -1,0 +1,50 @@
+{
+  "description": "Lossless geometry/material-attribute baking with the same cook function previously run in the browser. Source licenses are unchanged.",
+  "assets": [
+    {
+      "name": "concept-v11-race.glb",
+      "bytes": 690400,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "nissan-s14-race.glb",
+      "bytes": 758760,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "nissan-s14-hero.glb",
+      "bytes": 2850312,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "bmw-320i-race.glb",
+      "bytes": 754912,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "bmw-320i-hero.glb",
+      "bytes": 1867588,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "porsche-911-gt3-race.glb",
+      "bytes": 988080,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "porsche-911-gt3-hero.glb",
+      "bytes": 3814960,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "audi-tt-race.glb",
+      "bytes": 772580,
+      "maxAttributeDelta": 0
+    },
+    {
+      "name": "audi-tt-hero.glb",
+      "bytes": 3749092,
+      "maxAttributeDelta": 0
+    }
+  ]
+}
