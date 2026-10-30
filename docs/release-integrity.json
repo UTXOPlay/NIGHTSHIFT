@@ -1,5 +1,5 @@
 {
-  "version": "12.0.0",
+  "version": "12.0.1",
   "profile": "2f1035f5f209c34a1ed0a07a16bf65a2378f1669ee14634c4bb2571c0ee5e224",
   "nativeSources": {
     "games/nightshift-v9/native/src/game.rs": "ba0b16c242c44e8415cdca30779e75b9e5f716e9b32eede9800424bdab6a0e30",
@@ -197,8 +197,8 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d1d3c2ca98b26ccbacca07262d26acddb06e2981edcf29bc31db6a06e21dc56a",
-    "app.js": "2d5881356e75cb33250d0c230a3cf68b70a3c25d0dda20eab1b6e5b65f08bb57",
-    "index.html": "c2dfb91db8b0ad138c5450fe6f0dc2f6e256bf4b2e07b6475a779e99f58eb7a5",
+    "app.js": "587ef3aaf0a6a9077f736089586b092ab9e868c2d7e6af7877b7daa25708b670",
+    "index.html": "8e01bfca1a59a7e9027158c879f26d2856235b6aec5b36d8f0c191942110f40b",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8",
     "_arcade/nightshift12-input.mjs": "a2512329814aa1c0175e728c23b832437f5e80c3d8a9a14bbf71332fb097b3e1",
     "_arcade/nightshift12-drive.mjs": "88426434c83cb892474309f8d5a97a102c4bbfdb3da16234fbc50891c77d4201",

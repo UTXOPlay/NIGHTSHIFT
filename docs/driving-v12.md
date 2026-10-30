@@ -19,3 +19,7 @@ The V11 loading optimizations and immutable asset hashes remain in place. This r
 ## Migration memory budget
 
 The first isolated server run caught two packaging/runtime issues before cutover: the workstation binary needed newer system libraries, and the inherited 384 MiB cap could not hold old/new signed-session databases during a multi-version migration burst. The release binary is rebuilt and tested on Rust 1.97.1 / Debian Bookworm and must report the identical application profile. The migration host now checks active-file receipts and skips absent intermediate stores; new customers allocate only a V12 store. Native executors retain at most six accounts each. The game container has an explicit 1,536 MiB memory ceiling with swapping disabled, leaving space for all five bounded caches. Staging capacity and migration checks are release gates; production data and prior images remain recoverable.
+
+## Presentation follow-up — 12.0.1
+
+A final review caught a V11-only boot-notice condition that mislabeled a fresh V12 event as a legacy save. The corrected condition and power-upgrade wording ship with fresh browser cache keys. The native profile, all five executables and every saved race remain unchanged. Career `spec_best` still carries historical PBs across rule generations; profile-local ghosts remain separate. A future career schema should preserve legacy PB provenance and separately record current-rule server bests.
