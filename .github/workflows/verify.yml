@@ -36,17 +36,10 @@ jobs:
             games/nightshift-v8/native -> ../../../target
       - run: npm run test:native
       - run: npm run build:native
-      - run: npm run build:native:legacy
-      - run: npm run build:native:previous
-      - run: cargo build --release --locked --manifest-path games/nightshift-v10/native/Cargo.toml --target-dir target
-      - run: cargo build --release --locked --manifest-path games/nightshift-v11/native/Cargo.toml --target-dir target
-      - run: cargo build --release --locked --manifest-path games/nightshift-v12/native/Cargo.toml --target-dir target
+      - run: npm run build:native:history
       - run: npm run test:conformance
       - run: npm run test:conformance:previous
       - run: npm run test:replay
 
-      # V14 development gates; the deployed release remains V13 until browser acceptance.
-      - run: npm run test:native:v14
-      - run: npm run build:native:v14
-      - run: npm run test:conformance:v14
-      - run: npm run test:replay:v14
+      - run: npm run test:conformance:v13
+      - run: npm run test:replay:v13

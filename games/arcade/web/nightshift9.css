@@ -148,3 +148,9 @@
 #growth-summary .chapter-choice{width:auto;min-height:62px;border-radius:3px;height:auto;overflow:hidden;box-shadow:none;position:relative}.chapter-choice span{min-width:0;flex:1}.chapter-choice small{position:static;display:block;line-height:1.3;font-size:clamp(9px,.55vw,21px)}.chapter-choice b{font-size:clamp(11px,.65vw,25px);line-height:1.2;overflow-wrap:normal}.chapter-choice svg{width:clamp(16px,1vw,32px);height:auto}@media(max-height:560px){#growth-summary .chapter-choice{min-height:44px;padding:5px;gap:5px}.chapter-choice b{display:none}.chapter-choice small{font-size:8px;letter-spacing:.04em}.chapter-choice svg{width:14px}}
 
 #route-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}canvas{transition:opacity .18s ease}@media(prefers-reduced-motion:reduce){canvas{transition:none}}
+
+/* Courier and line-of-sight cues stay in the picture and reuse the marker atlas. */
+.map-rival.staged{fill:none;stroke:#e7c18a;stroke-dasharray:2 2;opacity:.75}.map-rival.gate-closed:not(.staged){fill:#e7c18a;opacity:.55}
+#target[data-phase=blocked],#target[data-phase=gate-closed],#target[data-phase=guarded]{color:#ffd494}
+#target[data-phase=blocked]:before{opacity:.45;filter:saturate(.25)}#target[data-phase=blocked] i{background:#ffd494}
+#target[data-phase=secured]{color:#92e6b9}#abilities .line-blocked{border-color:#e7c18a!important}

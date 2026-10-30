@@ -17,6 +17,8 @@ Current product status: **playable solo arcade racer under active completion**. 
 - Generated transparent markers and effects for collisions, attacks, shields, counters, disabled rivals and fatal rollovers.
 - Keyboard, pointer drag and mobile thumb-stick controls. Landscape play, safe-area controls, reduced motion, bounded rendering resolution and layouts through 3840×2160.
 
+Version 14 gives rivals the shared pedal/steering model, continuous passing lines, hazard braking and resource-funded nitrous. Forward EMP requires a clear path, and interception couriers stage at fixed relay gates before launching. The V14 browser resumes V8–V13 races with their exact original profiles; starting another event explicitly migrates the verified career. A two-worker native pool bounds historical executor residency. See [V14 integration and evidence](docs/nightshift-v14.md). The public deployment status is recorded separately; a development version number is not delivery evidence.
+
 Version 13 adds chapter licenses, optional sector contracts, a closing interception battle with podium requirement, final drift exits, itemized payouts, PB provenance and purchased-part/build tradeoffs. Existing V8–V12 races and signed proofs retain their original executors.
 
 Version 13.1 defers the 3D engine until the garage or a race is opened, uses actual course and fleet captures, adds varied facade and lighting assets, retains the hero car's authored materials, and prepares compressed lighting probes offline. See [presentation evidence and remaining limitations](docs/presentation-v13.1.md). Native rules and signed saves are unchanged.
@@ -35,12 +37,11 @@ Use Node.js 22 or later and Rust. The native RocksDB dependencies require Clang/
 sudo apt-get install clang libclang-dev pkg-config protobuf-compiler
 npm ci
 npm run build:native
-npm run build:native:legacy
-npm run build:native:previous
+npm run build:native:history
 npm run dev
 ```
 
-Open **http://127.0.0.1:8898/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The native service listens only on loopback port 8798.
+Open **http://127.0.0.1:8898/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8800. Historical executors start lazily when an unfinished saved event needs them.
 
 For a production process, build once and supply a stable server-only token:
 

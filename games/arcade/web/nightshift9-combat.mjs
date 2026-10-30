@@ -33,6 +33,7 @@ export class CombatEffects {
   if(kind==='pulse'&&g.gadget===1)this.burst(7,x,-1,3,.55,d,{ground:true});
   if(id>=0){const r=g.rivals[id],rx=(r.x/1000-1)*4,rz=-(r.distance-d)*.1;
    if(kind==='rival-hit'||kind==='rival-block'||kind==='disable'){this.burst(kind==='rival-block'?2:0,rx,rz,kind==='disable'?3.5:2.2,.6,d,{sequence:kind==='rival-block'?8:0});if(kind==='disable'){this.rivalStarts[id]=this.time;this.burst(4,rx,rz,2.8,.4,d);this.burst(6,rx,rz,3.4,.9,d);}else if(kind==='rival-hit')this.burst(4,rx,rz,3,.4,d);}
+   if(kind==='rival-launch')this.burst(2,rx,rz,1.4,.45,d,{ground:true});
    if(kind==='rival-shot'){const victim=target>=0?g.rivals[target]:null;this.burst(4,rx,rz,1.3,.16,d,{endX:((victim?.x??g.drift_x)/1000-1)*4,endZ:victim?-(victim.distance-d)*.1:0,projectile:true});}
   }
  }

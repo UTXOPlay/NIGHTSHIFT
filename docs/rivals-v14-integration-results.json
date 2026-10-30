@@ -1,0 +1,1176 @@
+{
+  "status": "local-browser-host-accepted-not-deployed",
+  "version": "14.0.0",
+  "currentProduction": "13.1.1",
+  "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+  "nodeChecks": {
+    "passed": 162,
+    "failed": 0
+  },
+  "frozenNativeVersions": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "boundNativeFiles": 45,
+  "browserFiles": 275,
+  "reports": {
+    "browser": {
+      "version": "14.0.0",
+      "checks": {
+        "menuHasNoWebGLOrRaceAssets": true,
+        "twelveActualRoutePreviews": true,
+        "garageLoadsOnlyItsAssets": true,
+        "actualFleetThumbnails": true,
+        "sixGroundedVehicles": true,
+        "movingResizeAndInverseInput": true,
+        "minimapActorsAndOverview": true,
+        "pausedReducedMotionPreservesRules": true,
+        "touchPortraitPausesAndClears": true
+      },
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 1920,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 999.9999999999995,
+            "y": 499.99999999999824
+          },
+          "tick": 21,
+          "distance": 12,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 999.9999999999999,
+            "y": 500.00000000000114
+          },
+          "tick": 56,
+          "distance": 96,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000.0000000000003,
+            "y": 499.9999999999993
+          },
+          "tick": 93,
+          "distance": 235,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000,
+            "y": 499.99999999999926
+          },
+          "tick": 137,
+          "distance": 470,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 844,
+            "height": 390
+          },
+          "inverse": {
+            "x": 999.9999999999995,
+            "y": 500.00000000000165
+          },
+          "tick": 207,
+          "distance": 907,
+          "overflow": false
+        }
+      ],
+      "cars": [
+        {
+          "vehicle": 0,
+          "bounds": {
+            "min": [
+              -1.0399999618530273,
+              0,
+              -1.7790935039520264
+            ],
+            "max": [
+              1.0399999618530273,
+              0.9546939134597778,
+              1.7790935039520264
+            ],
+            "size": [
+              2.0799999237060547,
+              0.9546939134597778,
+              3.5581870079040527
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 1,
+          "bounds": {
+            "min": [
+              -0.9050422310829163,
+              0,
+              -2.140582323074341
+            ],
+            "max": [
+              0.9050422310829163,
+              1.2245597635628656,
+              2.1428675651550293
+            ],
+            "size": [
+              1.8100844621658325,
+              1.2245597635628656,
+              4.28344988822937
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 2,
+          "bounds": {
+            "min": [
+              -0.9555545449256897,
+              0,
+              -2.1400856971740723
+            ],
+            "max": [
+              0.9555546045303345,
+              1.3599801347590983,
+              2.1399998664855957
+            ],
+            "size": [
+              1.9111091494560242,
+              1.3599801347590983,
+              4.280085563659668
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 3,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 4,
+          "bounds": {
+            "min": [
+              -1.0469425916671753,
+              0,
+              -2.1452722549438477
+            ],
+            "max": [
+              1.0469425916671753,
+              1.3631548082921654,
+              2.141364812850952
+            ],
+            "size": [
+              2.0938851833343506,
+              1.3631548082921654,
+              4.2866370677948
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 5,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "physicalDevices": false
+    },
+    "career": {
+      "version": "14.0.0",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        }
+      ],
+      "checks": {
+        "lockedPreview": true,
+        "chapterReceipt": true,
+        "nativeChapterUnlock": true,
+        "freeAllocation": true,
+        "uiPurchase": true,
+        "signedReplay": true,
+        "ordinaryPedalsAfterResize": true,
+        "portraitGate": true
+      },
+      "errors": [],
+      "physicalDevices": false
+    },
+    "combat": {
+      "version": "14.0.0",
+      "checks": [
+        {
+          "kind": "collision",
+          "triggerTick": 510,
+          "renderedTick": 511,
+          "visibleSprites": 2,
+          "signedReplay": true
+        },
+        {
+          "kind": "hit",
+          "triggerTick": 549,
+          "renderedTick": 550,
+          "visibleSprites": 3,
+          "signedReplay": true
+        },
+        {
+          "kind": "guard",
+          "triggerTick": 494,
+          "renderedTick": 494,
+          "visibleSprites": 1,
+          "signedReplay": true
+        },
+        {
+          "kind": "rival-hit",
+          "triggerTick": 1,
+          "renderedTick": 6,
+          "visibleSprites": 4,
+          "signedReplay": true
+        },
+        {
+          "kind": "disable",
+          "triggerTick": 1729,
+          "renderedTick": 1729,
+          "visibleSprites": 3,
+          "signedReplay": true
+        },
+        {
+          "kind": "wreck",
+          "triggerTick": 2555,
+          "renderedTick": 2555,
+          "visibleSprites": 2,
+          "signedReplay": true
+        },
+        {
+          "kind": "recover",
+          "triggerTick": 2637,
+          "renderedTick": 2638,
+          "visibleSprites": 0,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary V14 signed pedal inputs plus virtual standard Gamepad API; no game-state injection"
+    },
+    "tactics": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "kind": "blocked",
+          "triggerTick": 668,
+          "renderedTick": 670,
+          "readout": {
+            "icon": "emp",
+            "title": "LINE BLOCKED",
+            "detail": "Move past traffic or cover to acquire the target"
+          },
+          "target": {
+            "id": 2,
+            "marked": false,
+            "done": false,
+            "active": false,
+            "phase": "blocked",
+            "label": "LINE BLOCKED",
+            "name": "JINX",
+            "loadLimit": null,
+            "blocked": true
+          },
+          "signedReplay": true
+        },
+        {
+          "kind": "staged",
+          "triggerTick": 546,
+          "renderedTick": 546,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER AT THE RELAY",
+            "detail": "Launch ahead \u00b7 cargo cruise limit 162 KM/H"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "launch",
+          "triggerTick": 656,
+          "renderedTick": 656,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER ON THE MOVE",
+            "detail": "Gate ahead \u00b7 hold fire until amber"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "active",
+          "triggerTick": 839,
+          "renderedTick": 839,
+          "readout": {
+            "icon": "target",
+            "title": "BOUNTY GRID",
+            "detail": "12.9 KM TO FINISH"
+          },
+          "target": null,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary signed V14 pedal inputs and virtual standard Gamepad API; no game-state injection",
+      "physicalDevices": false
+    },
+    "legacy-browser": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": {
+        "originalV13LoadedExactly": true,
+        "originalV13PedalsAndReplay": true,
+        "explicitV14MigrationAndReplay": true,
+        "inactivePartsAndCareerRetained": true,
+        "originalSignedProofRetained": true,
+        "sameCanvasWithoutReload": true
+      },
+      "errors": [],
+      "oldTick": 61,
+      "newTick": 12,
+      "input": "Ordinary browser keyboard events and signed host commands; no game-state injection",
+      "physicalDevices": false
+    },
+    "controls": {
+      "checks": [
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns",
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Portrait gate pauses controller play and clears held input",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns"
+      ],
+      "runs": [
+        {
+          "touch": false,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 113,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        },
+        {
+          "touch": true,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 100,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        }
+      ],
+      "errors": []
+    },
+    "connection": {
+      "version": "14.0.0",
+      "jitterTick": 144,
+      "toleratesFourSecondSaveLatency": true,
+      "pausedAtTick": 324,
+      "boundedPendingPause": true,
+      "nativeBatchLimitRespected": true,
+      "allInputsConfirmedExactly": true,
+      "sameRaceResumed": true,
+      "nativeReplayVerified": true,
+      "errors": []
+    },
+    "host": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "freshAccountOnlyStartsCurrent": true
+        },
+        {
+          "version": 8,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 9,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 10,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 11,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 12,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 13,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        }
+      ],
+      "accountsOpened": 57,
+      "maxResidentExecutors": 2,
+      "peakCombinedProcessRss": 646025216,
+      "samples": [
+        {
+          "label": "v8 / 1",
+          "rss": 207069184,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 2",
+          "rss": 249581568,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 3",
+          "rss": 292134912,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 4",
+          "rss": 334413824,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 5",
+          "rss": 376725504,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 6",
+          "rss": 419016704,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 7",
+          "rss": 419217408,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 8",
+          "rss": 419360768,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 1",
+          "rss": 419295232,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 2",
+          "rss": 461594624,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 3",
+          "rss": 504229888,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 4",
+          "rss": 546820096,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 5",
+          "rss": 590319616,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 6",
+          "rss": 632528896,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 7",
+          "rss": 632610816,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 8",
+          "rss": 632692736,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 1",
+          "rss": 421851136,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 2",
+          "rss": 464224256,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 3",
+          "rss": 506511360,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 4",
+          "rss": 548802560,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 5",
+          "rss": 591089664,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 6",
+          "rss": 633643008,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 7",
+          "rss": 634273792,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 8",
+          "rss": 634810368,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 1",
+          "rss": 424669184,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 2",
+          "rss": 467492864,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 3",
+          "rss": 510218240,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 4",
+          "rss": 553308160,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 5",
+          "rss": 595578880,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 6",
+          "rss": 637816832,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 7",
+          "rss": 638033920,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 8",
+          "rss": 638070784,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 1",
+          "rss": 427102208,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 2",
+          "rss": 469925888,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 3",
+          "rss": 512602112,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 4",
+          "rss": 555180032,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 5",
+          "rss": 597868544,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 6",
+          "rss": 640458752,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 7",
+          "rss": 641085440,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 8",
+          "rss": 641519616,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 1",
+          "rss": 432328704,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 2",
+          "rss": 474615808,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 3",
+          "rss": 516907008,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 4",
+          "rss": 559280128,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 5",
+          "rss": 601563136,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 6",
+          "rss": 643805184,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 7",
+          "rss": 643960832,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 8",
+          "rss": 644009984,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 1",
+          "rss": 433025024,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 2",
+          "rss": 475398144,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 3",
+          "rss": 517767168,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 4",
+          "rss": 560173056,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 5",
+          "rss": 603607040,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 6",
+          "rss": 645828608,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 7",
+          "rss": 646000640,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 8",
+          "rss": 646025216,
+          "resident": 2
+        },
+        {
+          "label": "migrated v8",
+          "rss": 435568640,
+          "resident": 2
+        },
+        {
+          "label": "migrated v9",
+          "rss": 438190080,
+          "resident": 2
+        },
+        {
+          "label": "migrated v10",
+          "rss": 439095296,
+          "resident": 2
+        },
+        {
+          "label": "migrated v11",
+          "rss": 442486784,
+          "resident": 2
+        },
+        {
+          "label": "migrated v12",
+          "rss": 444182528,
+          "resident": 2
+        },
+        {
+          "label": "migrated v13",
+          "rss": 447827968,
+          "resident": 2
+        },
+        {
+          "label": "restart / 8",
+          "rss": 172838912,
+          "resident": 1
+        },
+        {
+          "label": "restart / 9",
+          "rss": 216219648,
+          "resident": 1
+        },
+        {
+          "label": "restart / 10",
+          "rss": 259768320,
+          "resident": 1
+        },
+        {
+          "label": "restart / 11",
+          "rss": 303546368,
+          "resident": 1
+        },
+        {
+          "label": "restart / 12",
+          "rss": 347566080,
+          "resident": 1
+        },
+        {
+          "label": "restart / 13",
+          "rss": 391532544,
+          "resident": 1
+        }
+      ],
+      "beforeRestart": {
+        "maxWorkers": 2,
+        "running": 0,
+        "queued": 0,
+        "runtimes": [
+          {
+            "version": 8,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 9,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 10,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 11,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 12,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 13,
+            "running": true,
+            "busy": false,
+            "starts": 3,
+            "evictions": 2
+          },
+          {
+            "version": 14,
+            "running": true,
+            "busy": false,
+            "starts": 2,
+            "evictions": 1
+          }
+        ]
+      },
+      "afterRestart": {
+        "maxWorkers": 2,
+        "running": 0,
+        "queued": 0,
+        "runtimes": [
+          {
+            "version": 8,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 9,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 10,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 11,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 12,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 13,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 14,
+            "running": true,
+            "busy": false,
+            "starts": 1,
+            "evictions": 0
+          }
+        ]
+      },
+      "restartRecovery": true,
+      "limitations": [
+        "Local Linux process RSS includes the review parent and its native children, not cgroup page cache or real concurrent users.",
+        "A staged container capacity check remains required before deployment."
+      ]
+    },
+    "performance": {
+      "version": "14.0.0",
+      "quality": "Auto",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "input": "virtual standard Gamepad API, ordinary signed inputs",
+      "menuMs": 277,
+      "wallSeconds": 20.136,
+      "simulationSeconds": 18.966666666666665,
+      "medianFps": 59,
+      "p10Fps": 41,
+      "medianCpuMs": 5.52,
+      "medianGpuMs": 11.798541,
+      "scales": [
+        1
+      ],
+      "maxBufferPixels": 2073600,
+      "maxSampledPendingInputs": 24,
+      "distance": 6717,
+      "errors": []
+    }
+  },
+  "delivery": {
+    "bookwormBinary": {
+      "sha256": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa",
+      "bytes": 22491768,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "buildImage": "sha256:5579cf8199622d288b4419228262cbb8034a2c0c3b4635f5acefad30304d40e2"
+    },
+    "stagedCgroupCapacity": "pending",
+    "publicAcceptance": "pending"
+  },
+  "limits": [
+    "Local browser and virtual device API checks do not establish physical device performance or human difficulty.",
+    "The short local performance sample does not replace public 120-second driving or full-race/device checks.",
+    "The full single-player completion contract remains active. Multiplayer implementation is excluded."
+  ],
+  "fullGoalComplete": false
+}
