@@ -1,5 +1,5 @@
 {
-  "version": "10.0.2",
+  "version": "10.0.3",
   "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
   "nativeSources": {
     "games/nightshift-v9/native/src/game.rs": "ba0b16c242c44e8415cdca30779e75b9e5f716e9b32eede9800424bdab6a0e30",
@@ -79,9 +79,11 @@
     "_arcade/licenses/vehicles.txt": "1d30a6cdb72fa62fabde5e726f9eda46239a1ece4dec763dddbd0a99ca6e6480",
     "_arcade/nightshift-controls-ui.mjs": "d1ffef267ad0cbbfdfc132342c624aff8bf05d22e9b9fd8560ce29a020fd8937",
     "_arcade/nightshift-controls.css": "48159bcd1a9ef534f7fb6c53423f5c80ac1d6ab1e5dcbdfe8055a12909daee8d",
-    "_arcade/nightshift-driving-coach.mjs": "b99e4a87e614ca80493464b6f0565017cead0b42a8086dff90e052096cb326f8",
+    "_arcade/nightshift-driving-coach.mjs": "25f36a007a2e68989f104c2d48b6c3024e79a5e891257bd6a24450760aedb300",
     "_arcade/nightshift-gamepad.mjs": "06ecbad922f1d31fdb19d2440fa74206a573116100a11528e695548da93930a2",
     "_arcade/nightshift-keyboard.mjs": "ac33f8cfe8bc03948cad80af221996718a957df919804c65ec8864beaebb6078",
+    "_arcade/nightshift-menu.css": "f8ef74b407acccd8e296941951cd7b360d07d554c201589dc6ba2c444d77b275",
+    "_arcade/nightshift-menu.mjs": "87bf88db8f4f26b7e948c2b24165cf64e0d682fc1414d6722278859c0ced6f89",
     "_arcade/nightshift10-roadblocks.mjs": "6ad83d8784f4c628ba77d4cced56a89231c16d602dcde5be8e188ea91c0fc4f4",
     "_arcade/nightshift10-rules.mjs": "7cf089050d85ba1f1370222ccaff69998497b3d4c0ca37ee3b59c00c56cd112e",
     "_arcade/nightshift8-architecture.mjs": "efc8eb7d0991455fb343fd57ac05a8530da6ddb5acc51e7a6d8b37c3850d6448",
@@ -140,8 +142,8 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "9ba8cd764e893187d0cc64987632b47d2399b6398ed8e3cffd6e0d47cfd17218",
-    "app.js": "ee657f1a6821fcd49ddee0c7889eea6cf96ccbf24a00d6a407c88db382cec14c",
-    "index.html": "d6e598fe1d6abbc66601afea7065885a518c29ef242edc794287711e86223e8c",
+    "app.js": "90eaa1656de1f9d3be835171bc272accb249eb72ad924cb9ff69ef0e2f062ae9",
+    "index.html": "730e2d4f28599af8cd2b7ecad0e0424b61abfb8d8283df3e93f13c434e484059",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   }
 }

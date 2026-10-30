@@ -11,5 +11,5 @@ export class DrivingCoach{
   return false;
  }
  snapshot(){return{stage:this.stage,dismissed:this.dismissed};}
- hint(g){return this.stage===0?{icon:'grip',label:'STEER',action:'steer'}:this.stage===1?{icon:'drift',label:'BRAKE',action:'drift'}:g.charge>=100?{icon:'bolt',label:'BOOST',action:'boost'}:{icon:'drift',label:'DRIFT / DRAFT',action:'drift'};}
+ hint(g){return this.stage===0?{icon:'grip',label:'STEER',action:'steer'}:this.stage===1?{icon:'drift',label:'BRAKE',action:'drift'}:(g.charge>=300||g.nitro>0)?{icon:'bolt',label:'BOOST',action:'boost'}:{icon:'drift',label:'DRIFT / DRAFT',action:'drift'};}
 }

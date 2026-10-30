@@ -42,5 +42,5 @@ test('Practice advances through observed driving, braking and a real boost activ
  for(let n=0;n<10;n++){const b=before();c.observe(b,{...b,tick:b.tick+1,speed:970},8);}assert.equal(c.stage,2);
  let b=before();c.observe(b,{...b,tick:b.tick+1,ability_ticks:40},0);assert.equal(c.stage,2);
  b=before();c.observe(b,{...b,tick:b.tick+1,ability_ticks:40},16);assert.equal(c.stage,3);
- assert.deepEqual(new DrivingCoach(c.snapshot()).snapshot(),c.snapshot());c.reset();c.dismiss();b=before();c.observe(b,{...b,tick:b.tick+1,drift_x:990},1);assert.equal(c.ticks,0);
+ const hint=new DrivingCoach({stage:2});assert.equal(hint.hint({charge:299,nitro:0}).label,'DRIFT / DRAFT');assert.equal(hint.hint({charge:300,nitro:0}).label,'BOOST');assert.equal(hint.hint({charge:0,nitro:1}).label,'BOOST');assert.deepEqual(new DrivingCoach(c.snapshot()).snapshot(),c.snapshot());c.reset();c.dismiss();b=before();c.observe(b,{...b,tick:b.tick+1,drift_x:990},1);assert.equal(c.ticks,0);
 });
