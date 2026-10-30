@@ -3,7 +3,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/Dockerfile
-    image: utxoplay/nightshift:13.0.0
+    image: utxoplay/nightshift:14.0.0
     restart: unless-stopped
     mem_limit: 2048m
     memswap_limit: 2048m
@@ -20,6 +20,7 @@ services:
       - nightshift-v11:/app/data-v11
       - nightshift-v12:/app/data-v12
       - nightshift-v13:/app/data-v13
+      - nightshift-v14:/app/data-v14
 volumes:
   nightshift-v8:
   nightshift-v9:
@@ -27,3 +28,4 @@ volumes:
   nightshift-v11:
   nightshift-v12:
   nightshift-v13:
+  nightshift-v14:

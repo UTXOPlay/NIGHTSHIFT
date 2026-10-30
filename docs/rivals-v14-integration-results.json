@@ -1,0 +1,3011 @@
+{
+  "status": "deployed-public-accepted",
+  "version": "14.0.0",
+  "currentProduction": "14.0.0",
+  "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+  "nodeChecks": {
+    "passed": 162,
+    "failed": 0
+  },
+  "frozenNativeVersions": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "boundNativeFiles": 45,
+  "browserFiles": 275,
+  "reports": {
+    "browser": {
+      "version": "14.0.0",
+      "checks": {
+        "menuHasNoWebGLOrRaceAssets": true,
+        "twelveActualRoutePreviews": true,
+        "garageLoadsOnlyItsAssets": true,
+        "actualFleetThumbnails": true,
+        "sixGroundedVehicles": true,
+        "movingResizeAndInverseInput": true,
+        "minimapActorsAndOverview": true,
+        "pausedReducedMotionPreservesRules": true,
+        "touchPortraitPausesAndClears": true
+      },
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 1920,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 999.9999999999995,
+            "y": 499.99999999999824
+          },
+          "tick": 21,
+          "distance": 12,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 999.9999999999999,
+            "y": 500.00000000000114
+          },
+          "tick": 56,
+          "distance": 96,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000.0000000000003,
+            "y": 499.9999999999993
+          },
+          "tick": 93,
+          "distance": 235,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000,
+            "y": 499.99999999999926
+          },
+          "tick": 137,
+          "distance": 470,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 844,
+            "height": 390
+          },
+          "inverse": {
+            "x": 999.9999999999995,
+            "y": 500.00000000000165
+          },
+          "tick": 207,
+          "distance": 907,
+          "overflow": false
+        }
+      ],
+      "cars": [
+        {
+          "vehicle": 0,
+          "bounds": {
+            "min": [
+              -1.0399999618530273,
+              0,
+              -1.7790935039520264
+            ],
+            "max": [
+              1.0399999618530273,
+              0.9546939134597778,
+              1.7790935039520264
+            ],
+            "size": [
+              2.0799999237060547,
+              0.9546939134597778,
+              3.5581870079040527
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 1,
+          "bounds": {
+            "min": [
+              -0.9050422310829163,
+              0,
+              -2.140582323074341
+            ],
+            "max": [
+              0.9050422310829163,
+              1.2245597635628656,
+              2.1428675651550293
+            ],
+            "size": [
+              1.8100844621658325,
+              1.2245597635628656,
+              4.28344988822937
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 2,
+          "bounds": {
+            "min": [
+              -0.9555545449256897,
+              0,
+              -2.1400856971740723
+            ],
+            "max": [
+              0.9555546045303345,
+              1.3599801347590983,
+              2.1399998664855957
+            ],
+            "size": [
+              1.9111091494560242,
+              1.3599801347590983,
+              4.280085563659668
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 3,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 4,
+          "bounds": {
+            "min": [
+              -1.0469425916671753,
+              0,
+              -2.1452722549438477
+            ],
+            "max": [
+              1.0469425916671753,
+              1.3631548082921654,
+              2.141364812850952
+            ],
+            "size": [
+              2.0938851833343506,
+              1.3631548082921654,
+              4.2866370677948
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 5,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "physicalDevices": false
+    },
+    "career": {
+      "version": "14.0.0",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "buffer": {
+            "width": 300,
+            "height": 150
+          }
+        }
+      ],
+      "checks": {
+        "lockedPreview": true,
+        "chapterReceipt": true,
+        "nativeChapterUnlock": true,
+        "freeAllocation": true,
+        "uiPurchase": true,
+        "signedReplay": true,
+        "ordinaryPedalsAfterResize": true,
+        "portraitGate": true
+      },
+      "errors": [],
+      "physicalDevices": false
+    },
+    "combat": {
+      "version": "14.0.0",
+      "checks": [
+        {
+          "kind": "collision",
+          "triggerTick": 510,
+          "renderedTick": 511,
+          "visibleSprites": 2,
+          "signedReplay": true
+        },
+        {
+          "kind": "hit",
+          "triggerTick": 549,
+          "renderedTick": 550,
+          "visibleSprites": 3,
+          "signedReplay": true
+        },
+        {
+          "kind": "guard",
+          "triggerTick": 494,
+          "renderedTick": 494,
+          "visibleSprites": 1,
+          "signedReplay": true
+        },
+        {
+          "kind": "rival-hit",
+          "triggerTick": 1,
+          "renderedTick": 6,
+          "visibleSprites": 4,
+          "signedReplay": true
+        },
+        {
+          "kind": "disable",
+          "triggerTick": 1729,
+          "renderedTick": 1729,
+          "visibleSprites": 3,
+          "signedReplay": true
+        },
+        {
+          "kind": "wreck",
+          "triggerTick": 2555,
+          "renderedTick": 2555,
+          "visibleSprites": 2,
+          "signedReplay": true
+        },
+        {
+          "kind": "recover",
+          "triggerTick": 2637,
+          "renderedTick": 2638,
+          "visibleSprites": 0,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary V14 signed pedal inputs plus virtual standard Gamepad API; no game-state injection"
+    },
+    "tactics": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "kind": "blocked",
+          "triggerTick": 668,
+          "renderedTick": 670,
+          "readout": {
+            "icon": "emp",
+            "title": "LINE BLOCKED",
+            "detail": "Move past traffic or cover to acquire the target"
+          },
+          "target": {
+            "id": 2,
+            "marked": false,
+            "done": false,
+            "active": false,
+            "phase": "blocked",
+            "label": "LINE BLOCKED",
+            "name": "JINX",
+            "loadLimit": null,
+            "blocked": true
+          },
+          "signedReplay": true
+        },
+        {
+          "kind": "staged",
+          "triggerTick": 546,
+          "renderedTick": 546,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER AT THE RELAY",
+            "detail": "Launch ahead \u00b7 cargo cruise limit 162 KM/H"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "launch",
+          "triggerTick": 656,
+          "renderedTick": 656,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER ON THE MOVE",
+            "detail": "Gate ahead \u00b7 hold fire until amber"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "active",
+          "triggerTick": 839,
+          "renderedTick": 839,
+          "readout": {
+            "icon": "target",
+            "title": "BOUNTY GRID",
+            "detail": "12.9 KM TO FINISH"
+          },
+          "target": null,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary signed V14 pedal inputs and virtual standard Gamepad API; no game-state injection",
+      "physicalDevices": false
+    },
+    "legacy-browser": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": {
+        "originalV13LoadedExactly": true,
+        "originalV13PedalsAndReplay": true,
+        "explicitV14MigrationAndReplay": true,
+        "inactivePartsAndCareerRetained": true,
+        "originalSignedProofRetained": true,
+        "sameCanvasWithoutReload": true
+      },
+      "errors": [],
+      "oldTick": 61,
+      "newTick": 12,
+      "input": "Ordinary browser keyboard events and signed host commands; no game-state injection",
+      "physicalDevices": false
+    },
+    "controls": {
+      "checks": [
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns",
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Portrait gate pauses controller play and clears held input",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns"
+      ],
+      "runs": [
+        {
+          "touch": false,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 113,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        },
+        {
+          "touch": true,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 100,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        }
+      ],
+      "errors": []
+    },
+    "connection": {
+      "version": "14.0.0",
+      "jitterTick": 144,
+      "toleratesFourSecondSaveLatency": true,
+      "pausedAtTick": 324,
+      "boundedPendingPause": true,
+      "nativeBatchLimitRespected": true,
+      "allInputsConfirmedExactly": true,
+      "sameRaceResumed": true,
+      "nativeReplayVerified": true,
+      "errors": []
+    },
+    "host": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "freshAccountOnlyStartsCurrent": true
+        },
+        {
+          "version": 8,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 9,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 10,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 11,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 12,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 13,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        }
+      ],
+      "accountsOpened": 57,
+      "maxResidentExecutors": 2,
+      "peakCombinedProcessRss": 646025216,
+      "samples": [
+        {
+          "label": "v8 / 1",
+          "rss": 207069184,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 2",
+          "rss": 249581568,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 3",
+          "rss": 292134912,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 4",
+          "rss": 334413824,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 5",
+          "rss": 376725504,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 6",
+          "rss": 419016704,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 7",
+          "rss": 419217408,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 8",
+          "rss": 419360768,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 1",
+          "rss": 419295232,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 2",
+          "rss": 461594624,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 3",
+          "rss": 504229888,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 4",
+          "rss": 546820096,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 5",
+          "rss": 590319616,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 6",
+          "rss": 632528896,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 7",
+          "rss": 632610816,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 8",
+          "rss": 632692736,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 1",
+          "rss": 421851136,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 2",
+          "rss": 464224256,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 3",
+          "rss": 506511360,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 4",
+          "rss": 548802560,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 5",
+          "rss": 591089664,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 6",
+          "rss": 633643008,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 7",
+          "rss": 634273792,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 8",
+          "rss": 634810368,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 1",
+          "rss": 424669184,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 2",
+          "rss": 467492864,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 3",
+          "rss": 510218240,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 4",
+          "rss": 553308160,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 5",
+          "rss": 595578880,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 6",
+          "rss": 637816832,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 7",
+          "rss": 638033920,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 8",
+          "rss": 638070784,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 1",
+          "rss": 427102208,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 2",
+          "rss": 469925888,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 3",
+          "rss": 512602112,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 4",
+          "rss": 555180032,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 5",
+          "rss": 597868544,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 6",
+          "rss": 640458752,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 7",
+          "rss": 641085440,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 8",
+          "rss": 641519616,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 1",
+          "rss": 432328704,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 2",
+          "rss": 474615808,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 3",
+          "rss": 516907008,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 4",
+          "rss": 559280128,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 5",
+          "rss": 601563136,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 6",
+          "rss": 643805184,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 7",
+          "rss": 643960832,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 8",
+          "rss": 644009984,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 1",
+          "rss": 433025024,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 2",
+          "rss": 475398144,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 3",
+          "rss": 517767168,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 4",
+          "rss": 560173056,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 5",
+          "rss": 603607040,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 6",
+          "rss": 645828608,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 7",
+          "rss": 646000640,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 8",
+          "rss": 646025216,
+          "resident": 2
+        },
+        {
+          "label": "migrated v8",
+          "rss": 435568640,
+          "resident": 2
+        },
+        {
+          "label": "migrated v9",
+          "rss": 438190080,
+          "resident": 2
+        },
+        {
+          "label": "migrated v10",
+          "rss": 439095296,
+          "resident": 2
+        },
+        {
+          "label": "migrated v11",
+          "rss": 442486784,
+          "resident": 2
+        },
+        {
+          "label": "migrated v12",
+          "rss": 444182528,
+          "resident": 2
+        },
+        {
+          "label": "migrated v13",
+          "rss": 447827968,
+          "resident": 2
+        },
+        {
+          "label": "restart / 8",
+          "rss": 172838912,
+          "resident": 1
+        },
+        {
+          "label": "restart / 9",
+          "rss": 216219648,
+          "resident": 1
+        },
+        {
+          "label": "restart / 10",
+          "rss": 259768320,
+          "resident": 1
+        },
+        {
+          "label": "restart / 11",
+          "rss": 303546368,
+          "resident": 1
+        },
+        {
+          "label": "restart / 12",
+          "rss": 347566080,
+          "resident": 1
+        },
+        {
+          "label": "restart / 13",
+          "rss": 391532544,
+          "resident": 1
+        }
+      ],
+      "beforeRestart": {
+        "maxWorkers": 2,
+        "running": 0,
+        "queued": 0,
+        "runtimes": [
+          {
+            "version": 8,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 9,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 10,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 11,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 12,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 13,
+            "running": true,
+            "busy": false,
+            "starts": 3,
+            "evictions": 2
+          },
+          {
+            "version": 14,
+            "running": true,
+            "busy": false,
+            "starts": 2,
+            "evictions": 1
+          }
+        ]
+      },
+      "afterRestart": {
+        "maxWorkers": 2,
+        "running": 0,
+        "queued": 0,
+        "runtimes": [
+          {
+            "version": 8,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 9,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 10,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 11,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 12,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 13,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 14,
+            "running": true,
+            "busy": false,
+            "starts": 1,
+            "evictions": 0
+          }
+        ]
+      },
+      "restartRecovery": true,
+      "limitations": [
+        "Local Linux process RSS includes the review parent and its native children, not cgroup page cache or real concurrent users.",
+        "A staged container capacity check remains required before deployment."
+      ]
+    },
+    "performance": {
+      "version": "14.0.0",
+      "quality": "Auto",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "input": "virtual standard Gamepad API, ordinary signed inputs",
+      "menuMs": 277,
+      "wallSeconds": 20.136,
+      "simulationSeconds": 18.966666666666665,
+      "medianFps": 59,
+      "p10Fps": 41,
+      "medianCpuMs": 5.52,
+      "medianGpuMs": 11.798541,
+      "scales": [
+        1
+      ],
+      "maxBufferPixels": 2073600,
+      "maxSampledPendingInputs": 24,
+      "distance": 6717,
+      "errors": []
+    },
+    "performance120": {
+      "version": "14.0.0",
+      "quality": "Auto",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "input": "virtual standard Gamepad API, ordinary signed inputs",
+      "menuMs": 1433,
+      "wallSeconds": 120.25,
+      "simulationSeconds": 119,
+      "medianFps": 60,
+      "p10Fps": 48,
+      "medianCpuMs": 3.47,
+      "medianGpuMs": 10.84901,
+      "scales": [
+        1,
+        0.75
+      ],
+      "maxBufferPixels": 2073600,
+      "maxSampledPendingInputs": 24,
+      "distance": 55321,
+      "errors": []
+    },
+    "stageBrowser": {
+      "version": "14.0.0",
+      "checks": {
+        "menuHasNoWebGLOrRaceAssets": true,
+        "twelveActualRoutePreviews": true,
+        "garageLoadsOnlyItsAssets": true,
+        "actualFleetThumbnails": true,
+        "sixGroundedVehicles": true,
+        "movingResizeAndInverseInput": true,
+        "minimapActorsAndOverview": true,
+        "pausedReducedMotionPreservesRules": true,
+        "touchPortraitPausesAndClears": true
+      },
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 1920,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 1000,
+            "y": 500.00000000000034
+          },
+          "tick": 22,
+          "distance": 14,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 1000.0000000000003,
+            "y": 500.00000000000165
+          },
+          "tick": 61,
+          "distance": 97,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000.0000000000002,
+            "y": 500.0000000000009
+          },
+          "tick": 103,
+          "distance": 248,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 999.9999999999984,
+            "y": 499.9999999999979
+          },
+          "tick": 155,
+          "distance": 519,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 844,
+            "height": 390
+          },
+          "inverse": {
+            "x": 1000.0000000000003,
+            "y": 500.0000000000026
+          },
+          "tick": 239,
+          "distance": 1034,
+          "overflow": false
+        }
+      ],
+      "cars": [
+        {
+          "vehicle": 0,
+          "bounds": {
+            "min": [
+              -1.0399999618530273,
+              0,
+              -1.7790935039520264
+            ],
+            "max": [
+              1.0399999618530273,
+              0.9546939134597778,
+              1.7790935039520264
+            ],
+            "size": [
+              2.0799999237060547,
+              0.9546939134597778,
+              3.5581870079040527
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 1,
+          "bounds": {
+            "min": [
+              -0.9050422310829163,
+              0,
+              -2.140582323074341
+            ],
+            "max": [
+              0.9050422310829163,
+              1.2245597635628656,
+              2.1428675651550293
+            ],
+            "size": [
+              1.8100844621658325,
+              1.2245597635628656,
+              4.28344988822937
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 2,
+          "bounds": {
+            "min": [
+              -0.9555545449256897,
+              0,
+              -2.1400856971740723
+            ],
+            "max": [
+              0.9555546045303345,
+              1.3599801347590983,
+              2.1399998664855957
+            ],
+            "size": [
+              1.9111091494560242,
+              1.3599801347590983,
+              4.280085563659668
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 3,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 4,
+          "bounds": {
+            "min": [
+              -1.0469425916671753,
+              0,
+              -2.1452722549438477
+            ],
+            "max": [
+              1.0469425916671753,
+              1.3631548082921654,
+              2.141364812850952
+            ],
+            "size": [
+              2.0938851833343506,
+              1.3631548082921654,
+              4.2866370677948
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 5,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "physicalDevices": false
+    },
+    "stageFullscreen": {
+      "origin": "http://127.0.0.1:18944",
+      "checks": [
+        {
+          "id": "drift-run",
+          "pricing": "free",
+          "ready": true,
+          "fullscreen": true,
+          "reentry": true,
+          "sameGameInstance": true
+        }
+      ],
+      "failures": [],
+      "errors": []
+    },
+    "stageTactics": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "kind": "blocked",
+          "triggerTick": 668,
+          "renderedTick": 670,
+          "readout": {
+            "icon": "emp",
+            "title": "LINE BLOCKED",
+            "detail": "Move past traffic or cover to acquire the target"
+          },
+          "target": {
+            "id": 2,
+            "marked": false,
+            "done": false,
+            "active": false,
+            "phase": "blocked",
+            "label": "LINE BLOCKED",
+            "name": "JINX",
+            "loadLimit": null,
+            "blocked": true
+          },
+          "signedReplay": true
+        },
+        {
+          "kind": "staged",
+          "triggerTick": 546,
+          "renderedTick": 546,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER AT THE RELAY",
+            "detail": "Launch ahead \u00b7 cargo cruise limit 162 KM/H"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "launch",
+          "triggerTick": 656,
+          "renderedTick": 656,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER ON THE MOVE",
+            "detail": "Gate ahead \u00b7 hold fire until amber"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "active",
+          "triggerTick": 839,
+          "renderedTick": 841,
+          "readout": {
+            "icon": "target",
+            "title": "BOUNTY GRID",
+            "detail": "12.9 KM TO FINISH"
+          },
+          "target": null,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary signed V14 pedal inputs and virtual standard Gamepad API; no game-state injection",
+      "physicalDevices": false
+    },
+    "stageTouch": {
+      "checks": [
+        "Thumb accelerator held through countdown starts the car at GO",
+        "Diagonal joystick combines proportional steering and gas",
+        "Releasing the joystick coasts without automatic gas",
+        "Portrait gate clears the held brake and pauses the local simulation",
+        "Native touch-input replay verifies and all visible text is English"
+      ],
+      "errors": [],
+      "physicalPhone": false
+    },
+    "stageCombat": {
+      "version": "14.0.0",
+      "checks": [
+        {
+          "kind": "collision",
+          "triggerTick": 510,
+          "renderedTick": 511,
+          "visibleSprites": 2,
+          "signedReplay": true
+        },
+        {
+          "kind": "hit",
+          "triggerTick": 549,
+          "renderedTick": 550,
+          "visibleSprites": 3,
+          "signedReplay": true
+        },
+        {
+          "kind": "guard",
+          "triggerTick": 494,
+          "renderedTick": 495,
+          "visibleSprites": 1,
+          "signedReplay": true
+        },
+        {
+          "kind": "rival-hit",
+          "triggerTick": 1,
+          "renderedTick": 3,
+          "visibleSprites": 4,
+          "signedReplay": true
+        },
+        {
+          "kind": "disable",
+          "triggerTick": 1729,
+          "renderedTick": 1729,
+          "visibleSprites": 3,
+          "signedReplay": true
+        },
+        {
+          "kind": "wreck",
+          "triggerTick": 2555,
+          "renderedTick": 2555,
+          "visibleSprites": 2,
+          "signedReplay": true
+        },
+        {
+          "kind": "recover",
+          "triggerTick": 2637,
+          "renderedTick": 2638,
+          "visibleSprites": 0,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary V14 signed pedal inputs plus virtual standard Gamepad API; no game-state injection"
+    },
+    "publicBrowser": {
+      "version": "14.0.0",
+      "checks": {
+        "menuHasNoWebGLOrRaceAssets": true,
+        "twelveActualRoutePreviews": true,
+        "garageLoadsOnlyItsAssets": true,
+        "actualFleetThumbnails": true,
+        "sixGroundedVehicles": true,
+        "movingResizeAndInverseInput": true,
+        "minimapActorsAndOverview": true,
+        "pausedReducedMotionPreservesRules": true,
+        "touchPortraitPausesAndClears": true
+      },
+      "layouts": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 1920,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 1000.0000000000009,
+            "y": 500.00000000000256
+          },
+          "tick": 21,
+          "distance": 12,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1080,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1080
+          },
+          "inverse": {
+            "x": 999.9999999999993,
+            "y": 500.0000000000002
+          },
+          "tick": 54,
+          "distance": 90,
+          "overflow": false
+        },
+        {
+          "width": 2560,
+          "height": 1440,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000.0000000000002,
+            "y": 500
+          },
+          "tick": 90,
+          "distance": 228,
+          "overflow": false
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 2560,
+            "height": 1440
+          },
+          "inverse": {
+            "x": 1000,
+            "y": 499.99999999999943
+          },
+          "tick": 130,
+          "distance": 444,
+          "overflow": false
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "running": true,
+          "raceId": 1,
+          "buffer": {
+            "width": 844,
+            "height": 390
+          },
+          "inverse": {
+            "x": 999.9999999999994,
+            "y": 500.0000000000005
+          },
+          "tick": 194,
+          "distance": 852,
+          "overflow": false
+        }
+      ],
+      "cars": [
+        {
+          "vehicle": 0,
+          "bounds": {
+            "min": [
+              -1.0399999618530273,
+              0,
+              -1.7790935039520264
+            ],
+            "max": [
+              1.0399999618530273,
+              0.9546939134597778,
+              1.7790935039520264
+            ],
+            "size": [
+              2.0799999237060547,
+              0.9546939134597778,
+              3.5581870079040527
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 1,
+          "bounds": {
+            "min": [
+              -0.9050422310829163,
+              0,
+              -2.140582323074341
+            ],
+            "max": [
+              0.9050422310829163,
+              1.2245597635628656,
+              2.1428675651550293
+            ],
+            "size": [
+              1.8100844621658325,
+              1.2245597635628656,
+              4.28344988822937
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 2,
+          "bounds": {
+            "min": [
+              -0.9555545449256897,
+              0,
+              -2.1400856971740723
+            ],
+            "max": [
+              0.9555546045303345,
+              1.3599801347590983,
+              2.1399998664855957
+            ],
+            "size": [
+              1.9111091494560242,
+              1.3599801347590983,
+              4.280085563659668
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 3,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 4,
+          "bounds": {
+            "min": [
+              -1.0469425916671753,
+              0,
+              -2.1452722549438477
+            ],
+            "max": [
+              1.0469425916671753,
+              1.3631548082921654,
+              2.141364812850952
+            ],
+            "size": [
+              2.0938851833343506,
+              1.3631548082921654,
+              4.2866370677948
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        },
+        {
+          "vehicle": 5,
+          "bounds": {
+            "min": [
+              -1.022907018661499,
+              0,
+              -2.1432559490203857
+            ],
+            "max": [
+              1.0228371620178223,
+              1.2393398215062916,
+              2.1426947116851807
+            ],
+            "size": [
+              2.0457441806793213,
+              1.2393398215062916,
+              4.285950660705566
+            ]
+          },
+          "contacts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              "XYZ"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "physicalDevices": false
+    },
+    "publicTactics": {
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "kind": "blocked",
+          "triggerTick": 668,
+          "renderedTick": 668,
+          "readout": {
+            "icon": "emp",
+            "title": "LINE BLOCKED",
+            "detail": "Move past traffic or cover to acquire the target"
+          },
+          "target": {
+            "id": 2,
+            "marked": false,
+            "done": false,
+            "active": false,
+            "phase": "blocked",
+            "label": "LINE BLOCKED",
+            "name": "JINX",
+            "loadLimit": null,
+            "blocked": true
+          },
+          "signedReplay": true
+        },
+        {
+          "kind": "staged",
+          "triggerTick": 546,
+          "renderedTick": 548,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER AT THE RELAY",
+            "detail": "Launch ahead \u00b7 cargo cruise limit 162 KM/H"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "launch",
+          "triggerTick": 656,
+          "renderedTick": 657,
+          "readout": {
+            "icon": "target",
+            "title": "COURIER ON THE MOVE",
+            "detail": "Gate ahead \u00b7 hold fire until amber"
+          },
+          "target": null,
+          "signedReplay": true
+        },
+        {
+          "kind": "active",
+          "triggerTick": 839,
+          "renderedTick": 841,
+          "readout": {
+            "icon": "target",
+            "title": "BOUNTY GRID",
+            "detail": "12.9 KM TO FINISH"
+          },
+          "target": null,
+          "signedReplay": true
+        }
+      ],
+      "errors": [],
+      "input": "Ordinary signed V14 pedal inputs and virtual standard Gamepad API; no game-state injection",
+      "physicalDevices": false
+    },
+    "publicControls": {
+      "checks": [
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns",
+        "Observed acceleration, steering, braking and native boost complete interactive practice",
+        "Held pause does not repeatedly toggle or auto-resume",
+        "Colemak takeover cancels a held controller until neutral",
+        "Portrait gate pauses controller play and clears held input",
+        "Controller disconnect pauses and its ordinary-input native replay verifies",
+        "Controller spatial menu navigation opens garage and returns"
+      ],
+      "runs": [
+        {
+          "touch": false,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 110,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        },
+        {
+          "touch": true,
+          "practiceStage": 4,
+          "nativeReplay": true,
+          "pausedTick": 98,
+          "inputSource": "virtual standard Gamepad API readings",
+          "physicalController": false
+        }
+      ],
+      "errors": []
+    },
+    "publicTouch": {
+      "checks": [
+        "Thumb accelerator held through countdown starts the car at GO",
+        "Diagonal joystick combines proportional steering and gas",
+        "Releasing the joystick coasts without automatic gas",
+        "Portrait gate clears the held brake and pauses the local simulation",
+        "Native touch-input replay verifies and all visible text is English"
+      ],
+      "errors": [],
+      "physicalPhone": false
+    },
+    "publicConnection": {
+      "version": "14.0.0",
+      "jitterTick": 144,
+      "toleratesFourSecondSaveLatency": true,
+      "pausedAtTick": 324,
+      "boundedPendingPause": true,
+      "nativeBatchLimitRespected": true,
+      "allInputsConfirmedExactly": true,
+      "sameRaceResumed": true,
+      "nativeReplayVerified": true,
+      "errors": []
+    },
+    "publicFullscreen": {
+      "origin": "https://store.utxoplay.io",
+      "checks": [
+        {
+          "id": "drift-run",
+          "pricing": "free",
+          "ready": true,
+          "fullscreen": true,
+          "reentry": true,
+          "sameGameInstance": true
+        }
+      ],
+      "failures": [],
+      "errors": []
+    }
+  },
+  "delivery": {
+    "bookwormBinary": {
+      "sha256": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa",
+      "bytes": 22491768,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "buildImage": "sha256:5579cf8199622d288b4419228262cbb8034a2c0c3b4635f5acefad30304d40e2"
+    },
+    "stagedCgroupCapacity": {
+      "image": "sha256:9402f65dfc443140ace1cff0982ba969a74f5bab08a7e5d45d40c1ecb002b9c0",
+      "version": 14,
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "checks": [
+        {
+          "freshAccountOnlyStartsCurrent": true
+        },
+        {
+          "version": 8,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 9,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 10,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 11,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 12,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "version": 13,
+          "originalUnfinishedRaceRetained": true,
+          "noEmptyIntermediateSession": true,
+          "explicitNewRaceMigrates": true,
+          "originalProofUnchanged": true,
+          "careerPreserved": true,
+          "legacyProfileRejected": true,
+          "signedReplay": true
+        },
+        {
+          "isolatedTwoGiBCgroup": true,
+          "swapDisabled": true,
+          "noOomKills": true
+        }
+      ],
+      "accountsOpened": 57,
+      "maxResidentExecutors": 2,
+      "peakCombinedProcessRss": 642105344,
+      "cgroup": {
+        "limit": 2147483648,
+        "swapLimit": 0,
+        "peak": 569655296,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "samples": [
+        {
+          "label": "v8 / 1",
+          "rss": 207183872,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 2",
+          "rss": 249651200,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 3",
+          "rss": 292118528,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 4",
+          "rss": 334323712,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 5",
+          "rss": 376528896,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 6",
+          "rss": 418603008,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 7",
+          "rss": 418660352,
+          "resident": 2
+        },
+        {
+          "label": "v8 / 8",
+          "rss": 418914304,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 1",
+          "rss": 418390016,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 2",
+          "rss": 461119488,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 3",
+          "rss": 503586816,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 4",
+          "rss": 546316288,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 5",
+          "rss": 588783616,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 6",
+          "rss": 631382016,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 7",
+          "rss": 632139776,
+          "resident": 2
+        },
+        {
+          "label": "v9 / 8",
+          "rss": 632147968,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 1",
+          "rss": 421203968,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 2",
+          "rss": 463671296,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 3",
+          "rss": 505876480,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 4",
+          "rss": 548081664,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 5",
+          "rss": 590286848,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 6",
+          "rss": 632492032,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 7",
+          "rss": 633495552,
+          "resident": 2
+        },
+        {
+          "label": "v10 / 8",
+          "rss": 633556992,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 1",
+          "rss": 423206912,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 2",
+          "rss": 465543168,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 3",
+          "rss": 507617280,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 4",
+          "rss": 549822464,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 5",
+          "rss": 592289792,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 6",
+          "rss": 634888192,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 7",
+          "rss": 635498496,
+          "resident": 2
+        },
+        {
+          "label": "v11 / 8",
+          "rss": 635985920,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 1",
+          "rss": 426647552,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 2",
+          "rss": 469245952,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 3",
+          "rss": 511975424,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 4",
+          "rss": 554835968,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 5",
+          "rss": 597434368,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 6",
+          "rss": 640557056,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 7",
+          "rss": 640790528,
+          "resident": 2
+        },
+        {
+          "label": "v12 / 8",
+          "rss": 640913408,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 1",
+          "rss": 430493696,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 2",
+          "rss": 472698880,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 3",
+          "rss": 514904064,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 4",
+          "rss": 557240320,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 5",
+          "rss": 599445504,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 6",
+          "rss": 641650688,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 7",
+          "rss": 641974272,
+          "resident": 2
+        },
+        {
+          "label": "v13 / 8",
+          "rss": 642105344,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 1",
+          "rss": 430985216,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 2",
+          "rss": 473714688,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 3",
+          "rss": 516182016,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 4",
+          "rss": 558518272,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 5",
+          "rss": 591425536,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 6",
+          "rss": 633630720,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 7",
+          "rss": 633708544,
+          "resident": 2
+        },
+        {
+          "label": "v14 / 8",
+          "rss": 633798656,
+          "resident": 2
+        },
+        {
+          "label": "migrated v8",
+          "rss": 423952384,
+          "resident": 2
+        },
+        {
+          "label": "migrated v9",
+          "rss": 426311680,
+          "resident": 2
+        },
+        {
+          "label": "migrated v10",
+          "rss": 428146688,
+          "resident": 2
+        },
+        {
+          "label": "migrated v11",
+          "rss": 431828992,
+          "resident": 2
+        },
+        {
+          "label": "migrated v12",
+          "rss": 433418240,
+          "resident": 2
+        },
+        {
+          "label": "migrated v13",
+          "rss": 436981760,
+          "resident": 2
+        },
+        {
+          "label": "restart / 8",
+          "rss": 162263040,
+          "resident": 1
+        },
+        {
+          "label": "restart / 9",
+          "rss": 205242368,
+          "resident": 1
+        },
+        {
+          "label": "restart / 10",
+          "rss": 248438784,
+          "resident": 1
+        },
+        {
+          "label": "restart / 11",
+          "rss": 291811328,
+          "resident": 1
+        },
+        {
+          "label": "restart / 12",
+          "rss": 335548416,
+          "resident": 1
+        },
+        {
+          "label": "restart / 13",
+          "rss": 379105280,
+          "resident": 1
+        }
+      ],
+      "beforeRestart": {
+        "maxWorkers": 2,
+        "running": 0,
+        "queued": 0,
+        "runtimes": [
+          {
+            "version": 8,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 9,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 10,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 11,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 12,
+            "running": false,
+            "busy": false,
+            "starts": 3,
+            "evictions": 3
+          },
+          {
+            "version": 13,
+            "running": true,
+            "busy": false,
+            "starts": 3,
+            "evictions": 2
+          },
+          {
+            "version": 14,
+            "running": true,
+            "busy": false,
+            "starts": 2,
+            "evictions": 1
+          }
+        ]
+      },
+      "afterRestart": {
+        "maxWorkers": 2,
+        "running": 0,
+        "queued": 0,
+        "runtimes": [
+          {
+            "version": 8,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 9,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 10,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 11,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 12,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 13,
+            "running": false,
+            "busy": false,
+            "starts": 0,
+            "evictions": 0
+          },
+          {
+            "version": 14,
+            "running": true,
+            "busy": false,
+            "starts": 1,
+            "evictions": 0
+          }
+        ]
+      },
+      "restartRecovery": true,
+      "limitations": [
+        "Process RSS includes the review parent and its native children, not file cache.",
+        "The isolated container measures seven generations, 57 sequential accounts and migration/restart churn; it is not a real concurrent-user capacity guarantee."
+      ]
+    },
+    "publicAcceptance": "Passed public bytes, layout, cover/courier, controls, touch, connection, fullscreen and the isolated 120-second driving sample.",
+    "publicAcceptanceComplete": true
+  },
+  "limits": [
+    "Local browser and virtual device API checks do not establish physical device performance or human difficulty.",
+    "The short local performance sample does not replace public 120-second driving or full-race/device checks.",
+    "The full single-player completion contract remains active. Multiplayer implementation is excluded."
+  ],
+  "fullGoalComplete": false,
+  "retainedFailedAttempts": [
+    {
+      "stage": "capacity-harness",
+      "result": "Missing browser source import in the production image; process exited 1 before running capacity cases, without OOM.",
+      "resolution": "Read independent profiles from frozen shipped release manifests, then rerun the complete 57-account container audit.",
+      "logOnDeploymentHost": "/data/utxoplay/releases/20261031-nightshift-rivals-14.0.0/capacity-missing-source-import.log"
+    },
+    {
+      "stage": "rendered-courier-observation",
+      "result": "The first staged launch check timed out while the race kept moving and the courier had launched. The read-only helper modules were imported after resuming, leaving a network-dependent observation gap.",
+      "resolution": "Preload observers while paused, then resume using ordinary controller input; all four scenarios pass on the same staged image. The combat harness uses the same ordering.",
+      "localDiagnostic": "artifacts/rivals-v14/stage-tactics-observation-timeout/failure.json"
+    },
+    {
+      "stage": "performance-method",
+      "result": "The initial 120-second public race sample overlapped briefly with startup of the loading audit. It is retained without using it as the uncontended performance gate.",
+      "resolution": "Run a separate clean 120-second sample after both processes have completed.",
+      "localReport": "artifacts/rivals-v14/public-performance/review.json"
+    }
+  ],
+  "ci": {
+    "runtimeSource": "617fc3139f534f522c17a8161549b538e0da0483",
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41127820685",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "sourceCommit": "617fc3139f534f522c17a8161549b538e0da0483",
+  "deployment": {
+    "version": "14.0.0",
+    "gameImage": "sha256:9402f65dfc443140ace1cff0982ba969a74f5bab08a7e5d45d40c1ecb002b9c0",
+    "storeImage": "sha256:e680be3967a5dda848bb5cd7268ec5735dcaa1c16af98f5e1c3ab99dacdb086c",
+    "otherCatalogEntriesPreserved": true,
+    "legacyNativeVolumesPreserved": true,
+    "v14DataIsolated": true,
+    "historicalNativeBinariesInherited": true
+  },
+  "parentCatalogCommit": "d3b526f9fbb114a2beac90be392291501babf6e9",
+  "deploymentVerification": {
+    "version": "14.0.0",
+    "checks": {
+      "myelin-nightshift-v8": {
+        "healthy": true,
+        "zeroRestarts": true,
+        "environmentPreservedWithDeclaredRuntimeUpgrade": true,
+        "nativeOrPlatformMountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:9402f65dfc443140ace1cff0982ba969a74f5bab08a7e5d45d40c1ecb002b9c0"
+      },
+      "utxoplay-store": {
+        "healthy": true,
+        "zeroRestarts": true,
+        "environmentPreservedWithDeclaredRuntimeUpgrade": true,
+        "nativeOrPlatformMountsPreserved": true,
+        "securityAndResourcesPreserved": true,
+        "networksPreserved": true,
+        "image": "sha256:e680be3967a5dda848bb5cd7268ec5735dcaa1c16af98f5e1c3ab99dacdb086c"
+      }
+    },
+    "otherCatalogEntriesPreserved": true,
+    "oldNativeBinariesPreserved": true,
+    "actualPreCutoverCareerContinuedAndMigrated": true,
+    "rollbackContainersAndPrivateBackupsRetained": true
+  },
+  "preCutoverCareer": {
+    "version": 14,
+    "originalStatePreserved": true,
+    "legacyTickContinued": true,
+    "explicitMigration": true,
+    "inactivePartsAndCareerPreserved": true,
+    "originalSignedOriginPreserved": true,
+    "nativeReplay": true,
+    "historicalBinariesPreserved": true,
+    "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+    "binaries": {
+      "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+      "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+      "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+      "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63",
+      "12": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8",
+      "13": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643",
+      "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa"
+    }
+  },
+  "publishedImageIntegrity": {
+    "nativeVersions": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "browserFiles": 275,
+    "hostFiles": 9,
+    "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe"
+  },
+  "publicIntegrity": {
+    "version": "14.0.0",
+    "origin": "https://store.utxoplay.io/games/nightshift/",
+    "files": 275,
+    "verified": 275,
+    "failed": [],
+    "cacheKey": "14.0.0"
+  },
+  "publicLoading": [
+    {
+      "label": "desktop-cold",
+      "ready": true,
+      "wallUntilPlayableMs": 4665.791513,
+      "throttle": null,
+      "errors": []
+    },
+    {
+      "label": "desktop-warm",
+      "ready": true,
+      "wallUntilPlayableMs": 1577.428406000001,
+      "throttle": null,
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-cold",
+      "ready": true,
+      "wallUntilPlayableMs": 3731.9793579999987,
+      "menuWireBytes": 500680,
+      "firstRaceAfterMenuSeconds": 27.472192242,
+      "navigationUntilRaceSeconds": 32.130272217,
+      "wireBytesUntilRace": 9739494,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-warm",
+      "ready": true,
+      "wallUntilPlayableMs": 1797.0603889999984,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "first-race-cold",
+      "ready": true,
+      "wallUntilPlayableMs": 2082.700616000002,
+      "menuWireBytes": 650251,
+      "firstRaceAfterMenuSeconds": 16.785190834,
+      "navigationUntilRaceSeconds": 19.976218026,
+      "wireBytesUntilRace": 9881345,
+      "throttle": null,
+      "errors": []
+    }
+  ],
+  "remainingRequiredAreas": [
+    "Vehicle UV/lamp/material coherence and wheel presentation",
+    "Distinct close scenery, landmarks, route decisions and transitions",
+    "Vehicle audio identity and stronger opponent gadget variety",
+    "Weak-network first-drive loading",
+    "Rendered V8\u2013V12 continuation, broader physical-device/full-race coverage and human-readable difficulty evidence",
+    "Final requirement-by-requirement completion audit"
+  ],
+  "publicPerformance": {
+    "version": "14.0.0",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 1880,
+    "wallSeconds": 120.059,
+    "simulationSeconds": 120.03333333333333,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 2.48,
+    "medianGpuMs": 9.004322,
+    "scales": [
+      1
+    ],
+    "maxBufferPixels": 2073600,
+    "maxSampledPendingInputs": 24,
+    "distance": 57167,
+    "errors": [],
+    "method": "A separate uninterrupted 120-second public-origin race after other browser audit processes completed; Auto quality, ordinary virtual-controller inputs, no local asset substitution.",
+    "limits": "One desktop sample; not physical mobile or worldwide percentile evidence."
+  },
+  "publicLoadingCriticalRequests": [
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/fleet-v131/concept-race.glb",
+      "encodedBytes": 1435869,
+      "durationMs": 5482.929999998305,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/audio/nightshift/nightdrive-v131.ogg",
+      "encodedBytes": 1338075,
+      "durationMs": 9851.630999997724,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/pbr/probes-v131/sunset.pmrem",
+      "encodedBytes": 667866,
+      "durationMs": 1341.2119999993593,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/pbr/asphalt-color-v131.webp",
+      "encodedBytes": 444449,
+      "durationMs": 2249.6199999877717,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/impact-sequence-v91-v131.webp",
+      "encodedBytes": 441045,
+      "durationMs": 11443.759999994654,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/combat-markers.webp",
+      "encodedBytes": 373369,
+      "durationMs": 844.9689999979455,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/architecture-v131.webp",
+      "encodedBytes": 371267,
+      "durationMs": 6826.637999998638,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/combat-pickups-v131.webp",
+      "encodedBytes": 359159,
+      "durationMs": 9923.064999995404,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/combat-vfx-v81-v131.webp",
+      "encodedBytes": 318968,
+      "durationMs": 10539.602000004379,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/materials-v131.webp",
+      "encodedBytes": 294460,
+      "durationMs": 3000.596999991103,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/combat-markers-v131.webp",
+      "encodedBytes": 290944,
+      "durationMs": 7196.196999997483,
+      "protocol": "h2"
+    },
+    {
+      "url": "/games/nightshift/_arcade/art/nightshift/street-lighting-v8-v131.webp",
+      "encodedBytes": 283350,
+      "durationMs": 4059.3170000065584,
+      "protocol": "h2"
+    }
+  ],
+  "catalogRefresh": {
+    "version": "14.0.0",
+    "storeImageBefore": "sha256:40c8cbad2f1bfacbbb9bbc8ce3cfa87bae3951797f46da651a2405c587ced8fc",
+    "storeImage": "sha256:e680be3967a5dda848bb5cd7268ec5735dcaa1c16af98f5e1c3ab99dacdb086c",
+    "changedFields": [
+      "description",
+      "replayDescription"
+    ],
+    "otherCatalogEntriesPreserved": true,
+    "gameImageUnchanged": true,
+    "rollbackStoreRetained": "utxoplay-store-before-nightshift-14-0-0-catalog"
+  },
+  "cleanup": {
+    "removed": [
+      "nightshift-14-0-0-store-stage",
+      "nightshift-14-0-0-stage",
+      "nightshift14-capacity",
+      "nightshift14-capacity-final",
+      "nightshift14-native-build"
+    ],
+    "productionAndRollbackContainersRetained": true
+  },
+  "liveHealth": {
+    "myelin-nightshift-v8": "healthy",
+    "utxoplay-store": "healthy"
+  },
+  "productionTag": "https://github.com/UTXOPlay/NIGHTSHIFT/tree/v14.0.0"
+}

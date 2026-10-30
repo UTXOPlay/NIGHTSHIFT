@@ -1,0 +1,26 @@
+[package]
+name = "myelin-nightshift-v14"
+version = "14.0.0"
+edition = "2021"
+license = "MIT"
+description = "NIGHTSHIFT: deterministic street racing with signed Myelin replay"
+
+[dependencies]
+legacy-v13 = { package = "myelin-nightshift-v13", path = "../../nightshift-v13/native" }
+legacy-v12 = { package = "myelin-nightshift-v12", path = "../../nightshift-v12/native" }
+legacy-v11 = { package = "myelin-nightshift-v11", path = "../../nightshift-v11/native" }
+legacy-v10 = { package = "myelin-nightshift-v10", path = "../../nightshift-v10/native" }
+legacy-v9 = { package = "myelin-nightshift-v9", path = "../../nightshift-v9/native" }
+legacy-v8 = { package = "myelin-nightshift-v8", path = "../../nightshift-v8/native" }
+myelin-session = { git = "https://github.com/Myelin-Labs/Myelin", rev = "c0ac291c03ed8996e62834cb3f480e1ce8dc09a2" }
+myelin-consensus = { git = "https://github.com/Myelin-Labs/Myelin", rev = "c0ac291c03ed8996e62834cb3f480e1ce8dc09a2" }
+myelin-session-store-rocksdb = { git = "https://github.com/Myelin-Labs/Myelin", rev = "c0ac291c03ed8996e62834cb3f480e1ce8dc09a2" }
+blake3 = "1.8.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+getrandom = "0.2"
+tiny_http = "0.12"
+tempfile = "3"
+
+[workspace]

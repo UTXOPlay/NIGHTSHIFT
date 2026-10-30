@@ -1,0 +1,17 @@
+# Build context: a verified release payload containing dist/, host/, docs/,
+# games/nightshift-v14/host.json and the Bookworm runtime/ executable.
+# Pin BASE_RUNTIME_IMAGE to the deployed image recorded in the release evidence.
+# Its six published V8-V13 executables are inherited without rebuilding them.
+ARG BASE_RUNTIME_IMAGE
+FROM ${BASE_RUNTIME_IMAGE}
+COPY dist/ /app/dist/
+COPY host/ /app/host/
+COPY docs/ /app/docs/
+COPY games/nightshift-v14/host.json /app/games/nightshift-v14/host.json
+COPY --chmod=755 runtime/myelin-nightshift-v14 /app/target/release/myelin-nightshift-v14
+COPY package.json package-lock.json /app/
+USER root
+RUN mkdir -p /app/data-v14 && chown node:node /app/data-v14
+USER node
+ENV DATA_DIR=/app/data-v14 RUNTIME_BINARY=/app/target/release/myelin-nightshift-v14 RUNTIME_PORT=8800 CAREER_DATA_DIR=/app/data-v13 CAREER_BINARY=/app/target/release/myelin-nightshift-v13 CAREER_RUNTIME_PORT=8798 NATIVE_WORKER_LIMIT=2
+CMD ["node", "host/nightshift14.mjs"]
