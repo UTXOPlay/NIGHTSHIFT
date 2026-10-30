@@ -22,3 +22,16 @@ Wind, boost pressure, electric motor layer and short interface cues are
 original procedural sound design. The six vehicle voices combine filtering,
 pitch and mixing of the credited engine recording with the original layers;
 they are not six separate vehicle recordings.
+
+V11 additions
+
+engine-sport.wav: domasx2, "racing car engine sound loops", CC0 1.0.
+https://opengameart.org/content/racing-car-engine-sound-loops
+Uses loop_0 only. Original loops share a source and differ by pitch; these are
+not represented as separate recordings. Mono/resample, loop crossfade, level adjustment.
+
+nightdrive.ogg: Bogart VGM, "Chillwave Nightdrive", CC BY 3.0.
+https://opengameart.org/content/chillwave-nightdrive
+https://www.facebook.com/BogartVGM/
+https://creativecommons.org/licenses/by/3.0/
+Changes: loudness normalization and Opus encoding.

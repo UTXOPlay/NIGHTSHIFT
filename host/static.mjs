@@ -48,7 +48,7 @@ export function optimizedStatic(root, { index = "index.html" } = {}) {
     if (pathname.endsWith("/") && index) pathname += index;
     if (
       !["GET", "HEAD"].includes(req.method) ||
-      !/\.(?:js|mjs|css|json|svg|html)$/.test(pathname)
+      !/\.(?:js|mjs|css|json|svg|html|glb)$/.test(pathname)
     )
       return serve(req, res, next);
     res.vary("Accept-Encoding");

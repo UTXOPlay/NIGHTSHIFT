@@ -1,0 +1,2717 @@
+{
+  "scope": "Ordinary keyboard driving, paused resize/input mapping, touch-emulated rotation and unchanged native signed replay; no physical-phone benchmark",
+  "profile": "0b9501d47ecdec91a485f5dfc7dcca5fc391128cee449f72fc06c782ba292561",
+  "replay": {
+    "frames": 22,
+    "receipt": {
+      "application_profile_commitment": [
+        11,
+        149,
+        1,
+        212,
+        126,
+        205,
+        236,
+        145,
+        164,
+        133,
+        245,
+        223,
+        199,
+        220,
+        202,
+        95,
+        195,
+        145,
+        18,
+        140,
+        238,
+        68,
+        159,
+        114,
+        252,
+        6,
+        199,
+        130,
+        186,
+        41,
+        37,
+        97
+      ],
+      "checkpoint_block_hash": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_height": null,
+      "checkpoint_snapshot_hash": [
+        131,
+        98,
+        230,
+        183,
+        10,
+        34,
+        233,
+        116,
+        225,
+        12,
+        175,
+        92,
+        205,
+        76,
+        176,
+        119,
+        212,
+        187,
+        103,
+        240,
+        136,
+        171,
+        211,
+        227,
+        205,
+        73,
+        41,
+        76,
+        38,
+        135,
+        213,
+        1
+      ],
+      "checkpoint_state_root": [
+        131,
+        98,
+        230,
+        183,
+        10,
+        34,
+        233,
+        116,
+        225,
+        12,
+        175,
+        92,
+        205,
+        76,
+        176,
+        119,
+        212,
+        187,
+        103,
+        240,
+        136,
+        171,
+        211,
+        227,
+        205,
+        73,
+        41,
+        76,
+        38,
+        135,
+        213,
+        1
+      ],
+      "end_height": 21,
+      "first_frame_commitment": [
+        83,
+        4,
+        148,
+        236,
+        40,
+        143,
+        113,
+        73,
+        135,
+        197,
+        169,
+        137,
+        142,
+        34,
+        44,
+        22,
+        29,
+        0,
+        236,
+        60,
+        135,
+        132,
+        237,
+        38,
+        12,
+        169,
+        206,
+        67,
+        234,
+        76,
+        149,
+        251
+      ],
+      "frame_count": 22,
+      "last_frame_commitment": [
+        156,
+        83,
+        241,
+        187,
+        73,
+        210,
+        35,
+        48,
+        246,
+        143,
+        72,
+        119,
+        113,
+        210,
+        104,
+        125,
+        10,
+        148,
+        26,
+        118,
+        172,
+        101,
+        134,
+        228,
+        72,
+        118,
+        167,
+        118,
+        161,
+        171,
+        194,
+        206
+      ],
+      "session_id": [
+        245,
+        12,
+        125,
+        253,
+        107,
+        93,
+        87,
+        140,
+        3,
+        203,
+        250,
+        193,
+        232,
+        164,
+        130,
+        234,
+        0,
+        95,
+        89,
+        82,
+        187,
+        159,
+        17,
+        212,
+        197,
+        193,
+        207,
+        123,
+        152,
+        240,
+        169,
+        12
+      ],
+      "start_height": 0,
+      "state_root_after": [
+        70,
+        182,
+        104,
+        100,
+        88,
+        1,
+        163,
+        76,
+        45,
+        237,
+        35,
+        246,
+        192,
+        189,
+        84,
+        123,
+        222,
+        155,
+        233,
+        35,
+        163,
+        16,
+        176,
+        77,
+        121,
+        205,
+        122,
+        184,
+        148,
+        204,
+        38,
+        81
+      ],
+      "state_root_before": [
+        131,
+        98,
+        230,
+        183,
+        10,
+        34,
+        233,
+        116,
+        225,
+        12,
+        175,
+        92,
+        205,
+        76,
+        176,
+        119,
+        212,
+        187,
+        103,
+        240,
+        136,
+        171,
+        211,
+        227,
+        205,
+        73,
+        41,
+        76,
+        38,
+        135,
+        213,
+        1
+      ],
+      "total_cycles": 0,
+      "total_input_bytes": 1639,
+      "total_transaction_bytes": 0
+    },
+    "receipt_commitment": "252d7cfe7786f851ba08d6f69de20f7ed48d21e799c62ed7971248e15d4797b3",
+    "state_root": "46b668645801a34c2ded23f6c0bd547bde9be923a310b04d79cd7ab894cc2651",
+    "verified": true
+  },
+  "samples": [
+    {
+      "tick": 14,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4965879746151609,
+        "y": 0.6952672697946618
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 4,
+        "cues": 0,
+        "mix": {
+          "speed": 0.512,
+          "load": 0.7666666666666667,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.15555555555555556
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.14071720838546753,
+          "tyres": 0,
+          "wind": 0.014088437892496586,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 22,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4925779921916705,
+        "y": 0.6922186728677381
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 5,
+        "cues": 1,
+        "mix": {
+          "speed": 0.66,
+          "load": 0.9500000000000001,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.15555555555555556
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.15423732995986938,
+          "tyres": 0,
+          "wind": 0.022265540435910225,
+          "boost": 0.1587790995836258
+        }
+      }
+    },
+    {
+      "tick": 30,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4848851539332268,
+        "y": 0.6863098338342065
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 5,
+        "cues": 1,
+        "mix": {
+          "speed": 0.836,
+          "load": 0.9500000000000001,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.15592791140079498,
+          "tyres": 0,
+          "wind": 0.03391384333372116,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 37,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.47477993385134554,
+        "y": 0.682819678071291
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 5,
+        "cues": 1,
+        "mix": {
+          "speed": 0.968,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.14149683713912964,
+          "tyres": 0,
+          "wind": 0.04979817569255829,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 45,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4664016794781756,
+        "y": 0.6808954930822041
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 5,
+        "cues": 1,
+        "mix": {
+          "speed": 0.96,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.011111111111111112
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.10714048147201538,
+          "tyres": 0,
+          "wind": 0.05761448293924332,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 53,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4611761234317022,
+        "y": 0.6788597996500388
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 5,
+        "cues": 1,
+        "mix": {
+          "speed": 0.96,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.1
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1118018627166748,
+          "tyres": 0,
+          "wind": 0.06052454560995102,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 60,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.44719976115956506,
+        "y": 0.6777855073173781
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.9264,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.17777777777777778
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.09827444702386856,
+          "tyres": 0,
+          "wind": 0.06163915991783142,
+          "boost": 0.10619089007377625
+        }
+      }
+    },
+    {
+      "tick": 68,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4469313719951465,
+        "y": 0.6830923368688462
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.8456,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.08888888888888889
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08841897547245026,
+          "tyres": 0,
+          "wind": 0.055915962904691696,
+          "boost": 0.014825173653662205
+        }
+      }
+    },
+    {
+      "tick": 75,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4449814549630626,
+        "y": 0.6915214404355062
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.7896,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08801710605621338,
+          "tyres": 0,
+          "wind": 0.04659277945756912,
+          "boost": 0.002069067442789674
+        }
+      }
+    },
+    {
+      "tick": 83,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.47088784637547487,
+        "y": 0.6986886142136097
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.7256,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08799999952316284,
+          "tyres": 0,
+          "wind": 0.03932088240981102,
+          "boost": 0.0002888135495595634
+        }
+      }
+    },
+    {
+      "tick": 91,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5184344027303921,
+        "y": 0.7003188322053772
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.6616,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.022222222222222223
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08799999952316284,
+          "tyres": 0,
+          "wind": 0.033188238739967346,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 98,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.49053657785884114,
+        "y": 0.6997175973477354
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.632,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.1
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.10413152724504471,
+          "tyres": 0,
+          "wind": 0.028992880135774612,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 106,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4201740263335794,
+        "y": 0.6963221069100665
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.64,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.14444444444444443
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1154831126332283,
+          "tyres": 0,
+          "wind": 0.02839301899075508,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 114,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4660898177578963,
+        "y": 0.6936945439082514
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.64,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.03333333333333333
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11214204132556915,
+          "tyres": 0,
+          "wind": 0.027430295944213867,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 121,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5251349935522179,
+        "y": 0.6921880140553505
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.648,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.1111111111111111
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11533482372760773,
+          "tyres": 0,
+          "wind": 0.027859272435307503,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 129,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5133557659779564,
+        "y": 0.6908952893906489
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.648,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11213595420122147,
+          "tyres": 0,
+          "wind": 0.028122544288635254,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 136,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5630503026585321,
+        "y": 0.6890694934865429
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.05555555555555555
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11533545702695847,
+          "tyres": 0,
+          "wind": 0.028077879920601845,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 144,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5445789013812122,
+        "y": 0.6873943422144402
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.14444444444444443
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11213596910238266,
+          "tyres": 0,
+          "wind": 0.029018864035606384,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 152,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5354941537102155,
+        "y": 0.6834298956475071
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.664,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1137148067355156,
+          "tyres": 0,
+          "wind": 0.028911791741847992,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 159,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5364521846233837,
+        "y": 0.6807761923486986
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.664,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11206993460655212,
+          "tyres": 0,
+          "wind": 0.028728757053613663,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 167,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5379787380772659,
+        "y": 0.6786024094444381
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.664,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1120000034570694,
+          "tyres": 0,
+          "wind": 0.02867892198264599,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 174,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5407438842717043,
+        "y": 0.6790359455392938
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.664,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1120000034570694,
+          "tyres": 0,
+          "wind": 0.028664175420999527,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 182,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5476885321743248,
+        "y": 0.6802204849044133
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11077619343996048,
+          "tyres": 0,
+          "wind": 0.02825080417096615,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 190,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5537754323820163,
+        "y": 0.6834688954991779
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11195003986358643,
+          "tyres": 0,
+          "wind": 0.02804940938949585,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 197,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5615345282407992,
+        "y": 0.6853548168990037
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.648,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1112801805138588,
+          "tyres": 0,
+          "wind": 0.027536660432815552,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 205,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5681377709971129,
+        "y": 0.6876961305023086
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.648,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11196643859148026,
+          "tyres": 0,
+          "wind": 0.02736501768231392,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 212,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5735019006454339,
+        "y": 0.6912784678606254
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.64,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11128009110689163,
+          "tyres": 0,
+          "wind": 0.02686251513659954,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 220,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5769070015015706,
+        "y": 0.694032070600537
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.64,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11197050660848618,
+          "tyres": 0,
+          "wind": 0.026690343394875526,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 228,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5826023722805133,
+        "y": 0.6972681687752144
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.632,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11121020466089249,
+          "tyres": 0,
+          "wind": 0.02617509476840496,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 235,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5880547032009165,
+        "y": 0.6982638365998369
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.632,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11196310073137283,
+          "tyres": 0,
+          "wind": 0.02602493390440941,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 243,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.591879612205753,
+        "y": 0.6976510901357231
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.624,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11144858598709106,
+          "tyres": 0,
+          "wind": 0.025518352165818214,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 250,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5914037519732276,
+        "y": 0.693560400872527
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.624,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11197735369205475,
+          "tyres": 0,
+          "wind": 0.025367559865117073,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 258,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5914326381509117,
+        "y": 0.6861234383913849
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.624,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1120000034570694,
+          "tyres": 0,
+          "wind": 0.025325601920485497,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 266,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5877889223542557,
+        "y": 0.6829804631661875
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.624,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1120000034570694,
+          "tyres": 0,
+          "wind": 0.025314511731266975,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 273,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5833751012145917,
+        "y": 0.6846759501440447
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.632,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11287757754325867,
+          "tyres": 0,
+          "wind": 0.02575085498392582,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 281,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5773415159372048,
+        "y": 0.6852768441714825
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.632,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11203588545322418,
+          "tyres": 0,
+          "wind": 0.025903677567839622,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 289,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5709584827764144,
+        "y": 0.6877452058781579
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.64,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11314717680215836,
+          "tyres": 0,
+          "wind": 0.02636749856173992,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 296,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5185715594684934,
+        "y": 0.6884053532491784
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.64,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1120467334985733,
+          "tyres": 0,
+          "wind": 0.026552656665444374,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 304,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.47094832738774034,
+        "y": 0.6911833169708763
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.648,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.06666666666666667
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11314792931079865,
+          "tyres": 0,
+          "wind": 0.027302144095301628,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 311,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.49308312232013646,
+        "y": 0.6937528234147682
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.648,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.14444444444444443
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1120467558503151,
+          "tyres": 0,
+          "wind": 0.02833210676908493,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 319,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5094339592256796,
+        "y": 0.6953981843009265
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.23333333333333334
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1126740500330925,
+          "tyres": 0,
+          "wind": 0.029918160289525986,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 326,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5097084049942728,
+        "y": 0.6967009860212672
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 6,
+        "cues": 2,
+        "mix": {
+          "speed": 0.656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.3111111111111111
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11203142255544662,
+          "tyres": 0,
+          "wind": 0.031118640676140785,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 334,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.504731825700088,
+        "y": 0.6968084675529614
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 2,
+        "started": 8,
+        "cues": 4,
+        "mix": {
+          "speed": 0.686,
+          "load": 0.9500000000000001,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.4
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.12296389043331146,
+          "tyres": 0,
+          "wind": 0.03306305408477783,
+          "boost": 0.0729706883430481
+        }
+      }
+    },
+    {
+      "tick": 342,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.502631372231552,
+        "y": 0.6946756051731715
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 9,
+        "cues": 5,
+        "mix": {
+          "speed": 0.5836,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.4888888888888889
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.09027323871850967,
+          "tyres": 0,
+          "wind": 0.03150473162531853,
+          "boost": 0.01853986643254757
+        }
+      }
+    },
+    {
+      "tick": 349,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.48087664963132354,
+        "y": 0.6922503366260822
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 9,
+        "cues": 5,
+        "mix": {
+          "speed": 0.5148,
+          "load": 0.1,
+          "slip": 0.611764705882353,
+          "boost": 0,
+          "draft": 0.5666666666666667
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.09216323494911194,
+          "tyres": 0.038160428404808044,
+          "wind": 0.026356570422649384,
+          "boost": 0.002751739928498864
+        }
+      }
+    },
+    {
+      "tick": 357,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.40422572896393016,
+        "y": 0.6912910189592317
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 9,
+        "cues": 5,
+        "mix": {
+          "speed": 0.512,
+          "load": 0.4,
+          "slip": 0.9647058823529412,
+          "boost": 0,
+          "draft": 0.5222222222222223
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11071457713842392,
+          "tyres": 0.09559357166290283,
+          "wind": 0.022718671709299088,
+          "boost": 0.00039200359606184065
+        }
+      }
+    },
+    {
+      "tick": 364,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4239327971972236,
+        "y": 0.6911055327017397
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 10,
+        "cues": 6,
+        "mix": {
+          "speed": 0.568,
+          "load": 0.7666666666666667,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.6
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.13966649770736694,
+          "tyres": 0.014192178845405579,
+          "wind": 0.024061022326350212,
+          "boost": 0.00005470945325214416
+        }
+      }
+    },
+    {
+      "tick": 372,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.5011889329130731,
+        "y": 0.6890764258772077
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 10,
+        "cues": 6,
+        "mix": {
+          "speed": 0.632,
+          "load": 0.7666666666666667,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.6888888888888889
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.14126525819301605,
+          "tyres": 0.001680949004366994,
+          "wind": 0.029347533360123634,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 380,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4695995605806019,
+        "y": 0.6896233936140044
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 3,
+        "started": 14,
+        "cues": 10,
+        "mix": {
+          "speed": 0.6312,
+          "load": 0.9500000000000001,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.7777777777777778
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.131734699010849,
+          "tyres": 0.008670050650835037,
+          "wind": 0.0305930282920599,
+          "boost": 0.14103803038597107
+        }
+      }
+    },
+    {
+      "tick": 387,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4209759173089215,
+        "y": 0.6850843389666496
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 14,
+        "cues": 10,
+        "mix": {
+          "speed": 0.7852,
+          "load": 0.9500000000000001,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.8111111111111111
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.15486982464790344,
+          "tyres": 0.0011223588371649384,
+          "wind": 0.042179834097623825,
+          "boost": 0.15998278558254242
+        }
+      }
+    },
+    {
+      "tick": 395,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4317651136446124,
+        "y": 0.6801405138446005
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 2,
+        "started": 16,
+        "cues": 12,
+        "mix": {
+          "speed": 0.9612,
+          "load": 0.9500000000000001,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.5444444444444444
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.15595369040966034,
+          "tyres": 0.00013293439405970275,
+          "wind": 0.06006734445691109,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 403,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.43132686589082186,
+        "y": 0.6800494109430525
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 16,
+        "cues": 12,
+        "mix": {
+          "speed": 0.968,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.2777777777777778
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11499320715665817,
+          "tyres": 0,
+          "wind": 0.06871236860752106,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 410,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.4300752038467175,
+        "y": 0.6798736400591305
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 16,
+        "cues": 12,
+        "mix": {
+          "speed": 0.96,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.044444444444444446
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.10983282327651978,
+          "tyres": 0,
+          "wind": 0.06535457819700241,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 418,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.426918584296767,
+        "y": 0.6824196274298568
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 16,
+        "cues": 12,
+        "mix": {
+          "speed": 0.96,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11191166192293167,
+          "tyres": 0,
+          "wind": 0.06145383045077324,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 425,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.42137171782501676,
+        "y": 0.6846334463886113
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 2,
+        "started": 18,
+        "cues": 14,
+        "mix": {
+          "speed": 0.952,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11427033692598343,
+          "tyres": 0,
+          "wind": 0.05963336303830147,
+          "boost": 0.152388796210289
+        }
+      }
+    },
+    {
+      "tick": 433,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.41820698181582866,
+        "y": 0.6856767707380622
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 18,
+        "cues": 14,
+        "mix": {
+          "speed": 0.952,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 1,
+          "draft": 0.08888888888888889
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.11209257692098618,
+          "tyres": 0,
+          "wind": 0.06016332656145096,
+          "boost": 0.1599999964237213
+        }
+      }
+    },
+    {
+      "tick": 441,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.41342005463388465,
+        "y": 0.6865928566149219
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 20,
+        "cues": 16,
+        "mix": {
+          "speed": 0.8496,
+          "load": 0.1,
+          "slip": 0.16470588235294117,
+          "boost": 0,
+          "draft": 0.17777777777777778
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08928198367357254,
+          "tyres": 0.01785760186612606,
+          "wind": 0.056702133268117905,
+          "boost": 0.02632521651685238
+        }
+      }
+    },
+    {
+      "tick": 448,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.3912276149849474,
+        "y": 0.6898566474148871
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 21,
+        "cues": 17,
+        "mix": {
+          "speed": 0.76,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.25555555555555554
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08805239200592041,
+          "tyres": 0.0026692161336541176,
+          "wind": 0.04858599230647087,
+          "boost": 0.0036775916814804077
+        }
+      }
+    },
+    {
+      "tick": 456,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.3814734329445863,
+        "y": 0.6904983485279919
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 21,
+        "cues": 17,
+        "mix": {
+          "speed": 0.6576,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.2111111111111111
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08799999952316284,
+          "tyres": 0.0003457150305621326,
+          "wind": 0.039762888103723526,
+          "boost": 0.0005574177484959364
+        }
+      }
+    },
+    {
+      "tick": 463,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.38058131377895055,
+        "y": 0.6890361611969832
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 21,
+        "cues": 17,
+        "mix": {
+          "speed": 0.568,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.08799999952316284,
+          "tyres": 0,
+          "wind": 0.02878429740667343,
+          "boost": 0.00007779560837661847
+        }
+      }
+    },
+    {
+      "tick": 471,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.3917903061209321,
+        "y": 0.6848075378862875
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 1,
+        "started": 22,
+        "cues": 17,
+        "mix": {
+          "speed": 0.3612,
+          "load": 0.7666666666666667,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1229737251996994,
+          "tyres": 0,
+          "wind": 0.016786497086286545,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 479,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.45598712128731855,
+        "y": 0.6815921476944612
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 22,
+        "cues": 17,
+        "mix": {
+          "speed": 0.3724,
+          "load": 0.1,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1207045391201973,
+          "tyres": 0,
+          "wind": 0.011800392530858517,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 486,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.47364304441610067,
+        "y": 0.6818332213310307
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 22,
+        "cues": 17,
+        "mix": {
+          "speed": 0.3656,
+          "load": 0.4,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.03333333333333333
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1107499822974205,
+          "tyres": 0,
+          "wind": 0.009638098068535328,
+          "boost": 0
+        }
+      }
+    },
+    {
+      "tick": 494,
+      "running": true,
+      "over": false,
+      "car": {
+        "x": 0.48373370988892006,
+        "y": 0.6831080489933016
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "recordings": 3,
+        "errors": [],
+        "voices": 0,
+        "started": 22,
+        "cues": 17,
+        "mix": {
+          "speed": 0.4216,
+          "load": 0.7666666666666667,
+          "slip": 0,
+          "boost": 0,
+          "draft": 0.12222222222222222
+        },
+        "master": 1,
+        "levels": {
+          "engine": 0.1389474868774414,
+          "tyres": 0,
+          "wind": 0.010328973643481731,
+          "boost": 0
+        }
+      }
+    }
+  ],
+  "sizes": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "input": {
+        "x": 1000.0000000000006,
+        "y": 500.0000000000006
+      },
+      "buffer": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1080,
+      "input": {
+        "x": 1000.0000000000005,
+        "y": 500.0000000000014
+      },
+      "buffer": {
+        "width": 2560,
+        "height": 1080
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "input": {
+        "x": 999.9999999999995,
+        "y": 499.9999999999984
+      },
+      "buffer": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "width": 3840,
+      "height": 2160,
+      "input": {
+        "x": 1000.0000000000009,
+        "y": 500.00000000000205
+      },
+      "buffer": {
+        "width": 2560,
+        "height": 1440
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "input": {
+        "x": 1000,
+        "y": 499.99999999999943
+      },
+      "buffer": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "input": {
+        "x": 1000,
+        "y": 500
+      },
+      "buffer": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "mobile": {
+    "input": {
+      "x": 999.9999999999993,
+      "y": 499.99999999999983
+    },
+    "buffer": {
+      "width": 1266,
+      "height": 585
+    }
+  },
+  "rotationPaused": true,
+  "errors": []
+}

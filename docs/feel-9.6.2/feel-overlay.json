@@ -1,0 +1,19 @@
+{
+  "baseVersion": "9.6.1",
+  "version": "9.6.2",
+  "files": [
+    "_arcade/nightshift9-audio.mjs",
+    "_arcade/nightshift9-drive-vfx.mjs",
+    "_arcade/nightshift9-renderer.bundle.mjs",
+    "app.js",
+    "index.html",
+    "_arcade/nightshift9-drive-feedback.mjs",
+    "_arcade/licenses/drive-audio.txt",
+    "_arcade/audio/nightshift/engine.wav",
+    "_arcade/audio/nightshift/tyres.wav",
+    "_arcade/audio/nightshift/impact.wav"
+  ],
+  "profile": "e9b142142792975f9e44ce5cd196d6593d0099eb13280787967816e59b7a1def",
+  "nativeSourcesUnchanged": true,
+  "nativeBinariesUnchanged": true
+}

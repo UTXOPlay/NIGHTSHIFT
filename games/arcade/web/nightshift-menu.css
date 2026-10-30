@@ -80,3 +80,5 @@
 #game[data-view=career] #menu{grid-template-rows:minmax(0,1fr)}
 
 #cards,#workshop,#progression{overflow-anchor:none}
+
+#keybinds .audio-setting{display:flex;justify-content:space-between;align-items:center;width:100%;gap:24px;font-size:16px}#keybinds input[type=range]{width:48%;min-height:44px;accent-color:var(--mint)}@media(max-height:560px){#keybinds .audio-setting{font-size:14px}}

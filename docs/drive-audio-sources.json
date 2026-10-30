@@ -32,5 +32,19 @@
       "originalSha256": "e468ee00a6c94313cf4efcf347b5f4e51e98e629608be277a8f58feb5e2267ff",
       "outputSha256": "669b850b7550fa636b6d1a471cc8205ff7a1c71df51b9ceb7c174774794cfad2"
     }
-  ]
+  ],
+  "v11": {
+    "engineSport": {
+      "source": "https://opengameart.org/content/racing-car-engine-sound-loops",
+      "author": "domasx2",
+      "license": "CC0",
+      "sha256": "69d74b106509037ce547429e4c3f9ae906b0fffe88d0bb8b3b5a8b0cfc239048"
+    },
+    "music": {
+      "source": "https://opengameart.org/content/chillwave-nightdrive",
+      "author": "Bogart VGM",
+      "license": "CC BY 3.0",
+      "sha256": "4ca063af71124b85fdbfae6736271fe482e9e637c99ad6b4951ccc5d016fda13"
+    }
+  }
 }

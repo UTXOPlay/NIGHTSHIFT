@@ -122,3 +122,21 @@
 @media(min-width:2200px){#roadblock-guide>svg{width:165px;height:70px}#roadblock-guide{gap:18px}}
 
 @media(max-height:560px){#roadblock-guide:not([hidden])~#telegraph{top:126px}}
+/* V11: readable race information, with earned charge beside its control. */
+#game[data-view=race] .wordmark{display:none}#game[data-view=race] header{justify-content:flex-end}
+#nearby-gaps{display:none}#boost-state{position:absolute;right:max(3.5vw,env(safe-area-inset-right));bottom:112px;font-size:12px;font-weight:650;letter-spacing:.08em;text-shadow:0 2px 5px #000;pointer-events:none;color:#b7eadc}
+#charge{left:auto;transform:none;right:max(3.5vw,env(safe-area-inset-right));bottom:98px;width:104px;height:5px;gap:5px}#charge i{height:5px;flex:1;border-radius:1px;background:#5d727c99}#charge i.full{background:#a5edda}
+#standings li>span{font-size:13px}#standings li>b,#standings li>small{font-size:12px}#route #objective{font-size:13px}#route #district{font-size:12px}#target span{font-size:12px}
+#game[data-solo=true][data-view=race] #place,#game[data-solo=true][data-view=race] #standings,#game[data-solo=true][data-view=race] #nearby-gaps{display:none}
+#game[data-solo=true] #abilities button[data-input="64"],#game[data-solo=true] #abilities button[data-input="32"]{display:none}
+@media(min-width:2200px){#boost-state{font-size:16px;bottom:140px}#charge{bottom:122px;width:138px}#standings li>span{font-size:17px}#standings li>b,#standings li>small{font-size:15px}#route #objective{font-size:17px}#route #district{font-size:16px}}
+@media(max-height:560px){
+ #game[data-view=race] #wallet{display:none}#place{left:max(20px,env(safe-area-inset-left));top:17px}#place b{font-size:38px}#place small{font-size:13px}
+ #route{top:18px;left:16%;right:auto;width:47%;transform:none}#route #district{font-size:12px;letter-spacing:.04em;line-height:1.25}#route #objective{font-size:12px;line-height:1.3;letter-spacing:.025em}#route .progress{margin:7px 0}
+ #timer{top:78px;right:22px;font-size:22px}#standings{display:none}#nearby-gaps{display:block;position:absolute;top:78px;left:max(20px,env(safe-area-inset-left));font-size:12px;line-height:1.5;max-width:40%;text-shadow:0 2px 4px #000}
+ #minimap{width:66px;height:66px;top:112px;right:22px}#speed{right:22px;bottom:137px}#speed b{font-size:30px}#speed>small{font-size:12px}#hull{font-size:12px}
+ #boost-state{right:22px;bottom:96px;font-size:12px;letter-spacing:.04em}#charge{right:22px;bottom:82px;width:94px;height:5px}#target span{font-size:12px}#target{max-width:180px}
+ #abilities .ability-value{font-size:13px}#race-engineer{display:none}
+ #game[data-view=garage] .garage-stats span,#game[data-view=garage] .garage-stats small,#game[data-view=garage] .build-delta,#game[data-view=garage] .upgrade small,#game[data-view=garage] #workshop>small{font-size:11px;line-height:1.4}
+}
+.audio-setting{display:flex!important;align-items:center;justify-content:space-between;gap:16px;font-size:13px!important;letter-spacing:0!important;margin:12px 0!important}.audio-setting input{width:52%;accent-color:#a5e9d8;min-height:32px}

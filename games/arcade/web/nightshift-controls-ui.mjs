@@ -1,3 +1,4 @@
+import {packInput} from './nightshift11-input.mjs';
 import {GamepadInput,gamepadBits,GAMEPAD_KEYS,focusTarget} from './nightshift-gamepad.mjs';
 import {DrivingCoach} from './nightshift-driving-coach.mjs';
 import {KEY_ACTIONS,keyLabel} from './nightshift-keyboard.mjs';
@@ -22,9 +23,10 @@ export function createControls(ctx){
  addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;if(source==='gamepad')ctx.clear();else pad.suspend();setSource('keyboard');},true);
  addEventListener('pointerdown',e=>{if(source==='gamepad')ctx.clear();else pad.suspend();setSource(e.pointerType==='touch'?'touch':'keyboard');},true);
  const getPads=()=>{try{return navigator.getGamepads?.()||[];}catch{return[];}};
- function focusables(){const modal=['#keybinds','#race-plan'].map(s=>document.querySelector(s)).find(e=>e&&!e.hidden);return[...(modal||ctx.root).querySelectorAll('button,select,summary,a[href]')].filter(e=>!e.disabled&&!e.closest('[hidden]')&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden');}
+ function focusables(){const modal=['#keybinds','#race-plan'].map(s=>document.querySelector(s)).find(e=>e&&!e.hidden);return[...(modal||ctx.root).querySelectorAll('button,select,input[type=range],summary,a[href]')].filter(e=>!e.disabled&&!e.closest('[hidden]')&&e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden');}
  function navigate(direction){
   const els=focusables(),active=document.activeElement;
+  if(active?.tagName==='INPUT'&&active.type==='range'&&(direction==='left'||direction==='right')){const step=Number(active.step)||.05;active.value=String(Math.max(Number(active.min)||0,Math.min(Number(active.max)||1,Number(active.value)+(direction==='right'?step:-step))));active.dispatchEvent(new Event('input',{bubbles:true}));return;}
   if(active?.tagName==='SELECT'&&(direction==='left'||direction==='right')){active.selectedIndex=Math.max(0,Math.min(active.options.length-1,active.selectedIndex+(direction==='right'?1:-1)));active.dispatchEvent(new Event('change',{bubbles:true}));return;}
   const n=focusTarget(els.map(e=>e.getBoundingClientRect()),els.indexOf(active),direction);els[n]?.focus({preventScroll:true});els[n]?.scrollIntoView({block:'nearest',inline:'nearest'});
  }
@@ -55,5 +57,5 @@ export function createControls(ctx){
   const signature=coach.stage+':'+key+':'+h.label;
   if(signature!==lastHint){lastHint=signature;artwork.innerHTML=icon(h.icon);caption.replaceChildren();const label=document.createElement('b'),kbd=document.createElement('kbd');label.textContent=h.label;kbd.textContent=key;caption.append(label,kbd);pips.innerHTML=[0,1,2].map(n=>'<i class="'+(n<coach.stage?'done':n===coach.stage?'current':'')+'"></i>').join('');coachEl.setAttribute('aria-label','Driving practice '+(coach.stage+1)+' of 3: '+h.label+', '+key);}
  }
- return{poll,refresh,clear(){pad.suspend();sample={active:false};},bits(){return sample.active?gamepadBits(sample,ctx.getGame(),ctx.turn()):null;},observe(before,after,bits){if(coach.observe(before,after,bits))persist();},snapshot(){return{source,active:sample.active,index:sample.index,practice:coach.snapshot()};}};
+ return{poll,refresh,clear(){pad.suspend();sample={active:false};},bits(){if(!sample.active)return null;const g=ctx.getGame(),bits=gamepadBits(sample,g,ctx.turn());return g.physics_version>=11?packInput(bits,Math.round(sample.x*100),Math.round(Math.max(sample.brake,sample.drift?1:0)*100)):bits;},observe(before,after,bits){if(coach.observe(before,after,bits))persist();},snapshot(){return{source,active:sample.active,index:sample.index,practice:coach.snapshot()};}};
 }
