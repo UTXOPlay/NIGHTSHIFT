@@ -1,8 +1,7 @@
 {
   "version": "14.1.1",
-  "status": "candidate-performance-investigation",
+  "status": "deployed-public-integrity-and-career-accepted-completion-open",
   "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
-  "rulesAndAllSevenExecutablesUnchanged": true,
   "governorAndRenderPathRegressionChecks": {
     "passed": 14,
     "failed": 0
@@ -114,10 +113,10 @@
     ],
     "context": "Concurrent heavy Rust builds and other browser processes were observed. The cause is not conclusively isolated; a published-baseline comparison and a quiet full-race rerun are required."
   },
-  "deployedVersion": "14.1.0",
+  "deployedVersion": "14.1.1",
   "fullGoalComplete": false,
   "remainingRequiredAreas": [
-    "Sustained candidate performance acceptance before deployment",
+    "First-drive loading and broader sustained/device acceptance",
     "All-route scenery and lighting coherence",
     "Meaningful route choices and event rhythm",
     "Traffic wheel detail and coarse brake response",
@@ -129,7 +128,8 @@
     "Local single-run loading comparison is not a public-origin or worldwide percentile measurement.",
     "No runtime asset was removed or reduced in texture quality.",
     "The failed full-race performance attempt is retained; acceptance thresholds were not changed.",
-    "Multiplayer implementation remains excluded."
+    "Multiplayer implementation remains excluded.",
+    "Older loading wireBytesUntilRace sums completed responses; observedBodyBytesUntilRace separately records partial body chunks, so media aborts can make response-byte totals incomparable. First-drive wall timings are unaffected."
   ],
   "publishedBaselineContended": {
     "quality": "Auto",
@@ -186,12 +186,656 @@
     "physicalDevices": false
   },
   "runtimeSource": "f8a9a21e37a6df0853016b496f49c0821c6aa3d1",
-  "productionNotChanged": true,
+  "productionNotChanged": false,
   "pullRequest": "https://github.com/UTXOPlay/NIGHTSHIFT/pull/9",
   "ci": {
     "runtimeSource": "f8a9a21e37a6df0853016b496f49c0821c6aa3d1",
     "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41151321133",
     "browserSource": "success",
-    "native": "in_progress"
-  }
+    "native": "success"
+  },
+  "fullRaceRetests": [
+    {
+      "wallSeconds": 297.259,
+      "simulationSeconds": 281.26666666666665,
+      "won": true,
+      "medianFps": 30,
+      "p10Fps": 19,
+      "medianCpuMs": 12.94,
+      "medianGpuMs": 27.518697,
+      "maxPending": 24,
+      "maxBackingPixels": 2073600,
+      "scales": [
+        1,
+        0.75
+      ],
+      "qualityTransitions": [
+        {
+          "seconds": 0.002,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "changes": 0
+        },
+        {
+          "seconds": 128.845,
+          "tier": 1,
+          "scale": 1,
+          "locked": false,
+          "changes": 1
+        },
+        {
+          "seconds": 137.518,
+          "tier": 2,
+          "scale": 1,
+          "locked": false,
+          "changes": 2
+        },
+        {
+          "seconds": 140.037,
+          "tier": 2,
+          "scale": 0.75,
+          "locked": false,
+          "changes": 3
+        }
+      ],
+      "executionEnvironment": [
+        {
+          "seconds": 30,
+          "tick": 909,
+          "distance": 11211,
+          "fps": 60,
+          "pending": 5,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            4.82,
+            9.58,
+            10.18
+          ],
+          "freeMemoryBytes": 15569039360,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 60,
+          "tick": 1809,
+          "distance": 25819,
+          "fps": 60,
+          "pending": 23,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            4.86,
+            9.14,
+            10.01
+          ],
+          "freeMemoryBytes": 17746759680,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 90,
+          "tick": 2707,
+          "distance": 40883,
+          "fps": 60,
+          "pending": 16,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            4.74,
+            8.7,
+            9.84
+          ],
+          "freeMemoryBytes": 16763633664,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 120,
+          "tick": 3608,
+          "distance": 55602,
+          "fps": 60,
+          "pending": 12,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            5.87,
+            8.58,
+            9.76
+          ],
+          "freeMemoryBytes": 14166638592,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 150,
+          "tick": 4204,
+          "distance": 65275,
+          "fps": 29,
+          "pending": 17,
+          "tier": 2,
+          "scale": 0.75,
+          "locked": false,
+          "loadAverage": [
+            6.65,
+            8.55,
+            9.72
+          ],
+          "freeMemoryBytes": 13950169088,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 180,
+          "tick": 5063,
+          "distance": 79561,
+          "fps": 21,
+          "pending": 6,
+          "tier": 2,
+          "scale": 0.75,
+          "locked": false,
+          "loadAverage": [
+            8.34,
+            8.76,
+            9.75
+          ],
+          "freeMemoryBytes": 13883060224,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 210,
+          "tick": 5938,
+          "distance": 93735,
+          "fps": 34,
+          "pending": 13,
+          "tier": 2,
+          "scale": 0.75,
+          "locked": false,
+          "loadAverage": [
+            9.04,
+            8.88,
+            9.76
+          ],
+          "freeMemoryBytes": 13413502976,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 240,
+          "tick": 6792,
+          "distance": 107912,
+          "fps": 30,
+          "pending": 4,
+          "tier": 2,
+          "scale": 0.75,
+          "locked": false,
+          "loadAverage": [
+            10.32,
+            9.24,
+            9.85
+          ],
+          "freeMemoryBytes": 13084012544,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 270,
+          "tick": 7663,
+          "distance": 122216,
+          "fps": 16,
+          "pending": 8,
+          "tier": 2,
+          "scale": 0.75,
+          "locked": false,
+          "loadAverage": [
+            9.87,
+            9.24,
+            9.83
+          ],
+          "freeMemoryBytes": 12729810944,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        }
+      ],
+      "executionDevice": {
+        "vendor": "Google Inc. (Intel)",
+        "renderer": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "errors": [],
+      "nativeReplayVerified": true,
+      "accepted": false
+    },
+    {
+      "wallSeconds": 280.391,
+      "simulationSeconds": 280.3333333333333,
+      "won": true,
+      "medianFps": 60,
+      "p10Fps": 60,
+      "medianCpuMs": 2.54,
+      "medianGpuMs": 6.930312,
+      "maxPending": 24,
+      "maxBackingPixels": 2073600,
+      "scales": [
+        1
+      ],
+      "qualityTransitions": [
+        {
+          "seconds": 0.004,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "changes": 0
+        }
+      ],
+      "executionEnvironment": [
+        {
+          "seconds": 30,
+          "tick": 910,
+          "distance": 12274,
+          "fps": 60,
+          "pending": 5,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.76,
+            4.49,
+            7.07
+          ],
+          "freeMemoryBytes": 17723240448,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 60,
+          "tick": 1808,
+          "distance": 26814,
+          "fps": 60,
+          "pending": 23,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.8,
+            4.33,
+            6.94
+          ],
+          "freeMemoryBytes": 17802833920,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 90,
+          "tick": 2706,
+          "distance": 41672,
+          "fps": 60,
+          "pending": 15,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.52,
+            4.12,
+            6.78
+          ],
+          "freeMemoryBytes": 17767194624,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 120,
+          "tick": 3611,
+          "distance": 56578,
+          "fps": 60,
+          "pending": 15,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            3.06,
+            4.09,
+            6.69
+          ],
+          "freeMemoryBytes": 17909088256,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 150,
+          "tick": 4508,
+          "distance": 71623,
+          "fps": 60,
+          "pending": 7,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.72,
+            3.92,
+            6.55
+          ],
+          "freeMemoryBytes": 17897910272,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 180,
+          "tick": 5405,
+          "distance": 86564,
+          "fps": 60,
+          "pending": 23,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.67,
+            3.78,
+            6.42
+          ],
+          "freeMemoryBytes": 17809973248,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 210,
+          "tick": 6310,
+          "distance": 100962,
+          "fps": 60,
+          "pending": 23,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.57,
+            3.66,
+            6.29
+          ],
+          "freeMemoryBytes": 17814532096,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 240,
+          "tick": 7207,
+          "distance": 115167,
+          "fps": 60,
+          "pending": 14,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.74,
+            3.58,
+            6.18
+          ],
+          "freeMemoryBytes": 17804775424,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        },
+        {
+          "seconds": 270,
+          "tick": 8112,
+          "distance": 130022,
+          "fps": 60,
+          "pending": 13,
+          "tier": 0,
+          "scale": 1,
+          "locked": false,
+          "loadAverage": [
+            2.53,
+            3.46,
+            6.06
+          ],
+          "freeMemoryBytes": 18040180736,
+          "totalMemoryBytes": 33348415488,
+          "parallelism": 20
+        }
+      ],
+      "executionDevice": {
+        "vendor": "Google Inc. (Intel)",
+        "renderer": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "errors": [],
+      "nativeReplayVerified": true,
+      "accepted": true
+    }
+  ],
+  "stagedImage": {
+    "gameImage": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8",
+    "browserFilesVerified": 303,
+    "nativeExecutablesVerified": 7,
+    "allSixteenHostFilesUnchanged": true
+  },
+  "nativeRuleInputsAndPublishedExecutableBindingsUnchanged": true,
+  "deploymentEvidence": {
+    "source.json": {
+      "version": "14.1.1",
+      "commit": "0ab52acdaebed647042e639ecb62fecb69330392",
+      "baseVersion": "14.1.0",
+      "baseGameImage": "sha256:4bfe9c1a43370065ad29d0ba90d323f6f574b74338d351acab6cea664de275af",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "payloadSha256": "86425c8a18d9309db58eff8645dc2c6e6ae743f1a7a5f63e4d448cbf0404826e",
+      "payloadBytes": 977243,
+      "changedBrowserFiles": 9,
+      "browserFiles": 303,
+      "parentCatalogCommit": "29c5cffea50d34e03300d0bf4d55fdace210f6bc"
+    },
+    "stage.json": {
+      "version": "14.1.1",
+      "gameImage": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8",
+      "storeImage": "sha256:47b34cba212f2c3a2b7da16e76823edb60eacb5e051e10f77c608fa102d467f6",
+      "publicRegistrationExcluded": true
+    },
+    "deployment.json": {
+      "version": "14.1.1",
+      "gameImage": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8",
+      "storeImage": "sha256:07b0f0d08869d4f9703246041553b8e94ed2f80b0ce32833d4db9813e99ee862",
+      "otherCatalogEntriesPreserved": true,
+      "nativeVolumesPreserved": true,
+      "nativeBinariesUnchanged": true
+    },
+    "verification.json": {
+      "version": "14.1.1",
+      "checks": {
+        "myelin-nightshift-v8": {
+          "healthy": true,
+          "zeroRestarts": true,
+          "environmentUnchanged": true,
+          "dataMountsUnchanged": true,
+          "securityAndResourceLimitsUnchanged": true,
+          "networksAndAliasesPreserved": true,
+          "image": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8"
+        },
+        "utxoplay-store": {
+          "healthy": true,
+          "zeroRestarts": true,
+          "environmentUnchanged": true,
+          "dataMountsUnchanged": true,
+          "securityAndResourceLimitsUnchanged": true,
+          "networksAndAliasesPreserved": true,
+          "image": "sha256:07b0f0d08869d4f9703246041553b8e94ed2f80b0ce32833d4db9813e99ee862"
+        }
+      },
+      "onlyNightshiftCatalogVersionChanged": true,
+      "allSevenNativeExecutablesUnchanged": true,
+      "allHostFilesUnchanged": true,
+      "actualV14CareerContinued": true,
+      "completeBrowserManifestVerified": true,
+      "rollbackContainersAndPrivateBackupsRetained": true
+    },
+    "host-preservation.json": {
+      "hostFiles": 16,
+      "allHostFilesUnchanged": true,
+      "productionVerified": true
+    },
+    "image-integrity-myelin-nightshift-v8.json": {
+      "version": "14.1.1",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "nativeInputBindings": 45,
+      "nativeInputBindingsUnchanged": true,
+      "hostFiles": 9,
+      "browserFiles": 303,
+      "nativeVersions": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "allHashesMatch": true
+    },
+    "canary-after.json": {
+      "version": "14.1.1",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "originalStateAndSignedHeadRetained": true,
+      "originalSessionContinued": true,
+      "tickBefore": 3,
+      "tickAfter": 6,
+      "inactivePartsAndCareerPreserved": true,
+      "nativeReplay": true,
+      "allSevenBinariesUnchanged": true,
+      "binaries": {
+        "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+        "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+        "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+        "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63",
+        "12": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8",
+        "13": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643",
+        "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa"
+      }
+    }
+  },
+  "publicIntegrity": {
+    "version": "14.1.1",
+    "origin": "https://store.utxoplay.io/games/nightshift/",
+    "files": 303,
+    "verified": 303,
+    "failed": [],
+    "cacheKey": "14.1.1"
+  },
+  "stagePresentation": {
+    "menuHasNoWebGLOrRaceAssets": true,
+    "twelveActualRoutePreviews": true,
+    "garageLoadsOnlyItsAssets": true,
+    "actualFleetThumbnails": true,
+    "sixGroundedVehicles": true,
+    "movingResizeAndInverseInput": true,
+    "minimapActorsAndOverview": true,
+    "pausedReducedMotionPreservesRules": true,
+    "touchPortraitPausesAndClears": true
+  },
+  "stageFullscreen": {
+    "origin": "http://127.0.0.1:19491",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "sharedFullscreenFixture": {
+    "checks": [
+      "Same-origin game requires real fullscreen, blocks after exit, resumes without reload",
+      "Opaque game requires real fullscreen, blocks after exit, resumes without reload",
+      "Fullscreen entry works before readiness without hiding the Store loader",
+      "Unsupported API explains Home Screen, requires explicit fallback, and cleans up on remount/navigation",
+      "Rejected fullscreen keeps controls gated and supports explicit retry/focus navigation",
+      "Installed standalone app window does not receive a redundant gate",
+      "All six viewport sizes retain iframe geometry; fine-pointer desktop is not forced fullscreen"
+    ],
+    "errors": []
+  },
+  "sharedFullscreenHelper": {
+    "origin": "http://127.0.0.1:19491",
+    "file": "/mobile-game-fullscreen-ca5da6c0e6e413b9.js",
+    "helperSha256": "ca5da6c0e6e413b9522bf921784db85cc51755e347c27e9624327e08d2c5dfa7",
+    "source": "Actual staged Store response; no repository helper substitution",
+    "fixtureAssertionsUnchanged": true
+  },
+  "publicLoading": [
+    {
+      "label": "mobile-4mbps-cold",
+      "wallUntilPlayableMs": 2837.579411,
+      "navigationUntilRaceSeconds": 28.709782921,
+      "graphicsAfterMenuSeconds": 22.780900690000003,
+      "wireBytesUntilRace": 8779286,
+      "observedBodyBytesUntilRace": 8593931,
+      "transport": "Live origin through configured client HTTPS proxy. No asset substitution; emulated limits are additional to this network path.",
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-warm",
+      "wallUntilPlayableMs": 1833.9728909999976,
+      "transport": "Live origin through configured client HTTPS proxy. No asset substitution; emulated limits are additional to this network path.",
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "first-race-cold",
+      "wallUntilPlayableMs": 2121.718133000002,
+      "navigationUntilRaceSeconds": 18.610340553,
+      "graphicsAfterMenuSeconds": 13.789096776,
+      "wireBytesUntilRace": 8924100,
+      "observedBodyBytesUntilRace": 8927133,
+      "transport": "Live origin through configured client HTTPS proxy. No asset substitution; emulated limits are additional to this network path.",
+      "throttle": null,
+      "errors": []
+    }
+  ],
+  "retainedHarnessCorrections": [
+    "Native managed-service frames use the gateway CSP. The initial lifecycle check incorrectly required a browser-runtime sandbox attribute; it stopped before starting a race. The corrected native test verifies unchanged policy and the same JS realm/canvas/context. The exact staged shared helper separately passes all seven fixture checks, including opaque frames.",
+    "The shared helper uses its content-hashed path from the Store shell. An unversioned path returned HTML; no substitute script was tested."
+  ],
+  "publicPerformance": {
+    "version": "14.1.1",
+    "testRunnerVersion": "14.1.1",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 2565,
+    "wallSeconds": 120.13,
+    "simulationSeconds": 119.53333333333333,
+    "medianFps": 60,
+    "p10Fps": 54,
+    "medianCpuMs": 3.59,
+    "medianGpuMs": 12.89776,
+    "scales": [
+      1
+    ],
+    "maxBufferPixels": 2073600,
+    "maxSampledPendingInputs": 24,
+    "distance": 55322,
+    "errors": [],
+    "limits": "One public-origin 120-second desktop sample through the configured HTTPS proxy; not worldwide, all-route or physical-device evidence."
+  },
+  "stagingCleanup": "Only the two V14.1.1 staging containers were removed after public acceptance; rollback containers and all persistent data remain."
 }
