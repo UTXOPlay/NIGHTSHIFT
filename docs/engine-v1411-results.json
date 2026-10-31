@@ -167,5 +167,31 @@
     "passed": 167,
     "failed": 0
   },
-  "frozenNativeSourcesAnd303BrowserFilesVerified": true
+  "frozenNativeSourcesAnd303BrowserFilesVerified": true,
+  "presentation": {
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": 5,
+    "cars": 6,
+    "errors": [],
+    "physicalDevices": false
+  },
+  "runtimeSource": "f8a9a21e37a6df0853016b496f49c0821c6aa3d1",
+  "productionNotChanged": true,
+  "pullRequest": "https://github.com/UTXOPlay/NIGHTSHIFT/pull/9",
+  "ci": {
+    "runtimeSource": "f8a9a21e37a6df0853016b496f49c0821c6aa3d1",
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41151321133",
+    "browserSource": "success",
+    "native": "in_progress"
+  }
 }
