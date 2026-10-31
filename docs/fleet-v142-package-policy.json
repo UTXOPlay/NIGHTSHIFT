@@ -1,0 +1,22 @@
+{
+  "version": "14.2.0",
+  "baseVersion": "14.1.1",
+  "additions": [
+    "_arcade/nightshift142-traffic.mjs",
+    "_arcade/nightshift142-wheel-surface.mjs",
+    "_arcade/art/nightshift/fleet-ready-v142/concept-v11-race.glb",
+    "_arcade/art/nightshift/fleet-ready-v142/nissan-s14-race.glb",
+    "_arcade/art/nightshift/fleet-ready-v142/bmw-320i-race.glb",
+    "_arcade/art/nightshift/fleet-ready-v142/porsche-911-gt3-race.glb",
+    "_arcade/art/nightshift/fleet-ready-v142/audi-tt-race.glb",
+    "_arcade/art/nightshift/fleet-ready-v142/provenance.json"
+  ],
+  "removals": [],
+  "documentation": [
+    "docs/release-integrity-v14.1.1.json",
+    "docs/fleet-v142.md",
+    "docs/fleet-v142-results.json",
+    "docs/fleet-v142-package-policy.json"
+  ],
+  "reason": "Reviewed presentation additions: a bounded stable traffic allocator, GPU wheel shader and five existing bodies with verified tire pivots. Current-manifest hashes bind their bytes. No historical file, native executable, rule, profile, host binding or data namespace may be removed or changed."
+}
