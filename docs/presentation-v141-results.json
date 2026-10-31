@@ -1,6 +1,6 @@
 {
   "version": "14.1.0",
-  "status": "local-accepted-public-validation-pending",
+  "status": "deployed-public-integrity-and-career-accepted-completion-open",
   "rulesVersion": 14,
   "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
   "nativeRulesUnchanged": true,
@@ -182,13 +182,145 @@
     "Meaningful route branches/decisions and event-transition polish; new topology/contact rules need a new profile",
     "Vehicle-specific audio identity and stronger opponent gadget variety",
     "First-drive startup latency, especially limited mobile network/CPU",
-    "Animated near traffic/rival wheels and remaining vehicle/collision-envelope coherence",
+    "Animated near traffic/rival wheels and brake response; remaining vehicle/collision-envelope coherence",
     "Physical device, all-route sustained runs and human difficulty/economy evidence",
-    "Final requirement-by-requirement completion audit"
+    "Final requirement-by-requirement completion audit",
+    "Repair sustained automatic-quality recovery and verify shader warm-up against actual rendering targets"
   ],
   "retainedHarnessCorrections": [
     "A standalone local host has no Store wallet-auth endpoint; its attempted authentication returned 404 before a case ran. The complete local suite then used the intended standalone guest path.",
     "Rear-lens red excess is not a brightness metric under AgX because bright red emission desaturates. The check measures positive brightness change in the released red-lens pixels.",
-    "A 2 m observation can coincide with one complete wheel revolution. The motion window is 0.7 m, away from a full revolution across the accepted tire radii."
+    "A 2 m observation can coincide with one complete wheel revolution. The motion window is 0.7 m, away from a full revolution across the accepted tire radii.",
+    "The runtime image intentionally omits historical native source trees. Image validation checks the independently frozen input bindings, all seven published executable hashes, every bound host/browser file and all 16 host-file hashes against production; source-checkout validation checks all 45 actual native inputs."
+  ],
+  "ci": {
+    "runtimeSource": "0ec580540dc50db52085b57bc957ba16ed6eb10a",
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41143936665",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "stageBrowser": {
+    "menuHasNoWebGLOrRaceAssets": true,
+    "twelveActualRoutePreviews": true,
+    "garageLoadsOnlyItsAssets": true,
+    "actualFleetThumbnails": true,
+    "sixGroundedVehicles": true,
+    "movingResizeAndInverseInput": true,
+    "minimapActorsAndOverview": true,
+    "pausedReducedMotionPreservesRules": true,
+    "touchPortraitPausesAndClears": true
+  },
+  "stageFullscreen": {
+    "origin": "http://127.0.0.1:19491",
+    "checks": [
+      {
+        "id": "drift-run",
+        "pricing": "free",
+        "ready": true,
+        "fullscreen": true,
+        "reentry": true,
+        "sameGameInstance": true
+      }
+    ],
+    "failures": [],
+    "errors": []
+  },
+  "markerTransfer": {
+    "oldAtlasNetworkRequests": 0,
+    "currentAtlasNetworkRequests": 1,
+    "currentAtlasCacheHits": 1,
+    "harbourGeneralArchitectureRequests": 0
+  },
+  "stageFullRace": {
+    "wallSeconds": 282.184,
+    "simulationSeconds": 281.26666666666665,
+    "mode": 0,
+    "distance": 135014,
+    "won": true,
+    "medianFps": 60,
+    "p10Fps": 52,
+    "medianCpuMs": 3.73,
+    "medianGpuMs": 8.809531,
+    "maxPending": 48,
+    "maxBackingPixels": 2073600,
+    "scales": [
+      1,
+      0.75
+    ],
+    "limits": "One full stock-car Harbour event on this desktop/browser. Automated completion does not prove human difficulty, physical-device performance or all-route sustained performance.",
+    "errors": [],
+    "nativeReplayVerified": true,
+    "receiptCommitment": "4c78f020ed956336321ee6c50a9453a92f0c3425af7a28da9a128c0d3ae22b6a",
+    "gameImage": "sha256:4bfe9c1a43370065ad29d0ba90d323f6f574b74338d351acab6cea664de275af"
+  },
+  "publicIntegrity": {
+    "version": "14.1.0",
+    "origin": "https://store.utxoplay.io/games/nightshift/",
+    "files": 303,
+    "verified": 303,
+    "failed": [],
+    "cacheKey": "14.1.0"
+  },
+  "publicLoading": [
+    {
+      "label": "mobile-4mbps-cold",
+      "wallUntilPlayableMs": 3110.6876180000004,
+      "navigationUntilRaceSeconds": 40.05275348599999,
+      "graphicsAfterMenuSeconds": 32.973240894,
+      "wireBytesUntilRace": 8779218,
+      "transport": "Live origin through configured client HTTPS proxy. No asset substitution; emulated limits are additional to this network path.",
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-warm",
+      "wallUntilPlayableMs": 2332.2696110000034,
+      "transport": "Live origin through configured client HTTPS proxy. No asset substitution; emulated limits are additional to this network path.",
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "first-race-cold",
+      "wallUntilPlayableMs": 2399.4422140000024,
+      "navigationUntilRaceSeconds": 19.584101381000007,
+      "graphicsAfterMenuSeconds": 14.313896991000002,
+      "wireBytesUntilRace": 7585511,
+      "transport": "Live origin through configured client HTTPS proxy. No asset substitution; emulated limits are additional to this network path.",
+      "throttle": null,
+      "errors": []
+    }
+  ],
+  "deployment": {
+    "sourceCommit": "0ec580540dc50db52085b57bc957ba16ed6eb10a",
+    "productionTag": "https://github.com/UTXOPlay/NIGHTSHIFT/tree/v14.1.0",
+    "gameImage": "sha256:4bfe9c1a43370065ad29d0ba90d323f6f574b74338d351acab6cea664de275af",
+    "storeImage": "sha256:3bdd424055cfafb0c0a70eb48d232331a55cf6f94257262e192612fa3bcffef6",
+    "parentCatalogCommit": "93c8fec4791e6ed8001ccb519809e107289181de",
+    "allSevenExecutablesUnchanged": true,
+    "allSixteenHostFilesUnchanged": true,
+    "environmentDataMountsNetworksAndResourceSettingsPreserved": true,
+    "onlyNightshiftCatalogVersionChanged": true,
+    "actualPreCutoverV14CareerContinued": true,
+    "originalStateAndSignedHeadRetained": true,
+    "continuedNativeReplayVerified": true,
+    "stagingContainersRemoved": true,
+    "rollbackContainersAndPrivateBackupsRetained": true
+  },
+  "limits": [
+    "The public-origin restricted-mobile sample takes about 40 seconds to first driving; transfer savings do not establish a loading-time improvement.",
+    "Loading reports before V14.1.1 measured menu CPU tasks only; they did not capture the later graphics startup tasks.",
+    "One full staged desktop Harbour race is not all-route, physical-device or human difficulty evidence.",
+    "The shared automatic quality governor can count ceiling no-ops as changes and suppress later recovery in a long session.",
+    "Complete single-player objective remains open; multiplayer implementation is excluded."
   ]
 }
