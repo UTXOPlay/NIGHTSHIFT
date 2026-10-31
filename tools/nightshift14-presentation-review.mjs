@@ -18,7 +18,7 @@ try{
  await p.locator('[data-mode="0"]').click();await p.screenshot({path:out+'/menu-desktop.png'});checks.twelveActualRoutePreviews=true;
  await p.getByRole('button',{name:'Garage and upgrades',exact:true}).click();await p.waitForFunction(()=>__driftReview().engine.ready&&!__driftReview().engine.worldReady);
  await p.waitForFunction(()=>__driftReview().engine.detailVehicles.includes(0));
- assert.equal(requests.some(s=>/foliage|world-terrain|combat-vfx|impact-sequence/.test(s)),false);checks.garageLoadsOnlyItsAssets=true;await p.waitForFunction(()=>{const images=[...document.querySelectorAll('.car-image')];return images.length===6&&images.every(i=>i.complete&&i.naturalWidth===512&&i.src.includes('/fleet-v131/car-'));});checks.actualFleetThumbnails=true;
+ assert.equal(requests.some(s=>/foliage|world-terrain|combat-vfx|impact-sequence/.test(s)),false);checks.garageLoadsOnlyItsAssets=true;await p.waitForFunction(()=>{const images=[...document.querySelectorAll('.car-image')];return images.length===6&&images.every(i=>i.complete&&i.naturalWidth===512&&i.src.includes('/fleet-v141/car-'));});checks.actualFleetThumbnails=true;
  await p.getByRole('button',{name:'Vehicle showroom',exact:true}).click();
  for(let n=0;n<6;n++){
   await p.locator('[data-vehicle="'+n+'"]').click();await p.waitForFunction(n=>__driftReview().engine.detailVehicles.includes(n),n);await p.waitForTimeout(200);

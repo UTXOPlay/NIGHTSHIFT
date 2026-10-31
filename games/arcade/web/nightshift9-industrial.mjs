@@ -70,7 +70,8 @@ export function harbourDistrict(b,n,random){
    }
   }else if(zone===5||zone===7){
    const x=side*(22+n%3*2),h=5.5+random(31)*2;
-   b('warehouse',x,h/2,0,13,h,16);add('structure',x,h,0,13,4,16,INDUSTRIAL.roof,'#64767b');
+   const office=zone===7&&n%3===1,depth=office?12:16;
+   b('harbour',x,h/2,0,13,h,depth);if(office){add('structure',x,h+.12,0,13.4,.24,depth+.4,INDUSTRIAL.detailBox,'#64767b');add('structure',x+side*3,h+.8,-3,2,1.3,2,INDUSTRIAL.detailBox,'#7c8584');}else add('structure',x,h,0,13,4,depth,INDUSTRIAL.roof,'#64767b');
    for(const z of [-5,0,5]){add('structure',x-side*6.65,h*.47,z,.23,h,.28,INDUSTRIAL.detailBox,'#8a9897');add('structure',x-side*7.3,2.2,z,1.2,.16,4,INDUSTRIAL.detailBox,'#52636b');}
    add('structure',x+side*2,h+.9,3,2.5,1.6,2.2,INDUSTRIAL.detailBox,'#718083');
   }else{

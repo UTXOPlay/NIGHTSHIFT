@@ -29,7 +29,7 @@
 .car-card{background-color:transparent}.car-card img.car-image{mix-blend-mode:normal}
 #result{background-color:#06151c33;backdrop-filter:blur(8px)}#minimap{background-color:#07182233;backdrop-filter:blur(6px)}
 #help{background:#071822aa;background-image:url('/arcade/art/nightshift/combat-frame.webp');background-size:100% 100%;border-color:transparent;backdrop-filter:blur(24px)}
-#target:before{content:'';width:40px;height:40px;margin:auto;background-image:url('/arcade/art/nightshift/combat-markers.webp');background-size:200% 200%;background-position:100% 0}
+#target:before{content:'';width:40px;height:40px;margin:auto;background-image:url('/arcade/art/nightshift/combat-markers-v131.webp');background-size:200% 200%;background-position:100% 0}
 #abilities .icon-button.active{background-color:#afffe526;filter:drop-shadow(0 0 8px #81dbcc55)}
 
 #result,#minimap{background-color:transparent;backdrop-filter:none}#result strong,#result small,#minimap svg{filter:drop-shadow(0 2px 5px #000)}

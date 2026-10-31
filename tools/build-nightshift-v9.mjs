@@ -20,7 +20,9 @@ function rewrite(dir){for(const item of readdirSync(dir,{withFileTypes:true})){
  const file=path.join(dir,item.name);if(item.isDirectory()){rewrite(file);continue;}
  if(/\.(?:glb|pmrem)$/.test(file)){const data=readFileSync(file);writeFileSync(file+'.br',brotliCompressSync(data,{params:{1:5}}));writeFileSync(file+'.gz',gzipSync(data));continue;}
  if(!/\.(?:js|mjs|css|html|json|webmanifest)$/.test(file))continue;
- let s=readFileSync(file,'utf8').replace('href="./_arcade/nightshift9-renderer.bundle.mjs"','href="./_arcade/nightshift9-renderer.bundle.mjs?v='+version+'"').replaceAll('/arcade/','/games/nightshift/_arcade/');
+ let s=readFileSync(file,'utf8').replace('href="./_arcade/nightshift9-renderer.bundle.mjs"','href="./_arcade/nightshift9-renderer.bundle.mjs?v='+version+'"');
+ if(file.endsWith('.css'))s=s.replace(/url\((['"]?)(\/arcade\/[^)'"?]+)\1\)/g,(original,quote,url)=>hashes[url]?`url(${quote}${url}?h=${hashes[url]}${quote})`:original);
+ s=s.replaceAll('/arcade/','/games/nightshift/_arcade/');
  for(const pre of ['/assets/','/brand/','/game-shell.','/game-loader.','/game-overlay.','/widescreen.','/fonts.','/brand.','/favicon','/apple-touch-icon.','/site.webmanifest'])s=s.replaceAll(pre,(match,offset,source)=>offset===0||/["'`(=\s]/.test(source[offset-1])?'/games/nightshift/_shared'+match:match);
  s=s.replaceAll("'/api/me'","'/games/nightshift/api/me'").replaceAll("'/api/guest'","'/games/nightshift/api/guest'");
  writeFileSync(file,s);writeFileSync(file+'.br',brotliCompressSync(s));writeFileSync(file+'.gz',gzipSync(s));

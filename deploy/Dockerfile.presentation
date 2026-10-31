@@ -1,0 +1,9 @@
+# Presentation overlay for an exact, verified published runtime image.
+# dist/ may be the complete build or a manifest-verified changed-file overlay.
+# All seven published executables, environment defaults and data namespaces are
+# inherited. Never rebuild a historical binary during a presentation release.
+ARG BASE_RUNTIME_IMAGE
+FROM ${BASE_RUNTIME_IMAGE}
+COPY dist/ /app/dist/
+COPY docs/ /app/docs/
+COPY package.json package-lock.json /app/
