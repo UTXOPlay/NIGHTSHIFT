@@ -14,6 +14,7 @@ console.log(`Verified preserved V7–V14 sources, ${Object.keys(expected.nativeS
 
 const renderer='./_arcade/nightshift9-renderer.bundle.mjs?v='+expected.version;
 assert.equal(expected.version,JSON.parse(readFileSync('package.json')).version);
+assert.ok(readFileSync('dist/nightshift/index.html','utf8').includes('src="./app.js?v='+expected.version+'"'),'HTML uses the current application cache key');
 assert.ok(!readFileSync('dist/nightshift/index.html','utf8').includes('nightshift9-renderer.bundle.mjs'),'menu must defer the WebGL renderer');
 assert.ok(readFileSync('dist/nightshift/app.js','utf8').includes('import("'+renderer+'")'),'deferred renderer must use the release cache key');
 

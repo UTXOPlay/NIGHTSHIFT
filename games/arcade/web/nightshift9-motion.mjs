@@ -18,10 +18,23 @@ export function prepareRig(car){
  rig.material=body.children.find(o=>o.isMesh&&o.material?.userData?.brake)?.material;
  rig.point=new T.Vector3();rig.local=new T.Vector3();rig.normal=new T.Vector3();rig.up=new T.Vector3();rig.q=new T.Quaternion();rig.spin=new T.Quaternion();rig.axis=new T.Vector3(1,0,0);rig.yaxis=new T.Vector3(0,1,0);rig.surface=new T.Vector3();rig.a=new T.Vector3();rig.b=new T.Vector3();
 }
-export function resetRig(car){const r=car.userData.rig;if(!r)return;for(const s of [r.roll,r.pitch,r.heave])s.value=s.velocity=0;r.lastSpeed=null;r.body.position.y=0;r.body.rotation.set(0,0,0);}
+function surfaceMotion(model,brake,distance,steer){
+ if(!model)return;const material=model.userData.brakeMaterial||model.userData.rig?.material;
+ if(material)material.userData.brake.value=brake;
+ model.userData.wheelMotion?.value.set(distance,steer);
+ for(const m of model.userData.brakeMaterials||[])m.emissiveIntensity=.7+brake*3;
+}
+export function resetRig(car){
+ const r=car.userData.rig,state=r||car.userData.motionState;if(state){state.lastSpeed=null;state.brake=0;}
+ surfaceMotion(car,0,0,0);surfaceMotion(car.userData.far,0,0,0);
+ if(!r)return;for(const s of [r.roll,r.pitch,r.heave])s.value=s.velocity=0;r.body.position.y=0;r.body.rotation.set(0,0,0);
+}
 export function animateRig(car,g,dt,{reduced=false,active=true,distance=g.distance,steer=g.steer_v||0}={}){
- const r=car.userData.rig;if(!r)return;const speed=(g.speed||0)*.03,acc=r.lastSpeed===null?0:clamp((speed-r.lastSpeed)/Math.max(dt,.001),-16,12);r.lastSpeed=speed;
- r.brake=damp(r.brake,active&&((g.brake||0)>0||g.drifting||acc< -1.8)?1:0,14,dt);if(r.material)r.material.userData.brake.value=r.brake;for(const material of car.userData.brakeMaterials||[])material.emissiveIntensity=.7+r.brake*3;
+ const r=car.userData.rig,state=r||(car.userData.motionState??={lastSpeed:null,brake:0}),speed=(g.speed||0)*.03,acc=state.lastSpeed===null?0:clamp((speed-state.lastSpeed)/Math.max(dt,.001),-16,12);state.lastSpeed=speed;
+ state.brake=damp(state.brake,active&&((g.brake||0)>0||g.drifting||acc< -1.8)?1:0,14,dt);
+ const travel=(distance||0)*.1,turn=active?clamp(-steer*.003,-.3,.3):0;
+ surfaceMotion(car,state.brake,travel,turn);surfaceMotion(car.userData.far,state.brake,travel,turn);
+ if(!r)return;
  const roll=active&&!reduced?clamp(steer*.00055+(g.side_v||0)*.000022,-.085,.085):0,pitch=active&&!reduced?clamp(acc*.0024,-.032,.045):0;
  r.body.rotation.set(spring(r.pitch,pitch,11,dt),0,spring(r.roll,roll,10,dt));r.body.position.y=spring(r.heave,active&&!reduced?-Math.abs(roll)*.12:0,13,dt);
  for(const w of r.wheels){w.mesh.position.copy(w.rest);w.mesh.quaternion.copy(w.rotation);if(w.rest.z<0){r.q.setFromAxisAngle(r.yaxis,active?clamp(-steer*.003,-.3,.3):0);w.mesh.quaternion.premultiply(r.q);}r.spin.setFromAxisAngle(r.axis,-distance*.1/Math.max(.1,w.radius));w.mesh.quaternion.multiply(r.spin);}

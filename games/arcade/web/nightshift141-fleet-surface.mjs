@@ -1,7 +1,7 @@
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
-function wheelSites(root){
+export function wheelSites(root){
  const sites=new Map(),box=new T.Box3(),size=new T.Vector3(),center=new T.Vector3();
  root.traverse(o=>{
   if(!o.isMesh)return;const m=Array.isArray(o.material)?o.material[0]:o.material;if(!/^(Rubber|Trim)/.test(m.name))return;
@@ -25,8 +25,8 @@ function wheelForMesh(o,sites){
 
 // Presentation only. The normalized -Z nose, wheel transforms and rule envelope
 // are unchanged. Keep authored UVs; a one-material batch masks untextured parts.
-export function prepareFleetSurface(root,detail,body){
- root.updateMatrixWorld(true);const groups=new Map(),textures=new Set(),position=new T.Vector3(),sites=detail?wheelSites(root):[];
+export function prepareFleetSurface(root,detail,body,{coarseWheelSites=[]}={}){
+ root.updateMatrixWorld(true);const groups=new Map(),textures=new Set(),position=new T.Vector3(),sites=detail?wheelSites(root):[],coarsePoint=new T.Vector3();
  root.traverse(o=>{
   if(!o.isMesh)return;const m=Array.isArray(o.material)?o.material[0]:o.material,name=m.name.split('.')[0];
   if(m.map)textures.add(m.map);const site=detail?wheelForMesh(o,sites):null,transform=site?new T.Matrix4().makeTranslation(...site.center.toArray()):null;
@@ -36,6 +36,15 @@ export function prepareFleetSurface(root,detail,body){
   for(const key of Object.keys(geometry.attributes))if(!['position','normal','uv'].includes(key))geometry.deleteAttribute(key);
   if(!geometry.attributes.normal)geometry.computeVertexNormals();const count=geometry.attributes.position.count;
   if(!geometry.attributes.uv)geometry.setAttribute('uv',new T.Float32BufferAttribute(new Float32Array(count*2),2));
+  if(coarseWheelSites.length){
+   const wheel=new Float32Array(count*4),eligible=/^(Rubber|Trim|Metal)/.test(name),p=geometry.attributes.position;
+   if(eligible)for(let n=0;n<count;n+=3)for(const s of coarseWheelSites){
+    let inside=true;
+    for(let k=0;k<3;k++){coarsePoint.fromBufferAttribute(p,n+k);if(Math.abs(coarsePoint.x-s.center.x)>Math.max(.24,s.width/2+.07)||Math.hypot(coarsePoint.y-s.center.y,coarsePoint.z-s.center.z)>s.radius*1.12){inside=false;break;}}
+    if(inside){for(let k=0;k<3;k++)wheel.set([s.center.x,s.center.y,s.center.z,s.radius],(n+k)*4);break;}
+   }
+   geometry.setAttribute('wheelRig',new T.Float32BufferAttribute(wheel,4));
+  }
   const color=new Float32Array(count*3),surface=new Float32Array(count*4),sampling=new Float32Array(count*2),base=name==='Paint'?new T.Color('#ffffff'):m.color.clone();
   for(let n=0;n<count;n++){
    position.fromBufferAttribute(geometry.attributes.position,n);if(site)position.applyMatrix4(transform);

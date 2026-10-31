@@ -1,0 +1,878 @@
+{
+  "version": "14.2.0",
+  "status": "deployed-public-integrity-and-career-accepted-completion-open",
+  "rulesVersion": 14,
+  "nativeRuleInputsUnchanged": true,
+  "fullGoalComplete": false,
+  "publishedVersion": "14.2.0",
+  "assets": [
+    {
+      "body": "concept-v11",
+      "sites": [
+        {
+          "name": "Wheel_FL",
+          "center": [
+            -0.888656735420227,
+            0.3509286642074585,
+            -1.1349492073059082
+          ],
+          "radius": 0.3509287576079645,
+          "width": 0.24483408832555575
+        },
+        {
+          "name": "Wheel_FR",
+          "center": [
+            0.888656497001648,
+            0.3509286642074585,
+            -1.1349492073059082
+          ],
+          "radius": 0.3509287576079645,
+          "width": 0.24483408832555575
+        },
+        {
+          "name": "Wheel_RL",
+          "center": [
+            -0.888656735420227,
+            0.3509286642074585,
+            1.4076968431472778
+          ],
+          "radius": 0.3509287576079645,
+          "width": 0.24483408832555575
+        },
+        {
+          "name": "Wheel_RR",
+          "center": [
+            0.888656497001648,
+            0.3509286642074585,
+            1.4076968431472778
+          ],
+          "radius": 0.3509287576079645,
+          "width": 0.24483408832555575
+        }
+      ],
+      "maxBoundsDelta": 2.264386403294516e-05,
+      "wheelVertices": [
+        227,
+        227,
+        227,
+        227
+      ],
+      "movingVertices": 908,
+      "triangles": 4416,
+      "bytes": 94044,
+      "sha256": "15df7eca542c0291008d82db6877c081a3fb209a78741ddee3ad034f4ea67b68",
+      "texturesByteIdentical": true
+    },
+    {
+      "body": "nissan-s14",
+      "sites": [
+        {
+          "name": "Wheel_FL",
+          "center": [
+            -0.6666120290756226,
+            0.3101800717458332,
+            -1.2227347493171692
+          ],
+          "radius": 0.3101794086351788,
+          "width": 0.19777143001556396
+        },
+        {
+          "name": "Wheel_RL",
+          "center": [
+            -0.6666123867034912,
+            0.3101800717458332,
+            1.1666894257068634
+          ],
+          "radius": 0.3101794086351788,
+          "width": 0.19777143001556396
+        },
+        {
+          "name": "Wheel_RR",
+          "center": [
+            0.6672184467315674,
+            0.3101794719696045,
+            1.168527364730835
+          ],
+          "radius": 0.3101794719696045,
+          "width": 0.19777143001556396
+        },
+        {
+          "name": "Wheel_FR",
+          "center": [
+            0.6672197580337524,
+            0.31018023239954573,
+            -1.2208972573280334
+          ],
+          "radius": 0.31017948640004533,
+          "width": 0.19777143001556396
+        }
+      ],
+      "maxBoundsDelta": 3.165791222736747e-05,
+      "wheelVertices": [
+        483,
+        496,
+        496,
+        478
+      ],
+      "movingVertices": 1953,
+      "triangles": 4855,
+      "bytes": 164088,
+      "sha256": "2f3dfece45c457852038cb00a1f2c6dd9b6087142b2a674f7bc142754c1a9517",
+      "texturesByteIdentical": true
+    },
+    {
+      "body": "bmw-320i",
+      "sites": [
+        {
+          "name": "Wheel_FL",
+          "center": [
+            -0.723973423242569,
+            0.3019969255774999,
+            -1.4375243782997131
+          ],
+          "radius": 0.30199690748753305,
+          "width": 0.22419768571853638
+        },
+        {
+          "name": "Wheel_FR",
+          "center": [
+            0.7405733168125153,
+            0.3019969165325165,
+            -1.4375243782997131
+          ],
+          "radius": 0.3019969165325165,
+          "width": 0.22419768571853638
+        },
+        {
+          "name": "Wheel_RL",
+          "center": [
+            -0.7239737510681152,
+            0.3019969255774999,
+            1.1985030472278595
+          ],
+          "radius": 0.30199690748753305,
+          "width": 0.22419774532318115
+        },
+        {
+          "name": "Wheel_RR",
+          "center": [
+            0.7405730187892914,
+            0.3019969165325165,
+            1.1985030472278595
+          ],
+          "radius": 0.3019969165325165,
+          "width": 0.22419768571853638
+        }
+      ],
+      "maxBoundsDelta": 2.618348489280553e-05,
+      "wheelVertices": [
+        461,
+        1132,
+        453,
+        1115
+      ],
+      "movingVertices": 3161,
+      "triangles": 4830,
+      "bytes": 218944,
+      "sha256": "e0c6e8fbeaddee08ad1e8adf0a185d8e15e3ec8cbda83911e90b0c6589f0c27b",
+      "texturesByteIdentical": true
+    },
+    {
+      "body": "porsche-911-gt3",
+      "sites": [
+        {
+          "name": "Wheel_FL",
+          "center": [
+            -0.723938524723053,
+            0.32553091226145625,
+            -1.1538656651973724
+          ],
+          "radius": 0.32202670397236943,
+          "width": 0.26337337493896484
+        },
+        {
+          "name": "Wheel_FR",
+          "center": [
+            0.7243506014347076,
+            0.32568434975109994,
+            -1.153774470090866
+          ],
+          "radius": 0.32187326648272574,
+          "width": 0.26425403356552124
+        },
+        {
+          "name": "Wheel_RL",
+          "center": [
+            -0.7207314074039459,
+            0.3432218024972826,
+            1.1522779762744904
+          ],
+          "radius": 0.3401377012487501,
+          "width": 0.31986814737319946
+        },
+        {
+          "name": "Wheel_RR",
+          "center": [
+            0.7206981182098389,
+            0.3424317572498694,
+            1.1522270739078522
+          ],
+          "radius": 0.3409277464961633,
+          "width": 0.3201791048049927
+        }
+      ],
+      "maxBoundsDelta": 2.224423441710144e-05,
+      "wheelVertices": [
+        567,
+        421,
+        372,
+        377
+      ],
+      "movingVertices": 1737,
+      "triangles": 6325,
+      "bytes": 192644,
+      "sha256": "74642f02cf84b6242547ea44eda5fe826c32e802fd924bfb47fd3803e5dcef01",
+      "texturesByteIdentical": true
+    },
+    {
+      "body": "audi-tt",
+      "sites": [
+        {
+          "name": "Wheel_FL",
+          "center": [
+            -0.8082884252071381,
+            0.33790478469504137,
+            -1.234735757112503
+          ],
+          "radius": 0.33790424106942396,
+          "width": 0.23552554845809937
+        },
+        {
+          "name": "Wheel_FR",
+          "center": [
+            0.8082886338233948,
+            0.3379042735076627,
+            -1.2347356975078583
+          ],
+          "radius": 0.3379042754196444,
+          "width": 0.2355257272720337
+        },
+        {
+          "name": "Wheel_RL",
+          "center": [
+            -0.8082886338233948,
+            0.33790427427970554,
+            1.3342578709125519
+          ],
+          "radius": 0.3379042746476016,
+          "width": 0.23552560806274414
+        },
+        {
+          "name": "Wheel_RR",
+          "center": [
+            0.8082883954048157,
+            0.33790478554928427,
+            1.334257811307907
+          ],
+          "radius": 0.33790424021518106,
+          "width": 0.23552560806274414
+        }
+      ],
+      "maxBoundsDelta": 2.406544399691235e-05,
+      "wheelVertices": [
+        264,
+        263,
+        258,
+        257
+      ],
+      "movingVertices": 1042,
+      "triangles": 4943,
+      "bytes": 119084,
+      "sha256": "3b6b4903a5d25f65cc00922536021a34ce904f1c52f5b05be150a74302b4a007",
+      "texturesByteIdentical": true
+    }
+  ],
+  "pixelChecks": {
+    "cars": 6,
+    "oneMainDrawPerCoarseCar": true,
+    "allFourTiresChangePixels": true,
+    "chassisStable": true,
+    "visibleBrakes": true,
+    "depthAndDistanceShadowPaths": true,
+    "errors": []
+  },
+  "limits": [
+    "One public 120-second sample failed the unchanged gates at 20 / 6 FPS. The instrumented repeat, after observed load fell, passes at 60 / 60 FPS. Both attempts remain retained; the environment observation does not establish a regression-free result on all devices.",
+    "First driving remains slow: latest public samples are 31.57 s desktop and 51.55 s under restricted-mobile emulation, including countdown and the test HTTPS proxy.",
+    "Physical devices, real controllers, all-route sustained coverage and human handling/economy acceptance remain open.",
+    "All-route scenery, branching, audio identity, tactical variety and final full-scope validation remain open."
+  ],
+  "trafficRegression": {
+    "capacity": 32,
+    "shadowInstances": 38,
+    "nativeParityAuditTape": "No omitted native traffic; stable slots for every surviving actor",
+    "unitChecksPassed": 4,
+    "integratedStress": "Monotonic-clock complete event accepted, including 26 concurrent traffic actors and 44 formerly overflowing near-model samples."
+  },
+  "loadingBaseline": [
+    {
+      "label": "mobile-4mbps-cold",
+      "navigationUntilRaceSeconds": 27.229084641,
+      "wireBytesUntilRace": 8820598,
+      "errors": [],
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      }
+    },
+    {
+      "label": "mobile-4mbps-warm",
+      "navigationUntilRaceSeconds": null,
+      "wireBytesUntilRace": null,
+      "errors": [],
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      }
+    },
+    {
+      "label": "first-race-cold",
+      "navigationUntilRaceSeconds": 5.006079404,
+      "wireBytesUntilRace": 7521736,
+      "errors": [],
+      "throttle": null
+    }
+  ],
+  "nodeChecks": {
+    "passed": 174,
+    "failed": 0
+  },
+  "releaseIntegrity": {
+    "browserFiles": 311,
+    "nativeSources": 45,
+    "profileUnchanged": true,
+    "allPublishedExecutableBindingsUnchanged": true
+  },
+  "retainedIntegratedAttempts": [
+    {
+      "path": "artifacts/fleet-v142/traffic/review.json",
+      "accepted": false,
+      "reason": "Event ends before overflow; test driver did not compensate the actual Gamepad deadzone"
+    },
+    {
+      "path": "artifacts/fleet-v142/traffic-retest/review.json",
+      "accepted": false,
+      "maxTraffic": 20,
+      "formerOverflowSamples": 4,
+      "movingTrafficActors": 21,
+      "movingRivals": 5,
+      "nativeReplayVerified": true,
+      "reason": "Complete event was not observed within the original wall-clock deadline; partial functional observations do not waive the failed gate"
+    }
+  ],
+  "trafficIntegration": {
+    "finished": true,
+    "maxTraffic": 26,
+    "nearSamples": 2803,
+    "formerOverflowSamples": 44,
+    "trafficMoving": 35,
+    "rivalsMoving": 5,
+    "errors": [],
+    "accepted": true,
+    "simulationSeconds": 370.26666666666665,
+    "won": false,
+    "nativeReplayVerified": true,
+    "interpretation": "Deliberate 75-second stop stress; event completion and visibility are required, not a podium. This is separate from the normal winning full-race performance gate."
+  },
+  "presentation": {
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": 5,
+    "cars": 6,
+    "errors": [],
+    "physicalDevices": false
+  },
+  "heroFleet": {
+    "renders": 34,
+    "motionCases": 6,
+    "errors": []
+  },
+  "coarseGpu": {
+    "ghost": {
+      "changedPixels": 15163,
+      "draws": 1,
+      "glError": 0
+    },
+    "errors": []
+  },
+  "stagedImage": {
+    "gameImage": "sha256:8d820a451964a27239bede14c3ce12609b91862da3022b8fcc524b71d721ebe2",
+    "storeImage": "sha256:dec0dc60cc4c6f56a95521953f1667b6c7d21b43d9bb08643176cc51ebf0ee22",
+    "browserFilesVerified": 311,
+    "nativeExecutablesVerified": 7,
+    "boundHostFilesVerified": 9,
+    "publicRegistrationExcluded": true
+  },
+  "payload": {
+    "version": "14.2.0",
+    "commit": "e92162f254f06448ea7ecd947a6e32726568aa4a",
+    "baseVersion": "14.1.1",
+    "baseGameImage": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8",
+    "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+    "payloadSha256": "41ce7e21f16543c56fc224a1a0d94fd5f46432710163ec0ef4dcfea3bb732bd2",
+    "payloadBytes": 2995260,
+    "changedBrowserFiles": 16,
+    "browserFiles": 311,
+    "assetPolicy": {
+      "path": "docs/fleet-v142-package-policy.json",
+      "sha256": "3f9fb7d708fbbbb143b54235f51317d4e778f3aaf27e7a1309cc67c7413fa40d",
+      "additions": [
+        "_arcade/art/nightshift/fleet-ready-v142/audi-tt-race.glb",
+        "_arcade/art/nightshift/fleet-ready-v142/bmw-320i-race.glb",
+        "_arcade/art/nightshift/fleet-ready-v142/concept-v11-race.glb",
+        "_arcade/art/nightshift/fleet-ready-v142/nissan-s14-race.glb",
+        "_arcade/art/nightshift/fleet-ready-v142/porsche-911-gt3-race.glb",
+        "_arcade/art/nightshift/fleet-ready-v142/provenance.json",
+        "_arcade/nightshift142-traffic.mjs",
+        "_arcade/nightshift142-wheel-surface.mjs"
+      ],
+      "removals": []
+    }
+  },
+  "ci": {
+    "source": "e92162f254f06448ea7ecd947a6e32726568aa4a",
+    "url": "https://github.com/UTXOPlay/NIGHTSHIFT/actions/runs/41165286511",
+    "browserSource": "success",
+    "native": "success"
+  },
+  "fullRace": {
+    "wallSeconds": 282.64934767799997,
+    "simulationSeconds": 282.6666666666667,
+    "won": true,
+    "over": true,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 2.64,
+    "medianGpuMs": 8.928906,
+    "maxPending": 24,
+    "maxBackingPixels": 2073600,
+    "scales": [
+      1
+    ],
+    "qualityTransitions": [
+      {
+        "seconds": 0.002144409000000451,
+        "tier": 0,
+        "scale": 1,
+        "locked": false,
+        "changes": 0
+      }
+    ],
+    "executionDevice": {
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "errors": [],
+    "accepted": true,
+    "nativeReplayVerified": true,
+    "scope": "One full stock-car Harbour event on this desktop/browser. Automated completion does not prove human difficulty, physical-device performance or all-route sustained performance."
+  },
+  "productionNotChanged": false,
+  "deploymentEvidence": {
+    "source.json": {
+      "version": "14.2.0",
+      "commit": "e92162f254f06448ea7ecd947a6e32726568aa4a",
+      "baseVersion": "14.1.1",
+      "baseGameImage": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "payloadSha256": "41ce7e21f16543c56fc224a1a0d94fd5f46432710163ec0ef4dcfea3bb732bd2",
+      "payloadBytes": 2995260,
+      "changedBrowserFiles": 16,
+      "browserFiles": 311,
+      "assetPolicy": {
+        "path": "docs/fleet-v142-package-policy.json",
+        "sha256": "3f9fb7d708fbbbb143b54235f51317d4e778f3aaf27e7a1309cc67c7413fa40d",
+        "additions": [
+          "_arcade/art/nightshift/fleet-ready-v142/audi-tt-race.glb",
+          "_arcade/art/nightshift/fleet-ready-v142/bmw-320i-race.glb",
+          "_arcade/art/nightshift/fleet-ready-v142/concept-v11-race.glb",
+          "_arcade/art/nightshift/fleet-ready-v142/nissan-s14-race.glb",
+          "_arcade/art/nightshift/fleet-ready-v142/porsche-911-gt3-race.glb",
+          "_arcade/art/nightshift/fleet-ready-v142/provenance.json",
+          "_arcade/nightshift142-traffic.mjs",
+          "_arcade/nightshift142-wheel-surface.mjs"
+        ],
+        "removals": []
+      }
+    },
+    "stage.json": {
+      "version": "14.2.0",
+      "gameImage": "sha256:8d820a451964a27239bede14c3ce12609b91862da3022b8fcc524b71d721ebe2",
+      "storeImage": "sha256:dec0dc60cc4c6f56a95521953f1667b6c7d21b43d9bb08643176cc51ebf0ee22",
+      "publicRegistrationExcluded": true
+    },
+    "deployment.json": {
+      "version": "14.2.0",
+      "gameImage": "sha256:8d820a451964a27239bede14c3ce12609b91862da3022b8fcc524b71d721ebe2",
+      "storeImage": "sha256:3487d76a56837bc7bfee4a3719f9fb2204d6babfc557bcb98a8e1f269300068d",
+      "otherCatalogEntriesPreserved": true,
+      "nativeVolumesPreserved": true,
+      "nativeBinariesUnchanged": true
+    },
+    "verification.json": {
+      "version": "14.2.0",
+      "checks": {
+        "myelin-nightshift-v8": {
+          "healthy": true,
+          "zeroRestarts": true,
+          "environmentUnchanged": true,
+          "dataMountsUnchanged": true,
+          "securityAndResourceLimitsUnchanged": true,
+          "networksAndAliasesPreserved": true,
+          "image": "sha256:8d820a451964a27239bede14c3ce12609b91862da3022b8fcc524b71d721ebe2"
+        },
+        "utxoplay-store": {
+          "healthy": true,
+          "zeroRestarts": true,
+          "environmentUnchanged": true,
+          "dataMountsUnchanged": true,
+          "securityAndResourceLimitsUnchanged": true,
+          "networksAndAliasesPreserved": true,
+          "image": "sha256:3487d76a56837bc7bfee4a3719f9fb2204d6babfc557bcb98a8e1f269300068d"
+        }
+      },
+      "onlyNightshiftCatalogVersionChanged": true,
+      "allSevenNativeExecutablesUnchanged": true,
+      "allHostFilesUnchanged": true,
+      "actualV14CareerContinued": true,
+      "completeBrowserManifestVerified": true,
+      "rollbackContainersAndPrivateBackupsRetained": true
+    },
+    "canary-after.json": {
+      "version": "14.2.0",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "originalStateAndSignedHeadRetained": true,
+      "originalSessionContinued": true,
+      "tickBefore": 3,
+      "tickAfter": 6,
+      "inactivePartsAndCareerPreserved": true,
+      "nativeReplay": true,
+      "allSevenBinariesUnchanged": true,
+      "binaries": {
+        "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+        "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+        "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+        "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63",
+        "12": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8",
+        "13": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643",
+        "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa"
+      }
+    },
+    "host-preservation.json": {
+      "allHostFilesUnchanged": true,
+      "filesVerified": 16,
+      "container": "myelin-nightshift-v8"
+    },
+    "image-integrity-myelin-nightshift-v8.json": {
+      "version": "14.2.0",
+      "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+      "nativeInputBindings": 45,
+      "nativeInputBindingsUnchanged": true,
+      "hostFiles": 9,
+      "browserFiles": 311,
+      "nativeVersions": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "allHashesMatch": true
+    },
+    "stage-acceptance.json": {
+      "version": "14.2.0",
+      "source": "e92162f254f06448ea7ecd947a6e32726568aa4a",
+      "gameImage": "sha256:8d820a451964a27239bede14c3ce12609b91862da3022b8fcc524b71d721ebe2",
+      "payloadSha256": "41ce7e21f16543c56fc224a1a0d94fd5f46432710163ec0ef4dcfea3bb732bd2",
+      "checks": {
+        "ci": true,
+        "node174": true,
+        "nativeBindingsFrozen": true,
+        "image311AndSevenExecutables": true,
+        "allSixteenHostFilesUnchanged": true,
+        "stagedPresentation": true,
+        "fullscreenLifecycle": true,
+        "denseTrafficCompleteEvent": true,
+        "winningFullRacePerformance": true
+      },
+      "fullGoalComplete": false
+    }
+  },
+  "publicIntegrity": {
+    "version": "14.2.0",
+    "origin": "https://store.utxoplay.io/games/nightshift/",
+    "files": 311,
+    "verified": 311,
+    "failed": [],
+    "wireBytes": 60759115
+  },
+  "parentCatalogCommit": "827a6a6",
+  "stagedFullscreen": {
+    "origin": "http://127.0.0.1:19491",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "stagedPresentation": {
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "physicalDevices": false
+  },
+  "publicFailedPerformance": {
+    "version": "14.2.0",
+    "testRunnerVersion": "14.2.0",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 4950.984224,
+    "wallSeconds": 120.088493687,
+    "simulationSeconds": 76.1,
+    "medianFps": 20,
+    "p10Fps": 6,
+    "medianCpuMs": 20.57,
+    "medianGpuMs": 32.612968,
+    "scales": [
+      1,
+      0.75
+    ],
+    "maxBufferPixels": 2073600,
+    "maxSampledPendingInputs": 74,
+    "distance": 34568,
+    "errors": [],
+    "accepted": false,
+    "failures": [
+      "Simulation/wall ratio below 90%",
+      "Median FPS below 45"
+    ],
+    "environmentObservation": "Immediately after the failed sample, multiple concurrent rustc/linker and Node processes were observed; load averages were 14.89 / 14.58 / 11.04. The sample did not continuously record environment or GPU identity. This observation does not isolate a cause or prove the candidate regression-free."
+  },
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "publicPerformanceRetest": {
+    "version": "14.2.0",
+    "testRunnerVersion": "14.2.0",
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 4893.352314,
+    "wallSeconds": 120.14453540199999,
+    "simulationSeconds": 120.13333333333334,
+    "medianFps": 60,
+    "p10Fps": 60,
+    "medianCpuMs": 3.29,
+    "medianGpuMs": 9.15052,
+    "scales": [
+      1
+    ],
+    "maxBufferPixels": 2073600,
+    "maxSampledPendingInputs": 95,
+    "distance": 56399,
+    "event": {
+      "mode": 0,
+      "vehicle": 0,
+      "raceId": 1
+    },
+    "executionDevice": {
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Mesa Intel(R) Iris(R) Xe Graphics (RPL-P), OpenGL ES 3.2)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "executionEnvironment": [
+      {
+        "seconds": 0.004261171000001923,
+        "tick": 64,
+        "fps": 51,
+        "cpu": 3.89,
+        "gpu": 6.840468,
+        "loadAverage": [
+          3.63,
+          9.82,
+          10.24
+        ],
+        "freeMemoryBytes": 17441710080,
+        "totalMemoryBytes": 33348415488,
+        "parallelism": 20
+      },
+      {
+        "seconds": 30.177965010000005,
+        "tick": 969,
+        "fps": 60,
+        "cpu": 2.74,
+        "gpu": 7.249843,
+        "loadAverage": [
+          3.29,
+          9.15,
+          10
+        ],
+        "freeMemoryBytes": 17496551424,
+        "totalMemoryBytes": 33348415488,
+        "parallelism": 20
+      },
+      {
+        "seconds": 60.11920859000001,
+        "tick": 1867,
+        "fps": 60,
+        "cpu": 4.62,
+        "gpu": 13.421927,
+        "loadAverage": [
+          3.32,
+          8.58,
+          9.78
+        ],
+        "freeMemoryBytes": 17289654272,
+        "totalMemoryBytes": 33348415488,
+        "parallelism": 20
+      },
+      {
+        "seconds": 90.147547853,
+        "tick": 2768,
+        "fps": 60,
+        "cpu": 3.09,
+        "gpu": 8.489114,
+        "loadAverage": [
+          4.94,
+          8.46,
+          9.7
+        ],
+        "freeMemoryBytes": 17407647744,
+        "totalMemoryBytes": 33348415488,
+        "parallelism": 20
+      }
+    ],
+    "errors": [],
+    "accepted": true,
+    "interpretation": "Same public frontend and unchanged acceptance gates, after the earlier compilation batch ended and observed load dropped. The earlier failed sample remains retained; these samples do not establish worldwide or physical-device guarantees."
+  },
+  "publicLoading": [
+    {
+      "label": "mobile-4mbps-cold",
+      "wallUntilPlayableMs": 5361.778976,
+      "navigationUntilRaceSeconds": 51.550628208,
+      "wireBytesUntilRace": 8804799,
+      "networkAccounting": {
+        "completedResponseBytes": 7439363,
+        "unfinishedBodyBytes": 1365436,
+        "totalKnownWireBytes": 8804799,
+        "definition": "Completed CDP encoded response totals plus partial encoded body chunks for unfinished/aborted requests; excludes transport overhead."
+      },
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "mobile-4mbps-warm",
+      "wallUntilPlayableMs": 2579.309159999997,
+      "navigationUntilRaceSeconds": null,
+      "wireBytesUntilRace": null,
+      "networkAccounting": {
+        "completedResponseBytes": 4924,
+        "unfinishedBodyBytes": 0,
+        "totalKnownWireBytes": 4924,
+        "definition": "Completed CDP encoded response totals plus partial encoded body chunks for unfinished/aborted requests; excludes transport overhead."
+      },
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "errors": []
+    },
+    {
+      "label": "first-race-cold",
+      "wallUntilPlayableMs": 5848.818937999997,
+      "navigationUntilRaceSeconds": 31.568229076999998,
+      "wireBytesUntilRace": 8816633,
+      "networkAccounting": {
+        "completedResponseBytes": 7590825,
+        "unfinishedBodyBytes": 1225808,
+        "totalKnownWireBytes": 8816633,
+        "definition": "Completed CDP encoded response totals plus partial encoded body chunks for unfinished/aborted requests; excludes transport overhead."
+      },
+      "throttle": null,
+      "errors": []
+    }
+  ],
+  "publicLoadingLimit": "Individual fresh-browser samples through the configured HTTPS proxy, with countdown. Origin/driver caches may be warm. They are not worldwide percentiles or physical-device measurements. Loading remains required work.",
+  "cleanup": {
+    "stagingContainersRemoved": true,
+    "rollbackContainersRetained": [
+      {
+        "name": "myelin-nightshift-v8-before-nightshift-14-2-0",
+        "image": "sha256:6190ce2880c388280bced25dcd41e755acfcc3b56046dcf93a8b4e4cc1f5dce8",
+        "stopped": true
+      },
+      {
+        "name": "utxoplay-store-before-nightshift-14-2-0",
+        "image": "sha256:07b0f0d08869d4f9703246041553b8e94ed2f80b0ce32833d4db9813e99ee862",
+        "stopped": true
+      }
+    ],
+    "dataAndPrivateBackupsRetained": true
+  }
+}

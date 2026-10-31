@@ -35,7 +35,7 @@ export class QualityGovernor {
 export function disposeSceneResources(roots,extras=[]){
  const resources=new Set(),seen=new Set();
  const material=m=>{if(!m||seen.has(m))return;seen.add(m);resources.add(m);for(const v of Object.values(m))if(v?.isTexture)resources.add(v);for(const u of Object.values(m.uniforms||{})){const v=u?.value;if(v?.isTexture)resources.add(v);if(Array.isArray(v))for(const t of v)if(t?.isTexture)resources.add(t);}};
- for(const root of roots)root?.traverse?.(o=>{if(o.isBatchedMesh||o.isInstancedMesh)resources.add(o);if(!o.isBatchedMesh&&o.geometry)resources.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])material(m);});
+ for(const root of roots)root?.traverse?.(o=>{if(o.isBatchedMesh||o.isInstancedMesh)resources.add(o);if(!o.isBatchedMesh&&o.geometry)resources.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])material(m);material(o.customDepthMaterial);material(o.customDistanceMaterial);});
  for(const e of extras)if(e?.isMaterial)material(e);else if(e)resources.add(e);
  for(const r of resources)r.dispose?.();return resources.size;
 }

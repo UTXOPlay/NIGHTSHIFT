@@ -6,6 +6,8 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {prepareRig} from './nightshift9-motion.mjs';
 import {block,merge} from './nightshift8-assets.mjs';
 import {fleetFinish} from './nightshift141-fleet-surface.mjs';
+import {installWheelMotion} from './nightshift142-wheel-surface.mjs';
+import {TRAFFIC_CAPACITY} from './nightshift142-traffic.mjs';
 
 // Six builds using five licensed bodies; source credits and modifications ship with the game.
 export {FLEET} from './nightshift-fleet-specs.mjs';
@@ -51,12 +53,13 @@ export async function loadFleet(manager,initialVehicle=0){
  const loader=new GLTFLoader(manager).setMeshoptDecoder(MeshoptDecoder),cache=new Map(),tasks=new Map(),authored=new Map(),authoredTasks=new Map(),textures=new Map(),timings={};
  const ensure=(body,detail)=>{
   const key=body+detail;if(tasks.has(key))return tasks.get(key);const start=performance.now();
-  const task=loader.loadAsync(`/arcade/art/nightshift/fleet-ready-v141/${body}-${detail?'hero':'race'}.glb`).then(gltf=>{
+  const task=loader.loadAsync(`/arcade/art/nightshift/fleet-ready-v${detail?'141':'142'}/${body}-${detail?'hero':'race'}.glb`).then(gltf=>{
    const fetched=performance.now(),parts=[];gltf.scene.updateMatrixWorld(true);
    gltf.scene.traverse(mesh=>{
     if(!mesh.isMesh)return;const geometry=restoreGeometry(mesh),surface=geometry.getAttribute('_surface'),sampling=geometry.getAttribute('_materialdetail');
     if(!surface||!sampling||!geometry.attributes.uv)throw Error('Invalid authored fleet attributes');
     geometry.setAttribute('surface',surface);geometry.deleteAttribute('_surface');geometry.setAttribute('materialDetail',sampling);geometry.deleteAttribute('_materialdetail');
+    const wheels=geometry.getAttribute('_wheelrig');if(wheels){geometry.setAttribute('wheelRig',wheels);geometry.deleteAttribute('_wheelrig');}
     const map=mesh.material.map;if(map){if(!textures.has(body))textures.set(body,map);else if(textures.get(body)!==map)map.dispose();}
     parts.push({name:mesh.name,geometry,transform:mesh.userData.wheelTransform?new T.Matrix4().fromArray(mesh.userData.wheelTransform):null});mesh.material.dispose();
    });
@@ -65,9 +68,10 @@ export async function loadFleet(manager,initialVehicle=0){
  };
  await ensure(FLEET[initialVehicle].body,false);
  const make=(index,detail=false,variant="hero")=>{
-  const spec=FLEET[index];if(!detail&&!cache.has(spec.body+false)){const empty=new T.Group();empty.userData.wheels=[];empty.userData.pending=true;return empty;}if(index===0&&detail)return authoredCar(authored.get(variant).scene,spec.paint);const g=new T.Group(),material=fleetFinish(spec.paint,textures.get(spec.body)||null);g.userData.wheels=[];g.userData.index=index;g.userData.source=spec.body;
+  const spec=FLEET[index];if(!detail&&!cache.has(spec.body+false)){const empty=new T.Group();empty.userData.wheels=[];empty.userData.pending=true;return empty;}if(index===0&&detail)return authoredCar(authored.get(variant).scene,spec.paint);const g=new T.Group(),material=fleetFinish(spec.paint,textures.get(spec.body)||null),wheelMotion={value:new T.Vector2()};g.userData.wheels=[];g.userData.index=index;g.userData.source=spec.body;g.userData.brakeMaterial=material;
   for(const part of cache.get(spec.body+detail)){
    const m=new T.Mesh(part.geometry,material);m.castShadow=detail||part.name==='Body';m.receiveShadow=true;
+   if(part.geometry.getAttribute('wheelRig')){installWheelMotion(m,material,wheelMotion);g.userData.wheelMotion=wheelMotion;}
    if(part.transform){part.transform.decompose(m.position,m.quaternion,m.scale);m.name=part.name;g.userData.wheels.push(m);}
    g.add(m);
   }
@@ -75,6 +79,6 @@ export async function loadFleet(manager,initialVehicle=0){
  };
  const detailed=new Map();
  const detail=async(index,role='player',variant='hero')=>{const key=index+':'+role+':'+variant;if(detailed.has(key))return detailed.get(key);const task=(async()=>{await ensure(FLEET[index].body,false);if(index===0){if(!authoredTasks.has(variant))authoredTasks.set(variant,loader.loadAsync('/arcade/art/nightshift/fleet-v141/'+(variant==='race'?'concept-race.glb':'concept.glb')).then(model=>authored.set(variant,model)).catch(e=>{authoredTasks.delete(variant);throw e;}));await authoredTasks.get(variant);}else await ensure(FLEET[index].body,true);const g=make(index,true,variant);if(index!==0){g.userData.far=make(index,false);g.userData.far.visible=false;g.add(g.userData.far);}return g;})().catch(e=>{detailed.delete(key);throw e;});detailed.set(key,task);return task;};
- const racing=async()=>{await Promise.all([...new Set(FLEET.map(s=>s.body))].map(body=>ensure(body,false)));return{rivals:Array.from({length:5},(_,i)=>make(i+1)),traffic:Array.from({length:16},(_,i)=>make(i%6)),pursuer:make(2),ghost:make(0)};};
- return{racing,prepareVehicle:index=>ensure(FLEET[index].body,false),cars:FLEET.map((_,i)=>make(i)),rivals:Array.from({length:5},(_,i)=>make(i+1)),traffic:Array.from({length:16},(_,i)=>make(i%6)),pursuer:make(2),ghost:make(0),detail,make,timings,sources:new Set(FLEET.map(s=>s.body)).size};
+ const racing=async()=>{await Promise.all([...new Set(FLEET.map(s=>s.body))].map(body=>ensure(body,false)));return{rivals:Array.from({length:5},(_,i)=>make(i+1)),traffic:Array.from({length:TRAFFIC_CAPACITY},(_,i)=>make(i%6)),pursuer:make(2),ghost:make(0)};};
+ return{racing,prepareVehicle:index=>ensure(FLEET[index].body,false),cars:FLEET.map((_,i)=>make(i)),rivals:Array.from({length:5},(_,i)=>make(i+1)),traffic:Array.from({length:TRAFFIC_CAPACITY},(_,i)=>make(i%6)),pursuer:make(2),ghost:make(0),detail,make,timings,sources:new Set(FLEET.map(s=>s.body)).size};
 }
