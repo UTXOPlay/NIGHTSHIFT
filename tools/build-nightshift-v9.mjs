@@ -7,7 +7,7 @@ import {brotliCompressSync,gzipSync} from 'node:zlib';
 const version=JSON.parse(readFileSync('package.json','utf8')).version;
 const hashes={};
 function fingerprint(dir){for(const item of readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,item.name);if(item.isDirectory())fingerprint(file);else if(/\.(?:glb|webp|png|jpg|hdr|pmrem|wav|ogg)$/.test(file))hashes['/arcade/'+path.relative('games/arcade/web',file).split(path.sep).join('/')]=createHash('sha256').update(readFileSync(file)).digest('hex').slice(0,16);}}
-fingerprint('games/arcade/web');const define={__NIGHTSHIFT_ASSET_HASHES__:JSON.stringify(hashes)};
+fingerprint('games/arcade/web');const define={__NIGHTSHIFT_ASSET_HASHES__:JSON.stringify(hashes),__NIGHTSHIFT_RENDERER_MODULE__:JSON.stringify('./_arcade/nightshift9-renderer.bundle.mjs?v='+version)};
 const root=path.resolve('dist/nightshift');
 rmSync(root,{recursive:true,force:true});mkdirSync(root,{recursive:true});
 cpSync('games/nightshift-v9/web',root,{recursive:true});

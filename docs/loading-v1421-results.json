@@ -1,0 +1,301 @@
+{
+  "version": "14.2.1",
+  "status": "local-accepted-public-delivery-pending",
+  "fullGoalComplete": false,
+  "rulesVersion": 14,
+  "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+  "browserFiles": 311,
+  "changedBrowserFiles": [
+    "_arcade/nightshift13-renderer-shell.mjs",
+    "_arcade/nightshift9-architecture.mjs",
+    "_arcade/nightshift9-renderer.bundle.mjs",
+    "_arcade/nightshift9-renderer.mjs",
+    "app.js",
+    "index.html"
+  ],
+  "nativeSourcesUnchanged": true,
+  "nativeExecutablesUnchanged": true,
+  "boundHostFilesUnchanged": true,
+  "assetPathsAndBytesUnchanged": true,
+  "nodeChecks": {
+    "passed": 174,
+    "failed": 0
+  },
+  "requestOrder": {
+    "initialMenuDeferred": true,
+    "moduleTransfers": 1,
+    "rendererBeforeAudio": true,
+    "rendererBeforeNativeCommand": true,
+    "errors": []
+  },
+  "dependencies": {
+    "delayedResourcesMs": 1200,
+    "rendererResourcesTransferOnce": true,
+    "fixturesOverlapStructure": true,
+    "effectsOverlapFleet": true,
+    "cssMarkerRequestsRetained": 1,
+    "assetErrors": 0,
+    "errors": []
+  },
+  "presentation": {
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": 5,
+    "cars": 6,
+    "errors": []
+  },
+  "loadingSamples": [
+    {
+      "sample": "paired-before",
+      "case": "mobile-4mbps-cold",
+      "navigationUntilDrivingSeconds": 29.843865380000004,
+      "knownWireBytes": 8819029,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "loadingTimingsMs": {
+        "fleetBase": 1017.9000000059605,
+        "environment": 14555.09999999404,
+        "raceAssets": 13825.59999999404,
+        "renderWarmup": 5989.0999999940395,
+        "warmup:scene": 2802,
+        "warmup:blur": 12.400000005960464,
+        "warmup:display": 24.30000001192093,
+        "warmup:fallback": 3144,
+        "firstFrame": 1493.4000000059605,
+        "rendererImport": 1304.4000000059605,
+        "rendererConstruct": 211.09999999403954
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-before",
+      "case": "first-race-cold",
+      "navigationUntilDrivingSeconds": 4.878120519000004,
+      "knownWireBytes": 7518467,
+      "throttle": null,
+      "loadingTimingsMs": {
+        "fleetBase": 43.30000001192093,
+        "environment": 81.5,
+        "raceAssets": 108.59999999403954,
+        "renderWarmup": 418.7000000178814,
+        "warmup:scene": 200.40000000596046,
+        "warmup:blur": 10.699999988079071,
+        "warmup:display": 10.599999994039536,
+        "warmup:fallback": 195.7999999821186,
+        "firstFrame": 301.89999997615814,
+        "rendererImport": 33.79999998211861,
+        "rendererConstruct": 69.7000000178814
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-preload",
+      "case": "mobile-4mbps-cold",
+      "navigationUntilDrivingSeconds": 26.597790988,
+      "knownWireBytes": 8820695,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "loadingTimingsMs": {
+        "fleetBase": 998.5999999940395,
+        "environment": 13975.09999999404,
+        "raceAssets": 13296,
+        "renderWarmup": 4308.5,
+        "warmup:scene": 2176.699999988079,
+        "warmup:blur": 12.699999988079071,
+        "warmup:display": 22.30000001192093,
+        "warmup:fallback": 2091.2999999821186,
+        "firstFrame": 988.3999999761581,
+        "rendererImport": 1155.800000011921,
+        "rendererConstruct": 162.5
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-preload",
+      "case": "first-race-cold",
+      "navigationUntilDrivingSeconds": 4.966406260000003,
+      "knownWireBytes": 7522058,
+      "throttle": null,
+      "loadingTimingsMs": {
+        "fleetBase": 39.5,
+        "environment": 86.40000000596046,
+        "raceAssets": 98.2000000178814,
+        "renderWarmup": 492.7999999821186,
+        "warmup:scene": 215.09999999403954,
+        "warmup:blur": 10.399999976158142,
+        "warmup:display": 10.399999976158142,
+        "warmup:fallback": 255.5,
+        "firstFrame": 329.2000000178814,
+        "rendererImport": 12.599999994039536,
+        "rendererConstruct": 54.900000005960464
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-parallel",
+      "case": "mobile-4mbps-cold",
+      "navigationUntilDrivingSeconds": 25.326886385999998,
+      "knownWireBytes": 8819771,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "loadingTimingsMs": {
+        "fleetBase": 994.8000000119209,
+        "environment": 10485.90000000596,
+        "raceAssets": 13245.09999999404,
+        "renderWarmup": 4221.300000011921,
+        "warmup:scene": 2212.9000000059605,
+        "warmup:blur": 12.5,
+        "warmup:display": 20.69999998807907,
+        "warmup:fallback": 1970.5,
+        "firstFrame": 1005.7999999821186,
+        "rendererImport": 1095.5,
+        "rendererConstruct": 210.40000000596046
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-parallel",
+      "case": "first-race-cold",
+      "navigationUntilDrivingSeconds": 4.657086672000001,
+      "knownWireBytes": 7518581,
+      "throttle": null,
+      "loadingTimingsMs": {
+        "fleetBase": 31.899999976158142,
+        "environment": 49.30000001192093,
+        "raceAssets": 141.09999999403954,
+        "renderWarmup": 432.30000001192093,
+        "warmup:scene": 196.80000001192093,
+        "warmup:blur": 10.699999988079071,
+        "warmup:display": 10.399999976158142,
+        "warmup:fallback": 213.10000002384186,
+        "firstFrame": 270.19999998807907,
+        "rendererImport": 15.199999988079071,
+        "rendererConstruct": 49.5
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-before-repeat",
+      "case": "mobile-4mbps-cold",
+      "navigationUntilDrivingSeconds": 27.566373801,
+      "knownWireBytes": 8821316,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "loadingTimingsMs": {
+        "fleetBase": 1011.4000000059605,
+        "environment": 14616.5,
+        "raceAssets": 13892.09999999404,
+        "renderWarmup": 4451.0999999940395,
+        "warmup:scene": 2283.2999999821186,
+        "warmup:blur": 11.300000011920929,
+        "warmup:display": 21.69999998807907,
+        "warmup:fallback": 2129.7000000178814,
+        "firstFrame": 1076.9000000059605,
+        "rendererImport": 1300.3999999761581,
+        "rendererConstruct": 162
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-before-repeat",
+      "case": "first-race-cold",
+      "navigationUntilDrivingSeconds": 4.837899375000001,
+      "knownWireBytes": 7518467,
+      "throttle": null,
+      "loadingTimingsMs": {
+        "fleetBase": 29.400000005960464,
+        "environment": 83.80000001192093,
+        "raceAssets": 157.89999997615814,
+        "renderWarmup": 521.2000000178814,
+        "warmup:scene": 284.90000000596046,
+        "warmup:blur": 11.800000011920929,
+        "warmup:display": 10.599999994039536,
+        "warmup:fallback": 211.7000000178814,
+        "firstFrame": 284.80000001192093,
+        "rendererImport": 34.400000005960464,
+        "rendererConstruct": 46.900000005960464
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-parallel-repeat",
+      "case": "mobile-4mbps-cold",
+      "navigationUntilDrivingSeconds": 25.7231713,
+      "knownWireBytes": 8821430,
+      "throttle": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "loadingTimingsMs": {
+        "fleetBase": 1003.7000000178814,
+        "environment": 10497.90000000596,
+        "raceAssets": 13247.600000023842,
+        "renderWarmup": 4406,
+        "warmup:scene": 2145.2999999821186,
+        "warmup:blur": 14.600000023841858,
+        "warmup:display": 22.099999994039536,
+        "warmup:fallback": 2217.5,
+        "firstFrame": 1027.300000011921,
+        "rendererImport": 1113.0999999940395,
+        "rendererConstruct": 156.59999999403954
+      },
+      "errors": []
+    },
+    {
+      "sample": "paired-parallel-repeat",
+      "case": "first-race-cold",
+      "navigationUntilDrivingSeconds": 4.558203519000003,
+      "knownWireBytes": 7518581,
+      "throttle": null,
+      "loadingTimingsMs": {
+        "fleetBase": 40.20000001788139,
+        "environment": 57.20000001788139,
+        "raceAssets": 138,
+        "renderWarmup": 411.80000001192093,
+        "warmup:scene": 202.90000000596046,
+        "warmup:blur": 10.300000011920929,
+        "warmup:display": 10.199999988079071,
+        "warmup:fallback": 187.10000002384186,
+        "firstFrame": 266,
+        "rendererImport": 14.200000017881393,
+        "rendererConstruct": 47.19999998807907
+      },
+      "errors": []
+    }
+  ],
+  "limits": [
+    "Individual local-origin samples, not physical-device or worldwide percentiles.",
+    "Fresh browser caches; GPU/OS shader caches are not reset.",
+    "OS load/free-memory records exist for both final repeat runs.",
+    "All previous samples and the initial CSS-initiator harness failure are retained.",
+    "Public origin, staged/fullscreen delivery and deployment preservation are pending.",
+    "The full single-player completion contract remains open."
+  ]
+}
