@@ -17,7 +17,9 @@ Current product status: **playable solo arcade racer under active completion**. 
 - Generated transparent markers and effects for collisions, attacks, shields, counters, disabled rivals and fatal rollovers.
 - Keyboard, pointer drag and mobile thumb-stick controls. Landscape play, safe-area controls, reduced motion, bounded rendering resolution and layouts through 3840×2160.
 
-Version 14 gives rivals the shared pedal/steering model, continuous passing lines, hazard braking and resource-funded nitrous. Forward EMP requires a clear path, and interception couriers stage at fixed relay gates before launching. The V14 browser resumes V8–V13 races with their exact original profiles; starting another event explicitly migrates the verified career. A two-worker native pool bounds historical executor residency. See [V14 integration and evidence](docs/nightshift-v14.md). V14 is deployed at the public URL above. The exact shipped source is [tagged v14.0.0](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v14.0.0); [public delivery and limits](docs/rivals-v14-integration-results.json) are recorded separately from development checks.
+Version 14 gives rivals the shared pedal/steering model, continuous passing lines, hazard braking and resource-funded nitrous. Forward EMP requires a clear path, and interception couriers stage at fixed relay gates before launching. The V14 browser resumes V8–V13 races with their exact original profiles; starting another event explicitly migrates the verified career. A two-worker native pool bounds historical executor residency. See [V14 integration and evidence](docs/nightshift-v14.md).
+
+The public version is [14.1.1](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v14.1.1). It repairs sustained automatic-quality recovery and matches shader warmup to the actual HDR/fallback paths, while retaining V14.1 vehicle materials, physical tire rigs and varied Harbour facades. A full stock event passes at 60 median / 60 p10 FPS on the measured desktop. Public first driving is 18.6 seconds on desktop and 28.7 seconds under restricted-mobile emulation in the latest individual samples. See [engine changes](docs/engine-v1411.md) and [delivery evidence and limits](docs/engine-v1411-results.json). The complete single-player objective remains open.
 
 Version 13 adds chapter licenses, optional sector contracts, a closing interception battle with podium requirement, final drift exits, itemized payouts, PB provenance and purchased-part/build tradeoffs. Existing V8–V12 races and signed proofs retain their original executors.
 
@@ -84,7 +86,7 @@ npm run build:native:legacy
 npm run test:replay
 ```
 
-`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V12 verifier. It requires both V13 and V12 native binaries. V8–V12 native sources remain frozen for original-rule replay and career carry.
+`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V12 verifier. It requires both V14 and V13 native binaries. V8–V13 predecessor sources remain frozen for original-rule replay and career carry.
 
 Browser checks use a separate local review server and a fresh data directory:
 
@@ -117,8 +119,8 @@ The Compose service binds the web port to local loopback and persists V8–V13 s
 
 The current release was extracted from the shared [UTXOPlay/myelin-arcade](https://github.com/UTXOPlay/myelin-arcade) workspace. Native profile-bound files and the 31 audited browser release files are preserved; portable tooling and standalone packaging were added here. Future rule changes must use a new application profile and must not reinterpret old signed careers.
 
-- `games/nightshift-v13/native/`: current deterministic Rust simulation and Myelin sessions.
-- `games/nightshift-v8/native/` through `games/nightshift-v12/native/`: frozen predecessor replay and origin adapters.
+- `games/nightshift-v14/native/`: current deterministic Rust simulation and Myelin sessions.
+- `games/nightshift-v8/native/` through `games/nightshift-v13/native/`: frozen predecessor replay and origin adapters.
 - `games/nightshift-v9/web/`: browser application and mobile orientation gate.
 - `games/arcade/web/nightshift9-*`: renderer, mirrored rules, controls and audio.
 - `games/arcade/web/art/nightshift/`: generated artwork and actual map thumbnails.

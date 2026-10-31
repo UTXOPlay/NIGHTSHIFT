@@ -30,7 +30,7 @@ export class RouteWorld{
  }
  add(out,mat,x,y,z,w,h,d,rx=0,ry=0,rz=0,geometry=GEO.box,color='#ffffff'){
   if(geometry===GEO.box&&w>=4&&h>=3&&d>=3&&(mat==='harbour'||FACADES.some(f=>f[0]===mat)))geometry=GEO.building;
-  if(FACADES.some(f=>f[0]===mat)&&h>=2&&Math.abs(y-h/2)<.02){y-=.2;h+=.4;}
+  if((mat==='harbour'||FACADES.some(f=>f[0]===mat))&&h>=2&&Math.abs(y-h/2)<.02){y-=.2;h+=.4;}
   const material=this.m[mat],key=geometry.uuid+'/'+material.uuid;if(!this.pools.has(key)){
    const mesh=new T.InstancedMesh(geometry,material,1600);mesh.matrixAutoUpdate=false;mesh.instanceMatrix.setUsage(T.DynamicDrawUsage);mesh.frustumCulled=false;mesh.count=0;mesh.visible=false;mesh.receiveShadow=true;mesh.castShadow=[...FACADES.map(f=>f[0]),'harbour','steel','white','structure','cargoPaint','quay','fir','snowFir','scrub','broadleaf'].some(k=>material===this.m[k]);this.environmentRoot.add(mesh);this.pools.set(key,{geometry,material,index:0,mesh});
   }
