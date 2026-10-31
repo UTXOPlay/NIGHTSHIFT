@@ -1,0 +1,171 @@
+{
+  "version": "14.1.1",
+  "status": "candidate-performance-investigation",
+  "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+  "rulesAndAllSevenExecutablesUnchanged": true,
+  "governorAndRenderPathRegressionChecks": {
+    "passed": 14,
+    "failed": 0
+  },
+  "loading": {
+    "loading-before": {
+      "conditions": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "transport": "Local origin without asset substitution. Network/CPU limits emulate a device; they do not establish worldwide or physical-device performance.",
+      "navigationUntilRaceSeconds": 31.506316116999997,
+      "graphicsAfterMenuSeconds": 26.161132217000002,
+      "wireBytesUntilRace": 7440873,
+      "shaderPrograms": 156,
+      "timingsMs": {
+        "fleetBase": 1007.0999999940395,
+        "environment": 14554.10000000894,
+        "raceAssets": 13841.60000000894,
+        "vehicleCompile:0": 1187.5,
+        "shadowsWarmup": 2135.300000011921,
+        "noShadowsWarmup": 2545.5,
+        "firstFrame": 3524,
+        "rendererImport": 1323.1000000089407,
+        "rendererConstruct": 170.29999999701977
+      },
+      "errors": []
+    },
+    "loading-after": {
+      "conditions": {
+        "downloadMbps": 4,
+        "uploadMbps": 1,
+        "latencyMs": 120,
+        "cpuRate": 4
+      },
+      "transport": "Local origin without asset substitution. Network/CPU limits emulate a device; they do not establish worldwide or physical-device performance.",
+      "navigationUntilRaceSeconds": 28.966314693999998,
+      "graphicsAfterMenuSeconds": 23.582975027,
+      "wireBytesUntilRace": 7441140,
+      "shaderPrograms": 116,
+      "timingsMs": {
+        "fleetBase": 1013.0999999940395,
+        "environment": 14501.5,
+        "raceAssets": 13769.90000000596,
+        "renderWarmup": 5409.4000000059605,
+        "warmup:scene": 2683.8999999910593,
+        "warmup:blur": 13.099999994039536,
+        "warmup:display": 22.900000005960464,
+        "warmup:fallback": 2683.9000000059605,
+        "firstFrame": 1262.3999999910593,
+        "rendererImport": 1327,
+        "rendererConstruct": 239.90000000596046
+      },
+      "errors": []
+    }
+  },
+  "fullRaceContended": {
+    "wallSeconds": 331.698,
+    "simulationSeconds": 279.6666666666667,
+    "won": true,
+    "medianFps": 25,
+    "p10Fps": 12,
+    "medianCpuMs": 15.53,
+    "medianGpuMs": 29.04651,
+    "maxPending": 24,
+    "maxBackingPixels": 2073600,
+    "scales": [
+      1,
+      0.75
+    ],
+    "qualityTransitions": [
+      {
+        "seconds": 0.005,
+        "tier": 0,
+        "scale": 1,
+        "locked": false,
+        "changes": 0
+      },
+      {
+        "seconds": 69.394,
+        "tier": 1,
+        "scale": 1,
+        "locked": false,
+        "changes": 1
+      },
+      {
+        "seconds": 81.631,
+        "tier": 2,
+        "scale": 1,
+        "locked": false,
+        "changes": 2
+      },
+      {
+        "seconds": 85.731,
+        "tier": 2,
+        "scale": 0.75,
+        "locked": false,
+        "changes": 3
+      }
+    ],
+    "errors": [],
+    "nativeReplayVerified": true,
+    "accepted": false,
+    "failures": [
+      "Simulation/wall duration ratio below 90%",
+      "Median FPS below 45"
+    ],
+    "context": "Concurrent heavy Rust builds and other browser processes were observed. The cause is not conclusively isolated; a published-baseline comparison and a quiet full-race rerun are required."
+  },
+  "deployedVersion": "14.1.0",
+  "fullGoalComplete": false,
+  "remainingRequiredAreas": [
+    "Sustained candidate performance acceptance before deployment",
+    "All-route scenery and lighting coherence",
+    "Meaningful route choices and event rhythm",
+    "Traffic wheel detail and coarse brake response",
+    "Vehicle audio identity and opponent tactical variety",
+    "Physical devices, all-route sustained runs and human difficulty/economy evidence",
+    "Final full-scope completion audit"
+  ],
+  "limits": [
+    "Local single-run loading comparison is not a public-origin or worldwide percentile measurement.",
+    "No runtime asset was removed or reduced in texture quality.",
+    "The failed full-race performance attempt is retained; acceptance thresholds were not changed.",
+    "Multiplayer implementation remains excluded."
+  ],
+  "publishedBaselineContended": {
+    "quality": "Auto",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "input": "virtual standard Gamepad API, ordinary signed inputs",
+    "menuMs": 2490,
+    "wallSeconds": 60.284,
+    "simulationSeconds": 43.93333333333333,
+    "medianFps": 20,
+    "p10Fps": 10,
+    "medianCpuMs": 16.65,
+    "medianGpuMs": 34.89354,
+    "scales": [
+      1,
+      0.75
+    ],
+    "maxBufferPixels": 2073600,
+    "maxSampledPendingInputs": 24,
+    "distance": 19133,
+    "errors": [],
+    "testRunnerVersion": "14.1.1",
+    "measuredFrontendVersion": "14.1.0",
+    "accepted": false,
+    "failures": [
+      "Simulation/wall duration ratio below 90%",
+      "Median FPS below 45"
+    ],
+    "interpretation": "The unchanged published frontend also fails in the contended environment. This does not establish that the candidate is regression-free. Retain a quiet candidate full-race acceptance requirement.",
+    "labelCorrection": "The historical performance tool labeled reports from its own package version. The frontend here is the published V14.1.0 build served at the isolated baseline origin. The tool now reads the served renderer version."
+  },
+  "nodeChecks": {
+    "passed": 167,
+    "failed": 0
+  },
+  "frozenNativeSourcesAnd303BrowserFilesVerified": true
+}

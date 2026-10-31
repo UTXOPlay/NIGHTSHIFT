@@ -26,15 +26,33 @@ export class CircuitPost{
   if(!this.target){const options={type:T.HalfFloatType,minFilter:T.LinearFilter,magFilter:T.LinearFilter,depthBuffer:false};this.target=new T.WebGLRenderTarget(w,h,{...options,depthBuffer:true,samples:Math.min(2,this.renderer.capabilities.maxSamples)});this.bloomA=new T.WebGLRenderTarget(1,1,options);this.bloomB=new T.WebGLRenderTarget(1,1,options);}
   this.target.setSize(w,h);this.bloomA.setSize(Math.max(1,Math.ceil(w/4)),Math.max(1,Math.ceil(h/4)));this.bloomB.setSize(this.bloomA.width,this.bloomA.height);this.finish.uniforms.pixel.value.set(1/w,1/h);
  }
+ async prepare(scene,camera){
+  const r=this.renderer,previousTarget=r.getRenderTarget(),shadows=r.shadowMap.enabled;
+  const times={},compile=async(name,root,view)=>{const start=performance.now();await r.compileAsync(root,view);times[name]=performance.now()-start;};
+  try{
+   if(this.supported){this.size??=new T.Vector2();r.getDrawingBufferSize(this.size);this.resize(this.size.x,this.size.y);}
+   // WebGL program keys include output color space and tone mapping. Compile
+   // the same HDR target used by High/Medium, rather than an unused screen path.
+   r.shadowMap.enabled=true;r.setRenderTarget(this.supported?this.target:null);await compile('scene',scene,camera);
+   if(this.supported){
+    this.quad.material=this.blur;r.setRenderTarget(this.bloomA);await compile('blur',this.scene,this.camera);
+    this.quad.material=this.finish;r.setRenderTarget(null);await compile('display',this.scene,this.camera);
+   }
+   r.shadowMap.enabled=false;r.setRenderTarget(null);await compile('fallback',scene,camera);
+   return times;
+  }finally{r.shadowMap.enabled=shadows;r.setRenderTarget(previousTarget);}
+ }
  render(scene,camera,{low,tier=0,bloom=.16}){
-  const r=this.renderer;this.active=this.supported&&!low&&tier===0;
+  const r=this.renderer;this.active=this.supported&&!low;this.bloomActive=this.active&&tier===0&&bloom>0;
   if(!this.active){r.setRenderTarget(null);r.render(scene,camera);return;}
   this.size??=new T.Vector2();r.getDrawingBufferSize(this.size);this.resize(this.size.x,this.size.y);
   r.setRenderTarget(this.target);r.render(scene,camera);
-  this.quad.material=this.blur;this.blur.uniforms.source.value=this.target.texture;this.blur.uniforms.extract.value=1;this.blur.uniforms.stepUv.value.set(1/this.bloomA.width,0);r.setRenderTarget(this.bloomA);r.render(this.scene,this.camera);
-  this.blur.uniforms.source.value=this.bloomA.texture;this.blur.uniforms.extract.value=0;this.blur.uniforms.stepUv.value.set(0,1/this.bloomA.height);r.setRenderTarget(this.bloomB);r.render(this.scene,this.camera);
-  this.quad.material=this.finish;this.finish.uniforms.source.value=this.target.texture;this.finish.uniforms.bloom.value=this.bloomB.texture;this.finish.uniforms.amount.value=bloom;r.setRenderTarget(null);r.render(this.scene,this.camera);
+  if(this.bloomActive){
+   this.quad.material=this.blur;this.blur.uniforms.source.value=this.target.texture;this.blur.uniforms.extract.value=1;this.blur.uniforms.stepUv.value.set(1/this.bloomA.width,0);r.setRenderTarget(this.bloomA);r.render(this.scene,this.camera);
+   this.blur.uniforms.source.value=this.bloomA.texture;this.blur.uniforms.extract.value=0;this.blur.uniforms.stepUv.value.set(0,1/this.bloomA.height);r.setRenderTarget(this.bloomB);r.render(this.scene,this.camera);
+  }
+  this.quad.material=this.finish;this.finish.uniforms.source.value=this.target.texture;this.finish.uniforms.bloom.value=this.bloomB.texture;this.finish.uniforms.amount.value=this.bloomActive?bloom:0;r.setRenderTarget(null);r.render(this.scene,this.camera);
  }
- snapshot(){return{active:this.active,supported:this.supported,scenePixels:this.active?this.width*this.height:0,bloomPixels:this.active?this.bloomA.width*this.bloomA.height:0,historyFrames:0};}
+ snapshot(){return{active:this.active,bloomActive:!!this.bloomActive,supported:this.supported,scenePixels:this.active?this.width*this.height:0,bloomPixels:this.bloomActive?this.bloomA.width*this.bloomA.height:0,historyFrames:0};}
  dispose(){this.target?.dispose();this.bloomA?.dispose();this.bloomB?.dispose();this.quad.geometry.dispose();this.blur.dispose();this.finish.dispose();}
 }

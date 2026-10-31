@@ -67,6 +67,9 @@ export function startRenderLoop(
       );
       document.documentElement.dataset.renderMs = (cpu / frames).toFixed(2);
       document.documentElement.dataset.renderScale = ratio.toFixed(2);
+      document.documentElement.dataset.renderTier = String(budget.tier);
+      document.documentElement.dataset.renderQualityLocked = String(budget.locked);
+      document.documentElement.dataset.renderQualityChanges = String(budget.changes);
       measure = now;
       frames = cpu = 0;
     }
