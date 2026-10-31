@@ -6,7 +6,12 @@ import path from 'node:path';
 
 const root=path.resolve(process.env.DRIFT_RELEASE_ROOT||'artifacts/engine-v1411/release'),payload=path.join(root,'payload');
 const current=JSON.parse(readFileSync('docs/release-integrity.json'));
-const previous=JSON.parse(readFileSync(process.env.DRIFT_BASE_MANIFEST||'docs/release-integrity-v14.1.0.json'));
+const baseManifest=process.env.DRIFT_BASE_MANIFEST||'docs/release-integrity-v14.1.0.json';
+assert.match(baseManifest,/^docs\/release-integrity-v[0-9.]+\.json$/,'Use an explicit repository release manifest');
+const previous=JSON.parse(readFileSync(baseManifest));
+const releaseDocs=JSON.parse(process.env.DRIFT_RELEASE_DOCS||'[]');
+assert.ok(Array.isArray(releaseDocs));
+for(const file of releaseDocs)assert.match(file,/^docs\/[a-zA-Z0-9_.-]+\.(?:md|json)$/,'Only explicit repository release documentation');
 const baseGameImage=process.env.DRIFT_BASE_IMAGE;
 assert.match(baseGameImage||'',/^sha256:[a-f0-9]{64}$/,'Supply the inspected immutable production image');
 assert.equal(current.rulesVersion,14);assert.equal(current.profile,previous.profile);
@@ -33,7 +38,7 @@ for(const[file,hash]of Object.entries(current.browserFiles)){
  for(const suffix of ['.br','.gz']){const source='dist/nightshift/'+file+suffix;try{statSync(source);}catch{continue;}copy(source);}
 }
 for(const file of Object.keys(current.presentationHostFiles))copy(file);
-for(const file of ['package.json','package-lock.json','docs/release-integrity.json','docs/release-integrity-v14.1.0.json','docs/engine-v1411.md','docs/single-player-completion.md'])copy(file);
+for(const file of new Set(['package.json','package-lock.json','docs/release-integrity.json',baseManifest,'docs/release-integrity-v14.1.0.json','docs/engine-v1411.md','docs/single-player-completion.md',...releaseDocs]))copy(file);
 for(const file of policy?.documentation||[])copy(file);
 writeFileSync(path.join(root,'delta.json'),JSON.stringify({version:current.version,baseVersion:previous.version,changed},null,2)+'\n');
 const packed=spawnSync('tar',['-czf',path.join(root,'payload.tgz'),'-C',root,'payload'],{stdio:'inherit'});assert.equal(packed.status,0);

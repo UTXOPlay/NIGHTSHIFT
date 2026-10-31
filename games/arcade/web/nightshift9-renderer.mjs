@@ -77,8 +77,8 @@ export class DriftRenderer{
   await this.fleet.prepareVehicle(vehicle);if(this.playerCars[vehicle].userData.pending){const old=this.playerCars[vehicle],car=this.fleet.make(vehicle);old.removeFromParent();this.playerCars[vehicle]=car;this.updateFleetBounds(vehicle);}
   this.scene.environment=this.garageProbe.texture;this.scene.environmentIntensity=1.1;await this.ensureVehicle(vehicle);this.ready=true;
  }
- async installRaceFleet(){
-  if(this.raceFleetReady)return;const fleet=await this.fleet.racing();
+ async installRaceFleet(vehicle=0){
+  if(this.raceFleetReady)return;await this.installFleet(vehicle);const fleet=await this.fleet.racing();
   for(let n=0;n<6;n++)if(this.playerCars[n].userData.pending){this.playerCars[n].removeFromParent();this.playerCars[n]=this.fleet.make(n);this.updateFleetBounds(n);}
   for(const c of [...this.racerCars,...this.traffic,this.pursuer,this.ghostCar].filter(Boolean))c.removeFromParent();
   this.racerCars=fleet.rivals;this.traffic=fleet.traffic;this.pursuer=fleet.pursuer;this.ghostCar=fleet.ghost;
@@ -120,14 +120,14 @@ export class DriftRenderer{
   this.rivalDetailAfter=performance.now()+1800;
   this.rivalDetailTask=(async()=>{const car=await this.fleet.detail(nearest.n+1,'rival');if(this.disposed)return;await this.renderer.compileAsync(car,this.camera,this.scene);if(this.disposed)return;const old=this.racerCars[nearest.n];car.position.copy(old.position);car.quaternion.copy(old.quaternion);car.visible=old.visible;car.userData.visualYaw=old.userData.visualYaw;car.userData.detailed=true;old.removeFromParent();this.racerCars[nearest.n]=car;this.scene.add(car);})().catch(()=>{this.rivalDetailAfter=performance.now()+10000;}).finally(()=>this.rivalDetailTask=null);
  }
- loadRaceAssets(){return this.raceAssets??=this.measureLoad('raceAssets',()=>this.prepareRaceAssets()).catch(e=>{this.raceAssets=null;throw e;});}
- async prepareRaceAssets(){
+ loadRaceAssets(vehicle=0){return this.raceAssets??=this.measureLoad('raceAssets',()=>this.prepareRaceAssets(vehicle)).catch(e=>{this.raceAssets=null;throw e;});}
+ async prepareRaceAssets(vehicle){
   const manager=new T.LoadingManager();manager.setURLModifier(assetURL);manager.onError=url=>this.assetErrors.push(url);const loader=new T.TextureLoader(manager);
-  const [markers,pickups,combat]=await Promise.all([loader.loadAsync('/arcade/art/nightshift/combat-markers-v131.webp'),loader.loadAsync('/arcade/art/nightshift/combat-pickups-v131.webp'),loader.loadAsync('/arcade/art/nightshift/combat-vfx-v81-v131.webp'),this.driveVfx.load(loader),this.combat.loadSequence(loader),this.installRaceFleet()]);
+  const [markers,pickups,combat]=await Promise.all([loader.loadAsync('/arcade/art/nightshift/combat-markers-v131.webp'),loader.loadAsync('/arcade/art/nightshift/combat-pickups-v131.webp'),loader.loadAsync('/arcade/art/nightshift/combat-vfx-v81-v131.webp'),this.driveVfx.load(loader),this.combat.loadSequence(loader),this.installRaceFleet(vehicle)]);
   markers.colorSpace=T.SRGBColorSpace;this.markerTextures=Array.from({length:4},(_,n)=>{const t=markers.clone();t.repeat.set(.496,.496);t.offset.set((n%2)*.5+.002,n<2?.502:.002);t.needsUpdate=true;return t;});for(const badge of this.rivalBadges){badge.material.map=this.markerTextures[0];badge.material.opacity=.9;badge.material.needsUpdate=true;}setPickupAtlas(this.items,pickups);this.combat.load(combat);this.effects.load(combat);this.raceAssetsReady=true;
  }
  async prepareRace(g){
-  await Promise.all([this.ensureVehicle(g.vehicle,true,{deferCompile:!this.preparedModes.has(g.mode)}),this.loadRaceAssets(),this.world.prepare(g.mode),this.world.load(new T.TextureLoader(this.manager()),g.mode),this.atmosphere.load(this.manager(),g.mode),this.loadBackdrop(new T.TextureLoader(this.manager()),g.mode)]);this.rivalDetailAfter=performance.now()+5000;if(this.preparedModes.has(g.mode))return;
+  await Promise.all([this.ensureVehicle(g.vehicle,true,{deferCompile:!this.preparedModes.has(g.mode)}),this.loadRaceAssets(g.vehicle),this.world.prepare(g.mode),this.world.load(new T.TextureLoader(this.manager()),g.mode),this.atmosphere.load(this.manager(),g.mode),this.loadBackdrop(new T.TextureLoader(this.manager()),g.mode)]);this.rivalDetailAfter=performance.now()+5000;if(this.preparedModes.has(g.mode))return;
   this.preparing=true;const map=this.mapMode,preview=this.previewMode;this.mapMode=null;this.previewMode=false;
   try{this.draw(g,g,1,0,1,{running:false,reduced:true,low:false,warmup:true,skipRender:true});const stages=await this.measureLoad('renderWarmup',()=>this.post.prepare(this.scene,this.camera));for(const [name,ms]of Object.entries(stages))this.loadingTimings['warmup:'+name]=ms;const first=performance.now();this.draw(g,g,1,0,1,{running:false,reduced:true,low:false,warmup:true});this.loadingTimings.firstFrame=performance.now()-first;this.preparedModes.add(g.mode);}
   finally{this.renderer.shadowMap.enabled=true;this.preparing=false;this.mapMode=map;this.previewMode=preview;this.reset();this.gpu.reset();}

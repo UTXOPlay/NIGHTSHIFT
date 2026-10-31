@@ -85,8 +85,8 @@ export class StreetLighting{
   this.positions=Array.from({length:LAMP_COUNT},()=>new T.Vector3());this.loaded=false;
  }
  async load(loader){
-  const structure=await loadStructureTexture(loader);for(const batch of this.batches)if(batch.material.isMeshStandardMaterial)structureSurface(batch.material,structure,0);
-  const texture=await loader.loadAsync('/arcade/art/nightshift/street-lighting-v8-v131.webp');texture.colorSpace=T.SRGBColorSpace;
+  const [structure,texture]=await Promise.all([loadStructureTexture(loader),loader.loadAsync('/arcade/art/nightshift/street-lighting-v8-v131.webp')]);for(const batch of this.batches)if(batch.material.isMeshStandardMaterial)structureSurface(batch.material,structure,0);
+  texture.colorSpace=T.SRGBColorSpace;
   this.diffuser.map=atlasCell(texture,0);this.diffuser.map.repeat.set(.465,.18);this.diffuser.map.offset.set(.018,.645);this.diffuser.needsUpdate=true;
   this.halos.forEach((m,n)=>{m.material.map=atlasCell(texture,n+1);m.material.needsUpdate=true;});
   this.pools.material.needsUpdate=true;this.loaded=true;
