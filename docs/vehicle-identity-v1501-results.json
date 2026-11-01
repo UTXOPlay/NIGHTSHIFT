@@ -1,0 +1,312 @@
+{
+  "version": "15.0.1",
+  "status": "deployed-public-identity-career-and-fullscreen-accepted",
+  "rulesVersion": 15,
+  "fullGoalComplete": false,
+  "multiplayerImplemented": false,
+  "source": {
+    "version": "15.0.1",
+    "commit": "5688e46b0e6739a09a980eba35bcbe5b2fe9e230",
+    "baseVersion": "15.0.0",
+    "baseGameImage": "sha256:42e00eb3275df9ce97513fc8642af18d64a66580fa1d69baf0689febf54ebd42",
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "payloadSha256": "4d3ef6d84b51f1f4b795d49628f9478751a707c759a0a583eabc74e30ed68362",
+    "payloadBytes": 985410,
+    "changedBrowserFiles": 5,
+    "browserFiles": 317
+  },
+  "deployment": {
+    "version": "15.0.1",
+    "gameImage": "sha256:88776b87b8c60830ff0d42cc842d8a5c8050aca71334a8687898eb9b33e90363",
+    "storeImage": "sha256:c5dc26bb5c1855445ffed316200b5f19eb51f0d7ff945d8f377c7f5538fde59d",
+    "otherCatalogEntriesPreserved": true,
+    "legacyNativeVolumesPreserved": true,
+    "nativeBinariesUnchanged": true,
+    "historicalNativeBinariesInherited": true
+  },
+  "stageAcceptance": {
+    "phase": "stage",
+    "version": "15.0.1",
+    "gameImage": "sha256:88776b87b8c60830ff0d42cc842d8a5c8050aca71334a8687898eb9b33e90363",
+    "storeImage": "sha256:f2906cc410a41c6a23049e2a2af0d6753d8cc143964638c1fd94cc0a9485d82a",
+    "browserFiles": 317,
+    "hostFiles": 11,
+    "nativeExecutables": 8,
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": false,
+    "allStageDataIsolated": true,
+    "onlyCatalogVersionChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "productionAcceptance": {
+    "phase": "production",
+    "version": "15.0.1",
+    "gameImage": "sha256:88776b87b8c60830ff0d42cc842d8a5c8050aca71334a8687898eb9b33e90363",
+    "storeImage": "sha256:c5dc26bb5c1855445ffed316200b5f19eb51f0d7ff945d8f377c7f5538fde59d",
+    "browserFiles": 317,
+    "hostFiles": 11,
+    "nativeExecutables": 8,
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": true,
+    "allStageDataIsolated": false,
+    "onlyCatalogVersionChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "sameNativeProfileAndSourcesAndExecutablesAndHost": true,
+  "unitChecks": {
+    "passed": 179,
+    "failed": 0
+  },
+  "publicIntegrity": {
+    "origin": "https://store.utxoplay.io",
+    "version": "15.0.1",
+    "changedFilesExact": [
+      "_arcade/nightshift11-fleet.mjs",
+      "_arcade/nightshift9-renderer.bundle.mjs",
+      "_arcade/nightshift9-renderer.mjs",
+      "app.js",
+      "index.html"
+    ],
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6"
+  },
+  "localIdentity": {
+    "version": "15.0.1",
+    "origin": "http://127.0.0.1:19426",
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "checks": {
+      "highHeatHasOnlyAuthoritativeCars": true,
+      "normalRaceHasNoPersonalGhost": true,
+      "pursuitSignedReplay": true,
+      "verifiedReferenceReplaysIndependently": true,
+      "personalGhostLabelAndSoloVisibility": true,
+      "specSignedReplay": true
+    },
+    "samples": [
+      {
+        "tick": 0,
+        "heat": 160,
+        "distance": 0,
+        "speed": 0,
+        "rivals": 5,
+        "traffic": 0,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 444,
+        "heat": 402,
+        "distance": 1780,
+        "speed": 0,
+        "rivals": 2,
+        "traffic": 2,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 488,
+        "heat": 444,
+        "distance": 1780,
+        "speed": 0,
+        "rivals": 1,
+        "traffic": 2,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 30,
+        "heat": 0,
+        "distance": 0,
+        "speed": 0,
+        "rivals": 0,
+        "traffic": 0,
+        "pursuer": null,
+        "ghost": true
+      }
+    ],
+    "reference": {
+      "ticks": 8364,
+      "nativeBrowserExact": true,
+      "fixture": "Completed stock-event input tape, independently simulated by the native executor. Only the device-local reference is seeded; live player states are never injected."
+    },
+    "errors": [],
+    "physicalDevices": false
+  },
+  "stageIdentity": {
+    "version": "15.0.1",
+    "origin": "http://127.0.0.1:19494",
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "checks": {
+      "highHeatHasOnlyAuthoritativeCars": true,
+      "normalRaceHasNoPersonalGhost": true,
+      "pursuitSignedReplay": true,
+      "verifiedReferenceReplaysIndependently": true,
+      "personalGhostLabelAndSoloVisibility": true,
+      "specSignedReplay": true
+    },
+    "samples": [
+      {
+        "tick": 0,
+        "heat": 160,
+        "distance": 0,
+        "speed": 0,
+        "rivals": 5,
+        "traffic": 0,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 444,
+        "heat": 402,
+        "distance": 1780,
+        "speed": 0,
+        "rivals": 2,
+        "traffic": 2,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 488,
+        "heat": 444,
+        "distance": 1780,
+        "speed": 0,
+        "rivals": 1,
+        "traffic": 2,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 30,
+        "heat": 0,
+        "distance": 0,
+        "speed": 0,
+        "rivals": 0,
+        "traffic": 0,
+        "pursuer": null,
+        "ghost": true
+      }
+    ],
+    "reference": {
+      "ticks": 8364,
+      "nativeBrowserExact": true,
+      "fixture": "Completed stock-event input tape, independently simulated by the native executor. Only the device-local reference is seeded; live player states are never injected."
+    },
+    "errors": [],
+    "physicalDevices": false
+  },
+  "publicIdentity": {
+    "version": "15.0.1",
+    "origin": "https://store.utxoplay.io",
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "checks": {
+      "highHeatHasOnlyAuthoritativeCars": true,
+      "normalRaceHasNoPersonalGhost": true,
+      "pursuitSignedReplay": true,
+      "verifiedReferenceReplaysIndependently": true,
+      "personalGhostLabelAndSoloVisibility": true,
+      "specSignedReplay": true
+    },
+    "samples": [
+      {
+        "tick": 0,
+        "heat": 160,
+        "distance": 0,
+        "speed": 0,
+        "rivals": 5,
+        "traffic": 0,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 447,
+        "heat": 403,
+        "distance": 1820,
+        "speed": 0,
+        "rivals": 2,
+        "traffic": 2,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 495,
+        "heat": 451,
+        "distance": 1820,
+        "speed": 0,
+        "rivals": 1,
+        "traffic": 2,
+        "pursuer": null,
+        "ghost": false
+      },
+      {
+        "tick": 30,
+        "heat": 0,
+        "distance": 0,
+        "speed": 0,
+        "rivals": 0,
+        "traffic": 0,
+        "pursuer": null,
+        "ghost": true
+      }
+    ],
+    "reference": {
+      "ticks": 8364,
+      "nativeBrowserExact": true,
+      "fixture": "Completed stock-event input tape, independently simulated by the native executor. Only the device-local reference is seeded; live player states are never injected."
+    },
+    "errors": [],
+    "physicalDevices": false
+  },
+  "stageFullscreen": {
+    "origin": "http://127.0.0.1:19494",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "layoutChecks": {
+    "menuHasNoWebGLOrRaceAssets": true,
+    "twelveActualRoutePreviews": true,
+    "garageLoadsOnlyItsAssets": true,
+    "actualFleetThumbnails": true,
+    "sixGroundedVehicles": true,
+    "movingResizeAndInverseInput": true,
+    "minimapActorsAndOverview": true,
+    "pausedReducedMotionPreservesRules": true,
+    "touchPortraitPausesAndClears": true
+  },
+  "productionCanary": {
+    "sameStateSessionAndProof": true,
+    "purchasedCareerPreserved": true,
+    "continuedInputsExact": true,
+    "signedReplay": true
+  },
+  "limits": [
+    "Physical phones and controllers have not been tested.",
+    "The seeded personal-best reference is a completed native/browser-checked input tape used only as a device-local UI fixture. Live player states were not injected.",
+    "No gameplay rule or performance benchmark changes are claimed.",
+    "GitHub browser-source CI passed; the native job was still compiling during acceptance.",
+    "The older full completion goal remains paused; multiplayer remains future work."
+  ],
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  }
+}
