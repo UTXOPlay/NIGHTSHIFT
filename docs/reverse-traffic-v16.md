@@ -1,0 +1,15 @@
+# Rear traffic and reverse recovery — 16.0.0
+
+The reported sequence is a barrier impact followed by reversing, with an ordinary-looking car apparently attached behind the player. There are two confirmed causes. The old decorative pursuit car was tethered to player motion and its beacon surfaces were occluded by the body; that presentation bug was removed in 15.0.1. A native/browser input tape also reproduces an actual traffic car repeatedly driving into the reversing player's rear. V15 can turn continuous reverse input into forward motion because traffic only guides around static barriers and keeps applying motor pressure.
+
+V16 traffic recognizes a reversing player ahead, brakes, commits to a physically available adjacent lane and then resumes cruise gradually. If neither lane is available it waits as a solid vehicle. A committed maneuver persists through small contact-induced lateral shifts, preventing oscillation between lanes. Collision impulses and existing contact envelopes remain active. Vehicle IDs remain stable; traffic is not hidden or teleported.
+
+Traffic stores a bounded five-second yield timer in its existing `life` field and a signed `yield_lane` value of -1 or 0–2. Mines keep their independent lifetime. The browser and the new V16 native executor implement identical integer transitions. Normal forward traffic without an active recovery yield retains the published V15 guidance exactly.
+
+Published V8–V15 native sources and executable hashes remain frozen. An unfinished old race keeps its original executor. Explicitly start another event to use the new recovery behavior; signed career progression, inactive purchased parts and proof origins carry forward. Historical personal-best provenance remains separate from the current application profile. Myelin provides off-chain host replay, not CKB settlement.
+
+Validation includes all six vehicles reversing past rear traffic, blocked adjacent lanes, forward-guidance equivalence, gradual cruise recovery, 200 native/browser comparisons and all twelve events completed within three to seven minutes. The original V15 barrier/reverse tape is retained as a counterexample and compared at every checkpoint against native V15 and V16. Browser recovery uses ordinary keyboard or CDP touch input after a real barrier collision reached through signed tick commands. Tests also cover exact V15 browser continuation, explicit V16 migration, signed replay/restart/tampering, all required viewport sizes and the portrait rotation gate. Physical-device testing remains outstanding.
+
+The production Bookworm build retains the failed first attempt (`bash -lc` reset the image's Cargo PATH). The corrected compile uses the inspected non-login shell and re-verifies all 63 native input hashes, the compiled profile and the complete reverse trace before accepting the executable. No historical binary is rebuilt for deployment.
+
+The older full single-player completion goal remains paused and incomplete. Multiplayer remains future work.

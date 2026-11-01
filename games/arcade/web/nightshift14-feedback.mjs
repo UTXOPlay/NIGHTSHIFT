@@ -9,7 +9,7 @@ export function rivalReadout(g,r){
  return {id:r.id,marked,done,active:contractActive(g,r.id),phase,label:labels[phase],name:RIVALS[r.id],loadLimit:r.release_at>0?Math.round(([1500,1640,1780][g.difficulty]+Math.floor(g.mode/4)*20)*.108):null};
 }
 export function combatHud(g){
- if(![14,15].includes(g.physics_version))return legacyHud(g);
+ if(![14,15,16].includes(g.physics_version))return legacyHud(g);
  const source=combatActor(g,-1),targets=weaponTargets(g),warnings=g.rivals.filter(r=>r.windup>0&&r.attack_target===-1&&r.hp>0&&!r.stun);
  const blocked=g.gadget===0&&g.lock_id<0?g.rivals.filter(r=>!r.finish&&!r.staged&&r.hp>0&&!r.stun&&!r.recover&&r.distance-g.distance>30&&r.distance-g.distance<900&&Math.abs(r.x-g.drift_x)<480&&!clearShot(g,source,r)).sort((a,b)=>a.distance-b.distance||a.id-b.id)[0]:null;
  const aim=g.lock_id>=0?g.rivals[g.lock_id]:blocked,targetHud=aim?{...rivalReadout(g,aim),blocked:!!blocked}:null;

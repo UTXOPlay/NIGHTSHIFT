@@ -1,0 +1,14 @@
+# Inherit all eight published executors from the pinned live image.
+ARG BASE_RUNTIME_IMAGE
+FROM ${BASE_RUNTIME_IMAGE}
+COPY dist/ /app/dist/
+COPY host/ /app/host/
+COPY docs/ /app/docs/
+COPY games/nightshift-v16/host.json /app/games/nightshift-v16/host.json
+COPY --chmod=755 runtime/myelin-nightshift-v16 /app/target/release/myelin-nightshift-v16
+COPY package.json package-lock.json /app/
+USER root
+RUN mkdir -p /app/data-v16 && chown node:node /app/data-v16
+USER node
+ENV DATA_DIR=/app/data-v16 RUNTIME_BINARY=/app/target/release/myelin-nightshift-v16 RUNTIME_PORT=8802 REVERSE_DATA_DIR=/app/data-v15 REVERSE_BINARY=/app/target/release/myelin-nightshift-v15 REVERSE_RUNTIME_PORT=8801 NATIVE_WORKER_LIMIT=2
+CMD ["node", "host/nightshift16.mjs"]

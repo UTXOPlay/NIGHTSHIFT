@@ -37,6 +37,8 @@ This release is a **solo racing career**. Live multiplayer is future work. The f
 
 Version 15 adds responsive reverse, continuous low-speed reverse travel and brake-to-reverse keyboard controls. Historical races retain their original rules; start a new event to use the new handling. See [reverse fix and verification](docs/reverse-v15.md).
 
+Version 16 is a recovery candidate: rear traffic brakes and yields to a reversing player, then resumes cruise gradually. Old races keep their original traffic rules; start a new event to use V16 with the verified career retained. See [reverse-traffic recovery](docs/reverse-traffic-v16.md).
+
 ## Run locally
 
 Use Node.js 22 or later and Rust. The native RocksDB dependencies require Clang/libclang, pkg-config and protoc. On Debian/Ubuntu:
@@ -49,7 +51,7 @@ npm run build:native:history
 npm run dev
 ```
 
-Open **http://127.0.0.1:8899/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8801. Historical executors start lazily when an unfinished saved event needs them.
+Open **http://127.0.0.1:8899/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8802. Historical executors start lazily when an unfinished saved event needs them.
 
 For a production process, build once and supply a stable server-only token:
 
@@ -92,7 +94,7 @@ npm run build:native:history
 npm run test:replay
 ```
 
-`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V14 verifier. It requires both V15 and V14 native binaries. V8–V14 predecessor sources remain frozen for original-rule replay and career carry.
+`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V14 verifier. It requires both V16 and V15 native binaries. V8–V15 predecessor sources remain frozen for original-rule replay and career carry.
 
 Browser checks use a separate local review server and a fresh data directory:
 
@@ -119,7 +121,7 @@ export GAME_ORIGIN="http://localhost:8898"
 docker compose -f deploy/compose.yml up --build -d
 ```
 
-The Compose service binds the web port to local loopback and persists V8–V15 state in separate named volumes. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nightshift/`.
+The Compose service binds the web port to local loopback and persists V8–V16 state in separate named volumes. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nightshift/`.
 
 ## Source and artwork
 
