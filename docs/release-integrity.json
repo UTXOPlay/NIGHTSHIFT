@@ -1,5 +1,5 @@
 {
-  "version": "15.0.0",
+  "version": "15.0.1",
   "rulesVersion": 15,
   "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
   "nativeSources": {
@@ -284,7 +284,7 @@
     "_arcade/nightshift11-authored-car.mjs": "125705c6f9f8c301e67abae39ecb8ddf9078004f2495744ecc2851655268b4d6",
     "_arcade/nightshift11-career.mjs": "d02997c653dc2b54a6133ed656f138ea7968a3fc1ecf04ea6e80c026afd627ab",
     "_arcade/nightshift11-contact.mjs": "9c853cb9ab2b13c96210dea254e115d6965b3b4cc052a09e0fc685f66a379f24",
-    "_arcade/nightshift11-fleet.mjs": "3a6acf528518398fd492df8478ea8cf5e3c0c21625f277c0eb06090a56a828dd",
+    "_arcade/nightshift11-fleet.mjs": "2596221b2aee918e3d6e7b7cbc8d6c624cfcb2f48f4d0ccdda812bcbe81d483a",
     "_arcade/nightshift11-ghost.mjs": "678d5527e87355b7cc6c22f81fcf937662de3955d3e960290f7082ce71139871",
     "_arcade/nightshift11-input.mjs": "0ae7664e40a2af5be67e7cd2693d5dfaed43e78aec48612f105e11b3b0f670d3",
     "_arcade/nightshift11-profile.mjs": "59a8ac73ebfee9e5caee21e11c5357e586d7e217c86b20fd9ce9197b7944f9c3",
@@ -370,8 +370,8 @@
     "_arcade/nightshift9-performance.mjs": "a0ab4484194b59cb4e33d9d6745a17428cd79e3e2be47dae7cdf6bbe67974b3b",
     "_arcade/nightshift9-post.mjs": "2524ab8f4bd3766fa294aa0f03b3fa8bd5e02a706afdd449407cca9be1c16055",
     "_arcade/nightshift9-recovery.mjs": "c7ee40faa0684af14fdcf0f5ebb11ef0b7a307004f1e7da87a0a6815ce32d319",
-    "_arcade/nightshift9-renderer.bundle.mjs": "7420091a6a474251a0acf161d75ad636e6e292e1b54a17b43ab8bdb2ae30bc13",
-    "_arcade/nightshift9-renderer.mjs": "ac350f9b3f6839ee928d8288fc93fabd935fae96cbf1b9fb6be6f8b9c148803f",
+    "_arcade/nightshift9-renderer.bundle.mjs": "771fc085010023be1193b594903b5e9f59c527eba1f5bfa75a212b23ae272018",
+    "_arcade/nightshift9-renderer.mjs": "ff627a1fafc7bd6b063d787f0109a2f80359891ca20c9bb23c0ae7896cc3aadc",
     "_arcade/nightshift9-rules.mjs": "bcc05641e8f841a1f3f29452bdfebaf94485fbe3c219ada689694918dcf9f8e3",
     "_arcade/nightshift9-streets.mjs": "cf899001ed79a9ec06b4df14c51202276919dbbf04f2a2cdf36f81abfe3cd968",
     "_arcade/nightshift9-surface.mjs": "d1384efc9c90d236df695582ebd2b8863846a789b02d4abc4ea266c3d26d9ec3",
@@ -386,8 +386,8 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d1d3c2ca98b26ccbacca07262d26acddb06e2981edcf29bc31db6a06e21dc56a",
-    "app.js": "c5f46603ce3948fe101665e0f2df412be90d5605bd7337044f92851e4f9a1341",
-    "index.html": "af4a623584c3fb26d2043bbb05a7fcaa1036fffc5314c8de0495e310b685e0bb",
+    "app.js": "0b76311a75882e248b6c5ac8be531ad45545292a15aba31df3fa0449e7af2cbd",
+    "index.html": "f15f2124c7f7c378bb629c1e04042d359b8c771a10a836abed56e7f2dd37eae4",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   },
   "nativeBinaries": {

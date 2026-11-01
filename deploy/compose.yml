@@ -3,7 +3,7 @@ services:
     build:
       context: ..
       dockerfile: deploy/Dockerfile
-    image: utxoplay/nightshift:15.0.0
+    image: utxoplay/nightshift:15.0.1
     restart: unless-stopped
     mem_limit: 2048m
     memswap_limit: 2048m
