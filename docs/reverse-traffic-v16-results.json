@@ -1,0 +1,1104 @@
+{
+  "version": "16.0.0",
+  "status": "deployed-public-recovery-career-and-fullscreen-accepted",
+  "rulesVersion": 16,
+  "fullGoalComplete": false,
+  "broaderGoalStatus": "paused",
+  "multiplayerImplemented": false,
+  "source": {
+    "version": "16.0.0",
+    "commit": "6887cb13401f883c6a6deb498a9ae872abb229c6",
+    "baseVersion": "15.0.1",
+    "baseGameImage": "sha256:88776b87b8c60830ff0d42cc842d8a5c8050aca71334a8687898eb9b33e90363",
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "payloadSha256": "e66864d23465a7380da46a3312f635a121ae6c39ee398ff9acb1b372892ad390",
+    "payloadBytes": 404703,
+    "nativeBinarySha256": "b742722c9a8288220cc8c821e8f0fe3c83b30ff05b9400fe00902bf61add8673",
+    "nativeSourceSha256": "ff68e39e8b11ded1cab77369ff9dc6467e57824cd4c206d9d7d6ed51dce7c2c8",
+    "browserFiles": 322,
+    "changedBrowserFiles": 10
+  },
+  "deployment": {
+    "version": "16.0.0",
+    "gameImage": "sha256:c6f3a09d853ebad2d12c07c50380d9c7d10184bf391d0a99b04571c5e03056de",
+    "storeImage": "sha256:372bd3abdc887ed2f77a520b1232a6293a3f1669b3b8a22abc92c0e7a63c515a",
+    "otherCatalogEntriesPreserved": true,
+    "legacyNativeVolumesPreserved": true,
+    "v16DataIsolated": true,
+    "historicalNativeBinariesInherited": true
+  },
+  "stageAcceptance": {
+    "phase": "stage",
+    "version": "16.0.0",
+    "gameImage": "sha256:c6f3a09d853ebad2d12c07c50380d9c7d10184bf391d0a99b04571c5e03056de",
+    "storeImage": "sha256:7d89dcf71a86c6165c9141c5a2b821a590da523f498bbb0153938846cc269950",
+    "browserFiles": 322,
+    "hostFiles": 13,
+    "nativeExecutables": 9,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": false,
+    "allStageDataIsolated": true,
+    "onlyCatalogVersionChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "productionAcceptance": {
+    "phase": "production",
+    "version": "16.0.0",
+    "gameImage": "sha256:c6f3a09d853ebad2d12c07c50380d9c7d10184bf391d0a99b04571c5e03056de",
+    "storeImage": "sha256:372bd3abdc887ed2f77a520b1232a6293a3f1669b3b8a22abc92c0e7a63c515a",
+    "browserFiles": 322,
+    "hostFiles": 13,
+    "nativeExecutables": 9,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": true,
+    "allStageDataIsolated": false,
+    "onlyCatalogVersionChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "nativeBuild": {
+    "version": 16,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "sourceSha256": "ff68e39e8b11ded1cab77369ff9dc6467e57824cd4c206d9d7d6ed51dce7c2c8",
+    "builder": "sha256:5579cf8199622d288b4419228262cbb8034a2c0c3b4635f5acefad30304d40e2",
+    "complete": true,
+    "nativeBinarySha256": "b742722c9a8288220cc8c821e8f0fe3c83b30ff05b9400fe00902bf61add8673",
+    "bytes": 27249840,
+    "profileVerified": true,
+    "fullReverseTraceExact": true
+  },
+  "unitChecks": {
+    "browserPassed": 183,
+    "browserFailed": 0,
+    "nativeLibraryPassed": 14,
+    "nativeBinaryPassed": 14,
+    "nativeMigrationPassed": 9
+  },
+  "conformance": {
+    "nativeChecks": 200,
+    "activeTicks": 635674,
+    "actions": 5462,
+    "races": 67,
+    "completedEvents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": [
+      "attack_hits",
+      "pickups",
+      "dodges",
+      "win-0",
+      "win-2",
+      "takedowns",
+      "win-3",
+      "win-4",
+      "win-5",
+      "win-6",
+      "win-1",
+      "win-7",
+      "win-8",
+      "win-9",
+      "win-10",
+      "win-11"
+    ],
+    "eventRuns": [
+      {
+        "mode": 0,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 1,
+        "won": 1,
+        "position": 1,
+        "seconds": 276.7,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 2,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 2,
+        "won": 1,
+        "position": 1,
+        "seconds": 300.1333333333333,
+        "reason": 1,
+        "finalGoalSeconds": 285.76666666666665,
+        "remainingAfterGoal": 14.366666666666667,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 3,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 3,
+        "won": 1,
+        "position": 1,
+        "seconds": 293.23333333333335,
+        "reason": 1,
+        "finalGoalSeconds": 263,
+        "remainingAfterGoal": 30.233333333333334,
+        "sectorMarks": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 750
+      },
+      {
+        "mode": 4,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 4,
+        "won": 1,
+        "position": 1,
+        "seconds": 305.73333333333335,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 5,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 5,
+        "won": 1,
+        "position": 1,
+        "seconds": 322.06666666666666,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 6,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 6,
+        "won": 1,
+        "position": 1,
+        "seconds": 320.23333333333335,
+        "reason": 1,
+        "finalGoalSeconds": 292.06666666666666,
+        "remainingAfterGoal": 28.166666666666668,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 750
+      },
+      {
+        "mode": 0,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 7,
+        "won": 1,
+        "position": 1,
+        "seconds": 275.43333333333334,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 0,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 0,
+        "vehicle": 0,
+        "difficulty": 2,
+        "random": false,
+        "raceId": 8,
+        "won": 1,
+        "position": 2,
+        "seconds": 279.6333333333333,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 0,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 0,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": true,
+        "raceId": 9,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "firstBonus": 0,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 1,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": false,
+        "raceId": 10,
+        "won": 1,
+        "position": 1,
+        "seconds": 301.1333333333333,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 250,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 1,
+        "vehicle": 0,
+        "difficulty": 2,
+        "random": false,
+        "raceId": 11,
+        "won": 1,
+        "position": 1,
+        "seconds": 308.06666666666666,
+        "reason": 1,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "firstBonus": 0,
+        "chapterBonus": 0
+      },
+      {
+        "mode": 1,
+        "vehicle": 0,
+        "difficulty": 0,
+        "random": true,
+        "raceId": 12,
+        "won": 0,
+        "position": 6,
+        "seconds": 420,
+        "reason": 3,
+        "finalGoalSeconds": null,
+        "remainingAfterGoal": null,
+        "sectorMarks": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "firstBonus": 0,
+        "chapterBonus": 0
+      }
+    ],
+    "driverLimit": "Oracle-style deterministic bot, not human difficulty or physical-device validation"
+  },
+  "recoveryCounterexample": {
+    "version": 16,
+    "oldVersion": 15,
+    "nativeExactAtEveryCheckpoint": true,
+    "originalInputTapeRetained": true,
+    "samples": [
+      {
+        "label": "collision",
+        "tick": 791,
+        "oldSpeed": -175,
+        "newSpeed": -175,
+        "oldDistance": 9401,
+        "newDistance": 9401,
+        "yielding": []
+      },
+      {
+        "label": "reverse-119",
+        "tick": 911,
+        "oldSpeed": -500,
+        "newSpeed": -500,
+        "oldDistance": 8835,
+        "newDistance": 8835,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1768,
+            "vy": 3,
+            "lane": 0
+          }
+        ]
+      },
+      {
+        "label": "reverse-179",
+        "tick": 971,
+        "oldSpeed": 590,
+        "newSpeed": -500,
+        "oldDistance": 8859,
+        "newDistance": 8545,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 808,
+            "vy": 3,
+            "lane": 0
+          }
+        ]
+      },
+      {
+        "label": "reverse-239",
+        "tick": 1031,
+        "oldSpeed": 590,
+        "newSpeed": -500,
+        "oldDistance": 9189,
+        "newDistance": 8245,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 50,
+            "vy": 6,
+            "lane": 1
+          }
+        ]
+      },
+      {
+        "label": "normal-cleared",
+        "tick": 1174,
+        "oldSpeed": 1668,
+        "newSpeed": 1357,
+        "oldDistance": 10957,
+        "newDistance": 9180,
+        "yielding": []
+      }
+    ]
+  },
+  "signedReplayAndMigration": {
+    "version": 16,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "soloRace": {
+      "won": 1,
+      "seconds": 275.8,
+      "attempts": 1,
+      "reward": 2092
+    },
+    "v15SpecPb": 8364,
+    "v15Attempts": 1,
+    "browserNativeInputsExact": true,
+    "signedReplay": true,
+    "staleRejected": true,
+    "forgedCurrencyRejected": true,
+    "restartRecovery": true,
+    "legacyProfileSeparation": true,
+    "v15SignedOrigin": true,
+    "inactivePurchasedPartsRetained": true,
+    "chapterLicenseRetained": true,
+    "historicalPbProvenanceRetained": true,
+    "nestedOriginTamperingRejected": true,
+    "migratedRestartRecovery": true,
+    "limitation": "Native HTTP and deterministic browser-rule validation; this is not rendered-browser, physical-device or multiplayer acceptance."
+  },
+  "localRecovery": {
+    "version": 16,
+    "origin": "http://127.0.0.1:19428",
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "cases": [
+      {
+        "kind": "keyboard",
+        "collisionTick": 791,
+        "reverseTick": 911,
+        "metresBack": 33.4,
+        "speed": -16,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1448,
+            "velocity": 0,
+            "lane": 0
+          },
+          {
+            "id": 6,
+            "x": 2000,
+            "velocity": 0,
+            "lane": -1
+          }
+        ],
+        "passedOriginalBarrier": true,
+        "escapeTick": 1028,
+        "sameBrowserNativeState": true,
+        "signedReplay": true
+      },
+      {
+        "kind": "touch",
+        "collisionTick": 791,
+        "reverseTick": 911,
+        "metresBack": 32.4,
+        "speed": -16,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1128,
+            "velocity": 0,
+            "lane": 0
+          },
+          {
+            "id": 6,
+            "x": 2000,
+            "velocity": 0,
+            "lane": -1
+          }
+        ],
+        "passedOriginalBarrier": true,
+        "escapeTick": 1017,
+        "sameBrowserNativeState": true,
+        "signedReplay": true
+      }
+    ],
+    "errors": [],
+    "fixture": "Ordinary signed race/tick commands reach the actual barrier collision. Recovery uses ordinary browser keyboard and CDP touch input. No player-state injection or writable game hooks.",
+    "physicalDevices": false
+  },
+  "legacyBrowser": {
+    "version": 16,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "checks": {
+      "originalV15LoadedExactly": true,
+      "originalV15PedalsAndReplay": true,
+      "explicitV16MigrationAndReplay": true,
+      "inactivePartsAndCareerRetained": true,
+      "originalSignedProofRetained": true,
+      "sameCanvasWithoutReload": true
+    },
+    "errors": [],
+    "oldTick": 61,
+    "newTick": 12,
+    "input": "Ordinary browser keyboard events and signed host commands; no game-state injection",
+    "physicalDevices": false
+  },
+  "presentation": {
+    "version": "16.0.0",
+    "checks": {
+      "menuHasNoWebGLOrRaceAssets": true,
+      "twelveActualRoutePreviews": true,
+      "garageLoadsOnlyItsAssets": true,
+      "actualFleetThumbnails": true,
+      "sixGroundedVehicles": true,
+      "movingResizeAndInverseInput": true,
+      "minimapActorsAndOverview": true,
+      "pausedReducedMotionPreservesRules": true,
+      "touchPortraitPausesAndClears": true
+    },
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 1920,
+          "height": 1080
+        },
+        "inverse": {
+          "x": 1000.0000000000007,
+          "y": 500.0000000000001
+        },
+        "tick": 21,
+        "distance": 14,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1080
+        },
+        "inverse": {
+          "x": 999.9999999999995,
+          "y": 500.00000000000034
+        },
+        "tick": 56,
+        "distance": 98,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        },
+        "inverse": {
+          "x": 999.9999999999986,
+          "y": 500.0000000000001
+        },
+        "tick": 96,
+        "distance": 259,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 2560,
+          "height": 1440
+        },
+        "inverse": {
+          "x": 999.9999999999998,
+          "y": 500.00000000000085
+        },
+        "tick": 142,
+        "distance": 505,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "running": true,
+        "raceId": 1,
+        "buffer": {
+          "width": 844,
+          "height": 390
+        },
+        "inverse": {
+          "x": 999.9999999999997,
+          "y": 499.9999999999991
+        },
+        "tick": 216,
+        "distance": 969,
+        "overflow": false
+      }
+    ],
+    "cars": [
+      {
+        "vehicle": 0,
+        "bounds": {
+          "min": [
+            -1.0399999618530273,
+            0,
+            -1.7790935039520264
+          ],
+          "max": [
+            1.0399999618530273,
+            0.9546939134597778,
+            1.7790935039520264
+          ],
+          "size": [
+            2.0799999237060547,
+            0.9546939134597778,
+            3.5581870079040527
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 1,
+        "bounds": {
+          "min": [
+            -0.9050711393356323,
+            0,
+            -2.140582323074341
+          ],
+          "max": [
+            0.9050711393356323,
+            1.2244965325808153,
+            2.1428675651550293
+          ],
+          "size": [
+            1.8101422786712646,
+            1.2244965325808153,
+            4.28344988822937
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 2,
+        "bounds": {
+          "min": [
+            -0.9555542469024658,
+            0,
+            -2.1400856971740723
+          ],
+          "max": [
+            0.9555543065071106,
+            1.3599277008324862,
+            2.1399998664855957
+          ],
+          "size": [
+            1.9111085534095764,
+            1.3599277008324862,
+            4.280085563659668
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 3,
+        "bounds": {
+          "min": [
+            -1.022929310798645,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228594541549683,
+            1.239329838193953,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457887649536133,
+            1.239329838193953,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 4,
+        "bounds": {
+          "min": [
+            -1.0469666719436646,
+            0,
+            -2.1452722549438477
+          ],
+          "max": [
+            1.0469666719436646,
+            1.363162922905758,
+            2.141364812850952
+          ],
+          "size": [
+            2.093933343887329,
+            1.363162922905758,
+            4.2866370677948
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      },
+      {
+        "vehicle": 5,
+        "bounds": {
+          "min": [
+            -1.022929310798645,
+            0,
+            -2.1432559490203857
+          ],
+          "max": [
+            1.0228594541549683,
+            1.239329838193953,
+            2.1426947116851807
+          ],
+          "size": [
+            2.0457887649536133,
+            1.239329838193953,
+            4.285950660705566
+          ]
+        },
+        "contacts": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pose": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            "XYZ"
+          ]
+        }
+      }
+    ],
+    "errors": [],
+    "physicalDevices": false
+  },
+  "stageRecovery": {
+    "version": 16,
+    "origin": "http://127.0.0.1:19496",
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "cases": [
+      {
+        "kind": "keyboard",
+        "collisionTick": 791,
+        "reverseTick": 911,
+        "metresBack": 33,
+        "speed": -16,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1448,
+            "velocity": 0,
+            "lane": 0
+          },
+          {
+            "id": 6,
+            "x": 2000,
+            "velocity": 0,
+            "lane": -1
+          }
+        ],
+        "passedOriginalBarrier": true,
+        "escapeTick": 1026,
+        "sameBrowserNativeState": true,
+        "signedReplay": true
+      },
+      {
+        "kind": "touch",
+        "collisionTick": 791,
+        "reverseTick": 911,
+        "metresBack": 32.4,
+        "speed": -16,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1128,
+            "velocity": 0,
+            "lane": 0
+          },
+          {
+            "id": 6,
+            "x": 2000,
+            "velocity": 0,
+            "lane": -1
+          }
+        ],
+        "passedOriginalBarrier": true,
+        "escapeTick": 1018,
+        "sameBrowserNativeState": true,
+        "signedReplay": true
+      }
+    ],
+    "errors": [],
+    "fixture": "Ordinary signed race/tick commands reach the actual barrier collision. Recovery uses ordinary browser keyboard and CDP touch input. No player-state injection or writable game hooks.",
+    "physicalDevices": false
+  },
+  "stageFullscreen": {
+    "origin": "http://127.0.0.1:19496",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "productionCanaryBefore": {
+    "created": true,
+    "version": 15,
+    "tick": 45,
+    "purchasedInactiveParts": true,
+    "replay": true
+  },
+  "productionCanaryAfter": {
+    "sameStateSessionAndProof": true,
+    "purchasedCareerPreserved": true,
+    "continuedInputsExact": true,
+    "explicitV16Migration": true,
+    "signedOriginRetained": true,
+    "ordinaryBarrierReverseTape": true,
+    "trafficYielded": true,
+    "nativeBrowserExact": true,
+    "signedReplay": true,
+    "finalTick": 1174
+  },
+  "publicIntegrity": {
+    "origin": "https://store.utxoplay.io",
+    "version": "16.0.0",
+    "changedFilesExact": [
+      "_arcade/nightshift14-career.mjs",
+      "_arcade/nightshift14-feedback.mjs",
+      "_arcade/nightshift14-tactics.mjs",
+      "_arcade/nightshift16-ghost.mjs",
+      "_arcade/nightshift16-profile.mjs",
+      "_arcade/nightshift16-rules.mjs",
+      "_arcade/nightshift16-session-rules.mjs",
+      "_arcade/nightshift16-traffic.mjs",
+      "app.js",
+      "index.html"
+    ],
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc"
+  },
+  "publicRecovery": {
+    "version": 16,
+    "origin": "https://store.utxoplay.io",
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "cases": [
+      {
+        "kind": "keyboard",
+        "collisionTick": 792,
+        "reverseTick": 912,
+        "metresBack": 32.9,
+        "speed": -16,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1432,
+            "velocity": 0,
+            "lane": 0
+          },
+          {
+            "id": 6,
+            "x": 2000,
+            "velocity": 0,
+            "lane": -1
+          }
+        ],
+        "passedOriginalBarrier": true,
+        "escapeTick": 1026,
+        "sameBrowserNativeState": true,
+        "signedReplay": true
+      },
+      {
+        "kind": "touch",
+        "collisionTick": 791,
+        "reverseTick": 911,
+        "metresBack": 32.4,
+        "speed": -16,
+        "yielding": [
+          {
+            "id": 1,
+            "x": 1128,
+            "velocity": 0,
+            "lane": 0
+          },
+          {
+            "id": 6,
+            "x": 2000,
+            "velocity": 0,
+            "lane": -1
+          }
+        ],
+        "passedOriginalBarrier": true,
+        "escapeTick": 1018,
+        "sameBrowserNativeState": true,
+        "signedReplay": true
+      }
+    ],
+    "errors": [],
+    "fixture": "Ordinary signed race/tick commands reach the actual barrier collision. Recovery uses ordinary browser keyboard and CDP touch input. No player-state injection or writable game hooks.",
+    "physicalDevices": false
+  },
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "historicalContract": {
+    "nativeSourcesV8ThroughV15Unchanged": true,
+    "historicalExecutablesInherited": 8,
+    "newV16Executable": 1,
+    "newEventRequiredForV16": true,
+    "signedCareerAndInactivePartsPreserved": true,
+    "workerLimit": 2,
+    "myelin": "Off-chain host replay; not CKB settlement"
+  },
+  "retainedIntermediateFailures": [
+    {
+      "area": "native build",
+      "issue": "Login bash reset the cached Bookworm Cargo PATH and exited 127.",
+      "resolution": "Use inspected non-login sh; recheck all 63 inputs, compiled profile and complete trace. Original failure logs remain on the deployment host."
+    },
+    {
+      "area": "browser recovery driver",
+      "issue": "A hard-coded x >= 1800 wait could continue while actual gap alignment was already true near 1770, eventually timing out/busting.",
+      "resolution": "Bound steering to three seconds or game-owned alignment; retain solid collisions and require actual forward passage through the original barrier. Original failure snapshots retained."
+    },
+    {
+      "area": "public integrity script",
+      "issue": "Frozen V15.0.0 rather than the deployed V15.0.1 baseline counted thirteen changes.",
+      "resolution": "Use the recorded 238370e base commit; all ten packaged changed public files match byte for byte."
+    }
+  ],
+  "limits": [
+    "CDP touch emulation is not physical-device testing.",
+    "The deterministic race driver does not establish human difficulty or balance.",
+    "Physically occupied adjacent lanes retain solid vehicles: traffic waits; it is not teleported or made intangible.",
+    "No new frame-rate, loading-speed or worldwide latency measurement is claimed.",
+    "The older broad single-player completion goal remains paused and incomplete.",
+    "Multiplayer is not implemented."
+  ]
+}
