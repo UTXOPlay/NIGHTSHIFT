@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const expected=JSON.parse(readFileSync('docs/release-integrity.json','utf8'));
 const sha=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
@@ -8,6 +8,7 @@ for(const version of [7,8,9,10,11,12,13,14]){
  for(const [file,hash]of Object.entries(legacy.nativeSources))assert.equal(sha(file),hash,file+` changes the preserved V${version} profile`);
 }
 for(const [file,hash]of Object.entries(expected.nativeSources))assert.equal(sha(file),hash,file+' changes the current profile');
+if(existsSync('docs/release-integrity-v15.json'))for(const [file,hash]of Object.entries(JSON.parse(readFileSync('docs/release-integrity-v15.json')).nativeSources))assert.equal(sha(file),hash,file+' changes the preserved V15 profile');
 for(const [file,hash]of Object.entries(expected.presentationHostFiles||{}))assert.equal(sha(file),hash,file+' differs from the presentation host');
 for(const [file,hash]of Object.entries(expected.browserFiles))assert.equal(sha('dist/nightshift/'+file),hash,file+' differs from the current verified release');
 console.log(`Verified preserved V7–V14 sources, ${Object.keys(expected.nativeSources).length} current bound native sources and ${Object.keys(expected.browserFiles).length} browser files.`);
@@ -18,5 +19,5 @@ assert.ok(readFileSync('dist/nightshift/index.html','utf8').includes('src="./app
 assert.ok(!readFileSync('dist/nightshift/index.html','utf8').includes('nightshift9-renderer.bundle.mjs'),'menu must defer the WebGL renderer');
 assert.ok(readFileSync('dist/nightshift/app.js','utf8').includes('import("'+renderer+'")'),'deferred renderer must use the release cache key');
 
-assert.equal(JSON.parse(readFileSync('games/nightshift-v'+(expected.rulesVersion||13)+'/host.json')).clientProfile,expected.profile,'host requires the current client profile');
+assert.equal(JSON.parse(readFileSync('games/nightshift-v'+(expected.rulesVersion||15)+'/host.json')).clientProfile,expected.profile,'host requires the current client profile');
 assert.ok(readFileSync('dist/nightshift/app.js','utf8').includes(expected.profile),'browser advertises the exact current profile');

@@ -1,7 +1,7 @@
 {
-  "version": "14.2.1",
-  "rulesVersion": 14,
-  "profile": "fc3a5ca4a1687a36f0fc2d786e4fc205e1038629058ebd4f6466fb36e6b9aabe",
+  "version": "15.0.0",
+  "rulesVersion": 15,
+  "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
   "nativeSources": {
     "games/nightshift-v9/native/src/game.rs": "ba0b16c242c44e8415cdca30779e75b9e5f716e9b32eede9800424bdab6a0e30",
     "games/nightshift-v9/native/src/session.rs": "7061df4dfd9dc8d2ea09aa68ce6ffd36d712489cc26eb17437e0b932fd2deecf",
@@ -47,7 +47,16 @@
     "games/nightshift-v14/native/src/main.rs": "58d9bd370fac7f7ccfe35faaa0e5a603838ceaf6a3cbf9d2b4b4aa8b79552688",
     "games/nightshift-v14/native/src/lib.rs": "487f953e99dd7b050b6b29b477456014f2203b8ed07c7d142fbd800cd4adf818",
     "games/nightshift-v14/native/Cargo.lock": "b43bbc1d10b9be34dd82d94e6644e3dc0d30f6e45bd646d18a71aef19a04f7ab",
-    "games/nightshift-v14/native/Cargo.toml": "ba0eb4ec2d307200483ae2ae2f9c4bb0166cbc39dac04de31dbe55483bc0f2b8"
+    "games/nightshift-v14/native/Cargo.toml": "ba0eb4ec2d307200483ae2ae2f9c4bb0166cbc39dac04de31dbe55483bc0f2b8",
+    "games/nightshift-v15/native/src/game.rs": "5e5721e20106ce0f9b2c153fa00e4f2599613e8ef50915a3a050b532594a8075",
+    "games/nightshift-v15/native/src/driver.rs": "58309fe12171aa5f657465f8a7dc956c77ce9814014b53fad986d609060bd724",
+    "games/nightshift-v15/native/src/rivals.rs": "844318a4aeb215d02b0f9051b7dc7cce0d4e35615de95cbe0b35dddce4d50a18",
+    "games/nightshift-v15/native/src/weapons.rs": "bb7889f3c411f6c8cab1d28c58e38292cdf010ab8b3df2c1dea988d9b04020ae",
+    "games/nightshift-v15/native/src/session.rs": "b6aa785bede97efe34bae81e470de4db8886ebf18a47b1e06fca547fdb71a01e",
+    "games/nightshift-v15/native/src/main.rs": "58d9bd370fac7f7ccfe35faaa0e5a603838ceaf6a3cbf9d2b4b4aa8b79552688",
+    "games/nightshift-v15/native/src/lib.rs": "487f953e99dd7b050b6b29b477456014f2203b8ed07c7d142fbd800cd4adf818",
+    "games/nightshift-v15/native/Cargo.lock": "ba8bd0a489cb2ad5e6d9810d58b05bf26d1a0c69b75c6f6dc21528e107f2c10f",
+    "games/nightshift-v15/native/Cargo.toml": "4b19ea525625e439cf471174c59ae3828bb14fa21cb0a969dce51fbfa82da1df"
   },
   "presentationHostFiles": {
     "host/static.mjs": "0ae3a181a2aee8d3a607c22589bd4e338caf32711ae5476c744b99ddb4880eff",
@@ -58,7 +67,9 @@
     "games/nightshift-v13/host.json": "2232797be31b2478973c6233fc133c73e407f16b6a0f88f32c7743bd8d3790ab",
     "host/nightshift14.mjs": "3de4370b25b3939a07828372935dc75e282d78d063484340c4a80065e41c6c34",
     "host/runtime-pool.mjs": "829b7782c2c20e13bdefa03300dad91b35f2ef4b2645faa0c364dd3101ae4b5c",
-    "games/nightshift-v14/host.json": "07508198486b3aebb371f8a57fa0fc0116b5baf4815512e71cd857161e9f0d4e"
+    "games/nightshift-v14/host.json": "07508198486b3aebb371f8a57fa0fc0116b5baf4815512e71cd857161e9f0d4e",
+    "host/nightshift15.mjs": "90bf1c2d45eb093e312ea72f5c6a5498b5f4271bd3ec7237eef175b5aaa3f4ea",
+    "games/nightshift-v15/host.json": "3b9d052aeb6aee120338262af4c1814e98a0bdd469e9cad2643f3e580ed5608a"
   },
   "browserFiles": {
     "_arcade/art/nightshift/architecture-v131.webp": "eb8ebaa72fc46f3c7ecbffe308d9950d4a985659022f47fb81595b3f255d10df",
@@ -279,7 +290,7 @@
     "_arcade/nightshift11-profile.mjs": "59a8ac73ebfee9e5caee21e11c5357e586d7e217c86b20fd9ce9197b7944f9c3",
     "_arcade/nightshift11-rules.mjs": "07453ad1dadbf9fe7a6e818ceeb304f4e7828c725d2fa670ab61bfc233767599",
     "_arcade/nightshift11-tactics.mjs": "8d674fc5811a2d954c7ca944c0bb97c1024f3148e1843c738843c3d68eea739f",
-    "_arcade/nightshift12-controls-ui.mjs": "f766b28e915b2212fc79bbfd82bed93b2f95783cd54ff3cbdfba5a61e6da056f",
+    "_arcade/nightshift12-controls-ui.mjs": "a349e36ff7de222107572f0b51bdb61d6684b79d11164c7ee9ff1ed49b0d6d47",
     "_arcade/nightshift12-drive.mjs": "88426434c83cb892474309f8d5a97a102c4bbfdb3da16234fbc50891c77d4201",
     "_arcade/nightshift12-driving-coach.mjs": "0689aadfbc0d7d8312ec02fe41edd8d237fc872b7f5b4d72972ec4f0fb582179",
     "_arcade/nightshift12-gamepad.mjs": "1f51fec0956eee5742146c22f246aad7174feec3bae6c910082bb5706d5dbe7c",
@@ -298,20 +309,26 @@
     "_arcade/nightshift13-renderer-shell.mjs": "489712f8fe097a2f2bf7b8624ff81247ab757d4630d4017c2ec2bac6bd823d3b",
     "_arcade/nightshift13-rules.mjs": "ab5a7b153baf81b6d21bd87a1b2f0db0b81c1556dd503a8d1ab1f707f83eca3c",
     "_arcade/nightshift13-tactics.mjs": "e279592efa84ac11859aa0c30e97614897f370709a9743c44eb19cae0cec5415",
-    "_arcade/nightshift14-career.mjs": "afd45d30d7d033c61b00ac1e9817d97bc15cef05a4c593cb5dc05e8dd218d485",
+    "_arcade/nightshift14-career.mjs": "123142fec3429d09274313c6e4c84711b13585e2e5b8e62d589a07bf2cab5172",
     "_arcade/nightshift14-drive.mjs": "802300ad3f2329c38c8a6926acb2d941435c6b736cb5a8c733cb52c818b8375b",
-    "_arcade/nightshift14-feedback.mjs": "fae0bc57384962f99994886eb3e44f15ca062b554f22ee2dde5c862693dae07f",
+    "_arcade/nightshift14-feedback.mjs": "438db1f486259ea9842db847e9ba574e7701252b572a306d39c992cfafd0cf3e",
     "_arcade/nightshift14-ghost.mjs": "d42ec5e4e2935efd7c67ffa0cb5d0affba025189f69512efc30efa4171bd3b59",
     "_arcade/nightshift14-profile.mjs": "a87e40830349d1468680cddc27a4ab1ebbbb96cf911e576eb834f218d9ba3865",
     "_arcade/nightshift14-rivals.mjs": "6314d7895e2c0dbb1518bd7ec621c031ffb35b79ea350bd2f0e225d3457cf665",
     "_arcade/nightshift14-rules.mjs": "82cc2746a5b5a3ff225385a183a0f83dd3a2276c3f62905c90031fd7a3c9a561",
     "_arcade/nightshift14-session-rules.mjs": "8ab77b380f56e805d02099352ceab901f3da366fffb0d3915eb0305a6244f60a",
-    "_arcade/nightshift14-tactics.mjs": "f1678c5029a4deb4e4fa244f812b483b721f45d1b5be1414c9fb98239bd82232",
+    "_arcade/nightshift14-tactics.mjs": "3cebcd22745ca2bf59251d8377473d3c639c7ef933d7836f2866ecadd8cc4103",
     "_arcade/nightshift14-weapons.mjs": "09a0a0d86a228567353aee1f632a4ef7ebaa09f463e33f42b59b6c6ee89caf28",
     "_arcade/nightshift141-fleet-surface.mjs": "0fbcc7b5e2b0fad16b51e2e038c10618cd761d83ba85a01cad35e700ccd412ac",
     "_arcade/nightshift141-harbour.mjs": "dbceacde7b6f412be58dbc031cd722b809bae6645deda2d252c1874c93ba6e4c",
     "_arcade/nightshift142-traffic.mjs": "49e5dc6e52e56a0d9c1c88558952ab9b0bc63ede46b2d3953b288b84405095c4",
     "_arcade/nightshift142-wheel-surface.mjs": "6a8ecc3c3f05fbbdde2230c713dd23a93d229c4cab31ff7f2c7bfdf3f60b073a",
+    "_arcade/nightshift15-drive.mjs": "8340886f52008b956eb9cb5e30b2733a0afea86e777ff2015d2c560985bc273b",
+    "_arcade/nightshift15-ghost.mjs": "eb2035b1b501128280fceaa70a58344eda70a14e15dd2e7d4f24c55fb1303492",
+    "_arcade/nightshift15-profile.mjs": "84247b7d0cc6fe13ac004b7d1e7435d28a7b3d5dbcdbc87f9b7d66922581ee70",
+    "_arcade/nightshift15-rivals.mjs": "23132e598826e5518549bfdb202c8954f2228ea5147ea2daa395a8c1b2ca6632",
+    "_arcade/nightshift15-rules.mjs": "96d228bebd9a9d4379e96f90c01c29da637a693e9e9700377453d8417c738b01",
+    "_arcade/nightshift15-session-rules.mjs": "49c07cff6b8df69ad13558bfee502e55867dbc586ca4b71b59f374acf61d8af6",
     "_arcade/nightshift8-architecture.mjs": "efc8eb7d0991455fb343fd57ac05a8530da6ddb5acc51e7a6d8b37c3850d6448",
     "_arcade/nightshift8-assets.mjs": "2ba0102b28f25a27201979430ccbd3ea0e94ee932b9db4aade7a41a0fbb33651",
     "_arcade/nightshift8-audio.mjs": "9dbc12645b0a7db92e87d7c7ded1b9708b783ac88ffc063d1bf37a777ef1f1e8",
@@ -369,8 +386,8 @@
     "_shared/assets/nightshift-keyart.webp": "7e2fdf364c45b667533c586ecbaf35e60c4a5bbced660e14d10e9e4809ede7c8",
     "_shared/brand/utxoplay-logo-dark-192.webp": "ebb37a581d4b78d9e2d853698f638658130e152f0043f4528bff8e0c58182c20",
     "_shared/game-loader.js": "d1d3c2ca98b26ccbacca07262d26acddb06e2981edcf29bc31db6a06e21dc56a",
-    "app.js": "bb785ff7035499a6a1044df8feaec463fb1abed3f00a14b15bcc83abc65dcf4a",
-    "index.html": "aa8f8b15ddf7444f7bf40b07cbdf1ea59738511b36131013189780c7011b8c39",
+    "app.js": "c5f46603ce3948fe101665e0f2df412be90d5605bd7337044f92851e4f9a1341",
+    "index.html": "af4a623584c3fb26d2043bbb05a7fcaa1036fffc5314c8de0495e310b685e0bb",
     "orientation.js": "2d751e1b2b149292be7ba2d5bd804be94cef2a070140d7480f480573739970b8"
   },
   "nativeBinaries": {
@@ -380,8 +397,9 @@
     "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63",
     "12": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8",
     "13": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643",
-    "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa"
+    "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa",
+    "15": "192fce792675ec0adfa062913502b0451b1fe55e6e49cccc0d8d8b11b5292d98"
   },
-  "deliveryStatus": "Bookworm V14 binary measured; staged and public deployment acceptance recorded separately.",
-  "notes": "Preserve V8–V13 executables, application profiles and databases. Old unfinished races retain their original executor. Myelin provides off-chain host replay, not CKB settlement. No multiplayer implementation."
+  "deliveryStatus": "Bookworm V15 executable measured; deployment acceptance recorded separately.",
+  "notes": "V15 adds responsive reverse and fractional reverse travel. V7–V14 inputs remain frozen; unfinished historical races use their original executor. Career migration is explicit. Myelin is off-chain host replay, not CKB settlement."
 }

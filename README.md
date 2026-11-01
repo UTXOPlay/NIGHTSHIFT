@@ -23,7 +23,7 @@ The public version is [14.2.0](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v14.2
 
 A complete local stock event passes at 60 median / 60 p10 FPS in 282.67 simulation seconds. The instrumented public 120-second repeat also reaches 60 / 60 FPS at scale 1; an earlier 20 / 6 FPS failure remains retained alongside the observed background load. Latest public first-driving samples still take 31.57 seconds on desktop and 51.55 seconds under restricted-mobile emulation, including countdown and the configured HTTPS proxy. These are individual samples, not worldwide or physical-device guarantees. Loading, broader performance and the complete single-player objective remain open. The retained [14.1.1 engine evidence](docs/engine-v1411-results.json) covers the earlier quality-recovery and HDR warmup fixes.
 
-The 14.2.1 loading candidate advances the exact renderer request before gesture audio/native waits and overlaps independent lighting/effect downloads. Its final local restricted-mobile pair changes first driving from 27.566 to 25.723 seconds with unchanged asset bytes and similar shader warmup; public delivery is pending. See [loading changes](docs/loading-v1421.md) and [bounded evidence](docs/loading-v1421-results.json).
+The deployed 14.2.1 loading update advances the exact renderer request before gesture audio/native waits and overlaps independent lighting/effect downloads. Its final local restricted-mobile pair changes first driving from 27.566 to 25.723 seconds with unchanged asset bytes and similar shader warmup; public delivery preceded the V15 reverse fix. See [loading changes](docs/loading-v1421.md) and [bounded evidence](docs/loading-v1421-results.json).
 
 Version 13 adds chapter licenses, optional sector contracts, a closing interception battle with podium requirement, final drift exits, itemized payouts, PB provenance and purchased-part/build tradeoffs. Existing V8–V12 races and signed proofs retain their original executors.
 
@@ -34,6 +34,8 @@ Version 10 adds fixed, readable roadblock encounters, shared static contacts for
 Version 9 introduced continuous winding roads, elevation and banking, swept contacts, mass-weighted impulses, braking/reverse and Colemak/custom controls. Verified V8 careers carry forward as a signed origin. An unfinished V8 event retains its original executor until finished or explicitly replaced.
 
 This release is a **solo racing career**. Live multiplayer is future work. The fictional Nervos relay setting and Relay Credits are off-chain game content; Myelin provides deterministic host replay, not CKB settlement.
+
+Version 15 adds responsive reverse, continuous low-speed reverse travel and brake-to-reverse keyboard controls. Historical races retain their original rules; start a new event to use the new handling. See [reverse fix and verification](docs/reverse-v15.md).
 
 ## Run locally
 
@@ -47,14 +49,14 @@ npm run build:native:history
 npm run dev
 ```
 
-Open **http://127.0.0.1:8898/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8800. Historical executors start lazily when an unfinished saved event needs them.
+Open **http://127.0.0.1:8899/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8801. Historical executors start lazily when an unfinished saved event needs them.
 
 For a production process, build once and supply a stable server-only token:
 
 ```sh
 npm run build
 export RUNTIME_TOKEN="$(openssl rand -hex 32)"
-export GAME_ORIGIN="http://127.0.0.1:8898"
+export GAME_ORIGIN="http://127.0.0.1:8899"
 npm start
 ```
 
@@ -68,7 +70,7 @@ Persist the token in your deployment's secret storage and reuse it across restar
 | Accelerate | W / Arrow Up | W / Arrow Up | Push stick up |
 | Foot brake | S / Arrow Down | R / Arrow Down | Pull stick down |
 | Handbrake | X | X | Handbrake icon |
-| Reverse | Z | Z | Pull straight down after stopping |
+| Reverse | Hold S / Arrow Down after stopping, or Z | Hold R / Arrow Down after stopping, or Z | Pull down; steer sideways while reversing |
 | Nitrous | Space | Space | Lightning icon |
 | Equipped weapon | E | F | Weapon icon |
 | Defensive jammer | Q | Q | Shield icon |
@@ -90,7 +92,7 @@ npm run build:native:legacy
 npm run test:replay
 ```
 
-`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V12 verifier. It requires both V14 and V13 native binaries. V8–V13 predecessor sources remain frozen for original-rule replay and career carry.
+`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V12 verifier. It requires both V15 and V14 native binaries. V8–V14 predecessor sources remain frozen for original-rule replay and career carry.
 
 Browser checks use a separate local review server and a fresh data directory:
 
