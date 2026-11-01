@@ -1,0 +1,604 @@
+{
+  "version": "15.0.0",
+  "status": "deployed-public-reverse-legacy-career-and-fullscreen-accepted",
+  "rulesVersion": 15,
+  "fullGoalComplete": false,
+  "multiplayerImplemented": false,
+  "source": {
+    "version": "15.0.0",
+    "commit": "3c63613f7db113e091ab0901edc3496d769c5091",
+    "baseVersion": "14.2.1",
+    "baseGameImage": "sha256:30882317da1091d2588c27f648fef5174d70a758dcca7c9ecf8d4b1c921301c5",
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "payloadSha256": "740d03debea10be9e050365ad0912975aa035fab33b010515aeec4bebe02bc8c",
+    "payloadBytes": 419657,
+    "nativeBinarySha256": "192fce792675ec0adfa062913502b0451b1fe55e6e49cccc0d8d8b11b5292d98",
+    "nativeSourceSha256": "e9048b3ad7b9fdf377c72ccce8539b0f4bedcdd48dacc1143e50a43a46c3619b",
+    "browserFiles": 317,
+    "changedBrowserFiles": 12
+  },
+  "runtimeBuild": {
+    "version": 15,
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "nativeBinarySha256": "192fce792675ec0adfa062913502b0451b1fe55e6e49cccc0d8d8b11b5292d98",
+    "bytes": 24756328,
+    "buildImage": "sha256:5579cf8199622d288b4419228262cbb8034a2c0c3b4635f5acefad30304d40e2",
+    "nativeSourceSha256": "e9048b3ad7b9fdf377c72ccce8539b0f4bedcdd48dacc1143e50a43a46c3619b",
+    "browserNativeReverseTraceExact": true,
+    "profileAndReverseVerificationPassed": true
+  },
+  "deployment": {
+    "version": "15.0.0",
+    "gameImage": "sha256:42e00eb3275df9ce97513fc8642af18d64a66580fa1d69baf0689febf54ebd42",
+    "storeImage": "sha256:03c568d03256dcf7de01a5f40ed27de94c166f3d58bb4c93978b64a0942aab9c",
+    "otherCatalogEntriesPreserved": true,
+    "legacyNativeVolumesPreserved": true,
+    "v15DataIsolated": true,
+    "historicalNativeBinariesInherited": true
+  },
+  "stageAcceptance": {
+    "phase": "stage",
+    "version": "15.0.0",
+    "gameImage": "sha256:42e00eb3275df9ce97513fc8642af18d64a66580fa1d69baf0689febf54ebd42",
+    "storeImage": "sha256:e8b0549eeb4412363d1a4a88248e75b7fc467ec4842d1d955673f69391efe952",
+    "browserFiles": 317,
+    "hostFiles": 11,
+    "nativeExecutables": 8,
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": false,
+    "allStageDataIsolated": true,
+    "onlyCatalogVersionChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "productionAcceptance": {
+    "phase": "production",
+    "version": "15.0.0",
+    "gameImage": "sha256:42e00eb3275df9ce97513fc8642af18d64a66580fa1d69baf0689febf54ebd42",
+    "storeImage": "sha256:03c568d03256dcf7de01a5f40ed27de94c166f3d58bb4c93978b64a0942aab9c",
+    "browserFiles": 317,
+    "hostFiles": 11,
+    "nativeExecutables": 8,
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": true,
+    "allStageDataIsolated": false,
+    "onlyCatalogVersionChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "publicIntegrity": {
+    "origin": "https://store.utxoplay.io",
+    "version": "15.0.0",
+    "changedFilesExact": [
+      "_arcade/nightshift12-controls-ui.mjs",
+      "_arcade/nightshift14-career.mjs",
+      "_arcade/nightshift14-feedback.mjs",
+      "_arcade/nightshift14-tactics.mjs",
+      "_arcade/nightshift15-drive.mjs",
+      "_arcade/nightshift15-ghost.mjs",
+      "_arcade/nightshift15-profile.mjs",
+      "_arcade/nightshift15-rivals.mjs",
+      "_arcade/nightshift15-rules.mjs",
+      "_arcade/nightshift15-session-rules.mjs",
+      "app.js",
+      "index.html"
+    ],
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6"
+  },
+  "nodeChecks": {
+    "passed": 179,
+    "failed": 0
+  },
+  "nativeChecks": {
+    "unitAndMigrationPassed": true,
+    "signedReplayRestartAndTamperChecksPassed": true,
+    "browserComparisons": 200,
+    "races": 67,
+    "allTwelveEventsCompleted": true,
+    "forwardDrivetrainMatchesPublishedV14": true,
+    "roadblockRecoveryWithoutDamage": true
+  },
+  "localReverse": {
+    "rulesVersion": 15,
+    "cases": [
+      {
+        "kind": "keyboard-z",
+        "before": {
+          "tick": 128,
+          "distance": 414,
+          "speed": 0,
+          "x": 1008,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 143,
+          "distance": 390,
+          "speed": -290,
+          "x": 1008,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "keyboard-brake-hold",
+        "before": {
+          "tick": 128,
+          "distance": 414,
+          "speed": 0,
+          "x": 1008,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 143,
+          "distance": 390,
+          "speed": -290,
+          "x": 1008,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "controller-lt",
+        "before": {
+          "tick": 131,
+          "distance": 411,
+          "speed": 0,
+          "x": 1000,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 146,
+          "distance": 387,
+          "speed": -290,
+          "x": 1000,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "touch-diagonal",
+        "before": {
+          "tick": 142,
+          "distance": 458,
+          "speed": 0,
+          "x": 1305,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0.6000000080734335,
+            "y": 0.7999997416501323,
+            "owner": 2,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 157,
+          "distance": 434,
+          "speed": -290,
+          "x": 1267,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0.6000000080734335,
+            "y": 0.7999997416501323,
+            "owner": 2,
+            "reverse": true
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      }
+    ],
+    "errors": [],
+    "input": "Ordinary keyboard and CDP touch events; standard Gamepad API emulation only. No game-state writes.",
+    "physicalDevices": false
+  },
+  "stageReverse": {
+    "rulesVersion": 15,
+    "cases": [
+      {
+        "kind": "keyboard-z",
+        "before": {
+          "tick": 128,
+          "distance": 410,
+          "speed": 0,
+          "x": 1006,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 143,
+          "distance": 386,
+          "speed": -290,
+          "x": 1006,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "keyboard-brake-hold",
+        "before": {
+          "tick": 127,
+          "distance": 410,
+          "speed": 0,
+          "x": 1006,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 142,
+          "distance": 386,
+          "speed": -290,
+          "x": 1006,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "controller-lt",
+        "before": {
+          "tick": 133,
+          "distance": 417,
+          "speed": 0,
+          "x": 1000,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 148,
+          "distance": 393,
+          "speed": -290,
+          "x": 1000,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "touch-diagonal",
+        "before": {
+          "tick": 142,
+          "distance": 458,
+          "speed": 0,
+          "x": 1305,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0.6000000080734335,
+            "y": 0.7999997416501323,
+            "owner": 2,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 157,
+          "distance": 434,
+          "speed": -290,
+          "x": 1267,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0.6000000080734335,
+            "y": 0.7999997416501323,
+            "owner": 2,
+            "reverse": true
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      }
+    ],
+    "errors": [],
+    "input": "Ordinary keyboard and CDP touch events; standard Gamepad API emulation only. No game-state writes.",
+    "physicalDevices": false
+  },
+  "publicReverse": {
+    "rulesVersion": 15,
+    "cases": [
+      {
+        "kind": "keyboard-z",
+        "before": {
+          "tick": 128,
+          "distance": 414,
+          "speed": 0,
+          "x": 1008,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 143,
+          "distance": 390,
+          "speed": -290,
+          "x": 1008,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "keyboard-brake-hold",
+        "before": {
+          "tick": 128,
+          "distance": 414,
+          "speed": 0,
+          "x": 1008,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 143,
+          "distance": 390,
+          "speed": -290,
+          "x": 1008,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "controller-lt",
+        "before": {
+          "tick": 131,
+          "distance": 411,
+          "speed": 0,
+          "x": 1000,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 146,
+          "distance": 387,
+          "speed": -290,
+          "x": 1000,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0,
+            "y": 0,
+            "owner": null,
+            "reverse": false
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      },
+      {
+        "kind": "touch-diagonal",
+        "before": {
+          "tick": 142,
+          "distance": 458,
+          "speed": 0,
+          "x": 1305,
+          "reverseRemainder": 0,
+          "rules": 15,
+          "stick": {
+            "x": 0.6000000080734335,
+            "y": 0.7999997416501323,
+            "owner": 2,
+            "reverse": false
+          }
+        },
+        "after": {
+          "tick": 157,
+          "distance": 434,
+          "speed": -290,
+          "x": 1267,
+          "reverseRemainder": -75,
+          "rules": 15,
+          "stick": {
+            "x": 0.6000000080734335,
+            "y": 0.7999997416501323,
+            "owner": 2,
+            "reverse": true
+          }
+        },
+        "seconds": 0.5,
+        "metres": 2.4,
+        "nativeReplay": true
+      }
+    ],
+    "errors": [],
+    "input": "Ordinary keyboard and CDP touch events; standard Gamepad API emulation only. No game-state writes.",
+    "physicalDevices": false
+  },
+  "localLegacyBrowser": {
+    "version": 15,
+    "profile": "0172e5a5d24e81e3242a8f36a34ea0f182006a14b3ace6ef8ad4bf32b60682a6",
+    "checks": {
+      "originalV14LoadedExactly": true,
+      "originalV14PedalsAndReplay": true,
+      "explicitV15MigrationAndReplay": true,
+      "inactivePartsAndCareerRetained": true,
+      "originalSignedProofRetained": true,
+      "sameCanvasWithoutReload": true
+    },
+    "errors": [],
+    "oldTick": 61,
+    "newTick": 12,
+    "input": "Ordinary browser keyboard events and signed host commands; no game-state injection",
+    "physicalDevices": false
+  },
+  "stageFullscreen": {
+    "origin": "http://127.0.0.1:19492",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "productionLegacyCanary": {
+    "sameOldStateSessionAndProof": true,
+    "old14ContinuationExact": true,
+    "explicit15Migration": true,
+    "careerAndOriginalProofPreserved": true,
+    "reverseMetresHalfSecond": 2.4,
+    "newReplay": true
+  },
+  "layoutChecks": {
+    "menuHasNoWebGLOrRaceAssets": true,
+    "twelveActualRoutePreviews": true,
+    "garageLoadsOnlyItsAssets": true,
+    "actualFleetThumbnails": true,
+    "sixGroundedVehicles": true,
+    "movingResizeAndInverseInput": true,
+    "minimapActorsAndOverview": true,
+    "pausedReducedMotionPreservesRules": true,
+    "touchPortraitPausesAndClears": true
+  },
+  "limits": [
+    "Physical phones and physical controllers have not been tested.",
+    "The full single-player expansion goal remains paused and incomplete.",
+    "Multiplayer remains future work.",
+    "No new asset, renderer or global performance claim is made by this reverse fix.",
+    "GitHub native CI was still compiling during deployment; local native tests and the measured Bookworm runtime passed."
+  ],
+  "publicFullscreen": {
+    "origin": "https://store.utxoplay.io",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  }
+}

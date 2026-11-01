@@ -19,7 +19,7 @@ Current product status: **playable solo arcade racer under active completion**. 
 
 Version 14 gives rivals the shared pedal/steering model, continuous passing lines, hazard braking and resource-funded nitrous. Forward EMP requires a clear path, and interception couriers stage at fixed relay gates before launching. The V14 browser resumes V8–V13 races with their exact original profiles; starting another event explicitly migrates the verified career. A two-worker native pool bounds historical executor residency. See [V14 integration and evidence](docs/nightshift-v14.md).
 
-The public version is [14.2.0](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v14.2.0). It renders the complete 32-car authoritative traffic budget with stable actor identities, and adds distance-driven wheel motion and brake response to coarse traffic/rivals, pursuit and ghosts. Five coarse bodies retain their original triangles and texture streams, adding only 16,052 bytes of tire-pivot data. V14 rules, the seven native executables and signed saves are unchanged. See [fleet changes](docs/fleet-v142.md) and [release evidence and limits](docs/fleet-v142-results.json).
+The public version is [15.0.0](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v15.0.0), with responsive reverse and preserved historical races. The 14.2.0 fleet update renders the complete 32-car authoritative traffic budget with stable actor identities, and adds distance-driven wheel motion and brake response to coarse traffic/rivals, pursuit and ghosts. Five coarse bodies retain their original triangles and texture streams, adding only 16,052 bytes of tire-pivot data. V14 rules, the seven native executables and signed saves are unchanged. See [fleet changes](docs/fleet-v142.md) and [release evidence and limits](docs/fleet-v142-results.json).
 
 A complete local stock event passes at 60 median / 60 p10 FPS in 282.67 simulation seconds. The instrumented public 120-second repeat also reaches 60 / 60 FPS at scale 1; an earlier 20 / 6 FPS failure remains retained alongside the observed background load. Latest public first-driving samples still take 31.57 seconds on desktop and 51.55 seconds under restricted-mobile emulation, including countdown and the configured HTTPS proxy. These are individual samples, not worldwide or physical-device guarantees. Loading, broader performance and the complete single-player objective remain open. The retained [14.1.1 engine evidence](docs/engine-v1411-results.json) covers the earlier quality-recovery and HDR warmup fixes.
 
@@ -88,11 +88,11 @@ npm run build
 npm run check:release
 npm run test:native
 npm run test:conformance
-npm run build:native:legacy
+npm run build:native:history
 npm run test:replay
 ```
 
-`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V12 verifier. It requires both V15 and V14 native binaries. V8–V14 predecessor sources remain frozen for original-rule replay and career carry.
+`test:conformance` compares JavaScript and Rust across all twelve tracks and a career that earns and buys all six cars. `test:replay` checks signed rewards, purchases, restart recovery and rejection by the retained V14 verifier. It requires both V15 and V14 native binaries. V8–V14 predecessor sources remain frozen for original-rule replay and career carry.
 
 Browser checks use a separate local review server and a fresh data directory:
 
@@ -119,7 +119,7 @@ export GAME_ORIGIN="http://localhost:8898"
 docker compose -f deploy/compose.yml up --build -d
 ```
 
-The Compose service binds the web port to local loopback and persists V8–V13 state in separate named volumes. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nightshift/`.
+The Compose service binds the web port to local loopback and persists V8–V15 state in separate named volumes. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nightshift/`.
 
 ## Source and artwork
 
