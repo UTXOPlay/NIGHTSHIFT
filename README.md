@@ -6,7 +6,7 @@ A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival
 
 Current product status: **playable solo arcade racer under active completion**. See the [single-player completion contract](docs/single-player-completion.md) for the full scope, implemented mechanics, evidence and remaining work. Multiplayer implementation is outside this delivery goal.
 
-Version 16.0.1 renames the game to **NerveShift**, including its cover, thumbnails and public address. Existing careers and unfinished races continue with the exact same signed V16 rules. Previous entry links redirect to the new address. See [brand changes and artwork provenance](docs/nerveshift-brand.md).
+Version 16.0.2 renames the game to **NerveShift**, including its cover, thumbnails and public address. Existing careers and unfinished races continue with the exact same signed V16 rules. Previous entry links redirect to the new address. See [brand changes and artwork provenance](docs/nerveshift-brand.md).
 
 ![NerveShift World Circuit](public/assets/nerveshift-keyart.webp)
 

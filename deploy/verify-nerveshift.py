@@ -2,8 +2,8 @@
 import hashlib,json,pathlib,subprocess,sys
 root=pathlib.Path(sys.argv[2]);phase=sys.argv[1]
 def inspect(name):return json.loads(subprocess.check_output(['docker','inspect',name]))[0]
-game=inspect('nerveshift-16-0-1-stage' if phase=='stage' else 'myelin-nightshift-v8')
-store=inspect('nerveshift-16-0-1-store-stage' if phase=='stage' else 'utxoplay-store')
+game=inspect('nerveshift-16-0-2-stage' if phase=='stage' else 'myelin-nightshift-v8')
+store=inspect('nerveshift-16-0-2-store-stage' if phase=='stage' else 'utxoplay-store')
 old=json.loads((root/'game-before.private.json').read_text())
 for key in ['User','WorkingDir','Entrypoint','Healthcheck','Cmd']:assert game['Config'].get(key)==old['Config'].get(key),key
 for key in ['ReadonlyRootfs','SecurityOpt','CapDrop','CapAdd','Memory','MemorySwap','PidsLimit','NanoCpus','Privileged']:
@@ -25,9 +25,9 @@ check="""const fs=require('fs'),c=require('crypto'),m=JSON.parse(fs.readFileSync
 integrity=json.loads(subprocess.check_output(['docker','exec',game['Id'],'node','-e',check]))
 catalog=json.loads(subprocess.check_output(['docker','exec',store['Id'],'cat','/app/server/catalog.json']))
 base=json.loads((root/('catalog-stage-before.json' if phase=='stage' else 'catalog-cutover-before.json')).read_text())
-expected=json.loads(json.dumps(base));entry=next(x for x in expected if x['id']=='drift-run');entry.update(version='16.0.1',title='NerveShift',caption='NERVESHIFT · WORLD CIRCUIT',cover='/assets/nerveshift-keyart.webp',sourceUrl='https://github.com/UTXOPlay/NerveShift');entry['presentation']['repo']='NerveShift';assert expected==catalog
+expected=json.loads(json.dumps(base));entry=next(x for x in expected if x['id']=='drift-run');entry.update(version='16.0.2',title='NerveShift',caption='NERVESHIFT · WORLD CIRCUIT',cover='/assets/nerveshift-keyart.webp',sourceUrl='https://github.com/UTXOPlay/NerveShift');entry['presentation']['repo']='NerveShift';assert expected==catalog
 for container in [game,store]:assert container['State']['Health']['Status']=='healthy' and container['RestartCount']==0
-report={'phase':phase,'version':'16.0.1','gameImage':game['Image'],'storeImage':store['Image'],**integrity,'securityAndResourcesPreserved':True,'allHistoricalMountsPreserved':phase!='stage','allStageDataIsolated':phase=='stage','onlyTargetGameCatalogChanged':True,'healthyWithoutRestarts':True}
+report={'phase':phase,'version':'16.0.2','gameImage':game['Image'],'storeImage':store['Image'],**integrity,'securityAndResourcesPreserved':True,'allHistoricalMountsPreserved':phase!='stage','allStageDataIsolated':phase=='stage','onlyTargetGameCatalogChanged':True,'healthyWithoutRestarts':True}
 (root/(phase+'-acceptance.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
 
 store_hashes=json.loads((root/'source.json').read_text())['storeOverlayFiles']

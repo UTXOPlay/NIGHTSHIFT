@@ -15,5 +15,5 @@ const config=JSON.parse(readFileSync('games/nightshift-v16/host.json'));
 assert.equal(config.clientProfile,base.profile);assert.equal(config.sessionName,'myelin-nightshift-v8');
 const result={...base,version:JSON.parse(readFileSync('package.json')).version,presentationHostFiles:Object.fromEntries(Object.keys(base.presentationHostFiles).map(p=>[p,sha(p)])),browserFiles,deliveryStatus:'Presentation-only NerveShift rename. All nine published executables are inherited unchanged; deployment acceptance recorded separately.',notes:'NerveShift replaces the public NIGHTSHIFT name, cover and URL. Replay/application profile, native sources, signed saves, stable account ID and session namespace are unchanged. Myelin is off-chain host replay, not CKB settlement.'};
 writeFileSync('docs/release-integrity.json',JSON.stringify(result,null,2)+'\n');
-writeFileSync('docs/release-integrity-v16.0.1.json',JSON.stringify(result,null,2)+'\n');
+writeFileSync(`docs/release-integrity-v${result.version}.json`,JSON.stringify(result,null,2)+'\n');
 console.log({version:result.version,profile:result.profile,browserFiles:Object.keys(browserFiles).length,nativeExecutables:Object.keys(base.nativeBinaries).length});

@@ -1,4 +1,4 @@
-# NerveShift — 16.0.1
+# NerveShift — 16.0.2
 
 NerveShift replaces the public NIGHTSHIFT name, Store cover, in-game wordmark, About/reload messages, package metadata, repository name and canonical `/games/nerveshift/` address. The prior `/games/nightshift/`, `/games/drift-run/` and `/play/` entry links preserve query/launch tokens and reach the new address. Historical asset/API prefixes remain accepted for open tabs.
 
