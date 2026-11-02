@@ -1,0 +1,507 @@
+{
+  "version": "16.0.2",
+  "status": "deployed-public-NerveShift-brand-career-download-and-fullscreen-accepted",
+  "renameComplete": true,
+  "gameName": "NerveShift",
+  "canonicalUrl": "https://store.utxoplay.io/games/nerveshift/",
+  "repository": {
+    "url": "https://github.com/UTXOPlay/NerveShift",
+    "id": 1436585437,
+    "visibility": "public",
+    "renamedInPlace": true
+  },
+  "rulesVersion": 16,
+  "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+  "nativeRulesChanged": false,
+  "newRaceRequired": false,
+  "fullGoalComplete": false,
+  "broaderGoalStatus": "paused",
+  "multiplayerImplemented": false,
+  "completeSourceArchive": {
+    "version": "16.0.2",
+    "commit": "37817106d73dc6009feb56323aefec6ae4c82300",
+    "baseVersion": "16.0.1",
+    "baseGameImage": "sha256:9204a2222085be97edff090ba0d9e2e54f1c2833789a72be4dc10981b357cdcf",
+    "baseStoreImage": "sha256:8e176fe068bdf4893798ac8329d62a9a4e4de8949905cab0e8a439167d2405f8",
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "nativeBinaries": {
+      "8": "1127061eccb05a2a671c03330a16b1c1ad1d37a3a79ebb10ed9a6e9855ae9598",
+      "9": "bd67f1479d573ca42b3cfc2bcfd2d481636aaabfceb282a188dc0b6841278f89",
+      "10": "0979ffa2f72fc6dc152b0dbc9a6044e17c2d753f3b24dbeb09330ac14eee90b4",
+      "11": "e83397c344aa2aef6963b7ce728263045e1054864be6b065543ce10135a27d63",
+      "12": "16cd3337adffd027de7e8f9ca8e2269210f3a0ab92d27ef095264c55448b94e8",
+      "13": "c43239d0b6d97f864f25e7d1130ed68c31f5a369b018fe0055cb3cc8059c7643",
+      "14": "c5d9918ef672d760e2550c03a5cd81dfa1c217140fd185546fb52cddddbdd1fa",
+      "15": "192fce792675ec0adfa062913502b0451b1fe55e6e49cccc0d8d8b11b5292d98",
+      "16": "b742722c9a8288220cc8c821e8f0fe3c83b30ff05b9400fe00902bf61add8673"
+    },
+    "payloadSha256": "eec0df7597c525478080effbc35feb7596629cf553cfc94ade22a56111bea0d9",
+    "payloadBytes": 3385121,
+    "browserFiles": 323,
+    "changedBrowserFiles": 2,
+    "storeOverlayFiles": {
+      "dist/.vite/manifest.json": "465933deb6e1a6effcca5a5188723b3f20ac5fc30781db5d295efd60d7fed19e",
+      "dist/.vite/manifest.json.br": "096e07f157a351f63e3be4eedd515b34d3d87979e3f4c2c769819023329e8be1",
+      "dist/.vite/manifest.json.gz": "17c6a74e974b4a6872bf4bfdde452af77bb076947d62ab5eb76f30f9f373b92e",
+      "dist/assets/abstract-message-stream-2twgeuUd.nerveshift-b4592e97ef5c.js": "c241dfab26db644280fae94effcc584ed283a21eb0dfe44ba9efcf5fc3052d7d",
+      "dist/assets/abstract-message-stream-2twgeuUd.nerveshift-b4592e97ef5c.js.br": "50419bcc6c14bb9c078667a665e71790a1f5adab33025b5f390b677ffe99baf5",
+      "dist/assets/abstract-message-stream-2twgeuUd.nerveshift-b4592e97ef5c.js.gz": "73ae26429ac4724f49ee0526fbbe7bad3f8acd7d08d2eff01dad8986c1acccd7",
+      "dist/assets/abstract-multiaddr-connection-BLH-Ugir.nerveshift-e9e46cc625ab.js": "d129dd1088a63485f738389863690241d024334f0f58a3e9e1bc4eaabc63b1ba",
+      "dist/assets/abstract-multiaddr-connection-BLH-Ugir.nerveshift-e9e46cc625ab.js.br": "0833e8afd384b4b2434341fd08a63545800f69a6c6566aa36ad24928f5d9186e",
+      "dist/assets/abstract-multiaddr-connection-BLH-Ugir.nerveshift-e9e46cc625ab.js.gz": "7875bc6251fe1fd06287423be6984b478675a1a923d7c1d56d7bd44e4615a906",
+      "dist/assets/abstract-stream-BGRbfnxw.nerveshift-f46168bb029f.js": "5fe7ba58018ef55632bbb3ecebd85efacbe82bf4b0cb1d6a4af85fa659aef908",
+      "dist/assets/abstract-stream-BGRbfnxw.nerveshift-f46168bb029f.js.br": "69371125749eab0d1dc35de694c05d477aadd947e6e30314dd5ace6395724b89",
+      "dist/assets/abstract-stream-BGRbfnxw.nerveshift-f46168bb029f.js.gz": "95cdda4b82a897aa35fd70f6f239e1039e0b786432c56ee95b3ab257291d9292",
+      "dist/assets/community-3cFMElPr.nerveshift-69ff0017456e.js": "3851037da04a983a63bf6b5009ef9a5ec9cd91ebf70316783a410ccb2a213138",
+      "dist/assets/community-3cFMElPr.nerveshift-69ff0017456e.js.br": "a5a7b0cf24a4856870ec08028388c5045845036dc14f95d2886c73b41957d5bb",
+      "dist/assets/community-3cFMElPr.nerveshift-69ff0017456e.js.gz": "9d9c91641401e3e3d82b504df51d92bc818fb6a5076e2a57a3a448dca96af3d9",
+      "dist/assets/creators-C0ExyiuN.nerveshift-c8ae2414ea11.js": "54d2baf28c0c008a68695f83e32167c2947a6edf699a919db062751bf25f10b9",
+      "dist/assets/creators-C0ExyiuN.nerveshift-c8ae2414ea11.js.br": "61e85240fa2f3773cdd14fafc95850e7efc8b972b8aa3d98b5ce44c1b5ff6b27",
+      "dist/assets/creators-C0ExyiuN.nerveshift-c8ae2414ea11.js.gz": "e6d31a943ccfa9f5ea20ba9a9c358df30b1a68b4466ca5f0516966732049a3de",
+      "dist/assets/game-access-BbYLuiZk.nerveshift-7291644df21b.js": "177ef9e6256e6645f3fc030ba3d307c2d92123f6ff26d2c62733363e896247ef",
+      "dist/assets/game-access-BbYLuiZk.nerveshift-7291644df21b.js.br": "41bb09c0d23fab662016bc83fb457f9e92468fd00ef5c9111ef6a407727dc813",
+      "dist/assets/game-access-BbYLuiZk.nerveshift-7291644df21b.js.gz": "3d2b52ea683d311581683c7bacb9721ccc8f9e9524b98497ecf59505c35f776f",
+      "dist/assets/game-frame-CWqTLXcw.nerveshift-3914c7e86bcb.js": "4490658cf777510e1bddb72a3692bd10f9b5ea1d486b3c884ea1846b530e8133",
+      "dist/assets/game-frame-CWqTLXcw.nerveshift-3914c7e86bcb.js.br": "0c33ddc7f33630b76939d0d3998ffc3778ed2dfc648e6897bf11547c1c3f6c47",
+      "dist/assets/game-frame-CWqTLXcw.nerveshift-3914c7e86bcb.js.gz": "56d9708564986070d45ff2043f95206814e492cf48cda7e2a38b8cdfb0fe3670",
+      "dist/assets/index-9PnxZTN9.nerveshift-29221fd01350.js": "6c1e62d1329df0d5b20c0a549fa377d8ea7bffe8925082e068b19f223cb4f3f1",
+      "dist/assets/index-9PnxZTN9.nerveshift-29221fd01350.js.br": "29098a5d6f74fc05a9d880dd59ca8423308b680eddfc63226208e15e65db2b51",
+      "dist/assets/index-9PnxZTN9.nerveshift-29221fd01350.js.gz": "dc5c3587049c6b5353138c951142b26ffab8709797e7602bbee51f891109c214",
+      "dist/assets/index-B7dOlkZ6.nerveshift-4cbf19c14bf1.js": "2a27e8183a8edf2adce57df331da66dd9ade8f3f4d4638d7317a061450b108dd",
+      "dist/assets/index-B7dOlkZ6.nerveshift-4cbf19c14bf1.js.br": "07d3dc642af63cd19e4c972284f40be2f0971d9986407163fc03ce97781b1690",
+      "dist/assets/index-B7dOlkZ6.nerveshift-4cbf19c14bf1.js.gz": "2ae982c2501d27eff1ad225838513e40aabd70083f1b577eb8cea43016c354ed",
+      "dist/assets/index-BASnzfiO.nerveshift-11741af40abe.js": "69f5f225b808d562f9688b3c6fcc3bb76aa2cede8fa63939128a5322e7d4c315",
+      "dist/assets/index-BASnzfiO.nerveshift-11741af40abe.js.br": "2648eea9808193b49dc0c5830cdbbb085e552d6db7dab953b973652e567e48f4",
+      "dist/assets/index-BASnzfiO.nerveshift-11741af40abe.js.gz": "235830b5aa49356e43eaa73a82a67aa93e6e8bfedd4ff3ce77b3b104f043d831",
+      "dist/assets/index-BE8lN6lY.nerveshift-7c27a0a10213.js": "ec2a5d0acb4252c0e1981b42e84d50b15b0d8e96be76cd41afc04cf7b69d598c",
+      "dist/assets/index-BE8lN6lY.nerveshift-7c27a0a10213.js.br": "e88b71bf65c05889ab0b62dc2af4593b11573fd5b80aaa44147018cdc4148c1e",
+      "dist/assets/index-BE8lN6lY.nerveshift-7c27a0a10213.js.gz": "0aba1e62d9ce36ffce39fd46fb2e8636cb0e73846412138c8cefb456c429c755",
+      "dist/assets/index-BbCJK6e-.nerveshift-d7a9e736753b.js": "49fe47ff64886d30c29602ff562093465e9b5cdbeaec3fda9221af07f31914df",
+      "dist/assets/index-BbCJK6e-.nerveshift-d7a9e736753b.js.br": "102cd4bf793d13ab79d5921f32d6122cd19bf64be8a22ded756fcb52e1f739e6",
+      "dist/assets/index-BbCJK6e-.nerveshift-d7a9e736753b.js.gz": "0e6f71174b137ffb9eed5e356f04e85db17caf368cb5ff6260b6bceb17a3073c",
+      "dist/assets/index-BbY095C2.nerveshift-ee86224e4c6a.js": "2790893e05429853f2a73aeece39372c11204dbc0447517617d5242365b43e04",
+      "dist/assets/index-BbY095C2.nerveshift-ee86224e4c6a.js.br": "702636fb4e5299bb297d09cde062f6d587e4eda0b2d8e99aaa4d117328a08a65",
+      "dist/assets/index-BbY095C2.nerveshift-ee86224e4c6a.js.gz": "420724f9a96e42efb4dfa935c7bab9bb4db2d742ecf1b143677acb2193ac1c4a",
+      "dist/assets/index-BesMi4xg.nerveshift-d10848846a08.js": "682bcef37fdd72ce932bee194b2ba53e7bc5b25add4c76f80c485e877a2a7e9b",
+      "dist/assets/index-BesMi4xg.nerveshift-d10848846a08.js.br": "e3e9ffb02e1c56067e7c43ff89a4a68bbe8c2ca6474dd0972433db5c5d133793",
+      "dist/assets/index-BesMi4xg.nerveshift-d10848846a08.js.gz": "c2da3d5324db76ecfeef5264cadd09832c155b4123ecbf7be29599027945663c",
+      "dist/assets/index-BoIXRPPx.nerveshift-24c19d48b885.js": "11fc0ce541bf252131a9592b44fb01fd54ac2c101fcb62668569c2a3636efff2",
+      "dist/assets/index-BoIXRPPx.nerveshift-24c19d48b885.js.br": "e1d3b42e0ecfd232bb22c4d243f8f32283a690dea259bdc26627df76c65bea75",
+      "dist/assets/index-BoIXRPPx.nerveshift-24c19d48b885.js.gz": "e33ac8836b458a976bcd19295690d4cea76ac035cdb69b009d88bd4d45998df7",
+      "dist/assets/index-C8NvlVlS.nerveshift-3b5fd334b817.js": "38c40a22c2fb6bfb40a637de0f8c2df8f2babe1023aae01835e52fbb7f930284",
+      "dist/assets/index-C8NvlVlS.nerveshift-3b5fd334b817.js.br": "f853fabdf5ca84a48142c6502c58322a76b9d99f5f7c66ab113b07550eb74dc4",
+      "dist/assets/index-C8NvlVlS.nerveshift-3b5fd334b817.js.gz": "40b999d34ccb9a2f6698f1f61104da47914a4a67ca1b79bffdec2dbd5f2379ed",
+      "dist/assets/index-CLRMqo4O.nerveshift-40f7feff0610.js": "8717e0524c70037c84ac95d80db13e1e7bbe3d50d6267a245d2a17a9c1000885",
+      "dist/assets/index-CLRMqo4O.nerveshift-40f7feff0610.js.br": "e1e55a304b8d1668adb6dd373bcc46cf12de9c72617c10883eddeaf4bb95d4d5",
+      "dist/assets/index-CLRMqo4O.nerveshift-40f7feff0610.js.gz": "40af4e6749a26fa6c3904aa719968e2266873f7c3db4e02d5c84347b9eb35b62",
+      "dist/assets/index-CMkpa3lO.nerveshift-eaffec729d72.js": "d1113b1f91f3a01c04495e54fec5dfde06d7f400385d3db1f6dc88f48294d156",
+      "dist/assets/index-CMkpa3lO.nerveshift-eaffec729d72.js.br": "a4417d76ff730467cd43c79cc9dbf83e188777966a418d30953a4797149ecc54",
+      "dist/assets/index-CMkpa3lO.nerveshift-eaffec729d72.js.gz": "83c2d5c89b75f4d0658bea315d5a49888ffda69ebd6a59a708aed498a30f3e8d",
+      "dist/assets/index-Cox-20Xn.nerveshift-08352dee21cf.js": "2ae6a65478d4f5729cff118924342aa9c611a522dcc07b55205915bb0011d06c",
+      "dist/assets/index-Cox-20Xn.nerveshift-08352dee21cf.js.br": "876c1392cfb8d270e75e67b495fa3b44694cdde4ff7d5d8c53d20c61663f4eb3",
+      "dist/assets/index-Cox-20Xn.nerveshift-08352dee21cf.js.gz": "632c878de557c31df6d0638b636da28c45544d4aa43bef2309d459cbf53eac7a",
+      "dist/assets/index-DUvUUFSH.nerveshift-622d2fd3e043.js": "95e56d545a35abe27c0278f95177163c049fc031cc0c1a90b2b669245254b510",
+      "dist/assets/index-DUvUUFSH.nerveshift-622d2fd3e043.js.br": "b0aa85fdc3cbd5caa51c03f2a8420a71347162bd03721d7d00475e9d29b3eb56",
+      "dist/assets/index-DUvUUFSH.nerveshift-622d2fd3e043.js.gz": "6e0838d3ad7216454a08246e1939872088585fc500413f61dc06fd4ef41a7ae6",
+      "dist/assets/marketplace-STV-Uh8-.nerveshift-b9e470ff6306.js": "023c751df89548420018eacbc13ec7d929049d39f76aa38db113790634e1f00f",
+      "dist/assets/marketplace-STV-Uh8-.nerveshift-b9e470ff6306.js.br": "fca4ff0e4adfef40edf8782bd73b0d3bdefda2130156e2208cbbbc79e492704b",
+      "dist/assets/marketplace-STV-Uh8-.nerveshift-b9e470ff6306.js.gz": "e365f81104492047bed515e685715d6d10a073a5ca2640ad691c083f28dcd50d",
+      "dist/assets/nerveshift-keyart.webp": "32668ea09aeefca045bb6c8493e0726256722d90e0a1996933c45d1f281d5a7d",
+      "dist/assets/nightshift-circuit-v11.webp": "32668ea09aeefca045bb6c8493e0726256722d90e0a1996933c45d1f281d5a7d",
+      "dist/assets/nightshift-keyart.webp": "32668ea09aeefca045bb6c8493e0726256722d90e0a1996933c45d1f281d5a7d",
+      "dist/assets/optimized-v1/nerveshift-keyart-w1280-e930d63a19d3.webp": "e930d63a19d33475aed8efe3cb2c9fdeed81e350cfa29c011d68c543636d39d4",
+      "dist/assets/optimized-v1/nerveshift-keyart-w320-5df08d5c1ec8.webp": "5df08d5c1ec86b3d5000f6fd29e628eecc3072db61f6a4debed5d1e6dff5c80e",
+      "dist/assets/optimized-v1/nerveshift-keyart-w640-053240d9e40d.webp": "053240d9e40de338303f2c28d1b78b56b471d6aae138dbd02bccb75f77511892",
+      "dist/assets/pairing-D2_O02ZK.nerveshift-65f8508e958c.js": "a0c879dc86c25fb962b875207c52b0af6fa6968bdf0f23a67a9287a68e937be1",
+      "dist/assets/pairing-D2_O02ZK.nerveshift-65f8508e958c.js.br": "293e3c1e6dc4df5c1180a90b3f9c929a1251f683861851478bd3ec1e532742ee",
+      "dist/assets/pairing-D2_O02ZK.nerveshift-65f8508e958c.js.gz": "e467a999ddedff930c3ff76f8e23c8f8e7d9f573b4cfbee0389971e7c451fa5f",
+      "dist/assets/site-stats-DYMnRWpf.nerveshift-47d43dc4a559.js": "45f97ff8448c50b0ea98d7f11a171cd5fd91f7c7821bedf1b9f3333f170060a1",
+      "dist/assets/site-stats-DYMnRWpf.nerveshift-47d43dc4a559.js.br": "706576226330ea2789de2aa92caeaabbdee639392573393e3b58e0f13ad21446",
+      "dist/assets/site-stats-DYMnRWpf.nerveshift-47d43dc4a559.js.gz": "3fedb47b93d8b2adec6fa2496da803a3938e41b23632c006d84e2a4d7ca82997",
+      "dist/assets/site-stats-trend-C_9Gi_jt.nerveshift-734d46d66ff7.js": "8bd4609a7046c32e0349b5a30f43d199c3e3d6db827f21a1466ad7efee580e07",
+      "dist/assets/site-stats-trend-C_9Gi_jt.nerveshift-734d46d66ff7.js.br": "77dd104ab334947b4bde93ddd9d78b74773fafe3d76f13425f0c1d237c15fb6b",
+      "dist/assets/site-stats-trend-C_9Gi_jt.nerveshift-734d46d66ff7.js.gz": "2dd858b8bf34d6a3261d45e025c73db14c4f22263accba342e14dfa049583f0b",
+      "dist/assets/tracked-map-D2dQ1hhM.nerveshift-c2f537f24231.js": "720281eeb05006cc3f16c5b08a0d96239aa35d94708aa02dfada75123bd873d4",
+      "dist/assets/tracked-map-D2dQ1hhM.nerveshift-c2f537f24231.js.br": "b642823594850485640e8a8170896ad1418bbc8b98513fea6333e87bc2c053d1",
+      "dist/assets/tracked-map-D2dQ1hhM.nerveshift-c2f537f24231.js.gz": "33d6b89d7d6e8e38c12e801877e9c4bb2f0867336a37ac96d697f642e1ab2fa7",
+      "dist/assets/useSigner-xOosz-up.nerveshift-ba48585faec2.js": "68ecb2b27dc184a63d03c8c892e274ffab902596bfb6b4447fc6150f24cc56c6",
+      "dist/assets/useSigner-xOosz-up.nerveshift-ba48585faec2.js.br": "ca4c87b716ff1716dbd7dc425e8d43b7184c134deb2e9d9edec49feed29d2ec5",
+      "dist/assets/useSigner-xOosz-up.nerveshift-ba48585faec2.js.gz": "7e5ca012edfff9b9281396d9e696f3cd7b9e0c15d505b4c976a279cee9183a9d",
+      "dist/assets/wallet-runtime-DuvYQbLf.nerveshift-86973b82bd93.js": "2aa1a50eb4e17ae74821db7bc47844228aad0d969629cc02fbba9540355f3368",
+      "dist/assets/wallet-runtime-DuvYQbLf.nerveshift-86973b82bd93.js.br": "c9d0b79ed7dba8278099b48289eaaf12bd4aa95c8e0b9f224b289afe651e45cc",
+      "dist/assets/wallet-runtime-DuvYQbLf.nerveshift-86973b82bd93.js.gz": "84b4df4739647c1908f36fa0f3d6a1ca9522b5d5a8d119e760e1ee7941f870bb",
+      "dist/assets/webrtc.browser-Dxd5An5k.nerveshift-f6e30db473f4.js": "51b03d58754166ba813bacfdcef9055be4ffbbe9d083517856ade2c24a135715",
+      "dist/assets/webrtc.browser-Dxd5An5k.nerveshift-f6e30db473f4.js.br": "9b8467dd1b383bed2bb63c9facb5c3ab93664581dfce69e5c41d042590c54eea",
+      "dist/assets/webrtc.browser-Dxd5An5k.nerveshift-f6e30db473f4.js.gz": "292af98f053497fcc66726365cb40d525f56ed7dd86a0bf147479507d8d58e7e",
+      "dist/assets/with-resolvers-CEvTs1c2.nerveshift-7160bf97b231.js": "7d513a07e6609864d406344b9d9b3e3165eb9447749e3025255e232c2a07315e",
+      "dist/assets/with-resolvers-CEvTs1c2.nerveshift-7160bf97b231.js.br": "310d87eb60bbfef816339a15d673c95b049e36a544052fccf7f07cb805faf7a5",
+      "dist/assets/with-resolvers-CEvTs1c2.nerveshift-7160bf97b231.js.gz": "210db194cb79398f059050ff8f6f05ceb0dc3093b3389624a911c65055e74514",
+      "dist/index.html": "a85818878e6be76ad44ededec93375b4629df66c4a688d15fd4db3abad0bc37e",
+      "dist/index.html.br": "e253ccddb390ba1a24de83be9fbeb0a46f8f89542719f68cc58e569956937c60",
+      "dist/index.html.gz": "b2d949ae3167ea089f6a627c83a0f139844a114543e20b74b3c7e4798696ad2a",
+      "public/assets/nerveshift-keyart.webp": "32668ea09aeefca045bb6c8493e0726256722d90e0a1996933c45d1f281d5a7d",
+      "public/assets/nightshift-circuit-v11.webp": "32668ea09aeefca045bb6c8493e0726256722d90e0a1996933c45d1f281d5a7d",
+      "public/assets/nightshift-keyart.webp": "32668ea09aeefca045bb6c8493e0726256722d90e0a1996933c45d1f281d5a7d",
+      "public/assets/optimized-v1/nerveshift-keyart-w1280-e930d63a19d3.webp": "e930d63a19d33475aed8efe3cb2c9fdeed81e350cfa29c011d68c543636d39d4",
+      "public/assets/optimized-v1/nerveshift-keyart-w320-5df08d5c1ec8.webp": "5df08d5c1ec86b3d5000f6fd29e628eecc3072db61f6a4debed5d1e6dff5c80e",
+      "public/assets/optimized-v1/nerveshift-keyart-w640-053240d9e40d.webp": "053240d9e40de338303f2c28d1b78b56b471d6aae138dbd02bccb75f77511892",
+      "server/nightshift-routes.mjs": "87171bbd892559a0f6557a77d01e9cb3d50f86107c25dec266694b766f0287c9",
+      "shared/game-paths.mjs": "700396d39b406c4090e0a566cd82b4bfffe6528c93e5fd86b795e9f4c3e41b07",
+      "shared/store-image-variants.json": "1f466002e4869f133b9f672f1a93dab06e4be3babb95a97fda7d1cd3bd1d09dc"
+    }
+  },
+  "deployment": {
+    "version": "16.0.2",
+    "gameImage": "sha256:cf19fdd1f98b1efd453f0e9c8cf823f2fcaad18700f0eb4f7542ccd90efda626",
+    "storeImage": "sha256:43ff25e2c1aaa30faa3cd6d211cc4de76b783ad27e7eea990507253878fc1e84",
+    "otherCatalogEntriesPreserved": true,
+    "legacyNativeVolumesPreserved": true,
+    "nativeBinariesUnchanged": true,
+    "historicalNativeBinariesInherited": true,
+    "completeHostImportGraph": true,
+    "storeNotReplacedForHostCompletion": true
+  },
+  "initialStageAcceptance": {
+    "phase": "stage",
+    "version": "16.0.2",
+    "gameImage": "sha256:d0c19fabf74fc4f61b31bfa18fe632333cdbee5c4135774c62b524dc737aee9d",
+    "storeImage": "sha256:1c825fd3036d225b094959f69baced412b2a36cebaf84eea693b1b50dbb3329b",
+    "browserFiles": 323,
+    "hostFiles": 13,
+    "nativeExecutables": 9,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": false,
+    "allStageDataIsolated": true,
+    "onlyTargetGameCatalogChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "finalHostStageAcceptance": {
+    "image": "sha256:cf19fdd1f98b1efd453f0e9c8cf823f2fcaad18700f0eb4f7542ccd90efda626",
+    "directCanonicalRoot": true,
+    "allThreeApiAliases": true,
+    "nativeBrowserExact": true,
+    "signedReplay": true,
+    "hostFiles": 16,
+    "nativeExecutables": 9,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc"
+  },
+  "productionAcceptance": {
+    "phase": "production",
+    "version": "16.0.2",
+    "gameImage": "sha256:cf19fdd1f98b1efd453f0e9c8cf823f2fcaad18700f0eb4f7542ccd90efda626",
+    "storeImage": "sha256:43ff25e2c1aaa30faa3cd6d211cc4de76b783ad27e7eea990507253878fc1e84",
+    "browserFiles": 323,
+    "hostFiles": 16,
+    "nativeExecutables": 9,
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "securityAndResourcesPreserved": true,
+    "allHistoricalMountsPreserved": true,
+    "allStageDataIsolated": false,
+    "onlyTargetGameCatalogChanged": true,
+    "healthyWithoutRestarts": true
+  },
+  "unitChecks": {
+    "gamePassed": 184,
+    "gameFailed": 0,
+    "hostPassed": 13,
+    "storeRouteAndBrandPassed": 8
+  },
+  "initialLocalBrand": {
+    "version": "16.0.1",
+    "origin": "http://127.0.0.1:19430",
+    "checks": {
+      "oldAndNewPathsShareExactState": true,
+      "newMenuAndExactSavedGame": true,
+      "sameProfileAndSignedReplay": true,
+      "inverseInputAndBoundedRendering": true,
+      "portraitGate": true
+    },
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "physicalDevices": false
+  },
+  "finalStageBrand": {
+    "version": "16.0.2",
+    "origin": "http://127.0.0.1:19497",
+    "checks": {
+      "storeCardAndResponsiveCover": true,
+      "storeLaunchUsesCanonicalPath": true,
+      "oldAndNewPathsShareExactState": true,
+      "newMenuAndExactSavedGame": true,
+      "sameProfileAndSignedReplay": true,
+      "inverseInputAndBoundedRendering": true,
+      "brandedCareerExport": true,
+      "portraitGate": true
+    },
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "physicalDevices": false
+  },
+  "initialStageFullscreen": {
+    "build": "16.0.1",
+    "origin": "http://127.0.0.1:19497",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "publicBrand": {
+    "version": "16.0.2",
+    "origin": "https://store.utxoplay.io",
+    "checks": {
+      "storeCardAndResponsiveCover": true,
+      "storeLaunchUsesCanonicalPath": true,
+      "oldAndNewPathsShareExactState": true,
+      "newMenuAndExactSavedGame": true,
+      "sameProfileAndSignedReplay": true,
+      "inverseInputAndBoundedRendering": true,
+      "brandedCareerExport": true,
+      "portraitGate": true
+    },
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "fullViewport": true,
+        "wordmarkVisible": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc",
+    "physicalDevices": false
+  },
+  "publicIntegrity": {
+    "origin": "https://store.utxoplay.io",
+    "version": "16.0.2",
+    "title": "NerveShift",
+    "changedGameFilesExact": [
+      "app.js",
+      "index.html"
+    ],
+    "storeArtworkExact": [
+      "/assets/nerveshift-keyart.webp",
+      "/assets/optimized-v1/nerveshift-keyart-w320-5df08d5c1ec8.webp",
+      "/assets/optimized-v1/nerveshift-keyart-w640-053240d9e40d.webp",
+      "/assets/optimized-v1/nerveshift-keyart-w1280-e930d63a19d3.webp"
+    ],
+    "profile": "d0ca3e650672ab60a1ef72ecfae103e146d05edde11dd6555a0939a361503cfc"
+  },
+  "finalPublicFullscreen": {
+    "build": "16.0.2",
+    "afterHostCompletion": true,
+    "origin": "https://store.utxoplay.io",
+    "runtime": "managed-service",
+    "fullscreenEntry": true,
+    "exitRegatesInput": true,
+    "existingFramePolicyPreserved": true,
+    "sameIframe": true,
+    "sameJavaScriptRealm": true,
+    "sameCanvas": true,
+    "sameWebGLContext": true,
+    "pausedRaceRetained": true,
+    "frameNavigations": 0,
+    "errors": []
+  },
+  "productionCanaryBefore": {
+    "created": true,
+    "version": 16,
+    "tick": 45,
+    "purchasedInactiveParts": true,
+    "replay": true
+  },
+  "productionCanaryAfter": {
+    "sameStateSessionAndProof": true,
+    "purchasedCareerPreserved": true,
+    "continuedInputsExact": true,
+    "signedReplay": true
+  },
+  "saveCompatibility": {
+    "stableAccountId": "drift-run",
+    "stableSessionName": "myelin-nightshift-v8",
+    "sameStateSessionAndSignedProofAfterDeployment": true,
+    "purchasedInactivePartsRetained": true,
+    "continuedInputsMatchBrowserRules": true,
+    "signedReplayVerified": true,
+    "historicalDataMountsPreserved": true,
+    "nativeExecutablesUnchanged": 9,
+    "nativeBoundInputsUnchanged": 63
+  },
+  "artwork": {
+    "method": "Built-in imagegen text replacement on existing World Circuit capture; final WebP compression and responsive resizing.",
+    "master": "public/assets/nerveshift-keyart.webp",
+    "masterBytes": 100240,
+    "responsive": {
+      "/assets/nerveshift-keyart.webp": [
+        {
+          "width": 320,
+          "url": "/assets/optimized-v1/nerveshift-keyart-w320-5df08d5c1ec8.webp",
+          "bytes": 10142
+        },
+        {
+          "width": 640,
+          "url": "/assets/optimized-v1/nerveshift-keyart-w640-053240d9e40d.webp",
+          "bytes": 27184
+        },
+        {
+          "width": 1280,
+          "url": "/assets/optimized-v1/nerveshift-keyart-w1280-e930d63a19d3.webp",
+          "bytes": 67976
+        }
+      ]
+    },
+    "compatibilityCoverNamesUpdated": [
+      "nightshift-keyart.webp",
+      "nightshift-circuit-v11.webp"
+    ],
+    "readmeScreenshots": [
+      "docs/screenshots/nerveshift-menu.webp",
+      "docs/screenshots/nerveshift-mobile.webp"
+    ],
+    "promptRecord": "docs/nerveshift-brand.md",
+    "historicalReleaseScreenshotsRetained": true
+  },
+  "storeOverlay": {
+    "baseUpdatesInherited": true,
+    "targetCatalogEntryOnly": true,
+    "activeModules": 40,
+    "renamedImportModules": 29,
+    "logicEdits": {
+      "index-Cox-20Xn.js": {
+        "text": 3,
+        "images": 3
+      }
+    },
+    "hashedFilesAccepted": 108
+  },
+  "retainedIntermediateFailures": [
+    {
+      "issue": "The first Store test assumed game cards were anchors; the deployed card is a button.",
+      "resolution": "Use the real card and launch button, load its responsive image and assert the canonical URL."
+    },
+    {
+      "issue": "The first download test attempted the hidden archive control without selecting Records settings.",
+      "resolution": "Select the actual Records tab and assert the real browser download filename."
+    },
+    {
+      "issue": "The first presentation inventory omitted generic host imports; direct canonical runtime API returned 404 despite the Store alias working.",
+      "resolution": "Follow relative host imports, bind/ship all 16 host/config files, stage-test the standalone root and all three API prefixes, then replace only the game container. Final production file hashes and the original signed canary pass."
+    }
+  ],
+  "limits": [
+    "Browser touch/fullscreen emulation does not establish physical-device acceptance.",
+    "No new worldwide loading, latency or frame-rate benchmark is claimed.",
+    "This presentation release adds no multiplayer mode or CKB settlement.",
+    "Historical native/proof identities and dated release artifacts retain old internal names."
+  ]
+}
