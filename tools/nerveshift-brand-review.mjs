@@ -11,9 +11,10 @@ try{
   logout=await reviewSession(ctx,origin);
   for(const old of ['/games/nightshift/','/games/drift-run/','/play/nightshift','/play/drift-run','/play/nerveshift']){const r=await ctx.request.get(origin+old+'?from=brand',{maxRedirects:0,headers:{Accept:'text/html'}});assert.equal(r.status(),308,old);assert.equal(r.headers().location,base+'?from=brand');}
   page=await ctx.newPage();page.on('pageerror',e=>errors.push(e.message));await page.goto(origin+'/');
-  const card=page.locator('a[href="'+base+'"]').filter({has:page.locator('img')}).first();await card.waitFor();assert.match(await card.innerText(),/NerveShift/);
+  const card=page.locator('.game-card.drift-run').first();await card.waitFor();assert.match(await card.innerText(),/NerveShift/);await card.scrollIntoViewIfNeeded();
   await card.locator('img').first().waitFor();await page.waitForFunction(()=>[...document.images].some(i=>i.currentSrc.includes('nerveshift-keyart')&&i.complete&&i.naturalWidth>0));
-  checks.storeLinkAndResponsiveCover=true;await page.screenshot({path:out+'/store.png'});
+  checks.storeCardAndResponsiveCover=true;await page.screenshot({path:out+'/store.png'});
+  await card.getByRole('button',{name:/^Play (now|again) · NerveShift$/}).click();await page.waitForURL('**/games/nerveshift/');checks.storeLaunchUsesCanonicalPath=true;
  }else await ctx.request.post(origin+base+'api/guest',{headers:{Origin:origin},data:{}});
  const state=async path=>{const r=await ctx.request.get(origin+path+'api/state');assert.ok(r.ok());return r.json();};
  const before=await state('/games/nightshift/');assert.deepEqual(await state(base),before);checks.oldAndNewPathsShareExactState=true;

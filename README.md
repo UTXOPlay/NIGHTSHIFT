@@ -6,7 +6,9 @@ A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival
 
 Current product status: **playable solo arcade racer under active completion**. See the [single-player completion contract](docs/single-player-completion.md) for the full scope, implemented mechanics, evidence and remaining work. Multiplayer implementation is outside this delivery goal.
 
-![NerveShift roadblock approach](docs/screenshots/roadblock-approach-v10.webp)
+Version 16.0.1 renames the game to **NerveShift**, including its cover, thumbnails and public address. Existing careers and unfinished races continue with the exact same signed V16 rules. Previous entry links redirect to the new address. See [brand changes and artwork provenance](docs/nerveshift-brand.md).
+
+![NerveShift World Circuit](public/assets/nerveshift-keyart.webp)
 
 ## Race the circuit
 
@@ -80,7 +82,7 @@ Persist the token in your deployment's secret storage and reuse it across restar
 
 The keyboard icon selects a preset or rebinds every action. HUD labels follow the saved bindings. All four arrow keys remain driving fallbacks. Standard gamepads use LS to steer, RT to accelerate, LT to brake/reverse, B for handbrake, A for nitrous, X for the weapon and Y for the jammer. Layout detection is used where the browser supports it; the manual preset works everywhere.
 
-![Mobile map selection](docs/screenshots/mobile.png)
+![NerveShift mobile map selection](docs/screenshots/nerveshift-mobile.webp)
 
 ## Verify
 
@@ -137,6 +139,6 @@ The current release was extracted from the shared [UTXOPlay/myelin-arcade](https
 
 Built-in imagegen prompt records: [combat/UI](docs/nightshift-combat-art.json), [world textures and scenery](docs/nightshift-world-art.json), [career art](docs/nightshift-crew-art.json), [relay materials](docs/nightshift-relay-art.json), and [original city assets](docs/nightshift-art.json). Source PNG names are provenance references; all runtime assets are checked in as WebP. Generated renderer bundles, build artifacts, private keys, runtime databases and local credentials are excluded.
 
-![NerveShift World Circuit](public/assets/nerveshift-keyart.webp)
+![NerveShift event selection](docs/screenshots/nerveshift-menu.webp)
 
 MIT-licensed source; see [LICENSE](LICENSE) and [NOTICE](NOTICE.md) for retained attribution. Racing research and GitHub references are linked in the [career design](docs/nightshift-crew-circuit.md).
