@@ -1,4 +1,4 @@
-name: Verify NIGHTSHIFT
+name: Verify NerveShift
 on: [push, pull_request]
 permissions:
   contents: read

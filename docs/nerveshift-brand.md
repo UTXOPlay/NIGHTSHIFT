@@ -1,0 +1,13 @@
+# NerveShift — 16.0.1
+
+NerveShift replaces the public NIGHTSHIFT name, Store cover, in-game wordmark, About/reload messages, package metadata, repository name and canonical `/games/nerveshift/` address. The prior `/games/nightshift/`, `/games/drift-run/` and `/play/` entry links preserve query/launch tokens and reach the new address. Historical asset/API prefixes remain accepted for open tabs.
+
+This is a presentation release. The exact V16 application profile, all 63 bound native inputs, all nine published executables, account ID `drift-run`, guest cookie/session namespace and existing data volumes are unchanged. No new event or career migration is required. Internal versioned filenames retain their replay provenance. Myelin provides off-chain host replay, not CKB settlement. The older full-game completion goal remains paused; multiplayer remains future work.
+
+The cover uses the built-in imagegen skill to replace the title of the existing World Circuit game capture. Final compressed artwork is `public/assets/nerveshift-keyart.webp`; compatibility cover filenames share the new artwork. The Store gets separate fingerprinted 320/640/1280-pixel thumbnails. Menu and world artwork were audited for baked old titles; archival screenshots remain dated evidence, with the README hero replaced by the new cover.
+
+Image generation prompt:
+
+Use case: text-localization. Asset type: shipping racing-game Store cover and hero image. Edit target: the supplied existing 1600x1000 game screenshot artwork. Change ONLY the large title at the upper left from NIGHTSHIFT to NERVESHIFT, spelled N E R V E S H I F T, in the same refined bold white sans-serif style, size and position. Preserve the smaller WORLD CIRCUIT and OWN YOUR LINE. text. Preserve the original actual game screenshot: the exact silver supercar, camera, road geometry, buildings, signs, street lamps, rain, dusk sky, colors, lighting and composition. Do not invent or upgrade the rendered scene, do not add objects, badges, icons, logos, new slogans or Chinese. Keep the original wide image proportions. The only large game name visible anywhere must be NERVESHIFT.
+
+The deployed Store bundle is transformed as an AST from its measured live image. Only public brand/path literals, responsive-cover entries and affected import filenames change. The Store catalog changes only the existing racing entry's brand fields, cover, repository and version; unrelated deployed updates remain inherited. A base-image guard prevents applying this bundle overlay to an intervening Store deployment. Staging isolates every native namespace and the Store database; production retains the exact existing namespaces.

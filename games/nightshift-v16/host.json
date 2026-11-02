@@ -1,5 +1,5 @@
 {
-  "name": "myelin-nightshift-v16",
+  "name": "myelin-nerveshift",
   "port": 8899,
   "runtimePort": 8802,
   "games": [
@@ -9,7 +9,7 @@
       "runtimePath": "/drift-run",
       "rooms": false,
       "socket": false,
-      "publicPath": "nightshift"
+      "publicPath": "nerveshift"
     }
   ],
   "runtimeCommand": [

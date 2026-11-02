@@ -1,12 +1,12 @@
-# NIGHTSHIFT — World Circuit
+# NerveShift — World Circuit
 
 A browser racing game from UTXOPlay: twelve distinct roads, six cars, five rival drivers, vehicle upgrades and a signed solo career.
 
-[Play on UTXOPlay](https://store.utxoplay.io/games/nightshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Roadblocks and recovery V10](docs/nightshift-v10.md) · [District structure 9.6](docs/nightshift-v96.md) · [Materials and lighting 9.5](docs/nightshift-v95.md) · [Career and garage 9.4](docs/nightshift-v94.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
+[Play on UTXOPlay](https://store.utxoplay.io/games/nerveshift/) · [Game design](docs/nightshift-world-circuit.md) · [Verification and versioning](docs/verification.md) · [Roadblocks and recovery V10](docs/nightshift-v10.md) · [District structure 9.6](docs/nightshift-v96.md) · [Materials and lighting 9.5](docs/nightshift-v95.md) · [Career and garage 9.4](docs/nightshift-v94.md) · [Districts and continuous scenery 9.3](docs/nightshift-v93.md) · [Engine and interface 9.2](docs/nightshift-v92.md) · [Motion presentation 9.1](docs/nightshift-v91.md) · [Circuit handling V9](docs/nightshift-v9.md) · [Combat Season 8](docs/nightshift-v8.md) · [V7 audit](docs/combat-design-audit.md)
 
 Current product status: **playable solo arcade racer under active completion**. See the [single-player completion contract](docs/single-player-completion.md) for the full scope, implemented mechanics, evidence and remaining work. Multiplayer implementation is outside this delivery goal.
 
-![NIGHTSHIFT roadblock approach](docs/screenshots/roadblock-approach-v10.webp)
+![NerveShift roadblock approach](docs/screenshots/roadblock-approach-v10.webp)
 
 ## Race the circuit
 
@@ -19,7 +19,7 @@ Current product status: **playable solo arcade racer under active completion**. 
 
 Version 14 gives rivals the shared pedal/steering model, continuous passing lines, hazard braking and resource-funded nitrous. Forward EMP requires a clear path, and interception couriers stage at fixed relay gates before launching. The V14 browser resumes V8–V13 races with their exact original profiles; starting another event explicitly migrates the verified career. A two-worker native pool bounds historical executor residency. See [V14 integration and evidence](docs/nightshift-v14.md).
 
-The [15.0.1 release](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v15.0.1) removes the unsigned player-tethered pursuit car and labels the time-attack personal ghost. It preserves the deployed V15 reverse handling and historical races. See [vehicle identity](docs/vehicle-identity-v1501.md). The 14.2.0 fleet update renders the complete 32-car authoritative traffic budget with stable actor identities, and adds distance-driven wheel motion and brake response to coarse traffic/rivals, pursuit and ghosts. Five coarse bodies retain their original triangles and texture streams, adding only 16,052 bytes of tire-pivot data. V14 rules, the seven native executables and signed saves are unchanged. See [fleet changes](docs/fleet-v142.md) and [release evidence and limits](docs/fleet-v142-results.json).
+The [15.0.1 release](https://github.com/UTXOPlay/NerveShift/tree/v15.0.1) removes the unsigned player-tethered pursuit car and labels the time-attack personal ghost. It preserves the deployed V15 reverse handling and historical races. See [vehicle identity](docs/vehicle-identity-v1501.md). The 14.2.0 fleet update renders the complete 32-car authoritative traffic budget with stable actor identities, and adds distance-driven wheel motion and brake response to coarse traffic/rivals, pursuit and ghosts. Five coarse bodies retain their original triangles and texture streams, adding only 16,052 bytes of tire-pivot data. V14 rules, the seven native executables and signed saves are unchanged. See [fleet changes](docs/fleet-v142.md) and [release evidence and limits](docs/fleet-v142-results.json).
 
 A complete local stock event passes at 60 median / 60 p10 FPS in 282.67 simulation seconds. The instrumented public 120-second repeat also reaches 60 / 60 FPS at scale 1; an earlier 20 / 6 FPS failure remains retained alongside the observed background load. Latest public first-driving samples still take 31.57 seconds on desktop and 51.55 seconds under restricted-mobile emulation, including countdown and the configured HTTPS proxy. These are individual samples, not worldwide or physical-device guarantees. Loading, broader performance and the complete single-player objective remain open. The retained [14.1.1 engine evidence](docs/engine-v1411-results.json) covers the earlier quality-recovery and HDR warmup fixes.
 
@@ -37,7 +37,7 @@ This release is a **solo racing career**. Live multiplayer is future work. The f
 
 Version 15 adds responsive reverse, continuous low-speed reverse travel and brake-to-reverse keyboard controls. Historical races retain their original rules; start a new event to use the new handling. See [reverse fix and verification](docs/reverse-v15.md).
 
-The public [16.0.0 release](https://github.com/UTXOPlay/NIGHTSHIFT/tree/v16.0.0) makes rear traffic brake and yield to a reversing player, then resume cruise gradually. Old races keep their original traffic rules; start a new event to use V16 with the verified career retained. Public keyboard and touch recovery tests both pass the same fixed barrier after reversing. See [reverse-traffic recovery](docs/reverse-traffic-v16.md) and [acceptance evidence](docs/reverse-traffic-v16-results.json).
+The public [16.0.0 release](https://github.com/UTXOPlay/NerveShift/tree/v16.0.0) makes rear traffic brake and yield to a reversing player, then resume cruise gradually. Old races keep their original traffic rules; start a new event to use V16 with the verified career retained. Public keyboard and touch recovery tests both pass the same fixed barrier after reversing. See [reverse-traffic recovery](docs/reverse-traffic-v16.md) and [acceptance evidence](docs/reverse-traffic-v16-results.json).
 
 ## Run locally
 
@@ -51,7 +51,7 @@ npm run build:native:history
 npm run dev
 ```
 
-Open **http://127.0.0.1:8899/games/nightshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8802. Historical executors start lazily when an unfinished saved event needs them.
+Open **http://127.0.0.1:8899/games/nerveshift/**. `npm run dev` builds the browser and creates a local development token in ignored `data/development-token`. Keep this file and the data directory between restarts if you want to retain your local career. The current native service listens only on loopback port 8802. Historical executors start lazily when an unfinished saved event needs them.
 
 For a production process, build once and supply a stable server-only token:
 
@@ -121,7 +121,7 @@ export GAME_ORIGIN="http://localhost:8898"
 docker compose -f deploy/compose.yml up --build -d
 ```
 
-The Compose service binds the web port to local loopback and persists V8–V16 state in separate named volumes. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nightshift/`.
+The Compose service binds the web port to local loopback and persists V8–V16 state in separate named volumes. Put your HTTPS reverse proxy in front of it and set `GAME_ORIGIN` to the public origin. UTXOPlay gateways authenticate through `X-Runtime-Token` and `X-UTXOPlay-Account`; browser guests have separate identities. The canonical public game path is `/games/nerveshift/`.
 
 ## Source and artwork
 
@@ -137,6 +137,6 @@ The current release was extracted from the shared [UTXOPlay/myelin-arcade](https
 
 Built-in imagegen prompt records: [combat/UI](docs/nightshift-combat-art.json), [world textures and scenery](docs/nightshift-world-art.json), [career art](docs/nightshift-crew-art.json), [relay materials](docs/nightshift-relay-art.json), and [original city assets](docs/nightshift-art.json). Source PNG names are provenance references; all runtime assets are checked in as WebP. Generated renderer bundles, build artifacts, private keys, runtime databases and local credentials are excluded.
 
-![Rollover and generated effects](docs/screenshots/combat.png)
+![NerveShift World Circuit](public/assets/nerveshift-keyart.webp)
 
 MIT-licensed source; see [LICENSE](LICENSE) and [NOTICE](NOTICE.md) for retained attribution. Racing research and GitHub references are linked in the [career design](docs/nightshift-crew-circuit.md).

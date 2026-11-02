@@ -1,15 +1,15 @@
 {
-  "name": "@utxoplay/nightshift",
-  "version": "16.0.0",
+  "name": "@utxoplay/nerveshift",
+  "version": "16.0.1",
   "private": true,
   "type": "module",
-  "description": "NIGHTSHIFT: World Circuit \u2014 solo racing, vehicle progression and signed Myelin replay",
+  "description": "NerveShift: World Circuit \u2014 solo racing, vehicle progression and signed Myelin replay",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UTXOPlay/NIGHTSHIFT.git"
+    "url": "https://github.com/UTXOPlay/NerveShift.git"
   },
-  "homepage": "https://store.utxoplay.io/games/nightshift/",
+  "homepage": "https://store.utxoplay.io/games/nerveshift/",
   "engines": {
     "node": ">=22"
   },

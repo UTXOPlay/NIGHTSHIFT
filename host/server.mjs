@@ -62,13 +62,13 @@ export function createGameHost({config,origin,runtimeUrl,runtimeToken,sessionSec
   app.use(base+'/api',needUser,async(req,res)=>{
    const endpoint=req.path;
    if(!((req.method==='GET'&&['/state','/export'].includes(endpoint))||(req.method==='POST'&&['/new','/action','/replay'].includes(endpoint))))return res.status(404).json({error:'Unknown game endpoint'});
-   if(config.clientProfile&&req.method==='POST'&&['/new','/action'].includes(endpoint)&&req.body?.client_profile!==config.clientProfile)return res.status(426).json({error:'Reload NIGHTSHIFT to load the updated driving rules. Your saved race is safe.',code:'client_update_required'});
+   if(config.clientProfile&&req.method==='POST'&&['/new','/action'].includes(endpoint)&&req.body?.client_profile!==config.clientProfile)return res.status(426).json({error:'Reload NerveShift to load the updated driving rules. Your saved race is safe.',code:'client_update_required'});
    if(req.method==='POST'&&limited(req.account.id+':'+game.id+':'+endpoint,endpoint==='/new'?10:1200,60000))return res.status(429).json({error:'Please wait before trying again.'});
    if(req.body?.type==='create'&&limited(req.account.id+':'+game.id+':rooms',20,3600000))return res.status(429).json({error:'Room limit reached.'});
    try{
     const body=config.clientProfile?{...req.body}:req.body||{};if(config.clientProfile)delete body.client_profile;
     const result=await fetchImpl((game.runtimeUrl||runtimeUrl)+game.runtimePath+'/api'+endpoint,{method:req.method,headers:{'Content-Type':'application/json','X-Runtime-Token':runtimeToken,'X-UTXOPlay-Account':req.account.id},body:req.method==='POST'?JSON.stringify(body):undefined,signal:AbortSignal.timeout(20000)});
-    if(endpoint==='/export')res.set('Content-Disposition',`attachment; filename="${game.id}-session.json"`);
+    if(endpoint==='/export')res.set('Content-Disposition',`attachment; filename="${game.publicPath||game.id}-session.json"`);
     res.status(result.status).type('json').send(await result.text());
    }catch{res.status(503).json({error:'The game runtime is unavailable. Your saved progress is safe.'});}
   });

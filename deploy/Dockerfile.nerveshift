@@ -1,0 +1,8 @@
+# A brand-only overlay inherits all nine frozen executors and existing data paths.
+ARG BASE_RUNTIME_IMAGE
+FROM ${BASE_RUNTIME_IMAGE}
+COPY dist/ /app/dist/
+COPY host/ /app/host/
+COPY games/nightshift-v16/host.json /app/games/nightshift-v16/host.json
+COPY docs/ /app/docs/
+COPY package.json package-lock.json /app/

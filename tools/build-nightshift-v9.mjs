@@ -23,12 +23,12 @@ function rewrite(dir){for(const item of readdirSync(dir,{withFileTypes:true})){
  let s=readFileSync(file,'utf8').replace('href="./_arcade/nightshift9-renderer.bundle.mjs"','href="./_arcade/nightshift9-renderer.bundle.mjs?v='+version+'"');
  if(file.endsWith('.html'))s=s.replace(/src=(['"])\.\/app\.js(?:\?v=[^'"]*)?\1/g,(_match,quote)=>'src='+quote+'./app.js?v='+version+quote);
  if(file.endsWith('.css'))s=s.replace(/url\((['"]?)(\/arcade\/[^)'"?]+)\1\)/g,(original,quote,url)=>hashes[url]?`url(${quote}${url}?h=${hashes[url]}${quote})`:original);
- s=s.replaceAll('/arcade/','/games/nightshift/_arcade/');
- for(const pre of ['/assets/','/brand/','/game-shell.','/game-loader.','/game-overlay.','/widescreen.','/fonts.','/brand.','/favicon','/apple-touch-icon.','/site.webmanifest'])s=s.replaceAll(pre,(match,offset,source)=>offset===0||/["'`(=\s]/.test(source[offset-1])?'/games/nightshift/_shared'+match:match);
- s=s.replaceAll("'/api/me'","'/games/nightshift/api/me'").replaceAll("'/api/guest'","'/games/nightshift/api/guest'");
+ s=s.replaceAll('/arcade/','/games/nerveshift/_arcade/');
+ for(const pre of ['/assets/','/brand/','/game-shell.','/game-loader.','/game-overlay.','/widescreen.','/fonts.','/brand.','/favicon','/apple-touch-icon.','/site.webmanifest'])s=s.replaceAll(pre,(match,offset,source)=>offset===0||/["'`(=\s]/.test(source[offset-1])?'/games/nerveshift/_shared'+match:match);
+ s=s.replaceAll("'/api/me'","'/games/nerveshift/api/me'").replaceAll("'/api/guest'","'/games/nerveshift/api/guest'");
  writeFileSync(file,s);writeFileSync(file+'.br',brotliCompressSync(s));writeFileSync(file+'.gz',gzipSync(s));
 }}
 rewrite(root);
 const review=process.env.DRIFT_BUILD_ROOT||'artifacts/nightshift-v9/site';
 if(path.resolve(review)!==root){mkdirSync(review,{recursive:true});cpSync(root,review,{recursive:true});}
-console.log('Built NIGHTSHIFT into dist/nightshift and the local review directory.');
+console.log('Built NerveShift into dist/nightshift and the local review directory.');

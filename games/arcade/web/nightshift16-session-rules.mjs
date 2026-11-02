@@ -12,6 +12,6 @@ export const SAVED_PROFILES={"8":"dc78757f7fd0b708a46d9549e6843986a668a334ad10f6
 const versions={8:v8,9:v9,10:v10,11:v11,12:v12,13:v13,14:v14,15:v15,16:v16};
 export function sessionRules(state){
  const version=state.game?.physics_version||8,rules=versions[version];
- if(state.game?.kind!=='drift-run'||!rules||state.session?.profile!==SAVED_PROFILES[version])throw Error('Saved race rules do not match this build. Reload NIGHTSHIFT; your saved race is safe.');
+ if(state.game?.kind!=='drift-run'||!rules||state.session?.profile!==SAVED_PROFILES[version])throw Error('Saved race rules do not match this build. Reload NerveShift; your saved race is safe.');
  return {version,rules,legacy:version===8};
 }
