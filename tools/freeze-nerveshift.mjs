@@ -13,7 +13,15 @@ const allowed=new Set(['host/server.mjs','host/nightshift-routes.mjs','games/nig
 for(const [p,h] of Object.entries(base.presentationHostFiles))if(!allowed.has(p))assert.equal(sha(p),h,p);
 const config=JSON.parse(readFileSync('games/nightshift-v16/host.json'));
 assert.equal(config.clientProfile,base.profile);assert.equal(config.sessionName,'myelin-nightshift-v8');
-const result={...base,version:JSON.parse(readFileSync('package.json')).version,presentationHostFiles:Object.fromEntries(Object.keys(base.presentationHostFiles).map(p=>[p,sha(p)])),browserFiles,deliveryStatus:'Presentation-only NerveShift rename. All nine published executables are inherited unchanged; deployment acceptance recorded separately.',notes:'NerveShift replaces the public NIGHTSHIFT name, cover and URL. Replay/application profile, native sources, signed saves, stable account ID and session namespace are unchanged. Myelin is off-chain host replay, not CKB settlement.'};
+const hostFiles=new Set(Object.keys(base.presentationHostFiles));
+const visited=new Set();
+function bindHostModule(file){
+ if(visited.has(file)||!file.startsWith('host/')||!file.endsWith('.mjs'))return;
+ visited.add(file);hostFiles.add(file);
+ for(const match of readFileSync(file,'utf8').matchAll(/(?:from\s*|import\s*\()\s*['"](\.[^'"]+)['"]/g))bindHostModule(path.posix.normalize(path.posix.join(path.posix.dirname(file),match[1])));
+}
+for(const file of [...hostFiles])bindHostModule(file);
+const result={...base,version:JSON.parse(readFileSync('package.json')).version,presentationHostFiles:Object.fromEntries([...hostFiles].map(p=>[p,sha(p)])),browserFiles,deliveryStatus:'Presentation-only NerveShift rename. All nine published executables are inherited unchanged; deployment acceptance recorded separately.',notes:'NerveShift replaces the public NIGHTSHIFT name, cover and URL. Replay/application profile, native sources, signed saves, stable account ID and session namespace are unchanged. Myelin is off-chain host replay, not CKB settlement.'};
 writeFileSync('docs/release-integrity.json',JSON.stringify(result,null,2)+'\n');
 writeFileSync(`docs/release-integrity-v${result.version}.json`,JSON.stringify(result,null,2)+'\n');
 console.log({version:result.version,profile:result.profile,browserFiles:Object.keys(browserFiles).length,nativeExecutables:Object.keys(base.nativeBinaries).length});

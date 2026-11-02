@@ -80,7 +80,10 @@
     "host/nightshift15.mjs": "90bf1c2d45eb093e312ea72f5c6a5498b5f4271bd3ec7237eef175b5aaa3f4ea",
     "games/nightshift-v15/host.json": "3b9d052aeb6aee120338262af4c1814e98a0bdd469e9cad2643f3e580ed5608a",
     "host/nightshift16.mjs": "117ead14754f803a37ee5a6feeb9f1ea9c846ec7d2ee54bfe2d88ad78ef494a9",
-    "games/nightshift-v16/host.json": "3b63dd7c4ef6bda5e1bf55b1173ddc01e2323494b6b4979d5b0937a5289fab6c"
+    "games/nightshift-v16/host.json": "3b63dd7c4ef6bda5e1bf55b1173ddc01e2323494b6b4979d5b0937a5289fab6c",
+    "host/server.mjs": "9846f4a6fdc420c840f88f5115f46a5b3f7cc1325f35291264a3ca978f705401",
+    "host/socket-proxy.mjs": "3f7fd99774e86475e3207f21121c41b67d867db87e384218e2b253fb48e3525e",
+    "host/nightshift-routes.mjs": "87171bbd892559a0f6557a77d01e9cb3d50f86107c25dec266694b766f0287c9"
   },
   "browserFiles": {
     "_arcade/art/nightshift/architecture-v131.webp": "eb8ebaa72fc46f3c7ecbffe308d9950d4a985659022f47fb81595b3f255d10df",
